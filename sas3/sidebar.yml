@@ -1,0 +1,59 @@
+---
+section: sas3
+title: Shelf SAS con moduli IOM12/IOM12B
+url: "/sas3/index.html"
+entries:
+- title: Installazione e cavo
+  pdf-filename: Shelf con installazione e cavo dei moduli IOM12/IOM2B
+  entries:
+  - title: Installazione e shelf per cavi per il nuovo sistema
+    url: "/sas3/install-new-system.html"
+  - title: Shelf hot-add
+    url: "/sas3/install-hot-add-shelf.html"
+  - title: Aggiunta a caldo di shelf IOM12/IOM12B a una pila di shelf IOM6
+    url: "/sas3/iom12-hot-add-mix.html"
+  - title: Modificare l'ID dello shelf
+    url: "/sas3/install-change-shelf-id.html"
+  - title: Regole di cablaggio SAS, fogli di lavoro ed esempi
+    entries:
+    - title: Panoramica
+      url: "/sas3/overview-cabling-rules-examples.html"
+    - title: Regole di cablaggio SAS
+      url: "/sas3/install-cabling-rules.html"
+    - title: Fogli di lavoro per il cablaggio ed esempi di configurazioni ha multipath
+        comuni
+      url: "/sas3/install-cabling-worksheets-examples-multipath.html"
+    - title: Fogli di lavoro per il cablaggio ed esempi per piattaforme con storage
+        interno
+      url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
+    - title: Foglio di lavoro per il cablaggio ed esempio di configurazione ha quad-path
+        con due HBA SAS quad-port
+      url: "/sas3/install-worksheets-examples-quadpath.html"
+    - title: Modello di foglio di lavoro per il cablaggio per la connettività multipath
+      url: "/sas3/install-cabling-worksheet-template-multipath.html"
+    - title: Modello di foglio di lavoro per il cablaggio per la connettività quad-path
+      url: "/sas3/install-cabling-worksheet-template-quadpath.html"
+    - title: Come leggere il foglio di lavoro da collegare via cavo per la connettività
+        multipath
+      url: "/sas3/install-cabling-worksheets-how-to-read-multipath.html"
+    - title: Come leggere il foglio di lavoro sul cavo per la connettività quad-path
+      url: "/sas3/install-cabling-worksheets-how-to-read-quadpath.html"
+- title: Mantenere
+  pdf-filename: Gli shelf con i moduli IOM12/IOM12B mantengono la manutenzione
+  entries:
+  - title: Disco in shelf DS224C o DS212C
+    url: "/sas3/service-hot-swap-drive-ds224c-ds212c.html"
+  - title: Disco nello shelf DS460C
+    url: "/sas3/service-hot-swap-drive-ds460c.html"
+  - title: Cassetto di dischi nello shelf DS460C
+    url: "/sas3/service-replace-drawer-ds460c.html"
+  - title: Modulo ventole nello shelf DS460C
+    url: "/sas3/service-replace-fan-ds460c.html"
+  - title: Ripiano a rimozione a caldo
+    url: "/sas3/hot-remove-shelf.html"
+  - title: Modulo IOM12/IOM12B
+    url: "/sas3/service-hot-swap-iom.html"
+  - title: Alimentatore
+    url: "/sas3/service-hot-swap-power-supply.html"
+  - title: Condizioni di stato dei LED dello shelf
+    url: "/sas3/service-monitor-leds.html"

@@ -1,0 +1,49 @@
+---
+permalink: platform-supplemental/42u-1280mm-replace-pdus.html 
+sidebar: sidebar 
+keywords: replace, fail, PDU, system, cabinet, replace, exist, replace pdu 
+summary: È possibile sostituire una PDU guasta nel cabinet di sistema o una PDU esistente con un tipo diverso di PDU. 
+---
+= Sostituire le PDU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire una PDU guasta nel cabinet di sistema o una PDU esistente con un tipo diverso di PDU.
+
+La PDU sostitutiva deve essere supportata dall'armadio del sistema e fornire alimentazione sufficiente all'apparecchiatura installata.
+
+https://hwu.netapp.com/["hwu.netapp.com"]
+
+. Spegnere gli interruttori di circuito sulla PDU di destinazione, quindi scollegare la vecchia PDU dalla fonte di alimentazione CA.
+. Collegare a massa l'armadio di sistema, quindi scollegare i cavi di alimentazione da ciascun componente del sistema e dalla PDU.
+. Rimuovere le viti dal telaio della PDU, quindi prima la vite inferiore.
++
+
+NOTE: Assicurarsi di sostenere la PDU con una mano mentre si rimuove l'ultima vite dalla parte superiore della PDU. In questo modo si evita che la PDU cada o cada verso di sé dopo la rimozione della vite.
+
+. Rimuovere la vecchia PDU dal cabinet di sistema.
++
+Assicurarsi di tenere traccia delle viti di montaggio in modo da poterle riutilizzare durante l'installazione della PDU sostitutiva.
+
+. Rimuovere le staffe dalla vecchia PDU, quindi installarle sul retro della nuova PDU.
+. Mentre si sostiene la PDU sostitutiva, allineare lo slot sulla staffa di montaggio della PDU con i fori superiori del telaio all'interno dell'armadietto del sistema, quindi fissare la PDU al telaio dell'armadietto del sistema utilizzando le viti di montaggio della vecchia PDU.
+. Fissare la parte inferiore della PDU al telaio del cabinet di sistema, quindi serrare tutte le viti di montaggio.
+. Verificare che tutti gli interruttori di alimentazione o gli interruttori di circuito siano in posizione Off.
++
+Se gli interruttori automatici non sono in posizione Off, spingere un piccolo cacciavite o una graffetta dritta nello slot a destra dell'etichetta Off per far scattare l'interruttore e spegnere il circuito.
+
+. Collegare i cavi di alimentazione del sistema alla PDU, collegando ciascun componente alla presa PDU direttamente di fronte al componente.
++
+
+TIP: Una Best practice consiste nel distribuire il carico totale tra le diramazioni PDU, rendendo ogni carico di diramazione il più uguale possibile.
+
+. Bloccare ogni spina del cavo di alimentazione in posizione con il fermo del cavo sopra di essa facendo scorrere il bordo curvo del fermo del cavo sopra la spalla del connettore.
+. Collegare il cavo di alimentazione PDU alla fonte di alimentazione CA.
+. Accendere gli interruttori di alimentazione PDU o gli interruttori di circuito PDU.
++
+Per gli interruttori di circuito PDU, il pulsante è acceso quando è a filo con il telaio PDU.
+
+

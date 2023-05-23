@@ -1,0 +1,78 @@
+---
+permalink: fas9500/chassis_replace_shutdown.html 
+sidebar: sidebar 
+keywords: aff fas9500, shutdown the controllers 
+summary: Per sostituire lo chassis, è necessario spegnere i controller. 
+---
+= Spegnere il controller compromesso - FAS9500
+:allow-uri-read: 
+
+
+
+
+== Spegnere il controller compromesso - FAS9500
+
+[role="lead"]
+Questa procedura è valida solo per configurazioni a 2 nodi non MetroCluster. Se si dispone di un sistema con più di due nodi, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Come eseguire uno spegnimento e l'accensione di una coppia ha in un cluster a 4 nodi"^].
+
+.Prima di iniziare
+Hai bisogno di:
+
+* Credenziali dell'amministratore locale per ONTAP.
+* Passphrase NetApp onboard key management (OKM) a livello di cluster se si utilizza la crittografia dello storage.
+* Accesso SP/BMC per ciascun controller.
+* Impedire a tutti i client/host di accedere ai dati sul sistema NetApp.
+* Sospendere i processi di backup esterni.
+* Strumenti e attrezzature necessari per la sostituzione.
+
+
+
+NOTE: Se il sistema è un NetApp StorageGRID o ONTAP S3 utilizzato come Tier cloud FabricPool, fare riferimento a. https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Arrestare e accendere correttamente il sistema storage Guida alla risoluzione dei problemi"] dopo aver eseguito questa procedura.
+
+
+NOTE: Se si utilizzano LUN array FlexArray, seguire la documentazione relativa agli array di storage del vendor per la procedura di arresto da eseguire per tali sistemi dopo aver eseguito questa procedura.
+
+
+NOTE: Se si utilizzano SSD, fare riferimento a. https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: (Impatto: Critico) Best Practice SSD: Evita il rischio di guasti al disco e perdita di dati se spento per più di due mesi"]
+
+Come Best practice prima dello spegnimento, è necessario:
+
+* Eseguire ulteriori operazioni https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["controlli dello stato del sistema"].
+* Aggiornare ONTAP a una versione consigliata per il sistema.
+* Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"]. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.
+
+
+.Fasi
+. Accedere al cluster tramite SSH o da qualsiasi nodo del cluster utilizzando un cavo della console locale e un laptop/console.
+. Disattivare AutoSupport e indicare per quanto tempo si prevede che il sistema sia offline:
++
+`system node autosupport invoke -node * -type all -messages "MAINT=8h Power Maintenance"`
+
+. Identificare l'indirizzo SP/BMC di tutti i nodi:
++
+`system service-processor show -node * -fields address`
+
+. Uscire dalla shell del cluster: `exit`
+. Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno qualsiasi dei nodi elencati nell'output del passaggio precedente.
++
+Se si utilizza una console/laptop, accedere al controller utilizzando le stesse credenziali di amministratore del cluster.
+
++
+
+NOTE: Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monitorare l'avanzamento.
+
+. Arrestare tutti i nodi nel cluster:
++
+`system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`.
+
++
+
+NOTE: Per i cluster che utilizzano SnapMirror con funzionamento sincrono in modalità StrictSync: `system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. Inserire *y* per ciascun controller nel cluster quando viene visualizzato `_Warning: Are you sure you want to halt node "cluster name-controller number"?
+{y|n}:_`
+. Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.
+. Spegnere ciascun alimentatore o scollegarlo se non è presente alcun interruttore di accensione/spegnimento.
+. Scollegare il cavo di alimentazione da ogni alimentatore.
+. Verificare che tutti i controller dello chassis non utilizzato siano spenti.
+

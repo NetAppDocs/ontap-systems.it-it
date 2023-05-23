@@ -1,0 +1,85 @@
+---
+section: a400
+title: Sistemi AFF A400
+url: "/a400/index.html"
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di AFF A400
+  entries:
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/a400/install-setup.html"
+  - title: Passaggi rapidi
+    url: "/a400/install-quick-guide.html"
+  - title: Video fasi
+    url: "/a400/install-videos.html"
+  - title: Passaggi dettagliati
+    url: "/a400/install-detailed-guide.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di AFF A400
+  entries:
+  - title: Supporto di boot
+    pdf-filename: Supporti per l'avvio AFF A400
+    entries:
+    - title: Panoramica
+      url: "/a400/bootmedia-replace-overview.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/a400/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/a400/bootmedia-impaired-controller-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a400/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a400/bootmedia-recovery-image-boot-options.html"
+    - title: Tornare indietro alla configurazione MetroCluster
+      url: "/a400/bootmedia-2n-mcc-switchback.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/a400/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a400/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A400
+    entries:
+    - title: Panoramica
+      url: "/a400/chassis-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a400/chassis-replace-shutdown.html"
+    - title: Sostituire l'hardware
+      url: "/a400/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa
+      url: "/a400/chassis-replace-complete-system-restore-rma.html"
+  - title: Modulo controller
+    pdf-filename: Modulo controller A400 AFF
+    entries:
+    - title: Panoramica
+      url: "/a400/controller-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a400/controller-replace-shutdown.html"
+    - title: Sostituire il modulo controller
+      url: "/a400/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/a400/controller-replace-system-config-restore-and-verify.html"
+    - title: Ricable del sistema
+      url: "/a400/controller-replace-recable-reassign-disks.html"
+    - title: Ripristino completo del sistema
+      url: "/a400/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: DIMM AFF A400
+    url: "/a400/dimm-replace.html"
+  - title: Ventola
+    pdf-filename: Modulo ventola A400 AFF
+    url: "/a400/fan-swap-out.html"
+  - title: Batteria NVDIMM
+    pdf-filename: Batteria NVDIMM AFF A400
+    url: "/a400/nvdimm-battery-replace.html"
+  - title: NVDIMM
+    pdf-filename: NVDIMM AFF A320
+    url: "/a400/nvdimm-replace.html"
+  - title: Scheda PCIe o mezzanino
+    pdf-filename: Scheda PCIe o mezzanine AFF A400
+    url: "/a400/pci-cards-and-risers-replace.html"
+  - title: Alimentatore
+    pdf-filename: Alimentatore AFF A400
+    url: "/a400/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    pdf-filename: Batteria con clock in tempo reale A400 AFF
+    url: "/a400/rtc-battery-replace.html"

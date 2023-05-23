@@ -1,0 +1,416 @@
+---
+permalink: fas8300/nvdimm-replace.html 
+sidebar: sidebar 
+keywords: fas8300, fas8700, replace, nvmem, battery, remove, controller, module, controller, metrocluster, configuration, diagnostics, aggregate, configuration, reinstall, run, system, switch, shut, down 
+summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema. 
+---
+= Sostituire un modulo NVDIMM - FAS8300 e FAS8700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
+
+[role="tabbed-block"]
+====
+.Opzione 1: La maggior parte delle configurazioni
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+--
+.Opzione 2: Controller in un MetroCluster a due nodi
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "Restituisci un'unità FIPS o SED in modalità non protetta" di link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Panoramica di NetApp Encryption con CLI"^].
+* Al termine di questa procedura, è necessario lasciare accesi gli alimentatori per alimentare il controller integro.
+
+
+.Fasi
+. Controllare lo stato MetroCluster per determinare se il controller compromesso è passato automaticamente al controller integro: `metrocluster show`
+. A seconda che si sia verificato uno switchover automatico, procedere come indicato nella seguente tabella:
++
+[cols="1,2"]
+|===
+| Se il controller è compromesso... | Quindi... 
+
+
+ a| 
+Si è attivata automaticamente
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+Non si è attivato automaticamente
+ a| 
+Eseguire un'operazione di switchover pianificata dal controller integro: `metrocluster switchover`
+
+
+
+ a| 
+Non è stato attivato automaticamente, si è tentato di eseguire lo switchover con `metrocluster switchover` e lo switchover è stato vetoed
+ a| 
+Esaminare i messaggi di veto e, se possibile, risolvere il problema e riprovare. Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+|===
+. Risincronizzare gli aggregati di dati eseguendo `metrocluster heal -phase aggregates` dal cluster esistente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se la riparazione è vetoed, si ha la possibilità di riemettere il `metrocluster heal` con il `-override-vetoes` parametro. Se si utilizza questo parametro opzionale, il sistema sovrascrive qualsiasi veto soft che impedisca l'operazione di riparazione.
+
+. Verificare che l'operazione sia stata completata utilizzando il comando MetroCluster Operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Controllare lo stato degli aggregati utilizzando `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Riparare gli aggregati root utilizzando `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se la riparazione è vetoed, si ha la possibilità di riemettere il `metrocluster heal` comando con il parametro -override-vetoes. Se si utilizza questo parametro opzionale, il sistema sovrascrive qualsiasi veto soft che impedisca l'operazione di riparazione.
+
+. Verificare che l'operazione di riparazione sia completa utilizzando `metrocluster operation show` sul cluster di destinazione:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. Sul modulo controller guasto, scollegare gli alimentatori.
+
+
+--
+====
+
+
+== Fase 2: Rimuovere il modulo controller
+
+Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
+
+Per rimuovere il modulo controller dal telaio, utilizzare la seguente illustrazione o la procedura scritta.
+
+.Animazione - rimuovere il modulo controller
+video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
+image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile.
+
+
+
+
+== Fase 3: Sostituire il modulo NVDIMM
+
+Per sostituire il modulo NVDIMM, individuarlo nel modulo controller utilizzando la mappa FRU sulla parte superiore del condotto dell'aria della mappa FRU sulla parte superiore del riser dello slot 1.
+
+* Il LED NVDIMM lampeggia durante la destaging del contenuto quando si arresta il sistema. Una volta completata la destage, il LED si spegne.
+* Sebbene il contenuto del modulo NVDIMM sia crittografato, è consigliabile cancellare il contenuto del modulo NVDIMM prima di sostituirlo. Per ulteriori informazioni, consultare https://mysupport.netapp.com/info/web/ECMP1132988.html["Dichiarazione di volatilità"] Sul sito di supporto NetApp.
++
+
+NOTE: Per visualizzare la _Dichiarazione di volatilità_ del sistema, è necessario accedere al sito di supporto NetApp.
+
+
+
+Per sostituire il modulo NVDIMM, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.
+
+
+NOTE: L'animazione e l'illustrazione mostrano gli slot vuoti per i socket senza DIMM. Questi socket vuoti sono popolati con spazi vuoti.
+
+.Animazione - sostituire il modulo NVDIMM
+video::e0afec49-0953-4dcc-b9d0-aadb01578e1b[panopto]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Drw A400 sostituire il DIMM NVDIMM]
+
+.Fasi
+. Aprire il condotto dell'aria e individuare il modulo NVDIMM nello slot 11 del modulo controller.
++
+
+NOTE: Il modulo NVDIMM è molto diverso dai DIMM di sistema.
+
+. Estrarre il modulo NVDIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione del modulo NVDIMM su entrambi i lati del modulo, quindi estrarre il modulo NVDIMM dallo zoccolo e metterlo da parte.
++
+
+NOTE: Tenere il modulo NVDIMM dai bordi con cautela per evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo NVDIMM.
+
+. Rimuovere il modulo NVDIMM di ricambio dalla confezione antistatica, tenere il modulo NVDIMM per gli angoli, quindi allinearlo allo slot.
++
+La tacca tra i pin del modulo NVDIMM deve allinearsi con la linguetta del connettore.
+
+. Individuare lo slot in cui si desidera installare il modulo NVDIMM.
+. Inserire il modulo NVDIMM nello slot.
++
+Il modulo NVDIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il modulo NVDIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, il bordo superiore del modulo NVDIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del modulo NVDIMM.
+. Chiudere il condotto dell'aria.
+
+
+
+
+== Fase 4: Installare il modulo controller
+
+Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
+
+Per installare il modulo controller nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
+
+.Animazione - Installazione del modulo controller
+video::9249fdb8-1522-437d-9280-aae10007c97b[panopto]
+image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
+
+.Fasi
+. In caso contrario, chiudere il condotto dell'aria.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
++
+
+NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+
+. Completare l'installazione del modulo controller:
++
+.. Collegare il cavo di alimentazione all'alimentatore, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare l'alimentatore alla fonte di alimentazione.
+.. Utilizzando i fermi di bloccaggio, spingere con decisione il modulo controller nel telaio fino a quando i fermi di bloccaggio non iniziano a sollevarsi.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Inserire completamente il modulo controller nel telaio ruotando i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, spingere delicatamente il controller fino in fondo, quindi abbassare i fermi di bloccaggio in posizione di blocco.
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Interrompere il normale processo di avvio e avviare IL CARICATORE premendo `Ctrl-C`.
++
+
+NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
+
+.. Al prompt DEL CARICATORE, immettere `bye` Per reinizializzare le schede PCIe e altri componenti.
+.. Interrompere il processo di avvio e avviare il CARICATORE premendo `Ctrl-C`.
++
+Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
+
+
+
+
+
+
+
+== Fase 5: Eseguire la diagnostica
+
+Dopo aver sostituito il modulo NVDIMM nel sistema, eseguire test diagnostici su tale componente.
+
+Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
+
+.Fasi
+. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node _node_name_`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
+. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
+. Selezionare *Test Memory* dal menu visualizzato.
+. Selezionare *NVDIMM Test* dal menu visualizzato.
+. Procedere in base al risultato del passaggio precedente:
++
+** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
+** Se il test non ha rilevato errori, selezionare `Reboot` dal menu per riavviare il sistema.
+
+
+
+
+
+
+== Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica
+
+Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
+
+.Fasi
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode `_impaired_node_name_``
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 7: Switch back aggregates in una configurazione MetroCluster a due nodi
+
+Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
+
+Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
+
+.Fasi
+. Verificare che tutti i nodi si trovino in `enabled` stato: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verificare che la risincronizzazione sia completa su tutte le SVM: `metrocluster vserver show`
+. Verificare che tutte le migrazioni LIF automatiche eseguite dalle operazioni di riparazione siano state completate correttamente: `metrocluster check lif show`
+. Eseguire lo switchback utilizzando `metrocluster switchback` comando da qualsiasi nodo del cluster esistente.
+. Verificare che l'operazione di switchback sia stata completata: `metrocluster show`
++
+L'operazione di switchback è ancora in esecuzione quando un cluster si trova in `waiting-for-switchback` stato:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+L'operazione di switchback è completa quando i cluster si trovano in `normal` stato:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se il completamento di uno switchback richiede molto tempo, è possibile verificare lo stato delle linee di base in corso utilizzando `metrocluster config-replication resync-status show` comando.
+
+. Ripristinare le configurazioni SnapMirror o SnapVault.
+
+
+
+
+== Fase 8: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

@@ -1,0 +1,163 @@
+---
+permalink: platform-supplemental/sldiag-hardware-installation-diagnostics.html 
+sidebar: sidebar 
+keywords: run, diagnostic, add, replacing, replace, hardware, component, storage, systen, verify, installation, successful, run hardware installation diagnostic 
+summary: 'Dopo aver aggiunto o sostituito componenti hardware nel sistema di storage, viene eseguita la diagnostica per verificare che il componente non presenti problemi e che l"installazione sia stata eseguita correttamente.' 
+---
+= Eseguire la diagnostica di installazione dell'hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver aggiunto o sostituito componenti hardware nel sistema di storage, viene eseguita la diagnostica per verificare che il componente non presenti problemi e che l'installazione sia stata eseguita correttamente.
+
+. Al prompt del sistema di storage, passare al prompt DEL CARICATORE: `halt`
+. Al prompt DEL CARICATORE, immettere il seguente comando: `boot_diags`
++
+
+NOTE: Per il corretto funzionamento della diagnostica a livello di sistema, è necessario eseguire questo comando dal prompt DEL CARICATORE. Il comando boot_diags avvia driver speciali progettati appositamente per la diagnostica a livello di sistema.
+
+. Eseguire i test predefiniti sul dispositivo aggiunto o sostituito immettendo il seguente comando: `sldiag device run [-dev devtype|mb|slotslotnum] [-name _device_]`
++
+** -dev devtype specifica il tipo di dispositivo da testare.
++
+*** `ata` È un dispositivo Advanced Technology Attachment.
+*** `bootmedia` è la periferica di avvio del sistema.
+*** `cna` Si tratta di un adattatore di rete convergente non connesso a una rete o a un dispositivo di storage.
+*** `env` è un ambiente per la scheda madre.
+*** `fcache` È l'adattatore Flash cache, noto anche come Performance Acceleration Module 2.
+*** `fcal` È un dispositivo Fibre Channel-Arbitrated Loop non collegato a un dispositivo di storage o a una rete Fibre Channel.
+*** `fcvi` L'interfaccia virtuale Fibre Channel non è connessa a una rete Fibre Channel.
+*** `interconnect` oppure `nvram-ib` è l'interfaccia ad alta disponibilità.
+*** `mem` è la memoria di sistema.
+*** `nic` La scheda di interfaccia di rete non è connessa a una rete.
+*** `nvram` È una RAM non volatile.
+*** `nvmem` È un ibrido di NVRAM e memoria di sistema.
+*** `sas` È un dispositivo SCSI collegato in serie non collegato a uno shelf di dischi.
+*** `serviceproc` È il Service Processor.
+*** `storage` È un'interfaccia ATA, FC-al o SAS con uno shelf di dischi collegato.
+*** `toe` È un TCP Offload Engine, un tipo di NIC.
+
+
+** `mb` specifica che tutti i dispositivi della scheda madre devono essere testati.
+** `slot _slotnum_` specifica che una periferica in un numero di slot specifico deve essere sottoposta a test.
+** `-name _device_` specifica una determinata classe e tipo di dispositivo.
+
+
+. Visualizzare lo stato del test immettendo il seguente comando: `sldiag device status`
++
+Mentre i test sono ancora in esecuzione, il sistema storage fornisce i seguenti risultati:
+
++
+[listing]
+----
+There are still test(s) being processed.
+----
++
+Al termine di tutti i test, viene visualizzata la seguente risposta per impostazione predefinita:
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+. Verificare che nessun problema hardware sia dovuto all'aggiunta o alla sostituzione di componenti hardware nel sistema di storage immettendo il seguente comando: `sldiag device status [-dev devtype|mb|slotslotnum] [-name device] -long -state failed`
++
+Nell'esempio riportato di seguito viene riportato lo stato completo degli errori risultanti dal test di un adattatore FC-al appena installato:
+
++
+[listing]
+----
+
+*> **sldiag device status -dev fcal -long -state failed**
+
+TEST START ------------------------------------------
+DEVTYPE: fcal
+NAME: Fcal Loopback Test
+START DATE: Sat Jan  3 23:10:56 GMT 2009
+
+STATUS: Completed
+Starting test on Fcal Adapter: 0b
+Started gathering adapter info.
+Adapter get adapter info OK
+Adapter fc_data_link_rate: 1Gib
+Adapter name: QLogic 2532
+Adapter firmware rev: 4.5.2
+Adapter hardware rev: 2
+
+Started adapter get WWN string test.
+Adapter get WWN string OK wwn_str: 5:00a:098300:035309
+
+Started adapter interrupt test
+Adapter interrupt test OK
+
+Started adapter reset test.
+Adapter reset OK
+
+Started Adapter Get Connection State Test.
+Connection State: 5
+Loop on FC Adapter 0b is OPEN
+
+Started adapter Retry LIP test
+Adapter Retry LIP OK
+
+ERROR: failed to init adaptor port for IOCTL call
+
+ioctl_status.class_type = 0x1
+
+ioctl_status.subclass = 0x3
+
+ioctl_status.info = 0x0
+ Started INTERNAL LOOPBACK:
+INTERNAL LOOPBACK   OK
+Error Count: 2  Run Time: 70 secs
+>>>>> ERROR, please ensure the port has a shelf or plug.
+END DATE: Sat Jan  3 23:12:07 GMT 2009
+
+LOOP: 1/1
+TEST END --------------------------------------------
+----
++
+[cols="1,2"]
+|===
+| Se il test di diagnostica a livello di sistema... | Quindi... 
+
+
+ a| 
+Sono stati completati senza guasti
+ a| 
+Non ci sono problemi hardware e il sistema storage torna alla richiesta.
+
+.. Cancellare i registri di stato immettendo il seguente comando: `sldiag device clearstatus [-dev _devtype_|mb|slotslotnum]`
+.. Verificare che il registro sia stato cancellato immettendo il seguente comando: `sldiag device status [-dev _devtype_|mb|slotslotnum]`
++
+Viene visualizzata la seguente risposta predefinita:
+
++
+[listing]
+----
+SLDIAG: No log messages are present.
+----
+.. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
+.. Immettere il seguente comando al prompt Loader per avviare il sistema di storage: `boot_ontap`La diagnostica a livello di sistema è stata completata.
+
+
+
+
+ a| 
+Ha causato alcuni errori di test
+ a| 
+Determinare la causa del problema.
+
+.. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
+.. Eseguire un arresto pulito e scollegare gli alimentatori.
+.. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
+.. Ricollegare gli alimentatori e accendere il sistema storage.
+
+
+|===
+
+
+Se i guasti persistono dopo aver ripetuto i passaggi, è necessario sostituire l'hardware.

@@ -1,0 +1,83 @@
+---
+section: a320
+title: Sistemi AFF A320
+url: "/a320/index.html"
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di AFF A320
+  entries:
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/a320/install-setup.html"
+  - title: Passaggi rapidi
+    url: "/a320/install-quick-guide.html"
+  - title: Video fasi
+    url: "/a320/install-videos.html"
+  - title: Passaggi dettagliati
+    url: "/a320/install-detailed-guide.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di AFF A320
+  entries:
+  - title: Supporto di boot
+    pdf-filename: Supporti di avvio AFF A320
+    entries:
+    - title: Panoramica
+      url: "/a320/bootmedia-replace-overview.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/a320/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/a320/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a320/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a320/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/a320/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a320/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A320
+    entries:
+    - title: Panoramica
+      url: "/a320/chassis-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a320/chassis-replace-shutdown.html"
+    - title: Sostituire l'hardware
+      url: "/a320/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa
+      url: "/a320/chassis-replace-complete-system-restore-rma.html"
+  - title: Modulo controller
+    pdf-filename: Modulo controller A320 AFF
+    entries:
+    - title: Panoramica
+      url: "/a320/controller-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a320/controller-replace-shutdown.html"
+    - title: Sostituire il modulo controller
+      url: "/a320/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/a320/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema ricable
+      url: "/a320/controller-replace-recable-reassign-disks.html"
+    - title: Ripristino completo del sistema
+      url: "/a320/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: DIMM A320 AFF
+    url: "/a320/dimm-replace.html"
+  - title: Ventola
+    pdf-filename: Modulo ventola A320 AFF
+    url: "/a320/fan-swap-out.html"
+  - title: NVDIMM
+    pdf-filename: NVDIMM AFF A32
+    url: "/a320/nvdimm-replace.html"
+  - title: Batteria NVDIMM
+    pdf-filename: Batteria NVDIMM AFF A320
+    url: "/a320/nvdimm-battery-replace.html"
+  - title: Scheda PCIe
+    pdf-filename: Scheda PCIe AFF A320
+    url: "/a320/pci-cards-and-risers-replace.html"
+  - title: Alimentatore
+    pdf-filename: Alimentatore A320 AFF
+    url: "/a320/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    pdf-filename: Batteria con clock in tempo reale A320 AFF
+    url: "/a320/rtc-battery-replace.html"

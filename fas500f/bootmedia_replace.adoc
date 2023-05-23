@@ -1,0 +1,205 @@
+---
+permalink: fas500f/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: fas500f, replace the boot media 
+summary: 'Individuare il supporto di avvio guasto nel modulo controller rimuovendo il condotto dell"aria sul modulo controller prima di sostituire il supporto di avvio.' 
+---
+= Sostituire il supporto di avvio - FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dallo chassis quando si sostituisce un componente all'interno del modulo controller.
+
+Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.
++
+
+NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
++
+image::../media/drw_a250_pcm_remove_install.png[installazione rimozione pcm drw a250]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Leva
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Meccanismo di blocco
+
+|===
+. Con entrambe le mani, afferrare i lati del modulo controller ed estrarlo delicatamente dallo chassis e posizionare il modulo su una superficie piana e stabile.
+. Ruotare la vite a testa zigrinata sulla parte anteriore del modulo controller in senso antiorario e aprire il coperchio del modulo controller.
++
+image::../media/drw_a250_open_controller_module_cover.png[drw a250 aprire il coperchio del modulo controller]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Vite a testa zigrinata
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Coperchio del modulo controller.
+
+|===
+. Estrarre il coperchio del condotto dell'aria.
++
+image::../media/drw_a250_remove_airduct_cover.png[rimuovere il coperchio del condotto dell'aria]
+
+
+
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Individuare il supporto di avvio guasto nel modulo controller rimuovendo il condotto dell'aria sul modulo controller prima di sostituire il supporto di avvio.
+
+Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a croce magnetico n. 1. A causa dei limiti di spazio all'interno del modulo controller, è necessario disporre anche di un magnete per trasferire la vite in modo da non allentarla.
+
+Per sostituire il supporto di avvio, è possibile utilizzare il seguente video o la procedura tabulare:
+
+.Animazione - sostituire il supporto di avvio
+video::7c2cad51-dd95-4b07-a903-ac5b015c1a6d[panopto]
+. Individuare e sostituire i supporti di avvio non adatti dal modulo controller.
++
+image::../media/drw_a250_replace_boot_media.png[drw a250 sostituire il supporto di boot]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Rimuovere la vite che fissa il supporto di avvio alla scheda madre nel modulo controller.
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Estrarre il supporto di avvio dal modulo controller.
+
+|===
++
+.. Utilizzando il cacciavite magnetico n. 1, rimuovere la vite dal supporto di avvio compromesso e metterla da parte in modo sicuro sul magnete.
+.. Sollevare delicatamente il supporto di avvio compromesso direttamente dalla presa e metterlo da parte.
+.. Rimuovere il supporto di avvio sostitutivo dalla confezione antistatica e allinearlo in posizione sul modulo controller.
+.. Utilizzando il cacciavite magnetico n. 1, inserire e serrare la vite sul supporto di avvio.
++
+
+NOTE: Non esercitare forza durante il serraggio della vite sul supporto di avvio, poiché potrebbe rompersi.
+
+
+
+
+
+
+
+== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
+
+Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.
+
+* È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con almeno 4 GB di capacità
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione *Downloads* del sito di supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+
+
+.Fasi
+. Scaricare e copiare l'immagine del servizio appropriata dal sito del supporto NetApp sull'unità flash USB.
+. Scarica l'immagine del servizio nel tuo spazio di lavoro sul laptop.
+. Decomprimere l'immagine del servizio.
++
+
+NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
+
++
+Il file di immagine del servizio decompresso contiene due cartelle:
+
++
+** `boot`
+** `efi`
+
+
+. Copiare il `efi` Nella directory principale dell'unità flash USB.
++
+L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
+
+. Rimuovere l'unità flash USB dal computer portatile.
+. Se non è già stato fatto, installare il condotto dell'aria.
++
+image::../media/drw_a250_install_airduct_cover.png[installare il coperchio del condotto dell'aria]
+
+. Chiudere il coperchio del modulo controller e serrare la vite a testa zigrinata.
++
+image::../media/drw_a250_close_controller_module_cover.png[drw a250 chiudere il coperchio del modulo controller]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Coperchio del modulo controller
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Vite a testa zigrinata
+
+|===
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Collegare il cavo di alimentazione all'alimentatore e reinstallare il fermo del cavo di alimentazione.
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Inserire completamente il modulo controller nello chassis:
+. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
+. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
+. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+
++
+Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
+
+

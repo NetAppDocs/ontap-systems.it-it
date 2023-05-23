@@ -1,0 +1,26 @@
+---
+permalink: a700s/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media 
+summary: 'Il supporto di avvio principale memorizza l"immagine di avvio ONTAP utilizzata dal sistema all"avvio. È possibile ripristinare l"immagine principale del supporto di avvio utilizzando l"immagine ONTAP sul supporto di avvio secondario o, se necessario, utilizzando un"unità flash USB.' 
+---
+= Panoramica della sostituzione dei supporti di avvio - AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il supporto di avvio principale memorizza l'immagine di avvio ONTAP utilizzata dal sistema all'avvio. È possibile ripristinare l'immagine principale del supporto di avvio utilizzando l'immagine ONTAP sul supporto di avvio secondario o, se necessario, utilizzando un'unità flash USB.
+
+Se il supporto di avvio secondario non funziona o manca il file image.tgz, è necessario ripristinare il supporto di avvio primario utilizzando un'unità flash USB. Il disco deve essere formattato in FAT32 e disporre della quantità di storage appropriata per contenere il file image_xxx.tgz.
+
+* Il processo di sostituzione ripristina il file system var dal supporto di avvio secondario o dall'unità flash USB al supporto di avvio primario.
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+

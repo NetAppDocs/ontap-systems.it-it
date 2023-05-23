@@ -1,0 +1,206 @@
+---
+permalink: ns224/hot-remove-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, drive, aggregate, ha, pair, serving, data, i/o, hot-remove an ns224 
+summary: 'È possibile rimuovere a caldo uno shelf di dischi NS224 che ha rimosso gli aggregati dai dischi, in una coppia ha attiva e in grado di fornire dati (i/o in corso).' 
+---
+= Rimozione a caldo di uno shelf - Shelf NS224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rimuovere a caldo uno shelf di dischi NS224 che ha rimosso gli aggregati dai dischi, in una coppia ha attiva e in grado di fornire dati (i/o in corso).
+
+.Prima di iniziare
+* La coppia ha non può trovarsi in uno stato di Takeover.
+* È necessario rimuovere tutti gli aggregati dai dischi (i dischi devono essere spare) nello shelf che si sta rimuovendo.
++
+
+NOTE: Se si tenta di eseguire questa procedura con gli aggregati sullo shelf che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
+
++
+È possibile utilizzare `storage aggregate offline -aggregate _aggregate_name_` e quindi `storage aggregate delete -aggregate _aggregate_name_` comando.
+
+* Se il sistema è stato spedito in un cabinet di sistema, è necessario un cacciavite Phillips per rimuovere le viti che fissano il ripiano ai montanti posteriori del cabinet.
+
+
+.A proposito di questa attività
+* Se si rimuovono a caldo più shelf, rimuovere uno shelf alla volta.
+* *Best practice:* la Best practice consiste nel rimuovere la proprietà del disco dopo aver rimosso gli aggregati dai dischi nello shelf che si sta rimuovendo.
++
+La rimozione delle informazioni di proprietà da un disco spare consente di integrare correttamente il disco in un altro nodo (in base alle necessità).
+
++
+La procedura per la rimozione della proprietà dai dischi si trova nel contenuto dei dischi e degli aggregati:
+
++
+https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"^]
+
+
+
+
+NOTE: La procedura richiede la disattivazione dell'assegnazione automatica del disco. Al termine di questa procedura, è possibile riabilitare l'assegnazione automatica del disco (dopo aver rimosso a caldo lo shelf).
+
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf per individuare fisicamente lo shelf interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se non si conosce `_shelf_name_` dello shelf interessato, eseguire `storage shelf show` comando.
+
++
+Uno shelf ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+
+* Dopo aver scollegato uno shelf da porte non dedicate compatibili con RoCE (a bordo dei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi o su moduli i/o), è possibile riconfigurare queste porte per l'utilizzo in rete.
++
+
+NOTE: Se la coppia ha esegue una versione di ONTAP 9.6, è necessario riavviare i controller uno alla volta. Se la coppia ha esegue ONTAP 9.7 o versione successiva, non è necessario riavviare i controller, a meno che uno o entrambi i controller non siano in modalità di manutenzione. Questa procedura presuppone che nessuno dei controller sia in modalità di manutenzione.
+
+
+
+.Fasi
+. Mettere a terra l'utente.
+. Verificare che i dischi nello shelf che si sta rimuovendo non abbiano aggregati (sono parti di ricambio) e che la proprietà sia rimossa:
++
+.. Immettere il seguente comando per elencare tutti i dischi nello shelf che si desidera rimuovere: `storage disk show -shelf _shelf_number_`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
+.. Controllare l'output per verificare che non vi siano aggregati sui dischi.
++
+I dischi senza aggregati hanno un trattino nella `Container Name` colonna.
+
+.. Controllare l'output per verificare che la proprietà sia rimossa dai dischi.
++
+I dischi senza proprietà hanno un trattino nella `Owner` colonna.
+
++
+
+NOTE: In caso di guasti, i dischi vengono visualizzati come guasti in `Container Type` colonna. (I dischi guasti non hanno proprietà).
+
++
+Il seguente output mostra che le unità sullo shelf da rimuovere (shelf 2) si trovano nello stato corretto per la rimozione dello shelf. Gli aggregati vengono rimossi su tutti i dischi, quindi viene visualizzato un trattino nella `Container Name` per ciascun disco. La proprietà viene rimossa anche da tutti i dischi; pertanto, viene visualizzato un trattino nella `Owner` per ciascun disco.
+
+
+
++
+[listing]
+----
+cluster1::> storage disk show -shelf 2
+
+           Usable           Disk     Container   Container
+Disk         Size Shelf Bay Type     Type        Name       Owner
+-------- -------- ----- --- ------   ----------- ---------- ---------
+...
+2.2.4           -     2   4 SSD-NVM  spare                -         -
+2.2.5           -     2   5 SSD-NVM  spare                -         -
+2.2.6           -     2   6 SSD-NVM  broken               -         -
+2.2.7           -     2   7 SSD-NVM  spare                -         -
+...
+----
+. Individuare fisicamente lo scaffale da rimuovere.
+. Scollegare il cablaggio dallo shelf che si sta rimuovendo:
++
+.. Scollegare i cavi di alimentazione dagli alimentatori aprendo il fermo del cavo di alimentazione, se si tratta di alimentatori CA, oppure svitando le due viti ad alette, se si tratta di alimentatori CC, quindi scollegare i cavi di alimentazione dagli alimentatori.
++
+Gli alimentatori non dispongono di un interruttore di alimentazione.
+
+.. Scollegare il cablaggio dello storage (dallo shelf ai controller).
+
+
+. Rimuovere fisicamente il ripiano dal rack o dall'armadietto.
++
+
+NOTE: Un ripiano NS224 completamente carico può pesare fino a 30.29 kg (66.78 libbre) e richiede due persone per sollevare o utilizzare un sollevatore idraulico. Evitare di rimuovere i componenti dello scaffale (dalla parte anteriore o posteriore dello scaffale) per ridurre il peso dello scaffale, in quanto il peso dello scaffale diventa sbilanciato.
+
++
+
+NOTE: Se il sistema è stato spedito in un cabinet, svitare prima le due viti Phillips che fissano il ripiano ai montanti posteriori. Le viti si trovano sulle pareti interne dello scaffale del modulo NSM inferiore. Rimuovere entrambi i moduli NSM per accedere alle viti.
+
+. Se si rimuovono più shelf, ripetere i punti da 2 a 5.
++
+In caso contrario, passare alla fase successiva.
+
+. Se l'assegnazione automatica del disco è stata disattivata quando è stata rimossa la proprietà dai dischi, riattivarla: `storage disk option modify -autoassign on`
++
+Il comando viene eseguito su entrambi i moduli controller.
+
+. È possibile riconfigurare le porte non dedicate compatibili con RoCE per l'utilizzo in rete, completando i seguenti passaggi secondari.
++
+In caso contrario, la procedura viene completata.
+
++
+.. Verificare i nomi delle porte non dedicate, attualmente configurate per l'utilizzo dello storage: `storage port show`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
++
+
+NOTE: Le porte non dedicate configurate per l'utilizzo dello storage vengono visualizzate nell'output come segue: Se la coppia ha esegue ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `storage` in `Mode` colonna. Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?` viene anche visualizzato `enabled` in `State` colonna.
+
+.. Completare la serie di passaggi applicabili alla versione di ONTAP in esecuzione sulla coppia ha:
++
+[cols="1,2"]
+|===
+| Se la coppia ha è in esecuzione... | Quindi... 
+
+
+ a| 
+ONTAP 9.8 o versione successiva
+ a| 
+... Riconfigurare le porte non dedicate per l'utilizzo in rete, sul primo modulo controller: `storage port modify -node _node name_ -port _port name_ -mode network`
++
+Eseguire questo comando per ciascuna porta che si sta riconfigurando.
+
+... Ripetere il passaggio precedente per riconfigurare le porte sul secondo modulo controller.
+... Passare alla fase secondaria 8c per verificare tutte le modifiche delle porte.
+
+
+
+
+ a| 
+ONTAP 9.7
+ a| 
+... Riconfigurare le porte non dedicate per l'utilizzo in rete, sul primo modulo controller: `storage port disable -node _node name_ -port _port name_`
++
+Eseguire questo comando per ciascuna porta che si sta riconfigurando.
+
+... Ripetere il passaggio precedente per riconfigurare le porte sul secondo modulo controller.
+... Passare alla fase secondaria 8c per verificare tutte le modifiche delle porte.
+
+
+
+
+ a| 
+Una versione di ONTAP 9.6
+ a| 
+... Riconfigurare le porte compatibili con RoCE per l'utilizzo in rete, sul primo modulo controller: `storage port disable -node _node name_ -port _port name_`
++
+Eseguire questo comando per ciascuna porta che si sta riconfigurando.
+
+... Riavviare il modulo controller per rendere effettive le modifiche alle porte:
++
+`system node reboot -node _node name_ -reason _reason_ for the reboot`
+
++
+
+NOTE: Il riavvio deve essere completato prima di passare alla fase successiva. Il riavvio può richiedere fino a 15 minuti.
+
+... Riconfigurare le porte sul secondo modulo controller, ripetendo il primo passo (a).
+... Riavviare il secondo controller per rendere effettive le modifiche alla porta, ripetendo il secondo passaggio (b).
+... Passare alla fase secondaria 8c per verificare tutte le modifiche delle porte.
+
+
+|===
+.. Verificare che le porte non dedicate di entrambi i moduli controller siano riconfigurate per l'utilizzo in rete: `storage port show`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
++
+Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `network` in `Mode` colonna.
+
++
+Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?` viene anche visualizzato `disabled` in `State` colonna.
+
+
+
+

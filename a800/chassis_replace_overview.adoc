@@ -1,0 +1,21 @@
+---
+permalink: a800/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a800, replace the chassis 
+summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+---
+= Sostituire il telaio - AFF A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire lo chassis, è necessario spostare il pannello, i moduli controller e le unità NVMe dallo chassis compromesso allo chassis sostitutivo, quindi rimuovere lo chassis compromesso dal rack dell'apparecchiatura o dall'armadietto del sistema e installare lo chassis sostitutivo al suo posto.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Questa procedura si basa sul presupposto che si stiano spostando il pannello, i dischi NVMe e i moduli controller nel nuovo chassis e che lo chassis sostitutivo sia un nuovo componente di NetApp.
+* Questa procedura ha un'interruzione. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+

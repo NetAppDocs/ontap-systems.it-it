@@ -1,0 +1,150 @@
+---
+permalink: platform-supplemental/sldiag-system-panic-diagnostics.html 
+sidebar: sidebar 
+keywords: run, diagnostic, storage, system, suffer, panic, identify, cause, run system panic diagnostic 
+summary: Eseguire la diagnostica dopo che il sistema storage ha subito un panico può aiutare a identificare la possibile causa del panico. 
+---
+= Eseguire la diagnostica di emergenza del sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eseguire la diagnostica dopo che il sistema storage ha subito un panico può aiutare a identificare la possibile causa del panico.
+
+. Al prompt del sistema di storage, passare al prompt DEL CARICATORE: `halt`
+. Al prompt DEL CARICATORE, immettere il seguente comando: `boot_diags`
++
+
+NOTE: Per il corretto funzionamento della diagnostica a livello di sistema, è necessario eseguire questo comando dal prompt DEL CARICATORE. Il comando boot_diags avvia driver speciali progettati appositamente per la diagnostica a livello di sistema.
+
+. Eseguire la diagnostica su tutti i dispositivi immettendo il seguente comando: `sldiag device run`
+. Visualizzare lo stato del test immettendo il seguente comando: `sldiag device status`
++
+Mentre i test sono ancora in esecuzione, il sistema storage fornisce i seguenti risultati:
+
++
+[listing]
+----
+There are still test(s) being processed.
+----
++
+Una volta completati tutti i test, si riceve la seguente risposta predefinita:
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+. Identificare la causa del panic di sistema immettendo il seguente comando: `sldiag device status -long -state failed`
++
+L'esempio seguente mostra come lo stato completo degli errori viene visualizzato in un'esecuzione di test senza l'hardware appropriato:
+
++
+[listing]
+----
+
+*> **sldiag device status -long -state failed**
+
+TEST START ------------------------------------------
+DEVTYPE: nvram_ib
+NAME: external  loopback test
+START DATE: Sat Jan  3 23:10:55 GMT 2009
+
+STATUS: Completed
+ib3a: could not set loopback mode, test failed
+END DATE: Sat Jan  3 23:11:04 GMT 2009
+
+LOOP: 1/1
+TEST END --------------------------------------------
+
+TEST START ------------------------------------------
+DEVTYPE: fcal
+NAME: Fcal Loopback Test
+START DATE: Sat Jan  3 23:10:56 GMT 2009
+
+STATUS: Completed
+Starting test on Fcal Adapter: 0b
+Started gathering adapter info.
+Adapter get adapter info OK
+Adapter fc_data_link_rate: 1Gib
+Adapter name: QLogic 2532
+Adapter firmware rev: 4.5.2
+Adapter hardware rev: 2
+
+Started adapter get WWN string test.
+Adapter get WWN string OK wwn_str: 5:00a:098300:035309
+
+Started adapter interrupt test
+Adapter interrupt test OK
+
+Started adapter reset test.
+Adapter reset OK
+
+Started Adapter Get Connection State Test.
+Connection State: 5
+Loop on FC Adapter 0b is OPEN
+
+Started adapter Retry LIP test
+Adapter Retry LIP OK
+
+ERROR: failed to init adaptor port for IOCTL call
+
+ioctl_status.class_type = 0x1
+
+ioctl_status.subclass = 0x3
+
+ioctl_status.info = 0x0
+ Started INTERNAL LOOPBACK:
+INTERNAL LOOPBACK   OK
+Error Count: 2  Run Time: 70 secs
+>>>>> ERROR, please ensure the port has a shelf or plug.
+END DATE: Sat Jan  3 23:12:07 GMT 2009
+
+LOOP: 1/1
+TEST END --------------------------------------------
+----
++
+[cols="1,2"]
+|===
+| Se il test di diagnostica a livello di sistema... | Quindi... 
+
+
+ a| 
+Sono stati completati senza guasti
+ a| 
+Non ci sono problemi hardware e il sistema storage torna alla richiesta.
+
+.. Cancellare i registri di stato immettendo il seguente comando: `sldiag device clearstatus`
+.. Verificare che il registro sia stato cancellato immettendo il seguente comando: `sldiag device status`
++
+Viene visualizzata la seguente risposta predefinita:
+
++
+[listing]
+----
+SLDIAG: No log messages are present.
+----
+.. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
+.. Immettere il seguente comando al prompt Loader per avviare il sistema di storage: `boot_ontap`La diagnostica a livello di sistema è stata completata.
+
+
+
+
+ a| 
+Ha causato alcuni errori di test
+ a| 
+Determinare la causa del problema.
+
+.. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
+.. Eseguire un arresto pulito e scollegare gli alimentatori.
+.. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
+.. Ricollegare gli alimentatori e accendere il sistema storage.
+.. Ripetere i passaggi da 1 a 5 di _esecuzione della diagnostica di emergenza del sistema_.
+
+
+|===
+
+
+Se i guasti persistono dopo aver ripetuto i passaggi, è necessario sostituire l'hardware.

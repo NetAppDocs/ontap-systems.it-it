@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+[cols="25h,~,~"]
+|===
+| Switch | Descrizione | Inizio disponibile 
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco 100 GbE a 36 porte (X190200)"]
+ a| 
+Supporta un'infrastruttura condivisa (cluster, ha e storage collegato a switch) sulla stessa coppia di switch Cisco Nexus 9336C-FX2, incluso il supporto per le configurazioni IP MetroCluster.
+ a| 
+ONTAP 9.9.1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco 100 GbE a 36 porte (X190200 e X190210)"]
+ a| 
+Switch di interconnessione cluster e storage switch Cisco Nexus 9336C-FX2 per controller AFF/FAS e connettività dati front-end.
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Broadcom BES-53248 (X190005 e X190005R)"]
+ a| 
+Supporto di switch di interconnessione cluster Broadcom BES-53248 per controller AFF/FAS con porte 40/100GbE.
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco 100 GbE a 36 porte (X190200)"] https://hwu.netapp.com/Switch/Index["Switch Cisco 100 GbE a 32 porte (X190100 e X190100R)"]
+ a| 
+Lo switch Cisco Nexus 100 GbE può essere utilizzato come switch storage dedicato per collegare gli shelf di dischi NS224 NVMe alle seguenti piattaforme:
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A400/AFF ASA A400
+* AFF A320
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Broadcom BES-53248 (X190005 e X190005R)"]
+ a| 
+Supporto di switch di interconnessione cluster Broadcom BES-53248 per controller AFF/FAS con porte 10 GbE.
+ a| 
+ONTAP 9.5P8
+
+|===

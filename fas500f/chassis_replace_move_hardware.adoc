@@ -1,0 +1,138 @@
+---
+permalink: fas500f/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas500f, move hardware components, replace the chassis 
+summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.' 
+---
+= Spostare e sostituire l'hardware - FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.
+
+
+
+== Fase 1: Rimuovere i moduli controller
+
+Per sostituire lo chassis, è necessario rimuovere i moduli controller dal vecchio chassis.
+
+Per sostituire lo chassis, è possibile utilizzare il seguente video o la procedura riportata in tabella; si presuppone la rimozione e la sostituzione del pannello:
+
+.Animazione - Sostituzione del telaio
+video::1f859217-fede-491a-896e-ac5b015c1a36[panopto]
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.
++
+
+NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
++
+image::../media/drw_a250_pcm_remove_install.png[installazione rimozione pcm drw a250]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Leva 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Meccanismo di blocco
+
+|===
+. Con entrambe le mani, afferrare i lati del modulo controller ed estrarlo delicatamente dallo chassis e posizionare il modulo su una superficie piana e stabile.
+. Mettere da parte il modulo controller in un luogo sicuro e ripetere questa procedura per l'altro modulo controller nello chassis.
+
+
+
+
+== Fase 2: Spostare le unità nel nuovo chassis
+
+È necessario spostare le unità da ciascuna apertura del vecchio chassis allo stesso alloggiamento del nuovo chassis.
+
+. Rimuovere delicatamente il pannello frontale dal sistema.
+. Rimuovere i dischi:
++
+.. Premere il pulsante di rilascio nella parte superiore della superficie del supporto sotto i LED.
+.. Tirare la maniglia della camma in posizione completamente aperta per estrarre l'unità dalla scheda intermedia, quindi estrarre delicatamente l'unità dal telaio.
++
+L'unità deve disinnestarsi dallo chassis, in modo che possa scorrere liberamente dallo chassis.
+
++
+
+NOTE: Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
+
++
+
+NOTE: I dischi sono fragili. Maneggiarli il meno possibile per evitare di danneggiarli.
+
+
+
+. Allineare l'unità dal vecchio chassis con la stessa apertura nel nuovo chassis.
+. Spingere delicatamente l'unità nel telaio fino in fondo.
++
+La maniglia della camma si innesta e inizia a ruotare verso l'alto.
+
+. Spingere con decisione l'unità fino in fondo nel telaio, quindi bloccare la maniglia della camma spingendola verso l'alto e contro il supporto dell'unità.
++
+Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la parte anteriore del supporto dell'unità. Fa clic quando è sicuro.
+
+. Ripetere la procedura per i dischi rimanenti nel sistema.
+
+
+
+
+== Fase 3: Sostituire uno chassis all'interno del rack dell'apparecchiatura o dell'armadietto del sistema
+
+Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema.
+
+. Rimuovere le viti dai punti di montaggio del telaio.
+. Con due persone, far scorrere il vecchio chassis dalle guide del rack in un cabinet di sistema o in un rack dell'apparecchiatura, quindi metterlo da parte.
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Con l'aiuto di due persone, installare lo chassis sostitutivo nel rack dell'apparecchiatura o nell'armadietto del sistema guidandolo sulle guide del rack in un cabinet del sistema o in un rack dell'apparecchiatura.
+. Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
+. Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dal vecchio chassis.
+. Se non è già stato fatto, installare il pannello.
+
+
+
+
+== Fase 4: Installare i moduli controller
+
+Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo in uno stato in cui è possibile eseguire il test diagnostico.
+
+Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Collegare nuovamente la console al modulo controller, quindi ricollegare la porta di gestione.
+. Collegare i cavi di alimentazione agli alimentatori e reinstallare i fermi dei cavi di alimentazione.
+. Inserire il modulo controller nel telaio:
++
+.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
+.. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
+.. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+
+
+
++
+Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
+
+. Ripetere i passi precedenti per installare il secondo controller nel nuovo chassis.
+

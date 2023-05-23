@@ -1,0 +1,69 @@
+---
+permalink: c250/controller-replace-restore-system-rma.html 
+sidebar: sidebar 
+keywords: aff c250, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: 'Per ripristinare il funzionamento completo del sistema, è necessario ripristinare la configurazione NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Contattare il supporto tecnico all"indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.' 
+---
+= Ripristino completo del sistema - AFF C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per ripristinare il funzionamento completo del sistema, è necessario ripristinare la configurazione NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+
+
+== Fase 1: Installare le licenze per il controller sostitutivo in ONTAP
+
+È necessario installare nuove licenze per il nodo _replacement_ se il nodo compromesso utilizzava funzioni ONTAP che richiedono una licenza standard (bloccata da nodo). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
+
+.A proposito di questa attività
+Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzionalità senza licenza sul nodo potrebbe non essere conforme al contratto di licenza, pertanto è necessario installare la chiave o le chiavi di licenza sostitutive sul nodo _replacement_ il prima possibile.
+
+.Prima di iniziare
+Le chiavi di licenza devono essere in formato a 28 caratteri.
+
+Si dispone di un periodo di prova di 90 giorni per l'installazione delle chiavi di licenza. Dopo il periodo di tolleranza, tutte le vecchie licenze vengono invalidate. Dopo aver installato una chiave di licenza valida, si hanno a disposizione 24 ore per installare tutte le chiavi prima della fine del periodo di tolleranza.
+
+.Fasi
+. Se sono necessarie nuove chiavi di licenza, procurarsi le chiavi di licenza sostitutive sul https://mysupport.netapp.com/site/global/dashboard["Sito di supporto NetApp"] Nella sezione My Support (supporto personale) sotto Software licensed (licenze software).
++
+
+NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e inviate all'indirizzo e-mail in archivio. Se non si riceve l'e-mail contenente le chiavi di licenza entro 30 giorni, contattare il supporto tecnico.
+
+. Installare ogni chiave di licenza: `+system license add -license-code license-key, license-key...+`
+. Rimuovere le vecchie licenze, se necessario:
++
+.. Verificare la presenza di licenze inutilizzate: `license clean-up -unused -simulate`
+.. Se l'elenco appare corretto, rimuovere le licenze inutilizzate: `license clean-up -unused`
+
+
+
+
+
+
+== Fase 2: Verifica dei LIF e registrazione del numero di serie
+
+Prima di riportare il nodo _replacement_ in servizio, verificare che i AutoSupport si trovino sulle rispettive porte home, registrare il numero di serie del nodo _replacement_, se abilitato, e ripristinare il giveback automatico.
+
+.Fasi
+. Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
++
+Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert`
+
+. Registrare il numero di serie del sistema presso il supporto NetApp.
++
+** Se AutoSupport è attivato, inviare un messaggio AutoSupport per registrare il numero di serie.
+** Se AutoSupport non è attivato, chiamare https://mysupport.netapp.com["Supporto NetApp"] per registrare il numero di serie.
+
+
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

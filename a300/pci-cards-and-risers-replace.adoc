@@ -1,0 +1,404 @@
+---
+permalink: a300/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: aff a300, replace a pcie card 
+summary: Per sostituire una scheda PCIe, è necessario eseguire una sequenza specifica di attività. 
+---
+= Sostituire una scheda PCIe - AFF A300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire una scheda PCIe, è necessario eseguire una sequenza specifica di attività.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
+
+[role="tabbed-block"]
+====
+.Opzione 1: La maggior parte delle configurazioni
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+--
+.Opzione 2: Controller in un MetroCluster a due nodi
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "Restituisci un'unità FIPS o SED in modalità non protetta" di link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Panoramica di NetApp Encryption con CLI"^].
+* Al termine di questa procedura, è necessario lasciare accesi gli alimentatori per alimentare il controller integro.
+
+
+.Fasi
+. Controllare lo stato MetroCluster per determinare se il controller compromesso è passato automaticamente al controller integro: `metrocluster show`
+. A seconda che si sia verificato uno switchover automatico, procedere come indicato nella seguente tabella:
++
+[cols="1,2"]
+|===
+| Se il controller è compromesso... | Quindi... 
+
+
+ a| 
+Si è attivata automaticamente
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+Non si è attivato automaticamente
+ a| 
+Eseguire un'operazione di switchover pianificata dal controller integro: `metrocluster switchover`
+
+
+
+ a| 
+Non è stato attivato automaticamente, si è tentato di eseguire lo switchover con `metrocluster switchover` e lo switchover è stato vetoed
+ a| 
+Esaminare i messaggi di veto e, se possibile, risolvere il problema e riprovare. Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+|===
+. Risincronizzare gli aggregati di dati eseguendo `metrocluster heal -phase aggregates` dal cluster esistente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se la riparazione è vetoed, si ha la possibilità di riemettere il `metrocluster heal` con il `-override-vetoes` parametro. Se si utilizza questo parametro opzionale, il sistema sovrascrive qualsiasi veto soft che impedisca l'operazione di riparazione.
+
+. Verificare che l'operazione sia stata completata utilizzando il comando MetroCluster Operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Controllare lo stato degli aggregati utilizzando `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Riparare gli aggregati root utilizzando `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se la riparazione è vetoed, si ha la possibilità di riemettere il `metrocluster heal` comando con il parametro -override-vetoes. Se si utilizza questo parametro opzionale, il sistema sovrascrive qualsiasi veto soft che impedisca l'operazione di riparazione.
+
+. Verificare che l'operazione di riparazione sia completa utilizzando `metrocluster operation show` sul cluster di destinazione:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. Sul modulo controller guasto, scollegare gli alimentatori.
+
+
+--
+====
+
+
+== Fase 2: Aprire il modulo controller
+
+Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
++
+image::../media/drw_32xx_cbl_mgmt_arm.png[ARM. gestione cbl. 32xx drw]
+
+. Allentare la vite a testa zigrinata sulla maniglia della camma sul modulo controller.
++
+image::../media/drw_8020_cam_handle_thumbscrew.png[vite a testa zigrinata con impugnatura a camma drw 8020]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Vite a testa zigrinata 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Maniglia CAM
+
+|===
+. Tirare la maniglia della camma verso il basso e iniziare a far scorrere il modulo controller fuori dallo chassis.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+
+
+
+
+== Fase 3: Sostituire una scheda PCIe
+
+Per sostituire una scheda PCIe, individuarla all'interno del controller e seguire la sequenza di passaggi specifica.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare la vite a testa zigrinata sul pannello laterale del modulo controller.
+. Estrarre il pannello laterale dal modulo controller.
++
+image::../media/drw_rxl_pcie.png[pcie drw rxl]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Pannello laterale 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Scheda PCIe
+
+|===
+. Rimuovere la scheda PCIe dal modulo controller e metterla da parte.
+. Installare la scheda PCIe sostitutiva.
++
+Assicurarsi di allineare correttamente la scheda nello slot ed esercitare una pressione uniforme sulla scheda quando viene inserita nello slot. La scheda PCIe deve essere inserita correttamente nello slot.
+
++
+
+NOTE: Se si sta installando una scheda nello slot inferiore e non si riesce a vedere bene lo slot, rimuovere la scheda superiore in modo da poter vedere lo slot, installare la scheda, quindi reinstallare la scheda rimossa dallo slot superiore.
+
+. Chiudere il pannello laterale e serrare la vite a testa zigrinata.
+
+
+
+
+== Fase 4: Reinstallare il controller
+
+Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema e avviarlo.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Completare la reinstallazione del modulo controller:
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Quindi, eseguire questa procedura... 
+
+
+ a| 
+Una coppia ha
+ a| 
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Se non è già stato fatto, ricollegare i cavi al modulo controller.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+
+
+
+
+ a| 
+Una configurazione MetroCluster a due nodi
+ a| 
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Se non è già stato fatto, ricollegare i cavi al modulo controller.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Ricollegare i cavi di alimentazione agli alimentatori e alle fonti di alimentazione, quindi accendere l'alimentazione per avviare il processo di avvio.
+
+
+|===
+. Se il sistema è configurato per supportare connessioni dati e di interconnessione cluster a 10 GbE su schede di rete 40 GbE o porte integrate, convertire queste porte in connessioni a 10 GbE utilizzando il comando nicadmin convert dalla modalità Maintenance.
++
+
+NOTE: Assicurarsi di uscire dalla modalità di manutenzione dopo aver completato la conversione.
+
+. Riportare il controller al funzionamento normale:
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Eseguire questo comando dalla console del partner... 
+
+
+ a| 
+Una coppia ha
+ a| 
+`storage failover giveback -ofnode _impaired_node_name_`
+
+
+
+ a| 
+Una configurazione MetroCluster a due nodi
+ a| 
+Passare alla fase successiva. La procedura di switchback MetroCluster viene eseguita nell'attività successiva del processo di sostituzione.
+
+|===
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 5 (solo MetroCluster a due nodi): Switch back aggregate
+
+Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
+
+Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
+
+.Fasi
+. Verificare che tutti i nodi si trovino in `enabled` stato: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verificare che la risincronizzazione sia completa su tutte le SVM: `metrocluster vserver show`
+. Verificare che tutte le migrazioni LIF automatiche eseguite dalle operazioni di riparazione siano state completate correttamente: `metrocluster check lif show`
+. Eseguire lo switchback utilizzando `metrocluster switchback` comando da qualsiasi nodo del cluster esistente.
+. Verificare che l'operazione di switchback sia stata completata: `metrocluster show`
++
+L'operazione di switchback è ancora in esecuzione quando un cluster si trova in `waiting-for-switchback` stato:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+L'operazione di switchback è completa quando i cluster si trovano in `normal` stato:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se il completamento di uno switchback richiede molto tempo, è possibile verificare lo stato delle linee di base in corso utilizzando `metrocluster config-replication resync-status show` comando.
+
+. Ripristinare le configurazioni SnapMirror o SnapVault.
+
+
+
+
+== Fase 6: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

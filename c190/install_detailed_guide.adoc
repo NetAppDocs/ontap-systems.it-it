@@ -1,0 +1,436 @@
+---
+permalink: c190/install-detailed-guide.html 
+sidebar: sidebar 
+keywords: aff c190, detailed installation 
+summary: 'Questa sezione fornisce istruzioni dettagliate per l"installazione di un sistema AFF C190.' 
+---
+= Fasi dettagliate - AFF C190
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema AFF C190.
+
+
+
+== Fase 1: Preparazione per l'installazione
+
+Per installare il sistema AFF C190, creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
+
+.Prima di iniziare
+* Assicurarsi di disporre dell'accesso a. link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato.
+* Assicurarsi di disporre dell'accesso a link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Note di rilascio"^] Per ulteriori informazioni su questo sistema, consultare la versione di ONTAP in uso.
+* Assicurarsi di disporre dei seguenti elementi presso la propria sede:
++
+** Spazio rack per il sistema storage
+** Cacciavite Phillips n. 2
+** Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
+** Computer portatile o console con connessione RJ-45 e accesso a un browser Web
+
+
+
+
+.Fasi
+. Disimballare il contenuto di tutte le confezioni.
+. Annotare il numero di serie del sistema dai controller.
++
+image::../media/drw_ssn_label.png[etichetta drw sn]
+
+. Configurazione dell'account:
++
+.. Accedi al tuo account esistente o crea un account.
+.. Registrati (link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["Registrazione del prodotto NetApp"^]) del sistema.
+
+
+. Scaricare e installare link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^] sul computer portatile.
+. Fare un inventario e prendere nota del numero e dei tipi di cavi ricevuti.
++
+La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] individuare il cavo e identificarne l'utilizzo.
+
++
+[cols="1,2,1,2"]
+|===
+| Tipo di cavo... | Codice e lunghezza del ricambio | Tipo di connettore | Per... 
+
+
+ a| 
+Cavo da 10 GbE (in base all'ordine)
+ a| 
+X6566B-05-R6 (112-00297), 0,5 m
+
+X6566B-2-R6 (112-00299), 2 m
+ a| 
+image:../media/oie_cable_sfp_gbe_copper.png[""]
+ a| 
+Rete di interconnessione del cluster
+
+
+
+ a| 
+X6566B-2-R6 (112-00299), 2 m
+
+X6566B-3-R6 (112-00300), 3 m.
+
+X6566B-5-R6 (112-00301), 5 m.
+ a| 
+Dati
+
+
+
+ a| 
+Cavi di rete ottica (in base all'ordine)
+ a| 
+X6553-R6 (112-00188), 2 m
+
+X6536-R6 (112-00090), 5 m.
+
+X6554-R6 (112-00189), 15 m.
+ a| 
+image:../media/oie_sfp_optical.png[""]
+
+image::../media/oie_cable_fiber_lc_connector.png[connettore lc in fibra ottica per cavo oie]
+ a| 
+Rete host SFP + FC
+
+
+
+ a| 
+Cat 6, RJ-45 (in base all'ordine)
+ a| 
+X6585-R6 (112-00291), 3 m.
+
+X6562-R6 (112-00196), 5 m.
+ a| 
+image:../media/oie_cable_rj45.png[""]
+ a| 
+Host Ethernet e rete di gestione
+
+
+
+ a| 
+Cavo per console micro-USB
+ a| 
+Non applicabile
+ a| 
+image:../media/oie_cable_micro_usb.png[""]
+ a| 
+Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac
+
+
+
+ a| 
+Cavi di alimentazione
+ a| 
+Non applicabile
+ a| 
+image:../media/oie_cable_power.png[""]
+ a| 
+Accensione del sistema
+
+|===
+. Scaricare e completare il link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Foglio di lavoro per la configurazione del cluster"^].
+
+
+
+
+== Fase 2: Installare l'hardware
+
+Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
+
+.Fasi
+. Installare i kit di guide, secondo necessità.
+. Installare e fissare il sistema seguendo le istruzioni fornite con il kit di guide.
++
+
+NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
+
++
+image::../media/drw_oie_fas2700_weight_caution.png[drw oie fas2700 attenzione sul peso]
+
+. Collegare i dispositivi di gestione dei cavi (come illustrato).
++
+image::../media/drw_cable_management_arm_install.png[installazione di ARM per la gestione dei cavi drw]
+
+. Posizionare il pannello anteriore del sistema.
+
+
+
+
+== Fase 3: Collegare i controller alla rete
+
+Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.
+
+Le porte UTA2, la rete dati Ethernet e le porte di gestione dei moduli controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i moduli controller.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Cluster senza switch a due nodi
+--
+Scopri come collegare un cluster senza switch a due nodi.
+
+.Prima di iniziare
+Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+
+Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
+
+image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+
+
+NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
+
+
+NOTE: Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.
+
+.A proposito di questa attività
+È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.
+
+Configurazioni di rete dati UTA2::
++
+--
+image::../media/drw_c190_tnsc_unified_network_cabling_animated_gif.png[gif animata: cablaggio di rete unificato tnsc drw c190]
+
+--
+Configurazioni di rete Ethernet::
++
+--
+image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[gif animato cablaggio di rete ethernet tnsc drw c190]
+
+--
+
+
+Eseguire le seguenti operazioni su ciascun modulo controller.
+
+.Fasi
+. Collegare le porte di interconnessione del cluster e0a e0a e e0b a e0b con il cavo di interconnessione del cluster. +image:../media/drw_c190_u_tnsc_clust_cbling.png[""]
+. Effettuare una delle seguenti operazioni:
++
+Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati e0c/0c e e0d/0d o e0e/0e e e0f/0f alla rete host.
++
+--
+image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+
+--
+Configurazioni di rete Ethernet:: Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host. nella seguente illustrazione.
++
+--
+image:../media/drw_c190_e_rj45_cbling.png[""]
+
+--
+
+
+. Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
++
+image:../media/drw_c190_u_mgmt_cbling.png[""]
+
+
+
+
+IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
+
+--
+.Opzione 2: Cluster con switch
+--
+Scopri come collegare un cluster con switch.
+
+.Prima di iniziare
+Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+
+Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
+
+image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+
+
+NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
+
+
+NOTE: Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.
+
+.A proposito di questa attività
+È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.
+
+Configurazioni di rete unificate::
++
+--
+image::../media/drw_c190_switched_unified_network_cabling_animated_gif.png[gif animato con cablaggio di rete unificato con switch drw c190]
+
+--
+Configurazioni di rete Ethernet::
++
+--
+image::../media/drw_c190_switched_ethernet_network_cabling_animated.png[cablaggio di rete ethernet con switch drw c190 animato]
+
+--
+
+
+Eseguire le seguenti operazioni su ciascun modulo controller.
+
+.Fasi
+. Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster.
++
+image:../media/drw_c190_u_switched_clust_cbling.png[""]
+
+. Effettuare una delle seguenti operazioni:
++
+Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati e0c/0c e e0d/0d o e0e/0e e e0f/0f alla rete host.
++
+--
+image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+
+--
+Configurazioni di rete Ethernet:: Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host.
++
+--
+image:../media/drw_c190_e_rj45_cbling.png[""]
+
+--
+
+
+. Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
++
+image:../media/drw_c190_u_mgmt_cbling.png[""]
+
+
+
+
+IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
+
+--
+====
+
+
+== Fase 4: Completare la configurazione del sistema
+
+Completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Se la funzione di rilevamento della rete è attivata
+--
+Scopri come completare la configurazione del sistemaSe hai attivato il rilevamento della rete sul tuo laptop.
+
+.Fasi
+. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
+. Accendere gli interruttori di alimentazione su entrambi i nodi.
++
+image::../media/drw_turn_on_power_switches_to_psus.png[drw attivare gli interruttori di alimentazione delle psu]
+
++
+
+NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+
+. Assicurarsi che il rilevamento della rete sia attivato sul laptop.
++
+Per ulteriori informazioni, consultare la guida in linea del portatile.
+
+. Utilizzare l'animazione per collegare il laptop allo switch di gestione:
++
+.Animazione - collegare il laptop allo switch di gestione
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. Selezionare un'icona ONTAP elencata per scoprire:
++
+image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+
++
+.. Aprire file Explorer.
+.. Fare clic su *Network* nel riquadro sinistro.
+.. Fare clic con il pulsante destro del mouse e selezionare *refresh*.
+.. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
++
+
+NOTE: XXXXX è il numero di serie del sistema per il nodo di destinazione.
+
++
+Viene visualizzato Gestione sistema.
+
+
+
+. Utilizzare la configurazione guidata di System Manager per configurare il sistema utilizzando i dati raccolti in link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"^].
+. Verificare lo stato del sistema eseguendo Config Advisor.
+. Una volta completata la configurazione iniziale, passare alla link:https://docs.netapp.com/us-en/ontap-family/["Documentazione ONTAP"] Per informazioni sulla configurazione di funzionalità aggiuntive in ONTAP.
++
+
+NOTE: La configurazione predefinita delle porte per i sistemi di configurazione unificata è la modalità CNA; se ci si connette a una rete host FC, è necessario modificare le porte per la modalità FC.
+
+
+
+--
+.Opzione 2: Se il rilevamento di rete non è attivato
+--
+Informazioni su come completare la configurazione del sistema se il rilevamento della rete non è abilitato sul laptop.
+
+.Fasi
+. Cablare e configurare il laptop o la console:
++
+.. Impostare la porta della console del portatile o della console su 115,200 baud con N-8-1.
++
+
+NOTE: Per informazioni su come configurare la porta della console, consultare la guida in linea del portatile o della console.
+
+.. Collegare il cavo della console al computer portatile o alla console e la porta della console sul controller utilizzando il cavo della console fornito con il sistema.
++
+image::../media/drw_console_connect_fas2700_affa200.png[la console del drw collega il fas2700 affa200]
+
+.. Collegare il laptop o la console allo switch sulla subnet di gestione.
++
+image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[dal client drw alla subnet fas2700 affa220 mgmt]
+
+.. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
+
+
+. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
+. Accendere gli interruttori di alimentazione su entrambi i nodi.
++
+image::../media/drw_turn_on_power_switches_to_psus.png[drw attivare gli interruttori di alimentazione delle psu]
+
++
+
+NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+
+. Assegnare un indirizzo IP di gestione del nodo iniziale a uno dei nodi.
++
+[cols="1,2"]
+|===
+| Se la rete di gestione dispone di DHCP... | Quindi... 
+
+
+ a| 
+Configurato
+ a| 
+Registrare l'indirizzo IP assegnato ai nuovi controller.
+
+
+
+ a| 
+Non configurato
+ a| 
+.. Aprire una sessione della console utilizzando putty, un server terminal o un server equivalente per l'ambiente in uso.
++
+
+NOTE: Se non si sa come configurare PuTTY, consultare la guida in linea del portatile o della console.
+
+.. Inserire l'indirizzo IP di gestione quando richiesto dallo script.
+
+
+|===
+. Utilizzando System Manager sul laptop o sulla console, configurare il cluster:
++
+.. Puntare il browser sull'indirizzo IP di gestione del nodo.
++
+
+NOTE: Il formato dell'indirizzo è +https://x.x.x.x+.
+
+.. Configurare il sistema utilizzando i dati raccolti in link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"^].
+
+
+. Verificare lo stato del sistema eseguendo Config Advisor.
+. Una volta completata la configurazione iniziale, passare alla link:https://docs.netapp.com/us-en/ontap-family/["ONTAP "] Per informazioni sulla configurazione di funzionalità aggiuntive in ONTAP.
++
+
+NOTE: La configurazione predefinita delle porte per i sistemi di configurazione unificata è la modalità CNA; se ci si connette a una rete host FC, è necessario modificare le porte per la modalità FC.
+
+
+
+--
+====

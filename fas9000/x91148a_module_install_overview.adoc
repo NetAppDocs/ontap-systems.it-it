@@ -1,0 +1,21 @@
+---
+permalink: fas9000/x91148a-module-install-overview.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, add, x91148a, storage, module, NIC, no open, slots, open slots, system 
+summary: È possibile aggiungere un modulo i/o al sistema sostituendo una scheda NIC o un adattatore di storage con una nuova scheda in un sistema completamente popolato oppure aggiungendo una nuova scheda NIC o un adattatore di storage in uno slot vuoto dello chassis del sistema. 
+---
+= Panoramica sull'aggiunta di un modulo X91148A - AFF A9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere un modulo i/o al sistema sostituendo una scheda NIC o un adattatore di storage con una nuova scheda in un sistema completamente popolato oppure aggiungendo una nuova scheda NIC o un adattatore di storage in uno slot vuoto dello chassis del sistema.
+
+.Prima di iniziare
+* Controllare https://hwu.netapp.com/["NetApp Hardware Universe"] Per assicurarsi che il nuovo modulo i/o sia compatibile con il sistema e la versione di ONTAP in uso.
+* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"] E utilizza il miglior modulo di i/O.
+* Per aggiungere senza interruzioni un modulo i/o, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione o rimuovere un modulo i/o esistente, aggiungere il modulo i/o nuovo o sostitutivo e restituire il controller di destinazione.
+* Assicurarsi che tutti gli altri componenti funzionino correttamente.
+

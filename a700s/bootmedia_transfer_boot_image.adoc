@@ -1,0 +1,245 @@
+---
+permalink: a700s/bootmedia-transfer-boot-image.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive 
+summary: Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario. 
+---
+= Trasferire l'immagine di boot sul supporto di boot - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine sul secondo supporto di avvio installato nel modulo controller, il metodo principale per ripristinare l'immagine di sistema, Oppure trasferendo l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB quando il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario.
+
+
+
+== Opzione 1: Trasferimento dei file sul supporto di avvio utilizzando il backup recovery dal secondo supporto di avvio
+
+È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine sul secondo supporto di avvio installato nel modulo controller. Questo è il metodo principale per trasferire i file dei supporti di avvio sui supporti di avvio sostitutivi nei sistemi con due supporti di avvio nel modulo controller.
+
+L'immagine sul supporto di avvio secondario deve contenere un `image.tgz` file e non devono riportare errori. Se il file image.tgz non è presente o il supporto di avvio segnala errori, non è possibile utilizzare questa procedura. È necessario trasferire l'immagine di avvio sul supporto di avvio sostitutivo utilizzando la procedura di sostituzione dell'unità flash USB.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. In caso contrario, chiudere il condotto dell'aria:
++
+.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
+.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
+.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
++
+image::../media/drw_a700s_close_air_duct.png[drw a700s chiudere il condotto dell'aria]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser
+
+|===
+
+
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori di supporti (SFP) se sono stati rimossi.
+
+. Ricollegare l'alimentatore, quindi collegarlo alla fonte di alimentazione.
++
+Assicurarsi di ricollegare il collare di bloccaggio del cavo di alimentazione al cavo di alimentazione.
+
+. Spingere delicatamente il modulo controller completamente nel sistema fino a quando i ganci di bloccaggio del modulo controller non iniziano a sollevarsi, spingere con decisione i ganci di bloccaggio per terminare l'alloggiamento del modulo controller, quindi ruotare i ganci di bloccaggio in posizione di blocco sui piedini del modulo controller.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dal supporto di avvio secondario: `boot_recovery`
++
+L'immagine viene scaricata dal supporto di avvio secondario.
+
+. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
+. Una volta installata l'immagine, avviare il processo di ripristino:
++
+.. Registrare l'indirizzo IP del controller che ha subito problemi visualizzato sullo schermo.
+.. Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
+.. Premere `y` quando viene richiesto di confermare che la procedura di backup è stata eseguita correttamente.
+
+
+. Dal controller partner nel livello di privilegio avanzato, avviare la sincronizzazione della configurazione utilizzando l'indirizzo IP registrato nel passaggio precedente: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+. Una volta completata la sincronizzazione della configurazione senza errori, premere `y` quando viene richiesto di confermare che la procedura di backup è stata eseguita correttamente.
+. Premere `y` quando viene richiesto se si desidera utilizzare la copia ripristinata, quindi premere `y` quando viene richiesto di riavviare il controller.
+. Uscire dal livello di privilegio avanzato sul controller integro.
+
+
+
+
+== Opzione 2: Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB
+
+Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario.
+
+* È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. In caso contrario, chiudere il condotto dell'aria:
++
+.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
+.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
+.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
++
+image::../media/drw_a700s_close_air_duct.png[drw a700s chiudere il condotto dell'aria]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser
+
+|===
+
+
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori di supporti (SFP) se sono stati rimossi.
+
+. Ricollegare l'alimentatore, quindi collegarlo alla fonte di alimentazione.
++
+Assicurarsi di ricollegare il collare di bloccaggio del cavo di alimentazione al cavo di alimentazione.
+
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Spingere delicatamente il modulo controller completamente nel sistema fino a quando i ganci di bloccaggio del modulo controller non iniziano a sollevarsi, spingere con decisione i ganci di bloccaggio per terminare l'alloggiamento del modulo controller, quindi ruotare i ganci di bloccaggio in posizione di blocco sui piedini del modulo controller.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+. Sebbene le variabili d'ambiente e i bootargs siano conservati, è necessario verificare che tutte le variabili d'ambiente di boot e i bootargs necessari siano impostati correttamente per il tipo di sistema e per la configurazione utilizzando il `printenv bootarg name` e correggere eventuali errori utilizzando `setenv variable-name <value>` comando.
++
+.. Controllare le variabili di ambiente di boot:
++
+*** `bootarg.init.boot_clustered`
+*** `partner-sysid`
+*** `bootarg.init.flash_optimized` Per AFF C190/AFF A220 (All Flash FAS)
+*** `bootarg.init.san_optimized` Per AFF A220 e tutti gli array SAN
+*** `bootarg.init.switchless_cluster.enable`
+
+
+.. Se External Key Manager (Gestore chiavi esterne) è attivato, controllare i valori di boot, elencati in `kenv` Output ASUP:
++
+*** `bootarg.storageencryption.support <value>`
+*** `bootarg.keymanager.support <value>`
+*** `kmip.init.interface <value>`
+*** `kmip.init.ipaddr <value>`
+*** `kmip.init.netmask <value>`
+*** `kmip.init.gateway <value>`
+
+
+.. Se Onboard Key Manager è attivato, controllare i valori di boot, elencati nella `kenv` Output ASUP:
++
+*** `bootarg.storageencryption.support <value>`
+*** `bootarg.keymanager.support <value>`
+*** `bootarg.onboard_keymanager <value>`
+
+
+.. Salvare le variabili di ambiente modificate con `savenv` comando
+.. Confermare le modifiche utilizzando `printenv _variable-name_` comando.
+
+
+. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
++
+L'immagine viene scaricata dall'unità flash USB.
+
+. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
+. Una volta installata l'immagine, avviare il processo di ripristino:
++
+.. Registrare l'indirizzo IP del controller che ha subito problemi visualizzato sullo schermo.
+.. Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
+.. Premere `y` quando viene richiesto di confermare che la procedura di backup è stata eseguita correttamente.
+
+
+. Premere `y` quando viene richiesto se si desidera utilizzare la copia ripristinata, quindi premere `y` quando viene richiesto di riavviare il controller.
+. Dal controller partner nel livello di privilegio avanzato, avviare la sincronizzazione della configurazione utilizzando l'indirizzo IP registrato nel passaggio precedente: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+. Una volta completata la sincronizzazione della configurazione senza errori, premere `y` quando viene richiesto di confermare che la procedura di backup è stata eseguita correttamente.
+. Premere `y` quando viene richiesto se si desidera utilizzare la copia ripristinata, quindi premere `y` quando viene richiesto di riavviare il controller.
+. Verificare che le variabili ambientali siano impostate come previsto.
++
+.. Portare il controller al prompt DEL CARICATORE.
++
+Dal prompt di ONTAP, puoi eseguire il comando 'System node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true'.
+
+.. Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
+.. Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv __environment-variable-name__ __changed-value__` comando.
+.. Salvare le modifiche utilizzando `savenv` comando.
+.. Riavviare il controller.
+
+
+. Con il controller riavviato per problemi che visualizza `Waiting for giveback...` eseguire un giveback dal controller integro:
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Quindi... 
+
+
+ a| 
+Una coppia ha
+ a| 
+Una volta visualizzato il `Waiting for giveback...` eseguire un giveback dal controller integro:
+
+.. Dal controller integro: `storage failover giveback -ofnode partner_node_name`
++
+Il controller compromesso recupera lo storage, termina l'avvio e poi si riavvia e viene nuovamente sostituito dal controller integro.
+
++
+
+NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
+
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["Guida alla configurazione ad alta disponibilità di ONTAP 9"]
+
+.. Monitorare l'avanzamento dell'operazione di giveback utilizzando `storage failover show-giveback` comando.
+.. Una volta completata l'operazione di giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover utilizzando `storage failover show` comando.
+.. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify` comando.
+
+
+|===
+. Uscire dal livello di privilegio avanzato sul controller integro.
+

@@ -1,0 +1,110 @@
+---
+permalink: a300/power-supply-swap-out.html 
+sidebar: sidebar 
+keywords: aff a300, swap out a power supply 
+summary: 'Lo scambio di un alimentatore comporta lo spegnimento, lo scollegamento e la rimozione del vecchio alimentatore, l"installazione, il collegamento e l"accensione dell"alimentatore sostitutivo.' 
+---
+= Sostituire un alimentatore - AFF A300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo scambio di un alimentatore comporta lo spegnimento, lo scollegamento e la rimozione del vecchio alimentatore, l'installazione, il collegamento e l'accensione dell'alimentatore sostitutivo.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+* Gli alimentatori sono ridondanti e sostituibili a caldo.
+* Questa procedura è stata scritta per la sostituzione di un alimentatore alla volta.
++
+
+NOTE: Si consiglia di sostituire l'alimentatore entro due minuti dalla rimozione dallo chassis. Il sistema continua a funzionare, ma ONTAP invia messaggi alla console sull'alimentatore danneggiato fino alla sostituzione dell'alimentatore.
+
+* Il numero di alimentatori nel sistema dipende dal modello.
+* Gli alimentatori sono a portata automatica.
++
+.. Identificare l'alimentatore che si desidera sostituire, in base ai messaggi di errore della console o tramite i LED degli alimentatori.
+.. Se non si è già collegati a terra, mettere a terra l'utente.
+.. Spegnere l'alimentatore e scollegare i cavi di alimentazione:
++
+... Spegnere l'interruttore di alimentazione dell'alimentatore.
+... Aprire il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dall'alimentatore.
+... Scollegare il cavo di alimentazione dalla fonte di alimentazione.
+
+
+.. Premere verso il basso il fermo di rilascio sulla maniglia della camma dell'alimentatore, quindi abbassare la maniglia della camma in posizione completamente aperta per rilasciare l'alimentatore dal piano intermedio.
++
+image::../media/drw_rxl_psu.png[psu rxl drw]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Alimentatore 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo di rilascio della maniglia della camma
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+LED di alimentazione e di guasto
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Maniglia CAM
+
+
+
+ a| 
+image:../media/legend_icon_05.png[""]
+ a| 
+Meccanismo di bloccaggio del cavo di alimentazione
+
+|===
+.. Utilizzare la maniglia della camma per estrarre l'alimentatore dal sistema.
++
+
+CAUTION: Quando si rimuove un alimentatore, utilizzare sempre due mani per sostenerne il peso.
+
+.. Assicurarsi che l'interruttore on/off del nuovo alimentatore sia in posizione off.
+.. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis del sistema, quindi spingere delicatamente l'alimentatore nello chassis utilizzando la maniglia della camma.
++
+Gli alimentatori sono dotati di chiavi e possono essere installati in un solo modo.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema. Il connettore potrebbe danneggiarsi.
+
+.. Premere con decisione la maniglia della camma dell'alimentatore per inserirla completamente nel telaio, quindi spingere la maniglia della camma in posizione di chiusura, assicurandosi che il fermo di rilascio della maniglia della camma scatti nella posizione di blocco.
+.. Ricollegare il cablaggio dell'alimentatore:
++
+... Ricollegare il cavo di alimentazione all'alimentatore e alla fonte di alimentazione.
+... Fissare il cavo di alimentazione all'alimentatore utilizzando il fermo del cavo di alimentazione.
+
+
+
+
++
+Una volta ripristinata l'alimentazione, il LED di stato deve essere verde.
+
++
+.. Accendere il nuovo alimentatore, quindi verificare il funzionamento dei LED di attività dell'alimentatore.
++
+I LED dell'alimentatore sono accesi quando l'alimentatore è in linea.
+
+.. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"^] per ulteriori informazioni.
+
+
+

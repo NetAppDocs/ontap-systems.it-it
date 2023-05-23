@@ -1,0 +1,165 @@
+---
+permalink: a700s/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media 
+summary: È necessario individuare il supporto di avvio guasto nel modulo controller rimuovendo il modulo PCIe centrale sul modulo controller, individuare il supporto di avvio guasto tramite il LED acceso vicino al supporto di avvio, quindi sostituire il supporto di avvio. 
+---
+= Sostituire il supporto di avvio - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario rimuovere il modulo controller dal telaio, aprirlo e sostituire il supporto di avvio guasto.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Scollegare l'alimentatore del modulo controller dalla fonte di alimentazione, quindi scollegare il cavo dall'alimentatore.
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a700s_pcm_remove.png[rimozione pcm drw a700s]
+
+
+
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Fermo di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
++
+.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
+
+
+
+
+image::../media/drw_a700s_open_air_duct.png[drw a700s condotto dell'aria aperto]
+
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Linguette di bloccaggio del condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Condotto dell'aria
+
+|===
+
+
+== Fase 2: Sostituire il supporto di avvio - AFF A700s
+
+Individuare il supporto di avvio guasto nel modulo controller rimuovendo il modulo PCIe centrale sul modulo controller, individuando il supporto di avvio guasto e sostituendo il supporto di avvio.
+
+Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a stella.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individuare il supporto di avvio:
++
+.. Aprire il condotto dell'aria, se necessario.
+.. Se necessario, rimuovere il riser 2, il modulo PCIe centrale, sbloccando il fermo di blocco e rimuovendo il riser dal modulo controller.
++
+image::../media/drw_a700s_boot_media_replace.png[sostituzione dei supporti di avvio drw a700s]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser 2 (modulo PCIe centrale)
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Vite del supporto di avvio
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Supporto di boot
+
+|===
+
+
+. Individuare il supporto di avvio guasto.
+. Rimuovere il supporto di avvio dal modulo controller:
++
+.. Utilizzando un cacciavite Phillips n. 1, rimuovere la vite che fissa il supporto di avvio e mettere da parte la vite in un luogo sicuro.
+.. Afferrare i lati del supporto di avvio, ruotare delicatamente il supporto di avvio verso l'alto, quindi estrarre il supporto di avvio dalla presa e metterlo da parte.
+
+
+. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+. Ruotare il supporto di avvio verso il basso fino a quando non è a filo con la scheda madre.
+. Fissare il supporto di avvio in posizione utilizzando la vite.
++
+
+NOTE: Non serrare eccessivamente la vite. In questo modo, la scheda del supporto di avvio potrebbe rompersi.
+
+. Reinstallare il riser nel modulo controller.
+. Chiudere il condotto dell'aria:
++
+.. Ruotare il condotto dell'aria verso il basso.
+.. Far scorrere il condotto dell'aria verso i montanti fino a farlo scattare in posizione.
+
+
+

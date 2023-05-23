@@ -1,0 +1,38 @@
+= 
+:allow-uri-read: 
+
+
+[cols="25h,~,~"]
+|===
+| Funzionalità | Descrizione e dove saperne di più | Inizio disponibile 
+
+
+ a| 
+Supporto esteso della piattaforma per shelf di dischi NS224
+ a| 
+Le seguenti piattaforme supportano gli shelf di dischi NS224:
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A250/AFF ASA A250
+* FAS500f
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+Aggiunta a caldo di shelf SAS da 12 GB a stack di storage SAS da 6 GB
+ a| 
+È ora supportata una transizione a velocità singola da 6 GB a 12 GB in uno stack di storage SAS. Ciò consente l'espansione dello storage degli stack da 6 GB esistenti con shelf da 12 GB.
+
+https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-ds-mix-hotadd/home.html["Shelf hot-adding con moduli IOM12 a uno stack di shelf con moduli IOM6"]
+ a| 
+ONTAP 9.7P4
+
+ONTAP 9.6P9
+
+ONTAP 9.5P14
+
+|===

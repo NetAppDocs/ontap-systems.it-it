@@ -1,0 +1,158 @@
+---
+permalink: c190/rtc-battery-replace.html 
+sidebar: sidebar 
+keywords: aff c190, replace real-time clock battery 
+summary: 'Si sostituisce la batteria dell"orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell"ora accurata continuino a funzionare.' 
+---
+= Sostituire la batteria dell'orologio in tempo reale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se il controller non funzionante fa parte di una coppia ha, disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y`.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+Per accedere ai componenti all'interno del modulo controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
++
+image::../media/drw_25xx_cable_management_arm.png[ARM di gestione dei cavi drw 25xx]
+
+. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
++
+image::../media/drw_2240_x_opening_cam_latch.png[drw 2240 x apertura del fermo a camma]
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio facendo scorrere le linguette blu per sganciarlo, quindi ruotare il coperchio verso l'alto e aprirlo.
++
+image::../media/drw_2600_opening_pcm_cover.png[drw 2600 apertura del coperchio del pcm]
+
+
+
+
+
+== Fase 3: Sostituire la batteria RTC
+
+Per sostituire la batteria RTC, è necessario individuarla all'interno del modulo controller, quindi seguire la sequenza specifica di passaggi.
+
+. Individuare la batteria RTC.
++
+image::../media/drw_2600_rtc_battery.gif[batteria rtc drw 2600]
+
+. Estrarre delicatamente la batteria dal supporto, ruotarla verso l'esterno, quindi estrarla dal supporto.
++
+
+NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supporto. La batteria è contrassegnata con un segno più e deve essere posizionata correttamente nel supporto. Un segno più vicino al supporto indica come posizionare la batteria.
+
+. Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
+. Individuare il supporto batteria vuoto nel modulo controller.
+. Prendere nota della polarità della batteria RTC, quindi inserirla nel supporto inclinandola e spingendola verso il basso.
+. Controllare visivamente che la batteria sia completamente installata nel supporto e che la polarità sia corretta.
+
+
+
+
+== Fase 4: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
+
+Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
+
+. Se non è già stato fatto, chiudere il condotto dell'aria o il coperchio del modulo controller.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Se gli alimentatori sono stati scollegati, ricollegarli e reinstallare i fermi dei cavi di alimentazione.
+. Completare la reinstallazione del modulo controller. Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Arrestare il controller al prompt DEL CARICATORE.
+
+
+. Ripristinare l'ora e la data sul controller:
++
+.. Controllare la data e l'ora del controller integro con `show date` comando.
+.. Al prompt DEL CARICATORE sul controller di destinazione, controllare l'ora e la data.
+.. Se necessario, modificare la data con `set date mm/dd/yyyy` comando.
+.. Se necessario, impostare l'ora, in GMT, utilizzando `set time hh:mm:ss` comando.
+.. Confermare la data e l'ora sul controller di destinazione.
+
+
+. Al prompt DEL CARICATORE, immettere `bye` Reinizializzare le schede PCIe e gli altri componenti e lasciare riavviare il controller.
+. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 5: Completare il processo di sostituzione
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

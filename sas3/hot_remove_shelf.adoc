@@ -1,0 +1,312 @@
+---
+permalink: sas3/hot-remove-shelf.html 
+sidebar: sidebar 
+keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
+summary: 'È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12 (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire lo shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all"interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.' 
+---
+= Shelf a hot-remove - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12/IOM12B (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire uno shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.
+
+.Prima di iniziare
+* Il sistema deve essere una configurazione ha multipath, multipath, ha quad-path o quad-path.
++
+Per le piattaforme con storage integrato, come i sistemi AFF A200, AFF A220, FAS2600 e FAS2700, lo storage esterno deve essere cablato come ha multipath o multipath.
+
++
+
+NOTE: Per un sistema a controller singolo della serie FAS2600 dotato di storage esterno cablato con connettività multipath, il sistema è una configurazione a percorso misto in quanto lo storage interno utilizza la connettività a percorso singolo.
+
+* Il sistema non può visualizzare messaggi di errore relativi al cablaggio SAS.
++
+È possibile scaricare ed eseguire Active IQ Config Advisor per visualizzare eventuali messaggi di errore relativi al cablaggio SAS e le azioni correttive da intraprendere.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+
+* Le configurazioni di coppia HA non possono essere in uno stato di Takeover.
+* È necessario rimuovere tutti gli aggregati dai dischi (i dischi devono essere spare) negli shelf di dischi che si stanno rimuovendo.
++
+
+NOTE: Se si tenta di eseguire questa procedura con gli aggregati sullo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
+
++
+È possibile utilizzare `storage aggregate offline -aggregate _aggregate_name_` e quindi `storage aggregate delete -aggregate _aggregate_name_` comando.
+
+* Se si rimuovono uno o più shelf di dischi dall'interno di uno stack, è necessario tenere in considerazione la distanza necessaria per evitare gli shelf di dischi che si stanno rimuovendo; pertanto, se i cavi attuali non sono sufficientemente lunghi, è necessario disporre di cavi più lunghi.
+
+
+.A proposito di questa attività
+* *Best practice:* la Best practice consiste nel rimuovere la proprietà del disco dopo aver rimosso gli aggregati dai dischi negli shelf che si stanno rimuovendo.
++
+La rimozione delle informazioni di proprietà da un disco spare consente di integrare correttamente il disco in un altro nodo (in base alle necessità).
+
+
+
+[NOTE]
+====
+La procedura per la rimozione della proprietà dai dischi richiede la disattivazione dell'assegnazione automatica della proprietà dei dischi. Al termine di questa procedura, viene riattivata l'assegnazione automatica della proprietà del disco.
+
+https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"]
+
+====
+* Per un sistema ONTAP in cluster con più di due nodi, la Best practice consiste nel riassegnare epsilon a una coppia ha diversa da quella in fase di manutenzione pianificata.
++
+La riassegnazione di epsilon riduce al minimo il rischio di errori imprevisti che influiscono su tutti i nodi di un sistema ONTAP in cluster. Per determinare il nodo che contiene epsilon e riassegnare epsilon, se necessario, procedere come segue:
+
++
+.. Impostare il livello di privilegio su avanzato: `set -privilege advanced`
+.. Determinare quale nodo contiene epsilon: `cluster show`
++
+Viene visualizzato il nodo che contiene epsilon `true` in `Epsilon` colonna. (I nodi che non tengono epsilon mostrano `false`.)
+
+.. Se viene visualizzato il nodo della coppia ha in fase di manutenzione `true` (contiene epsilon), quindi rimuovere epsilon dal nodo: `cluster modify -node _node_name_ -epsilon false`
+.. Assegnare epsilon a un nodo di un'altra coppia ha: `cluster modify -node _node_name_ -epsilon true`
+.. Tornare al livello di privilegio admin: `set -privilege admin`
+
+
+* Se si rimuove a caldo uno shelf di dischi da uno stack (ma si mantiene lo stack), è possibile recuperare e verificare un percorso alla volta (percorso A e percorso B) per bypassare lo shelf di dischi che si sta rimuovendo in modo da mantenere sempre la connettività a percorso singolo dai controller allo stack.
++
+
+NOTE: Se non si mantiene la connettività a percorso singolo dai controller allo stack quando si modifica lo stack per evitare lo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
+
+* *Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, vedere la sezione, <<Spostare o trasportare gli shelf DS460C>> al termine di questa procedura.
+
+
+.Fasi
+. Verificare che la configurazione del sistema sia `Multi-Path HA`, `Multi-Path`, `Quad-path HA`, o. `Quad-path`: `sysconfig`
++
+Questo comando viene eseguito dal nodeshell di entrambi i controller. Il completamento del rilevamento potrebbe richiedere fino a un minuto.
+
++
+La configurazione viene elencata in `System Storage Configuration` campo.
+
++
+
+NOTE: Per un sistema a controller singolo serie FAS2600 con storage esterno cablato con connettività multipath, l'output viene visualizzato come `mixed-path` perché lo storage interno utilizza la connettività a percorso singolo.
+
+. Verificare che i dischi negli shelf che si stanno rimuovendo non dispongano di aggregati (sono parti di ricambio) e che la proprietà sia rimossa:
++
+.. Immettere il seguente comando dalla shell del cluster di uno dei controller: `storage disk show -shelf _shelf_number_`
+.. Controllare l'output per verificare che non vi siano aggregati sui dischi negli shelf che si stanno rimuovendo.
++
+I dischi senza aggregati presentano un trattino nella `Container Name` colonna.
+
+.. Controllare l'output per verificare che la proprietà sia stata rimossa dalle unità disco sugli shelf di dischi che si stanno rimuovendo.
++
+I dischi senza proprietà hanno un trattino in `Owner` colonna.
+
++
+
+NOTE: Se nello shelf che si sta rimuovendo sono presenti dischi guasti, questi si sono rotti in `Container Type` colonna. (I dischi guasti non hanno proprietà).
+
++
+Il seguente output mostra che i dischi sullo shelf di dischi da rimuovere (shelf di dischi 3) si trovano in uno stato corretto per la rimozione dello shelf di dischi. Gli aggregati vengono rimossi su tutti i dischi; pertanto, viene visualizzato un trattino nella `Container Name` per ciascun disco. La proprietà viene rimossa anche da tutti i dischi; pertanto, viene visualizzato un trattino nella `Owner` per ciascun disco.
+
+
+
++
+[listing]
+----
+cluster::> storage disk show -shelf 3
+
+           Usable           Disk   Container   Container
+Disk         Size Shelf Bay Type   Type        Name       Owner
+-------- -------- ----- --- ------ ----------- ---------- ---------
+...
+1.3.4           -     3   4 SAS    spare                -         -
+1.3.5           -     3   5 SAS    spare                -         -
+1.3.6           -     3   6 SAS    broken               -         -
+1.3.7           -     3   7 SAS    spare                -         -
+...
+----
+. Individuare fisicamente gli shelf di dischi da rimuovere.
++
+Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
+
++
+
+NOTE: Uno shelf di dischi ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo IOM12. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+
+. Se si sta rimuovendo un intero stack di shelf di dischi, completare i seguenti passaggi secondari; in caso contrario, passare alla fase successiva:
++
+.. Rimuovere tutti i cavi SAS sul percorso A (IOM A) e B (IOM B).
++
+Sono inclusi i cavi controller-shelf e i cavi shelf-to-shelf per tutti gli shelf di dischi nello stack che si sta rimuovendo.
+
+.. Passare alla fase 9.
+
+
+. Se si rimuovono uno o più shelf di dischi da uno stack (ma si mantiene lo stack), recuperare le connessioni dello stack del percorso A (IOM A) per bypassare gli shelf di dischi che si stanno rimuovendo completando la serie di passaggi secondari applicabili:
++
+Se si rimuovono più shelf di dischi nello stack, completare la serie di passaggi secondari applicabili uno shelf di dischi alla volta.
+
++
+
+NOTE: Attendere almeno 10 secondi prima di collegare la porta. I connettori dei cavi SAS sono dotati di chiave; se orientati correttamente in una porta SAS, il connettore scatta in posizione e il LED LNK della porta SAS dello shelf di dischi si illumina di verde. Per gli shelf di dischi, inserire un connettore per cavo SAS con la linguetta rivolta verso il basso (nella parte inferiore del connettore).
+
++
+[cols="2*"]
+|===
+| Se si sta rimuovendo... | Quindi... 
+
+
+ a| 
+Shelf di dischi da una delle due estremità (primo o ultimo shelf logico) di uno stack
+ a| 
+.. Rimuovere eventuali cavi shelf-to-shelf dalle porte IOM A sullo shelf di dischi da rimuovere e metterli da parte.
+.. Scollegare tutti i cavi controller-to-stack collegati alle porte IOM A sullo shelf di dischi che si desidera rimuovere e inserirli nelle stesse porte IOM A sullo shelf di dischi successivo nello stack.
++
+Lo shelf di dischi "`next`" può trovarsi sopra o sotto lo shelf di dischi che si sta rimuovendo a seconda dell'estremità dello stack da cui si sta rimuovendo lo shelf di dischi.
+
+
+
+
+
+ a| 
+Uno shelf di dischi dal centro dello stack Uno shelf di dischi al centro di uno stack è collegato solo ad altri shelf di dischi, non ad alcun controller.
+ a| 
+.. Rimuovere eventuali cavi shelf-to-shelf dalle porte IOM A 1 e 2 o dalle porte 3 e 4 sullo shelf di dischi da rimuovere e IOM A dello shelf di dischi successivo, quindi metterli da parte.
+.. Scollegare il cablaggio shelf-to-shelf rimanente collegato alle porte IOM A sullo shelf di dischi che si sta rimuovendo e collegarlo alle stesse porte IOM A sullo shelf di dischi successivo nello stack. Lo shelf di dischi "`next`" può trovarsi sopra o sotto lo shelf di dischi che si sta rimuovendo, a seconda delle porte IOM A (1 e 2 o 3 e 4) da cui è stato rimosso il cablaggio.
+
+
+|===
++
+Per la rimozione di uno shelf di dischi da un'estremità di uno stack o dal centro di uno stack, fare riferimento ai seguenti esempi di cablaggio. Prendere nota degli esempi di cablaggio riportati di seguito:
+
++
+** I moduli IOM12 sono disposti affiancati come in uno shelf di dischi DS224C o DS212C; se si dispone di un DS460C, i moduli IOM12 sono disposti uno sopra l'altro.
+** Lo stack in ogni esempio è cablato con cablaggio standard shelf-to-shelf, utilizzato negli stack cablati con connettività ha multipath o multipath.
++
+È possibile dedurre la ricablaggio se lo stack è cablato con connettività ha quad-path o quad-path, che utilizza un cablaggio shelf-to-shelf doppio-wide.
+
+** Gli esempi di cablaggio dimostrano la ricablaggio di uno dei percorsi: Percorso A (IOM A).
++
+Ripetere la procedura di ricablaggio per il percorso B (IOM B).
+
+** L'esempio di cablaggio per la rimozione di uno shelf di dischi dalla fine di uno stack dimostra la rimozione dell'ultimo shelf logico di dischi in uno stack cablato con connettività ha multipath.
++
+È possibile dedurre la ricablaggio se si sta rimuovendo il primo shelf logico di un disco in uno stack o se lo stack dispone di connettività multipath.
+
++
+image::../media/drw_hotremove_end.gif[estremità di rimozione rapida drw]
+
++
+image::../media/drw_hotremove_middle.gif[drw hotremove centrale]
+
+
+
+. Verificare di aver ignorato gli shelf di dischi che si stanno rimuovendo e di aver ristabilita correttamente le connessioni dello stack del percorso A (IOM A): `storage disk show -port`
++
+Per le configurazioni di coppia ha, eseguire questo comando dalla shell dei cluster di entrambi i controller. Il completamento del rilevamento potrebbe richiedere fino a un minuto.
+
++
+Le prime due righe di output mostrano i dischi con connettività attraverso il percorso A e B. Le ultime due righe di output mostrano i dischi con connettività attraverso un percorso singolo, percorso B.
+
++
+[listing]
+----
+cluster::> storage show disk -port
+
+PRIMARY  PORT SECONDARY      PORT TYPE SHELF BAY
+-------- ---- ---------      ---- ---- ----- ---
+1.20.0   A    node1:6a.20.0  B    SAS  20    0
+1.20.1   A    node1:6a.20.1  B    SAS  20    1
+1.21.0   B    -              -    SAS  21    0
+1.21.1   B    -              -    SAS  21    1
+...
+----
+. La fase successiva dipende da `storage disk show -port` output del comando:
++
+[cols="2*"]
+|===
+| Se l'output mostra... | Quindi... 
+
+
+ a| 
+Tutti i dischi nello stack sono collegati attraverso i percorsi A e B, ad eccezione di quelli presenti negli shelf disconnessi, che sono collegati solo attraverso il percorso B.
+ a| 
+Passare alla fase successiva.
+
+Hai superato con successo gli shelf di dischi che stai rimuovendo e hai ristabilita il percorso A sui dischi rimanenti nello stack.
+
+
+
+ a| 
+Qualsiasi altra cosa oltre a quanto sopra
+ a| 
+Ripetere i passaggi 5 e 6.
+
+È necessario correggere il cablaggio.
+
+|===
+. Completare i seguenti passaggi secondari per gli shelf di dischi (nello stack) che si desidera rimuovere:
++
+.. Ripetere i passaggi da 5 a 7 per il percorso B.
++
+
+NOTE: Quando si ripete il passaggio 7 e se lo stack è stato cablato correttamente, si dovrebbero visualizzare solo tutte le unità disco rimanenti collegate attraverso il percorso A e il percorso B.
+
+.. Ripetere il passaggio 1 per verificare che la configurazione del sistema sia identica a quella precedente alla rimozione di uno o più shelf di dischi da uno stack.
+.. Passare alla fase successiva.
+
+
+. Se, durante la preparazione di questa procedura, la proprietà dei dischi è stata rimossa, l'assegnazione automatica della proprietà dei dischi è stata disattivata e riattivata immettendo il seguente comando; in caso contrario, passare alla fase successiva: `storage disk option modify -autoassign on`
++
+Per le configurazioni di coppia ha, eseguire il comando dalla shell dei cluster di entrambi i controller.
+
+. Spegnere gli shelf di dischi scollegati e scollegare i cavi di alimentazione dagli shelf di dischi.
+. Rimuovere gli shelf di dischi dal rack o dall'armadietto.
++
+Per rendere uno shelf di dischi più leggero e facile da manovrare, rimuovere gli alimentatori e i moduli i/o (IOM).
+
++
+Per gli shelf di dischi DS460C, uno shelf completamente caricato può pesare circa 112 kg (247 libbre); pertanto, prestare la seguente attenzione quando si rimuove uno shelf da un rack o da un cabinet.
+
++
+
+CAUTION: Si consiglia di utilizzare un sollevatore meccanico o quattro persone che utilizzano le maniglie di sollevamento per spostare in sicurezza uno shelf DS460C.
+
++
+La spedizione DS460C è stata fornita con quattro maniglie di sollevamento rimovibili (due per ciascun lato). Per utilizzare le maniglie di sollevamento, installarle inserendo le linguette delle maniglie negli slot sul lato dello scaffale e spingendole verso l'alto fino a quando non scattano in posizione. Quindi, quando si fa scorrere lo shelf di dischi sulle guide, si scollega un set di maniglie alla volta utilizzando il dispositivo di chiusura con pollice. La figura seguente mostra come collegare una maniglia di sollevamento.
+
++
+image::../media/drw_ds460c_handles.gif[maniglie drw ds460c]
+
++
+Se si sposta lo shelf DS460C in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione seguente, <<Spostare o trasportare gli shelf DS460C>>.
+
+
+
+.Spostare o trasportare gli shelf DS460C
+Se si sposta uno shelf DS460C in una parte diversa del data center o si trasporta lo shelf in una posizione diversa, è necessario rimuovere le unità dai cassetti delle unità per evitare possibili danni ai cassetti e alle unità.
+
+* Se quando si installano gli shelf DS460C come parte della nuova installazione del sistema o dell'aggiunta a caldo dello shelf, si sono salvati i materiali di imballaggio del disco, utilizzarli per reimballare i dischi prima di spostarli.
++
+Se non hai salvato il materiale di imballaggio, devi posizionare i dischi su superfici imbottite o utilizzare un imballaggio imbottito alternativo. Non impilare mai i dischi l'uno sull'altro.
+
+* Prima di maneggiare le unità, indossare un braccialetto antistatico collegato a massa su una superficie non verniciata dello chassis del contenitore di storage.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del cabinet di storage prima di maneggiare un disco.
+
+* È necessario adottare le misure necessarie per gestire con attenzione i dischi:
++
+** Utilizzare sempre due mani durante la rimozione, l'installazione o il trasporto di un'unità per sostenerne il peso.
++
+
+CAUTION: Non posizionare le mani sulle schede del disco esposte nella parte inferiore del supporto.
+
+** Fare attenzione a non urtare i dischi contro altre superfici.
+** I dischi devono essere tenuti lontani da dispositivi magnetici.
++
+
+CAUTION: I campi magnetici possono distruggere tutti i dati presenti su un'unità e causare danni irreparabili ai circuiti dell'unità.
+
+
+
+

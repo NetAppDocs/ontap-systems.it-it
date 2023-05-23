@@ -1,0 +1,82 @@
+---
+permalink: sas3/install-cabling-worksheet-template-multipath.html 
+sidebar: sidebar 
+keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, iom12, module, achieve, multipathed, connectivity, ha, pair, single-controller, configuration, worksheet, connection, controller-to-stack cabling worksheet template for multipathed connectivity 
+summary: Completando il modello del foglio di lavoro, è possibile definire le coppie di porte SAS del controller che è possibile utilizzare per collegare i controller a stack di shelf di dischi con i moduli IOM12/IOM12B per ottenere una connettività multipath in una configurazione a coppia ha o a singolo controller. È inoltre possibile utilizzare il foglio di lavoro completo per esaminare il cablaggio delle connessioni multipath per la configurazione. 
+---
+= Modello di foglio di lavoro per il cablaggio controller-to-stack per connettività multipath - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Completando il modello del foglio di lavoro, è possibile definire le coppie di porte SAS del controller che è possibile utilizzare per collegare i controller a stack di shelf di dischi con i moduli IOM12/IOM12B per ottenere una connettività multipath in una configurazione a coppia ha o a singolo controller. È inoltre possibile utilizzare il foglio di lavoro completo per esaminare il cablaggio delle connessioni multipath per la configurazione.
+
+.Prima di iniziare
+Se si dispone di una piattaforma con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e in seguito, utilizza quanto segue (queste piattaforme utilizzano un foglio di lavoro unico):
+
+link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"]
+
+.A proposito di questa attività
+* Questa procedura e il modello di foglio di lavoro sono applicabili al cablaggio della connettività multipath per una configurazione ha multipath o multipath con uno o più stack.
++
+Vengono forniti esempi di fogli di lavoro completi per configurazioni ha multipath e multipath.
+
++
+Per gli esempi dei fogli di lavoro viene utilizzata una configurazione con due HBA SAS a quattro porte e due stack di shelf di dischi con moduli IOM12/IOM12B.
+
+* Il modello di foglio di lavoro consente di creare fino a sei stack; se necessario, è necessario aggiungere altre colonne.
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
+* Se necessario, dopo aver completato il foglio di lavoro, fare riferimento a. link:install-cabling-worksheets-how-to-read-multipath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività multipath"]
+
+
+image::../media/drw_worksheet_mpha_template.gif[modello mpha del foglio di lavoro drw]
+
+.Fasi
+. Nelle caselle sopra le caselle grigie, elencare tutte le porte SAS A del sistema, quindi tutte le porte SAS C del sistema in sequenza di slot (0, 1, 2, 3 e così via).
++
+Ad esempio: 1a, 2a, 1c, 2c
+
+. Nelle caselle grigie, elencare tutte le porte SAS B del sistema, quindi tutte le porte SAS D del sistema in sequenza di slot (0, 1, 2, 3 e così via).
++
+Ad esempio: 1b, 2b, 1d, 2d
+
+. Nelle caselle sotto le caselle grigie, riscrivere l'elenco delle porte D e B in modo che la prima porta dell'elenco venga spostata alla fine dell'elenco.
++
+Ad esempio: 2b, 1d, 2d, 1b
+
+. Cerchiare (designare) una coppia di porte per ogni stack.
++
+Quando tutte le coppie di porte vengono utilizzate per collegare gli stack nel sistema, cerchiare le coppie di porte nell'ordine in cui sono definite (elencate) nel foglio di lavoro.
+
++
+Ad esempio, in una configurazione ha multipercorso con otto porte SAS e quattro stack, la coppia di porte la/2b è cablata allo stack 1, la coppia di porte 2a/1d è cablata allo stack 2, la coppia di porte 1c/2d è cablata allo stack 3, e la coppia di porte 2c/1b è cablata allo stack 4.
+
++
+image::../media/drw_worksheet_mpha_slots_1_and_2_two_4porthbas_two_stacks.gif[drw foglio di lavoro mpha slot 1 e 2 due 4porthbas due stack]
+
++
+Quando non sono necessarie tutte le coppie di porte per collegare gli stack nel sistema, ignorare le coppie di porte (utilizzare ogni altra coppia di porte).
+
++
+Ad esempio, in una configurazione ha multipath con otto porte SAS e due stack, la coppia di porte la/2b è cablata allo stack 1 e la coppia di porte 1c/2d è cablata allo stack 2. Se due stack aggiuntivi vengono aggiunti successivamente a caldo, la coppia di porte 2a/1d viene cablata allo stack 3 e la coppia di porte 2c/1b viene cablata allo stack 4.
+
++
+
+NOTE: Se si dispone di più coppie di porte di quelle necessarie per collegare gli stack nel sistema, la procedura migliore consiste nel saltare le coppie di porte per ottimizzare le porte SAS del sistema. Ottimizzando le porte SAS, si ottimizzano le prestazioni del sistema.
+
++
+image::../media/drw_worksheet_mpha_skipped_template.gif[mpha del foglio di lavoro drw ignorato]
+
++
+È possibile utilizzare il foglio di lavoro completo per collegare il sistema.
+
+. Se si dispone di una configurazione a controller singolo (multipath), barrare le informazioni per il controller 2.
++
+image::../media/drw_worksheet_mp_template.gif[modello mp foglio di lavoro drw]
+
++
+È possibile utilizzare il foglio di lavoro completo per collegare il sistema.
+
+

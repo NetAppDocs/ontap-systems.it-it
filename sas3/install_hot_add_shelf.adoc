@@ -1,0 +1,545 @@
+---
+permalink: sas3/install-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
+summary: È possibile aggiungere a caldo uno o più shelf di dischi con moduli IOM12/IOM12B a uno stack esistente di shelf di dischi con moduli IOM12/IOM12B o aggiungere a caldo uno stack di uno o più shelf di dischi con moduli IOM12/IOM12B direttamente a un HBA SAS o a una porta SAS integrata sul controller. 
+---
+= Shelf hot-add - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere a caldo uno o più shelf di dischi con moduli IOM12/IOM12B a uno stack esistente di shelf di dischi con moduli IOM12/IOM12B o aggiungere a caldo uno stack di uno o più shelf di dischi con moduli IOM12/IOM12B direttamente a un HBA SAS o a una porta SAS integrata sul controller.
+
+.A proposito di questa attività
+Non è possibile utilizzare questa procedura per combinare uno stack: Aggiungere a caldo uno shelf con moduli IOM12/IOM12B a uno stack di shelf con moduli IOM6. Se è necessario combinare uno stack, utilizzare link:iom12-hot-add-mix.html["Aggiunta a caldo di shelf IOM12 a una pila di shelf IOM6"].
+
+
+
+== Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12/IOM12B
+
+Il sistema deve soddisfare determinati requisiti prima di aggiungere a caldo shelf di dischi con moduli IOM12/IOM12B.
+
+
+
+=== Stato del sistema
+
+* Il sistema e la versione di ONTAP devono supportare gli shelf di dischi che si stanno aggiungendo a caldo, inclusi gli IOM, i dischi e i cavi SAS.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Il sistema deve avere un numero inferiore al numero massimo di dischi supportati, almeno del numero di shelf di dischi che si intende aggiungere a caldo.
++
+Non è possibile superare il numero massimo di dischi supportati dal sistema dopo l'aggiunta a caldo di shelf di dischi.
+
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Se si aggiunge a caldo uno stack di uno o più shelf di dischi (direttamente ai controller della piattaforma), il sistema deve disporre di un numero sufficiente di porte HBA PCI SAS o SAS integrate o di una combinazione di entrambe.
++
+[NOTE]
+====
+Se è necessario installare un HBA SAS PCI aggiuntivo, la Best practice consiste nell'utilizzare HBA SAS da 12 GB per mantenere la connettività controller-to-stack a 12 Gbs per ottenere le massime prestazioni.
+
+È supportato l'utilizzo di HBA SAS da 6 GB o una combinazione di HBA SAS da 6 GB e HBA SAS da 12 GB; tuttavia, le connessioni del modulo IOM12 agli HBA SAS da 6 GB vengono negoziate fino a 6 Gbs, con conseguente riduzione delle prestazioni.
+
+====
+* Il sistema non può visualizzare messaggi di errore relativi al cablaggio SAS.
++
+Scaricare ed eseguire Config Advisor per verificare che le connessioni SAS siano cablate correttamente.
+
++
+È necessario correggere eventuali errori di cablaggio utilizzando le azioni correttive fornite dai messaggi di errore.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+
+
+
+
+
+=== Utilizzo di cavi ottici SAS mini-SAS HD
+
+* Se si utilizzano cavi ottici SAS HD mini-SAS o cavi ottici SAS HD mini-SAS e cavi in rame SAS nello stack di shelf di dischi, è necessario rispettare le regole riportate nella link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regole per i cavi ottici SAS mini-SAS HD"].
+* Se si aggiunge a caldo uno shelf di dischi con cavi ottici SAS HD mini-SAS a una pila di shelf di dischi collegati con cavi in rame SAS, è possibile inserire temporaneamente entrambi i tipi di cavi nello stack.
++
+Dopo aver aggiunto a caldo lo shelf di dischi, è necessario sostituire i cavi di rame SAS per le altre connessioni shelf-to-shelf nello stack e le connessioni controller-to-stack in modo che lo stack soddisfi le regole della link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regole per i cavi ottici SAS mini-SAS HD"]. Ciò significa che è necessario ordinare il numero appropriato di cavi ottici SAS mini-SAS HD.
+
+
+
+
+
+== Considerazioni per shelf di dischi con aggiunta a caldo con moduli IOM12/IOM12B
+
+Prima di aggiungere a caldo shelf di dischi, è necessario acquisire familiarità con gli aspetti e le Best practice di questa procedura.
+
+
+
+=== Considerazioni generali
+
+* Se si aggiunge a caldo uno shelf di dischi con moduli IOM12/IOM12B a uno stack esistente (di shelf di dischi con moduli IOM12/IOM12B), è possibile aggiungere a caldo lo shelf di dischi a entrambe le estremità, ovvero il primo o l'ultimo shelf logico dello stack.
++
+Per le configurazioni ha a percorso singolo e singolo, come applicabile ai sistemi AFF A200, AFF A220, FAS2600 e FAS2700, è possibile aggiungere a caldo shelf di dischi alla fine dello stack che non dispongono di connessioni controller.
+
+* Gli shelf di dischi con moduli IOM12/IOM12B devono essere nel proprio stack unico; non possono essere aggiunti a uno stack che dispone di shelf con moduli IOM6 o moduli IOM3.
++
+Questa procedura non riguarda la miscelazione di uno stack: Aggiunta a caldo di uno shelf con moduli IOM12/IOM12B a uno stack di shelf con moduli IOM6.
+
+* Un sistema può disporre di stack di shelf di dischi a percorso multiplo e quadruplo con moduli IOM12/IOM12B.
++
+Se si dispone di una coppia ha, ONTAP mostra la configurazione del sistema come `multipath HA`. Se si dispone di una configurazione a controller singolo, ONTAP mostra la configurazione del sistema come `multipath`.
+
+* Questa procedura presuppone che la configurazione utilizzi ACP in-band.
++
+Per le configurazioni con ACP in-band attivato, ACP in-band viene attivato automaticamente sugli shelf di dischi aggiunti a caldo. Per le configurazioni in cui ACP in-band non è abilitato, gli shelf di dischi aggiunti a caldo funzionano senza alcuna funzionalità ACP.
+
+* Il consolidamento dello stack senza interruzioni non è supportato.
++
+Non è possibile utilizzare questa procedura per aggiungere a caldo shelf di dischi che sono stati rimossi a caldo da un altro stack nello stesso sistema quando il sistema è acceso e fornisce dati (i/o è in corso).
+
+
+
+
+
+=== Considerazioni sulle Best practice
+
+* La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di aggiungere a caldo uno shelf di dischi.
++
+L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati, evitando così messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi. Si evita inoltre la possibile prevenzione del partizionamento dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
+
+* La procedura consigliata consiste nell'eseguire Config Advisor prima e dopo l'aggiunta a caldo di uno shelf di dischi.
++
+L'esecuzione di Config Advisor prima dell'aggiunta a caldo di uno shelf di dischi fornisce un'istantanea della connettività SAS, verifica le versioni del firmware dello shelf di dischi (IOM) e consente di verificare gli shelf ID già in uso nel sistema. L'esecuzione di Config Advisor dopo l'aggiunta a caldo di uno shelf di dischi consente di verificare che le connessioni SAS siano cablate correttamente e che gli shelf ID siano univoci all'interno della configurazione a coppia ha o a singolo controller.
+
++
+Se vengono generati errori di cablaggio SAS o ID shelf duplicati, seguire le azioni correttive fornite.
+
++
+Per scaricare Config Advisor è necessario disporre dell'accesso di rete.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+
+* La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
++
+Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
+
+
+
+
+
+=== Considerazioni sulla gestione dei cavi SAS
+
+* Controllare visivamente la porta SAS per verificare il corretto orientamento del connettore prima di collegarlo.
++
+I connettori dei cavi SAS sono dotati di chiavi. Se orientato correttamente in una porta SAS, il connettore scatta in posizione e, se l'alimentazione dello shelf di dischi è attiva, il LED LNK della porta SAS dello shelf di dischi si illumina di verde. Per gli shelf di dischi, inserire un connettore per cavo SAS con la linguetta rivolta verso il basso (nella parte inferiore del connettore).
+
++
+Per i controller, l'orientamento delle porte SAS può variare a seconda del modello di piattaforma; pertanto, l'orientamento corretto del connettore del cavo SAS varia.
+
+* Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
++
+I cavi hanno un raggio di curvatura minimo. Le specifiche del produttore dei cavi definiscono il raggio di curvatura minimo; tuttavia, una linea guida generale per il raggio di curvatura minimo è 10 volte il diametro del cavo.
+
+* L'utilizzo di pellicole in velcro anziché di fascette per fissare e fissare i cavi di sistema consente di regolare i cavi in modo più semplice.
+
+
+
+
+=== Considerazioni sulla gestione dei dischi DS460C
+
+* I dischi sono confezionati separatamente dallo chassis dello shelf.
++
+È necessario eseguire l'inventario dei dischi.
+
+* Dopo aver disimballato le unità, conservare il materiale di imballaggio per un utilizzo futuro.
++
+
+CAUTION: *Possibile perdita di accesso ai dati:* se in futuro lo shelf viene spostato in una parte diversa del data center o lo shelf viene trasportato in una posizione diversa, è necessario rimuovere le unità dai cassetti delle unità per evitare possibili danni ai cassetti e alle unità.
+
++
+
+NOTE: Tenere le unità disco nella custodia ESD fino a quando non si è pronti per l'installazione.
+
+* Quando si maneggiano i dischi, indossare sempre un braccialetto antistatico collegato a massa su una superficie non verniciata dello chassis del contenitore di storage per evitare scariche elettrostatiche.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del contenitore di storage prima di maneggiare il disco.
+
+
+
+
+
+== Installazione di shelf di dischi con moduli IOM12/IOM12B per l'aggiunta a caldo
+
+Per ogni shelf di dischi che si sta aggiungendo a caldo, installare lo shelf di dischi in un rack, collegare i cavi di alimentazione, accendere lo shelf di dischi e impostare l'ID dello shelf di dischi prima di collegare le connessioni SAS.
+
+.Fasi
+. Installare il kit per il montaggio in rack (per installazioni in rack a due o quattro montanti) fornito con lo shelf di dischi utilizzando il volantino di installazione fornito con il kit.
++
+
+NOTE: Se si installano più shelf di dischi, installarli dal basso verso la parte superiore del rack per ottenere la massima stabilità.
+
++
+
+NOTE: Non montare lo shelf di dischi in un rack di tipo teleco con montaggio a flangia; il peso dello shelf di dischi può causare il collasso nel rack sotto il proprio peso.
+
+. Installare e fissare lo shelf di dischi sulle staffe di supporto e sul rack utilizzando l'opuscolo di installazione fornito con il kit.
++
+Per rendere uno shelf di dischi più leggero e facile da manovrare, rimuovere gli alimentatori e i moduli i/o (IOM).
+
++
+Per gli shelf di dischi DS460C, anche se i dischi sono confezionati separatamente, il che rende lo shelf più leggero, uno shelf DS460C vuoto pesa ancora circa 132 kg; pertanto, prestare attenzione quando si sposta uno shelf.
+
++
+
+CAUTION: Si consiglia di utilizzare un sollevatore meccanico o quattro persone che utilizzano le maniglie di sollevamento per spostare in sicurezza un ripiano DS460C vuoto.
+
++
+La spedizione DS460C è stata fornita con quattro maniglie di sollevamento rimovibili (due per ciascun lato). Per utilizzare le maniglie di sollevamento, installarle inserendo le linguette delle maniglie negli slot sul lato dello scaffale e spingendole verso l'alto fino a quando non scattano in posizione. Quindi, quando si fa scorrere lo shelf di dischi sulle guide, si scollega un set di maniglie alla volta utilizzando il dispositivo di chiusura con pollice. La figura seguente mostra come collegare una maniglia di sollevamento.
+
++
+image::../media/drw_ds460c_handles.gif[maniglie drw ds460c]
+
+. Reinstallare eventuali alimentatori e IOM rimossi prima di installare lo shelf di dischi nel rack.
+. Se si sta installando uno shelf di dischi DS460C, installare le unità nei cassetti delle unità; in caso contrario, passare alla fase successiva.
++
+[NOTE]
+====
+Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata dello chassis del contenitore di storage per evitare scariche elettrostatiche.
+
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del contenitore di storage prima di maneggiare il disco.
+
+====
++
+Se è stato acquistato uno shelf parzialmente popolato, ovvero che lo shelf ha meno di 60 dischi supportati, per ciascun cassetto, installare i dischi come segue:
+
++
+** Installare le prime quattro unità negli slot anteriori (0, 3, 6 e 9).
++
+
+NOTE: *Rischio di malfunzionamento dell'apparecchiatura:* per consentire un corretto flusso d'aria ed evitare il surriscaldamento, installare sempre le prime quattro unità negli slot anteriori (0, 3, 6 e 9).
+
+** Per i dischi rimanenti, distribuirli in modo uniforme in ciascun cassetto.
++
+La seguente illustrazione mostra come i dischi sono numerati da 0 a 11 in ogni cassetto all'interno dello shelf.
+
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[cassetto dwg trafford con didascalie hdd]
+
++
+... Aprire il cassetto superiore dello shelf.
+... Rimuovere un'unità dalla busta ESD.
+... Sollevare la maniglia della camma sull'unità in verticale.
+... Allineare i due pulsanti rialzati su ciascun lato del supporto dell'unità con lo spazio corrispondente nel canale dell'unità sul cassetto dell'unità.
++
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 cru di dischi dwg e2860 de460c]
+
++
+[cols="10,90"]
+|===
+
+
+| image:../media/legend_icon_01.png[""] | Pulsante sollevato sul lato destro del supporto dell'unità 
+|===
+... Abbassare l'unità, quindi ruotare la maniglia della camma verso il basso fino a quando non scatta in posizione sotto il dispositivo di chiusura arancione.
+... Ripetere i passaggi precedenti per ciascuna unità del cassetto.
++
+Assicurarsi che gli slot 0, 3, 6 e 9 di ciascun cassetto contengano dischi.
+
+... Spingere con cautela il cassetto dell'unità all'interno del contenitore.
++
+|===
+
+
+ a| 
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif[""]
+
+
+
+ a| 
+
+CAUTION: *Possibile perdita di accesso ai dati:* non chiudere mai il cassetto. Spingere lentamente il cassetto per evitare di strattonare il cassetto e danneggiare lo storage array.
+
+|===
+... Chiudere il cassetto dell'unità spingendo entrambe le leve verso il centro.
+... Ripetere questa procedura per ciascun cassetto dello shelf di dischi.
+... Fissare il pannello anteriore.
+
+
+
+
+. Se si stanno aggiungendo più shelf di dischi, ripetere i passaggi precedenti per ogni shelf di dischi che si sta installando.
+. Collegare gli alimentatori per ogni shelf di dischi:
++
+.. Collegare i cavi di alimentazione prima agli shelf di dischi, fissandoli in posizione con il fermo del cavo di alimentazione, quindi collegare i cavi di alimentazione a diverse fonti di alimentazione per garantire la resilienza.
+.. Accendere gli alimentatori per ogni shelf di dischi e attendere che i dischi si attivino.
+
+
+. Impostare l'ID shelf per ogni shelf di dischi che si sta aggiungendo a caldo a un ID univoco nella configurazione a coppia ha o a controller singolo.
++
+Se disponi di un modello di piattaforma con uno shelf di dischi interno, gli shelf ID devono essere univoci nello shelf di dischi interno e negli shelf di dischi collegati esternamente.
+
++
+È possibile utilizzare i seguenti passaggi secondari per modificare gli ID degli shelf o per istruzioni più dettagliate, utilizzare link:install-change-shelf-id.html["Modificare un ID shelf"].
+
++
+.. Se necessario, verificare gli shelf ID già in uso eseguendo Config Advisor.
++
+È inoltre possibile eseguire `storage shelf show -fields shelf-id` Per visualizzare un elenco di shelf ID già in uso (e duplicati, se presenti) nel sistema.
+
+.. Accedere al pulsante ID dello shelf dietro il cappuccio terminale sinistro.
+.. Modificare l'ID dello shelf con un ID valido (da 00 a 99).
+.. Spegnere e riaccendere lo shelf di dischi per rendere effettivo l'ID dello shelf.
++
+Attendere almeno 10 secondi prima di riaccendersi per completare il ciclo di alimentazione.
+
++
+L'ID dello shelf lampeggia e il LED ambra del display operatore lampeggia fino a quando non viene spento e riacceso lo shelf di dischi.
+
+.. Ripetere i passaggi secondari da a a d per ogni shelf di dischi che si sta aggiungendo a caldo.
+
+
+
+
+
+
+== Shelf di dischi per cavi con moduli IOM12/IOM12B per aggiunta a caldo
+
+I collegamenti SAS (shelf-to-shelf e controller-to-stack) sono collegati a caldo, in modo che siano collegati al sistema.
+
+.Prima di iniziare
+È necessario aver soddisfatto i requisiti indicati in link:install-hot-add-shelf.html#requirements-for-hot-adding-disk-shelves-with-iom12iom12b-modules["Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12"] E installato, acceso e impostato gli ID shelf per ogni shelf di dischi come indicato in link:install-hot-add-shelf.html#install-disk-shelves-with-iom12iom12b-modules-for-a-hot-add["Installare shelf di dischi con moduli IOM12 per un hot-add"].
+
+.A proposito di questa attività
+* Per una spiegazione e un esempio di cablaggio "`standard`" da shelf a shelf e di cablaggio "`dDouble-wide`" da shelf a shelf, vedere link:install-cabling-rules.html#shelf-to-shelf-connection-rules["Regole di connessione SAS shelf-to-shelf"].
+* Per istruzioni su come leggere un foglio di lavoro per collegare le connessioni controller-to-stack, vedere link:install-cabling-worksheets-how-to-read-multipath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività multipath"] oppure link:install-cabling-worksheets-how-to-read-quadpath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività quad-path"].
+* Dopo aver cablato gli shelf di dischi aggiunti a caldo, ONTAP li riconosce: Viene assegnata la proprietà del disco se è attivata l'assegnazione automatica della proprietà del disco; il firmware dello shelf di dischi (IOM) e il firmware del disco devono essere aggiornati automaticamente se necessario; Inoltre, se nella configurazione è attivato l'ACP in-band, questo viene attivato automaticamente sugli shelf di dischi aggiunti a caldo.
++
+
+NOTE: Gli aggiornamenti del firmware possono richiedere fino a 30 minuti.
+
+
+
+.Fasi
+. Se si desidera assegnare manualmente la proprietà del disco per gli shelf di dischi che si stanno aggiungendo a caldo, è necessario disattivare l'assegnazione automatica della proprietà del disco, se attivata; in caso contrario, passare alla fase successiva.
++
+È necessario assegnare manualmente la proprietà del disco se i dischi nello stack sono di proprietà di entrambi i controller in una coppia ha.
+
++
+È possibile disattivare l'assegnazione automatica della proprietà dei dischi prima di collegare gli shelf di dischi aggiunti a caldo e, successivamente, nel passaggio 7, riattivarli dopo aver cablato gli shelf di dischi aggiunti a caldo.
+
++
+.. Verificare se l'assegnazione automatica della proprietà del disco è abilitata:``storage disk option show``
++
+Se si dispone di una coppia ha, è possibile immettere il comando nella console di entrambi i controller.
+
++
+Se l'assegnazione automatica della proprietà del disco è attivata, l'output mostra "`on`" (per ciascun controller) nella colonna "`Auto Assign`" (assegnazione automatica).
+
+.. Se l'assegnazione automatica della proprietà del disco è attivata, è necessario disattivarla:``storage disk option modify -node _node_nam_e -autoassign off``
++
+È necessario disattivare l'assegnazione automatica della proprietà del disco su entrambi i controller in una coppia ha.
+
+
+
+. Se si sta aggiungendo a caldo uno stack di shelf di dischi direttamente a un controller, completare i seguenti passaggi secondari; in caso contrario, passare al punto 3.
++
+.. Se lo stack che si sta aggiungendo a caldo dispone di più shelf di dischi, cablare i collegamenti shelf-to-shelf; in caso contrario, passare al sottopase b.
++
+[cols="2*"]
+|===
+| Se... | Quindi... 
+
+
+ a| 
+Si sta cablando uno stack con connettività ha multipath, multipath, ha a percorso singolo o a percorso singolo ai controller
+ a| 
+Collegare i collegamenti shelf-to-shelf come connettività "`standard`" (utilizzando le porte IOM 3 e 1):
+
+... A partire dal primo shelf logico nello stack, collegare la porta IOM A 3 alla porta IOM A 1 dello shelf successivo fino a collegare ciascun IOM A dello stack.
+... Ripetere la fase i per IOM B.
+
+
+
+
+ a| 
+Si sta cablando uno stack con connettività ha quad-path o quad-path ai controller
+ a| 
+Cablare le connessioni shelf-to-shelf come connettività "`dDouble-wide`": È possibile cablare la connettività standard utilizzando le porte IOM 3 e 1 e quindi la connettività doppia utilizzando le porte IOM 4 e 2.
+
+... A partire dal primo shelf logico nello stack, collegare la porta IOM A 3 alla porta IOM A 1 dello shelf successivo fino a collegare ciascun IOM A dello stack.
+... A partire dal primo shelf logico nello stack, collegare la porta IOM A 4 alla porta IOM A 2 dello shelf successivo fino a collegare ciascun IOM A dello stack.
+... Ripetere i passaggi secondari i e II per IOM B.
+
+
+|===
+.. Controllare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per verificare l'eventuale presenza di un foglio di lavoro completo per la configurazione.
++
+link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme AFF e FAS con storage integrato"]
+
++
+link:install-cabling-worksheets-examples-multipath.html["Fogli di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath comuni"]
+
++
+link:install-worksheets-examples-quadpath.html["Esempio di cablaggio e foglio di lavoro controller-to-stack per una configurazione ha quad-path con due HBA SAS quad-port"]
+
+.. Se è disponibile un foglio di lavoro completo per la configurazione, collegare le connessioni controller-to-stack utilizzando il foglio di lavoro completo; in caso contrario, passare alla fase successiva.
+.. Se non è disponibile un foglio di lavoro completo per la configurazione, compilare il modello di foglio di lavoro appropriato, quindi collegare le connessioni controller-to-stack utilizzando il foglio di lavoro completo.
++
+link:install-cabling-worksheet-template-multipath.html["Modello di foglio di lavoro per il cablaggio controller-to-stack per la connettività multipath"]
+
++
+link:install-cabling-worksheet-template-quadpath.html["Modello di foglio di lavoro per il cablaggio controller-to-stack per la connettività quad-path"]
+
+.. Verificare che tutti i cavi siano fissati saldamente.
+
+
+. Se si aggiungono a caldo uno o più shelf di dischi a un'estremità, ovvero il primo o l'ultimo shelf di dischi logico, di uno stack esistente, completare i passaggi secondari applicabili per la configurazione; in caso contrario, passare al punto successivo.
++
+
+NOTE: Assicurarsi di attendere almeno 70 secondi tra lo scollegamento e il ricollegamento di un cavo e se si sta sostituendo un cavo più lungo.
+
++
+[cols="2*"]
+|===
+| Se sei... | Quindi... 
+
+
+ a| 
+Aggiunta a caldo di uno shelf di dischi alla fine di uno stack con connettività ha multipath, multipath, ha quad-path o quad-path ai controller
+ a| 
+.. Scollegare eventuali cavi dal modulo IOM A dello shelf di dischi alla fine dello stack collegati a qualsiasi controller; in caso contrario, passare alla fase e.
++
+Lasciare l'altra estremità di questi cavi collegata ai controller o sostituire i cavi con cavi più lunghi, se necessario.
+
+.. Collegare i collegamenti shelf-to-shelf tra IOM A dello shelf di dischi alla fine dello stack e IOM A dello shelf di dischi che si sta aggiungendo a caldo.
+.. Ricollegare tutti i cavi rimossi nella fase a alle stesse porte dell'IOM A dello shelf di dischi che si sta aggiungendo a caldo; in caso contrario, passare alla fase successiva.
+.. Verificare che tutti i cavi siano fissati saldamente.
+.. Ripetere i passaggi secondari da a a d per IOM B; in caso contrario, passare al punto 4.
+
+
+
+
+ a| 
+Aggiunta a caldo di uno shelf di dischi alla fine dello stack in una configurazione ha o a percorso singolo, come applicabile ai sistemi AFF A200, AFF A220, FAS2600 e FAS2700.
+
+Queste istruzioni sono per l'aggiunta a caldo alla fine dello stack che non dispone di connessioni controller-to-stack.
+ a| 
+.. Collegare il collegamento shelf-to-shelf tra IOM A dello shelf di dischi nello stack e IOM A dello shelf di dischi che si sta aggiungendo a caldo.
+.. Verificare che il cavo sia fissato correttamente.
+.. Ripetere i passaggi secondari applicabili per IOM B.
+
+
+|===
+. Se è stato aggiunto a caldo uno shelf di dischi con cavi ottici SAS HD mini-SAS a uno stack di shelf di dischi collegati con cavi di rame SAS, sostituire i cavi di rame SAS; in caso contrario, passare alla fase successiva.
++
+Lo stack deve soddisfare i requisiti indicati nella <<Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12>> sezione di questa procedura.
+
++
+Sostituire i cavi uno alla volta e attendere almeno 70 secondi tra lo scollegamento e il collegamento di un cavo nuovo.
+
+. Scaricare ed eseguire Config Advisor per verificare che le connessioni SAS siano cablate correttamente.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+
++
+Se vengono generati errori di cablaggio SAS, seguire le azioni correttive fornite.
+
+. Verificare la connettività SAS per ogni shelf di dischi aggiunto a caldo: `storage shelf show -shelf _shelf_name_ -connectivity`
++
+È necessario eseguire questo comando per ogni shelf di dischi aggiunto a caldo.
+
++
+Ad esempio, il seguente output mostra che lo shelf di dischi aggiunti a caldo 2.5 è collegato alle porte iniziatori la e 0d (coppia di porte la/0d) su ciascun controller (in una configurazione ha multipath FAS8080 con un HBA SAS a quattro porte):
+
++
+[listing]
+----
+cluster1::> storage shelf show -shelf 2.5 -connectivity
+
+           Shelf Name: 2.5
+             Stack ID: 2
+             Shelf ID: 5
+            Shelf UID: 40:0a:09:70:02:2a:2b
+        Serial Number: 101033373
+          Module Type: IOM12
+                Model: DS224C
+         Shelf Vendor: NETAPP
+           Disk Count: 24
+      Connection Type: SAS
+          Shelf State: Online
+               Status: Normal
+
+Paths:
+
+Controller     Initiator   Initiator Side Switch Port   Target Side Switch Port   Target Port   TPGN
+------------   ---------   --------------------------   -----------------------   -----------   ------
+stor-8080-1    1a           -                           -                          -             -
+stor-8080-1    0d           -                           -                          -             -
+stor-8080-2    1a           -                           -                          -             -
+stor-8080-2    0d           -                           -                          -             -
+
+Errors:
+------
+-
+----
+. Se l'assegnazione automatica della proprietà del disco è stata disattivata nella fase 1, assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica della proprietà del disco, se necessario:
++
+.. Visualizza tutti i dischi non posseduti:``storage disk show -container-type unassigned``
+.. Assegnare ciascun disco:``storage disk assign -disk _disk_name_ -owner _owner_name_``
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+.. Se necessario, riabilitare l'assegnazione automatica della proprietà del disco:``storage disk option modify -node _node_name_ -autoassign on``
++
+È necessario riabilitare l'assegnazione automatica della proprietà del disco su entrambi i controller in una coppia ha.
+
+
+
+. Se la configurazione esegue ACP in-band, verificare che ACP in-band sia stato attivato automaticamente sugli shelf di dischi aggiunti a caldo: `storage shelf acp show`
++
+Nell'output, "`in-band`" viene indicato come "`Active`" per ciascun nodo.
+
+
+
+
+
+== Spostare o trasportare gli shelf DS460C
+
+Se in futuro si spostano gli shelf DS460C in una parte diversa del data center o si trasportano gli shelf in una posizione diversa, è necessario rimuovere le unità dai cassetti delle unità per evitare possibili danni ai cassetti e alle unità.
+
+* Se quando si installano gli shelf DS460C come parte dello shelf hot-add, i materiali di imballaggio dei dischi sono stati salvati, utilizzarli per reimballare i dischi prima di spostarli.
++
+Se non hai salvato il materiale di imballaggio, devi posizionare i dischi su superfici imbottite o utilizzare un imballaggio imbottito alternativo. Non impilare mai i dischi l'uno sull'altro.
+
+* Prima di maneggiare le unità, indossare un braccialetto antistatico collegato a massa su una superficie non verniciata dello chassis del contenitore di storage.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del cabinet di storage prima di maneggiare un disco.
+
+* È necessario adottare le misure necessarie per gestire con attenzione i dischi:
++
+** Utilizzare sempre due mani durante la rimozione, l'installazione o il trasporto di un'unità per sostenerne il peso.
++
+
+CAUTION: Non posizionare le mani sulle schede del disco esposte nella parte inferiore del supporto.
+
+** Fare attenzione a non urtare i dischi contro altre superfici.
+** I dischi devono essere tenuti lontani da dispositivi magnetici.
++
+
+CAUTION: I campi magnetici possono distruggere tutti i dati presenti su un'unità e causare danni irreparabili ai circuiti dell'unità.
+
+
+
+

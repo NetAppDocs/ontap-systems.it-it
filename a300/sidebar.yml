@@ -1,0 +1,76 @@
+---
+section: a300
+title: Sistemi AFF A300
+url: "/a300/index.html"
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di AFF A300
+  entries:
+  - title: Foglio di lavoro per la configurazione del cluster
+    url: "/a300/install-worksheet-linkout.html"
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/a300/install-setup.html"
+  - title: Passaggi rapidi
+    url: "/a300/install-setup-linkout.html"
+  - title: Video fasi
+    url: "/a300/install-video-linkout.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di AFF A300
+  entries:
+  - title: Supporto di boot
+    pdf-filename: Supporti per l'avvio AFF A300
+    entries:
+    - title: Panoramica
+      url: "/a300/bootmedia-replace-overview.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/a300/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/a300/bootmedia-impaired-controller-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a300/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a300/bootmedia-recovery-image-boot-options.html"
+    - title: Tornare indietro alla configurazione MetroCluster
+      url: "/a300/bootmedia-2n-mcc-switchback.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/a300/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a300/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A300
+    entries:
+    - title: Panoramica
+      url: "/a300/chassis-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a300/chassis-replace-shutdown.html"
+    - title: Sostituire l'hardware
+      url: "/a300/chassis-replace-move-hardware.html"
+    - title: Ripristinare la configurazione
+      url: "/a300/chassis-replace-complete-system-restore-rma.html"
+  - title: Modulo controller
+    pdf-filename: Modulo controller A300 AFF
+    entries:
+    - title: Panoramica
+      url: "/a300/controller-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a300/controller-replace-shutdown.html"
+    - title: Sostituire il modulo controller
+      url: "/a300/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/a300/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema ricable
+      url: "/a300/controller-replace-recable-reassign-disks.html"
+    - title: Sostituzione completa
+      url: "/a300/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/a300/dimm-replace.html"
+  - title: Ventola
+    url: "/a300/fan-swap-out.html"
+  - title: Batteria NVMEM
+    url: "/a300/nvmem-nvram-battery-replace.html"
+  - title: Scheda PCIe
+    url: "/a300/pci-cards-and-risers-replace.html"
+  - title: Alimentatore
+    url: "/a300/power-supply-swap-out.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/a300/rtc-battery-replace.html"

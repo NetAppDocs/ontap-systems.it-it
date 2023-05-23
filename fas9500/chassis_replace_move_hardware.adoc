@@ -1,0 +1,378 @@
+---
+permalink: fas9500/chassis_replace_move_hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico. 
+---
+= Spostare e sostituire l'hardware - FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il telaio, è necessario rimuovere i componenti dal telaio compromesso e installarli nel telaio sostitutivo.
+
+
+
+== Fase 1: Rimuovere gli alimentatori
+
+La rimozione degli alimentatori durante la sostituzione di uno chassis comporta lo spegnimento, lo scollegamento e la rimozione dei quattro alimentatori dal retro dello chassis difettoso.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Spegnere l'alimentatore e scollegare i cavi di alimentazione:
++
+.. Spegnere l'interruttore di alimentazione dell'alimentatore.
+.. Aprire il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dall'alimentatore.
+.. Scollegare il cavo di alimentazione dalla fonte di alimentazione.
+
+
+. Tenere premuto il pulsante di blocco terracotta sulla maniglia dell'alimentatore, quindi estrarre l'alimentatore dallo chassis.
++
+
+NOTE: Quando si rimuove un alimentatore, utilizzare sempre due mani per sostenerne il peso.
+
++
+.Animazione - rimuovere/installare PSU
+video::590b3414-6ea5-42b2-b7f4-ae78004b86a4[panopto]
++
+image::../media/drw_9500_remove_install_PSU_module.svg[Drw 9500 rimuovere installare il modulo PSU]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di bloccaggio terracotta
+
+|===
+. Ripetere i passi precedenti per tutti gli alimentatori rimanenti.
+
+
+
+
+== Fase 2: Rimuovere le ventole
+
+Quando si sostituisce lo chassis, è necessario rimuovere i sei moduli ventole, situati nella parte anteriore dello chassis.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
+. Premere il pulsante di blocco terracotta sul modulo della ventola ed estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera.
++
+
+NOTE: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
+
++
+.Animazione - rimuovere/installare la ventola
+video::86b0ed39-1083-4b3a-9e9c-ae78004c2ffc[panopto]
++
+image::../media/drw_9500_remove_install_fan.svg[drw 9500 rimuovere la ventola di installazione]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["larghezza=20"]
+ a| 
+Pulsante di bloccaggio terracotta
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["larghezza=20"]
+ a| 
+Far scorrere la ventola verso l'interno o verso l'esterno dello chassis
+
+|===
+. Mettere da parte il modulo della ventola.
+. Ripetere i passaggi precedenti per tutti i moduli ventola rimanenti.
+
+
+
+
+== Fase 3: Rimuovere il modulo controller
+
+Per sostituire lo chassis, è necessario rimuovere il modulo controller o i moduli dallo chassis guasto.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi dal modulo controller guasto e tenere traccia del punto in cui sono stati collegati i cavi.
+. Far scorrere verso il basso il pulsante di blocco della terracotta sulla maniglia della camma fino a sbloccarla.
++
+.Animazione - rimuovere il modulo controller
+video::5e029a19-8acc-4fa1-be5d-ae78004b365a[panopto]
++
+image::../media/drw_9500_remove_PCM.svg[Drw 9500 rimuovere il PCM]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["larghezza=20"]
+ a| 
+Pulsante di bloccaggio della maniglia della camma
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["larghezza=20"]
+ a| 
+Maniglia CAM
+
+|===
+. Ruotare la maniglia della camma in modo da disimpegnare completamente il modulo controller dal telaio, quindi estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Mettere da parte il modulo controller in un luogo sicuro e tenere traccia dello slot del telaio da cui proviene, in modo che possa essere installato nello stesso slot del telaio sostitutivo.
+. Ripetere questa procedura se si dispone di un altro modulo controller nello chassis.
+
+
+
+
+== Fase 4: Rimuovere i moduli i/O.
+
+Per rimuovere i moduli i/o dallo chassis compromesso, inclusi i moduli NVRAM, seguire la sequenza specifica dei passaggi. Non è necessario rimuovere il modulo FlashCache, se presente, dal modulo NVRAM quando lo si sposta su uno chassis sostitutivo.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi associati al modulo i/o di destinazione.
++
+Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
+
+. Rimuovere il modulo i/o di destinazione dallo chassis:
++
+.. Premere il pulsante di bloccaggio della camma con lettere e numeri.
++
+Il pulsante di bloccaggio della camma si allontana dal telaio.
+
+.. Ruotare il fermo della camma verso il basso fino a portarlo in posizione orizzontale.
++
+Il modulo i/o si disinnesta dallo chassis e si sposta di circa 1/2 pollici fuori dallo slot i/O.
+
+.. Rimuovere il modulo i/o dallo chassis tirando le linguette sui lati del lato anteriore del modulo.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
++
+.Animazione - rimuovere/installare il modulo i/O.
+video::0903b1f9-187b-4bb8-9548-ae9b0012bb21[panopto]
++
+image::../media/drw_9500_remove_PCIe_module.svg[Drw 9500 rimuovere il modulo PCIe]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Latch i/o Cam intestato e numerato
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[icona legenda 02]
+ a| 
+Fermo i/o Cam completamente sbloccato
+
+|===
+
+
+. Mettere da parte il modulo i/O.
+. Ripetere il passaggio precedente per i moduli i/o rimanenti nello chassis compromesso.
+
+
+
+
+== Fase 5: Rimuovere il modulo di alimentazione del controller di de-stage
+
+Rimuovere i due moduli di alimentazione del controller di de-stage dalla parte anteriore dello chassis guasto.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Premere il pulsante di blocco terracotta sulla maniglia del modulo, quindi far scorrere il DCPM fuori dal telaio.
++
+.Animazione - rimuovere/installare DCPM
+video::c067cf9d-35b8-4fbe-9573-ae78004c2328[panopto]
++
+image::../media/drw_9500_remove_NV_battery.svg[Drw 9500 rimuovere la batteria NV]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di bloccaggio DCPM terracotta
+
+|===
+. Mettere da parte il DCPM in un luogo sicuro e ripetere questa fase per il DCPM rimanente.
+
+
+
+
+== Fase 6: Rimuovere il modulo LED USB
+
+Rimuovere i moduli LED USB.
+
+.Animazione - rimuovere/installare il modulo USB
+video::bc46a3e8-6541-444e-973b-ae78004bf153[panopto]
+image::../media/drw_9500_remove_replace_LED_mod.svg[Drw 9500 rimuovere sostituire il LED mod]
+
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Espellere il modulo.
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["larghezza=20"]
+ a| 
+Estrarre lo chassis.
+
+|===
+. Individuare il modulo LED USB sulla parte anteriore dello chassis guasto, direttamente sotto gli alloggiamenti dell'alimentatore.
+. Premere il pulsante di bloccaggio nero sul lato destro del modulo per sganciare il modulo dal telaio, quindi farlo scorrere per estrarlo dal telaio guasto.
+. Mettere da parte il modulo in un luogo sicuro.
+
+
+
+
+== Fase 7: Sostituire uno chassis all'interno del rack dell'apparecchiatura o dell'armadietto del sistema
+
+Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema.
+
+. Rimuovere le viti dai punti di montaggio del telaio.
++
+
+NOTE: Se il sistema si trova in un cabinet di sistema, potrebbe essere necessario rimuovere la staffa di ancoraggio posteriore.
+
+. Con l'aiuto di due o tre persone, far scorrere lo chassis compromesso dalle guide del rack in un cabinet di sistema o dalle staffe _L_ in un rack dell'apparecchiatura, quindi metterlo da parte.
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Utilizzando due o tre persone, installare lo chassis sostitutivo nel rack dell'apparecchiatura o nell'armadietto del sistema guidandolo sulle guide del rack in un cabinet del sistema o sulle staffe _L_ in un rack dell'apparecchiatura.
+. Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
+. Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dallo chassis compromesso.
+. Fissare la parte posteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema.
+. Se si utilizzano le staffe di gestione dei cavi, rimuoverle dallo chassis compromesso, quindi installarle sullo chassis sostitutivo.
+
+
+
+
+== Fase 8: Installare il modulo di alimentazione del controller di de-stage quando si sostituisce il telaio
+
+Una volta installato lo chassis sostitutivo nel rack o nell'armadietto del sistema, è necessario reinstallare i moduli di alimentazione del controller di de-stage.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allineare l'estremità del DCPM con l'apertura dello chassis, quindi farlo scorrere delicatamente nello chassis fino a farlo scattare in posizione.
++
+
+NOTE: Il modulo e lo slot sono dotati di chiavi. Non forzare il modulo nell'apertura. Se il modulo non si inserisce facilmente, riallineare il modulo e inserirlo nello chassis.
+
+. Ripetere questo passaggio per il DCPM rimanente.
+
+
+
+
+== Fase 9: Installare le ventole nel telaio
+
+Per installare i moduli delle ventole durante la sostituzione del telaio, è necessario eseguire una sequenza specifica di attività.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allineare i bordi del modulo della ventola di ricambio con l'apertura del telaio, quindi farlo scorrere nel telaio fino a farlo scattare in posizione.
++
+Quando viene inserito in un sistema attivo, il LED di attenzione ambra lampeggia quattro volte quando il modulo della ventola viene inserito correttamente nello chassis.
+
+. Ripetere questa procedura per i moduli ventola rimanenti.
+. Allineare il pannello con i perni a sfera, quindi spingere delicatamente il pannello sui perni a sfera.
+
+
+
+
+== Fase 10: Installare i moduli i/O.
+
+Per installare i moduli i/o, inclusi i moduli NVRAM/FlashCache dallo chassis compromesso, seguire la sequenza specifica di passaggi.
+
+È necessario che lo chassis sia installato in modo da poter installare i moduli i/o negli slot corrispondenti dello chassis sostitutivo.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Dopo aver installato lo chassis sostitutivo nel rack o nell'armadietto, installare i moduli i/o nei rispettivi slot nello chassis sostitutivo facendo scorrere delicatamente il modulo i/o nello slot fino a quando il fermo della camma i/o con lettere e numeri inizia a scattare, Quindi, spingere il fermo della i/o Cam completamente verso l'alto per bloccare il modulo in posizione.
+. Ricable il modulo i/o, secondo necessità.
+. Ripetere il passaggio precedente per i moduli i/o rimanenti da mettere da parte.
++
+
+NOTE: Se lo chassis non dotato di funzionalità sono dotati di pannelli i/o vuoti, spostarli nello chassis sostitutivo.
+
+
+
+
+
+== Fase 11: Installare gli alimentatori
+
+L'installazione degli alimentatori durante la sostituzione di uno chassis comporta l'installazione degli alimentatori nello chassis sostitutivo e il collegamento alla fonte di alimentazione.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Assicurarsi che i bilancieri degli alimentatori siano spenti.
+. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis del sistema, quindi spingere delicatamente l'alimentatore nello chassis fino a bloccarlo in posizione.
++
+Gli alimentatori sono dotati di chiavi e possono essere installati in un solo modo.
+
++
+
+IMPORTANT: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema. Il connettore potrebbe danneggiarsi.
+
+. Ricollegare il cavo di alimentazione e fissarlo all'alimentatore utilizzando il meccanismo di blocco del cavo di alimentazione.
++
+
+IMPORTANT: Collegare solo il cavo di alimentazione all'alimentatore. Non collegare il cavo di alimentazione a una fonte di alimentazione.
+
+. Ripetere i passi precedenti per tutti gli alimentatori rimanenti.
+
+
+
+
+== Fase 12 installare i moduli LED USB
+
+Installare i moduli LED USB nel telaio sostitutivo.
+
+. Individuare lo slot del modulo LED USB nella parte anteriore dello chassis sostitutivo, direttamente sotto gli alloggiamenti DCPM.
+. Allineare i bordi del modulo con l'alloggiamento LED USB e spingere delicatamente il modulo fino in fondo nello chassis fino a farlo scattare in posizione.
+
+
+
+
+== Fase 13: Installare il controller
+
+Dopo aver installato il modulo controller e qualsiasi altro componente nello chassis sostitutivo, avviarlo in uno stato in cui è possibile eseguire il test diagnostico di interconnessione.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Collegare e accendere gli alimentatori a diverse fonti di alimentazione.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Collegare nuovamente la console al modulo controller, quindi ricollegare la porta di gestione.
+. Con la maniglia della camma in posizione aperta, far scorrere il modulo controller nel telaio e spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma fino a quando non scatta in posizione di blocco.
++
+
+IMPORTANT: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+. Ripetere i passi precedenti per installare il secondo controller nel telaio sostitutivo.
+. Avviare ciascun controller.
+

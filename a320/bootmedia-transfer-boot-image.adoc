@@ -1,0 +1,179 @@
+---
+permalink: a320/bootmedia-transfer-boot-image.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive 
+summary: 'Il supporto di avvio sostitutivo installato non dispone di un"immagine di avvio, pertanto è necessario trasferire un"immagine di avvio utilizzando un"unità flash USB.' 
+---
+= Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.
+
+* È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con almeno 4 GB di capacità
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
++
+.. Scaricare e copiare l'immagine del servizio appropriata dal sito del supporto NetApp sull'unità flash USB.
++
+... Scarica l'immagine del servizio nel tuo spazio di lavoro sul laptop.
+... Decomprimere l'immagine del servizio.
++
+
+NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare winzip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
+
++
+Il file di immagine del servizio decompresso contiene due cartelle:
+
++
+**** avviare
+**** efi
+
+
+... Copiare la cartella efi nella directory principale dell'unità flash USB.
++
+L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
+
+... Rimuovere l'unità flash USB dal computer portatile.
+
+
+.. In caso contrario, chiudere il condotto dell'aria.
+.. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+.. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori multimediali (SFP o QSFP) se sono stati rimossi.
+
+.. Collegare il cavo di alimentazione all'alimentatore e reinstallare il fermo del cavo di alimentazione.
+.. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+.. Completare la reinstallazione del modulo controller:
++
+image::../media/drw_a320_controller_install_animated_gif.png[gif animato installazione controller drw a320]
+
++
+... Assicurarsi che i bracci del dispositivo di chiusura siano bloccati in posizione estesa.
+... Utilizzando i bracci del dispositivo di chiusura, spingere il modulo controller nell'alloggiamento dello chassis fino a quando non si arresta.
++
+
+NOTE: Non spingere verso il basso il meccanismo di chiusura sulla parte superiore dei bracci del dispositivo di chiusura. Per farlo, sollevare il meccanismo di blocco e impedire lo scorrimento del modulo controller nel telaio.
+
+... Tenere premuti le linguette arancioni sulla parte superiore del meccanismo di chiusura.
+... Spingere delicatamente il modulo controller nell'alloggiamento dello chassis fino a quando non è a filo con i bordi dello chassis.
++
+
+NOTE: I bracci del meccanismo di chiusura scorrono nel telaio.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+... Rilasciare i fermi per bloccare il modulo controller in posizione.
+... Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+
+
+.. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+.. Sebbene le variabili d'ambiente e i bootargs siano conservati, è necessario verificare che tutte le variabili d'ambiente di boot e i bootargs necessari siano impostati correttamente per il tipo di sistema e per la configurazione utilizzando il `printenv bootarg name` e correggere eventuali errori utilizzando `setenv variable-name <value>` comando.
++
+... Controllare le variabili di ambiente di boot:
++
+**** `bootarg.init.boot_clustered`
+**** `partner-sysid`
+**** `bootarg.init.flash_optimized` Per AFF C190/AFF A220 (All Flash FAS)
+**** `bootarg.init.san_optimized` Per AFF A220 e tutti gli array SAN
+**** `bootarg.init.switchless_cluster.enable`
+
+
+... Se External Key Manager (Gestore chiavi esterne) è attivato, controllare i valori di boot, elencati in `kenv` Output ASUP:
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `kmip.init.interface <value>`
+**** `kmip.init.ipaddr <value>`
+**** `kmip.init.netmask <value>`
+**** `kmip.init.gateway <value>`
+
+
+... Se Onboard Key Manager è attivato, controllare i valori di boot, elencati nella `kenv` Output ASUP:
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `bootarg.onboard_keymanager <value>`
+
+
+... Salvare le variabili di ambiente modificate con `savenv` comando
+... Confermare le modifiche utilizzando `printenv _variable-name_` comando.
+
+
+.. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
++
+L'immagine viene scaricata dall'unità flash USB.
+
+.. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
+.. Una volta installata l'immagine, avviare il processo di ripristino:
++
+... Registrare l'indirizzo IP del controller che ha subito problemi visualizzato sullo schermo.
+... Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
+... Premere `y` quando viene richiesto di sovrascrivere /etc/ssh/ssh_host_dsa_key.
+
+
+.. Dal controller partner nel livello di privilegio avanzato, avviare la sincronizzazione della configurazione utilizzando l'indirizzo IP registrato nel passaggio precedente: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+.. Se il ripristino ha esito positivo, premere `y` sul controller compromesso quando viene richiesto di utilizzare la copia ripristinata?.
+.. Premere `y` quando viene visualizzato il messaggio confirm backup procedure was successful (conferma procedura di backup riuscita), quindi premere `y` quando viene richiesto di riavviare il controller.
+.. Verificare che le variabili ambientali siano impostate come previsto.
++
+... Portare il controller al prompt DEL CARICATORE.
++
+Dal prompt di ONTAP, è possibile eseguire il comando system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true.
+
+... Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
+... Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv __environment-variable-name__ __changed-value__` comando.
+... Salvare le modifiche utilizzando `savenv` comando.
+... Riavviare il controller.
+
+
+.. Con il controller riavviato per problemi che visualizza `Waiting for giveback...` eseguire un giveback dal controller integro:
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Quindi... 
+
+
+ a| 
+Una coppia ha
+ a| 
+Una volta visualizzato il `Waiting for giveback...` eseguire un giveback dal controller integro:
+
+... Dal controller integro: `storage failover giveback -ofnode partner_node_name`
++
+Il controller compromesso recupera lo storage, termina l'avvio e poi si riavvia e viene nuovamente sostituito dal controller integro.
+
++
+
+NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
+
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["Guida alla configurazione ad alta disponibilità di ONTAP 9"]
+
+... Monitorare l'avanzamento dell'operazione di giveback utilizzando `storage failover show-giveback` comando.
+... Una volta completata l'operazione di giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover utilizzando `storage failover show` comando.
+... Ripristinare il giveback automatico se è stato disattivato utilizzando il comando di modifica del failover dello storage.
+
+
+|===
+.. Uscire dal livello di privilegio avanzato sul controller integro.
+
+
+

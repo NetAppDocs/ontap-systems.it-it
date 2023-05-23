@@ -1,0 +1,61 @@
+= 
+:allow-uri-read: 
+
+
+Dopo aver sostituito lo chassis, accendere i componenti del cluster nel seguente ordine:
+
+* Accendere lo switch
+* Accendere gli shelf di dischi
+* Accendere i controller
+
+
+.Fasi
+. Accendere lo switch:
++
+.. Ricollegare ciascun cavo di alimentazione dalla PDU all'alimentatore.
+.. Portare ciascun interruttore a bilanciere dell'alimentatore in posizione ON (se applicabile).
+.. Attendere che lo switch si accenda.
+.. Verificare la presenza di eventuali spie di guasto sull'interruttore (anteriore e posteriore).
+.. Connettersi allo switch tramite l'indirizzo IP di gestione.
+.. Verificare lo stato dello switch (per ulteriori informazioni, consultare la documentazione del fornitore dello switch).
+.. Ripetere la procedura per ogni switch fino a quando tutti gli switch non sono accesi e funzionanti.
+
+
+. Accendere gli shelf di dischi:
++
+.. Ricollegare ciascun cavo di alimentazione dalla PDU all'alimentatore.
+.. Portare ciascun interruttore a bilanciere dell'alimentatore in posizione ON (se applicabile).
+.. Attendere che tutti gli shelf di dischi si accendano e che i dischi si accelerino.
+.. Assicurarsi che tutti gli shelf ID siano i valori previsti.
+.. Verificare la presenza di eventuali spie di guasto sullo shelf di dischi (anteriore e posteriore) che non esistevano prima dello spegnimento.
+
+
+. Accendere i controller:
++
+.. Ricollegare ciascun cavo di alimentazione dalla PDU all'alimentatore.
+.. Portare ciascun interruttore a bilanciere dell'alimentatore in posizione ON (se applicabile). Le coppie HA che non si trovano nello stesso chassis devono essere alimentate contemporaneamente.
+.. Attendere che i controller nello chassis si accendano.
+.. Verificare la presenza di eventuali spie di guasto sul telaio e sui controller (anteriori e posteriori).
+.. Ripetere l'operazione per ciascun controller/chassis fino all'accensione di tutti i componenti.
+.. Connettersi all'indirizzo IP SP o BMC dei nodi tramite SSH. Utilizzare questo comando per ottenere l'indirizzo IP prima dello spegnimento:
++
+`system service-processor show -node * -fields address`
+
+.. Eseguire ulteriori controlli dello stato del sistema:
++
+... Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"]
+... Eseguire https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]
+... Controllare lo stato del sistema come descritto in https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"]
+
+
+.. Generare un messaggio AutoSupport di completamento dell'attività di manutenzione:
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+.. Assicurarsi che il giveback automatico sia attivo:
++
+`storage failover modify -node local -auto-giveback true`
+
+
+
+

@@ -1,0 +1,59 @@
+---
+permalink: fas9500/fan_swap_out.html 
+sidebar: sidebar 
+keywords:  
+summary: Per sostituire un modulo ventola senza interrompere il servizio, è necessario eseguire una sequenza specifica di attività. 
+---
+= Sostituire una ventola - FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire un modulo ventola senza interrompere il servizio, è necessario eseguire una sequenza specifica di attività.
+
+
+IMPORTANT: Si consiglia di sostituire l'alimentatore entro due minuti dalla rimozione dallo chassis. Il sistema continua a funzionare, ma ONTAP invia messaggi alla console sull'alimentatore danneggiato fino alla sostituzione dell'alimentatore.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
+. Identificare il modulo della ventola da sostituire controllando i messaggi di errore della console e il LED Attention (attenzione) su ciascun modulo della ventola.
+. Premere il pulsante terracotta sul modulo della ventola ed estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera.
++
+
+IMPORTANT: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
+
++
+.Animazione - rimuovere/installare la ventola
+video::86b0ed39-1083-4b3a-9e9c-ae78004c2ffc[panopto]
++
+image::../media/drw_9500_remove_install_fan.svg[drw 9500 rimuovere la ventola di installazione]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio di Terra cotta
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[icona legenda 02]
+ a| 
+Far scorrere la ventola verso l'interno o verso l'esterno dello chassis
+
+|===
+. Mettere da parte il modulo della ventola.
+. Allineare i bordi del modulo della ventola di ricambio con l'apertura del telaio, quindi farlo scorrere nel telaio fino a farlo scattare in posizione.
++
+Quando viene inserito in un sistema attivo, il LED di attenzione ambra lampeggia quattro volte quando il modulo della ventola viene inserito correttamente nello chassis.
+
+. Allineare il pannello con i perni a sfera, quindi spingere delicatamente il pannello sui perni a sfera.
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"^] per ulteriori informazioni.
+

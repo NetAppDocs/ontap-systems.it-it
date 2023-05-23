@@ -1,0 +1,65 @@
+---
+indexpage:
+  tiles:
+  - title: Installazione e configurazione
+    links:
+    - title: Passaggi rapidi
+      url: "/install-quick-guide.html"
+    - title: Video fasi
+      url: "/install-videos.html"
+    - title: Passaggi dettagliati
+      url: "/install-detailed-guide.html"
+    - title: Configurazioni Fabric-Attached MetroCluster
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html
+    - title: Configurazioni MetroCluster estensibile
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html
+  - title: Mantenere
+    links:
+    - title: Supporto di boot
+      url: "/bootmedia-replace-overview.html"
+    - title: Modulo di caching o core dump
+      url: "/caching-module-and-core-dump-module-replace.html"
+    - title: Modulo di caching (hot-swap)
+      url: "/caching-module-hot-swap.html"
+    - title: Chassis
+      url: "/chassis-replace-overview.html"
+    - title: Modulo controller
+      url: "/controller-replace-overview.html"
+    - title: DCPM (con batteria NVRAM10)
+      url: "/dcpm-nvram10-battery-replace.html"
+    - title: DIMM
+      url: "/dimm-replace.html"
+    - title: Ventola
+      url: "/fan-swap-out.html"
+    - title: Modulo i/O.
+      url: "/pci-cards-and-risers-replace.html"
+    - title: Modulo LED USB
+      url: "/led-module-replace.html"
+    - title: Modulo NVRAM e/o DIMM NVRAM
+      url: "/nvram-module-or-nvram-dimm-replacement.html"
+    - title: Alimentatore
+      url: "/power-supply-swap-out.html"
+    - title: Batteria RTC
+      url: "/rtc-battery-replace.html"
+    - title: Modulo X91148A
+      url: "/x91148a-module-install-overview.html"
+    - title: Shelf NS224
+      url: "../ns224/index.html"
+    - title: SAS con IOM12
+      url: "../sas3/index.html"
+  - title: Switch supportati
+    links:
+    - title: BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco Nexus 9336C-FX2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: Cisco Nexus 9336C-FX2 in configurazione condivisa
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+  - title: Più risorse di documentazione
+    links:
+    - title: Aggiornamento dell'hardware di sistema
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: Aggiornamento del software ONTAP
+      url: https://docs.netapp.com/us-en/ontap/upgrade/index.html
+    - title: Sostituire il disco interno (video)
+      url: https://www.youtube.com/watch?v=Ziqg9HL8oYQ

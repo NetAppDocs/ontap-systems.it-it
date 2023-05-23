@@ -1,0 +1,18 @@
+= 
+:allow-uri-read: 
+
+
+Per i sistemi storage precedentemente configurati per l'utilizzo di Storage o Volume Encryption, è necessario eseguire ulteriori passaggi per fornire una funzionalità di crittografia senza interruzioni. È possibile ignorare questa attività nei sistemi storage che non hanno abilitato Storage o Volume Encryption.
+
+
+NOTE: Questa fase non è necessaria quando si sostituisce un DIMM.
+
+.Fasi
+. Utilizzare una delle seguenti procedure, a seconda che si utilizzi la gestione delle chiavi integrata o esterna:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Ripristinare le chiavi di crittografia integrate per la gestione delle chiavi"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Ripristinare le chiavi di crittografia esterne per la gestione delle chiavi"^]
+
+
+. Reimpostare il MSID SED
+

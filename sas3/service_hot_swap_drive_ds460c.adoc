@@ -1,0 +1,260 @@
+---
+permalink: sas3/service-hot-swap-drive-ds460c.html 
+sidebar: sidebar 
+keywords: hot-swap, fail, disk, drive, ds460c, nondisruptive, replace, system, power, serving, data, i/o, hot-swap a disk drive in a ds460c disk shelf 
+summary: È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS460C. 
+---
+= Disco hot-swap in shelf DS460C - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS460C.
+
+.Prima di iniziare
+* Il disco sostitutivo deve essere supportato dallo shelf di dischi DS460C.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Il disco che si sta rimuovendo deve essere guasto.
++
+È possibile verificare che il disco non funzioni correttamente eseguendo `storage disk show -broken` comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.
+
++
+
+NOTE: A seconda del tipo di disco e della capacità, potrebbero essere necessarie diverse ore prima che il disco venga visualizzato nell'elenco dei dischi guasti.
+
+* Se si sostituisce un disco con crittografia automatica (SED), seguire le istruzioni per la sostituzione di un SED nella documentazione di ONTAP relativa alla versione di ONTAP in uso.
++
+Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
+
++
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"]
+
+
+
+.A proposito di questa attività
+* È necessario adottare le misure necessarie per evitare scariche elettrostatiche (ESD):
++
+** Conservare il disco nel sacchetto ESD fino a quando non si è pronti per l'installazione.
+** Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici.
++
+
+NOTE: Non inserire utensili metallici o coltelli nel sacchetto ESD.
+
+** Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata dello chassis dell'enclosure di storage.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del contenitore di storage prima di maneggiare il disco.
+
+
+
+* È necessario adottare le misure necessarie per gestire con attenzione i dischi:
++
+** Utilizzare sempre due mani durante la rimozione, l'installazione o il trasporto di un'unità disco per sostenerne il peso.
++
+
+NOTE: Non posizionare le mani sulle schede del disco esposte nella parte inferiore del supporto del disco.
+
+** È necessario posizionare i dischi su superfici ammortizzate e non impilare mai i dischi l'uno sull'altro.
+** Prestare attenzione a non urtare i dischi contro altre superfici.
+
+
+* I dischi devono essere tenuti lontani dai dispositivi magnetici.
++
+
+NOTE: I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
+
+* La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di sostituire a caldo un disco.
++
+L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati, evitando così messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi. Si evita inoltre la possibile prevenzione del partizionamento dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
+
+* La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
++
+Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
+
+* Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
++
+
+NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
+
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Uno shelf di dischi ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo IOM12. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+
+* Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
+* Lo shelf del disco DS460C è composto da cinque cassetti (cassetto 1 in alto, cassetto 5 in basso) che contengono ciascuno 12 slot.
++
+image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[28 dwg e2860 de460c anteriore senza callout]
+
+* La seguente illustrazione mostra come i dischi sono numerati da 0 a 11 in ogni cassetto all'interno dello shelf.
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[cassetto dwg trafford con didascalie hdd]
+
+
+
+.Fasi
+. Se si desidera assegnare manualmente la proprietà del disco per il disco sostitutivo, è necessario disattivare l'assegnazione automatica del disco, se attivata; in caso contrario, passare alla fase successiva.
++
+
+NOTE: È necessario assegnare manualmente la proprietà del disco se i dischi nello stack sono di proprietà di entrambi i controller in una coppia ha.
+
++
+
+NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
+
++
+.. Verificare se l'assegnazione automatica dei dischi è abilitata:``storage disk option show``
++
+Se si dispone di una coppia ha, è possibile immettere il comando nella console di entrambi i controller.
+
++
+Se l'assegnazione automatica dei dischi è attivata, l'output mostra "`ON`" (per ciascun controller) nella colonna "`Auto Assign`" (assegnazione automatica).
+
+.. Se l'assegnazione automatica del disco è attivata, è necessario disattivarla:``storage disk option modify -node _node_name_ -autoassign off``
++
+È necessario disattivare l'assegnazione automatica del disco su entrambi i controller in una coppia ha.
+
+
+
+. Mettere a terra l'utente.
+. Disimballare il nuovo disco e riutilizzarlo su una superficie piana vicino allo shelf.
++
+Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce il disco guasto.
+
++
+
+NOTE: NetApp richiede che tutte le unità disco restituite siano contenute in un sacchetto con grado di protezione ESD.
+
+. Identificare il disco guasto dal messaggio di avviso della console di sistema e dal LED di attenzione illuminato di colore ambra sul cassetto dell'unità.
++
+I cassetti delle unità SAS da 2.5" e 3.5" non contengono LED. È invece necessario controllare i LED di attenzione sui cassetti delle unità per determinare quale unità si è guastata.
+
++
+Il LED di attenzione del cassetto dell'unità (ambra) lampeggia per consentire l'apertura del cassetto dell'unità corretto e identificare l'unità da sostituire.
+
++
+Il LED di attenzione del cassetto dell'unità si trova sul lato anteriore sinistro davanti a ciascun disco, con un simbolo di avvertenza sull'impugnatura dell'unità dietro il LED.
+
+. Aprire il cassetto contenente il disco guasto:
++
+.. Sganciare il cassetto dell'unità tirando entrambe le leve.
+.. Utilizzando le leve estese, estrarre con cautela il cassetto dell'unità fino a quando non si arresta.
+.. Osservare la parte superiore del cassetto dell'unità per individuare il LED di attenzione che si trova sul cassetto davanti a ciascun disco.
+
+
+. Rimuovere il disco guasto dal cassetto aperto:
++
+.. Tirare delicatamente indietro il dispositivo di chiusura arancione che si trova davanti all'unità che si desidera rimuovere.
++
+image::../media/trafford_drive_rel_button.gif[pulsante del drive rel di trafford]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Dispositivo di chiusura arancione 
+|===
+.. Aprire la maniglia della camma ed estrarre leggermente l'unità.
+.. Attendere 30 secondi.
+.. Utilizzare la maniglia della camma per sollevare l'unità dallo scaffale.
++
+image::../media/92_dwg_de6600_install_or_remove_drive.gif[92 dwg de6600 installare o rimuovere il disco]
+
+.. Posizionare l'unità su una superficie antistatica e imbottita, lontano dai campi magnetici.
+
+
+. Inserire l'unità sostitutiva nel cassetto:
++
+.. Sollevare la maniglia della camma sul nuovo disco in verticale.
+.. Allineare i due pulsanti rialzati su ciascun lato del supporto dell'unità con lo spazio corrispondente nel canale dell'unità sul cassetto dell'unità.
++
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 cru di dischi dwg e2860 de460c]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Pulsante sollevato sul lato destro del supporto dell'unità 
+|===
+.. Abbassare l'unità, quindi ruotare la maniglia della camma verso il basso fino a quando non scatta in posizione sotto il dispositivo di chiusura arancione.
+.. Spingere con cautela il cassetto dell'unità all'interno del contenitore.
++
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif[""]
+
++
+
+CAUTION: *Possibile perdita di accesso ai dati:* non chiudere mai il cassetto. Spingere lentamente il cassetto per evitare di strattonare il cassetto e danneggiare lo storage array.
+
+.. Chiudere il cassetto dell'unità spingendo entrambe le leve verso il centro.
++
+Il LED di attività verde per l'unità sostituita nella parte anteriore del cassetto si accende quando l'unità è inserita correttamente.
+
+
+
+. Se si sta sostituendo un'altra unità disco, ripetere i passi da 4 a 7.
+. Controllare il LED di attività e il LED di attenzione sul disco sostituito.
++
+[cols="1,2"]
+|===
+| Stato dei LED | Descrizione 
+
+
+ a| 
+Il LED di attività è acceso o lampeggiante e il LED attenzione è spento
+ a| 
+Il nuovo disco funziona correttamente.
+
+
+
+ a| 
+Il LED di attività è spento
+ a| 
+L'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 30 secondi, quindi reinstallarla.
+
+
+
+ a| 
+Il LED Attention (attenzione) è acceso
+ a| 
+Il nuovo disco potrebbe essere difettoso. Sostituirlo con un altro disco nuovo.
+
+
+NOTE: Quando si inserisce un disco per la prima volta, il LED attenzione potrebbe essere acceso. Tuttavia, il LED dovrebbe spegnersi entro un minuto.
+
+|===
+. Se l'assegnazione automatica della proprietà del disco è stata disattivata nella fase 1, assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica della proprietà del disco, se necessario:
++
+.. Visualizza tutti i dischi non posseduti:``storage disk show -container-type unassigned``
+.. Assegnare ciascun disco:``storage disk assign -disk _disk_name_ -owner _owner_name_``
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+.. Se necessario, riabilitare l'assegnazione automatica della proprietà del disco:``storage disk option modify -node _node_name_ -autoassign on``
++
+È necessario riabilitare l'assegnazione automatica della proprietà del disco su entrambi i controller in una coppia ha.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
++
+Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+
+

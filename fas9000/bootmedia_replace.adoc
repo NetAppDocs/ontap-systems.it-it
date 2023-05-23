@@ -1,0 +1,169 @@
+---
+permalink: fas9000/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, open, controller, module, system, access, component 
+summary: 'Per accedere ai componenti all"interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.' 
+---
+= Sostituire il supporto di avvio - AFF A700 e FAS9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+
+
+== Fase 1: Rimuovere il controller
+
+Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi dal modulo controller guasto e tenere traccia del punto in cui sono stati collegati i cavi.
+. Far scorrere il pulsante arancione sulla maniglia della camma verso il basso fino a sbloccarla.
++
+image::../media/drw_9000_remove_pcm.png[drw 9000 rimuovere il pcm]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Pulsante di rilascio della maniglia della camma
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Maniglia CAM
+
+|===
+. Ruotare la maniglia della camma in modo da disimpegnare completamente il modulo controller dal telaio, quindi estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il coperchio del modulo controller con il lato rivolto verso l'alto su una superficie stabile e piana, premere il pulsante blu sul coperchio, far scorrere il coperchio sul retro del modulo controller, quindi sollevare il coperchio ed estrarlo dal modulo controller.
++
+image::../media/drw_9000_pcm_open.png[drw 9000 pcm aperto]
+
+
+
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Pulsante di bloccaggio del coperchio del modulo controller
+
+|===
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
+
+image:../media/drw_9000_remove_boot_dev.svg[""]
+
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Premere il tasto di rilascio Tab
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Supporto di boot
+
+|===
+. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+. Premere il supporto di avvio verso il basso per inserire il pulsante di blocco sull'alloggiamento del supporto di avvio.
+. Reinstallare il coperchio del modulo controller allineando i perni sul coperchio con gli slot sul supporto della scheda madre, quindi far scorrere il coperchio in posizione.
+
+
+
+
+== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
+
+È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando un'unità flash USB su cui è installata l'immagine. Tuttavia, è necessario ripristinare `var` file system durante questa procedura.
+
+* È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino di `var` file system.
+
+
+.Fasi
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Se necessario, è possibile ricable il modulo controller.
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Inserire completamente il modulo controller nel sistema, assicurandosi che la maniglia della camma si allontani dall'unità flash USB, spingere con decisione la maniglia della camma per terminare l'inserimento del modulo controller, quindi spingere la maniglia della camma in posizione chiusa.
++
+Il nodo inizia ad avviarsi non appena viene completamente installato nello chassis.
+
+. Interrompere il processo di avvio per interrompere il CARICAMENTO premendo Ctrl-C quando viene visualizzato Avvio DI AUTOBOOT premere Ctrl-C per interrompere....
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione di avvio in modalità manutenzione, quindi arrestare il nodo per avviare IL CARICATORE.
+
+. Impostare il tipo di connessione di rete al prompt DEL CARICATORE:
++
+** Se si sta configurando DHCP: `ifconfig e0a -auto`
++
+
+NOTE: La porta di destinazione configurata è la porta di destinazione utilizzata per comunicare con il nodo compromesso dal nodo integro durante `var` ripristino del file system con una connessione di rete. È anche possibile utilizzare la porta e0M in questo comando.
+
+** Se si configurano connessioni manuali: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
++
+*** Filer_addr è l'indirizzo IP del sistema di storage.
+*** Netmask è la maschera di rete della rete di gestione connessa al partner ha.
+*** gateway è il gateway per la rete.
+*** dns_addr è l'indirizzo IP di un name server sulla rete.
+*** dns_domain è il nome di dominio DNS (Domain Name System).
++
+Se si utilizza questo parametro opzionale, non è necessario un nome di dominio completo nell'URL del server netboot. È necessario solo il nome host del server.
+
+
+
+
+
++
+
+NOTE: Potrebbero essere necessari altri parametri per l'interfaccia. È possibile immettere `help ifconfig` al prompt del firmware per ulteriori informazioni.
+
+. Se il controller si trova in un MetroCluster esteso o collegato al fabric, è necessario ripristinare la configurazione dell'adattatore FC:
++
+.. Avvio in modalità di manutenzione: `boot_ontap maint`
+.. Impostare le porte MetroCluster come iniziatori: `ucadmin modify -m fc -t _initiator adapter_name_`
+.. Halt per tornare alla modalità di manutenzione: `halt`
+
+
++
+Le modifiche verranno implementate all'avvio del sistema.
+
+

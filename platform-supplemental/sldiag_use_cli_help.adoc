@@ -1,0 +1,53 @@
+---
+permalink: platform-supplemental/sldiag-use-cli-help.html 
+sidebar: sidebar 
+keywords: command-line, syntax, command, line, name, follow, question, mark, how to use online command-line help 
+summary: 'È possibile ottenere la guida alla sintassi della riga di comando dalla riga di comando immettendo il nome del comando seguito da help o dal punto interrogativo (?).' 
+---
+= Come utilizzare la guida in linea della riga di comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ottenere la guida alla sintassi della riga di comando dalla riga di comando immettendo il nome del comando seguito dalla guida o dal punto interrogativo (?).
+
+I caratteri o i simboli utilizzati nella guida alla sintassi sono i seguenti:
+
+* *parola chiave*
++
+Specifica il nome di un comando o di un'opzione che deve essere inserita come mostrato.
+
+* *< > (minore di, maggiore di simboli)*
++
+Specificare che è necessario sostituire la variabile identificata all'interno dei simboli con un valore.
+
+* *| (tubo)*
++
+Indica che è necessario scegliere uno degli elementi su entrambi i lati della tubazione.
+
+* *[ ] (parentesi)*
++
+Indicare che l'elemento all'interno delle parentesi è opzionale.
+
+* *{ } (parentesi graffe)*
++
+Indicare che è necessario l'elemento all'interno delle parentesi graffe.
+
+
+
+È inoltre possibile digitare il punto interrogativo nella riga di comando per visualizzare un elenco di tutti i comandi disponibili al livello di amministrazione corrente (amministrativo o avanzato).
+
+L'esempio seguente mostra il risultato dell'immissione del comando della guida in linea dell'ambiente nella riga di comando del sistema di storage. L'output del comando visualizza la guida alla sintassi per i comandi di ambiente.
+
+[listing]
+----
+toaster> environment help
+Usage: environment status |
+[status] [shelf [<adapter>]] |
+[status] [shelf_log] |
+[status] [shelf_stats] |
+[status] [shelf_power_status] |
+[status] [chassis [all | list-sensors | Fan | Power | Temp | Power Supply | RTC Battery | NVRAM4-temperature-7 | NVRAM4-battery-7]]
+----

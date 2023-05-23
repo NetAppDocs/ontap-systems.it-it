@@ -1,0 +1,90 @@
+---
+section: a700s
+title: Sistemi AFF A700s
+url: "/a700s/index.html"
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di AFF A700s
+  entries:
+  - title: Foglio di lavoro per la configurazione del cluster
+    url: "/a700s/install-worksheet-linkout.html"
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/a700s/install-setup.html"
+  - title: Passaggi rapidi
+    url: "/a700s/install-setup-linkout.html"
+  - title: Video fasi
+    url: "/a700s/install-video-linkout.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di AFF A700
+  entries:
+  - title: Supporto di boot
+    pdf-filename: Supporti di avvio AFF A700s
+    entries:
+    - title: Panoramica
+      url: "/a700s/bootmedia-replace-overview.html"
+    - title: Controllare la crittografia integrata
+      url: "/a700s/bootmedia-encryption-preshutdown-checks.html"
+    - title: Nodo di arresto
+      url: "/a700s/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a700s/bootmedia-replace.html"
+    - title: Trasferire l'immagine di avvio
+      url: "/a700s/bootmedia-transfer-boot-image.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a700s/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/a700s/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a700s/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A700s
+    entries:
+    - title: Panoramica
+      url: "/a700s/chassis-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a700s/chassis-replace-shutdown.html"
+    - title: Sostituire l'hardware
+      url: "/a700s/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa
+      url: "/a700s/chassis-replace-complete-system-restore-rma.html"
+  - title: Controller
+    pdf-filename: Controller AFF A700s
+    entries:
+    - title: Panoramica
+      url: "/a700s/controller-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/a700s/controller-replace-shutdown.html"
+    - title: Sostituire il modulo controller
+      url: "/a700s/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/a700s/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema ricable
+      url: "/a700s/controller-replace-recable-reassign-disks.html"
+    - title: Completare il processo di sostituzione
+      url: "/a700s/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: DIMM AFF A700s
+    url: "/a700s/dimm-replace.html"
+  - title: Disco
+    pdf-filename: Disco AFF A700s
+    url: "/a700s/drive-replace.html"
+  - title: Ventola
+    pdf-filename: Ventola AFF A700s
+    url: "/a700s/fan-replace.html"
+  - title: Batteria NVRAM
+    pdf-filename: Batteria NVRAM AFF A700s
+    url: "/a700s/nvmem-nvram-battery-replace.html"
+  - title: NVRAM
+    pdf-filename: NVRAM di AFF A700s
+    url: "/a700s/nvram-or-nvram-dimm-replacement.html"
+  - title: Scheda PCIe
+    pdf-filename: Scheda PCIe AFF A700s
+    url: "/a700s/pci-cards-and-risers-replace.html"
+  - title: Alimentatore
+    pdf-filename: Alimentatore AFF A700s
+    url: "/a700s/power-supply-swap-out.html"
+  - title: Batteria con orologio in tempo reale
+    pdf-filename: Batteria con clock in tempo reale AFF A700s
+    url: "/a700s/rtc-battery-replace.html"
+  - title: Diagnostica a livello di sistema
+    url: "/a700s/system-level-diags-linkout.html"

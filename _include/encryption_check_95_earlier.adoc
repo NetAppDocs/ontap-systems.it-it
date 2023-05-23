@@ -1,0 +1,133 @@
+= Verificare la configurazione NVE
+:allow-uri-read: 
+
+
+Prima di spegnere il controller compromesso, è necessario verificare se il sistema ha abilitato NetApp Volume Encryption (NVE) o NetApp Storage Encryption (NSE). In tal caso, è necessario verificare la configurazione.
+
+.Fasi
+. Collegare il cavo della console al controller compromesso.
+. Controllare se NVE è configurato per qualsiasi volume nel cluster: `volume show -is-encrypted true`
++
+Se nell'output sono elencati volumi, NVE viene configurato ed è necessario verificare la configurazione di NVE. Se nell'elenco non sono presenti volumi, verificare che NSE sia configurato.
+
+. Verificare se NSE è configurato: `storage encryption disk show`
++
+** Se l'output del comando elenca i dettagli del disco con le informazioni di modalità e ID chiave, NSE è configurato ed è necessario verificare la configurazione NSE.
+** Se NVE e NSE non sono configurati, è possibile spegnere il controller compromesso.
+
+
+
+
+
+
+== Verificare la configurazione NVE
+
+.Fasi
+. Visualizzare gli ID delle chiavi di autenticazione memorizzati nei server di gestione delle chiavi: `security key-manager query`
++
+** Se il `Restored` viene visualizzata la colonna `yes` vengono visualizzati tutti i principali manager `available`, è sicuro spegnere il controller compromesso.
+** Se il `Restored` la colonna visualizza un valore diverso da `yes`, o se viene visualizzato un gestore di chiavi `unavailable`, è necessario completare alcuni passaggi aggiuntivi.
+** Se viene visualizzato il messaggio questo comando non è supportato quando è attivata la gestione delle chiavi integrate, è necessario completare altri passaggi.
+
+
+. Se il `Restored` la colonna visualizzata non è diversa da `yes`, o se viene visualizzato un gestore di chiavi `unavailable`:
++
+.. Recuperare e ripristinare tutte le chiavi di autenticazione e gli ID chiave associati: `security key-manager restore -address *`
++
+Se il comando non riesce, contattare il supporto NetApp.
+
++
+http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+.. Verificare che il `Restored` viene visualizzata la colonna `yes` per tutte le chiavi di autenticazione e visualizzate da tutti i gestori delle chiavi `available`: `security key-manager query`
+.. Spegnere il controller compromesso.
+
+
+. Se viene visualizzato il messaggio questo comando non è supportato quando è attivata la gestione delle chiavi integrate, visualizzare i tasti memorizzati nel gestore delle chiavi integrato: `security key-manager key show -detail`
++
+.. Se il `Restored` viene visualizzata la colonna `yes` eseguire manualmente il backup delle informazioni di gestione delle chiavi integrate:
++
+*** Accedere alla modalità avanzata dei privilegi e digitare `y` quando viene richiesto di continuare: `set -priv advanced`
+*** Immettere il comando per visualizzare le informazioni di backup OKM: `security key-manager backup show`
+*** Copiare il contenuto delle informazioni di backup in un file separato o nel file di log. Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
+*** Tornare alla modalità admin: `set -priv admin`
+*** Spegnere il controller compromesso.
+
+
+.. Se il `Restored` la colonna visualizza un valore diverso da `yes`:
++
+*** Eseguire la procedura guidata di configurazione del gestore delle chiavi: `security key-manager setup -node target/impaired node name`
++
+
+NOTE: Inserire la passphrase di gestione della chiave integrata del cliente al prompt. Se non è possibile fornire la passphrase, contattare http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+*** Verificare che il `Restored` viene visualizzata la colonna `yes` per tutte le chiavi di autenticazione: `security key-manager key show -detail`
+*** Accedere alla modalità avanzata dei privilegi e digitare `y` quando viene richiesto di continuare: `set -priv advanced`
+*** Immettere il comando per visualizzare le informazioni di backup OKM: `security key-manager backup show`
+*** Copiare il contenuto delle informazioni di backup in un file separato o nel file di log. Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
+*** Tornare alla modalità admin: `set -priv admin`
+*** È possibile arrestare il controller in modo sicuro.
+
+
+
+
+
+
+
+
+== Verificare la configurazione NSE
+
+.Fasi
+. Visualizzare gli ID delle chiavi di autenticazione memorizzati nei server di gestione delle chiavi: `security key-manager query`
++
+** Se il `Restored` viene visualizzata la colonna `yes` vengono visualizzati tutti i principali manager `available`, è sicuro spegnere il controller compromesso.
+** Se il `Restored` la colonna visualizza un valore diverso da `yes`, o se viene visualizzato un gestore di chiavi `unavailable`, è necessario completare alcuni passaggi aggiuntivi.
+** Se viene visualizzato il messaggio questo comando non è supportato quando è attivata la gestione delle chiavi integrate, è necessario completare altri passaggi
+
+
+. Se il `Restored` la colonna visualizzata non è diversa da `yes`, o se viene visualizzato un gestore di chiavi `unavailable`:
++
+.. Recuperare e ripristinare tutte le chiavi di autenticazione e gli ID chiave associati: `security key-manager restore -address *`
++
+Se il comando non riesce, contattare il supporto NetApp.
+
++
+http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+.. Verificare che il `Restored` viene visualizzata la colonna `yes` per tutte le chiavi di autenticazione e visualizzate da tutti i gestori delle chiavi `available`: `security key-manager query`
+.. Spegnere il controller compromesso.
+
+
+. Se viene visualizzato il messaggio questo comando non è supportato quando è attivata la gestione delle chiavi integrate, visualizzare i tasti memorizzati nel gestore delle chiavi integrato: `security key-manager key show -detail`
++
+.. Se il `Restored` viene visualizzata la colonna `yes`, eseguire manualmente il backup delle informazioni di gestione delle chiavi integrate:
++
+*** Accedere alla modalità avanzata dei privilegi e digitare `y` quando viene richiesto di continuare: `set -priv advanced`
+*** Immettere il comando per visualizzare le informazioni di backup OKM:  `security key-manager backup show`
+*** Copiare il contenuto delle informazioni di backup in un file separato o nel file di log. Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
+*** Tornare alla modalità admin: `set -priv admin`
+*** Spegnere il controller compromesso.
+
+
+.. Se il `Restored` la colonna visualizza un valore diverso da `yes`:
++
+*** Eseguire la procedura guidata di configurazione del gestore delle chiavi: `security key-manager setup -node target/impaired node name`
++
+
+NOTE: Inserire la passphrase OKM del cliente quando richiesto. Se non è possibile fornire la passphrase, contattare http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+*** Verificare che il `Restored` viene visualizzata la colonna `yes` per tutte le chiavi di autenticazione: `security key-manager key show -detail`
+*** Accedere alla modalità avanzata dei privilegi e digitare `y` quando viene richiesto di continuare: `set -priv advanced`
+*** Immettere il comando per eseguire il backup delle informazioni OKM: ``security key-manager backup show``
++
+
+NOTE: Assicurarsi che le informazioni OKM siano salvate nel file di log. Queste informazioni saranno necessarie in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
+
+*** Copiare il contenuto delle informazioni di backup in un file separato o nel registro. Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
+*** Tornare alla modalità admin: `set -priv admin`
+*** È possibile spegnere il controller in modo sicuro.
+
+
+
+
+

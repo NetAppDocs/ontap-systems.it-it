@@ -1,0 +1,56 @@
+---
+permalink: sas3/install-cabling-worksheets-examples-fas2600.html 
+sidebar: sidebar 
+keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, internal storage 
+summary: È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare piattaforme via cavo con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e versioni successive. 
+---
+= Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare piattaforme via cavo con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e versioni successive.
+
+
+NOTE: Queste informazioni non si applicano alle piattaforme FAS25XX.
+
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulle configurazioni supportate, la connettività shelf-to-shelf e la connettività controller-to-shelf.
+* Gli esempi di cablaggio mostrano i cavi controller-to-stack come solidi o tratteggiati per distinguere le connessioni delle porte del controller 0b dalle connessioni delle porte del controller 0a.
++
+image::../media/drw_fas2600_controller_to_stack_cable_type_key.png[controller drw fas2600 per collegare la chiave del tipo di cavo]
+
+* Gli esempi di cablaggio mostrano le connessioni controller-to-stack e shelf-to-shelf in due colori diversi per distinguere la connettività tramite IOM A (dominio A) e IOM B (dominio B).
++
+image::../media/drw_fas2600_cable_color_key.png[tasto colore del cavo drw fas2600]
+
+
+
+
+
+== Piattaforme con storage interno in una configurazione ha multipath con uno stack multi-shelf
+
+Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b:
+
+image::../media/drw_fas2600_mpha_worksheet.png[foglio di lavoro drw fas2600 mpha]
+
+image::../media/drw_fas2600_mpha.png[drw fas2600 mpha]
+
+
+
+== Configurazione multipath della serie FAS2600 con uno stack multi-shelf
+
+I seguenti fogli di lavoro ed esempi di cablaggio utilizzano la coppia di porte 0a/0b.
+
+In questo esempio, il controller viene installato nello slot A dello chassis. Quando un controller si trova nello slot A dello chassis, la relativa porta di storage interna (0b) si trova nel dominio A (IOM A); pertanto, la porta 0b deve connettersi al dominio A (IOM A) nello stack.
+
+image::../media/drw_fas2600_mp_slot_a_worksheet.png[drw fas2600 mp slot a foglio di lavoro]
+
+image::../media/drw_fas2600_mp_slot_a.png[drw fas2600 mp slot a]
+
+In questo esempio, il controller è installato nello slot B dello chassis. Quando un controller si trova nello slot B dello chassis, la porta di storage interna (0b) si trova nel dominio B (IOM B); pertanto, la porta 0b deve connettersi al dominio B (IOM B) nello stack.
+
+image::../media/drw_fas2600_mp_slot_b_worksheet.png[foglio di lavoro drw fas2600 mp slot b]
+
+image::../media/drw_fas2600_mp_slot_b.png[drw fas2600 mp slot b]

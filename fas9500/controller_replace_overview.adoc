@@ -1,0 +1,41 @@
+---
+permalink: fas9500/controller_replace_overview.html 
+sidebar: sidebar 
+keywords: FAS9500 
+summary: È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso. 
+---
+= Sostituire il modulo controller - FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il modulo controller guasto, è necessario spegnere il controller guasto, spostare i componenti interni nel modulo controller sostitutivo, installare il modulo controller sostitutivo e riavviare il controller sostitutivo.
+
+.Prima di iniziare
+È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.
+
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Se il sistema in uso è un sistema FlexArray o dispone di una licenza V_StorageAttach, prima di eseguire questa procedura è necessario fare riferimento ai passaggi aggiuntivi richiesti.
+* Se il sistema si trova in una coppia ha, il nodo integro deve essere in grado di assumere il controllo del nodo che viene sostituito (indicato in questa procedura come "`nodo alterato`").
+* Se il sistema si trova in una configurazione MetroCluster, consultare la sezione https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Scelta della procedura di ripristino corretta"^] per determinare se utilizzare questa procedura.
++
+Se si tratta della procedura da utilizzare, tenere presente che la procedura di sostituzione del controller per un nodo in una configurazione MetroCluster a quattro o otto nodi è la stessa di una coppia ha. Non sono richieste procedure specifiche di MetroCluster, poiché il guasto è limitato a una coppia ha e i comandi di failover dello storage possono essere utilizzati per fornire operazioni senza interruzioni durante la sostituzione.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
+* Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
+* In questa procedura, il dispositivo di boot viene spostato dal nodo compromesso al nodo sostitutivo in modo che il nodo sostitutivo si avvii nella stessa versione di ONTAP del vecchio modulo controller.
+* È importante applicare i comandi descritti di seguito ai sistemi corretti:
++
+** Il nodo compromesso è il nodo che viene sostituito.
+** Il nodo sostitutivo è il nuovo nodo che sostituisce il nodo compromesso.
+** Il nodo integro è il nodo sopravvissuto.
+
+
+* È sempre necessario acquisire l'output della console del nodo in un file di testo.
++
+In questo modo è possibile registrare la procedura per risolvere eventuali problemi riscontrati durante il processo di sostituzione.
+
+

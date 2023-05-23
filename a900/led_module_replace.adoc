@@ -1,0 +1,68 @@
+---
+permalink: a900/led_module_replace.html 
+sidebar: sidebar 
+keywords: LED USB module,replacing,hot-swapping,LED USB module,non-disruptive replacement,LED USB module 
+summary: È possibile sostituire un modulo LED USB senza interrompere il servizio. 
+---
+= Sostituire un modulo USB LED - AFF A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il modulo LED USB fornisce connettività alle porte della console e allo stato del sistema. La sostituzione di questo modulo non richiede strumenti e non interrompe il servizio.
+
+
+
+== Fase 1: Sostituire il modulo USB LED
+
+.Fasi
+. Rimuovere il vecchio modulo USB LED:
++
+.Animazione - rimuovere/installare il modulo LED-USB
+video::eb715462-cc20-454f-bcf9-adf9016af84e[panopto]
++
+image::../media/drw_a900_remove_replace_LED_mod.png[Drw a900 rimuovere sostituire il LED mod]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Pulsante di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Modulo LED USB
+
+|===
++
+.. Dopo aver rimosso il pannello, individuare il modulo USB LED nella parte anteriore dello chassis, nella parte inferiore sinistra.
+.. Far scorrere il fermo per espellere parzialmente il modulo.
+.. Estrarre il modulo dall'alloggiamento per scollegarlo dalla scheda intermedia. Non lasciare vuoto lo slot.
+
+
+. Installare il nuovo modulo USB LED:
++
+.. Allineare il modulo all'alloggiamento con la tacca nell'angolo del modulo posizionato vicino al dispositivo di chiusura a scorrimento sul telaio. L'alloggiamento impedisce di installare il modulo capovolto.
+.. Spingere il modulo nell'alloggiamento fino a posizionarlo completamente a filo con lo chassis.
++
+Si avverte uno scatto quando il modulo è sicuro e collegato alla scheda intermedia.
+
+
+
+
+
+
+
+== Fase 2: Restituire il componente guasto
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"^] per ulteriori informazioni.
+

@@ -1,0 +1,200 @@
+---
+permalink: sas3/service-hot-swap-drive-ds224c-ds212c.html 
+sidebar: sidebar 
+keywords: hot-swap, fail, disk, drive, ds224c, ds212c, disk, shelf-nondisruptive, nondisruptive, replace, i/o, hot-swap a disk drive in a ds224c or ds212c disk shelf 
+summary: È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS224C o DS212C. 
+---
+= Unità disco hot-swap in shelf di dischi DS224C o DS212C - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS224C o DS212C.
+
+.Prima di iniziare
+* Il disco che si sta installando deve essere supportato dallo shelf di dischi DS224C o DS212C.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Il disco che si sta rimuovendo deve essere guasto.
++
+È possibile verificare che il disco non funzioni correttamente eseguendo `storage disk show -broken` comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.
+
++
+
+NOTE: A seconda del tipo di disco e della capacità, potrebbero essere necessarie diverse ore prima che il disco venga visualizzato nell'elenco dei dischi guasti.
+
+* Se si sostituisce un disco con crittografia automatica (SED), seguire le istruzioni per la sostituzione di un SED nella documentazione di ONTAP relativa alla versione di ONTAP in uso.
++
+Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
+
++
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"]
+
+
+
+.A proposito di questa attività
+* È necessario adottare le misure necessarie per evitare scariche elettrostatiche (ESD):
++
+** Conservare il disco nel sacchetto ESD fino a quando non si è pronti per l'installazione.
+** Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici.
++
+
+NOTE: Non inserire utensili metallici o coltelli nel sacchetto ESD.
+
+** Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata dello chassis dell'enclosure di storage.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del contenitore di storage prima di maneggiare il disco.
+
+
+
+* È necessario adottare le misure necessarie per gestire con attenzione i dischi:
++
+** Utilizzare sempre due mani durante la rimozione, l'installazione o il trasporto di un'unità disco per sostenerne il peso.
++
+
+NOTE: Non posizionare le mani sulle schede del disco esposte nella parte inferiore del supporto del disco.
+
+** È necessario posizionare i dischi su superfici ammortizzate e non impilare mai i dischi l'uno sull'altro.
+** Prestare attenzione a non urtare i dischi contro altre superfici.
+
+
+* I dischi devono essere tenuti lontani dai dispositivi magnetici.
++
+
+NOTE: I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
+
+* La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di sostituire a caldo un disco.
++
+L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati, evitando così messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi. Si evita inoltre la possibile prevenzione del partizionamento dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
+
+* La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
++
+Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
+
+* Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
++
+
+NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
+
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Uno shelf di dischi ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo IOM12. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+
+* Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
+
+
+.Fasi
+. Se si desidera assegnare manualmente la proprietà del disco per il disco sostitutivo, è necessario disattivare l'assegnazione automatica del disco, se attivata; in caso contrario, passare alla fase successiva.
++
+
+NOTE: È necessario assegnare manualmente la proprietà del disco se i dischi nello stack sono di proprietà di entrambi i controller in una coppia ha.
+
++
+
+NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
+
++
+.. Verificare se l'assegnazione automatica dei dischi è abilitata:``storage disk option show``
++
+Se si dispone di una coppia ha, è possibile immettere il comando nella console di entrambi i controller.
+
++
+Se l'assegnazione automatica dei dischi è attivata, l'output mostra "`ON`" (per ciascun controller) nella colonna "`Auto Assign`" (assegnazione automatica).
+
+.. Se l'assegnazione automatica del disco è attivata, è necessario disattivarla:``storage disk option modify -node _node_name_ -autoassign off``
++
+È necessario disattivare l'assegnazione automatica del disco su entrambi i controller in una coppia ha.
+
+
+
+. Mettere a terra l'utente.
+. Disimballare il nuovo disco e riutilizzarlo su una superficie piana vicino allo shelf.
++
+Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce il disco guasto.
+
++
+
+NOTE: NetApp richiede che tutte le unità disco restituite siano contenute in un sacchetto con grado di protezione ESD.
+
+. Identificare fisicamente il disco guasto dal messaggio di avviso della console di sistema e dal LED di attenzione illuminato (ambra) sul disco.
++
+
+NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
+
+. Premere il pulsante di rilascio sulla superficie del disco, quindi tirare la maniglia della camma in posizione completamente aperta per rilasciare il disco dal piano intermedio.
++
+Quando si preme il pulsante di rilascio, la maniglia della camma sul disco si apre parzialmente.
+
++
+
+NOTE: I dischi in uno shelf di dischi DS212C sono disposti orizzontalmente con il pulsante di rilascio situato a sinistra della superficie del disco. I dischi in uno shelf DS224C sono disposti verticalmente con il pulsante di rilascio situato nella parte superiore del disco.
+
++
+Di seguito sono riportati i dischi in uno shelf di dischi DS212C:
+
++
+image::../media/drw_drive_open_no_bezel.png[disco drw aperto senza pannello]
+
++
+Di seguito sono riportati i dischi in uno shelf di dischi DS224C:
+
++
+image::../media/2240_removing_disk_no_bezel.png[2240 rimozione del disco senza pannello]
+
+. Estrarre leggermente l'unità disco per consentire al disco di ruotare in modo sicuro, quindi rimuovere l'unità disco dallo shelf.
++
+Un disco rigido può impiegare fino a un minuto per eseguire lo spin down in sicurezza.
+
++
+
+NOTE: Quando si maneggia un disco, utilizzare sempre due mani per sostenerne il peso.
+
+. Con due mani, con la maniglia della camma in posizione aperta, inserire l'unità disco sostitutiva nello shelf, spingendo con decisione fino a quando il disco non si arresta.
++
+
+NOTE: Attendere almeno 10 secondi prima di inserire una nuova unità disco. Questo consente al sistema di riconoscere che un disco è stato rimosso.
+
++
+
+NOTE: Non posizionare le mani sulle schede del disco esposte nella parte inferiore del supporto.
+
+. Chiudere la maniglia della camma in modo che il disco sia inserito completamente nel piano intermedio e la maniglia scatti in posizione.
++
+Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie del disco.
+
+. Se si sta sostituendo un'altra unità disco, ripetere i passi da 3 a 8.
+. Verificare che il LED di attività del disco (verde) sia acceso.
++
+Quando il LED di attività del disco è verde fisso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
+
+. Se l'assegnazione automatica del disco è stata disattivata nella fase 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco:
++
+.. Visualizza tutti i dischi non posseduti:``storage disk show -container-type unassigned``
+.. Assegnare ciascun disco:``storage disk assign -disk _disk_name_ -owner _owner_name_``
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+.. Se necessario, riabilitare l'assegnazione automatica del disco:``storage disk option modify -node _node_name_ -autoassign on``
++
+È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i controller in una coppia ha.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
++
+Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+
+

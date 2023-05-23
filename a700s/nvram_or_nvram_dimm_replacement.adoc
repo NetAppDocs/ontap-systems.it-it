@@ -1,0 +1,397 @@
+---
+permalink: a700s/nvram-or-nvram-dimm-replacement.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement, process, replace the nvram module and/or nvram dimms, shut down the impaired controller, shut down the impaired controller, remove the controller module, remove the nvram card, reinstall the controller module and booting the system, reassign disks, restore storage and volume encryption functionality, complete the replacement process 
+summary: 'Per sostituire una scheda NVRAM guasta, rimuovere il riser NVRAM, il riser 1, dal modulo controller, rimuovere la scheda guasta dal riser, installare la nuova scheda NVRAM nel riser, quindi reinstallare il riser nel modulo controller. Poiché l"ID di sistema deriva dalla scheda NVRAM, in caso di sostituzione del modulo, i dischi appartenenti al sistema vengono riassegnati al nuovo ID di sistema.' 
+---
+= Sostituire il modulo NVRAM e i DIMM NVRAM - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire una scheda NVRAM guasta, rimuovere il riser NVRAM, il riser 1, dal modulo controller, rimuovere la scheda guasta dal riser, installare la nuova scheda NVRAM nel riser, quindi reinstallare il riser nel modulo controller. Poiché l'ID di sistema deriva dalla scheda NVRAM, in caso di sostituzione del modulo, i dischi appartenenti al sistema vengono riassegnati al nuovo ID di sistema.
+
+.Prima di iniziare
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Se il sistema si trova in una coppia ha, il controller partner deve essere in grado di assumere il controllo associato al modulo NVRAM da sostituire.
+* Questa procedura utilizza la seguente terminologia:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+* Questa procedura include la procedura per la riassegnazione automatica o manuale dei dischi al modulo controller associato al nuovo modulo NVRAM. È necessario riassegnare i dischi quando richiesto nella procedura. Il completamento della riassegnazione del disco prima del giveback può causare problemi.
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+.Fasi
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se il controller non funzionante fa parte di una coppia ha, disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y`.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
++
+** Se si utilizza la crittografia dello storage NetApp, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "`ritorno dei SED alla modalità non protetta`" della _Guida all'alimentazione per la crittografia NetApp di ONTAP 9_.
++
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guida alla potenza della crittografia NetApp per ONTAP 9"]
+
+
+
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Scollegare l'alimentatore del modulo controller dalla fonte di alimentazione, quindi scollegare il cavo dall'alimentatore.
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a700s_pcm_remove.png[rimozione pcm drw a700s]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Fermo di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
++
+.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
++
+image::../media/drw_a700s_open_air_duct.png[drw a700s condotto dell'aria aperto]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Linguette di bloccaggio del condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Condotto dell'aria
+
+|===
+
+
+
+
+
+
+== Fase 3: Rimuovere la scheda NVRAM
+
+La sostituzione della NVRAM consiste nella rimozione del riser NVRAM, Riser 1, dal modulo controller, nello scollegamento della batteria NVRAM dalla scheda NVRAM, nella rimozione della scheda NVRAM guasta e nell'installazione della scheda NVRAM sostitutiva, quindi nella reinstallazione del riser NVRAM nel modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il riser NVRAM, Riser 1, dal modulo controller:
++
+.. Ruotare verso l'alto e verso le ventole il fermo di blocco del riser sul lato sinistro del riser.
++
+Il riser NVRAM si solleva leggermente dal modulo controller.
+
+.. Sollevare il riser NVRAM, spostarlo verso le ventole in modo che il bordo di lamiera del riser si allontani dal bordo del modulo controller, sollevare il riser ed estrarlo dal modulo controller. Quindi posizionarla su una superficie piana e stabile in modo da poter accedere alla scheda NVRAM.
++
+image::../media/drw_a700s_nvme_replace.png[sostituzione nvme drw a700s]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo di bloccaggio del riser 1
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Connettore del cavo della batteria NVRAM che collega la scheda NVRAM
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Staffa di blocco della scheda
+
+
+
+ a| 
+image:../media/legend_icon_05.png[""]
+ a| 
+Scheda NVRAM
+
+|===
+
+
+. Rimuovere la scheda NVRAM dal modulo riser:
++
+.. Ruotare il modulo riser in modo da poter accedere alla scheda NVRAM.
+.. Scollegare il cavo della batteria NVRAM collegato alla scheda NVRAM.
+.. Premere la staffa di blocco sul lato del riser NVRAM, quindi ruotarla in posizione aperta.
+.. Rimuovere la scheda NVRAM dal modulo riser.
+
+
+. Installare la scheda NVRAM nel riser NVRAM:
++
+.. Allineare la scheda con la relativa guida sul modulo di montaggio e lo zoccolo nel riser.
+.. Far scorrere la scheda verso l'interno dello slot.
++
+
+NOTE: Assicurarsi che la scheda sia inserita correttamente nella presa del riser.
+
+.. Collegare il cavo della batteria alla presa della scheda NVRAM.
+.. Ruotare il dispositivo di chiusura in posizione di blocco e assicurarsi che si blocchi in posizione.
+
+
+. Installare il riser nel modulo controller:
++
+.. Allineare il bordo del riser con la parte inferiore della lamiera del modulo controller.
+.. Guidare il riser lungo i pin nel modulo controller, quindi abbassare il riser nel modulo controller.
+.. Ruotare il fermo di bloccaggio verso il basso e farlo scattare in posizione di blocco.
++
+Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del riser e il riser è posizionato correttamente nel modulo controller.
+
+.. Reinserire tutti i moduli SFP rimossi dalle schede PCIe.
+
+
+
+
+
+
+== Fase 4: Reinstallare il modulo controller e avviare il sistema
+
+Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.
+
+Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Collegare il cavo di alimentazione all'alimentatore, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare l'alimentatore alla fonte di alimentazione.
+. Completare la reinstallazione del modulo controller:
++
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+
+.. Ruotare i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, quindi abbassarli in posizione di blocco.
+.. Interrompere il processo di avvio premendo `Ctrl-C` quando vedi `Press Ctrl-C for Boot Menu`.
+.. Selezionare l'opzione per avviare la modalità di manutenzione dal menu visualizzato.
+
+
+
+
+
+
+== Fase 5: Verificare la modifica dell'ID di sistema su un sistema ha
+
+È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
+
+Questa procedura si applica solo ai sistemi che eseguono ONTAP in una coppia ha.
+
+. Se il controller _replacement_ è in modalità di manutenzione (che mostra il `*>` Uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
+. Dal prompt DEL CARICATORE sul controller _replacement_, avviare il controller, immettendo `y` Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema:``boot_ontap``
+. Attendere il `Waiting for giveback...` Viene visualizzato il messaggio sulla console del controller _replacement_ e quindi, dal controller integro, verificare che il nuovo ID di sistema del partner sia stato assegnato automaticamente: `storage failover show`
++
+Nell'output del comando, viene visualizzato un messaggio che indica che l'ID del sistema è stato modificato sul controller compromesso, mostrando gli ID vecchi e nuovi corretti. Nell'esempio seguente, il node2 è stato sostituito e ha un nuovo ID di sistema pari a 151759706.
+
++
+[listing]
+----
+node1> `storage failover show`
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. Dal controller integro, verificare che tutti i coredump siano salvati:
++
+.. Passare al livello di privilegio avanzato: `set -privilege advanced`
++
+Puoi rispondere `Y` quando viene richiesto di passare alla modalità avanzata. Viene visualizzato il prompt della modalità avanzata (*>).
+
+.. Salva i coredump: `system node run -node _local-node-name_ partner savecore`
+.. Attendere il completamento del comando `savecore`prima di emettere il giveback.
++
+È possibile immettere il seguente comando per monitorare l'avanzamento del comando savecore: `system node run -node _local-node-name_ partner savecore -s`
+
+.. Tornare al livello di privilegio admin: `set -privilege admin`
+
+
+. Restituire il controller:
++
+.. Dal controller integro, restituire lo storage del controller sostituito: `storage failover giveback -ofnode _replacement_node_name_`
++
+Il controller _replacement_ riprende lo storage e completa l'avvio.
+
++
+Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema, immettere `y`.
+
++
+
+NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Trova la guida alla configurazione ad alta disponibilità per la tua versione di ONTAP 9"]
+
+.. Una volta completato il giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover: `storage failover show`
++
+L'output di `storage failover show` Il comando non deve includere l'ID di sistema modificato nel messaggio del partner.
+
+
+
+. Verificare che i dischi siano stati assegnati correttamente: `storage disk show -ownership`
++
+I dischi appartenenti al controller _replacement_ devono mostrare il nuovo ID di sistema. Nell'esempio seguente, i dischi di proprietà di node1 ora mostrano il nuovo ID di sistema, 1873775277:
+
++
+[listing]
+----
+node1> `storage disk show -ownership`
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+. Verificare che i volumi previsti siano presenti per ciascun controller: `vol show -node node-name`
+. Se al riavvio è stato disattivato il Takeover automatico, attivarlo dal controller integro: `storage failover modify -node replacement-node-name -onreboot true`
+
+
+
+
+== Fase 6: Ripristino delle funzionalità di storage e crittografia dei volumi
+
+Per i sistemi storage precedentemente configurati per l'utilizzo di Storage o Volume Encryption, è necessario eseguire ulteriori passaggi per fornire una funzionalità di crittografia senza interruzioni. È possibile ignorare questa attività nei sistemi storage che non hanno abilitato Storage o Volume Encryption.
+
+
+NOTE: Questa fase non è necessaria quando si sostituisce un DIMM.
+
+.Fasi
+. Utilizzare una delle seguenti procedure, a seconda che si utilizzi la gestione delle chiavi integrata o esterna:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Ripristinare le chiavi di crittografia integrate per la gestione delle chiavi"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Ripristinare le chiavi di crittografia esterne per la gestione delle chiavi"^]
+
+
+. Reimpostare il MSID SED
+
+
+
+
+== Fase 7: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

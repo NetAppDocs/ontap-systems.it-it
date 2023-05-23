@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+È necessario ripristinare le informazioni di configurazione dal volume root ai dispositivi di boot.
+
+.A proposito di questa attività
+Prima di passare alla fase successiva, è necessario eseguire questi passaggi su node3 e node4, completando ogni passaggio su un nodo e poi l'altro.
+
+.Fasi
+. Accedere al menu di boot dal prompt DEL CARICATORE: `boot_ontap menu`
+. Dal menu di avvio, selezionare (6) Update flash from backup config (Aggiorna flash dalla configurazione di backup) e digitare``y`` quando viene richiesto di continuare.
++
+[listing]
+----
+Please choose one of the following:
+
+(1) Normal Boot.
+(2) Boot without /etc/rc.
+(3) Change password.
+(4) Clean configuration and initialize all disks.
+(5) Maintenance mode boot.
+(6) Update flash from backup config.
+(7) Install new software first.
+(8) Reboot node.
+(9) Configure Advanced Drive Partitioning.
+Selection (1-9)? 6
+
+This will replace all flash-based configuration with the last backup to
+disks. Are you sure you want to continue?: y
+----
++
+Il processo di aggiornamento flash viene eseguito per alcuni minuti, quindi il sistema viene riavviato.
+
+. Quando viene richiesto di confermare la mancata corrispondenza dell'ID di sistema, immettere `y`.
++
+[listing]
+----
+WARNING: System id mismatch. This usually occurs when replacing CF or NVRAM cards!
+Override system id? {y|n} [n] y
+----
++
+La sequenza di avvio procede normalmente.
+
+

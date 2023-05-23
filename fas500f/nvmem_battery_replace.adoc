@@ -1,0 +1,264 @@
+---
+permalink: fas500f/nvmem-battery-replace.html 
+sidebar: sidebar 
+keywords: fas500f, replace nvmem battery 
+summary: Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller. 
+---
+= Sostituire la batteria NVMEM - FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dallo chassis quando si sostituisce un componente all'interno del modulo controller.
+
+Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.
++
+
+NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
++
+image::../media/drw_a250_pcm_remove_install.png[installazione rimozione pcm drw a250]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Leva 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Meccanismo di blocco
+
+|===
+. Con entrambe le mani, afferrare i lati del modulo controller ed estrarlo delicatamente dallo chassis e posizionare il modulo su una superficie piana e stabile.
+. Ruotare la vite a testa zigrinata sulla parte anteriore del modulo controller in senso antiorario e aprire il coperchio del modulo controller.
++
+image::../media/drw_a250_open_controller_module_cover.png[drw a250 aprire il coperchio del modulo controller]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Vite a testa zigrinata 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Coperchio del modulo controller.
+
+|===
+
+
+
+
+== Fase 3: Sostituire la batteria NVMEM
+
+Per sostituire la batteria NVMEM, è necessario rimuovere la batteria guasta dal modulo controller e installare la batteria sostitutiva nel modulo controller.
+
+Per sostituire la batteria NVMEM, è possibile utilizzare il seguente video o la procedura riportata in tabella:
+
+.Animazione - sostituire la batteria NVMEM
+video::89f6d5c3-1a5b-4500-8ba8-ac5b01653050[panopto]
+. Individuare e sostituire la batteria NVMEM danneggiata sul modulo controller.
++
+
+NOTE: Si consiglia di seguire le istruzioni illustrate nell'ordine indicato.
+
++
+image::../media/drw_a250_replace_nvmem_batt.png[drw a250 sostituire il batch nvmem]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Premere il fermaglio sulla parte anteriore della spina della batteria. 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Scollegare il cavo della batteria dalla presa.
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Afferrare la batteria e premere la linguetta blu contrassegnata CON PUSH.
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Estrarre la batteria dal supporto e dal modulo controller.
+
+|===
+. Individuare la spina della batteria e premere il fermaglio sulla parte anteriore della spina per sganciarla dalla presa.
+. Afferrare la batteria e premere la linguetta blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller e metterla da parte.
+. Rimuovere la batteria NV di ricambio dalla confezione antistatica e allinearla al supporto della batteria.
+. Inserire la spina della batteria NV di ricambio nella presa.
+. Far scorrere la batteria verso il basso lungo la parete laterale in lamiera fino a quando le linguette di supporto sulla parete laterale non si agganciano agli slot della batteria e il dispositivo di chiusura della batteria si aggancia e scatta nell'apertura sulla parete laterale.
+. Premere con decisione la batteria per assicurarsi che sia bloccata in posizione.
+
+
+
+
+== Fase 4: Installare il modulo controller
+
+Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
+
+Per installare il modulo controller sostitutivo nel telaio, utilizzare la seguente illustrazione o la procedura scritta.
+
+. Chiudere il coperchio del modulo controller e serrare la vite a testa zigrinata.
++
+image::../media/drw_a250_close_controller_module_cover.png[drw a250 chiudere il coperchio del modulo controller]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Coperchio del modulo controller 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Vite a testa zigrinata
+
+|===
+. Inserire il modulo controller nel telaio:
++
+.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
+.. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
+.. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+
+
+
++
+Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
+
+. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
++
+
+NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+
+
+
+
+
+== Fase 5: Eseguire la diagnostica
+
+Dopo aver sostituito un componente del sistema, è necessario eseguire test diagnostici su tale componente.
+
+Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
+
+.Fasi
+. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node node_name`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
+. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
+. Selezionare *Test system* dal menu visualizzato per eseguire i test di diagnostica.
+. Procedere in base al risultato del passaggio precedente:
++
+** Se la scansione presenta problemi, correggere il problema, quindi eseguire nuovamente la scansione.
+** Se la scansione non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
+
+
+
+
+
+
+== Fase 6: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

@@ -1,0 +1,263 @@
+---
+permalink: a320/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: aff a320, move the controller module hardware 
+summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
+---
+= Sostituire l'hardware del modulo controller - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
+
+Per rimuovere il modulo controller dallo chassis, è possibile utilizzare le seguenti immagini o i passaggi scritti.
+
+L'immagine seguente mostra la rimozione dei cavi e dei bracci di gestione dei cavi dal modulo controller guasto:
+
+image::../media/drw_a320_controller_cable_unplug_animated_gif.png[cavo del controller drw a320. scollegare il gif animato]
+
+L'immagine seguente mostra la rimozione del modulo controller guasto dal telaio:
+
+image::../media/drw_a320_controller_remove_animated_gif.png[il controller drw a320 rimuove il gif animato]
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare l'alimentazione del modulo controller dalla fonte di alimentazione.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
+. Rimuovere il modulo controller dal telaio:
++
+.. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller.
+.. Premere verso il basso la linguetta arancione sulla parte superiore del meccanismo di chiusura fino a liberare il perno di chiusura sul telaio.
++
+Il gancio del meccanismo di chiusura deve essere quasi verticale e non deve essere lontano dal perno del telaio.
+
+.. Tirare delicatamente il modulo controller di alcuni pollici verso di sé in modo da poter afferrare i lati del modulo controller.
+.. Con entrambe le mani, estrarre delicatamente il modulo controller dal telaio e posizionare il modulo su una superficie piana e stabile.
+
+
+
+
+
+
+== Fase 2: Spostare gli alimentatori
+
+Quando si sostituisce un modulo controller, è necessario spostare l'alimentatore dal modulo controller guasto al modulo controller sostitutivo.
+
+. Ruotare la maniglia della camma in modo che possa essere utilizzata per estrarre l'alimentatore dal modulo controller premendo la linguetta di bloccaggio blu.
++
+
+CAUTION: L'alimentazione è in corto. Utilizzare sempre due mani per sostenerlo durante la rimozione dal modulo controller in modo che non si sposti improvvisamente dal modulo controller e non causi lesioni.
+
+. Spostare l'alimentatore sul nuovo modulo controller, quindi installarlo.
+. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nel modulo controller, quindi spingere delicatamente l'alimentatore nel modulo controller fino a quando la linguetta di blocco non scatta in posizione.
++
+Gli alimentatori si innestano correttamente solo con il connettore interno e si bloccano in un modo.
+
++
+
+NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema.
+
+
+
+
+
+== Fase 3: Spostare la batteria NVDIMM
+
+Per spostare la batteria NVDIMM dal modulo controller guasto al modulo controller sostitutivo, è necessario eseguire una sequenza specifica di operazioni.
+
+Per spostare la batteria NVDIMM dal modulo controller guasto al modulo controller sostitutivo, utilizzare la seguente illustrazione o la procedura scritta.
+
+image::../media/drw_a320_nvbat_move_animated_gif.png[gif animate drw a320 nvbat move]
+
+. Individuare la batteria NVDIMM nel modulo del controller.
+. Individuare la spina della batteria e premere il fermaglio sulla parte anteriore della spina per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
+. Afferrare la batteria e premere la linguetta di bloccaggio blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller.
+. Spostare la batteria nel modulo controller sostitutivo.
+. Allineare il modulo batteria con l'apertura della batteria, quindi spingere delicatamente la batteria nello slot fino a bloccarla in posizione.
++
+
+NOTE: Non ricollegare il cavo della batteria alla scheda madre fino a quando non viene richiesto.
+
+
+
+
+
+== Fase 4: Spostare il supporto di avvio
+
+Individuare il supporto di avvio, quindi seguire le istruzioni per rimuoverlo dal modulo controller compromesso e inserirlo nel modulo controller sostitutivo.
+
+È possibile utilizzare la seguente illustrazione o la procedura scritta per spostare il supporto di avvio dal modulo controller compromesso al modulo controller sostitutivo.
+
+image::../media/drw_a320_boot_media_move_animated_gif.png[file gif animati di spostamento del supporto di avvio drw a320]
+
+. Aprire il condotto dell'aria e individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo del controller:
+. Individuare e rimuovere il supporto di avvio dal modulo controller:
++
+.. Premere il tasto blu alla fine del supporto di avvio fino a quando il labbro sul supporto di avvio non scompare dal pulsante blu.
+.. Ruotare il supporto di avvio verso l'alto ed estrarre delicatamente il supporto di avvio dalla presa.
+
+
+. Spostare il supporto di avvio nel nuovo modulo controller, allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+. Bloccare il supporto di avvio in posizione:
++
+.. Ruotare il supporto di avvio verso il basso verso la scheda madre.
+.. Posizionando un dito alla fine del supporto di avvio tramite il pulsante blu, premere l'estremità del supporto di avvio per attivare il pulsante di blocco blu.
+.. Tenendo premuto il supporto di avvio, sollevare il pulsante di blocco blu per bloccare il supporto di avvio in posizione.
+
+
+
+
+
+
+== Fase 5: Spostamento dei DIMM
+
+È necessario individuare i DIMM e spostarli dal modulo controller guasto al modulo controller sostitutivo.
+
+Il nuovo modulo controller deve essere pronto in modo da poter spostare i DIMM direttamente dal modulo controller guasto agli slot corrispondenti del modulo controller sostitutivo.
+
+È possibile utilizzare le seguenti illustrazioni o i passaggi scritti per spostare i DIMM dal modulo controller guasto al modulo controller sostitutivo.
+
+image::../media/drw_a320_dimm_move_animated_gif.png[gif animato spostamento dimm drw a320]
+
+. Individuare i DIMM sul modulo controller.
++
+image::../media/drw_a320_dimm_map.png[mappa dimm drw a320]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+** Slot DIMM di sistema: 2,4, 7, 9, 13, 15, 18 e 20
+** Slot NVDIMM: 11
++
+
+NOTE: Il modulo NVDIMM è molto diverso dai DIMM di sistema.
+
+
+
+|===
+. Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
+. Verificare che la batteria NVDIMM non sia collegata al nuovo modulo controller.
+. Spostare i DIMM dal modulo controller guasto al modulo controller sostitutivo:
++
+
+NOTE: Assicurarsi di installare ciascun DIMM nello stesso slot occupato nel modulo controller guasto.
+
++
+.. Estrarre il modulo DIMM dal relativo slot spingendo lentamente le linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
+.. Individuare lo slot DIMM corrispondente sul modulo controller sostitutivo.
+.. Assicurarsi che le linguette di espulsione del DIMM sullo zoccolo DIMM siano aperte, quindi inserire il DIMM correttamente nello zoccolo.
++
+I DIMM si inseriscono saldamente nello zoccolo, ma devono essere inseriti facilmente. In caso contrario, riallineare il DIMM con lo zoccolo e reinserirlo.
+
+.. Esaminare visivamente il modulo DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello zoccolo.
+.. Ripetere questi passaggi secondari per i DIMM rimanenti.
+
+
+. Collegare la batteria NVDIMM alla scheda madre.
++
+Assicurarsi che la spina si blocchi sul modulo controller.
+
+
+
+
+
+== Fase 6: Spostare i riser PCIe
+
+È necessario spostare i riser PCIe, con le schede PCIe installate, dal modulo controller compromesso al modulo controller sostitutivo.
+
+È possibile utilizzare la seguente illustrazione o la procedura scritta per spostare i riser PCIe dal modulo controller guasto al modulo controller sostitutivo.
+
+image::../media/drw_a320_pci_riser_move_animated_gif.png[gif animata drw a320 pci riser move]
+
+. Rimuovere il coperchio sui riser PCIe svitando la vite blu sul coperchio, far scorrere il coperchio verso di sé, ruotare il coperchio verso l'alto, sollevarlo dal modulo controller e riporlo da parte.
+. Rimuovere i riser vuoti dal modulo controller sostitutivo.
++
+.. Posizionare l'indice nel foro sul lato sinistro del modulo riser e afferrare il riser con il pollice.
+.. Sollevare il riser verso l'alto ed estrarlo dall'alloggiamento, quindi metterlo da parte.
+.. Ripetere questi passaggi secondari per il secondo riser.
+
+
+. Spostare i riser PCIe dal modulo controller guasto agli stessi riser Bay sul modulo controller sostitutivo:
++
+.. Rimuovere un riser dal modulo controller guasto e spostarlo nel modulo controller sostitutivo.
+.. Abbassare il riser direttamente nell'alloggiamento, in modo che sia quadrato con l'alloggiamento e che i piedini del riser scivolino nei fori guida sul retro dell'alloggiamento.
+.. Inserire il riser nella presa della scheda madre verso il basso nello zoccolo, esercitando una pressione uniforme verso il basso lungo i bordi del riser fino a quando non si inserisce.
++
+Il riser deve essere insedionato in modo regolare con poca resistenza. Riposizionare il riser nell'alloggiamento se si riscontra una notevole resistenza nell'alloggiamento del riser.
+
+.. Ripetere questi passaggi secondari per il secondo riser.
+.. Reinstallare il coperchio sui riser PCIe.
+
+
+
+
+
+
+== Fase 7: Installare il modulo controller
+
+Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
+
+Per installare il modulo controller sostitutivo nel telaio, utilizzare la seguente illustrazione o la procedura scritta.
+
+image::../media/drw_a320_controller_install_animated_gif.png[gif animato installazione controller drw a320]
+
+. Se non è già stato fatto, chiudere il condotto dell'aria sul retro del modulo controller e reinstallare il coperchio sulle schede PCIe.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
++
+
+NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+
+. Completare la reinstallazione del modulo controller:
++
+.. Assicurarsi che i bracci del dispositivo di chiusura siano bloccati in posizione estesa.
+.. Utilizzando i bracci del dispositivo di chiusura, spingere il modulo controller nell'alloggiamento dello chassis fino a quando non si arresta.
+.. Tenere premuti le linguette arancioni sulla parte superiore del meccanismo di chiusura.
+.. Spingere delicatamente il modulo controller nell'alloggiamento dello chassis fino a quando non è a filo con i bordi dello chassis.
++
+
+NOTE: I bracci del meccanismo di chiusura scorrono nel telaio.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+.. Rilasciare i fermi per bloccare il modulo controller in posizione.
+.. Rieseguire l'alimentatore.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Interrompere il normale processo di avvio premendo `Ctrl-C`.
+
+
+

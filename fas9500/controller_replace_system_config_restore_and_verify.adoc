@@ -1,0 +1,247 @@
+---
+permalink: fas9500/controller_replace_system_config_restore_and_verify.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una volta completata la sostituzione dell"hardware e aver avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo, riconfigurare le impostazioni di sistema secondo necessità, quindi eseguire la diagnostica a livello di sistema.' 
+---
+= Ripristinare e verificare la configurazione di sistema - FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta completata la sostituzione dell'hardware, verificare la configurazione di sistema di basso livello del controller sostitutivo, riconfigurare le impostazioni di sistema secondo necessità, quindi eseguire la diagnostica a livello di sistema.
+
+
+
+== Fase 1: Impostare e verificare l'ora di sistema dopo la sostituzione del modulo controller
+
+È necessario controllare l'ora e la data sul modulo controller sostitutivo rispetto al modulo controller integro in una coppia ha o rispetto a un server di riferimento orario affidabile in una configurazione standalone. Se l'ora e la data non corrispondono, è necessario ripristinarli sul modulo controller sostitutivo per evitare possibili interruzioni dei client dovute a differenze di tempo.
+
+.A proposito di questa attività
+È importante applicare i comandi descritti nei passaggi sui sistemi corretti:
+
+* Il nodo _replacement_ è il nuovo nodo che ha sostituito il nodo compromesso come parte di questa procedura.
+* Il nodo _healthy_ è il partner ha del nodo _replacement_.
+
+
+.Fasi
+. Se il nodo _replacement_ non si trova al prompt DEL CARICATORE, arrestare il sistema al prompt DEL CARICATORE.
+. Sul nodo _healthy_, controllare l'ora di sistema: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+. Al prompt DEL CARICATORE, controllare la data e l'ora nel nodo _replacement_: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+. Se necessario, impostare la data in GMT sul nodo sostitutivo: `set date _mm/dd/yyyy_`
+. Se necessario, impostare l'ora in GMT sul nodo sostitutivo: `set time _hh:mm:ss_`
+. Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+
+
+
+
+== Fase 2: Verificare e impostare lo stato ha del modulo controller
+
+Verificare `HA` stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.
+
+. In modalità manutenzione dal modulo controller sostitutivo, verificare che tutti i componenti siano visualizzati allo stesso modo `HA` stato: `ha-config show`
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Lo stato ha per tutti i componenti deve essere... 
+
+
+ a| 
+Una coppia ha
+ a| 
+ha
+
+
+
+ a| 
+Una configurazione MetroCluster FC con quattro o più nodi
+ a| 
+mcc
+
+
+
+ a| 
+Una configurazione IP MetroCluster
+ a| 
+mccip
+
+|===
+. Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller _ha-state_`
+. Se lo stato di sistema visualizzato dello chassis non corrisponde alla configurazione di sistema, impostare `HA` stato dello chassis: `ha-config modify chassis _ha-state_`
+
+
+
+
+== Fase 3: Eseguire la diagnostica a livello di sistema
+
+È necessario eseguire test diagnostici completi o mirati per componenti e sottosistemi specifici ogni volta che si sostituisce il controller.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dal nodo in cui viene sostituito il componente.
+
+. Se il nodo da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il nodo: `halt`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
++
+Durante il processo di avvio, è possibile rispondere in modo sicuro `y` Fino a visualizzare il prompt della modalità di manutenzione (*>).
+
+. Visualizzare e annotare i dispositivi disponibili sul modulo controller: `sldiag device show -dev mb`
++
+I dispositivi e le porte del modulo controller visualizzati possono essere uno o più dei seguenti:
+
++
+** bootmedia è il dispositivo di avvio del sistema.
+** cna è un adattatore di rete convergente o un'interfaccia non connessa a una rete o a un dispositivo di storage.
+** fcal è un dispositivo Fibre Channel-Arbitrated Loop non connesso a una rete Fibre Channel.
+** env è un ambiente per la scheda madre.
+** mem è la memoria di sistema.
+** nic è una scheda di interfaccia di rete.
+** la nvram è una RAM non volatile.
+** nvmem è un ibrido di NVRAM e memoria di sistema.
+** sas è un dispositivo Serial Attached SCSI non collegato a uno shelf di dischi.
+
+
+. Eseguire la diagnostica come desiderato.
++
+[cols="1,2"]
+|===
+| Se si desidera eseguire test di diagnostica su... | Quindi... 
+
+
+ a| 
+Componenti singoli
+ a| 
+.. Cancellare i registri di stato: `sldiag device clearstatus`
+.. Visualizza i test disponibili per i dispositivi selezionati: `sldiag device show -dev dev_name`
++
+dev_name può essere una qualsiasi delle porte e dei dispositivi identificati nel passaggio precedente.
+
+.. Esaminare l'output e, se applicabile, selezionare solo i test che si desidera eseguire: `sldiag device modify -dev dev_name -selection only`
++
+`-selection only` disattiva tutti gli altri test che non si desidera eseguire per la periferica.
+
+.. Eseguire i test selezionati: `sldiag device run -dev dev_name`
++
+Al termine del test, viene visualizzato il seguente messaggio:
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+.. Verificare che nessun test abbia avuto esito negativo: `sldiag device status -dev dev_name -long -state failed`
++
+La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
+
+
+
+
+
+ a| 
+Più componenti contemporaneamente
+ a| 
+.. Esaminare i dispositivi attivati e disattivati nell'output della procedura precedente e determinare quali si desidera eseguire contemporaneamente.
+.. Elencare i singoli test per il dispositivo: `sldiag device show -dev dev_name`
+.. Esaminare l'output e, se applicabile, selezionare solo i test che si desidera eseguire: `sldiag device modify -dev dev_name -selection only`
++
+-selection disattiva solo tutti gli altri test che non si desidera eseguire per la periferica.
+
+.. Verificare che i test siano stati modificati: `sldiag device show`
+.. Ripetere questi passaggi secondari per ciascun dispositivo che si desidera eseguire contemporaneamente.
+.. Eseguire la diagnostica su tutti i dispositivi: `sldiag device run`
++
+
+IMPORTANT: Non aggiungere o modificare le voci dopo aver avviato la diagnostica.
+
++
+Al termine del test, viene visualizzato il seguente messaggio:
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+.. Verificare che non vi siano problemi hardware sul nodo: `sldiag device status -long -state failed`
++
+La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
+
+
+
+|===
+. Procedere in base al risultato del passaggio precedente:
++
+[cols="1,2"]
+|===
+| Se il test di diagnostica a livello di sistema... | Quindi... 
+
+
+ a| 
+Sono stati completati senza guasti
+ a| 
+.. Cancellare i registri di stato: `sldiag device clearstatus`
+.. Verificare che il registro sia stato cancellato: `sldiag device status`
++
+Viene visualizzata la seguente risposta predefinita:
+
++
+SLDIAG: Nessun messaggio di log presente.
+
+.. Uscire dalla modalità di manutenzione: `halt`
++
+Il nodo visualizza il prompt DEL CARICATORE.
+
+.. Avviare il nodo dal prompt DEL CARICATORE: `bye`
+.. Ripristinare il funzionamento normale del nodo:
+
+
+|===
+
+
+[cols="1,2"]
+|===
+| Se il nodo si trova in... | Quindi... 
+
+
+ a| 
+Una coppia ha
+ a| 
+Eseguire un give back: `storage failover giveback -ofnode replacement_node_name`
+
+
+NOTE: Se il giveback automatico è stato disattivato, riattivarlo con il comando di modifica del failover dello storage.
+
+
+
+ a| 
+Ha causato alcuni errori di test
+ a| 
+Determinare la causa del problema:
+
+. Uscire dalla modalità di manutenzione: `halt`
++
+Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Spegnere o lasciare accesi gli alimentatori, a seconda del numero di moduli controller presenti nello chassis. + lasciare gli alimentatori accesi per alimentare l'altro modulo controller.
+. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
+. Avviare il modulo controller che si sta eseguendo la manutenzione, interrompendo l'avvio premendo `Ctrl-C` Quando viene richiesto di accedere al menu di avvio. + il modulo controller si avvia quando è completamente inserito.
+. Selezionare Boot to maintenance mode (Avvia alla modalità di manutenzione) dal menu.
+. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
++
+Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Eseguire nuovamente il test diagnostico a livello di sistema.
+
+
+|===

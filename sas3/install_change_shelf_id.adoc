@@ -1,0 +1,90 @@
+---
+permalink: sas3/install-change-shelf-id.html 
+sidebar: sidebar 
+keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
+summary: 'È possibile modificare l"ID di uno shelf in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima di essere collegato al sistema. Puoi anche modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire dati) e tutti i dischi nello shelf sono di proprietà, parti di ricambio o parte di aggregati non allineati.' 
+---
+= Modifica di un ID shelf - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare l'ID di uno shelf in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima di essere collegato al sistema. È inoltre possibile modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire dati) e tutti i dischi nello shelf sono di proprietà, parti di ricambio o parte di aggregati non allineati.
+
+.Prima di iniziare
+* Se ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire i dati), è necessario verificare che tutti i dischi nello shelf siano privi di proprietà, parti di ricambio o parte di aggregati non allineati.
++
+È possibile verificare lo stato dei dischi utilizzando `storage disk show -shelf _shelf_number_` comando. Se si tratta di un disco guasto, l'output nella colonna Container Type dovrebbe visualizzare spare o rotto. Inoltre, le colonne Container Name (Nome contenitore) e Owner (Proprietario) dovrebbero avere un trattino.
+
+* È possibile verificare gli shelf ID già in uso nel sistema eseguendo Active IQ Config Advisor o utilizzando `storage shelf show -fields shelf-id` comando.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+
+
+
+.A proposito di questa attività
+* Un ID shelf valido va da 00 a 99.
+* Gli shelf ID devono essere univoci all'interno di una configurazione a coppia ha o a controller singolo.
++
+Se si dispone di una piattaforma con storage interno, gli shelf ID devono essere univoci nello shelf di dischi interno e in tutti gli shelf di dischi collegati esternamente.
+
+* Per rendere effettivo l'ID dello shelf, è necessario spegnere e riaccendere uno shelf.
++
+Il tempo di attesa prima della riaccensione dipende dallo stato di ONTAP, come descritto più avanti in questa procedura.
+
+
+
+.Fasi
+. Accendere lo shelf di dischi se non è già acceso.
+. Rimuovere il cappuccio terminale sinistro per individuare il pulsante vicino ai LED del ripiano.
+. Modificare il primo numero dell'ID dello shelf tenendo premuto il tasto arancione fino a quando il primo numero sul display digitale non lampeggia, operazione che può richiedere fino a tre secondi.
++
+[NOTE]
+====
+Se l'ID impiega più di tre secondi per lampeggiare, premere nuovamente il pulsante, assicurandosi di premerlo completamente.
+
+In questo modo viene attivata la modalità di programmazione dell'ID dello shelf di dischi.
+
+====
+. Premere il pulsante per avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
++
+Il primo numero continua a lampeggiare.
+
+. Modificare il secondo numero dell'ID dello shelf tenendo premuto il pulsante fino a quando il secondo numero sul display digitale non lampeggia, il che può richiedere fino a tre secondi.
++
+Il primo numero sul display digitale smette di lampeggiare.
+
+. Premere il pulsante per avanzare il numero fino a raggiungere il numero desiderato da 1 a 9.
++
+Il secondo numero continua a lampeggiare.
+
+. Bloccare il numero desiderato e uscire dalla modalità di programmazione tenendo premuto il tasto fino a quando il secondo numero non smette di lampeggiare, il che può richiedere fino a tre secondi.
++
+Entrambi i numeri sul display digitale iniziano a lampeggiare e il LED ambra sul display dell'operatore si illumina dopo circa cinque secondi, avvisando l'utente che l'ID dello shelf del disco in sospeso non è ancora entrato in vigore.
+
+. Spegnere e riaccendere lo shelf di dischi per rendere effettivo l'ID dello shelf.
++
+Per completare il ciclo di alimentazione, è necessario spegnere entrambi gli interruttori di alimentazione, attendere il tempo necessario e riaccenderli.
+
++
+** Se ONTAP non è ancora in esecuzione o si sta aggiungendo a caldo uno shelf (che non è ancora stato cablato al sistema), attendere almeno 10 secondi.
+** Se ONTAP è in esecuzione (i controller sono disponibili per fornire i dati) e tutti i dischi nello shelf non sono di proprietà, spare o parte di aggregati non allineati, attendere almeno 70 secondi.
++
+Questa volta consente a ONTAP di eliminare correttamente il vecchio indirizzo di shelf e aggiornare la copia del nuovo indirizzo di shelf.
+
+
+
+. Sostituire il cappuccio terminale sinistro.
+. Ripetere i passaggi da 1 a 9 per ogni shelf di dischi aggiuntivo.
+. Verificare che il sistema non disponga di shelf ID duplicati.
++
+Quando due o più shelf di dischi hanno lo stesso ID, il sistema assegna al shelf di dischi duplicati un numero di ID soft uguale o superiore a 100. È necessario modificare il numero del soft ID (duplicato).
+
++
+.. Eseguire Active IQ Config Advisor per verificare la presenza di avvisi di ID shelf duplicati o eseguire `storage shelf show -fields shelf-id` Per visualizzare un elenco di shelf ID già in uso, inclusi eventuali ID duplicati.
+.. Se il sistema dispone di ID shelf duplicati, modificare gli ID shelf duplicati ripetendo questa procedura.
+
+
+

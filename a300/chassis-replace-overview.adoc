@@ -1,0 +1,21 @@
+---
+permalink: a300/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a300, replace the chassis 
+summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+---
+= Panoramica della sostituzione dello chassis - AFF A300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire lo chassis, è necessario spostare gli alimentatori, le ventole e i moduli controller dallo chassis guasto al nuovo chassis e sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis guasto.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Questa procedura si basa sul presupposto che il modulo controller o i moduli vengano trasferiti nel nuovo chassis e che lo chassis sia un nuovo componente di NetApp.
+* Questa procedura ha un'interruzione. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+

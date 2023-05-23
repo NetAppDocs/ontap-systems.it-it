@@ -1,0 +1,210 @@
+---
+permalink: c190/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: aff c190, locate, boot, media, controller, direction, replace 
+summary: Individuare il supporto di avvio nel modulo del controller e seguire le istruzioni per sostituirlo. 
+---
+= Sostituire il supporto di avvio - AFF C190
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+
+
+== Fase 1: Rimuovere il controller
+
+Per accedere ai componenti all'interno del modulo controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
++
+image::../media/drw_25xx_cable_management_arm.png[ARM di gestione dei cavi drw 25xx]
+
+. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
++
+image::../media/drw_2240_x_opening_cam_latch.png[drw 2240 x apertura del fermo a camma]
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio facendo scorrere le linguette blu per sganciarlo, quindi ruotare il coperchio verso l'alto e aprirlo.
++
+image::../media/drw_2600_opening_pcm_cover.png[drw 2600 apertura del coperchio del pcm]
+
+
+
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Individuare il supporto di avvio nel modulo del controller e seguire le istruzioni per sostituirlo.
+
+. Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
+. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+. Premere il supporto di avvio verso il basso per inserire il pulsante di blocco sull'alloggiamento del supporto di avvio.
+. Chiudere il coperchio del modulo controller.
+
+
+
+
+== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
+
+È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando un'unità flash USB su cui è installata l'immagine. Tuttavia, è necessario ripristinare `var` file system durante questa procedura.
+
+* È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione *Downloads* del sito di supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+
+
+.Fasi
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori di supporti (SFP) se sono stati rimossi.
+
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Inserire completamente il modulo controller nel sistema, assicurandosi che la maniglia della camma si allontani dall'unità flash USB, spingere con decisione la maniglia della camma per terminare l'inserimento del modulo controller, spingere la maniglia della camma in posizione chiusa, quindi serrare la vite a testa zigrinata.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+. Interrompere il processo di avvio per interrompere il PROCESSO al prompt DEL CARICATORE premendo Ctrl-C quando viene visualizzato `Starting AUTOBOOT press Ctrl-C to abort....`
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi `halt` Il controller per avviare IL CARICATORE.
+
+. Avviare l'immagine di ripristino:
++
+`*boot_recovery __ontap_image_name__.tgz*`
+
++
+
+NOTE: Se il `image.tgz` il nome del file è diverso da image.tgz, ad esempio `boot_recovery 9_4.tgz`, è necessario includere il nome del file diverso in `boot_recovery` comando.
+
++
+Il sistema avvia il menu di avvio e richiede il nome dell'immagine di avvio.
+
+. Inserire il nome dell'immagine di avvio sull'unità flash USB:
++
+`*__image_name__.tgz*`
+
++
+Dopo `image_name.tgz` installato, il sistema richiede di ripristinare la configurazione di backup (il `var` file system) dal controller integro.
+
+. Ripristinare `var` file system:
++
+[cols="1,2"]
+|===
+| Se il sistema dispone di... | Quindi... 
+
+
+ a| 
+Una connessione di rete
+ a| 
+.. Premere `*y*` quando viene richiesto di ripristinare la configurazione di backup.
+.. Impostare il controller integro su un livello di privilegio avanzato:
++
+`*set -privilege advanced*`
+
+.. Eseguire il comando di ripristino del backup:
++
+`*system node restore-backup -node local -target-address _impaired_node_IP_address_*`
+
+.. Riportare il controller al livello di amministrazione:
++
+`*set -privilege admin*`
+
+.. Premere `*y*` quando viene richiesto di utilizzare la configurazione ripristinata.
+.. Premere `*y*` quando viene richiesto di riavviare il controller.
+
+
+
+
+ a| 
+Nessuna connessione di rete
+ a| 
+.. Premere `*n*` quando viene richiesto di ripristinare la configurazione di backup.
+.. Riavviare il sistema quando richiesto dal sistema.
+.. Selezionare l'opzione *Update flash from backup config* (Sync flash) dal menu visualizzato.
++
+Se viene richiesto di continuare con l'aggiornamento, premere `*y*`.
+
+
+
+|===
+. Verificare che le variabili ambientali siano impostate come previsto.
++
+.. Portare il controller al prompt DEL CARICATORE.
++
+Dal prompt di ONTAP, è possibile eseguire il comando `system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`.
+
+.. Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
+.. Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv _environment_variable_name changed_value_` comando.
+.. Salvare le modifiche utilizzando `saveenv` comando.
+.. Riavviare il controller.
+
+
+. La fase successiva dipende dalla configurazione del sistema:
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Quindi... 
+
+
+ a| 
+Una configurazione standalone
+ a| 
+È possibile iniziare a utilizzare il sistema dopo il riavvio del controller.
+
+
+
+ a| 
+Una coppia ha
+ a| 
+Una volta visualizzato il `Waiting for Giveback...` eseguire un giveback dal controller integro:
+
+.. Eseguire un giveback dal controller integro:
++
+`*storage failover giveback -ofnode _partner_node_name_*`
+
++
+Questo avvia il processo di restituzione della proprietà degli aggregati e dei volumi del controller compromesso dal controller integro al controller compromesso.
+
++
+[NOTE]
+====
+Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["Guida alla configurazione ad alta disponibilità di ONTAP 9"]
+
+====
+.. Monitorare l'avanzamento dell'operazione di giveback utilizzando ``storage failover show`-giveback` command.
+.. Una volta completata l'operazione di giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover utilizzando `storage failover show` comando.
+.. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify` comando.
+
+
+|===
+

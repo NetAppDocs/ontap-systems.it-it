@@ -1,0 +1,187 @@
+---
+permalink: a320/bootmedia-encryption-restore.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, environment, variable, complete, system, onboard, key, manager, okm, netapp, storage, encryption, nse, volume, nve, enable, post, boot, media, replacement, post boot media replacement steps for okm nse and nve 
+summary: 'Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi che hanno attivato Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE).' 
+---
+= Ripristinare OKM, NSE e NVE secondo necessità - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi con Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE) abilitati.
+
+. Determinare la sezione da utilizzare per ripristinare le configurazioni OKM, NSE o NVE: Se NSE o NVE sono attivati insieme a Onboard Key Manager, è necessario ripristinare le impostazioni acquisite all'inizio di questa procedura.
++
+** Se NSE o NVE sono attivati e Onboard Key Manager è attivato, passare a. <<Restore NVE or NSE (Ripristina NVE o NSE) quando Onboard Key Manager è attivato>>.
+** Se NSE o NVE sono abilitati per ONTAP 9.6, passare a. <<Ripristinare NSE/NVE nei sistemi che eseguono ONTAP 9.6 e versioni successive>>.
+
+
+
+
+
+
+== Restore NVE or NSE (Ripristina NVE o NSE) quando Onboard Key Manager è attivato
+
+.Fasi
+. Collegare il cavo della console al controller di destinazione.
+. Utilizzare `boot_ontap` Al prompt DEL CARICATORE per avviare il controller.
+. Controllare l'output della console:
++
+[cols="1,2"]
+|===
+| *Se la console visualizza...* | *Allora...* 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Avviare il controller dal menu di avvio: `boot_ontap menu`
+
+
+
+ a| 
+In attesa di un giveback
+ a| 
+.. Invio `Ctrl-C` quando richiesto
+.. Quando viene visualizzato il messaggio: Interrompere questo nodo invece di attendere [y/n]? , inserire: `y`
+.. Al prompt DEL CARICATORE, immettere `boot_ontap menu` comando.
+
+
+|===
+. Nel menu di avvio, immettere il comando nascosto, `recover_onboard_keymanager` e rispondere `y` quando richiesto
+. Inserire la passphrase per il gestore delle chiavi integrato ottenuto dal cliente all'inizio di questa procedura.
+. Quando viene richiesto di inserire i dati di backup, incollare i dati di backup acquisiti all'inizio di questa procedura, quando richiesto. Incollare l'output di `security key-manager backup show` OPPURE `security key-manager onboard show-backup` comando
++
+
+NOTE: I dati vengono generati da entrambi `security key-manager backup show` oppure `security key-manager onboard show-backup` comando.
+
++
+Esempio di dati di backup:
+
++
+[]
+====
+----------------------------------------------------- INIZIA IL BACKUP------------------------------------------------------ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA . . . AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+------------------------------------------------------- FINE BACKUP-------------------------------
+
+====
+. Nel menu di avvio, selezionare l'opzione Normal Boot (Avvio normale).
++
+Il sistema si avvia in attesa di giveback... prompt.
+
+. Spostare il cavo della console sul controller partner e accedere come "admin".
+. Verificare che il controller di destinazione sia pronto per il giveback con `storage failover show` comando.
+. Giveback solo il CFO si aggrega con `storage failover giveback -fromnode local -only-cfo-aggregates true` comando.
++
+** Se il comando non riesce a causa di un disco guasto, disinnestare fisicamente il disco guasto, ma lasciare il disco nello slot fino a quando non viene ricevuto un disco sostitutivo.
+** Se il comando non riesce a causa di sessioni CIFS aperte, verificare con il cliente come chiudere le sessioni CIFS.
++
+
+NOTE: La chiusura di CIFS può causare la perdita di dati.
+
+** Se il comando non riesce perché il partner non è pronto, attendere 5 minuti per la sincronizzazione di NVMEM.
+** Se il comando non riesce a causa di un processo NDMP, SnapMirror o SnapVault, disattivare il processo. Per ulteriori informazioni, consultare il centro di documentazione appropriato.
+
+
+. Una volta completato il giveback, controllare lo stato di failover e giveback con `storage failover show` e. ``storage failover show`-giveback` comandi.
++
+Verranno mostrati solo gli aggregati CFO (aggregato root e aggregati di dati di stile CFO).
+
+. Spostare il cavo della console sul controller di destinazione.
++
+.. Se si utilizza ONTAP 9.6 o versione successiva, eseguire la sincronizzazione integrata del Security Key-Manager:
+.. Eseguire `security key-manager onboard sync` e inserire la passphrase quando richiesto.
+.. Inserire il `security key-manager key query` per visualizzare una vista dettagliata di tutte le chiavi memorizzate nel gestore delle chiavi integrato e verificare che `Restored` colonna = `yes/true` per tutte le chiavi di autenticazione.
++
+
+NOTE: Se il `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, Contattare il supporto clienti.
+
+.. Attendere 10 minuti per la sincronizzazione della chiave nel cluster.
+
+
+. Spostare il cavo della console sul controller partner.
+. Restituire il controller di destinazione utilizzando `storage failover giveback -fromnode local` comando.
+. Controllare lo stato del giveback, 3 minuti dopo il completamento del report, utilizzando `storage failover show` comando.
++
+Se il giveback non viene completato dopo 20 minuti, contattare l'assistenza clienti.
+
+. Al prompt di clustershell, immettere `net int show -is-home false` comando per elencare le interfacce logiche che non si trovano sul proprio controller principale e sulla relativa porta.
++
+Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert` comando.
+
+. Spostare il cavo della console sul controller di destinazione ed eseguire `version -v` Per controllare le versioni di ONTAP.
+. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+
+
+
+
+== Ripristinare NSE/NVE nei sistemi che eseguono ONTAP 9.6 e versioni successive
+
+.Fasi
+. Collegare il cavo della console al controller di destinazione.
+. Utilizzare `boot_ontap` Al prompt DEL CARICATORE per avviare il controller.
+. Controllare l'output della console:
++
+|===
+
+
+| *Se la console visualizza...* | *Allora...* 
+
+
+ a| 
+Prompt di login
+ a| 
+Passare alla fase 7.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+.. Accedere al controller partner.
+.. Verificare che il controller di destinazione sia pronto per il giveback con `storage failover show` comando.
+
+
+|===
+. Spostare il cavo della console sul controller partner e restituire lo storage del controller di destinazione utilizzando `storage failover giveback -fromnode local -only-cfo-aggregates true local` comando.
++
+** Se il comando non riesce a causa di un disco guasto, disinnestare fisicamente il disco guasto, ma lasciare il disco nello slot fino a quando non viene ricevuto un disco sostitutivo.
+** Se il comando non riesce a causa di sessioni CIFS aperte, verificare con il cliente come chiudere le sessioni CIFS.
++
+
+NOTE: La chiusura di CIFS può causare la perdita di dati.
+
+** Se il comando non riesce perché il partner non è pronto, attendere 5 minuti per la sincronizzazione di NVMEM.
+** Se il comando non riesce a causa di un processo NDMP, SnapMirror o SnapVault, disattivare il processo. Per ulteriori informazioni, consultare il centro di documentazione appropriato.
+
+
+. Attendere 3 minuti e controllare lo stato di failover con `storage failover show` comando.
+. Al prompt di clustershell, immettere `net int show -is-home false` comando per elencare le interfacce logiche che non si trovano sul proprio controller principale e sulla relativa porta.
++
+Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert` comando.
+
+. Spostare il cavo della console sul controller di destinazione ed eseguire `version -v` Per controllare le versioni di ONTAP.
+. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+. Utilizzare `storage encryption disk show` al prompt di clustershell, per rivedere l'output.
+. Utilizzare `security key-manager key query` Per visualizzare gli ID delle chiavi di autenticazione memorizzate nei server di gestione delle chiavi.
++
+** Se il `Restored` colonna = `yes/true`, è possibile completare il processo di sostituzione.
+** Se il `Key Manager type` = `external` e a. `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, utilizzare `security key-manager external restore` Comando per ripristinare gli ID delle chiavi di autenticazione.
++
+
+NOTE: Se il comando non riesce, contattare l'assistenza clienti.
+
+** Se il `Key Manager type` = `onboard` e a. `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, utilizzare `security key-manager onboard sync` Comando per risync il tipo di Key Manager.
++
+Utilizzare `security key-manager key query` per verificare che il `Restored` colonna = `yes/true` per tutte le chiavi di autenticazione.
+
+
+
+. Collegare il cavo della console al controller partner.
+. Restituire il controller utilizzando `storage failover giveback -fromnode local` comando.
+. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+

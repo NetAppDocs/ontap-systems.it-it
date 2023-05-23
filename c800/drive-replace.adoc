@@ -1,0 +1,118 @@
+---
+permalink: c800/drive-replace.html 
+sidebar: sidebar 
+keywords: aff c800, replace the drives 
+summary: È necessario sostituire un disco quando la piattaforma registra un messaggio di avviso alla console di sistema che indica che un disco è guasto. Inoltre, sia il LED di guasto sul display operatore che il LED di guasto sul disco guasto si illuminano. 
+---
+= Sostituire l'unità SSD - AFF C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead lead"]
+È possibile sostituire un'unità SSD guasta senza interruzioni mentre l'i/o è in corso.
+
+Quando un disco si guasta, la piattaforma registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, sia il LED di guasto sul display operatore che il LED di guasto sul disco guasto si illuminano.
+
+.Prima di iniziare
+* Seguire le Best practice e installare la versione corrente del Disk Qualification Package (DQP) prima di sostituire un disco.
+* Identificare il disco guasto eseguendo il `storage disk show -broken` dalla console di sistema.
++
+Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.
+
++
+
+NOTE: Il disco potrebbe richiedere fino a diverse ore per essere visualizzato nell'elenco dei dischi guasti.
+
+* Determinare se l'autenticazione SED è attivata.
++
+La modalità di sostituzione del disco dipende dal modo in cui viene utilizzato il disco. Se l'autenticazione SED è attivata, è necessario utilizzare le istruzioni per la sostituzione SED contenute in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guida alla potenza della crittografia NetApp per ONTAP 9"]. Le presenti istruzioni descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
+
+* Assicurarsi che l'unità sostitutiva sia supportata dalla piattaforma. Vedere https://hwu.netapp.com["NetApp Hardware Universe"].
+* Assicurarsi che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+.A proposito di questa attività
+Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
+
+Quando si sostituiscono più dischi, è necessario attendere un minuto tra la rimozione di ciascun disco guasto e l'inserimento dell'unità disco sostitutiva per consentire al sistema di storage di riconoscere l'esistenza di ciascun nuovo disco.
+
+.Fasi
+. Se si desidera assegnare manualmente la proprietà del disco per il disco sostitutivo, è necessario disattivare l'assegnazione automatica del disco sostitutivo, se abilitato
++
+
+NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
+
++
+.. Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
++
+Se l'assegnazione automatica dei dischi è attivata, viene visualizzato l'output `on` Nella colonna "`Auto Assign`" (assegnazione automatica) (per ciascun modulo controller).
+
+.. Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node node_name -autoassign off`
++
+È necessario disattivare l'assegnazione automatica dei dischi su entrambi i moduli controller.
+
+
+
+. Mettere a terra l'utente.
+. Identificare fisicamente il disco guasto.
++
+In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED di attenzione (ambra) sul display operatore dello shelf di dischi e il disco guasto si illuminano.
+
++
+
+NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
+
+. Rimuovere il disco guasto:
++
+.. Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
+.. Estrarre l'unità dallo scaffale utilizzando la maniglia della camma e supportarla con l'altra mano.
+
+
+. Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
++
+Questo consente al sistema di riconoscere che un disco è stato rimosso.
+
+. Inserire l'unità sostitutiva:
++
+.. Con la maniglia della camma in posizione aperta, inserire l'unità sostitutiva con entrambe le mani.
+.. Premere fino all'arresto del disco.
+.. Chiudere la maniglia della camma in modo che l'unità sia completamente inserita nel piano intermedio e la maniglia scatti in posizione.
++
+Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
+
+
+
+. Verificare che il LED di attività del disco (verde) sia acceso.
++
+Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
+
+. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
+. Se l'assegnazione automatica del disco è stata disattivata nella fase 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco.
++
+.. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
+.. Assegnare ciascun disco: `storage disk assign -disk disk_name -owner owner_name`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+.. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node node_name -autoassign on`
++
+È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i moduli controller.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
++
+Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+
+

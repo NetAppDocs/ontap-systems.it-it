@@ -1,0 +1,23 @@
+---
+permalink: a200/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a200, replace the chassis 
+summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+---
+= Panoramica della sostituzione dello chassis - AFF A200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire lo chassis, spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.
+
+.Di cosa hai bisogno
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+.A proposito di questa attività
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Questa procedura si basa sul presupposto che si stiano spostando tutti i dischi e i moduli controller nel nuovo chassis e che lo chassis sia un nuovo componente di NetApp.
+* Questa procedura ha un'interruzione. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+

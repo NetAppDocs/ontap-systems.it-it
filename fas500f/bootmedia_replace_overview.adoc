@@ -1,0 +1,25 @@
+---
+permalink: fas500f/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: fas500f, replace the boot media 
+summary: 'Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell"avvio.' 
+---
+= Panoramica sulla sostituzione dei supporti di avvio - FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio.
+
+È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+

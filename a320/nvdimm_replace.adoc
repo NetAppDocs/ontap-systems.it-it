@@ -1,0 +1,229 @@
+---
+permalink: a320/nvdimm-replace.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replace, nvdimm, controller, module, system, register, flash, lifetime, identified, idenify, nvdimm, healthy, general, failure, system, panic, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, run diagnostics, restore the controller module to operation after running diagnostics, complete the replacement process 
+summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema. 
+---
+= Sostituire un modulo NVDIMM - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare l'alimentazione del modulo controller dalla fonte di alimentazione.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+image::../media/drw_a320_cable_management_arms.png[bracci di gestione cavi drw a320]
+
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
+. Rimuovere il modulo controller dal telaio:
++
+image::../media/drw_a320_controller_remove_animated_gif.png[il controller drw a320 rimuove il gif animato]
+
++
+.. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller.
+.. Premere verso il basso la linguetta arancione sulla parte superiore del meccanismo di chiusura fino a liberare il perno di chiusura sul telaio.
+
+
++
+Il gancio del meccanismo di chiusura deve essere quasi verticale e non deve essere lontano dal perno del telaio.
+
++
+.. Tirare delicatamente il modulo controller di alcuni pollici verso di sé in modo da poter afferrare i lati del modulo controller.
+.. Con entrambe le mani, estrarre delicatamente il modulo controller dal telaio e posizionare il modulo su una superficie piana e stabile.
+
+
+
+
+
+
+== Fase 3: Sostituire il modulo NVDIMM
+
+Per sostituire il modulo NVDIMM, individuarlo nel modulo del controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi sostituirlo seguendo la sequenza specifica dei passaggi.
+
+image::../media/drw_a320_nvdimm_replace_animated_gif.png[drw a320 nvdimm sostituire gif animato]
+
+. Aprire il condotto dell'aria e individuare il modulo NVDIMM nello slot 11 del modulo controller.
++
+
+NOTE: Il modulo NVDIMM è molto diverso dai DIMM di sistema.
+
+. Prendere nota dell'orientamento della NVDIMM nello zoccolo in modo da poter inserire la NVDIMM nel modulo del controller sostitutivo con l'orientamento corretto.
+. Estrarre il modulo NVDIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione del modulo NVDIMM su entrambi i lati del modulo, quindi estrarre il modulo NVDIMM dallo zoccolo e metterlo da parte.
++
+
+NOTE: Tenere il modulo NVDIMM dai bordi con cautela per evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo NVDIMM.
+
+. Rimuovere il modulo NVDIMM di ricambio dalla confezione antistatica, tenere il modulo NVDIMM per gli angoli, quindi allinearlo allo slot.
++
+La tacca tra i pin del modulo NVDIMM deve allinearsi con la linguetta del connettore.
+
+. Individuare lo slot in cui si desidera installare il modulo NVDIMM.
+. Inserire il modulo NVDIMM nello slot.
++
+Il modulo NVDIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il modulo NVDIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, il bordo superiore del modulo NVDIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del modulo NVDIMM.
+. Chiudere il condotto dell'aria.
+
+
+
+
+== Fase 4: Installare il modulo controller
+
+Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
+
+. Se non è già stato fatto, chiudere il condotto dell'aria sul retro del modulo controller e reinstallare il coperchio sulle schede PCIe.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
++
+
+NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+
+. Completare la reinstallazione del modulo controller:
++
+.. Assicurarsi che i bracci del dispositivo di chiusura siano bloccati in posizione estesa.
+.. Utilizzando i bracci del dispositivo di chiusura, spingere il modulo controller nell'alloggiamento dello chassis fino a quando non si arresta.
+.. Tenere premuti le linguette arancioni sulla parte superiore del meccanismo di chiusura.
+.. Spingere delicatamente il modulo controller nell'alloggiamento dello chassis fino a quando non è a filo con i bordi dello chassis.
++
+
+NOTE: I bracci del meccanismo di chiusura scorrono nel telaio.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+.. Rilasciare i fermi per bloccare il modulo controller in posizione.
+.. Rieseguire l'alimentatore.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Interrompere il normale processo di avvio premendo `Ctrl-C`.
+
+
+
+
+
+
+== Fase 5: Eseguire la diagnostica
+
+Dopo aver sostituito il modulo NVDIMM nel sistema, eseguire test diagnostici su tale componente.
+
+Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
+
+. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node node_name`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
+. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
+. Selezionare *Test Memory* dal menu visualizzato.
+. Selezionare *NVDIMM Test* dal menu visualizzato.
+. Procedere in base al risultato del passaggio precedente:
++
+** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
+** Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
+
+
+
+
+
+
+== Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica
+
+Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 7: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

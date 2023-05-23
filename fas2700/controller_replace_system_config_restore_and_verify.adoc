@@ -1,0 +1,219 @@
+---
+permalink: fas2700/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: fas2700, aff a220, restore and verify the system configuration, verify and set the ha state of the controller module, run system-level diagnostics 
+summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
+---
+= Ripristinare e verificare la configurazione del sistema - AFF A220 e FAS2700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver sostituito l'hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
+
+
+
+== Fase 1: Impostare e verificare l'ora di sistema dopo la sostituzione del controller
+
+È necessario controllare l'ora e la data sul modulo controller sostitutivo rispetto al modulo controller integro in una coppia ha o rispetto a un server di riferimento orario affidabile in una configurazione standalone. Se l'ora e la data non corrispondono, è necessario ripristinarli sul modulo controller sostitutivo per evitare possibili interruzioni dei client dovute a differenze di tempo.
+
+.A proposito di questa attività
+È importante applicare i comandi descritti nei passaggi sui sistemi corretti:
+
+* Il nodo _replacement_ è il nuovo nodo che ha sostituito il nodo compromesso come parte di questa procedura.
+* Il nodo _healthy_ è il partner ha del nodo _replacement_.
+
+
+.Fasi
+. Se il nodo _replacement_ non si trova al prompt DEL CARICATORE, arrestare il sistema al prompt DEL CARICATORE.
+. Sul nodo _healthy_, controllare l'ora di sistema: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+. Al prompt DEL CARICATORE, controllare la data e l'ora nel nodo _replacement_: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+. Se necessario, impostare la data in GMT sul nodo sostitutivo: `set date _mm/dd/yyyy_`
+. Se necessario, impostare l'ora in GMT sul nodo sostitutivo: `set time _hh:mm:ss_`
+. Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+
+
+
+
+== Fase 2: Verificare e impostare lo stato ha del modulo controller
+
+Verificare `HA` stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.
+
+. In modalità manutenzione dal nuovo modulo controller, verificare che tutti i componenti siano visualizzati allo stesso modo `HA` stato: `ha-config show`
++
+Lo stato ha deve essere lo stesso per tutti i componenti.
+
+. Se lo stato del sistema visualizzato per lo chassis non corrisponde alla configurazione del sistema:
++
+.. Impostare lo stato ha per lo chassis: `ha-config modify chassis _HA-state_`
++
+Il valore dello stato ha può essere uno dei seguenti:
+
++
+*** `ha`
+*** `mcc`
+*** `mcc-2n`
+*** `mccip`
+*** `non-ha`
+
+
+.. Verificare che l'impostazione sia stata modificata: `ha-config show`
+
+
+
+
+
+
+== Fase 3: Eseguire la diagnostica a livello di sistema
+
+È necessario eseguire test diagnostici completi o mirati per componenti e sottosistemi specifici ogni volta che si sostituisce il controller.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
+
+. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `halt`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
++
+Durante il processo di avvio, è possibile rispondere in modo sicuro `y` Fino a visualizzare il prompt della modalità di manutenzione (*>).
+
+. Visualizzare e annotare i dispositivi disponibili sul modulo controller: `sldiag device show -dev mb`
++
+I dispositivi e le porte del modulo controller visualizzati possono essere uno o più dei seguenti:
+
++
+** `bootmedia` è la periferica di avvio del sistema.
+** cna è un adattatore di rete convergente o un'interfaccia non connessa a una rete o a un dispositivo di storage.
+** fcal è un dispositivo Fibre Channel-Arbitrated Loop non connesso a una rete Fibre Channel.
+** `env` è un ambiente per la scheda madre.
+** mem è la memoria di sistema.
+** nic è una scheda di interfaccia di rete.
+** `nvram` È una RAM non volatile.
+** `nvmem` È un ibrido di NVRAM e memoria di sistema.
+** `sas` È un dispositivo SCSI collegato in serie non collegato a uno shelf di dischi.
+
+
+. Eseguire la diagnostica come desiderato.
++
+[cols="1,2"]
+|===
+| Se si desidera eseguire test di diagnostica su... | Quindi... 
+
+
+ a| 
+Componenti singoli
+ a| 
+.. Cancellare i registri di stato: `sldiag device clearstatus`
+.. Visualizza i test disponibili per i dispositivi selezionati: `sldiag device show -dev _dev_name_`
++
+_dev_name_ può essere una qualsiasi delle porte e dei dispositivi identificati nel passaggio precedente.
+
+.. Esaminare l'output e, se applicabile, selezionare solo i test che si desidera eseguire: `sldiag device modify -dev _dev_name_ -selection only`
++
+`-selection only` disattiva tutti gli altri test che non si desidera eseguire per la periferica.
+
+.. Eseguire i test selezionati: `sldiag device run -dev _dev_name_`
++
+Al termine del test, viene visualizzato il seguente messaggio:
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+.. Verificare che nessun test abbia avuto esito negativo: `sldiag device status -dev _dev_name_ -long -state failed`
++
+La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
+
+
+
+
+
+ a| 
+Più componenti contemporaneamente
+ a| 
+.. Esaminare i dispositivi attivati e disattivati nell'output della procedura precedente e determinare quali si desidera eseguire contemporaneamente.
+.. Elencare i singoli test per il dispositivo: `sldiag device show -dev _dev_name_`
+.. Esaminare l'output e, se applicabile, selezionare solo i test che si desidera eseguire: `sldiag device modify -dev _dev_name_ -selection only`
++
+-selection disattiva solo tutti gli altri test che non si desidera eseguire per la periferica.
+
+.. Verificare che i test siano stati modificati: `sldiag device show`
+.. Ripetere questi passaggi secondari per ciascun dispositivo che si desidera eseguire contemporaneamente.
+.. Eseguire la diagnostica su tutti i dispositivi: `sldiag device run`
++
+
+NOTE: Non aggiungere o modificare le voci dopo aver avviato la diagnostica.
+
++
+Al termine del test, viene visualizzato il seguente messaggio:
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+.. Verificare che non vi siano problemi hardware sul controller: `sldiag device status -long -state failed`
++
+La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
+
+
+
+|===
+. Procedere in base al risultato del passaggio precedente.
++
+[cols="1,2"]
+|===
+| Se il test di diagnostica a livello di sistema... | Quindi... 
+
+
+ a| 
+Sono stati completati senza guasti
+ a| 
+.. Cancellare i registri di stato: `sldiag device clearstatus`
+.. Verificare che il registro sia stato cancellato: `sldiag device status`
++
+Viene visualizzata la seguente risposta predefinita:
+
++
+[listing]
+----
+SLDIAG: No log messages are present.
+----
+.. Uscire dalla modalità di manutenzione: `halt`
++
+Il sistema visualizza il prompt DEL CARICATORE.
+
++
+La diagnostica a livello di sistema è stata completata.
+
+
+
+
+
+ a| 
+Ha causato alcuni errori di test
+ a| 
+Determinare la causa del problema.
+
+.. Uscire dalla modalità di manutenzione: `halt`
+.. Eseguire un arresto pulito, quindi scollegare gli alimentatori.
+.. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
+.. Ricollegare gli alimentatori, quindi accendere il sistema storage.
+.. Eseguire nuovamente il test di diagnostica a livello di sistema.
+
+
+|===
+

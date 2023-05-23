@@ -1,0 +1,175 @@
+---
+permalink: ns224/service-replace-power-supply.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, fail, power, supply, nondisruptive, drive, i/o, progress, hot-swap, hot-swap a power supply 
+summary: 'È possibile sostituire un alimentatore guasto senza interruzioni in uno shelf di dischi NS224 acceso e durante l"i/o in corso.' 
+---
+= Alimentatore hot-swap a: Shelf NS224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un alimentatore guasto senza interruzioni in uno shelf di dischi NS224 acceso e durante l'i/o in corso.
+
+.A proposito di questa attività
+* Non utilizzare alimentatori con diversi livelli di efficienza o tipi di ingresso diversi.
++
+Sostituire sempre come per come.
+
+* Se si stanno sostituendo più alimentatori, è necessario farlo uno alla volta in modo che lo shelf mantenga l'alimentazione.
+* *Best practice:* la procedura migliore consiste nel sostituire l'alimentatore entro due minuti dalla rimozione dal modulo NSM.
++
+Se si superano i due minuti, lo shelf continua a funzionare, ma ONTAP invia messaggi alla console sull'alimentatore danneggiato fino a quando l'alimentatore non viene sostituito.
+
+* Non riportare il firmware a una versione che non supporta lo shelf e i relativi componenti.
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf per individuare fisicamente lo shelf interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se non si conosce `shelf_name` dello shelf interessato, eseguire `storage shelf show` comando.
+
++
+Uno shelf ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+
+* Quando si disimballano gli alimentatori sostitutivi, conservare tutti i materiali di imballaggio per utilizzarli quando si restituisce l'alimentatore guasto.
++
+Per ottenere il numero RMA o ulteriore assistenza per la procedura di sostituzione, contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico).
+
+
+
+Utilizzare la procedura appropriata per il tipo di alimentatore in uso: CA o CC.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Sostituire un alimentatore CA
+--
+Per sostituire un alimentatore CA, è possibile guardare l'animazione o completare i seguenti passaggi.
+
+.Animazione - sostituire a caldo un alimentatore in uno shelf di dischi NS224
+video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
+.Fasi
+. Mettere a terra l'utente.
+. Identificare fisicamente l'alimentatore guasto.
++
+Il sistema registra un messaggio di avviso alla console di sistema che indica quale alimentatore si è guastato. Inoltre, il LED attenzione (ambra) sul display operatore dello shelf si illumina e il LED bicolore sull'alimentatore guasto si illumina di rosso.
+
+. Scollegare il cavo di alimentazione dall'alimentatore aprendo il relativo fermo, quindi scollegare il cavo di alimentazione dall'alimentatore.
++
+Gli alimentatori non dispongono di un interruttore di alimentazione.
+
+. Rimuovere l'alimentatore:
++
+.. Ruotare la maniglia verso l'alto, in posizione orizzontale, quindi afferrarla.
+.. Con il pollice, premere la linguetta blu per rilasciare il meccanismo di bloccaggio.
+.. Estrarre l'alimentatore dal modulo NSM utilizzando l'altra mano per sostenerne il peso.
+
+
+. Inserire l'alimentatore sostitutivo:
++
+.. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura del modulo NSM.
+.. Spingere delicatamente l'alimentatore nel modulo NSM fino a quando il meccanismo di blocco non scatta in posizione.
++
+
+NOTE: Non esercitare una forza eccessiva per evitare di danneggiare il connettore interno.
+
+.. Ruotare la maniglia verso il basso, in modo che non sia di intralcio alle normali operazioni.
+
+
+. Collegare il cavo di alimentazione all'alimentatore e fissarlo con il relativo fermo.
++
+Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.
+
+
+
+--
+.Opzione 2: Sostituire un alimentatore CC
+--
+Per sostituire un alimentatore CC, attenersi alla seguente procedura.
+
+. Mettere a terra l'utente.
+. Identificare fisicamente l'alimentatore guasto.
++
+Il sistema registra un messaggio di avviso alla console di sistema che indica quale alimentatore si è guastato. Inoltre, il LED attenzione (ambra) sul display operatore dello shelf si illumina e il LED bicolore sull'alimentatore guasto si illumina di rosso.
+
+. Scollegare l'alimentatore:
++
+.. Svitare le due viti a testa zigrinata sul connettore del cavo di alimentazione CC D-SUB.
++
+L'illustrazione e la tabella nel passaggio 4 mostrano le due viti ad alette (elemento n. 1) e il connettore del cavo di alimentazione CC D-SUB (elemento n. 2).
+
+.. Scollegare il connettore del cavo di alimentazione CC D-SUB dall'alimentatore e metterlo da parte.
+
+
+. Rimuovere l'alimentatore:
++
+.. Ruotare la maniglia verso l'alto, in posizione orizzontale, quindi afferrarla.
+.. Con il pollice, premere la linguetta blu per rilasciare il meccanismo di bloccaggio.
+.. Estrarre l'alimentatore dal modulo NSM utilizzando l'altra mano per sostenerne il peso.
++
+
+NOTE: L'alimentazione è in corto. Utilizzare sempre due mani per sostenerlo durante la rimozione dal modulo NSM in modo che non si sposti dal modulo NSM e non causi lesioni.
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[Drw dcpsu remove sostituisce IEOPS generico 788]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["larghezza = 10 px"]
+ a| 
+Viti ad alette
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["larghezza = 10 px"]
+ a| 
+Connettore del cavo di alimentazione CC D-SUB
+
+
+
+ a| 
+image:../media/legend_icon_03.svg["larghezza = 10 px"]
+ a| 
+Maniglia dell'alimentatore
+
+
+
+ a| 
+image:../media/legend_icon_04.svg["larghezza = 10 px"]
+ a| 
+Linguetta blu di bloccaggio dell'alimentatore
+
+|===
+
+
+. Inserire l'alimentatore sostitutivo:
++
+.. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura del modulo NSM.
+.. Spingere delicatamente l'alimentatore nel modulo NSM fino a quando il meccanismo di blocco non scatta in posizione.
++
+Un alimentatore deve essere correttamente collegato al connettore interno e al meccanismo di bloccaggio. Ripetere questa procedura se si ritiene che l'alimentatore non sia inserito correttamente.
+
++
+
+NOTE: Non esercitare una forza eccessiva per evitare di danneggiare il connettore interno.
+
+.. Ruotare la maniglia verso il basso, in modo che non sia di intralcio alle normali operazioni.
+
+
+. Ricollegare il cavo di alimentazione CC D-SUB:
++
+Una volta ripristinata l'alimentazione, il LED di stato deve essere verde.
+
++
+.. Collegare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+.. Serrare le due viti a testa zigrinata per fissare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+
+
+
+
+--
+====

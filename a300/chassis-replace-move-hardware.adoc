@@ -1,0 +1,278 @@
+---
+permalink: a300/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: aff a300, move hardware components, replace the chassis 
+summary: 'Spostare gli alimentatori, le ventole e i moduli controller dallo chassis con problemi al nuovo chassis, quindi sostituire lo chassis con problemi dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis con problemi.' 
+---
+= Sostituire l'hardware - AFF A300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spostare gli alimentatori, le ventole e i moduli controller dallo chassis con problemi al nuovo chassis, quindi sostituire lo chassis con problemi dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis con problemi.
+
+
+
+== Fase 1: Spostare un alimentatore
+
+Lo spostamento di un alimentatore durante la sostituzione di uno chassis comporta lo spegnimento, lo scollegamento e la rimozione dell'alimentatore dal vecchio chassis e l'installazione e il collegamento dello stesso sullo chassis sostitutivo.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Spegnere l'alimentatore e scollegare i cavi di alimentazione:
++
+.. Spegnere l'interruttore di alimentazione dell'alimentatore.
+.. Aprire il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dall'alimentatore.
+.. Scollegare il cavo di alimentazione dalla fonte di alimentazione.
+
+
+. Premere verso il basso il fermo di rilascio sulla maniglia della camma dell'alimentatore, quindi abbassare la maniglia della camma in posizione completamente aperta per rilasciare l'alimentatore dal piano intermedio.
++
+image::../media/drw_rxl_psu.png[psu rxl drw]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Alimentatore 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo di rilascio della maniglia della camma
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+LED di alimentazione e di guasto
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Maniglia CAM
+
+
+
+ a| 
+image:../media/legend_icon_05.png[""]
+ a| 
+Meccanismo di bloccaggio del cavo di alimentazione
+
+|===
+. Utilizzare la maniglia della camma per estrarre l'alimentatore dal sistema.
++
+
+CAUTION: Quando si rimuove un alimentatore, utilizzare sempre due mani per sostenerne il peso.
+
+. Ripetere i passi precedenti per tutti gli alimentatori rimanenti.
+. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis del sistema, quindi spingere delicatamente l'alimentatore nello chassis utilizzando la maniglia della camma.
++
+Gli alimentatori sono dotati di chiavi e possono essere installati in un solo modo.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema. Il connettore potrebbe danneggiarsi.
+
+. Premere con decisione la maniglia della camma dell'alimentatore per inserirla completamente nel telaio, quindi spingere la maniglia della camma in posizione di chiusura, assicurandosi che il fermo di rilascio della maniglia della camma scatti nella posizione di blocco.
+. Ricollegare il cavo di alimentazione e fissarlo all'alimentatore utilizzando il meccanismo di blocco del cavo di alimentazione.
++
+
+NOTE: Collegare solo il cavo di alimentazione all'alimentatore. Non collegare il cavo di alimentazione a una fonte di alimentazione.
+
+
+
+
+
+== Fase 2: Spostare una ventola
+
+Lo spostamento di un modulo ventola durante la sostituzione dello chassis comporta una sequenza specifica di attività.
+
+. Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
+. Premere verso il basso il fermo di rilascio sulla maniglia della camma del modulo ventola, quindi tirare la maniglia della camma verso il basso.
++
+Il modulo della ventola si allontana leggermente dallo chassis.
+
++
+image::../media/drw_fas32xx_fan.png[ventola drw fas32xx]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Maniglia CAM 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Modulo della ventola
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Fermo di rilascio della maniglia della camma
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+LED attenzione modulo ventola
+
+|===
+. Estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera in modo che non ruoti fuori dal telaio.
++
+
+CAUTION: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
+
+. Mettere da parte il modulo della ventola.
+. Ripetere i passaggi precedenti per tutti i moduli ventola rimanenti.
+. Inserire il modulo della ventola nel telaio sostitutivo allineandolo con l'apertura e facendolo scorrere nel telaio.
+. Spingere con decisione la maniglia della camma del modulo della ventola in modo che sia inserita completamente nel telaio.
++
+La maniglia della camma si solleva leggermente quando il modulo della ventola è completamente inserito.
+
+. Ruotare la maniglia della camma verso l'alto nella posizione di chiusura, assicurandosi che il fermo di rilascio della maniglia della camma scatti nella posizione di blocco.
++
+Il LED della ventola deve essere verde dopo che la ventola è stata inserita e ha portato alla velocità operativa.
+
+. Ripetere questa procedura per i moduli ventola rimanenti.
+. Allineare il pannello con i perni a sfera, quindi spingere delicatamente il pannello sui perni a sfera.
+
+
+
+
+== Fase 3: Rimuovere il modulo controller
+
+Per sostituire lo chassis, è necessario rimuovere il modulo controller o i moduli dal vecchio chassis.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
++
+image::../media/drw_32xx_cbl_mgmt_arm.png[ARM. gestione cbl. 32xx drw]
+
+. Allentare la vite a testa zigrinata sulla maniglia della camma sul modulo controller.
++
+image::../media/drw_8020_cam_handle_thumbscrew.png[vite a testa zigrinata con impugnatura a camma drw 8020]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Vite a testa zigrinata 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Maniglia CAM
+
+|===
+. Tirare la maniglia della camma verso il basso e iniziare a far scorrere il modulo controller fuori dallo chassis.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Mettere da parte il modulo controller in un luogo sicuro e ripetere questa procedura se si dispone di un altro modulo controller nello chassis.
+
+
+
+
+== Fase 4: Sostituire uno chassis all'interno del rack dell'apparecchiatura o dell'armadietto del sistema
+
+Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema.
+
+. Rimuovere le viti dai punti di montaggio del telaio.
++
+
+NOTE: Se il sistema si trova in un cabinet di sistema, potrebbe essere necessario rimuovere la staffa di ancoraggio posteriore.
+
+. Con l'aiuto di due o tre persone, far scorrere il vecchio chassis dalle guide del rack in un cabinet di sistema o dalle staffe _L_ in un rack dell'apparecchiatura, quindi metterlo da parte.
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Utilizzando due o tre persone, installare lo chassis sostitutivo nel rack dell'apparecchiatura o nell'armadietto del sistema guidandolo sulle guide del rack in un cabinet del sistema o sulle staffe _L_ in un rack dell'apparecchiatura.
+. Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
+. Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dal vecchio chassis.
+. Se non è già stato fatto, installare il pannello.
+
+
+
+
+== Fase 5: Installare il controller
+
+Dopo aver installato il modulo controller e qualsiasi altro componente nel nuovo chassis, avviarlo in uno stato in cui è possibile eseguire il test di diagnostica di interconnessione.
+
+Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Collegare nuovamente la console al modulo controller, quindi ricollegare la porta di gestione.
+. Ripetere i passi precedenti se è presente un secondo controller da installare nel nuovo chassis.
+. Completare l'installazione del modulo controller:
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Quindi, eseguire questa procedura... 
+
+
+ a| 
+Una coppia ha
+ a| 
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Ripetere i passi precedenti per il secondo modulo controller nel nuovo chassis.
+
+
+
+
+ a| 
+Una configurazione standalone
+ a| 
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Reinstallare il pannello di chiusura, quindi passare alla fase successiva.
+
+
+|===
+. Collegare e accendere gli alimentatori a diverse fonti di alimentazione.
+. Avviare ciascun controller in modalità di manutenzione:
++
+.. Quando ciascun controller avvia l'avvio, premere `Ctrl-C` per interrompere il processo di avvio quando viene visualizzato il messaggio `Press Ctrl-C for Boot Menu`.
++
+
+NOTE: Se il prompt non viene visualizzato e i moduli controller avviano ONTAP, immettere `halt`, Quindi, al prompt DEL CARICATORE, immettere `boot_ontap`, premere `Ctrl-C` quando richiesto, quindi ripetere questo passaggio.
+
+.. Dal menu di avvio, selezionare l'opzione per la modalità di manutenzione.
+
+
+

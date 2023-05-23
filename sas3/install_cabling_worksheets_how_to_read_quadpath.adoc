@@ -1,0 +1,74 @@
+---
+permalink: sas3/install-cabling-worksheets-how-to-read-quadpath.html 
+sidebar: sidebar 
+keywords: example, guide, read, apply, complete, worksheet, stack, disk, shelves, shelf, iom12, quad-pathed, connectivity, how to read a worksheet to cable controller-to-stack connections for quad-pathed connectivity 
+summary: È possibile utilizzare questo esempio per fornire istruzioni su come leggere e applicare un foglio di lavoro completo a stack di cavi di shelf di dischi con moduli IOM12/IOM12B per la connettività quad-path. 
+---
+= Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività quad-path - shelf con moduli IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare questo esempio per fornire istruzioni su come leggere e applicare un foglio di lavoro completo a stack di cavi di shelf di dischi con moduli IOM12/IOM12B per la connettività quad-path.
+
+.A proposito di questa attività
+* Questa procedura fa riferimento al seguente foglio di lavoro e all'esempio di cablaggio per dimostrare come leggere un foglio di lavoro per collegare le connessioni controller-to-stack.
++
+La configurazione utilizzata in questo esempio è una configurazione ha quad-path con due HBA SAS a quattro porte su ciascun controller e due stack di shelf di dischi con moduli IOM12.
+
+* Se si dispone di una configurazione a controller singolo, saltare i passaggi secondari b e d per il cablaggio a un secondo controller.
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulla convenzione di numerazione degli slot del controller, sulla connettività shelf-to-shelf e sulla connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
+
+
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[drw foglio di lavoro qpha slot 1 e 2 due 4porthbas due stack nau]
+
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[drw qpha slot 1 e 2 due 4porthbas due stack nau]
+
+.Fasi
+. Coppia di porte per cavi 1a/2b su ciascun controller per lo stack 1:
++
+Si tratta del cablaggio multipath per lo stack 1.
+
++
+.. Porta 1a del controller del cavo per lo stack 1, porta 1 IOM A del primo shelf.
+.. Porta 1a del controller del cavo 2 allo stack 1, porta 1 IOM B del primo shelf.
+.. Cavo controller 1 porta 2b per lo stack 1, ultima porta IOM B 3.
+.. Porta 2b del controller del cavo per lo stack 1, porta IOM A dell'ultimo shelf 3.
+
+
+. Coppia di porte per cavi 2a/1d su ciascun controller per lo stack 1:
++
+Si tratta del cablaggio a percorso quadruplo per lo stack 1. Una volta completato, lo stack 1 dispone di connettività a quattro percorsi per ciascun controller.
+
++
+.. Cavo controller 1 porta 2a per lo stack 1, porta IOM A del primo shelf 2.
+.. Porta 2a del controller del cavo per lo stack 1, porta IOM B del primo shelf 2.
+.. Cavo controller 1 porta 1d per lo stack 1, ultima porta IOM B 4.
+.. Porta 1d del controller del cavo 2 per lo stack 1, porta IOM A dell'ultimo shelf 4.
+
+
+. Coppia di porte per cavi 1c/2d su ciascun controller per lo stack 2:
++
+Questo è il cablaggio multipath per lo stack 2.
+
++
+.. Porta 1c del controller del cavo per lo stack 2, porta 1 IOM A del primo shelf.
+.. Porta 1c del controller del cavo per lo stack 2, porta 1 IOM B del primo shelf.
+.. Cavo controller 1 porta 2d per lo stack 2, ultima porta IOM B dello shelf 3.
+.. Cavo controller 2 porta 2d per lo stack 2, ultima porta IOM A 3.
+
+
+. Coppia di porte per cavi 2c/1b su ciascun controller per lo stack 2:
++
+Si tratta del cablaggio a percorso quadruplo per lo stack 2. Una volta completato, lo stack 2 dispone di connettività a quattro percorsi per ciascun controller.
+
++
+.. Cavo controller 1 porta 2c per lo stack 2, primo shelf IOM A porta 2.
+.. Porta 2c del controller del cavo per lo stack 2, porta IOM B del primo shelf 2.
+.. Cavo controller 1 porta 1b per lo stack 2, ultima porta IOM B 4.
+.. Cavo controller 2 porta 1b per lo stack 2, ultima porta IOM A 4.
+
+
+

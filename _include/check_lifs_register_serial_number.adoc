@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+Prima di riportare il nodo _replacement_ in servizio, verificare che i AutoSupport si trovino sulle rispettive porte home, registrare il numero di serie del nodo _replacement_, se abilitato, e ripristinare il giveback automatico.
+
+.Fasi
+. Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
++
+Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert`
+
+. Registrare il numero di serie del sistema presso il supporto NetApp.
++
+** Se AutoSupport è attivato, inviare un messaggio AutoSupport per registrare il numero di serie.
+** Se AutoSupport non è attivato, chiamare https://mysupport.netapp.com["Supporto NetApp"] per registrare il numero di serie.
+
+
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+

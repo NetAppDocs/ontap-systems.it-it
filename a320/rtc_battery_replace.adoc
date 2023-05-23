@@ -1,0 +1,202 @@
+---
+permalink: a320/rtc-battery-replace.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replace, real-time, clock, rtc, battery, controller, system, service, application, accurate, time, synchronization, function, shut, down, impair, reinstall, time, date, complete, process, replace the real-time clock battery, shut down the impaired controller, replace the RTC battery, reinstall the controller module and setting time/date after RTC battery replacement, complete the replacement process 
+summary: 'Si sostituisce la batteria dell"orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell"ora accurata continuino a funzionare.' 
+---
+= Sostituire la batteria dell'orologio in tempo reale - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Fase 1: Spegnere il controller
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Sostituire la batteria RTC
+
+È necessario individuare la batteria RTC all'interno del modulo del controller, quindi seguire la sequenza specifica di passaggi.
+
+
+
+== Fase 3: Rimuovere il modulo controller
+
+Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare l'alimentazione del modulo controller dalla fonte di alimentazione.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+image::../media/drw_a320_controller_cable_unplug_animated_gif.png[cavo del controller drw a320. scollegare il gif animato]
+
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
+. Rimuovere il modulo controller dal telaio:
++
+image::../media/drw_a320_controller_remove_animated_gif.png[il controller drw a320 rimuove il gif animato]
+
++
+.. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller.
+.. Premere verso il basso la linguetta arancione sulla parte superiore del meccanismo di chiusura fino a liberare il perno di chiusura sul telaio.
+
+
++
+Il gancio del meccanismo di chiusura deve essere quasi verticale e non deve essere lontano dal perno del telaio.
+
++
+.. Tirare delicatamente il modulo controller di alcuni pollici verso di sé in modo da poter afferrare i lati del modulo controller.
+.. Con entrambe le mani, estrarre delicatamente il modulo controller dal telaio e posizionare il modulo su una superficie piana e stabile.
+
+
+
+
+
+
+== Fase 4: Sostituire la batteria RTC
+
+image::../media/drw_a320_rtc_batt_replace_animated_gif.png[drw a320 rtc batt sostituire gif animato]
+
+. Rimuovere il coperchio PCIe.
++
+.. Svitare la vite a testa zigrinata blu situata sopra le porte integrate sul retro del modulo controller.
+.. Far scorrere il coperchio verso di sé e ruotarlo verso l'alto.
+.. Rimuovere il coperchio e metterlo da parte.
+
+
+. Individuare, rimuovere e sostituire la batteria RTC:
++
+.. Utilizzando la mappa FRU, individuare la batteria RTC sul modulo controller.
+.. Estrarre delicatamente la batteria dal supporto, ruotarla verso l'esterno, quindi estrarla dal supporto.
++
+
+NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supporto. La batteria è contrassegnata con un segno più e deve essere posizionata correttamente nel supporto. Un segno più vicino al supporto indica come posizionare la batteria.
+
+.. Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
+.. Prendere nota della polarità della batteria RTC, quindi inserirla nel supporto inclinandola e spingendola verso il basso.
+
+
+. Controllare visivamente che la batteria sia completamente installata nel supporto e che la polarità sia corretta.
+. Reinstallare il coperchio PCIe sul modulo controller.
+
+
+
+
+== Fase 5: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
+
+Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
+
+. Se non è già stato fatto, chiudere il condotto dell'aria o il coperchio del modulo controller.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Se gli alimentatori sono stati scollegati, ricollegarli e reinstallare i fermi dei cavi di alimentazione.
+. Completare la reinstallazione del modulo controller:
++
+.. Assicurarsi che i bracci del dispositivo di chiusura siano bloccati in posizione estesa.
+.. Utilizzando i bracci del dispositivo di chiusura, spingere il modulo controller nell'alloggiamento dello chassis fino a quando non si arresta.
++
+
+NOTE: Non spingere verso il basso il meccanismo di chiusura sulla parte superiore dei bracci del dispositivo di chiusura. Per farlo, sollevare il meccanismo di blocco e impedire lo scorrimento del modulo controller nel telaio.
+
+.. Tenere premuti le linguette arancioni sulla parte superiore del meccanismo di chiusura.
+.. Spingere delicatamente il modulo controller nell'alloggiamento dello chassis fino a quando non è a filo con i bordi dello chassis.
++
+
+NOTE: I bracci del meccanismo di chiusura scorrono nel telaio.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+.. Rilasciare i fermi per bloccare il modulo controller in posizione.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Arrestare il controller al prompt DEL CARICATORE.
+
+
+. Ripristinare l'ora e la data sul controller:
++
+.. Controllare la data e l'ora del controller integro con `show date` comando.
+.. Al prompt DEL CARICATORE sul controller di destinazione, controllare l'ora e la data.
+.. Se necessario, modificare la data con `set date mm/dd/yyyy` comando.
+.. Se necessario, impostare l'ora, in GMT, utilizzando `set time hh:mm:ss` comando.
+.. Confermare la data e l'ora sul controller di destinazione.
+
+
+. Al prompt DEL CARICATORE, immettere `bye` Reinizializzare le schede PCIe e gli altri componenti e lasciare riavviare il controller.
+. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 6: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

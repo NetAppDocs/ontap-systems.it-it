@@ -1,0 +1,47 @@
+---
+permalink: fas9000/led-module-replace.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, led, usb, module, replace, hot-swap, non-disruptive, replacement, return, failed, part 
+summary: È possibile sostituire un modulo LED USB senza interrompere il servizio. 
+---
+= Sostituire un modulo USB LED - AFF A700 e FAS9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un modulo LED USB senza interrompere il servizio.
+
+Il modulo USB LED FAS9000 o AFF A700 fornisce connettività alle porte della console e allo stato del sistema. La sostituzione di questo modulo non richiede strumenti.
+
+.Fasi
+. Rimuovere il vecchio modulo USB LED:
++
+image::../media/led_3.png[led 3]
+
++
+.. Dopo aver rimosso il pannello, individuare il modulo USB LED nella parte anteriore dello chassis, nella parte inferiore sinistra.
+.. Far scorrere il fermo per espellere parzialmente il modulo.
+.. Estrarre il modulo dall'alloggiamento per scollegarlo dalla scheda intermedia. Non lasciare vuoto lo slot.
+
+
+. Installare il nuovo modulo USB LED:
++
+image::../media/led_4.png[led 4]
+
++
+.. Allineare il modulo all'alloggiamento con la tacca nell'angolo del modulo posizionato vicino al dispositivo di chiusura a scorrimento sul telaio. L'alloggiamento impedisce di installare il modulo capovolto.
+.. Spingere il modulo nell'alloggiamento fino a posizionarlo completamente a filo con lo chassis.
++
+Si avverte uno scatto quando il modulo è sicuro e collegato alla scheda intermedia.
+
+
+
+
+
+
+
+== Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

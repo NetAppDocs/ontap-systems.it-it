@@ -1,0 +1,296 @@
+---
+permalink: a300/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: aff a300, move the controller module hardware 
+summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
+---
+= Sostituire il modulo controller - AFF A300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
+
+
+
+== Fase 1: Aprire il modulo controller
+
+Per sostituire il modulo controller, è necessario prima rimuovere il vecchio modulo controller dal telaio.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
++
+image::../media/drw_32xx_cbl_mgmt_arm.png[ARM. gestione cbl. 32xx drw]
+
+. Se i moduli SFP sono stati lasciati nel sistema dopo aver rimosso i cavi, spostarli nel nuovo modulo controller.
+. Allentare la vite a testa zigrinata sulla maniglia della camma sul modulo controller.
++
+image::../media/drw_8020_cam_handle_thumbscrew.png[vite a testa zigrinata con impugnatura a camma drw 8020]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Vite a testa zigrinata 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Maniglia CAM
+
+|===
+. Tirare la maniglia della camma verso il basso e iniziare a far scorrere il modulo controller fuori dallo chassis.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+
+
+
+
+== Fase 2: Spostare il dispositivo di avvio
+
+Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecchio controller e inserirlo nel nuovo controller.
+
+. Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
++
+image::../media/drw_rxl_boot_media.png[supporto di avvio drw rxl]
+
+. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+. Spostare il supporto di avvio nel nuovo modulo controller, allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+. Premere il supporto di avvio verso il basso per inserire il pulsante di blocco sull'alloggiamento del supporto di avvio.
+
+
+
+
+== Fase 3: Spostare la batteria NVMEM
+
+Per spostare la batteria NVMEM dal vecchio modulo controller al nuovo modulo controller, è necessario eseguire una sequenza specifica di passaggi.
+
+. Controllare il LED NVMEM:
++
+** Se il sistema si trova in una configurazione ha, passare alla fase successiva.
+** Se il sistema si trova in una configurazione standalone, spegnere completamente il modulo controller, quindi controllare il LED NVRAM identificato dall'icona NV.
++
+image::../media/drw_hw_nvram_icon.png[icona nvram drw hw]
+
++
+
+NOTE: Il LED NVRAM lampeggia durante il trasferimento dei contenuti nella memoria flash quando si arresta il sistema. Una volta completata la destage, il LED si spegne.
+
++
+*** In caso di interruzione dell'alimentazione senza un arresto completo, il LED NVMEM lampeggia fino al completamento della destage, quindi il LED si spegne.
+*** Se il LED è acceso e l'alimentazione è accesa, i dati non scritti vengono memorizzati su NVMEM.
++
+Questo si verifica in genere durante un arresto non controllato dopo l'avvio di ONTAP.
+
+
+
+
+
+. Aprire il condotto dell'aria della CPU e individuare la batteria NVMEM.
++
+image::../media/drw_rxl_nvmem_battery.png[batteria nvmem drw rxl]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Linguetta di blocco della batteria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Batteria NVMEM
+
+|===
+. Afferrare la batteria e premere la linguetta di bloccaggio blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller.
+. Rimuovere la batteria dal modulo controller e metterla da parte.
+
+
+
+
+== Fase 4: Spostamento dei DIMM
+
+Per spostare i moduli DIMM, individuarli e spostarli dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
+
+. Individuare i DIMM sul modulo controller.
+. Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
+. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
++
+Il numero e la posizione dei DIMM di sistema dipendono dal modello del sistema.
+
++
+La seguente illustrazione mostra la posizione dei DIMM di sistema:
+
++
+image::../media/drw_rxl_dimms.png[dimm rxl drw]
+
+. Individuare lo slot in cui si desidera installare il DIMM.
+. Assicurarsi che le linguette di espulsione del modulo DIMM sul connettore siano aperte, quindi inserire il modulo DIMM correttamente nello slot.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+. Ripetere questa procedura per i DIMM rimanenti.
+. Spostare la batteria NVMEM nel modulo controller sostitutivo.
+. Allineare la linguetta o le linguette sul supporto della batteria con le tacche sul lato del modulo controller, quindi spingere delicatamente verso il basso l'alloggiamento della batteria fino a quando non scatta in posizione.
+
+
+
+
+== Fase 5: Spostamento di una scheda PCIe
+
+Per spostare le schede PCIe, individuarle e spostarle dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
+
+Il nuovo modulo controller deve essere pronto in modo da poter spostare le schede PCIe direttamente dal vecchio modulo controller agli slot corrispondenti del nuovo.
+
+. Allentare la vite a testa zigrinata sul pannello laterale del modulo controller.
+. Estrarre il pannello laterale dal modulo controller.
++
+image::../media/drw_rxl_pcie.png[pcie drw rxl]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+
+
+
+ a| 
+Pannello laterale
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+
+
+
+ a| 
+Scheda PCIe
+
+|===
+. Rimuovere la scheda PCIe dal vecchio modulo controller e metterla da parte.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava la scheda PCIe.
+
+. Ripetere il passaggio precedente per le restanti schede PCIe nel vecchio modulo controller.
+. Aprire il nuovo pannello laterale del modulo controller, se necessario, estrarre la piastra di copertura della scheda PCIe, se necessario, e installare con cautela la scheda PCIe.
++
+Assicurarsi di allineare correttamente la scheda nello slot ed esercitare una pressione uniforme sulla scheda quando viene inserita nello slot. La scheda deve essere inserita correttamente nello slot.
+
+. Ripetere il passaggio precedente per le restanti schede PCIe che si sono messe da parte.
+. Chiudere il pannello laterale e serrare la vite a testa zigrinata.
+
+
+
+
+== Fase 6: Installare il controller
+
+Dopo aver installato i componenti del vecchio modulo controller nel nuovo modulo controller, è necessario installare il nuovo modulo controller nel telaio del sistema e avviare il sistema operativo.
+
+Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+
+
+NOTE: Il sistema potrebbe aggiornare il firmware di sistema all'avvio. Non interrompere questo processo. La procedura richiede di interrompere il processo di avvio, che in genere può essere eseguito in qualsiasi momento dopo la richiesta. Tuttavia, se il sistema aggiorna il firmware del sistema all'avvio, è necessario attendere il completamento dell'aggiornamento prima di interrompere il processo di avvio.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, chiudere il condotto dell'aria della CPU.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
++
+
+NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+
+. Completare la reinstallazione del modulo controller:
++
+[cols="1,2"]
+|===
+| Se il sistema è in... | Quindi, eseguire questa procedura... 
+
+
+ a| 
+Una coppia ha
+ a| 
+ The controller module begins to boot as soon as it is fully seated in the chassis. Be prepared to interrupt the boot process.
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il controller inizia ad avviarsi non appena viene inserito nello chassis.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Quando viene visualizzato il messaggio `Press Ctrl-C for Boot Menu`, premere `Ctrl-C` per interrompere il processo di avvio.
++
+
+NOTE: Se il prompt non viene visualizzato e il modulo controller viene avviato in ONTAP, immettere `halt`, Quindi, al prompt DEL CARICATORE, immettere `boot_ontap`, premere `Ctrl-C` Quando richiesto, quindi avviare in modalità manutenzione.
+
+.. Selezionare l'opzione per avviare la modalità di manutenzione dal menu visualizzato.
+
+
+
+
+ a| 
+Una configurazione standalone
+ a| 
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Ricollegare i cavi di alimentazione agli alimentatori e alle fonti di alimentazione, accendere l'alimentazione per avviare il processo di avvio, quindi premere `Ctrl-C` dopo aver visualizzato `Press Ctrl-C for Boot Menu` messaggio.
++
+
+NOTE: Se il prompt non viene visualizzato e il modulo controller viene avviato in ONTAP, immettere `halt`, Quindi, al prompt DEL CARICATORE, immettere `boot_ontap`, premere `Ctrl-C` Quando richiesto, quindi avviare in modalità manutenzione.
+
+.. Dal menu di avvio, selezionare l'opzione per la modalità di manutenzione.
+
+
+|===
++
+*Importante:* durante il processo di avvio, potrebbero essere visualizzate le seguenti istruzioni:
+
++
+** Viene visualizzato un messaggio di avviso che indica una mancata corrispondenza dell'ID di sistema e chiede di ignorare l'ID di sistema.
+** Un avviso che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo. Puoi rispondere in tutta sicurezza `y` a questi prompt.
+
+
+

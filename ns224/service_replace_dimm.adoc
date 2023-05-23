@@ -1,0 +1,168 @@
+---
+permalink: ns224/service-replace-dimm.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, nondisruptive, dimm, i/o, replace a dimm 
+summary: 'È possibile sostituire un DIMM guasto senza interruzioni in uno shelf di dischi NS224 acceso e durante l"i/O.' 
+---
+= Sostituire un DIMM - shelf NS224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un DIMM guasto senza interruzioni in uno shelf di dischi NS224 acceso e durante l'i/O.
+
+.Prima di iniziare
+* Il modulo NSM del partner dello shelf deve essere attivo e funzionante ed essere cablato correttamente in modo che lo shelf mantenga la connettività quando si rimuove il modulo NSM con la FRU (modulo NSM di destinazione) guasta.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
+
+* Tutti gli altri componenti del sistema, compresi gli altri tre DIMM, devono funzionare correttamente.
+
+
+.A proposito di questa attività
+* Attendere almeno 70 secondi tra la rimozione e l'installazione del modulo NVMe shelf (NSM).
++
+Ciò consente a ONTAP di elaborare l'evento di rimozione NSM.
+
+* *Best practice:* la Best practice consiste nel disporre delle versioni correnti del firmware NVMe shelf module (NSM) e del firmware del disco sul sistema prima di sostituire i componenti FRU.
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
+
++
+[NOTE]
+====
+Non riportare il firmware a una versione che non supporta lo shelf e i relativi componenti.
+
+====
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf per individuare fisicamente lo shelf interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se non si conosce `_shelf_name_` dello shelf interessato, eseguire `storage shelf show` comando.
+
++
+Uno shelf ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando `off` opzione.
+
+* Quando si disimballano i moduli DIMM sostitutivi, conservare tutti i materiali di imballaggio per utilizzarli quando si restituisce il modulo DIMM guasto.
++
+Per ottenere il numero RMA o ulteriore assistenza per la procedura di sostituzione, contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico).
+
+* Per sostituire un modulo DIMM, è possibile utilizzare l'animazione seguente o la procedura scritta.
++
+.Animazione - Sostituisci un DIMM in uno shelf di dischi NS224
+video::eef28b10-ed93-4aa7-bfce-aa86002f20a2[panopto]
+
+
+.Fasi
+. Mettere a terra l'utente.
+. Scollegare il cablaggio dal modulo NSM che contiene la FRU che si sta sostituendo:
++
+.. Scollegare il cavo di alimentazione dall'alimentatore aprendo il fermo del cavo di alimentazione, se si tratta di un alimentatore CA, oppure svitando le due viti ad alette, se si tratta di un alimentatore CC, quindi scollegare il cavo di alimentazione dall'alimentatore.
++
+Gli alimentatori non dispongono di un interruttore di alimentazione.
+
+.. Scollegare il cablaggio dello storage dalle porte del modulo NSM.
++
+Prendere nota delle porte del modulo NSM a cui ciascun cavo è collegato. Ricollegare i cavi alle stesse porte quando si reinserisce il modulo NSM, più avanti in questa procedura.
+
+
+
+. Rimuovere il modulo NSM dallo shelf:
++
+.. Far passare le dita di indice attraverso i fori dei meccanismi di blocco su entrambi i lati del modulo NSM.
++
+
+NOTE: Se si rimuove il modulo NSM inferiore e la guida inferiore impedisce l'accesso ai meccanismi di blocco, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
+.. Con i pollici, tenere premuti le linguette arancioni sulla parte superiore dei meccanismi di blocco.
++
+I meccanismi di chiusura si sollevano, liberando i perni di chiusura sullo scaffale.
+
+.. Tirare delicatamente fino a quando il modulo NSM non si trova a circa un terzo del percorso di uscita dallo scaffale, afferrare i lati del modulo NSM con entrambe le mani per sostenerne il peso, quindi posizionarlo su una superficie piana e stabile.
++
+Quando si inizia a tirare, i bracci del meccanismo di chiusura si estendono dal modulo NSM e si bloccano in posizione completamente estesa.
+
+
+
+. Allentare la vite ad alette del coperchio del modulo NSM e aprire il coperchio.
++
+L'etichetta FRU sul coperchio del modulo NSM indica la posizione dei quattro DIMM, due su entrambi i lati del dissipatore di calore, al centro del modulo NSM.
+
+. Identificare fisicamente il DIMM guasto.
++
+Quando un DIMM è guasto, il sistema registra un messaggio di avviso alla console di sistema che indica quale DIMM è difettoso.
+
+. Sostituire il DIMM guasto:
++
+.. Prendere nota dell'orientamento del DIMM nello slot in modo da poter inserire il DIMM sostitutivo con lo stesso orientamento.
+.. Estrarre il modulo DIMM dal relativo slot spingendo lentamente le linguette di espulsione su entrambe le estremità dello slot DIMM, quindi sollevarlo per estrarlo dallo slot.
++
+
+NOTE: Tenere il modulo DIMM per gli angoli o i bordi per evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
++
+Le linguette dell'espulsore rimangono in posizione aperta.
+
+.. Rimuovere il modulo DIMM di ricambio dalla confezione antistatica per la spedizione.
+.. Tenere il modulo DIMM per gli angoli, quindi inserirlo correttamente in uno slot.
++
+La tacca sulla parte inferiore del DIMM, tra i pin, deve allinearsi con la linguetta nello slot.
+
++
+Una volta inserito correttamente, il DIMM dovrebbe essere inserito facilmente ma saldamente nello slot. In caso contrario, reinserire il DIMM.
+
+.. Spingere con cautela, ma con decisione, il bordo superiore del modulo DIMM fino a quando le linguette di espulsione non scattano in posizione sulle tacche di entrambe le estremità del modulo DIMM.
+
+
+. Chiudere il coperchio del modulo NSM, quindi serrare la vite ad alette.
+. Reinserire il modulo NSM nello shelf:
++
+.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Con entrambe le mani, far scorrere delicatamente il modulo NSM nello shelf fino a quando il peso del modulo NSM non è completamente supportato dallo shelf.
+.. Spingere il modulo NSM nello shelf fino a quando non si ferma (circa mezzo pollice dal retro dello shelf).
++
+È possibile posizionare i pollici sulle linguette arancioni sulla parte anteriore di ciascun gancio per le dita (dei bracci del meccanismo di chiusura) per inserire il modulo NSM.
+
+.. Far passare le dita di indice attraverso i fori dei meccanismi di blocco su entrambi i lati del modulo NSM.
++
+
+NOTE: Se si inserisce il modulo NSM inferiore e la guida inferiore ostruisce l'accesso ai meccanismi di blocco, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
+.. Con i pollici, tenere premuti le linguette arancioni sulla parte superiore dei meccanismi di blocco.
+.. Spingere delicatamente in avanti i fermi fino al punto di arresto.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco, quindi continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
++
+Il modulo NSM deve essere inserito completamente nello shelf e a filo con i bordi dello shelf.
+
+
+
+. Ricollegare il cablaggio al modulo NSM:
++
+.. Ricollegare il cablaggio dello storage alle stesse due porte del modulo NSM.
++
+I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto. Quando un cavo è inserito correttamente, scatta in posizione.
+
+.. Ricollegare il cavo di alimentazione all'alimentatore, quindi fissare il cavo di alimentazione con il relativo fermo, se si tratta di un alimentatore CA, oppure serrare le due viti ad alette, se si tratta di un alimentatore CC.
++
+Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.
+
++
+Inoltre, entrambi i LED LNK (verde) della porta del modulo NSM si illuminano. Se il LED LNK non si accende, ricollegare il cavo.
+
+
+
+. Verificare che i LED di attenzione (ambra) sul modulo NSM contenente il modulo DIMM guasto e il pannello del display operatore dello shelf non siano più accesi.
++
+I LED attenzione del modulo NSM si spengono dopo il riavvio del modulo NSM e non rilevano più un problema DIMM. Questa operazione può richiedere da tre a cinque minuti.
+
+. Verificare che il modulo NSM sia cablato correttamente eseguendo Active IQ Config Advisor.
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
+
+

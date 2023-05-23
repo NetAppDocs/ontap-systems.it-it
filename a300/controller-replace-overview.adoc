@@ -1,0 +1,45 @@
+---
+permalink: a300/controller-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a300, prerequisite, replace the controller module 
+summary: È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso. 
+---
+= Panoramica della sostituzione del modulo controller - AFF A300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.
+
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Se il sistema si trova in una coppia ha, il controller integro deve essere in grado di assumere il controllo che viene sostituito (indicato in questa procedura come "`controller alterato`").
+* Se il sistema si trova in una configurazione MetroCluster, consultare la sezione https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Scelta della procedura di ripristino corretta"] per determinare se utilizzare questa procedura.
++
+Se si tratta della procedura da utilizzare, tenere presente che la procedura di sostituzione del controller per un controller in una configurazione MetroCluster a quattro o otto nodi è la stessa di una coppia ha. Non sono richieste procedure specifiche di MetroCluster, poiché il guasto è limitato a una coppia ha e i comandi di failover dello storage possono essere utilizzati per fornire operazioni senza interruzioni durante la sostituzione.
+
+* Questa procedura include i passaggi per riassegnare automaticamente o manualmente i dischi al controller _replacement_, a seconda della configurazione del sistema.
++
+Eseguire la riassegnazione del disco come indicato nella procedura.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
+* Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
+* In questa procedura, il dispositivo di boot viene spostato dal controller guasto al controller _replacement_ in modo che il controller _replacement_ si avvii nella stessa versione di ONTAP del vecchio modulo controller.
+* Tutte le schede PCIe spostate dal vecchio modulo controller al nuovo modulo controller o aggiunte dall'inventario esistente del sito del cliente devono essere supportate dal modulo controller sostitutivo.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* È importante applicare i comandi descritti di seguito ai sistemi corretti:
++
+** Il controller _alterato_ è il controller che viene sostituito.
+** Il controller _replacement_ è il nuovo controller che sostituisce il controller compromesso.
+** Il controller _healthy_ è il controller sopravvissuto.
+
+
+* È sempre necessario acquisire l'output della console del controller in un file di testo.
++
+In questo modo è possibile registrare la procedura per risolvere eventuali problemi riscontrati durante il processo di sostituzione.
+
+

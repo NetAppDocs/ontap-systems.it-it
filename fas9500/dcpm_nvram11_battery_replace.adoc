@@ -1,0 +1,74 @@
+---
+permalink: fas9500/dcpm_NVRAM11_battery_replace.html 
+sidebar: sidebar 
+keywords: FAS9500 
+summary: 'Per sostituire a caldo un modulo di alimentazione del controller di destinazione (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.' 
+---
+= Sostituire il modulo di alimentazione Destage Control contenente la batteria NVRAM11 - FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire a caldo un modulo di alimentazione del controller di destinazione (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.
+
+È necessario disporre di un modulo DCPM sostitutivo prima di rimuovere il modulo guasto dal telaio e sostituirlo entro cinque minuti dalla rimozione. Una volta rimosso il modulo DCPM dallo chassis, non esiste alcuna protezione per lo shutdown per il modulo controller proprietario del modulo DCPM, ad eccezione del failover verso l'altro modulo controller.
+
+
+
+== Fase 1: Sostituire il modulo DCPM
+
+Per sostituire il modulo DCPM nel sistema, è necessario rimuovere il modulo DCPM guasto dal sistema e sostituirlo con un nuovo modulo DCPM.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello anteriore del sistema e metterlo da parte.
+. Individuare il modulo DCPM guasto nella parte anteriore del sistema cercando il LED di attenzione sul modulo.
++
+Se il modulo è guasto, il LED diventa ambra fisso.
+
++
+
+IMPORTANT: Il modulo DCPM deve essere sostituito nello chassis entro cinque minuti dalla rimozione, altrimenti il controller associato si spegnerà.
+
+. Premere il pulsante di blocco terracotta sulla maniglia del modulo, quindi estrarre il modulo DCPM dal telaio.
++
+.Animazione - rimuovere/installare DCPM
+video::c067cf9d-35b8-4fbe-9573-ae78004c2328[panopto]
++
+image::../media/drw_9500_remove_NV_battery.svg[Drw 9500 rimuovere la batteria NV]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di blocco terracotta del modulo DCPM
+
+|===
+. Allineare l'estremità del modulo DCPM con l'apertura dello chassis, quindi farlo scorrere delicatamente nello chassis fino a farlo scattare in posizione.
++
+
+NOTE: Il modulo e lo slot sono dotati di chiavi. Non forzare il modulo nell'apertura. Se il modulo non si inserisce facilmente, riallineare il modulo e inserirlo nello chassis.
+
++
+Il LED ambra lampeggia quattro volte all'inserimento e il LED verde lampeggia anche se la batteria sta fornendo tensione. Se non lampeggia, probabilmente dovrà essere sostituito.
+
+
+
+
+
+== Fase 2: Smaltire le batterie
+
+È necessario smaltire le batterie in conformità alle normative locali in materia di riciclaggio o smaltimento delle batterie. Se non si riesce a smaltire correttamente le batterie, è necessario restituirle a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Informazioni sulla sicurezza e avvisi normativi"^]
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.
