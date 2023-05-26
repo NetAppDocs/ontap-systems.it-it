@@ -40,7 +40,7 @@ Uno o più alimentatori alimentano lo shelf di dischi.
 .2+| image:../media/drw_sas_fault_icon.png[""] .2+| Attenzione  a| 
 Ambra fisso
  a| 
-Si è verificato un errore con la funzione di una o più FRU: Shelf di dischi, dischi, moduli IOM12 o alimentatori.
+Si è verificato un errore con la funzione di una delle FRU: Shelf di dischi, dischi, moduli IOM12/IOM12B o alimentatori.
 
 Controllare i messaggi di evento per determinare l'azione correttiva da intraprendere.
 
@@ -64,7 +64,7 @@ Blu fisso
  a| 
 L'amministratore di sistema ha attivato questa funzione LED per facilitare l'individuazione fisica dello shelf di dischi che richiede assistenza.
 
-Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12 si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
+Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12/IOM12B si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
 
 |===
 A seconda del modello di shelf di dischi in uso, il display dell'operatore ha un aspetto diverso; tuttavia, i tre LED sono disposti allo stesso modo.
@@ -75,13 +75,13 @@ image::../media/drw_opd.gif[opd drw]
 
 
 
-== LED del modulo IOM12
+== LED del modulo IOM12/IOM12B
 
-I LED sul modulo IOM12 indicano se il modulo funziona correttamente, se è pronto per il traffico i/o e se ci sono problemi con l'hardware.
+I LED sul modulo IOM12/IOM12B indicano se il modulo funziona correttamente, se è pronto per il traffico i/o e se ci sono problemi con l'hardware.
 
-La seguente tabella descrive i LED del modulo IOM12 associati alla funzione del modulo e alla funzione di ciascuna porta SAS del modulo.
+La seguente tabella descrive i LED del modulo IOM12/IOM12B associati alla funzione del modulo e alla funzione di ciascuna porta SAS del modulo.
 
-Il modulo IOM12 viene utilizzato negli shelf di dischi DS460C, DS224C e DS212C.
+Il modulo IOM12/IOM12B viene utilizzato negli shelf di dischi DS460C, DS224C e DS212C.
 
 [cols="4*"]
 |===
@@ -95,7 +95,7 @@ Attenzione
  a| 
 Ambra fisso
  a| 
-Funzione del modulo IOM12: Si è verificato un errore nella funzione del modulo IOM12.
+Funzione del modulo IOM12/IOM12B: Si è verificato un errore nella funzione del modulo IOM12/IOM12B.
 
 Funzione porta SAS: Meno di tutte e quattro le corsie SAS hanno stabilito un collegamento (con un adattatore o un altro shelf di dischi).
 
@@ -121,14 +121,18 @@ Posizione
  a| 
 Blu fisso
  a| 
-L'amministratore di sistema ha attivato questa funzione LED per facilitare il posizionamento fisico dello shelf di dischi con il modulo IOM12 guasto.
+L'amministratore di sistema ha attivato questa funzione LED per facilitare il posizionamento fisico dello shelf di dischi con il modulo IOM12/IOM12B guasto.
 
-Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12 si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
+Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12/IOM12B si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
 
 |===
 La seguente illustrazione si intende per un modulo IOM12:
 
 image::../media/drw_iom12.gif[drw iom12]
+
+I moduli IOM12B sono caratterizzati da una striscia blu e da un'etichetta "IOM12B":
+
+image::../media/iom12b.png[iom12b]
 
 
 

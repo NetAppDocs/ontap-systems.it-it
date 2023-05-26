@@ -13,9 +13,7 @@ summary: 'Questa sezione fornisce istruzioni dettagliate per l"installazione di 
 [role="lead"]
 Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema AFF C250.
 
-Se si dispone di una configurazione MetroCluster, utilizzare il contenuto dell'installazione di MetroCluster.
-
-https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentazione MetroCluster"^]
+Se si dispone di una configurazione MetroCluster, utilizzare https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentazione MetroCluster"^].
 
 
 
@@ -23,17 +21,19 @@ https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentazione Metr
 
 Per installare il sistema AFF C250, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
 
-È necessario disporre dell'accesso a link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. È possibile anche avere accesso a link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Note di rilascio per la versione di ONTAP in uso"^] per ulteriori informazioni su questo sistema.
+NOTA:
+
+.Prima di iniziare
+* Assicurarsi di disporre dell'accesso a link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per informazioni sui requisiti del sito.
+* I clienti con requisiti di alimentazione specifici devono verificare https://hwu.netapp.com["HWU"] per le opzioni di configurazione.
+* Assicurarsi di disporre dell'accesso a link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Note di rilascio per la versione di ONTAP in uso"^] per ulteriori informazioni su questo sistema.
+* Devi fornire quanto segue presso la tua sede:
++
+** Spazio rack per il sistema storage
+** Cacciavite Phillips n. 2
+** Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web.
 
 
-NOTE: I clienti con requisiti di alimentazione specifici devono controllare HWU per le opzioni di configurazione.
-
-.Di cosa hai bisogno
-Devi fornire quanto segue presso la tua sede:
-
-* Spazio rack per il sistema storage
-* Cacciavite Phillips n. 2
-* Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
 
 
 .Fasi
@@ -165,222 +165,149 @@ image::../media/drw_affa250_weight_caution.png[drw affa250 attenzione sul peso]
 
 
 
-== Fase 3: Controller dei cavi
-
-È necessario il cablaggio per il cluster della piattaforma utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione del cluster. È disponibile un cablaggio opzionale per le reti host Fibre Channel o iSCSI o per lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile utilizzare il cavo per una rete host e uno storage.
-
-
-
-=== Cablaggio richiesto: Collegare i controller a un cluster
+== Fase 3: Collegare i controller al cluster
 
 Collegare i controller a un cluster utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
 
-
-
-==== Opzione 1: Collegare un cluster senza switch a due nodi
-
+[role="tabbed-block"]
+====
+.Opzione 1: Cluster senza switch a due nodi
+--
 Le porte di gestione, Fibre Channel e di rete dati o host sui moduli controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i moduli controller.
 
 .Prima di iniziare
-Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
+* Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
++
 image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
 
++
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch:
+
+
+.A proposito di questa attività
+Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.
 
 .Animazione - collegare un cluster senza switch a due nodi
 video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
-[cols="10,90"]
-|===
-| Fase | Eseguire su ciascun controller 
+.Fasi
+. Collegare le porte di interconnessione del cluster da e0c a e0c e da e0d a e0 con il cavo di interconnessione del cluster da 25 GbEimage:../media/oie_cable_sfp_gbe_copper.png[""]:
++
+image:../media/drw_affa250_tnsc_cabling.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster da 25 GbEimage:../media/oie_cable_sfp_gbe_copper.png[""]:
-
-* da e0c a e0c
-* da e0d a e0dimage:../media/drw_affa250_tnsc_cabling.png[""]
-
-
-
-
- a| 
-image:../media/oie_legend_icon_2_dr.png[""]
- a| 
-Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
-
+. Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
++
 image::../media/drw_affa250_mgmt_cabling.png[cablaggio di 250 mgmt drw affa250]
 
 
 
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-NON collegare i cavi di alimentazione a questo punto.
 
-|===
-Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
+IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
 
-
-
-==== Opzione 2: Cavo a del cluster con switch
-
+--
+.Opzione 2: Cluster con switch
+--
 Tutte le porte dei controller sono collegate a switch; interconnessione cluster, gestione, Fibre Channel e switch di rete host o dati.
 
 .Prima di iniziare
-Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
+* Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
++
 image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
 
++
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch:
+
+
+.A proposito di questa attività
+Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.
 
 .Animazione - cavo a cluster con switch
 video::bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto]
-[cols="10,90"]
-|===
-| Fase | Eseguire su ciascun controller 
+.Fasi
+. Collegare le porte di interconnessione del cluster e0c e e0d agli switch di interconnessione del cluster 25 GbE.
++
+image:../media/drw_affa250_switched_clust_cabling.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 25 GbE.
-
-* e0c
-* e0dimage:../media/drw_affa250_switched_clust_cabling.png[""]
-
-
-
-
- a| 
-image:../media/oie_legend_icon_2_dr.png[""]
- a| 
-Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
-
+. Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
++
 image::../media/drw_affa250_mgmt_cabling.png[cablaggio di 250 mgmt drw affa250]
 
 
 
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-NON collegare i cavi di alimentazione a questo punto.
 
-|===
-Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
+IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
+
+--
+====
 
 
-
-=== Cablaggio opzionale: Opzioni dipendenti dalla configurazione dei cavi
+== Fase 4: Collegamento via cavo alla rete host o allo storage (opzionale)
 
 Si dispone di un cablaggio opzionale dipendente dalla configurazione per le reti host Fibre Channel o iSCSI o lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile disporre di un cablaggio a una rete host e a uno storage.
 
-
-
-==== Opzione 1: Collegamento via cavo a una rete host Fibre Channel
-
+[role="tabbed-block"]
+====
+.Opzione 1: Cavo alla rete host Fibre Channel
+--
 Le porte Fibre Channel dei controller sono collegate agli switch di rete host Fibre Channel.
 
 .Prima di iniziare
-Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
+* Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
++
 image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
 
++
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-[cols="10,90"]
-|===
-| Fase | Eseguire su ciascun modulo controller 
 
 
- a| 
-1
- a| 
-Collegare le porte da 2a a 2d agli switch host FC.image:../media/drw_affa250_fc_host_cabling.png[""]
+.A proposito di questa attività
+Eseguire la procedura su ciascun modulo controller.
 
-
-
- a| 
-2
- a| 
-Per eseguire altri cablaggi opzionali, scegliere tra:
-
-* <<Opzione 2: Collegamento via cavo a una rete dati o host da 25 GbE>>
-* <<Opzione 3: Collegare i controller a un singolo shelf di dischi>>
+.Fasi
+. Collegare le porte da 2a a 2d agli switch host FC.
++
+image:../media/drw_affa250_fc_host_cabling.png[""]
 
 
 
-
- a| 
-3
- a| 
-Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
-
-|===
-
-
-==== Opzione 2: Collegamento via cavo a una rete dati o host da 25 GbE
-
+--
+.Opzione 2: Collegamento via cavo a una rete dati o host da 25 GbE
+--
 Le porte da 25 GbE sui controller sono collegate a switch di rete host o dati da 25 GbE.
 
 .Prima di iniziare
-Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
+* Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
++
 image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
 
++
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-[cols="10,90"]
-|===
-| Fase | Eseguire su ciascun modulo controller 
 
 
- a| 
-1
- a| 
-Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.image:../media/drw_affa250_25gbe_host_cabling.png[""]
+.A proposito di questa attività
+Eseguire la procedura su ciascun modulo controller.
 
-
-
- a| 
-2
- a| 
-Per eseguire altri cablaggi opzionali, scegliere tra:
-
-* <<Opzione 1: Collegamento via cavo a una rete host Fibre Channel>>
-* <<Opzione 3: Collegare i controller a un singolo shelf di dischi>>
+.Fasi
+. Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.
++
+image:../media/drw_affa250_25gbe_host_cabling.png[""]
 
 
 
-
- a| 
-3
- a| 
-Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
-
-|===
-
-
-==== Opzione 3: Collegare i controller a un singolo shelf di dischi
-
+--
+.Opzione 3: Collegare i controller al singolo shelf di dischi
+--
 Collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224.
 
 .Prima di iniziare
@@ -391,40 +318,34 @@ image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie v
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e il singolo shelf:
+.A proposito di questa attività
+Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e il singolo shelf. Eseguire le operazioni su ciascun modulo controller.
 
 .Animazione - collegare i controller a un singolo NS224
 video::3f92e625-a19c-4d10-9028-ac68017fbf57[panopto]
-[cols="10,90"]
-|===
-| Fase | Eseguire su ciascun modulo controller 
+.Fasi
+. Collegare il controller a allo shelf.
++
+image:../media/drw_affa250_1shelf_cabling_a.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_mb.png[""]
- a| 
-Collegare il controller del cavo A allo shelf: image:../media/drw_affa250_1shelf_cabling_a.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_2_lo.png[""]
- a| 
-Collegare il controller del cavo B allo shelf: image:../media/drw_affa250_1shelf_cabling_b.png[""]
-
-|===
-Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
+. Collegare il controller B allo shelf.
++
+image:../media/drw_affa250_1shelf_cabling_b.png[""]
 
 
 
-== Fase 4: Completare l'installazione e la configurazione del sistema
+--
+====
+
+
+== Fase 5: Completare la configurazione del sistema
 
 Completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
-
-
-=== Opzione 1: Completare la configurazione e la configurazione del sistema se è attivato il rilevamento della rete
-
+[role="tabbed-block"]
+====
+.Opzione 1: Se la funzione di rilevamento della rete è attivata
+--
 Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l'installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
 
 .Fasi
@@ -486,10 +407,9 @@ https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"]
 . Una volta completata la configurazione iniziale, passare alla link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP  risorse di documentazione per il gestore di sistema ONTAP"^] Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.
 
 
-
-
-=== Opzione 2: Completare la configurazione e la configurazione del sistema se il rilevamento della rete non è attivato
-
+--
+.Opzione 2: Se il rilevamento di rete non è attivato
+--
 Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.
 
 .Fasi
@@ -556,20 +476,14 @@ NOTE: Il formato dell'indirizzo è +https://x.x.x.x+.
 
 . Configura il tuo account e scarica Active IQ Config Advisor:
 +
-.. Accedi al tuo account esistente o crea un account.
-+
-https://mysupport.netapp.com/site/user/registration["Registrazione del supporto NetApp"]
-
-.. Registrare il sistema.
-+
-https://mysupport.netapp.com/site/systems/register["Registrazione del prodotto NetApp"]
-
-.. Scarica Active IQ Config Advisor.
-+
-https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"]
-
+.. Accedere al https://mysupport.netapp.com/site/user/registration["account esistente o creare un account"].
+.. https://mysupport.netapp.com/site/systems/register["Registrati"] il tuo sistema.
+.. Scarica https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"].
 
 
 . Verificare lo stato del sistema eseguendo Config Advisor.
 . Una volta completata la configurazione iniziale, passare alla link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP  risorse di documentazione per il gestore di sistema ONTAP"^] Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.
 
+
+--
+====

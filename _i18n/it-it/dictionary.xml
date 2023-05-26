@@ -2279,7 +2279,6 @@
   <block id="b97bdff613a0ca54c0d7c15ca245a1f5" category="paragraph">Le porte di gestione, Fibre Channel e di rete dati o host sui moduli controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i moduli controller.</block>
   <block id="3f4a7771ab61ac16b156190d458da251" category="cell">Eseguire su ciascun controller</block>
   <block id="e738e65f735fc9089f253b3fe571f559" category="paragraph"><block ref="e738e65f735fc9089f253b3fe571f559" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f2633075828362900ca73919da819a29" category="paragraph">Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster da 25 GbE<block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>:</block>
   <block id="59fffbd09d1c7158959327a869b9292f" category="list-text">da e0c a e0c</block>
   <block id="de629fe3167cc52423821046b02074e3" category="list-text">da e0d a e0d<block ref="5d8d8fe980b572286e75db6ff18d3cbc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9fe24c609326a57c3fef0ffe189c165b" category="paragraph"><block ref="9fe24c609326a57c3fef0ffe189c165b" category="inline-image-macro-rx" type="image"></block></block>
@@ -2289,12 +2288,10 @@
   <block id="09401fd662d47d1159b97106f3c2c4b4" category="paragraph">Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 25 GbE.</block>
   <block id="96640993dd2592a16c29226daf83b860" category="list-text">e0c</block>
   <block id="076b1ed5eae37af50f50d5b0e6d87908" category="list-text">e0d<block ref="ee3f9d0ec20204c7d48b52d859e31c4d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="58c441d64314c2082defd9f79f4f5d89" category="paragraph">Collegare le porte da 2a a 2d agli switch host FC.<block ref="8c69ea1e01dd0a307f5cc8e68a746e18" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56207a9d07b6607ddcfada226919fb00" category="list-text"><block ref="9f2a6ae0f8e4e0c002cabfcf0d3b8027" category="inline-xref-macro-rx"></block></block>
   <block id="9ec8ef762c375cb5ef67631e96a76733" category="list-text"><block ref="1476a857b220f13e41f9015c8596b1d0" category="inline-xref-macro-rx"></block></block>
   <block id="46bef70db2abdd00f0d4fccb83fbd3db" category="section-title">Opzione 2: Collegamento via cavo a una rete dati o host da 25 GbE</block>
   <block id="2283d2460c1fb366154589c8106aeabb" category="paragraph">Le porte da 25 GbE sui controller sono collegate a switch di rete host o dati da 25 GbE.</block>
-  <block id="291805e5f6e41a41cff79176c18b9bbc" category="paragraph">Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.<block ref="4d47a33513883c069cdd23a129a70f98" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3ee99f95dccd989449c31c5582a02a92" category="list-text"><block ref="9d121b80040875d39da3830ae414ba9b" category="inline-xref-macro-rx"></block></block>
   <block id="0e103ad5ee434b2faca19141061cbe51" category="paragraph">Collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224.</block>
   <block id="030773f8722b074a51df84aa530f0c3d" category="paragraph">Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e il singolo shelf:</block>
@@ -6737,7 +6734,6 @@
   <block id="c61664b995859451c9b18dba9398d36e" category="cell"><block ref="c61664b995859451c9b18dba9398d36e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa97e44cace7cb882c9dcba32940f8f" category="cell">Attenzione</block>
   <block id="75e6252bb5a504fc80a435f3c6fc7c82" category="paragraph">Ambra fisso</block>
-  <block id="a91f4dbac042acc9674c8f30f0009e10" category="paragraph">Si è verificato un errore con la funzione di una o più FRU: Shelf di dischi, dischi, moduli IOM12 o alimentatori.</block>
   <block id="42532600d34fb5884550b5ba06c71866" category="paragraph">Controllare i messaggi di evento per determinare l'azione correttiva da intraprendere.</block>
   <block id="5bb2376fdbdd8b69f07ffed693784a70" category="paragraph">Ambra lampeggiante</block>
   <block id="59ee562359b2b7e862570a57471bda07" category="paragraph">L'ID dello shelf è in sospeso.</block>
@@ -6745,21 +6741,13 @@
   <block id="965881f89ebf03830d8c6f3d7b4af499" category="paragraph"><block ref="965881f89ebf03830d8c6f3d7b4af499" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d4300cfa84e2e26784840198a0cbd030" category="paragraph">Blu fisso</block>
   <block id="dcef7e6e25f4d0285a65c6e2456b274e" category="paragraph">L'amministratore di sistema ha attivato questa funzione LED per facilitare l'individuazione fisica dello shelf di dischi che richiede assistenza.</block>
-  <block id="2c64d9557c9a2aa50849a46c94063cbf" category="paragraph">Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12 si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.</block>
   <block id="735b119b02d7cf2ed75726f0f7dd0561" category="paragraph">A seconda del modello di shelf di dischi in uso, il display dell'operatore ha un aspetto diverso; tuttavia, i tre LED sono disposti allo stesso modo.</block>
   <block id="5d405fcbf9fe0221fc5a388844b43691" category="paragraph">La seguente illustrazione mostra un pannello operatore dello shelf di dischi DS224C con il cappuccio terminale su:</block>
   <block id="619a6c64b692f7c7d530acc10ff465bd" category="image-alt">opd drw</block>
-  <block id="578194735681dfccf0ab5a7f231ad3eb" category="section-title">LED del modulo IOM12</block>
-  <block id="4bd9e80f0885938495ab10fad1f15091" category="paragraph">I LED sul modulo IOM12 indicano se il modulo funziona correttamente, se è pronto per il traffico i/o e se ci sono problemi con l'hardware.</block>
-  <block id="43887fc5a62c282f3e5be085309f0a65" category="paragraph">La seguente tabella descrive i LED del modulo IOM12 associati alla funzione del modulo e alla funzione di ciascuna porta SAS del modulo.</block>
-  <block id="1a2971baecb92cc9a6f46a52fdbc4383" category="paragraph">Il modulo IOM12 viene utilizzato negli shelf di dischi DS460C, DS224C e DS212C.</block>
-  <block id="16dd5aba0d994e6b3b2ad2851ff70375" category="paragraph">Funzione del modulo IOM12: Si è verificato un errore nella funzione del modulo IOM12.</block>
   <block id="06193ae5b75dce356ceef150051cbba7" category="paragraph">Funzione porta SAS: Meno di tutte e quattro le corsie SAS hanno stabilito un collegamento (con un adattatore o un altro shelf di dischi).</block>
   <block id="96c5571f7b6648b76366cba9755c4f43" category="paragraph">LNK</block>
   <block id="19e79e9ef0fa80f9b6aa5a3f8e5bb42c" category="paragraph">Collegamento alla porta</block>
   <block id="e35abb0fc157a472260600f52f6994cc" category="paragraph">Una o più delle quattro corsie SAS hanno stabilito un collegamento (con un adattatore o un altro shelf di dischi).</block>
-  <block id="85eed6af8a7071f352ad78220d797f3b" category="paragraph">L'amministratore di sistema ha attivato questa funzione LED per facilitare il posizionamento fisico dello shelf di dischi con il modulo IOM12 guasto.</block>
-  <block id="11e1a575acb39145b730906b42d580a1" category="paragraph">La seguente illustrazione si intende per un modulo IOM12:</block>
   <block id="f2105620d136a321a397d0310e98f133" category="image-alt">drw iom12</block>
   <block id="2aa3adf1c0ff2c8444260a0e888c02bc" category="section-title">LED dell'alimentatore</block>
   <block id="09cdf702b67ff26e9a51e5bd564332db" category="paragraph">I LED sull'alimentatore indicano se l'alimentatore funziona normalmente o se si verificano problemi hardware.</block>
@@ -7946,4 +7934,48 @@
   <block id="f6caefdbf5b7d345e721affd6b6d9bab" category="sidebar">DIMM AFF A220</block>
   <block id="9e493c35f280e1be11ab7f0f286f498b" category="sidebar">Unità AFF A220</block>
   <block id="ca55628a813bde8148e26c974fb5bd2e" category="sidebar">Batteria con clock in tempo reale A220 AFF</block>
+  <block id="79386daaa48888ed81c00ef493d329e9" category="paragraph">Se si dispone di una configurazione MetroCluster, utilizzare<block ref="d4b6e949edad9293b177bc65e2892165" category="inline-link-rx"></block>.</block>
+  <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">NOTA:</block>
+  <block id="25ca1a1b0a04d8f5341dca5c9e9eed8a" category="list-text">Assicurarsi di disporre dell'accesso a <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> (HWU) per informazioni sui requisiti del sito.</block>
+  <block id="b00f162fad84edda46484fcada242a8c" category="inline-link">HWU</block>
+  <block id="0b596d3b9a72deeb4bca2c3f00662c30" category="list-text">I clienti con requisiti di alimentazione specifici devono verificare<block ref="911e5b8f28f318acfdc1d057cd36b40e" category="inline-link-rx"></block> per le opzioni di configurazione.</block>
+  <block id="50bb0852475aeb4d407a01f8d637ccae" category="list-text">Assicurarsi di disporre dell'accesso a <block ref="515d1814cb0f36c56a64a6574d93c9df" category="inline-link-macro-rx"></block> per ulteriori informazioni su questo sistema.</block>
+  <block id="eba4465f65ac7360936f8f238b09999c" category="list-text">Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web.</block>
+  <block id="c7e4a9edbb9ec3bb0052efd3332763a3" category="section-title">Fase 3: Collegare i controller al cluster</block>
+  <block id="089103029c56ad66034dfe6bd70cfdcb" category="paragraph">Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.</block>
+  <block id="38e134ad6d648c53626268f8b6a82510" category="list-text">Collegare le porte di interconnessione del cluster da e0c a e0c e da e0d a e0 con il cavo di interconnessione del cluster da 25 GbE<block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>:</block>
+  <block id="5d8d8fe980b572286e75db6ff18d3cbc" category="paragraph"><block ref="5d8d8fe980b572286e75db6ff18d3cbc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="84e68180cd83b83ca12149fed857f1ac" category="list-text">Collegare le porte di interconnessione del cluster e0c e e0d agli switch di interconnessione del cluster 25 GbE.</block>
+  <block id="ee3f9d0ec20204c7d48b52d859e31c4d" category="paragraph"><block ref="ee3f9d0ec20204c7d48b52d859e31c4d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40a8f8b2f4ff5acd74232849a99a8a04" category="section-title">Fase 4: Collegamento via cavo alla rete host o allo storage (opzionale)</block>
+  <block id="03c1ffcb3fc95b8bfccde9eae4c521cb" category="open-title">Opzione 1: Cavo alla rete host Fibre Channel</block>
+  <block id="57f232cf1846457526a67fb857654097" category="paragraph">Eseguire la procedura su ciascun modulo controller.</block>
+  <block id="8c69ea1e01dd0a307f5cc8e68a746e18" category="paragraph"><block ref="8c69ea1e01dd0a307f5cc8e68a746e18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d47a33513883c069cdd23a129a70f98" category="paragraph"><block ref="4d47a33513883c069cdd23a129a70f98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="db24b10d7ccee1e6c17be0c81439dce8" category="open-title">Opzione 3: Collegare i controller al singolo shelf di dischi</block>
+  <block id="8fb418cbd362c972abff9e15e5bbef81" category="paragraph">Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e il singolo shelf. Eseguire le operazioni su ciascun modulo controller.</block>
+  <block id="26f36b74d2b5930cb4c8a791d8825169" category="list-text">Collegare il controller a allo shelf.</block>
+  <block id="18f599f35e14d88c5e3fb9f75197e3c8" category="paragraph"><block ref="18f599f35e14d88c5e3fb9f75197e3c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4e9ad1feb0945eeeb8a1d11bf9bf539e" category="list-text">Collegare il controller B allo shelf.</block>
+  <block id="f822d74484a7588f78ead07185e89b82" category="paragraph"><block ref="f822d74484a7588f78ead07185e89b82" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a363ebbaf5776be0c980b7b95cd927d3" category="inline-link">account esistente o creare un account</block>
+  <block id="50350463d29f0dd6d00e1fbb6e5ee301" category="list-text">Accedere al<block ref="7d7bd8ac0b1a83207c698de0ebfd0970" category="inline-link-rx"></block>.</block>
+  <block id="d8c9578f313af4d30124d95a9a82f55a" category="list-text"><block ref="45857239f243800c6028823fe1bb7167" category="inline-link-macro-rx"></block> il tuo sistema.</block>
+  <block id="42608111c1df97efb2c5e1785a0c9236" category="paragraph">Collegare i controller a un cluster utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione del cluster.</block>
+  <block id="940761e28da4b693854d6f9dd90cf253" category="video-title">Animazione - cluster senza switch a due nodi via cavo</block>
+  <block id="e8da070fbb7ed9f4e58234be76f00e95" category="list-text">Utilizzare il cavo di interconnessione del cluster da 25 GbE per collegare le porte di interconnessione del cluster e0c a e0c e e0d a e0d.</block>
+  <block id="c26780590002425e46bd9c5734245466" category="paragraph">Utilizzare l'animazione o i passaggi per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.</block>
+  <block id="76cc458c90f11508f1ec83bed8953ef1" category="video-title">Animazione - cluster con switch via cavo</block>
+  <block id="f7d77014760bf79c9b9469d98b1e031b" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.</block>
+  <block id="ed7a3f593115fbd1332dbd3743a9967c" category="paragraph">Eseguire la seguente procedura su ciascun modulo controller.</block>
+  <block id="63acd4af39a4e0dda6fe6c3d381743a7" category="open-title">Opzione 2: Collegamento via cavo a una rete host o dati da 25 GbE</block>
+  <block id="2b5c65d5b0abc122c914eec510d083ae" category="paragraph">Si è verificato un errore con la funzione di una delle FRU: Shelf di dischi, dischi, moduli IOM12/IOM12B o alimentatori.</block>
+  <block id="179393dc95adf2d21fee0c7a4ac43a35" category="paragraph">Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12/IOM12B si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.</block>
+  <block id="a0e54d8ccf5f2c0e80dde9c632b59a06" category="section-title">LED del modulo IOM12/IOM12B</block>
+  <block id="d513e2f89875e1250513a03a56fb4689" category="paragraph">I LED sul modulo IOM12/IOM12B indicano se il modulo funziona correttamente, se è pronto per il traffico i/o e se ci sono problemi con l'hardware.</block>
+  <block id="94d8e14101b7f4ab9a744f00e8e2fe29" category="paragraph">La seguente tabella descrive i LED del modulo IOM12/IOM12B associati alla funzione del modulo e alla funzione di ciascuna porta SAS del modulo.</block>
+  <block id="90f41460d3ad083904e7b340e4b39ece" category="paragraph">Il modulo IOM12/IOM12B viene utilizzato negli shelf di dischi DS460C, DS224C e DS212C.</block>
+  <block id="1ed7e5bc49edc6dcd82d94adaa712607" category="paragraph">Funzione del modulo IOM12/IOM12B: Si è verificato un errore nella funzione del modulo IOM12/IOM12B.</block>
+  <block id="661a269cef9bb91a2f8b4d733118a2eb" category="paragraph">L'amministratore di sistema ha attivato questa funzione LED per facilitare il posizionamento fisico dello shelf di dischi con il modulo IOM12/IOM12B guasto.</block>
+  <block id="a78123fcf223e9fb14720d2a07e2ef85" category="paragraph">La seguente illustrazione si intende per un modulo IOM12:</block>
 </blocks>
