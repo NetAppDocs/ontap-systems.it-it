@@ -11681,7 +11681,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 14:36:33 +0000">05/23/2023</time>
+    <time datetime="2023-05-26 21:43:23 +0000">05/26/2023</time>
     
   
 
@@ -11704,9 +11704,6 @@
 <div class="paragraph">
 <p>Per installare il sistema AFF A250, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</p>
 </div>
-<div class="paragraph">
-<p>È necessario disporre dell&#8217;accesso a <a href="https://hwu.netapp.com" target="_blank" rel="noopener">"NetApp Hardware Universe"</a> (HWU) per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. È possibile anche avere accesso a <a href="http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286" target="_blank" rel="noopener">"Note di rilascio per la versione di ONTAP in uso"</a> per ulteriori informazioni su questo sistema.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -11719,10 +11716,17 @@ I clienti con requisiti di alimentazione specifici devono controllare HWU per le
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<div class="title">Di cosa hai bisogno</div>
+<div class="ulist">
+<div class="title">Prima di iniziare</div>
+<ul>
+<li>
+<p>Assicurarsi di disporre dell&#8217;accesso a <a href="https://hwu.netapp.com" target="_blank" rel="noopener">"NetApp Hardware Universe"</a> (HWU) per informazioni sui requisiti del sito.</p>
+</li>
+<li>
+<p>Assicurarsi di disporre dell&#8217;accesso a <a href="http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286" target="_blank" rel="noopener">"Note di rilascio per la versione di ONTAP in uso"</a> per ulteriori informazioni su questo sistema.</p>
+</li>
+<li>
 <p>Devi fornire quanto segue presso la tua sede:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -11733,6 +11737,9 @@ I clienti con requisiti di alimentazione specifici devono controllare HWU per le
 </li>
 <li>
 <p>Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -11758,7 +11765,7 @@ I clienti con requisiti di alimentazione specifici devono controllare HWU per le
 <p>Accedi al tuo account esistente o crea un account.</p>
 </li>
 <li>
-<p>Registrati (<a href="https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct" target="_blank" rel="noopener">"Registrazione del prodotto NetApp"</a>) del sistema.</p>
+<p><a href="https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct" target="_blank" rel="noopener">"Registrati"</a> il tuo sistema.</p>
 </li>
 </ol>
 </div>
@@ -11940,28 +11947,27 @@ I clienti con requisiti di alimentazione specifici devono controllare HWU per le
 </div>
 </div>
 <div class="sect1">
-<h2 id="fase-3-controller-dei-cavi">Fase 3: Controller dei cavi</h2>
+<h2 id="fase-3-collegare-i-controller-al-cluster">Fase 3: Collegare i controller al cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>È necessario il cablaggio per il cluster della piattaforma utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione del cluster. È disponibile un cablaggio opzionale per le reti host Fibre Channel o iSCSI o per lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile utilizzare il cavo per una rete host e uno storage.</p>
+<p>Collegare i controller a un cluster utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione del cluster.</p>
 </div>
-<div class="sect2">
-<h3 id="cablaggio-richiesto-collegare-i-controller-a-un-cluster">Cablaggio richiesto: Collegare i controller a un cluster</h3>
-<div class="paragraph">
-<p>Collegare i controller a un cluster utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.</p>
-</div>
-<div class="sect3">
-<h4 id="opzione-1-collegare-un-cluster-senza-switch-a-due-nodi">Opzione 1: Collegare un cluster senza switch a due nodi</h4>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">Opzione 1: Cluster senza switch a due nodi</div>
+<div class="content">
 <div class="paragraph">
 <p>Le porte di gestione, Fibre Channel e di rete dati o host sui moduli controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i moduli controller.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
 <div class="title">Prima di iniziare</div>
+<ul>
+<li>
 <p>Per informazioni sulla connessione del sistema agli switch, rivolgersi all&#8217;amministratore di rete.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/oie_cable_pull_tab_down.png" alt="linguetta di estrazione del cavo oie verso il basso">
@@ -11979,84 +11985,69 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </tr>
 </table>
 </div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>Utilizzare l&#8217;animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch:</p>
+<div class="title">A proposito di questa attività</div>
+<p>Utilizzare l&#8217;animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.</p>
 </div>
 <div class="videoblock">
-<div class="title">Animazione - collegare un cluster senza switch a due nodi</div>
+<div class="title">Animazione - cluster senza switch a due nodi via cavo</div>
 <div class="content">
 <iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=beec3966-0a01-473c-a5de-ac68017fbf29" allowfullscreen allow="autoplay"> </iframe>
 </div>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 90%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Fase</th>
-<th class="tableblock halign-left valign-top">Eseguire su ciascun controller</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_1_lg.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collegare le porte di interconnessione del cluster l&#8217;una all&#8217;altra con il cavo di interconnessione del cluster da 25 GbE<span class="image"><img src="../media/oie_cable_sfp_gbe_copper.png" alt=""></span>:</p>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Utilizzare il cavo di interconnessione del cluster da 25 GbE per collegare le porte di interconnessione del cluster e0c a e0c e e0d a e0d.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/oie_cable_sfp_gbe_copper.png" alt=""></span>:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>da e0c a e0c</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/drw_affa250_tnsc_cabling.png" alt=""></span></p>
+</div>
 </li>
 <li>
-<p>da e0d a e0d<span class="image"><img src="../media/drw_affa250_tnsc_cabling.png" alt=""></span></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_2_dr.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/drw_affa250_mgmt_cabling.png" alt="cablaggio di 250 mgmt drw affa250">
 </div>
-</div></div></td>
-</tr>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_attn_symbol.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>NON collegare i cavi di alimentazione a questo punto.</p>
-</div></div></td>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/important.svg" alt="Importante">
+</td>
+<td class="content">
+NON collegare i cavi di alimentazione a questo punto.
+</td>
 </tr>
-</tbody>
 </table>
-<div class="paragraph">
-<p>Per completare la configurazione del sistema, vedere <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"Fase 4: Completare l&#8217;installazione e la configurazione del sistema"</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="opzione-2-cavo-a-del-cluster-con-switch">Opzione 2: Cavo a del cluster con switch</h4>
+</div>
+<div class="openblock">
+<div class="title">Opzione 2: Cluster con switch</div>
+<div class="content">
 <div class="paragraph">
 <p>Tutte le porte dei controller sono collegate a switch; interconnessione cluster, gestione, Fibre Channel e switch di rete host o dati.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
 <div class="title">Prima di iniziare</div>
+<ul>
+<li>
 <p>Per informazioni sulla connessione del sistema agli switch, rivolgersi all&#8217;amministratore di rete.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/oie_cable_pull_tab_down.png" alt="linguetta di estrazione del cavo oie verso il basso">
@@ -12074,90 +12065,66 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </tr>
 </table>
 </div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>Utilizzare l&#8217;animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch:</p>
+<div class="title">A proposito di questa attività</div>
+<p>Utilizzare l&#8217;animazione o i passaggi per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.</p>
 </div>
 <div class="videoblock">
-<div class="title">Animazione - cavo a cluster con switch</div>
+<div class="title">Animazione - cluster con switch via cavo</div>
 <div class="content">
 <iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=bf6759dc-4cbf-488e-982e-ac68017fbef8" allowfullscreen allow="autoplay"> </iframe>
 </div>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 90%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Fase</th>
-<th class="tableblock halign-left valign-top">Eseguire su ciascun controller</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_1_lg.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 25 GbE.</p>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Collegare le porte di interconnessione del cluster e0c e e0d agli switch di interconnessione del cluster 25 GbE.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/drw_affa250_switched_clust_cabling.png" alt=""></span></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>e0c</p>
 </li>
 <li>
-<p>e0d<span class="image"><img src="../media/drw_affa250_switched_clust_cabling.png" alt=""></span></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_2_dr.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/drw_affa250_mgmt_cabling.png" alt="cablaggio di 250 mgmt drw affa250">
 </div>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_attn_symbol.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>NON collegare i cavi di alimentazione a questo punto.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Per completare la configurazione del sistema, vedere <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"Fase 4: Completare l&#8217;installazione e la configurazione del sistema"</a>.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="cablaggio-opzionale-opzioni-dipendenti-dalla-configurazione-dei-cavi">Cablaggio opzionale: Opzioni dipendenti dalla configurazione dei cavi</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fase-4-collegamento-via-cavo-alla-rete-host-o-allo-storage-opzionale">Fase 4: Collegamento via cavo alla rete host o allo storage (opzionale)</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Si dispone di un cablaggio opzionale dipendente dalla configurazione per le reti host Fibre Channel o iSCSI o lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile disporre di un cablaggio a una rete host e a uno storage.</p>
 </div>
-<div class="sect3">
-<h4 id="opzione-1-collegamento-via-cavo-a-una-rete-host-fibre-channel">Opzione 1: Collegamento via cavo a una rete host Fibre Channel</h4>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">Opzione 1: Cavo alla rete host Fibre Channel</div>
+<div class="content">
 <div class="paragraph">
 <p>Le porte Fibre Channel dei controller sono collegate agli switch di rete host Fibre Channel.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
 <div class="title">Prima di iniziare</div>
+<ul>
+<li>
 <p>Per informazioni sulla connessione del sistema agli switch, rivolgersi all&#8217;amministratore di rete.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/oie_cable_pull_tab_up.png" alt="linguetta di estrazione del cavo oie verso l&#8217;alto">
@@ -12175,67 +12142,40 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 90%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Fase</th>
-<th class="tableblock halign-left valign-top">Eseguire su ciascun modulo controller</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collegare le porte da 2a a 2d agli switch host FC.<span class="image"><img src="../media/drw_affa250_fc_host_cabling.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>2</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Per eseguire altri cablaggi opzionali, scegliere tra:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#opzione-2-collegamento-via-cavo-a-una-rete-dati-o-host-da-25-gbe">Opzione 2: Collegamento via cavo a una rete dati o host da 25 GbE</a></p>
-</li>
-<li>
-<p><a href="#opzione-3-collegare-i-controller-a-un-singolo-shelf-di-dischi">Opzione 3: Collegare i controller a un singolo shelf di dischi</a></p>
 </li>
 </ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Per completare la configurazione del sistema, vedere <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"Fase 4: Completare l&#8217;installazione e la configurazione del sistema"</a>.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="sect3">
-<h4 id="opzione-2-collegamento-via-cavo-a-una-rete-dati-o-host-da-25-gbe">Opzione 2: Collegamento via cavo a una rete dati o host da 25 GbE</h4>
+<div class="paragraph">
+<div class="title">A proposito di questa attività</div>
+<p>Eseguire la seguente procedura su ciascun modulo controller.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Collegare le porte da 2a a 2d agli switch host FC.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/drw_affa250_fc_host_cabling.png" alt=""></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Opzione 2: Collegamento via cavo a una rete host o dati da 25 GbE</div>
+<div class="content">
 <div class="paragraph">
 <p>Le porte da 25 GbE sui controller sono collegate a switch di rete host o dati da 25 GbE.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
 <div class="title">Prima di iniziare</div>
+<ul>
+<li>
 <p>Per informazioni sulla connessione del sistema agli switch, rivolgersi all&#8217;amministratore di rete.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/oie_cable_pull_tab_up.png" alt="linguetta di estrazione del cavo oie verso l&#8217;alto">
@@ -12253,57 +12193,29 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 90%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Fase</th>
-<th class="tableblock halign-left valign-top">Eseguire su ciascun modulo controller</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.<span class="image"><img src="../media/drw_affa250_25gbe_host_cabling.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>2</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Per eseguire altri cablaggi opzionali, scegliere tra:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#opzione-1-collegamento-via-cavo-a-una-rete-host-fibre-channel">Opzione 1: Collegamento via cavo a una rete host Fibre Channel</a></p>
-</li>
-<li>
-<p><a href="#opzione-3-collegare-i-controller-a-un-singolo-shelf-di-dischi">Opzione 3: Collegare i controller a un singolo shelf di dischi</a></p>
 </li>
 </ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Per completare la configurazione del sistema, vedere <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"Fase 4: Completare l&#8217;installazione e la configurazione del sistema"</a>.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="sect3">
-<h4 id="opzione-3-collegare-i-controller-a-un-singolo-shelf-di-dischi">Opzione 3: Collegare i controller a un singolo shelf di dischi</h4>
+<div class="paragraph">
+<div class="title">A proposito di questa attività</div>
+<p>Eseguire la seguente procedura su ciascun modulo controller.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/drw_affa250_25gbe_host_cabling.png" alt=""></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Opzione 3: Collegare i controller al singolo shelf di dischi</div>
+<div class="content">
 <div class="paragraph">
 <p>Collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224.</p>
 </div>
@@ -12329,7 +12241,8 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </table>
 </div>
 <div class="paragraph">
-<p>Utilizzare l&#8217;animazione o i passaggi in tabella per completare il cablaggio tra i controller e il singolo shelf:</p>
+<div class="title">A proposito di questa attività</div>
+<p>Utilizzare l&#8217;animazione o i passaggi in tabella per completare il cablaggio tra i controller e il singolo shelf. Eseguire le operazioni su ciascun modulo controller.</p>
 </div>
 <div class="videoblock">
 <div class="title">Animazione - collegare i controller a un singolo NS224</div>
@@ -12337,51 +12250,40 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 <iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3f92e625-a19c-4d10-9028-ac68017fbf57" allowfullscreen allow="autoplay"> </iframe>
 </div>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 90%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Fase</th>
-<th class="tableblock halign-left valign-top">Eseguire su ciascun modulo controller</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_1_mb.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collegare il controller del cavo A allo shelf: <span class="image"><img src="../media/drw_affa250_1shelf_cabling_a.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/oie_legend_icon_2_lo.png" alt=""></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Collegare il controller del cavo B allo shelf: <span class="image"><img src="../media/drw_affa250_1shelf_cabling_b.png" alt=""></span></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Collegare il controller a allo shelf.</p>
 <div class="paragraph">
-<p>Per completare la configurazione del sistema, vedere <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"Fase 4: Completare l&#8217;installazione e la configurazione del sistema"</a>.</p>
+<p><span class="image"><img src="../media/drw_affa250_1shelf_cabling_a.png" alt=""></span></p>
+</div>
+</li>
+<li>
+<p>Collegare il controller B allo shelf.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/drw_affa250_1shelf_cabling_b.png" alt=""></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="fase-4-completare-linstallazione-e-la-configurazione-del-sistema">Fase 4: Completare l&#8217;installazione e la configurazione del sistema</h2>
+<h2 id="fase-5-completare-la-configurazione-del-sistema">Fase 5: Completare la configurazione del sistema</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Completare l&#8217;installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.</p>
 </div>
-<div class="sect2">
-<h3 id="opzione-1-completare-la-configurazione-e-la-configurazione-del-sistema-se-è-attivato-il-rilevamento-della-rete">Opzione 1: Completare la configurazione e la configurazione del sistema se è attivato il rilevamento della rete</h3>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">Opzione 1: Se la funzione di rilevamento della rete è attivata</div>
+<div class="content">
 <div class="paragraph">
 <p>Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l&#8217;installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.</p>
 </div>
@@ -12460,8 +12362,10 @@ XXXXX è il numero di serie del sistema per il nodo di destinazione.
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="opzione-2-completare-la-configurazione-e-la-configurazione-del-sistema-se-il-rilevamento-della-rete-non-è-attivato">Opzione 2: Completare la configurazione e la configurazione del sistema se il rilevamento della rete non è attivato</h3>
+</div>
+<div class="openblock">
+<div class="title">Opzione 2: Se il rilevamento di rete non è attivato</div>
+<div class="content">
 <div class="paragraph">
 <p>Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.</p>
 </div>
@@ -12591,6 +12495,9 @@ Il formato dell&#8217;indirizzo è https://x.x.x.x.
 <p>Una volta completata la configurazione iniziale, passare alla <a href="https://www.netapp.com/data-management/oncommand-system-documentation/" target="_blank" rel="noopener">"ONTAP  risorse di documentazione per il gestore di sistema ONTAP"</a> Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
