@@ -4735,7 +4735,6 @@
   <block id="490cb76fd3c75ff8166e251d789f799e" category="paragraph">Host Ethernet e rete di gestione</block>
   <block id="85220111cf8764a6d5eefe427de4fbde" category="paragraph">Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.</block>
   <block id="1ccb5aa93b58b2e0cbfd6015e33c6a90" category="paragraph">Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.</block>
-  <block id="22cf31ea4e88d1269c525c08a9c8fdff" category="paragraph">Le porte UTA2, la rete dati Ethernet e le porte di gestione dei moduli controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i moduli controller.</block>
   <block id="434c44657e12928e06a65124dfb073b0" category="paragraph">Scopri come collegare un cluster senza switch a due nodi.</block>
   <block id="fcca883f68c4e92b98d0f294614cda60" category="admonition">Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.</block>
   <block id="f7284f28e338cb3e10e42e8214151229" category="paragraph">È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.</block>
@@ -4907,7 +4906,6 @@
   <block id="f8a35054c2c3b7ffbacd941c8bc38831" category="doc">Sostituire l'hardware - FAS8200</block>
   <block id="dd5eaf7a75785b4f26d6e9793b46ea6c" category="doc">Panoramica della sostituzione dello chassis - FAS8200</block>
   <block id="061a78fed35fa26d870ae789dd6685b8" category="doc">Restituire il componente guasto a NetApp - FAS8200</block>
-  <block id="36db73d94b30571d5e78b69926c4ee10" category="doc">Sostituzione del modulo controller - FAS8200</block>
   <block id="4fa4535552a76ba6abb695db42b48161" category="paragraph">Se si tratta della procedura da utilizzare, tenere presente che la procedura di sostituzione del controller per un controller in una configurazione MetroCluster a quattro o otto controller è la stessa di una coppia ha. Non sono richieste procedure specifiche di MetroCluster, poiché il guasto è limitato a una coppia ha e i comandi di failover dello storage possono essere utilizzati per fornire operazioni senza interruzioni durante la sostituzione.</block>
   <block id="aae29116de4798f9a6b173dc6aa9ace8" category="doc">Ripristinare OKM, NSE e NVE secondo necessità - FAS8200</block>
   <block id="1a44c6d683ab4458e8c10088dee0617d" category="doc">Ripristinare e verificare la configurazione - FAS8200</block>
@@ -7978,4 +7976,17 @@
   <block id="1ed7e5bc49edc6dcd82d94adaa712607" category="paragraph">Funzione del modulo IOM12/IOM12B: Si è verificato un errore nella funzione del modulo IOM12/IOM12B.</block>
   <block id="661a269cef9bb91a2f8b4d733118a2eb" category="paragraph">L'amministratore di sistema ha attivato questa funzione LED per facilitare il posizionamento fisico dello shelf di dischi con il modulo IOM12/IOM12B guasto.</block>
   <block id="a78123fcf223e9fb14720d2a07e2ef85" category="paragraph">La seguente illustrazione si intende per un modulo IOM12:</block>
+  <block id="ab821717031a58a1a9d01409f017bf49" category="doc">Panoramica della sostituzione del modulo controller - FAS8200</block>
+  <block id="925bdd1d7aad5ef53490c52842590538" category="paragraph">La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.</block>
+  <block id="d0afed67605524c7117536fe92ce3da8" category="cell">Tipo di connessione</block>
+  <block id="985b78c75a9bb79d8cb44d78a86e22a9" category="image-alt">icona legenda oie 2 o</block>
+  <block id="73bfdf61f88c1cff337d81f80cb733d7" category="paragraph">Controller per ospitare gli switch della rete dati</block>
+  <block id="2ef47c54a75d2ffe153e57585c5ef8eb" category="image-alt">legenda oie icona 3 lp</block>
+  <block id="3be4d8a4a3ae9d68dd7ac9118685e99e" category="paragraph">Controller allo switch di rete di gestione</block>
+  <block id="c00351b5bbad5f2b55b1e523113b08ab" category="paragraph">Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.</block>
+  <block id="70c67999b75c623ee9876e398ee7ebb9" category="list-text">Collegare i controller a una rete dati UTA2 o a una rete Ethernet.</block>
+  <block id="4eb04196699d24394da6f4bdb0a6cd76" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A220 e FAS2700</block>
+  <block id="3529feb1f15a906788e97c962f5f18b5" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A150</block>
+  <block id="74fef60bd66705310b79dcd3e46f4894" category="doc">Sostituire l'unità SSD o HDD - AFF A150</block>
+  <block id="d646909dddf2c419f953113a67e04618" category="doc">Sostituire un modulo DIMM - AFF A150</block>
 </blocks>
