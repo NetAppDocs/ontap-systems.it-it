@@ -11681,7 +11681,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 14:36:33 +0000">05/23/2023</time>
+    <time datetime="2023-06-23 08:52:33 +0000">06/23/2023</time>
     
   
 
@@ -11694,7 +11694,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Scopri come installare il sistema AFF A150.</p>
+<p>Questa sezione fornisce istruzioni dettagliate per l&#8217;installazione di un sistema AFF A150.</p>
 </div>
 <div class="paragraph">
 <p>Se si dispone di una configurazione MetroCluster, utilizzare <a href="https://docs.netapp.com/us-en/ontap-metrocluster/index.html" target="_blank" rel="noopener">"Documentazione MetroCluster"</a>.</p>
@@ -11704,8 +11704,8 @@
 <div class="sect1">
 <h2 id="fase-1-preparazione-per-linstallazione">Fase 1: Preparazione per l&#8217;installazione</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
-<p>Per installare il sistema AFF A150, creare un account sul sito di supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</p>
+<div class="paragraph">
+<p>Per installare il sistema AFF A150, creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</p>
 </div>
 <div class="ulist">
 <div class="title">Prima di iniziare</div>
@@ -11929,8 +11929,8 @@
 <div class="sect1">
 <h2 id="fase-2-installare-lhardware">Fase 2: Installare l&#8217;hardware</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
-<p>Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.</p>
+<div class="paragraph">
+<p>Il sistema viene installato in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Fasi</div>
@@ -11976,22 +11976,67 @@
 <div class="sect1">
 <h2 id="fase-3-collegare-i-controller-alla-rete">Fase 3: Collegare i controller alla rete</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
-<p>Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.</p>
+<div class="paragraph">
+<p>È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo cluster con switch.</p>
 </div>
 <div class="paragraph">
-<p>La rete di gestione, la rete dati UTA2, la rete dati Ethernet e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.</p>
+<div class="title">A proposito di questa attività</div>
+<p>La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Cablaggio</th>
+<th class="tableblock halign-left valign-top">Tipo di connessione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_1_lg.svg" alt="icona legenda oie 1 lg">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Interconnessione del cluster</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_2_o.svg" alt="icona legenda oie 2 o">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controller per ospitare gli switch della rete dati</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_3_lp.svg" alt="legenda oie icona 3 lp">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controller allo switch di rete di gestione</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="exampleblock tabbed-block">
 <div class="content">
 <div class="openblock">
 <div class="title">Opzione 1: Cluster senza switch a due nodi</div>
 <div class="content">
 <div class="paragraph">
-<p>Scopri come collegare un cluster senza switch a due nodi.</p>
+<p>Collegare il cluster senza switch a due nodi.</p>
 </div>
 <div class="paragraph">
-<div class="title">Prima di iniziare</div>
+<div class="title">A proposito di questa attività</div>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
 </div>
 <div class="imageblock">
@@ -12011,41 +12056,6 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<div class="title">A proposito di questa attività</div>
-<p>È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Configurazioni di rete dati UTA2</dt>
-</dl>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png" alt="file gif animato per il cablaggio di rete unificato drw 2700 tnsc">
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Configurazioni di rete Ethernet</dt>
-</dl>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png" alt="cablaggio di rete ethernet drw 2700 tnsc gif animato">
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Eseguire le seguenti operazioni su ciascun modulo controller.</p>
-</div>
 <div class="olist arabic">
 <div class="title">Fasi</div>
 <ol class="arabic">
@@ -12053,7 +12063,7 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 <p>Collegare le porte di interconnessione del cluster e0a e0a e e0b a e0b con il cavo di interconnessione del cluster. +<span class="image"><img src="../media/drw_c190_u_tnsc_clust_cbling.png" alt=""></span></p>
 </li>
 <li>
-<p>Effettuare una delle seguenti operazioni:</p>
+<p>Collegare i controller a una rete dati UTA2 o a una rete Ethernet:</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Configurazioni di rete dati UTA2</dt>
@@ -12128,10 +12138,10 @@ NON collegare i cavi di alimentazione a questo punto.
 <div class="title">Opzione 2: Cluster con switch</div>
 <div class="content">
 <div class="paragraph">
-<p>Scopri come collegare un cluster con switch.</p>
+<p>Collegare il cluster con switch.</p>
 </div>
 <div class="paragraph">
-<div class="title">Prima di iniziare</div>
+<div class="title">A proposito di questa attività</div>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
 </div>
 <div class="imageblock">
@@ -12151,41 +12161,6 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<div class="title">A proposito di questa attività</div>
-<p>È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Cablaggio di rete unificato</dt>
-</dl>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_2700_switched_unified_network_cabling_animated_gif.png" alt="gif animato con cablaggio di rete unificato con switch drw 2700">
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Cablaggio di rete Ethernet</dt>
-</dl>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png" alt="cablaggio di rete ethernet con switch drw 2700 gif animato">
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Eseguire le seguenti operazioni su ciascun modulo controller.</p>
-</div>
 <div class="olist arabic">
 <div class="title">Fasi</div>
 <ol class="arabic">
@@ -12196,7 +12171,7 @@ Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione
 </div>
 </li>
 <li>
-<p>Effettuare una delle seguenti operazioni:</p>
+<p>È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host:</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Configurazioni di rete dati UTA2</dt>
@@ -12277,20 +12252,24 @@ NON collegare i cavi di alimentazione a questo punto.
 <div class="paragraph">
 <p>Collegare i controller agli shelf utilizzando le porte di storage integrate. NetApp consiglia il cablaggio MP-ha per i sistemi con storage esterno.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
 <div class="title">A proposito di questa attività</div>
+<ul>
+<li>
 <p>Se si dispone di un&#8217;unità a nastro SAS, è possibile utilizzare il cablaggio a percorso singolo. Se non si dispone di shelf esterni, il cablaggio MP-ha alle unità interne è opzionale (non mostrato) se i cavi SAS vengono ordinati con il sistema.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Verificare che la freccia dell&#8217;illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/oie_cable_pull_tab_down.png" alt="linguetta di estrazione del cavo oie verso il basso">
 </div>
+</div>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Fasi</div>
@@ -12414,11 +12393,10 @@ L&#8217;avvio iniziale può richiedere fino a otto minuti.
 </div>
 </li>
 <li>
-<p>Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.</p>
-<div class="videoblock">
-<div class="title">Animazione - collegare il laptop allo switch di gestione</div>
+<p>Collegare il laptop allo switch di gestione.</p>
+<div class="imageblock">
 <div class="content">
-<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b" allowfullscreen allow="autoplay"> </iframe>
+<img src="../media/dwr_laptop_to_switch_only.svg" alt="solo da portatile a switch dwr">
 </div>
 </div>
 </li>
