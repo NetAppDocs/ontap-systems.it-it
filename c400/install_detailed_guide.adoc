@@ -21,21 +21,23 @@ https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentazione Metr
 
 == Fase 1: Preparazione per l'installazione
 
-[role="lead"]
 Per installare il sistema, è necessario creare un account, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
 
 .Prima di iniziare
-È necessario accedere a Hardware Universe per ottenere informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. Per ulteriori informazioni su questo sistema, è possibile accedere alle Note di rilascio della versione di ONTAP in uso.
-
+* È necessario accedere a Hardware Universe per ottenere informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. Per ulteriori informazioni su questo sistema, è possibile accedere alle Note di rilascio della versione di ONTAP in uso.
++
 https://hwu.netapp.com["NetApp Hardware Universe"]
 
++
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Trova le Note di rilascio relative alla tua versione di ONTAP 9"]
 
-Devi fornire quanto segue presso la tua sede:
+* Devi fornire quanto segue presso la tua sede:
++
+** Spazio rack per il sistema storage
+** Cacciavite Phillips n. 2
+** Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
 
-* Spazio rack per il sistema storage
-* Cacciavite Phillips n. 2
-* Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
+
 
 
 .Fasi
@@ -157,7 +159,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla config
 
 == Fase 2: Installare l'hardware
 
-[role="lead"]
 È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
 
 . Installare i kit di guide, secondo necessità.
@@ -180,24 +181,23 @@ image::../media/drw_a320_cable_management_arms.png[bracci di gestione cavi drw a
 
 == Fase 3: Collegare i controller alla rete
 
-[role="lead"]
-È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
+È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo cluster con switch.
+
+.A proposito di questa attività
+* Se le etichette delle porte sulla scheda non sono visibili, è possibile identificare le porte controllando l'orientamento di installazione della scheda (per C400, lo zoccolo del connettore PCIe si trova sul lato sinistro dello slot della scheda), quindi cercare la scheda in base al numero di parte in NetApp Hardware Universe, che mostra un grafico del pannello con le etichette delle porte. È possibile trovare il numero di parte della scheda utilizzando il comando sysconfig -a o nella lista di imballaggio del sistema.
+* Se si sta cablando una configurazione IP MetroCluster, le porte e0a/e0b sono disponibili per l'hosting dei file LIF dei dati (di solito in IPSpace predefinito).
 
 
-NOTE: Se le etichette delle porte sulla scheda non sono visibili, è possibile identificare le porte controllando l'orientamento di installazione della scheda (per C400, lo zoccolo del connettore PCIe si trova sul lato sinistro dello slot della scheda), quindi cercare la scheda in base al numero di parte in NetApp Hardware Universe, che mostra un grafico del pannello con le etichette delle porte. È possibile trovare il numero di parte della scheda utilizzando il comando sysconfig -a o nella lista di imballaggio del sistema.
+[role="tabbed-block"]
+====
+.Opzione 1: Collegare un cluster senza switch a due nodi
+--
+Le porte ha e l'interconnessione cluster di un modulo controller sono cablate al relativo modulo controller partner. Le porte dati opzionali, le schede NIC opzionali e le porte di gestione dei moduli controller sono collegate agli switch.
 
-
-NOTE: Se si sta cablando una configurazione IP MetroCluster, le porte e0a/e0b sono disponibili per l'hosting dei file LIF dei dati (di solito in IPSpace predefinito).
-
-
-
-=== Opzione 1: Collegare un cluster senza switch a due nodi
-
-[role="lead"]
-Le porte dati opzionali, le schede NIC opzionali e le porte di gestione dei moduli controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate su entrambi i moduli controller.
-
+.Prima di iniziare
 Per informazioni sulla connessione del sistema agli switch, contattare l'amministratore di rete.
 
+.A proposito di questa attività
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette dei cavi sono rivolte verso l'alto per tutte le porte integrate e verso il basso per le schede di espansione (NIC).
 
 image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
@@ -215,15 +215,15 @@ image::../media/drw_c400_TNSC-networking-cabling_IEOPS-1095.svg[Cablaggio di ret
 . Passare a. <<Fase 4: Collegare i controller dei cavi agli shelf di dischi>> per istruzioni sul cablaggio dello shelf di dischi.
 
 
+--
+.Opzione 2: Cavo a del cluster con switch
+--
+L'interconnessione del cluster del modulo controller e le porte ha sono cablate al cluster/switch ha. Le porte dati opzionali, le schede NIC opzionali, le schede mezzanine e le porte di gestione sono collegate agli switch.
 
-
-=== Opzione 2: Cavo a del cluster con switch
-
-[role="lead"]
-Le porte dati opzionali, le schede NIC opzionali, le schede mezzanine e le porte di gestione dei moduli controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate al cluster/switch ha.
-
+.Prima di iniziare
 Per informazioni sulla connessione del sistema agli switch, contattare l'amministratore di rete.
 
+.A proposito di questa attività
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette dei cavi sono rivolte verso l'alto per tutte le porte integrate e verso il basso per le schede di espansione (NIC).
 
 image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
@@ -241,20 +241,21 @@ image::../media/drw_c400_switched_network_cabling_IEOPS-1096.svg[Cablaggio di re
 . Passare a. <<Fase 4: Collegare i controller dei cavi agli shelf di dischi>> per istruzioni sul cablaggio dello shelf di dischi.
 
 
+--
+====
 
 
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
-[role="lead"]
 Le seguenti opzioni mostrano come collegare uno o due shelf di dischi NS224 al sistema.
 
 
 
 === Opzione 1: Collegare i controller a un singolo shelf di dischi
 
-[role="lead"]
 È necessario collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224.
 
+.A proposito di questa attività
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione del cavo per NS224 è rivolta verso l'alto.
 
 image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
@@ -274,9 +275,9 @@ image::../media/drw_c400_one_ns224_shelf_IEOPS-1097.svg[Drw c400 uno shelf ns224
 
 === Opzione 2: Collegare i controller a due shelf di dischi
 
-[role="lead"]
 È necessario collegare ciascun controller ai moduli NSM su entrambi gli shelf di dischi NS224.
 
+.A proposito di questa attività
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione del cavo per NS224 è rivolta verso l'alto.
 
 image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
@@ -296,14 +297,12 @@ image::../media/drw_c400_two_ns224_shelves_IEOPS-1098.svg[Drw c400 due shelf ns2
 
 == Fase 5: Completare l'installazione e la configurazione del sistema
 
-[role="lead"]
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
 
 
 === Opzione 1: Completamento della configurazione e della configurazione del sistema se è attivato il rilevamento della rete
 
-[role="lead"]
 Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l'installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
 
 . Utilizzare la seguente animazione per accendere e impostare gli ID degli shelf per uno o più shelf di dischi:
@@ -318,10 +317,11 @@ video::c500e747-30f8-4763-9065-afbf00008e7f[panopto]
 +
 Per ulteriori informazioni, consultare la guida in linea del portatile.
 
-. Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.
-+
-.Animazione - collegare il laptop allo switch di gestione
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. Collegare il laptop allo switch di gestione.
+
+
+image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
+
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
 image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
@@ -368,7 +368,6 @@ https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"]
 
 === Opzione 2: Completamento della configurazione e della configurazione del sistema se il rilevamento della rete non è attivato
 
-[role="lead"]
 Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.
 
 . Cablare e configurare il laptop o la console:

@@ -11,7 +11,7 @@ summary: 'Questa guida fornisce istruzioni dettagliate e dettagliate per l"insta
 
 
 [role="lead"]
-Scopri come installare il sistema AFF A150.
+Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema AFF A150.
 
 Se si dispone di una configurazione MetroCluster, utilizzare https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentazione MetroCluster"^].
 
@@ -19,8 +19,7 @@ Se si dispone di una configurazione MetroCluster, utilizzare https://docs.netapp
 
 == Fase 1: Preparazione per l'installazione
 
-[role="lead"]
-Per installare il sistema AFF A150, creare un account sul sito di supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
+Per installare il sistema AFF A150, creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
 
 .Prima di iniziare
 * Assicurarsi di disporre dell'accesso a. link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato.
@@ -160,8 +159,7 @@ Accensione del sistema
 
 == Fase 2: Installare l'hardware
 
-[role="lead"]
-Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
+Il sistema viene installato in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
 
 .Fasi
 . Installare i kit di guide, secondo necessità.
@@ -184,18 +182,43 @@ image::../media/drw_cable_management_arm_install.png[installazione di ARM per la
 
 == Fase 3: Collegare i controller alla rete
 
-[role="lead"]
-Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.
+È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo cluster con switch.
 
-La rete di gestione, la rete dati UTA2, la rete dati Ethernet e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.
+.A proposito di questa attività
+La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.
 
+[cols="20%,80%"]
+|===
+| Cablaggio | Tipo di connessione 
+
+
+ a| 
+image::../media/oie_legend_icon_1_lg.svg[icona legenda oie 1 lg]
+ a| 
+Interconnessione del cluster
+
+
+
+ a| 
+image::../media/oie_legend_icon_2_o.svg[icona legenda oie 2 o]
+ a| 
+Controller per ospitare gli switch della rete dati
+
+
+
+ a| 
+image::../media/oie_legend_icon_3_lp.svg[legenda oie icona 3 lp]
+ a| 
+Controller allo switch di rete di gestione
+
+|===
 [role="tabbed-block"]
 ====
 .Opzione 1: Cluster senza switch a due nodi
 --
-Scopri come collegare un cluster senza switch a due nodi.
+Collegare il cluster senza switch a due nodi.
 
-.Prima di iniziare
+.A proposito di questa attività
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
 image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
@@ -203,28 +226,9 @@ image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-.A proposito di questa attività
-È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.
-
-Configurazioni di rete dati UTA2::
-+
---
-image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[file gif animato per il cablaggio di rete unificato drw 2700 tnsc]
-
---
-Configurazioni di rete Ethernet::
-+
---
-image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[cablaggio di rete ethernet drw 2700 tnsc gif animato]
-
---
-
-
-Eseguire le seguenti operazioni su ciascun modulo controller.
-
 .Fasi
 . Collegare le porte di interconnessione del cluster e0a e0a e e0b a e0b con il cavo di interconnessione del cluster. +image:../media/drw_c190_u_tnsc_clust_cbling.png[""]
-. Effettuare una delle seguenti operazioni:
+. Collegare i controller a una rete dati UTA2 o a una rete Ethernet:
 +
 Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati UTA2 alla rete host.
 +
@@ -260,9 +264,9 @@ IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
 --
 .Opzione 2: Cluster con switch
 --
-Scopri come collegare un cluster con switch.
+Collegare il cluster con switch.
 
-.Prima di iniziare
+.A proposito di questa attività
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
 image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
@@ -270,31 +274,12 @@ image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
 
-.A proposito di questa attività
-È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host. Per il cablaggio tra i controller e gli switch, fare riferimento alle seguenti illustrazioni dei cavi.
-
-Cablaggio di rete unificato::
-+
---
-image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[gif animato con cablaggio di rete unificato con switch drw 2700]
-
---
-Cablaggio di rete Ethernet::
-+
---
-image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[cablaggio di rete ethernet con switch drw 2700 gif animato]
-
---
-
-
-Eseguire le seguenti operazioni su ciascun modulo controller.
-
 .Fasi
 . Per ciascun modulo controller, collegare i cavi e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster.
 +
 image:../media/drw_c190_u_switched_clust_cbling.png[""]
 
-. Effettuare una delle seguenti operazioni:
+. È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host:
 +
 Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati UTA2 alla rete host.
 +
@@ -336,13 +321,13 @@ IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
 Collegare i controller agli shelf utilizzando le porte di storage integrate. NetApp consiglia il cablaggio MP-ha per i sistemi con storage esterno.
 
 .A proposito di questa attività
-Se si dispone di un'unità a nastro SAS, è possibile utilizzare il cablaggio a percorso singolo. Se non si dispone di shelf esterni, il cablaggio MP-ha alle unità interne è opzionale (non mostrato) se i cavi SAS vengono ordinati con il sistema.
-
-È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
+* Se si dispone di un'unità a nastro SAS, è possibile utilizzare il cablaggio a percorso singolo. Se non si dispone di shelf esterni, il cablaggio MP-ha alle unità interne è opzionale (non mostrato) se i cavi SAS vengono ordinati con il sistema.
+* È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi.
+* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
++
 image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+
+
 
 .Fasi
 . Cablare la coppia ha con shelf di dischi esterni.
@@ -411,10 +396,10 @@ NOTE: L'avvio iniziale può richiedere fino a otto minuti.
 +
 Per ulteriori informazioni, consultare la guida in linea del portatile.
 
-. Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.
+. Collegare il laptop allo switch di gestione.
 +
-.Animazione - collegare il laptop allo switch di gestione
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
+
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
 image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]

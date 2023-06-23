@@ -364,10 +364,11 @@ Il sistema inizia l'avvio. L'avvio iniziale può richiedere fino a otto minuti.
 +
 Per ulteriori informazioni, consultare la guida in linea del portatile.
 
-. Utilizzare l'animazione per collegare il laptop allo switch di gestione:
-+
-.Animazione - collegare il laptop allo switch di gestione
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. Collegare il laptop allo switch di gestione:
+
+
+image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
+
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
 image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
@@ -420,11 +421,11 @@ Se il rilevamento della rete non è abilitato sul laptop, è necessario completa
 
 NOTE: Per informazioni su come configurare la porta della console, consultare la guida in linea del portatile o della console.
 
-.. Collegare il laptop o la console allo switch sulla subnet di gestione.
+.. Collegare il laptop o la console allo switch di gestione.
 +
-image::../media/drw_console_client_mgmt_subnet_affa250.png[subnet affa250 di gestione del client della console drw]
+image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
 
-.. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
+.. Assegnare un indirizzo TCP/IP al laptop o alla console, utilizzando un indirizzo che si trova sullo switch di gestione.
 
 
 . Utilizzare la seguente animazione per accendere e impostare gli ID degli shelf per uno o più shelf di dischi:
