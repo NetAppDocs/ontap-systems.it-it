@@ -1,0 +1,352 @@
+---
+permalink: fas2800/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas2800, move the controller module hardware 
+summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
+---
+= Sostituire l'hardware del modulo controller - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sostituire l'hardware del modulo controller guasto rimuovendo il controller guasto, spostando i componenti FRU nel modulo controller sostitutivo, installando il modulo controller sostitutivo nello chassis e avviando il modulo controller sostitutivo.
+
+.Animazione - sostituire un modulo controller
+video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
+
+
+== Fase 1: Rimuovere il modulo controller
+
+Rimuovere il modulo controller guasto dal telaio.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
+. Se i moduli SFP sono stati lasciati nel sistema dopo aver rimosso i cavi, spostarli nel modulo controller sostitutivo.
+. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
++
+image::../media/drw_2240_x_opening_cam_latch.svg[drw 2240 x apertura del fermo a camma]
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Drw 2850 coperchio aperto del modulo controller IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio del coperchio del modulo controller
+
+|===
+
+
+== Fase 2: Spostare la batteria NVMEM
+
+Rimuovere la batteria NVMEM dal modulo controller guasto e installarla nel modulo controller sostitutivo.
+
+
+NOTE: Non collegare la batteria NVMEM fino a quando non viene richiesto.
+
+image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[Drw 2850 sostituire Nvbattery IEOPS 715]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio della batteria NVMEM
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[icona legenda 02]
+ a| 
+Spina della batteria NVMEM
+
+|===
+. Rimuovere la batteria dal modulo controller:
++
+.. Premere il pulsante blu sul lato del modulo controller.
+.. Far scorrere la batteria verso l'alto fino a liberare le staffe di supporto, quindi estrarre la batteria dal modulo controller.
+.. Scollegare la spina della batteria premendo il fermaglio posto sulla parte anteriore della spina della batteria per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
+
+
+. Spostare la batteria nel modulo controller sostitutivo e installarlo:
++
+.. Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.
+.. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
++
+
+NOTE: Non collegare ancora la batteria.  La si collega una volta spostati i componenti restanti nel modulo controller sostitutivo.
+
+
+
+
+
+
+
+== Fase 3: Rimuovere la scheda mezzanine
+
+Rimuovere il pannello mezzanino e la scheda mezzanine PCIe dal modulo controller compromesso.
+
+image::../media/drw_2850_replace_HIC_IEOPS-700.svg[Drw 2850 sostituire HIC IEOPS 700]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pannello di montaggio
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[icona legenda 02]
+ a| 
+Scheda mezzanine PCIe
+
+|===
+. Rimuovere il pannello della scheda mezzanine facendolo scorrere verso l'esterno dal modulo controller.
+. Allentare le viti a testa zigrinata sulla scheda mezzanino.
++
+
+NOTE: È possibile allentare le viti a testa zigrinata con le dita o con un cacciavite.
+
+. Sollevare la scheda mezzanine e metterla da parte su una superficie antistatica.
+
+
+
+
+== Fase 4: Spostare il supporto di avvio
+
+Rimuovere il supporto di avvio dal modulo controller guasto e installarlo nel modulo controller sostitutivo.
+
+. Dopo aver rimosso la scheda mezzanine, individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
++
+image::../media/drw_2850_replace_boot_media_IEOPS-696.svg[Drw 2850 sostituisce il supporto di boot IEOPS 696]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio del supporto di avvio
+
+|===
+. Rimuovere il supporto di avvio:
++
+.. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento.
+.. Ruotare il supporto di avvio verso l'alto, quindi estrarlo delicatamente dalla presa per supporti di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+
+
+. Installare il supporto di avvio sul modulo controller sostitutivo:
++
+.. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+.. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+.. Premere il pulsante blu di blocco sull'alloggiamento del supporto di avvio, ruotare il supporto di avvio completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il supporto di avvio in posizione.
+
+
+
+
+
+
+== Fase 5: Installare la scheda mezzanine nel controller sostitutivo
+
+Installare la scheda mezzanine nel modulo controller sostitutivo.
+
+. Reinstallare la scheda mezzanine:
++
+.. Allineare la scheda mezzanine allo zoccolo della scheda madre.
+.. Spingere delicatamente la scheda verso il basso per inserire la scheda nello zoccolo.
+.. Serrare le tre viti a testa zigrinata sulla scheda mezzanino.
+
+
+. Reinstallare il pannello della scheda mezzanine.
+
+
+
+
+== Fase 6: Spostare i DIMM
+
+Rimuovere i DIMM dal modulo controller guasto e installarli nel modulo controller sostitutivo.
+
+image::../media/drw_2850_replace_dimms_IEOPS-699.svg[Drw 2850 sostituisce i dimm IEOPS 699]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Fermi di blocco del DIMM
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[icona legenda 02]
+ a| 
+DIMM
+
+|===
+. Individuare i DIMM sul modulo controller
++
+
+NOTE: Prendere nota della posizione del DIMM nei socket in modo da poter inserire il DIMM nella stessa posizione del modulo controller sostitutivo e con l'orientamento corretto.
+
+. Rimuovere i DIMM dal modulo controller guasto:
++
+.. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM.
++
+Il DIMM ruota leggermente verso l'alto.
+
+.. Ruotare il modulo DIMM fino in fondo, quindi estrarlo dallo zoccolo.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
+
+
+. Verificare che la batteria NVMEM non sia collegata al modulo controller sostitutivo.
+. Installare i DIMM nel controller sostitutivo nello stesso punto in cui si trovavano nel controller compromesso:
++
+.. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+
+
+. Ripetere questa procedura per l'altro DIMM.
+
+
+
+
+== Fase 7: Spostare un modulo di caching
+
+Rimuovere il modulo di caching dal modulo controller compromesso, installarlo nel modulo controller sostitutivo.
+
+image::../media/drw_2850_replace_caching module_IEOPS-697.svg[Drw 2850 sostituisce il modulo di caching IEOPS 697]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di blocco del modulo di caching
+
+|===
+. Individuare il modulo di caching vicino alla parte posteriore del modulo controller e rimuoverlo:
++
+.. Premere il pulsante blu di blocco e ruotare il modulo di caching verso l'alto.
+.. Estrarre delicatamente il modulo di caching dall'alloggiamento.
+
+
+. Installare il modulo di caching nel modulo controller sostitutivo:
++
+.. Allineare i bordi del modulo di caching con lo zoccolo nell'alloggiamento, quindi spingerlo delicatamente nello zoccolo.
+.. Verificare che il modulo di caching sia posizionato correttamente e completamente nel socket.
++
+Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
+
+.. Premere il pulsante blu di blocco, ruotare il modulo di caching completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il modulo di caching in posizione.
+
+
+. Collegare la batteria NVMEM.
++
+Assicurarsi che la spina sia bloccata nella presa di alimentazione della batteria sulla scheda madre.
+
++
+
+NOTE: Se il collegamento della batteria risulta difficoltoso, rimuovere la batteria dal modulo controller, collegarlo, quindi reinstallare la batteria nel modulo controller.
+
+. Reinstallare il coperchio del modulo controller.
+
+
+
+
+== Fase 8: Installare la batteria NV
+
+Installare la batteria NV nel modulo controller sostitutivo.
+
+. Ricollegare la spina della batteria alla presa del modulo controller.
++
+Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
+
+. Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.
+. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
+. Reinstallare il coperchio del modulo controller e bloccarlo in posizione.
+
+
+
+
+== Fase 9: Installare il controller
+
+Installare il modulo controller sostitutivo nello chassis del sistema e avviare il ONTAP.
+
+
+NOTE: Il sistema potrebbe aggiornare il firmware di sistema all'avvio. Non interrompere questo processo. La procedura richiede di interrompere il processo di avvio, che in genere può essere eseguito in qualsiasi momento dopo la richiesta. Tuttavia, se il sistema aggiorna il firmware del sistema all'avvio, è necessario attendere il completamento dell'aggiornamento prima di interrompere il processo di avvio.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, riposizionare il coperchio sul modulo controller.
+. Ruotare il modulo controller.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Completare la reinstallazione del modulo controller:
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il controller inizia ad avviarsi non appena viene inserito nello chassis.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
++
+
+NOTE: Cercare un messaggio nella console di aggiornamento automatico del firmware. Se viene visualizzato il messaggio di aggiornamento, non premere `Ctrl-C` interrompere il processo di avvio fino a quando non viene visualizzato un messaggio che conferma il completamento dell'aggiornamento. Se l'aggiornamento del firmware viene interrotto, il processo di avvio viene chiuso al prompt DEL CARICATORE. È necessario eseguire `update_flash` e quindi immettere `bye -g` per riavviare il sistema.
+
+
+
+
+
+*Importante:* durante il processo di avvio, potrebbero essere visualizzate le seguenti istruzioni:
+
+* Viene visualizzato un messaggio di avviso che indica una mancata corrispondenza dell'ID di sistema e chiede di ignorare l'ID di sistema. Rispondere `y` a questo prompt.
+* Un avviso che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo. Rispondere `y` a questo prompt.
+

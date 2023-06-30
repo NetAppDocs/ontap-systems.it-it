@@ -16,7 +16,7 @@ summary: È possibile sostituire a caldo un disco guasto in uno shelf di dischi 
 .Prima di iniziare
 * Il disco che si sta installando deve essere supportato dallo shelf di dischi DS224C o DS212C.
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
 * Il disco che si sta rimuovendo deve essere guasto.
@@ -32,7 +32,7 @@ NOTE: A seconda del tipo di disco e della capacità, potrebbero essere necessari
 Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
 
 +
-https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"]
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"^]
 
 
 
@@ -79,10 +79,10 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
 
 * Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
 +
@@ -91,7 +91,7 @@ NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
 
 * Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
-Uno shelf di dischi ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo IOM12. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+Uno shelf di dischi dispone di tre LED di posizione: Uno sul display operatore e uno su ciascun IOM dello shelf. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
 
 * Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
 

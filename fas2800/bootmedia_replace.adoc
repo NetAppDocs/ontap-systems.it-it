@@ -1,0 +1,194 @@
+---
+permalink: fas2800/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: fas2800, replace, boot, media, controller, module, fru map 
+summary: Individuare il supporto di avvio nel controller e seguire le istruzioni per sostituirlo. 
+---
+= Sostituire il supporto di avvio - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+[role="lead"]
+Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
+. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
++
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Drw 2850 pcm Remove install IEOPS 694]
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Drw 2850 coperchio aperto del modulo controller IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio del coperchio del modulo controller
+
+|===
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Individuare il supporto di avvio nel modulo controller, situato sotto la scheda mezzanine e seguire le istruzioni per sostituirlo.
+
+.Animazione - sostituire il supporto di avvio
+video::10a29a01-a86e-451c-b05a-af4701726f57[panopto]
+image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["larghezza=500"]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Linguetta di blocco dei supporti di avvio
+
+|===
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere la scheda mezzanine utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
++
+.. Rimuovere il pannello della scheda mezzanine facendolo scorrere verso l'esterno dal modulo controller.
+.. Allentare le viti a testa zigrinata sulla scheda mezzanino.
++
+
+NOTE: È possibile allentare le viti a testa zigrinata con le dita o con un cacciavite. Se si utilizzano le dita, potrebbe essere necessario ruotare la batteria NV verso l'alto per un migliore acquisto con le dita sulla vite a testa zigrinata accanto ad essa.
+
+.. Sollevare la scheda mezzanine.
+
+
+. Sostituire il supporto di avvio:
++
+.. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, ruotare il supporto di avvio verso l'alto, quindi estrarlo delicatamente dalla presa del supporto di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+.. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+Controllare il supporto di avvio per assicurarsi che sia inserito correttamente e completamente nella presa e, se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+.. Premere il pulsante di blocco blu, ruotare il supporto di avvio completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il supporto di avvio in posizione.
+
+
+. Reinstallare la scheda mezzanine:
++
+.. Allineare lo zoccolo della scheda madre allo zoccolo della scheda mezzanine, quindi inserire delicatamente la scheda nello zoccolo.
+.. Serrare le tre viti a testa zigrinata sulla scheda mezzanino.
+.. Reinstallare il pannello del mezzanino.
+
+
+. Reinstallare il coperchio del modulo controller e bloccarlo in posizione.
+
+
+
+
+== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
+
+Installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando un'unità flash USB con l'immagine installata. Durante questa procedura, è necessario ripristinare il file system var.
+
+.Prima di iniziare
+* È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con almeno 4 GB di capacità.
+* È necessario disporre di una connessione di rete.
+
+
+.Fasi
+. Scaricare la versione dell'immagine appropriata di ONTAP sull'unità flash USB formattata:
++
+.. Utilizzare https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_determine_if_the_running_ONTAP_version_supports_NetApp_Volume_Encryption_(NVE)["Come determinare se la versione di ONTAP in esecuzione supporta la crittografia dei volumi NetApp (NVE)"^] per determinare se la crittografia del volume è attualmente supportata.
++
+*** Se NVE è supportato sul cluster, scaricare l'immagine con crittografia volume NetApp.
+*** Se NVE non è supportato sul cluster, scaricare l'immagine senza crittografia volume NetApp.
+Vedere https://kb.netapp.com/onprem/ontap/os/Which_ONTAP_image_should_I_download%3F_With_or_without_Volume_Encryption%3F["Quale immagine ONTAP è necessario scaricare? Con o senza crittografia del volume?"^] per ulteriori dettagli.
+
+
+
+
+. Decomprimere l'immagine scaricata.
++
+
+NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
+
++
+Il file di immagine del servizio decompresso contiene due cartelle:
+
++
+** `boot`
+** `efi`
++
+... Copiare il `efi` Nella directory principale dell'unità flash USB.
++
+L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
+
+... Rimuovere l'unità flash USB dal computer portatile.
+
+
+
+
+. Installare il modulo controller:
++
+.. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+.. Ricable del modulo controller.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori di supporti (SFP) se sono stati rimossi.
+
+
+
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Inserire completamente il modulo controller nel sistema, assicurandosi che la maniglia della camma si allontani dall'unità flash USB, spingere con decisione la maniglia della camma per terminare l'inserimento del modulo controller, spingere la maniglia della camma in posizione chiusa, quindi serrare la vite a testa zigrinata.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+. Interrompere il processo di avvio per interrompere il CARICAMENTO premendo Ctrl-C quando viene visualizzato Avvio DI AUTOBOOT premere Ctrl-C per interrompere....
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+. Per i sistemi con un controller nello chassis, ricollegare l'alimentazione e accendere gli alimentatori.
++
+Il sistema inizia ad avviarsi e si arresta al prompt DEL CARICATORE.
+
+. Impostare il tipo di connessione di rete al prompt DEL CARICATORE:
++
+** Se si sta configurando DHCP: `ifconfig e0a -auto`
++
+
+NOTE: La porta di destinazione configurata è la porta di destinazione utilizzata per comunicare con il controller compromesso dal controller integro durante il ripristino del file system var con una connessione di rete. È anche possibile utilizzare la porta e0M in questo comando.
+
+** Se si configurano connessioni manuali: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
++
+*** Filer_addr è l'indirizzo IP del sistema di storage.
+*** Netmask è la maschera di rete della rete di gestione connessa al partner ha.
+*** gateway è il gateway per la rete.
+*** dns_addr è l'indirizzo IP di un name server sulla rete.
+*** dns_domain è il nome di dominio DNS (Domain Name System).
++
+Se si utilizza questo parametro opzionale, non è necessario un nome di dominio completo nell'URL del server netboot. È necessario solo il nome host del server.
+
+
+
+
+
++
+
+NOTE: Potrebbero essere necessari altri parametri per l'interfaccia. È possibile immettere `help ifconfig` al prompt del firmware per ulteriori informazioni.
+
+

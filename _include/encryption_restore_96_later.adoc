@@ -102,7 +102,7 @@ Se il giveback non viene completato dopo 20 minuti, contattare l'assistenza clie
 
 . Al prompt di clustershell, immettere `net int show -is-home false` comando per elencare le interfacce logiche che non si trovano sul proprio controller principale e sulla relativa porta.
 +
-Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert` comando.
+Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert -vserver Cluster -lif _nodename_` comando.
 
 . Spostare il cavo della console sul controller di destinazione ed eseguire `version -v` Per controllare le versioni di ONTAP.
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
@@ -153,7 +153,7 @@ NOTE: La chiusura di CIFS può causare la perdita di dati.
 . Attendere 3 minuti e controllare lo stato di failover con `storage failover show` comando.
 . Al prompt di clustershell, immettere `net int show -is-home false` comando per elencare le interfacce logiche che non si trovano sul proprio controller principale e sulla relativa porta.
 +
-Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert` comando.
+Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert -vserver Cluster -lif _nodename_` comando.
 
 . Spostare il cavo della console sul controller di destinazione ed eseguire `version -v` Per controllare le versioni di ONTAP.
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.

@@ -32,7 +32,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downlo
 
 * Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
-Uno shelf di dischi ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo IOM12. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+Uno shelf di dischi dispone di tre LED di posizione: Uno sul display operatore e uno su ciascun IOM dello shelf. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
 
 * Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
 

@@ -14,7 +14,7 @@ summary: È possibile utilizzare questo esempio per fornire istruzioni su come l
 È possibile utilizzare questo esempio per fornire istruzioni su come leggere e applicare un foglio di lavoro completo ai collegamenti controller-to-stack via cavo per shelf di dischi con moduli IOM12/IOM12B per la connettività multipath.
 
 .Prima di iniziare
-Se si dispone di una piattaforma con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e in seguito, utilizza quanto segue (queste piattaforme utilizzano un foglio di lavoro unico):
+Se si dispone di una piattaforma con storage interno, utilizzare il seguente foglio di lavoro:
 
 link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"]
 
@@ -28,7 +28,7 @@ La configurazione utilizzata in questo esempio è una configurazione ha multipat
 NOTE: Se si dispone di più coppie di porte di quelle necessarie per collegare gli stack nel sistema, la procedura migliore consiste nel saltare le coppie di porte per ottimizzare le porte SAS del sistema. Ottimizzando le porte SAS, si ottimizzano le prestazioni del sistema.
 
 * Se si dispone di una configurazione a controller singolo, saltare i passaggi secondari b e d per il cablaggio a un secondo controller.
-* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulla convenzione di numerazione degli slot del controller, sulla connettività shelf-to-shelf e sulla connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole e concetti relativi al cablaggio SAS"] per informazioni sulla convenzione di numerazione degli slot del controller, sulla connettività shelf-to-shelf e sulla connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
 
 
 Le coppie di porte vengono cablate utilizzando ogni altra coppia di porte nel foglio di lavoro: 1a/2b e 1c/2d.

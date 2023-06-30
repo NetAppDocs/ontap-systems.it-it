@@ -14,7 +14,7 @@ summary: Completando il modello del foglio di lavoro, è possibile definire le c
 Completando il modello del foglio di lavoro, è possibile definire le coppie di porte SAS del controller che è possibile utilizzare per collegare i controller a stack di shelf di dischi con i moduli IOM12/IOM12B per ottenere una connettività multipath in una configurazione a coppia ha o a singolo controller. È inoltre possibile utilizzare il foglio di lavoro completo per esaminare il cablaggio delle connessioni multipath per la configurazione.
 
 .Prima di iniziare
-Se si dispone di una piattaforma con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e in seguito, utilizza quanto segue (queste piattaforme utilizzano un foglio di lavoro unico):
+Se si dispone di una piattaforma con storage interno, utilizzare il seguente foglio di lavoro:
 
 link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"]
 
@@ -27,7 +27,7 @@ Vengono forniti esempi di fogli di lavoro completi per configurazioni ha multipa
 Per gli esempi dei fogli di lavoro viene utilizzata una configurazione con due HBA SAS a quattro porte e due stack di shelf di dischi con moduli IOM12/IOM12B.
 
 * Il modello di foglio di lavoro consente di creare fino a sei stack; se necessario, è necessario aggiungere altre colonne.
-* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole e concetti relativi al cablaggio SAS"] per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
 * Se necessario, dopo aver completato il foglio di lavoro, fare riferimento a. link:install-cabling-worksheets-how-to-read-multipath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività multipath"]
 
 

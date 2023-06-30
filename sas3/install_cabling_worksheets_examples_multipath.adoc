@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-cabling-worksheets-examples-multipath.html 
 sidebar: sidebar 
-keywords: controller-to-stack, cabling, worksheet, cable, ha, pair, multipath, ha, configuration, controller-to-stack, cabling, controller-to-stack cabling worksheets and cabling examples for common multipath ha configuration 
+keywords: controller-to-stack, cabling, worksheet, cable, ha, pair, multipath, ha, configuration, controller-to-stack, cabling, controller-to-stack cabling worksheets and cabling examples for multipath ha configuration 
 summary: È possibile utilizzare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per collegare la coppia ha come configurazione ha multipath. 
 ---
-= Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath comuni - shelf con moduli IOM12/IOM12B
+= Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath - shelf con moduli IOM12/IOM12B
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,10 @@ summary: È possibile utilizzare i fogli di lavoro del cablaggio controller-to-s
 [role="lead"]
 È possibile utilizzare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per collegare la coppia ha come configurazione ha multipath.
 
-* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
+
+NOTE: Queste informazioni si applicano alle piattaforme senza storage interno.
+
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole e concetti relativi al cablaggio SAS"] per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).
 * Se necessario, fare riferimento a. link:install-cabling-worksheets-how-to-read-multipath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività multipath"].
 * Gli esempi di cablaggio mostrano i cavi controller-to-stack come solidi o tratteggiati per distinguere le connessioni delle porte controller A e C dalle connessioni delle porte controller B e D.
 +

@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-cabling-rules.html 
 sidebar: sidebar 
-keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b 
+keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b, concepts 
 summary: 'Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in configurazioni a coppia ha e a controller singolo (per le piattaforme supportate).' 
 ---
-= Regole di cablaggio SAS - shelf con moduli IOM12/IOM12B
+= Regole e concetti di cablaggio SAS - shelf con moduli IOM12/IOM12B
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in 
 Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in configurazioni a coppia ha e a controller singolo (per le piattaforme supportate) applicando le regole di cablaggio SAS: Regole di configurazione, regole di numerazione degli slot del controller, regole di connessione shelf-to-shelf, regole di connessione controller-to-stack e, se applicabili, regole per cavi ottici SAS HD mini-SAS.
 
 
-NOTE: Le regole di cablaggio SAS relative alle regole di numerazione degli slot dei controller, alle regole di connessione shelf-to-shelf e alle regole di connessione controller-to-stack descritte in questa guida sono le stesse che si applicano a tutti gli shelf di dischi SAS, indipendentemente dal fatto che dispongano di moduli IOM12/IOM12B, IOM6 o IOM3. Tuttavia, le informazioni contenute in questa guida sono specifiche per le caratteristiche esclusive degli shelf di dischi con moduli IOM12 e per il loro utilizzo nelle configurazioni supportate.
+NOTE: Le regole di cablaggio SAS relative alle regole di numerazione degli slot dei controller, alle regole di connessione shelf-to-shelf e alle regole di connessione controller-to-stack descritte in questa guida sono le stesse che si applicano a tutti gli shelf di dischi SAS, indipendentemente dal fatto che dispongano di moduli IOM12/IOM12B, IOM6 o IOM3. Tuttavia, le informazioni contenute in questa guida sono specifiche per le caratteristiche esclusive degli shelf di dischi con moduli IOM12/IOM12B e per il loro utilizzo nelle configurazioni supportate.
 
 Le regole di cablaggio SAS relative alle regole di configurazione e alle regole per i cavi ottici SAS mini-SAS HD descritte in questa guida sono specifiche per gli shelf di dischi con moduli IOM12/IOM12B.
 
@@ -32,20 +32,39 @@ Evitare di discostarsi dalle regole; le deviazioni potrebbero ridurre affidabili
 
 == Regole di configurazione
 
-Gli shelf di dischi con moduli IOM12 sono supportati su specifici tipi di configurazioni a coppia ha e a controller singolo.
+[role="lead"]
+Gli shelf di dischi con moduli IOM12/IOM12B sono supportati su specifici tipi di configurazioni a coppia ha e a controller singolo.
 
 
 NOTE: Le piattaforme FAS25XX non sono trattate in questo contenuto.
 
+[NOTE]
+====
+Per informazioni aggiornate sulle configurazioni di cablaggio supportate per il modello di piattaforma in uso, consultare la Hardware Universe.
+
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+====
 * Le configurazioni di coppia HA devono essere cablate come configurazioni ha multipath o ha quad-path con le seguenti eccezioni:
 +
-** Piattaforme con storage interno, incluse le serie FAS2600, AFF A200, FAS2700, AFF A220, E in seguito, possono essere cablate come configurazioni ha a percorso singolo per supportare la connettività a un dispositivo di backup su nastro SAS esterno.
-** Piattaforme con storage interno, incluse le serie FAS2600, AFF A200, FAS2700, AFF A220, E versioni successive, non supportano la connettività ha quad-path.
+** Le piattaforme con storage interno non supportano la connettività ha quad-path.
+** Una coppia ha FAS2800 può essere cablata come ha a tre percorsi.
++
+Per informazioni sulla connettività FAS2800, consultare la <<Connettività ha tri-path>> sezione.
+
+** Le piattaforme con storage interno possono essere cablate come configurazioni ha a percorso singolo (dalla porta 0b/0b1 agli shelf esterni) per supportare la connettività a un dispositivo di backup su nastro SAS esterno (dalla porta 0a).
 
 
+
+
+[NOTE]
+====
+Per le coppie ha FAS2800, sebbene il cablaggio agli shelf esterni sia ha a percorso singolo, a causa della connessione interna di ciascun controller della porta 0b all'espansore locale (IOM12G) e della porta 0c all'espansore del partner, la configurazione della coppia ha è ha multipath.
+
+====
 * Le configurazioni a controller singolo devono essere cablate come configurazioni multipath o quad-path, con le seguenti eccezioni:
 +
-** Le configurazioni a controller singolo della serie FAS2600 (con shelf di dischi esterni) possono essere cablate come configurazioni a percorso singolo.
+** Le configurazioni a controller singolo della serie FAS2600 possono essere cablate come configurazioni a percorso singolo.
 +
 Poiché lo storage interno utilizza la connettività a percorso singolo, ONTAP emette occasionalmente avvisi che indicano il rilevamento di percorsi misti. Per evitare questi avvisi, è possibile utilizzare la connettività a percorso singolo agli shelf di dischi esterni. Inoltre, è possibile utilizzare la connettività a percorso singolo quando si utilizza un dispositivo di backup su nastro SAS esterno.
 
@@ -88,8 +107,10 @@ Quando si dispone di più shelf di dischi in uno stack di shelf di dischi, quest
 
 === Connettività standard shelf-to-shelf
 
-* La connettività standard shelf-to-shelf viene utilizzata nelle configurazioni ha multipath, multipath, ha a percorso singolo e a percorso singolo.
-* La connettività standard shelf-to-shelf è ciò che viene utilizzato nelle configurazioni di storage SAS esistenti con moduli IOM3 e IOM6: È necessaria una connessione via cavo tra shelf di dischi in ciascun dominio: Dominio A (IOM A) e dominio B (IOM B).
+* La connettività standard shelf-to-shelf viene utilizzata in qualsiasi stack di shelf di dischi con più shelf di dischi.
++
+È necessaria una connessione via cavo tra shelf di dischi in ciascun dominio: Dominio A (IOM A) e dominio B (IOM B).
+
 * La Best practice consiste nell'utilizzare le porte IOM 3 e 1 per la connettività standard shelf-to-shelf.
 +
 Dal primo shelf logico all'ultimo shelf logico di uno stack, collegare la porta IOM 3 alla porta IOM 1 dello shelf successivo nel dominio A e quindi nel dominio B.
@@ -238,23 +259,23 @@ link:install-cabling-worksheet-template-quadpath.html["Modello di foglio di lavo
 
 
 
-=== Regole di connessione delle porte del controller 0b e 0a per piattaforme con storage interno
+=== Regole di connessione delle porte del controller 0b/0b1 e 0a per piattaforme con storage interno
 
-Piattaforme con storage interno, incluse le serie FAS2600, AFF A200, FAS2700, AFF A220, e in seguito, disporre di un insieme univoco di regole di connessione, in quanto ciascun controller deve mantenere la stessa connettività di dominio tra lo storage interno (porta 0b) e lo stack. Ciò significa che quando un controller si trova nello slot A dello chassis (controller 1) si trova nel dominio A (IOM A) e quindi la porta 0b deve connettersi a IOM A nello stack. Quando un controller si trova nello slot B dello chassis (controller 2), si trova nel dominio B (IOM B) e pertanto la porta 0b deve connettersi a IOM B nello stack.
+Le piattaforme con storage interno dispongono di un insieme univoco di regole di connessione, in quanto ciascun controller deve mantenere la stessa connettività di dominio tra lo storage interno (porta 0b/0b1) e lo stack. Ciò significa che quando un controller si trova nello slot A dello chassis (controller 1) si trova nel dominio A (IOM A) e quindi la porta 0b/0b1 deve connettersi a IOM A nello stack. Quando un controller si trova nello slot B dello chassis (controller 2), si trova nel dominio B (IOM B) e pertanto la porta 0b/0b1 deve connettersi all'IOM B nello stack.
 
 
 NOTE: Le piattaforme FAS25XX non sono trattate in questo contenuto.
 
 
-NOTE: Se non si connette la porta 0b al dominio corretto (domini cross-Connect), si espone il sistema a problemi di resilienza che impediscono di eseguire procedure senza interruzioni in modo sicuro.
+NOTE: Se non si connette la porta 0b/0b1 al dominio corretto (domini con connessione incrociata), si espone il sistema a problemi di resilienza che impediscono l'esecuzione di procedure senza interruzioni in modo sicuro.
 
-* Porta 0b del controller (porta storage interna):
+* Porta 0b/0b1 del controller (porta storage interna):
 +
-** La porta 0b del controller 1 si collega sempre all'IOM A (dominio A).
-** La porta 0b del controller 2 si collega sempre all'IOM B (dominio B).
-** La porta 0b è sempre il percorso primario.
-** La porta 0b si collega sempre all'ultimo shelf logico di dischi in uno stack.
-** La porta 0b si collega sempre alla porta IOM 3 dello shelf di dischi.
+** La porta 0b/0b1 del controller 1 si collega sempre a IOM A (dominio A).
+** La porta 0b/0b1 del controller 2 si collega sempre a IOM B (dominio B).
+** La porta 0b/0b1 è sempre il percorso primario.
+** La porta 0b/0b1 si collega sempre all'ultimo shelf logico di dischi in uno stack.
+** La porta 0b/0b1 si collega sempre alla porta IOM 3 dello shelf di dischi.
 
 
 * Porta controller 0a (porta HBA interna):
@@ -268,9 +289,37 @@ NOTE: Se non si connette la porta 0b al dominio corretto (domini cross-Connect),
 
 
 
-La figura seguente illustra la connettività del dominio della porta di storage interna (0b) per una serie FAS2600, AFF A200, FAS2700, AFF A220 e una configurazione ha multipath successiva:
+La seguente illustrazione evidenzia la connettività di dominio della porta di storage interna (0b/0b1) a uno stack esterno di shelf:
 
-image::../media/drw_fas2600_mpha_domain_example.png[esempio di dominio mpha drw fas2600]
+image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[Esempio di dominio mpha drw fas2600 IEOPS 1172]
+
+
+
+=== Connettività ha tri-path
+
+La connettività ha Tri-path è disponibile sulle coppie ha FAS2800. La connettività ha Tri-path ha tre percorsi da ciascun controller agli shelf interni (IOM12G) ed esterni:
+
+* La connessione interna della porta 0b di ciascun controller al proprio IOM12G locale e la porta 0c al proprio IOM12G del partner fornisce una connettività ha multipath a coppia.
+* Il cablaggio delle porte di storage esterne di ciascun controller, 0a e 0b1, fornisce una connettività ha a tre percorsi.
++
+Le porte 0a e 0b1 sono cablate tra i due controller quando non sono presenti shelf esterni o sono cablate su shelf esterni per ottenere una connettività ha a tre percorsi.
+
+
+
+Di seguito sono illustrati i collegamenti interni e i cavi esterni del controller che consentono la connettività ha a tre percorsi:
+
+image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[Concetto di drw fas2800 tpha IEOPS 950]
+
+Le porte SAS esterne di FAS2800:
+
+* La porta 0a proviene dall'HBA interno (come altre piattaforme con shelf interno).
+* La porta 0b1 proviene dallo shelf interno (come le porte 0b su altre piattaforme con shelf interno).
+* La porta 0b2 non viene utilizzata. È disattivato. Se un cavo è collegato, viene generato un messaggio di errore.
+
+
+image::../media/drw_sas3_ports_on_fas2800_IEOPS-946 (1).svg[Porte drw sas3 su fas2800 IEOPS 946 (1)]
+
+Gli esempi di cablaggio di coppia ha FAS2800 sono disponibili nella link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"] sezione.
 
 
 

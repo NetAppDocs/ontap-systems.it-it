@@ -56,9 +56,9 @@ NOTE: Se si dispone di una coppia ha con almeno due stack, lo shelf di dischi co
 Le etichette indicano il numero dello stack, ad esempio *Loop o Stack n.: 1* e *Loop o Stack n.: 2*. Gli shelf di dischi che non contengono gli aggregati root mostrano solo il numero di serie dello shelf di dischi sulle etichette.
 
 * Se durante l'installazione e la configurazione del sistema non si configura il sistema per l'utilizzo dell'assegnazione automatica della proprietà del disco, è necessario assegnare manualmente la proprietà del disco.
-* Il percorso di controllo alternativo in-band (ACP) viene attivato automaticamente.
+* IBACP (in-band Alternate Control Path) viene attivato automaticamente.
 +
-ACP in-band non supportato su configurazioni ha a percorso singolo o a percorso singolo.
+IBACP non è supportato nelle configurazioni ha a percorso singolo o a percorso singolo.
 
 
 
@@ -84,7 +84,7 @@ Se vengono generati errori di cablaggio SAS o ID shelf duplicati, seguire le azi
 Per scaricare Config Advisor è necessario disporre dell'accesso di rete.
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+https://https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 
 
@@ -242,7 +242,7 @@ NOTE: Non accendere gli shelf di dischi in questo momento.
 Le connessioni SAS per shelf di dischi via cavo (shelf-to-shelf) e controller-to-shelf (controller-to-shelf) consentono di stabilire la connettività dello storage per il sistema.
 
 .Prima di iniziare
-È necessario aver soddisfatto i requisiti indicati in <<Requirements for installing and cabling disk shelves with IOM12 modules for a new system installation>> e hanno installato gli shelf di dischi nel rack.
+È necessario aver soddisfatto i requisiti indicati in <<Requisiti per l'installazione e il cablaggio di shelf di dischi con moduli IOM12/IOM12B per un'installazione di nuovo sistema>> e hanno installato gli shelf di dischi nel rack.
 
 .A proposito di questa attività
 Dopo aver collegato gli shelf di dischi, accenderli, impostare gli ID degli shelf e completare la configurazione e la configurazione del sistema.
@@ -259,7 +259,7 @@ Per una spiegazione dettagliata e per esempi di cablaggio shelf-to-shelf "`stand
 
 
  a| 
-Si sta cablando una configurazione ha multipath, multipath, ha a percorso singolo o a percorso singolo
+Si sta cablando una configurazione ha multipath, ha tri-path, multipath, ha single path o single path
  a| 
 Collegare i collegamenti shelf-to-shelf come connettività "`standard`" (utilizzando le porte IOM 3 e 1):
 
@@ -286,10 +286,10 @@ Cablare le connessioni shelf-to-shelf come connettività "`dDouble-wide`": È po
 +
 .. Controllare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per verificare l'eventuale presenza di un foglio di lavoro completo per la configurazione.
 +
-link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme AFF e FAS con storage integrato"]
+link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"]
 
 +
-link:install-cabling-worksheets-examples-multipath.html["Fogli di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath comuni"]
+link:install-cabling-worksheets-examples-multipath.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath"]
 
 +
 link:install-worksheets-examples-quadpath.html["Esempio di cablaggio e foglio di lavoro controller-to-stack per una configurazione ha quad-path con due HBA SAS quad-port"]
@@ -409,7 +409,7 @@ NOTE: Prima di avviare il sistema, è consigliabile sfruttare questa opportunit�
 Se vengono generati errori di cablaggio SAS o ID shelf duplicati, seguire le azioni correttive fornite.
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+https://https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 +
 È inoltre possibile eseguire `storage shelf show -fields shelf-id` Per visualizzare un elenco di shelf ID già in uso (e duplicati, se presenti) nel sistema.

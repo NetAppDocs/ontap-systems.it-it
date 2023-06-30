@@ -1,0 +1,110 @@
+---
+permalink: fas2800/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: fas2800, how to recable the system, how to reassign disks 
+summary: È necessario riassegnare lo storage e confermare la riassegnazione del disco. 
+---
+= Riscrivere il sistema e riassegnare i dischi - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, è necessario rieseguire lo storage, confermare la riassegnazione del disco, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller. È necessario completare una serie di attività prima di ripristinare il funzionamento completo del sistema.
+
+
+
+== Fase 1: Ricable del sistema
+
+Possibilità di ricable le connessioni di rete e di storage del modulo controller.
+
+.Fasi
+. Ricable del sistema.
+. Verificare che il cablaggio sia corretto utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
++
+.. Scaricare e installare Config Advisor.
+.. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
+.. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
+.. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
+
+
+
+
+
+
+== Fase 2: Riassegnare i dischi
+
+È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
+
+. Se il controller _replacement_ è in modalità di manutenzione (che mostra il `*>` Uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
+. Dal prompt DEL CARICATORE sul controller _replacement_, avviare il controller, immettendo `y` Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema:``boot_ontap``
+. Attendere il `Waiting for giveback...` Viene visualizzato il messaggio sulla console del controller _replacement_ e quindi, dal controller integro, verificare che il nuovo ID di sistema del partner sia stato assegnato automaticamente: `storage failover show`
++
+Nell'output del comando, viene visualizzato un messaggio che indica che l'ID del sistema è stato modificato sul controller compromesso, mostrando gli ID vecchi e nuovi corretti. Nell'esempio seguente, il node2 è stato sostituito e ha un nuovo ID di sistema pari a 151759706.
+
++
+[listing]
+----
+node1> `storage failover show`
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. Dal controller integro, verificare che tutti i coredump siano salvati:
++
+.. Passare al livello di privilegio avanzato: `set -privilege advanced`
++
+Puoi rispondere `Y` quando viene richiesto di passare alla modalità avanzata. Viene visualizzato il prompt della modalità avanzata (*>).
+
+.. Salva i coredump: `system node run -node _local-node-name_ partner savecore`
+.. Attendere il `savecore` comando da completare prima di emettere il giveback.
++
+È possibile immettere il seguente comando per monitorare l'avanzamento del comando savecore: `system node run -node _local-node-name_ partner savecore -s`
+
+.. Tornare al livello di privilegio admin: `set -privilege admin`
+
+
+. Restituire il controller:
++
+.. Dal controller integro, restituire lo storage del controller sostituito: `storage failover giveback -ofnode _replacement_node_name_`
++
+Il controller _replacement_ riprende lo storage e completa l'avvio.
+
++
+Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema, immettere `y`.
+
++
+
+IMPORTANT: Se il giveback viene veto, risolvere il problema del veto. Se il veto non è critico da risolvere, è possibile ignorare il veto.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Trova il contenuto della configurazione ad alta disponibilità per la tua versione di ONTAP 9"]
+
+.. Una volta completato il giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover: `storage failover show`
++
+L'output di `storage failover show` Il comando non deve includere l'ID di sistema modificato nel messaggio del partner.
+
+
+
+. Verificare che i dischi siano stati assegnati correttamente: `storage disk show -ownership`
++
+I dischi appartenenti al controller _replacement_ devono mostrare il nuovo ID di sistema. Nell'esempio seguente, i dischi di proprietà di node1 ora mostrano il nuovo ID di sistema, 1873775277:
+
++
+[listing]
+----
+node1> `storage disk show -ownership`
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+

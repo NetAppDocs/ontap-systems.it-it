@@ -14,9 +14,9 @@ summary: 'È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12 
 È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12/IOM12B (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire uno shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.
 
 .Prima di iniziare
-* Il sistema deve essere una configurazione ha multipath, multipath, ha quad-path o quad-path.
+* Il sistema deve essere una configurazione ha multipath, ha tri-path, multipath, ha quad-path o quad-path.
 +
-Per le piattaforme con storage integrato, come i sistemi AFF A200, AFF A220, FAS2600 e FAS2700, lo storage esterno deve essere cablato come ha multipath o multipath.
+Per le piattaforme con storage interno, lo storage esterno deve essere cablato come ha multipath, ha tri-path o multipath.
 
 +
 
@@ -27,7 +27,7 @@ NOTE: Per un sistema a controller singolo della serie FAS2600 dotato di storage 
 È possibile scaricare ed eseguire Active IQ Config Advisor per visualizzare eventuali messaggi di errore relativi al cablaggio SAS e le azioni correttive da intraprendere.
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 * Le configurazioni di coppia HA non possono essere in uno stato di Takeover.
 * È necessario rimuovere tutti gli aggregati dai dischi (i dischi devono essere spare) negli shelf di dischi che si stanno rimuovendo.
@@ -52,7 +52,7 @@ La rimozione delle informazioni di proprietà da un disco spare consente di inte
 ====
 La procedura per la rimozione della proprietà dai dischi richiede la disattivazione dell'assegnazione automatica della proprietà dei dischi. Al termine di questa procedura, viene riattivata l'assegnazione automatica della proprietà del disco.
 
-https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"]
+https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"^]
 
 ====
 * Per un sistema ONTAP in cluster con più di due nodi, la Best practice consiste nel riassegnare epsilon a una coppia ha diversa da quella in fase di manutenzione pianificata.
@@ -75,13 +75,13 @@ Viene visualizzato il nodo che contiene epsilon `true` in `Epsilon` colonna. (I 
 
 NOTE: Se non si mantiene la connettività a percorso singolo dai controller allo stack quando si modifica lo stack per evitare lo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
 
-* *Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, vedere la sezione, <<Spostare o trasportare gli shelf DS460C>> al termine di questa procedura.
+* *Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione "spostamento o trasporto degli shelf DS460C" alla fine di questa procedura.
 
 
 .Fasi
-. Verificare che la configurazione del sistema sia `Multi-Path HA`, `Multi-Path`, `Quad-path HA`, o. `Quad-path`: `sysconfig`
+. Verificare che la configurazione del sistema sia `Multi-Path HA`, `tri-path HA`, `Multi-Path`, `Quad-path HA`, o. `Quad-path` eseguendo il `sysconfig` comando dal nodeshell di entrambi i controller.
 +
-Questo comando viene eseguito dal nodeshell di entrambi i controller. Il completamento del rilevamento potrebbe richiedere fino a un minuto.
+Il completamento del rilevamento potrebbe richiedere fino a un minuto.
 
 +
 La configurazione viene elencata in `System Storage Configuration` campo.
@@ -180,8 +180,8 @@ Uno shelf di dischi dal centro dello stack Uno shelf di dischi al centro di uno 
 Per la rimozione di uno shelf di dischi da un'estremità di uno stack o dal centro di uno stack, fare riferimento ai seguenti esempi di cablaggio. Prendere nota degli esempi di cablaggio riportati di seguito:
 
 +
-** I moduli IOM12 sono disposti affiancati come in uno shelf di dischi DS224C o DS212C; se si dispone di un DS460C, i moduli IOM12 sono disposti uno sopra l'altro.
-** Lo stack in ogni esempio è cablato con cablaggio standard shelf-to-shelf, utilizzato negli stack cablati con connettività ha multipath o multipath.
+** I moduli IOM12/IOM12B sono disposti affiancati come in uno shelf di dischi DS224C o DS212C; se si dispone di DS460C, i moduli IOM12/IOM12B sono disposti uno sopra l'altro.
+** Lo stack in ogni esempio è cablato con cablaggio standard shelf-to-shelf, utilizzato negli stack cablati con connettività ha multipath, ha trio-path o multipath.
 +
 È possibile dedurre la ricablaggio se lo stack è cablato con connettività ha quad-path o quad-path, che utilizza un cablaggio shelf-to-shelf doppio-wide.
 
@@ -189,7 +189,7 @@ Per la rimozione di uno shelf di dischi da un'estremità di uno stack o dal cent
 +
 Ripetere la procedura di ricablaggio per il percorso B (IOM B).
 
-** L'esempio di cablaggio per la rimozione di uno shelf di dischi dalla fine di uno stack dimostra la rimozione dell'ultimo shelf logico di dischi in uno stack cablato con connettività ha multipath.
+** L'esempio di cablaggio per la rimozione di uno shelf di dischi dalla fine di uno stack dimostra la rimozione dell'ultimo shelf logico di dischi in uno stack cablato con connettività ha multipath o ha a tre percorsi.
 +
 È possibile dedurre la ricablaggio se si sta rimuovendo il primo shelf logico di un disco in uno stack o se lo stack dispone di connettività multipath.
 
@@ -279,7 +279,7 @@ La spedizione DS460C è stata fornita con quattro maniglie di sollevamento rimov
 image::../media/drw_ds460c_handles.gif[maniglie drw ds460c]
 
 +
-Se si sposta lo shelf DS460C in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione seguente, <<Spostare o trasportare gli shelf DS460C>>.
+Se si sposta lo shelf DS460C in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione "spostamento o trasporto degli shelf DS460C".
 
 
 

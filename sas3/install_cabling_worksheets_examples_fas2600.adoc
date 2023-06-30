@@ -1,8 +1,8 @@
 ---
 permalink: sas3/install-cabling-worksheets-examples-fas2600.html 
 sidebar: sidebar 
-keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, internal storage 
-summary: È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare piattaforme via cavo con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e versioni successive. 
+keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, fas2800, internal storage 
+summary: È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare le piattaforme con storage interno. 
 ---
 = Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno - shelf con moduli IOM12/IOM12B
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: È possibile utilizzare i fogli di lavoro completi di cablaggio control
 
 
 [role="lead"]
-È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare piattaforme via cavo con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e versioni successive.
+È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare le piattaforme con storage interno.
 
 
 NOTE: Queste informazioni non si applicano alle piattaforme FAS25XX.
 
-* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole di cablaggio SAS"] per informazioni sulle configurazioni supportate, la connettività shelf-to-shelf e la connettività controller-to-shelf.
-* Gli esempi di cablaggio mostrano i cavi controller-to-stack come solidi o tratteggiati per distinguere le connessioni delle porte del controller 0b dalle connessioni delle porte del controller 0a.
+* Se necessario, fare riferimento a. link:install-cabling-rules.html["Regole e concetti relativi al cablaggio SAS"] per informazioni sulle configurazioni supportate, la connettività shelf-to-shelf e la connettività controller-to-shelf.
+* Gli esempi di cablaggio mostrano i cavi controller-stack come solidi o tratteggiati per distinguere le connessioni delle porte 0b/0b1 del controller dalle connessioni delle porte 0a del controller.
 +
-image::../media/drw_fas2600_controller_to_stack_cable_type_key.png[controller drw fas2600 per collegare la chiave del tipo di cavo]
+image::../media/drw_fas2600_controller_to_stack_cable_type_key_IEOPS-947.svg[Controller drw fas2600 per stack tipo di cavo chiave IEOPS 947]
 
 * Gli esempi di cablaggio mostrano le connessioni controller-to-stack e shelf-to-shelf in due colori diversi per distinguere la connettività tramite IOM A (dominio A) e IOM B (dominio B).
 +
@@ -29,13 +29,42 @@ image::../media/drw_fas2600_cable_color_key.png[tasto colore del cavo drw fas260
 
 
 
+== Piattaforma FAS2800 in una configurazione ha multipath senza shelf esterni
+
+L'esempio seguente mostra che non è necessario alcun cablaggio per la connettività ha multipath:
+
+image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[Drw fas2800 noshelf mpha IEOPS 954]
+
+
+
+== Piattaforma FAS2800 in configurazione ha a tre percorsi senza shelf esterni
+
+Il seguente esempio di cablaggio mostra il cablaggio necessario tra i due controller per ottenere la connettività a tre percorsi:
+
+image::../media/drw_fas2800_noshelf_tpha_IEOPS-955.svg[Drw fas2800 tpha IEOPS 955]
+
+
+
+== Piattaforma FAS2800 in una configurazione ha a tre percorsi con uno stack multi-shelf
+
+Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b1:
+
+image::../media/drw_fas2800_worksheet_IEOPS-948.svg[Foglio di lavoro drw fas2800 IEOPS 948]
+
+image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[Drw fas2800 con shelf tpha IEOPS 949]
+
+
+
 == Piattaforme con storage interno in una configurazione ha multipath con uno stack multi-shelf
 
 Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b:
 
-image::../media/drw_fas2600_mpha_worksheet.png[foglio di lavoro drw fas2600 mpha]
 
-image::../media/drw_fas2600_mpha.png[drw fas2600 mpha]
+NOTE: Questa sezione non si applica ai sistemi FAS2800 o FAS25XX.
+
+image::../media/drw_fas2600_mpha_worksheet_IEOPS-1255.svg[Foglio di lavoro drw fas2600 mpha IEOPS 1255]
+
+image::../media/drw_fas2600_mpha_IEOPS-1256.svg[Drw fas2600 mpha IEOPS 1256]
 
 
 

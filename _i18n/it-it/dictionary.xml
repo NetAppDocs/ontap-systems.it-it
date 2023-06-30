@@ -22,7 +22,6 @@
   <block id="e5d342b84a7b4a1d294e75d2ff62d759" category="section-title">Fase 2: Verifica dei LIF e registrazione del numero di serie</block>
   <block id="556aba51608845a42e971c4c7b471837" category="paragraph">Prima di riportare il nodo _replacement_ in servizio, verificare che i AutoSupport si trovino sulle rispettive porte home, registrare il numero di serie del nodo _replacement_, se abilitato, e ripristinare il giveback automatico.</block>
   <block id="462ec873925d8409f9ead354ff424e1b" category="list-text">Verificare che le interfacce logiche stiano segnalando al server principale e alle porte:<block ref="f8a58a872dbff91c3ae7076526ddf81a" prefix=" " category="inline-code"></block></block>
-  <block id="8ea6b3a9b2a4529608397a2c8232b2e9" category="paragraph">Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home:<block ref="d1e4afa40f7e9718bdad64b4f5db9abb" prefix=" " category="inline-code"></block></block>
   <block id="bfe787834fd9e46156b1d62f2f5029f8" category="list-text">Registrare il numero di serie del sistema presso il supporto NetApp.</block>
   <block id="523f153f577513ed6f7ddd1f4d6a7cac" category="list-text">Se AutoSupport è attivato, inviare un messaggio AutoSupport per registrare il numero di serie.</block>
   <block id="69d8be94d5b9ba35360160c6e3097920" category="list-text">Se AutoSupport non è attivato, chiamare<block ref="201cec37350c6561a61e79fe67dd46bf" category="inline-link-rx"></block> per registrare il numero di serie.</block>
@@ -747,12 +746,10 @@
   <block id="993e592d598f2ac9b6cdd13862d70d0a" category="list-text">Il nodo _replacement_ è il nuovo nodo che ha sostituito il nodo compromesso come parte di questa procedura.</block>
   <block id="d6cd7784b4e7b607424fb3f31dc53b2d" category="list-text">Il nodo _healthy_ è il partner ha del nodo _replacement_.</block>
   <block id="58532634ca04e50b018c22652941f0e2" category="list-text">Se il nodo _replacement_ non si trova al prompt DEL CARICATORE, arrestare il sistema al prompt DEL CARICATORE.</block>
-  <block id="7676556d14b3f7dfc7ddc885b585b132" category="list-text">Sul nodo _healthy_, controllare l'ora di sistema:<block ref="7e17e2b336dbdd66c2f45405573b53de" prefix=" " category="inline-code"></block></block>
   <block id="610bb0d24c586904b13f6cb09aca2599" category="paragraph">La data e l'ora sono indicate in GMT.</block>
   <block id="7d605a9dbf45a466003e126065e1bc68" category="list-text">Al prompt DEL CARICATORE, controllare la data e l'ora nel nodo _replacement_:<block ref="7e17e2b336dbdd66c2f45405573b53de" prefix=" " category="inline-code"></block></block>
   <block id="fba5bbeb3ff706c0a6a0f6aa48ca6830" category="list-text">Se necessario, impostare la data in GMT sul nodo sostitutivo:<block ref="7e61842d1d9bb6d13127efea49e14c96" prefix=" " category="inline-code"></block></block>
   <block id="42038d95379d1d97bbdb99cca278fbaf" category="list-text">Se necessario, impostare l'ora in GMT sul nodo sostitutivo:<block ref="e963cd9cdc97a95d8672b225c6c0f776" prefix=" " category="inline-code"></block></block>
-  <block id="129717f48118cb8374cc8d6ecb1a3002" category="list-text">Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_:<block ref="7e17e2b336dbdd66c2f45405573b53de" prefix=" " category="inline-code"></block></block>
   <block id="9826dc7dca2ce77788236ffc0e442de8" category="section-title">Fase 2: Verificare e impostare lo stato ha del modulo controller</block>
   <block id="7b9f82a6a85f3a3c9f96c87c16c21372" category="paragraph">Verificare<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.</block>
   <block id="8ccdb2a9438a446fc98b092384f5d324" category="list-text">In modalità manutenzione dal nuovo modulo controller, verificare che tutti i componenti siano visualizzati allo stesso modo<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> stato:<block ref="fb4e6c2e33b945c3ff4d042cb66d2ed4" prefix=" " category="inline-code"></block></block>
@@ -3178,7 +3175,6 @@
   <block id="0f8e7bfea6aa060d757ea5effeaeaf14" category="list-text">Questa procedura include la procedura per la riassegnazione automatica o manuale dei dischi al modulo controller associato al nuovo modulo NVRAM. È necessario riassegnare i dischi quando richiesto nella procedura. Il completamento della riassegnazione del disco prima del giveback può causare problemi.</block>
   <block id="3dc9d74e0e70274198fc890e3238aa6f" category="list-text">Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.</block>
   <block id="244b874016608f71c1442226368f5da8" category="list-text">Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:<block ref="8c7d165004dc30be518ba575e7800648" prefix=" " category="inline-code"></block></block>
-  <block id="3891e96240b27c2309a21f6387f98917" category="paragraph">Andare a Rimozione del modulo controller.</block>
   <block id="2c605d107b8b0f8d344d6c863e4c47a9" category="paragraph">Premere Ctrl-C, quindi rispondere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>.</block>
   <block id="04a1c92d61b3e562a673dea0adef0f20" category="list-text">Se si utilizza la crittografia dello storage NetApp, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "`ritorno dei SED alla modalità non protetta`" della _Guida all'alimentazione per la crittografia NetApp di ONTAP 9_.</block>
   <block id="ba8122bba290a3351611db1b66c99386" category="paragraph"><block ref="ba8122bba290a3351611db1b66c99386" category="inline-link-rx"></block></block>
@@ -3227,7 +3223,6 @@
   <block id="e1d83f38808259079bf63398959b5064" category="section-title">Fase 4: Reinstallare il modulo controller - AFF A700</block>
   <block id="4c6ce16f45f7004dafb410a6fe342bcf" category="list-text">Se il sistema è configurato per supportare connessioni dati e di interconnessione cluster a 10 GbE su schede di rete 40 GbE o porte integrate, convertire queste porte in connessioni a 10 GbE utilizzando il comando nicadmin convert dalla modalità Maintenance.</block>
   <block id="ccfa1cc380a451bf6234e36543721fae" category="admonition">Assicurarsi di uscire dalla modalità di manutenzione dopo aver completato la conversione.</block>
-  <block id="db1d1fc556b59fbc6af03005e8bfd733" category="section-title">Fase 4: Restituire il componente guasto a NetApp - AFF A700</block>
   <block id="0dfb2568739ce156f475dfddb29e2387" category="doc">Panoramica della sostituzione dello chassis - AFF A700s</block>
   <block id="2b1646515c4dcacd96acd971239a6f14" category="paragraph">Per sostituire lo chassis, è necessario spostare i moduli controller e le unità SSD dallo chassis compromesso allo chassis sostitutivo, quindi rimuovere lo chassis compromesso dal rack dell'apparecchiatura o dall'armadietto del sistema e installare lo chassis sostitutivo al suo posto.</block>
   <block id="c465df44865c02db52bc6f37023b5b75" category="list-text">Questa procedura si basa sul presupposto che si stiano spostando gli SSD e i moduli controller nel nuovo chassis e che lo chassis sostitutivo sia un nuovo componente di NetApp.</block>
@@ -6061,9 +6056,7 @@
   <block id="6945b44586dc88e4263f108e9be99095" category="list-text">Se necessario, riabilitare l'assegnazione automatica del disco:<block ref="468cd0e5a15e85c7790fc4f543542ad2" prefix="" category="inline-code"></block></block>
   <block id="1bf8504be438eafdf786f7fef56996eb" category="paragraph">È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i controller in una coppia ha.</block>
   <block id="062023e4095a297f17b97a86d9b4d256" category="summary">Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in configurazioni a coppia ha e a controller singolo (per le piattaforme supportate).</block>
-  <block id="f5b9b5b9c8a3b908584581a89b8c2226" category="doc">Regole di cablaggio SAS - shelf con moduli IOM12/IOM12B</block>
   <block id="19a5945f47c08602bccb2ce050ccb955" category="paragraph">Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in configurazioni a coppia ha e a controller singolo (per le piattaforme supportate) applicando le regole di cablaggio SAS: Regole di configurazione, regole di numerazione degli slot del controller, regole di connessione shelf-to-shelf, regole di connessione controller-to-stack e, se applicabili, regole per cavi ottici SAS HD mini-SAS.</block>
-  <block id="238f6056b9fefe76918fd63804bbcbfa" category="admonition">Le regole di cablaggio SAS relative alle regole di numerazione degli slot dei controller, alle regole di connessione shelf-to-shelf e alle regole di connessione controller-to-stack descritte in questa guida sono le stesse che si applicano a tutti gli shelf di dischi SAS, indipendentemente dal fatto che dispongano di moduli IOM12/IOM12B, IOM6 o IOM3. Tuttavia, le informazioni contenute in questa guida sono specifiche per le caratteristiche esclusive degli shelf di dischi con moduli IOM12 e per il loro utilizzo nelle configurazioni supportate.</block>
   <block id="35f903a7001175494e6eb7088631a16e" category="paragraph">Le regole di cablaggio SAS relative alle regole di configurazione e alle regole per i cavi ottici SAS mini-SAS HD descritte in questa guida sono specifiche per gli shelf di dischi con moduli IOM12/IOM12B.</block>
   <block id="13a358753c734e014332022a647326d0" category="paragraph">Le regole di cablaggio SAS descritte in questa guida bilanciano il cablaggio SAS tra le porte SAS integrate e le porte SAS dell'adattatore bus host per fornire configurazioni di storage controller altamente disponibili e soddisfare i seguenti obiettivi:</block>
   <block id="e650f09b3c5e7082570989f690e937f2" category="list-text">Fornire un unico algoritmo universale di facile comprensione per tutti i prodotti e le configurazioni SAS</block>
@@ -6072,13 +6065,9 @@
   <block id="540d6dd9e8a601304f58e8b1692a0cbc" category="list-text">Fornire la massima resilienza possibile per mantenere la disponibilità e ridurre al minimo la dipendenza dalle acquisizioni dei controller</block>
   <block id="ac9d521507af48d2a069896628ddcbe1" category="paragraph">Evitare di discostarsi dalle regole; le deviazioni potrebbero ridurre affidabilità, universalità e compatibilità.</block>
   <block id="1411fab742ef51836dbcd20dc81b333a" category="section-title">Regole di configurazione</block>
-  <block id="9f5ac9f9e33d14b5edcf142aa6534de3" category="paragraph">Gli shelf di dischi con moduli IOM12 sono supportati su specifici tipi di configurazioni a coppia ha e a controller singolo.</block>
   <block id="a02316bb16a44dfeab4bba0330def5a9" category="admonition">Le piattaforme FAS25XX non sono trattate in questo contenuto.</block>
   <block id="e813922cd0bf97e10c1d75af7555f41d" category="list-text">Le configurazioni di coppia HA devono essere cablate come configurazioni ha multipath o ha quad-path con le seguenti eccezioni:</block>
-  <block id="f18e20acd27581fe2f1075089d65a455" category="list-text">Piattaforme con storage interno, incluse le serie FAS2600, AFF A200, FAS2700, AFF A220, E in seguito, possono essere cablate come configurazioni ha a percorso singolo per supportare la connettività a un dispositivo di backup su nastro SAS esterno.</block>
-  <block id="c47a6f7fbf347f2ab09e05ad80c1fc30" category="list-text">Piattaforme con storage interno, incluse le serie FAS2600, AFF A200, FAS2700, AFF A220, E versioni successive, non supportano la connettività ha quad-path.</block>
   <block id="905e44a8d6df3feceb87ebb53cfc800e" category="list-text">Le configurazioni a controller singolo devono essere cablate come configurazioni multipath o quad-path, con le seguenti eccezioni:</block>
-  <block id="4f84345fdfdaaef18218a7ade58e0626" category="list-text">Le configurazioni a controller singolo della serie FAS2600 (con shelf di dischi esterni) possono essere cablate come configurazioni a percorso singolo.</block>
   <block id="ab36d824336ef6ebffc6dcb6e6c8f5c7" category="paragraph">Poiché lo storage interno utilizza la connettività a percorso singolo, ONTAP emette occasionalmente avvisi che indicano il rilevamento di percorsi misti. Per evitare questi avvisi, è possibile utilizzare la connettività a percorso singolo agli shelf di dischi esterni. Inoltre, è possibile utilizzare la connettività a percorso singolo quando si utilizza un dispositivo di backup su nastro SAS esterno.</block>
   <block id="8e671e17830a3698938ea6b534403e16" category="list-text">Le configurazioni a controller singolo della serie FAS2600 non supportano la connettività quad-path.</block>
   <block id="978a314c2a364134efaa7961e780a939" category="section-title">Regole di numerazione degli slot del controller</block>
@@ -6093,8 +6082,6 @@
   <block id="32455c6254e3a15b603b17e884e4a3f5" category="section-title">Regole di connessione shelf-to-shelf</block>
   <block id="9e6bd75d2dbbefca4d7d3cc44a0101c2" category="paragraph">Quando si dispone di più shelf di dischi in uno stack di shelf di dischi, questi si collegano tra loro attraverso ciascun dominio SAS (IOM A e IOM B) utilizzando il cablaggio shelf-to-shelf "`standard`" o "`dDouble-wide`" applicabile. L'utilizzo del cablaggio shelf-to-shelf "`standard`" o "`dDouble-wide`" dipende dalla configurazione in uso.</block>
   <block id="dde4848c792228faaab1af9f19fc0907" category="section-title">Connettività standard shelf-to-shelf</block>
-  <block id="630c1008b20b98a788cf51f2c263b171" category="list-text">La connettività standard shelf-to-shelf viene utilizzata nelle configurazioni ha multipath, multipath, ha a percorso singolo e a percorso singolo.</block>
-  <block id="57cd520e08d659571c07fae57894a715" category="list-text">La connettività standard shelf-to-shelf è ciò che viene utilizzato nelle configurazioni di storage SAS esistenti con moduli IOM3 e IOM6: È necessaria una connessione via cavo tra shelf di dischi in ciascun dominio: Dominio A (IOM A) e dominio B (IOM B).</block>
   <block id="5a53cde4cf5c91e0b09b08e60c754e51" category="list-text">La Best practice consiste nell'utilizzare le porte IOM 3 e 1 per la connettività standard shelf-to-shelf.</block>
   <block id="925ce4810c954644e740106ff49fc2b7" category="paragraph">Dal primo shelf logico all'ultimo shelf logico di uno stack, collegare la porta IOM 3 alla porta IOM 1 dello shelf successivo nel dominio A e quindi nel dominio B.</block>
   <block id="dcbdcc316aee385c3ebdf72977af7d44" category="image-alt">standard di drw shelf-to-shelf</block>
@@ -6158,24 +6145,13 @@
   <block id="7c1436929540272177fd4adb6152e9ba" category="paragraph"><block ref="7c1436929540272177fd4adb6152e9ba" category="inline-link-macro-rx"></block></block>
   <block id="b9e772dcfe474ff5403c912944516e36" category="inline-link-macro">Modello di foglio di lavoro per il cablaggio controller-to-stack per la connettività quad-path</block>
   <block id="612ddf012153a583a53a09e3d7b592ea" category="paragraph"><block ref="612ddf012153a583a53a09e3d7b592ea" category="inline-link-macro-rx"></block></block>
-  <block id="0ce2d44d1215d0431e0b46ed686dd560" category="section-title">Regole di connessione delle porte del controller 0b e 0a per piattaforme con storage interno</block>
-  <block id="0c574ecb6a58bb92327391af7cfd84d2" category="paragraph">Piattaforme con storage interno, incluse le serie FAS2600, AFF A200, FAS2700, AFF A220, e in seguito, disporre di un insieme univoco di regole di connessione, in quanto ciascun controller deve mantenere la stessa connettività di dominio tra lo storage interno (porta 0b) e lo stack. Ciò significa che quando un controller si trova nello slot A dello chassis (controller 1) si trova nel dominio A (IOM A) e quindi la porta 0b deve connettersi a IOM A nello stack. Quando un controller si trova nello slot B dello chassis (controller 2), si trova nel dominio B (IOM B) e pertanto la porta 0b deve connettersi a IOM B nello stack.</block>
   <block id="27858a1c4654311bc60fbcd9494b2c3e" category="admonition">Le piattaforme FAS25XX non sono trattate in questo contenuto.</block>
-  <block id="f49f9d1b35c60dce77fd03008b90cb34" category="admonition">Se non si connette la porta 0b al dominio corretto (domini cross-Connect), si espone il sistema a problemi di resilienza che impediscono di eseguire procedure senza interruzioni in modo sicuro.</block>
-  <block id="5118c6333d912e1b490b20c974a571ef" category="list-text">Porta 0b del controller (porta storage interna):</block>
-  <block id="53b81829b8b397189aaa4f3eb1ae76a7" category="list-text">La porta 0b del controller 1 si collega sempre all'IOM A (dominio A).</block>
-  <block id="951d8294040ef100fca0ba29f8fd6566" category="list-text">La porta 0b del controller 2 si collega sempre all'IOM B (dominio B).</block>
-  <block id="f97c9e5c4cad2705f3a016e5e1997d97" category="list-text">La porta 0b è sempre il percorso primario.</block>
-  <block id="72cacfdea1ad23cb63716d9475da2462" category="list-text">La porta 0b si collega sempre all'ultimo shelf logico di dischi in uno stack.</block>
-  <block id="f32d66255c282d48b3e8f74f3142e658" category="list-text">La porta 0b si collega sempre alla porta IOM 3 dello shelf di dischi.</block>
   <block id="b84caa3e5d7ef1b5806f72c6d4c5884b" category="list-text">Porta controller 0a (porta HBA interna):</block>
   <block id="f3bc55f33663d14383a84df3141cf713" category="list-text">La porta 0a del controller 1 si collega sempre a IOM B (dominio B).</block>
   <block id="38487244666d5641531a05514c50668d" category="list-text">La porta 0a del controller 2 si collega sempre a IOM A (dominio A).</block>
   <block id="0757935fc13bec433eaf412d005fb61b" category="list-text">La porta 0a è sempre il percorso secondario.</block>
   <block id="5821e49b61c774c699a1d7c8f58887e5" category="list-text">La porta 0a si collega sempre al primo shelf di dischi logico in uno stack.</block>
   <block id="47f1d04db41788a76ce8ec9e42c7defd" category="list-text">La porta 0a si collega sempre alla porta IOM 1 dello shelf di dischi.</block>
-  <block id="06da34e55ca27b5fa072a7b523991230" category="paragraph">La figura seguente illustra la connettività del dominio della porta di storage interna (0b) per una serie FAS2600, AFF A200, FAS2700, AFF A220 e una configurazione ha multipath successiva:</block>
-  <block id="d6be80f16b2e703ff33257470dacbcf3" category="image-alt">esempio di dominio mpha drw fas2600</block>
   <block id="5b19d4f8bb5c1509ddbcb3050340348d" category="section-title">Regole per i cavi ottici SAS mini-SAS HD</block>
   <block id="cfabee74f7cf81c29938b44cfcd37eae" category="paragraph">È possibile utilizzare cavi ottici SAS mini-SAS HD--cavi ottici attivi multimodali (AOC) con connettori HD mini-SAS-mini-SAS e cavi di breakout multimode (OM4) con connettori mini-SAS HD-to-LC--per ottenere connettività SAS a lunga distanza per alcune configurazioni che dispongono di shelf di dischi con moduli IOM12.</block>
   <block id="0500445e8d76472cb131af54eda14d19" category="list-text">La piattaforma e la versione di ONTAP devono supportare l'utilizzo di cavi ottici SAS mini-SAS HD: Cavi ottici attivi multimodali (AOC) con connettori HD mini-SAS-mini-SAS e cavi di breakout multimodali (OM4) con connettori mini-SAS HD-LC.</block>
@@ -6210,7 +6186,6 @@
   <block id="ad63c86113a304962d0cc1e56235db08" category="list-text">Negli esempi dei fogli di lavoro, le coppie di porte sono designate per il cablaggio multipath o il cablaggio quad-path allo stack applicabile.</block>
   <block id="6b49172cc392f1e21991cb36314012ab" category="paragraph">Ogni coppia di porte designata per il cablaggio multipath è circondata da un ovale del colore associato allo stack a cui è collegato. Ogni coppia di porte designata per il cablaggio a quattro percorsi è circondata da un rettangolo che corrisponde al colore associato allo stack a cui è collegato. La pila 1 è associata al colore blu; la pila 2 è associata al colore arancione.</block>
   <block id="129ad208c03826aef81ff147b924ba05" category="inline-link-macro">Regole di cablaggio SAS</block>
-  <block id="b4e4a43caabf816c003f966fc4a0f279" category="list-text">Se necessario, fare riferimento a. <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> per informazioni sulla convenzione di numerazione degli slot del controller, sulla connettività shelf-to-shelf e sulla connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).</block>
   <block id="f0cd87f18d90e4016279796c776837f8" category="inline-link-macro">Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività quad-path</block>
   <block id="511fc491991f37919ad20aca7e974640" category="list-text">Se necessario, dopo aver completato il foglio di lavoro, fare riferimento a. <block ref="22de937f8b92c8373761b256e9819f4a" category="inline-link-macro-rx"></block>.</block>
   <block id="d51e2dd4571539675d09c8266f532da7" category="image-alt">foglio di lavoro drw modello a quattro percorsi nau</block>
@@ -6255,18 +6230,12 @@
   <block id="79a8830b6eb260be5b914306191dde58" category="paragraph">Quando due o più shelf di dischi hanno lo stesso ID, il sistema assegna al shelf di dischi duplicati un numero di ID soft uguale o superiore a 100. È necessario modificare il numero del soft ID (duplicato).</block>
   <block id="26a846deb04c0d63c063041ad0fa15ef" category="list-text">Eseguire Active IQ Config Advisor per verificare la presenza di avvisi di ID shelf duplicati o eseguire<block ref="82b00438bdff68cba792c38604023279" prefix=" " category="inline-code"></block> Per visualizzare un elenco di shelf ID già in uso, inclusi eventuali ID duplicati.</block>
   <block id="8599052dc8c8c0f79b1edc766e0bb77e" category="list-text">Se il sistema dispone di ID shelf duplicati, modificare gli ID shelf duplicati ripetendo questa procedura.</block>
-  <block id="0fdd3a9de120fbacd6c04d73ee6832df" category="summary">È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare piattaforme via cavo con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e versioni successive.</block>
   <block id="bb42dbb13759e9df73ffa74412e3548a" category="doc">Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno - shelf con moduli IOM12/IOM12B</block>
   <block id="424f2fdac9e61f7b7785b602da677d00" category="admonition">Queste informazioni non si applicano alle piattaforme FAS25XX.</block>
-  <block id="18e93c7175385ec259f95d9d453bdda1" category="list-text">Se necessario, fare riferimento a. <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> per informazioni sulle configurazioni supportate, la connettività shelf-to-shelf e la connettività controller-to-shelf.</block>
-  <block id="ba38e437ae673ee3e3f19dd893a38b35" category="list-text">Gli esempi di cablaggio mostrano i cavi controller-to-stack come solidi o tratteggiati per distinguere le connessioni delle porte del controller 0b dalle connessioni delle porte del controller 0a.</block>
-  <block id="1b423539e905b630394da7971c47a88a" category="image-alt">controller drw fas2600 per collegare la chiave del tipo di cavo</block>
   <block id="ee547c1c638ccba345b1cbcb32709bcc" category="list-text">Gli esempi di cablaggio mostrano le connessioni controller-to-stack e shelf-to-shelf in due colori diversi per distinguere la connettività tramite IOM A (dominio A) e IOM B (dominio B).</block>
   <block id="c81b301c5f51b115f5e18cb1507f7388" category="image-alt">tasto colore del cavo drw fas2600</block>
   <block id="4efb7705f98005596f065e30ddf32363" category="section-title">Piattaforme con storage interno in una configurazione ha multipath con uno stack multi-shelf</block>
   <block id="ff82ea2b354e0f934f26abf26044a994" category="paragraph">Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b:</block>
-  <block id="722de0e0a7dcfb970621a772bae3850c" category="image-alt">foglio di lavoro drw fas2600 mpha</block>
-  <block id="5eb85c13122610ca0d3c8606ac0884a7" category="image-alt">drw fas2600 mpha</block>
   <block id="8498d609d156c09f9b21ae8adb760b18" category="section-title">Configurazione multipath della serie FAS2600 con uno stack multi-shelf</block>
   <block id="5067863de55d98010fd9bb2898b6d0e2" category="paragraph">I seguenti fogli di lavoro ed esempi di cablaggio utilizzano la coppia di porte 0a/0b.</block>
   <block id="436ea39ce2a06ceb277515424ceed3d4" category="paragraph">In questo esempio, il controller viene installato nello slot A dello chassis. Quando un controller si trova nello slot A dello chassis, la relativa porta di storage interna (0b) si trova nel dominio A (IOM A); pertanto, la porta 0b deve connettersi al dominio A (IOM A) nello stack.</block>
@@ -6292,7 +6261,6 @@
   <block id="f76dc75f678aa69ffe38bc567a89bca0" category="paragraph">Il seguente esempio di foglio di lavoro e cablaggio utilizza coppie di porte 1a/2b (multipath) e 2a/1d (quad-path) per lo stack 1 e coppie di porte 1c/2d (multipath) e 2c/1b (quad-path) per lo stack 2.</block>
   <block id="bfaf47370d0e0636d466e95dcd0ebeb2" category="image-alt">drw qpha slot 1 e 2 due 4porthbas due stack nau</block>
   <block id="1a9e0b4a2336d16f8663305e4fc18c6f" category="summary">È possibile utilizzare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per collegare la coppia ha come configurazione ha multipath.</block>
-  <block id="597768bf006f6e20b6db4d977f39566f" category="doc">Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath comuni - shelf con moduli IOM12/IOM12B</block>
   <block id="bf19714cdcd1dd190617db0b27cdf3cf" category="inline-link-macro">Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività multipath</block>
   <block id="7ab9991308c3a3d15fb6ed5c7a347e31" category="list-text">Se necessario, fare riferimento a. <block ref="32f1048d76ed4ef07349228b731694c0" category="inline-link-macro-rx"></block>.</block>
   <block id="f36fd727bb50e27882dbe086058bd373" category="list-text">Gli esempi di cablaggio mostrano i cavi controller-to-stack come solidi o tratteggiati per distinguere le connessioni delle porte controller A e C dalle connessioni delle porte controller B e D.</block>
@@ -6337,13 +6305,11 @@
   <block id="cc1b17d485465e67146abdf8583e715e" category="image-alt">drw mpha slot 0 e 1 8 porte due stack ignorati</block>
   <block id="3b11171c02404a6a48fbb19b047eef0f" category="summary">Completando il modello del foglio di lavoro, è possibile definire le coppie di porte SAS del controller che è possibile utilizzare per collegare i controller a stack di shelf di dischi con i moduli IOM12/IOM12B per ottenere una connettività multipath in una configurazione a coppia ha o a singolo controller. È inoltre possibile utilizzare il foglio di lavoro completo per esaminare il cablaggio delle connessioni multipath per la configurazione.</block>
   <block id="12156870a61d18f81545fc90d3b6ffda" category="doc">Modello di foglio di lavoro per il cablaggio controller-to-stack per connettività multipath - shelf con moduli IOM12/IOM12B</block>
-  <block id="e789db57588c567cf162bf2f8ec8b65e" category="paragraph">Se si dispone di una piattaforma con storage interno, tra cui serie FAS2600, AFF A200, FAS2700, AFF A220, e in seguito, utilizza quanto segue (queste piattaforme utilizzano un foglio di lavoro unico):</block>
   <block id="f5d03e0aa6d32340b1284f6bb82c8ee3" category="inline-link-macro">Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno</block>
   <block id="c19123e6031c139d66f534ae4311d605" category="paragraph"><block ref="c19123e6031c139d66f534ae4311d605" category="inline-link-macro-rx"></block></block>
   <block id="5976250f174c7aa7423cbb91c458e804" category="list-text">Questa procedura e il modello di foglio di lavoro sono applicabili al cablaggio della connettività multipath per una configurazione ha multipath o multipath con uno o più stack.</block>
   <block id="8c7e7585bf065649c4ca12e935833b4c" category="paragraph">Vengono forniti esempi di fogli di lavoro completi per configurazioni ha multipath e multipath.</block>
   <block id="da38645c7fd59844e84034f3e0e006a1" category="list-text">Il modello di foglio di lavoro consente di creare fino a sei stack; se necessario, è necessario aggiungere altre colonne.</block>
-  <block id="366650169d0230a4d4bd37f5a9f65737" category="list-text">Se necessario, fare riferimento a. <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).</block>
   <block id="2afb2ee03a930cb4967503a5dbf7a5b0" category="list-text">Se necessario, dopo aver completato il foglio di lavoro, fare riferimento a. <block ref="32f1048d76ed4ef07349228b731694c0" category="inline-link-macro-rx"></block></block>
   <block id="b1d23e069f48305f66afd6c74e6f2742" category="image-alt">modello mpha del foglio di lavoro drw</block>
   <block id="ba0659d8c8f23ac9bb4a89e0ac5cf39e" category="list-text">Cerchiare (designare) una coppia di porte per ogni stack.</block>
@@ -6368,32 +6334,22 @@
   <block id="129ae0938540dd9a7876d09d06bd1f3d" category="list-text">Accedere a Hardware Universe e accedere alle informazioni sulla piattaforma.</block>
   <block id="f67745dbd9289e38cb69268974c8e01a" category="list-text">Se si aggiunge uno shelf a una configurazione MetroCluster, la configurazione deve soddisfare tutti i requisiti indicati nelle guide di installazione e configurazione di MetroCluster.</block>
   <block id="e7fc3e467c21c0163b6e186e86ec5265" category="inline-link">Guida all'installazione e alla configurazione di MetroCluster IP</block>
-  <block id="96f4732a126902bc7ba1b00365b93018" category="paragraph"><block ref="96f4732a126902bc7ba1b00365b93018" category="inline-link-rx"></block></block>
   <block id="006182a7cf1f4ee783649b59fe5319fe" category="inline-link">Guida all'installazione e alla configurazione di ONTAP 9 Stretch MetroCluster</block>
-  <block id="2f8a4b346b8424a5087dfb19acb186a5" category="paragraph"><block ref="2f8a4b346b8424a5087dfb19acb186a5" category="inline-link-rx"></block></block>
   <block id="88961c06e2b1a459284563a20920c4a2" category="inline-link">Guida all'installazione e alla configurazione di ONTAP 9 Fabric-Attached MetroCluster</block>
-  <block id="48a3ab22450cdd41a14f0b4fc3a359c9" category="paragraph"><block ref="48a3ab22450cdd41a14f0b4fc3a359c9" category="inline-link-rx"></block></block>
-  <block id="09397aecf3eae55f108f43cd457d39f0" category="list-text">Lo stack di shelf IOM6, a cui si aggiunge a caldo uno shelf IOM12, deve essere cablato con cavi di rame SAS (per tutte le connessioni shelf-to-shelf e controller-to-stack).</block>
   <block id="c08b36d83324a217b367ef482dda6bff" category="paragraph">I cavi ottici SAS non sono supportati in uno stack misto.</block>
-  <block id="79558b80e68c3388b4399b11c12347ac" category="admonition">Se lo shelf stack IOM6 è cablato con cavi ottici SAS, non è possibile aggiungere a caldo uno shelf IOM12. Contatta il tuo commerciale NetApp.</block>
-  <block id="8ac997f121720a497b3cff0318f505b3" category="list-text">Il sistema deve avere un numero inferiore al numero massimo di dischi supportati, almeno del numero di dischi che è possibile installare negli shelf IOM12 che si stanno aggiungendo a caldo.</block>
   <block id="00fff54c913160f5c3bf6b51833732a2" category="paragraph">Non è possibile superare il numero massimo di dischi supportati per il sistema dopo l'aggiunta a caldo di shelf IOM12/IOM12B.</block>
   <block id="bbf5512c7d19cdd9d9a6fd9e97d3a51b" category="list-text">Il sistema non può visualizzare messaggi di errore relativi al cablaggio SAS.</block>
   <block id="9fae2a51848c66867a04c7747f054fe4" category="paragraph">È necessario correggere eventuali errori di cablaggio utilizzando le azioni correttive fornite dai messaggi di errore.</block>
   <block id="930a04c4c89c9247f79288e2800c12ca" category="list-text">È necessario aver ordinato e ricevuto gli shelf IOM12/IOM12B e il numero e i tipi appropriati di cavi in rame SAS.</block>
-  <block id="3969a8285624065a82b260666129a7d3" category="paragraph">Gli shelf IOM12 utilizzano connettori mini-SAS HD. Gli shelf IOM6 utilizzano connettori QSFP.</block>
   <block id="c7566a05bf32290cd12dd8d369e46bd4" category="section-title">Requisiti per un'aggiunta a caldo nelle configurazioni MetroCluster collegate a ponte</block>
   <block id="1aefc40815c8a14c682b27d605e0c852" category="paragraph">Se si aggiungono a caldo shelf IOM12/IOM12B a uno stack di shelf IOM6 collegati mediante una coppia di bridge ATTO FibreBridge in una configurazione MetroCluster, il sistema deve soddisfare determinati requisiti.</block>
-  <block id="8c5677f5d5c9a3e27e7aa9a888386129" category="list-text">Se le porte SAS bridge sono disponibili nella configurazione corrente, aggiungere gli shelf IOM12 come stack separato.</block>
   <block id="19ad2c0538cf2699805ae5b7a88dc72d" category="paragraph">Utilizzare tutte le porte bridge prima di combinare i moduli IOM12/IOM12B e IOM6 in uno stack.</block>
   <block id="bd7825d41c8830b21a19c98ddcd9b85a" category="list-text">Inserire il <block ref="5ddc7c3a7b5a66f920371f4ddb8d047c" prefix="" category="inline-code"></block> al prompt admin di uno dei controller.</block>
   <block id="a9e6da69afc7cf19277dce38f3af6658" category="paragraph">Se il campo SAS2/SAS3 Mixed Stack Support (supporto stack misto SAS2/SAS3) non viene visualizzato nell'output o il valore è NONE (nessuno), il sistema non supporta stack misti.</block>
   <block id="089d985d733a180489887faf2340d373" category="paragraph">Se nel campo SAS2/SAS3 Mixed Stack Support (supporto stack misto SAS2/SAS3) viene visualizzato un altro elemento, ad esempio All (tutti) o Bridge-Attached (collegati tramite bridge), il sistema supporta stack misti.</block>
   <block id="9d5ea5ac8c96d6d172e1cc58ef233dd1" category="list-text">La configurazione deve soddisfare tutti i requisiti indicati nelle guide di installazione e configurazione di MetroCluster.</block>
   <block id="39d46c9b8c2da59196572bcb75b09f65" category="inline-link">Installazione e configurazione di una configurazione Stretch MetroCluster</block>
-  <block id="b984b4ca60433c9bfb091a25c359bf29" category="paragraph"><block ref="b984b4ca60433c9bfb091a25c359bf29" category="inline-link-rx"></block></block>
   <block id="e88635bcb3016a1e52f43f35377d1872" category="inline-link">Installazione e configurazione di una configurazione Fabric-Attached MetroCluster</block>
-  <block id="21990ac0aec263e0a024057600dc893c" category="paragraph"><block ref="21990ac0aec263e0a024057600dc893c" category="inline-link-rx"></block></block>
   <block id="f29790dcd5dad7176b065228da8e813b" category="list-text">Lo stack di shelf IOM6, a cui si aggiunge a caldo uno shelf IOM12/IOM12B, deve essere cablato con cavi di rame SAS (per tutte le connessioni shelf-to-shelf e controller-to-stack).</block>
   <block id="a303526442a9b488afde68409bafd573" category="admonition">Se lo shelf stack IOM6 è cablato con cavi ottici SAS, non è possibile aggiungere a caldo uno shelf IOM12/IOM12B. Contatta il tuo commerciale NetApp.</block>
   <block id="6e4c499bdd2966c2b90a216c4bda1fb3" category="list-text">La configurazione deve avere un numero inferiore al numero massimo di dischi supportati per una porta bridge.</block>
@@ -6407,21 +6363,15 @@
   <block id="df9362a84fd3cff7395403ecc0c32568" category="list-text">Il consolidamento dello stack senza interruzioni non è supportato.</block>
   <block id="0f6e8d5b865b4c7c9708f487f977f5d6" category="paragraph">Non è possibile utilizzare questa procedura per aggiungere a caldo shelf di dischi che sono stati rimossi a caldo da un altro stack nello stesso sistema quando il sistema è acceso e fornisce dati (i/o è in corso).</block>
   <block id="cc2b41a35c221fb91dbefde3e869ed2d" category="list-text">È possibile utilizzare questa procedura per aggiungere a caldo shelf di dischi rimossi a caldo nello stesso sistema MetroCluster se lo shelf interessato ha aggregati mirrorati.</block>
-  <block id="398a3c8d2269f5f0bf21e8be014ed54c" category="list-text">Quando si aggiungono a caldo shelf con moduli IOM12 a uno stack di shelf con moduli IOM6, le prestazioni dell'intero stack funzionano a 6 Gbps (funziona alla velocità comune più bassa).</block>
-  <block id="75e1d900c724ecf27f282e3bba238d06" category="paragraph">Se gli shelf che si stanno aggiungendo a caldo sono shelf che sono stati aggiornati dai moduli IOM3 o IOM6 ai moduli IOM12, lo stack funziona a 12 Gbps; tuttavia, le funzionalità del disco e del backplane dello shelf possono limitare le prestazioni dei dischi a 3 Gbps o 6 Gbps.</block>
   <block id="6ef27274e13ef21decb2e40b817dc838" category="list-text">Il firmware dello shelf (IOM) e del disco devono essere aggiornati automaticamente, se necessario.</block>
   <block id="b8588171c818974de1fbd1875e801eef" category="section-title">Considerazioni sulle Best practice</block>
   <block id="73dba703fd8c5b56b1febc70d5f9bc0d" category="list-text">*Best practice:* la Best practice consiste nel disporre delle versioni correnti del firmware dello shelf (IOM) e del firmware del disco sul sistema prima di aggiungere a caldo uno shelf.</block>
   <block id="160fd79816dd71c8a799efb47ac36361" category="paragraph">L'esecuzione di Active IQ Config Advisor prima dell'aggiunta a caldo di uno shelf fornisce un'istantanea della connettività SAS esistente, verifica le versioni firmware dello shelf (IOM) e consente di verificare un ID shelf già in uso nel sistema. L'esecuzione di Active IQ Config Advisor dopo l'aggiunta a caldo di uno shelf consente di verificare che gli shelf siano cablati correttamente e che gli shelf ID siano univoci all'interno del sistema.</block>
   <block id="146d395e439d39abc69ffa4b33c098e7" category="list-text">*Best practice:* la Best practice consiste nell'eseguire sul sistema un protocollo IBACP (in-band ACP).</block>
-  <block id="b2eb7290e0c647560c735690a8df2377" category="list-text">Per i sistemi in cui IBAP è in esecuzione, IBACP viene attivato automaticamente sugli shelf IOM12 con aggiunta a caldo.</block>
-  <block id="0255f63676d9b237186bfd36a0664dca" category="list-text">Per i sistemi in cui è abilitato l'ACP out-of-band, le funzionalità ACP non sono disponibili sugli shelf IOM12.</block>
   <block id="8ea8c6292abb58ce4ad3173e65ac4ff9" category="paragraph">Eseguire la migrazione a IBACP e rimuovere il cablaggio ACP out-of-band.</block>
   <block id="cf9f30a46a1bd1436a4faafee987b86d" category="list-text">Se il sistema non esegue IBACP e il sistema soddisfa i requisiti IBACP, è possibile migrare il sistema a IBACP prima di aggiungere a caldo uno shelf IOM12.</block>
   <block id="4737928907e8a292681e7a90cfb49f2d" category="inline-link">Istruzioni per la migrazione a IBACP</block>
-  <block id="5657d544f237cd4dbe450a90b964d7ee" category="paragraph"><block ref="5657d544f237cd4dbe450a90b964d7ee" category="inline-link-rx"></block></block>
   <block id="74058cc9034742368de6ba87df420c12" category="admonition">Le istruzioni di migrazione forniscono i requisiti di sistema per IBACP.</block>
-  <block id="34186aada31d58acf460b5c4c88d85ef" category="paragraph">Se si assegna manualmente la proprietà del disco per gli shelf IOM12 che si stanno aggiungendo a caldo, è necessario disattivare l'assegnazione automatica del disco, se attivata.</block>
   <block id="ade63becc62556e3c87bdc2937803b8e" category="paragraph"><block ref="a36de82ec030fb7c465d75421f1bf354" category="inline-xref-macro-rx"></block></block>
   <block id="f5965bbdd3ba21efcd908fcb2587c4b7" category="paragraph">Se si dispone di una coppia ha, è necessario assegnare manualmente la proprietà del disco se i dischi nello shelf saranno di proprietà di entrambi i moduli controller.</block>
   <block id="bddd9e5d88d913d8866bfb32eedde8d0" category="paragraph">Se si dispone di una coppia ha, è possibile immettere il comando su entrambi i moduli controller.</block>
@@ -6467,7 +6417,6 @@
   <block id="d1e2ca6a6349b08ae178ca56dd3b9e5b" category="list-text">Collegare i cavi di alimentazione prima agli shelf di dischi, fissandoli in posizione con il fermo del cavo di alimentazione, quindi collegare i cavi di alimentazione a diverse fonti di alimentazione per garantire la resilienza.</block>
   <block id="147b0a00b8e9199a418e4d92ea7ae70a" category="list-text">Accendere gli alimentatori per ogni shelf di dischi e attendere che i dischi si attivino.</block>
   <block id="36c4b867932e9d22e95453e968104256" category="list-text">Impostare l'ID dello shelf per ogni shelf che si sta aggiungendo a caldo a un ID univoco nella configurazione a coppia ha o a controller singolo.</block>
-  <block id="4c1c5ca48f80900bdbd6478de4bd8643" category="paragraph">Un ID shelf valido va da 00 a 99. Si consiglia di impostare gli ID dello shelf in modo che gli shelf IOM6 utilizzino numeri inferiori (1 - 9) e gli shelf IOM12 utilizzino numeri superiori (10 e superiori).</block>
   <block id="07ef6aaec0e48ce2f5b9d9f42adf77cc" category="paragraph">Se si dispone di un modello di piattaforma con storage integrato, gli ID degli shelf devono essere univoci sullo shelf interno e sugli shelf collegati esternamente. Si consiglia di impostare lo shelf interno su 0. Nelle configurazioni MetroCluster IP, si applicano solo i nomi degli shelf esterni, pertanto i nomi degli shelf non devono essere univoci.</block>
   <block id="fea2f0f5c7391e6c3a0ee4727fd42bd6" category="list-text">Se necessario, verificare gli shelf ID già in uso eseguendo Active IQ Config Advisor.</block>
   <block id="da76ba8629924d6ccf3a6035d9cd60f7" category="paragraph">È inoltre possibile eseguire<block ref="82b00438bdff68cba792c38604023279" prefix=" " category="inline-code"></block> Per visualizzare un elenco di shelf ID già in uso (e duplicati, se presenti) nel sistema.</block>
@@ -6479,7 +6428,6 @@
   <block id="74ee2dd8c1c457d065bbe6699d54d9d2" category="paragraph">Per completare il ciclo di alimentazione, è necessario spegnere entrambi gli interruttori, attendere 10 secondi, quindi riaccenderli.</block>
   <block id="1127d0feda6e469dce912ad847745999" category="list-text">Ripetere i passaggi secondari da b a g per ogni shelf che si sta aggiungendo a caldo.</block>
   <block id="ac6725fb813060a9b7afc55f795aae39" category="section-title">Ripiani per cavi per aggiungere a caldo</block>
-  <block id="3ed3a0caa77626b30983d683ee9db330" category="paragraph">Il modo in cui si collega uno shelf IOM12/IOM12B a uno stack di shelf IOM6 dipende dal fatto che lo shelf IOM12 sia lo shelf IOM12/IOM12B iniziale, il che significa che non esistono altri shelf IOM12 nello stack, Oppure se si tratta di uno shelf IOM12/IOM12B aggiuntivo per uno stack misto esistente, il che significa che uno o più shelf IOM12/IOM12B sono già presenti nello stack. Dipende anche dal fatto che lo stack disponga di connettività ha multipath, multipath, ha a percorso singolo o a percorso singolo.</block>
   <block id="93484edf29512f42176285d1b3aaffee" category="list-text">È necessario aver completato la procedura di preparazione, se applicabile.</block>
   <block id="7aa59d062d2da8d407e876bd47370fa0" category="paragraph"><block ref="1f1303724d0c3c3fd20087be0397e475" category="inline-xref-macro-rx"></block></block>
   <block id="f687c0bac0c7622f56dbb2b4da300a72" category="paragraph"><block ref="395b2cdcd845cc34c1cb8c041e444e72" category="inline-xref-macro-rx"></block></block>
@@ -6487,8 +6435,6 @@
   <block id="e0895cf80563e944b90f33500e3072ad" category="paragraph">Aggiungendo a caldo gli shelf IOM12/IOM12B all'ultimo shelf logico di uno stack, gli shelf IOM6 rimangono raggruppati insieme e gli shelf IOM12/IOM12B rimangono raggruppati insieme in modo che vi sia una singola transizione di velocità tra i due gruppi di shelf.</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Ad esempio:</block>
   <block id="0455216bece3ce620e2fd5c84b24a523" category="list-text">In una coppia ha, una singola transizione di velocità all'interno di uno stack avente due shelf IOM6 e due shelf IOM12/IOM12B è rappresentata come:</block>
-  <block id="cb9ba118de906a291cd694ac2df4fdae" category="list-text">In una coppia ha con storage IOM12E integrato, una singola transizione di velocità all'interno di uno stack avente due shelf IOM12 e due shelf IOM6 è rappresentata come:</block>
-  <block id="988fffa48b6a32203597193ccfb194d0" category="paragraph">La porta storage integrata 0b è la porta dello storage interno (espansore) e, poiché si collega allo shelf IOM12/IOM12B aggiunto a caldo (l'ultimo shelf nello stack), il gruppo di shelf IOM12/IOM12B viene mantenuto insieme e viene mantenuta una singola transizione attraverso lo stack e lo storage IOM12E integrato.</block>
   <block id="eadd8b5aeac3b3cac91a5861456a7daf" category="list-text">In uno stack misto è supportata solo una transizione a velocità singola. Non è possibile effettuare transizioni di velocità aggiuntive. Ad esempio, non è possibile avere due transizioni di velocità all'interno di uno stack, come illustrato di seguito:</block>
   <block id="785690423679fc729d3390cf87c73c79" category="list-text">È possibile aggiungere a caldo shelf IOM6 a uno stack misto. Tuttavia, è necessario aggiungerli a caldo ai lati dello stack con gli shelf IOM6 (gruppo esistente di shelf IOM6) per mantenere la transizione a velocità singola nello stack.</block>
   <block id="22c141c57159ea5a9cf5ecee1f8b4145" category="list-text">È possibile collegare gli shelf IOM12/IOM12B collegando prima le porte SAS sul percorso IOM A, quindi ripetere la procedura di cablaggio per il percorso IOM B, come applicabile alla connettività dello stack.</block>
@@ -6497,16 +6443,13 @@
   <block id="f260b20153205d9038127e4a15618a0f" category="list-text">I connettori dei cavi SAS sono dotati di chiave; se orientati correttamente in una porta SAS, il connettore scatta in posizione.</block>
   <block id="10ae5a4ce8cb24c89ab7989958cb34b9" category="paragraph">Per gli scaffali, inserire un connettore per cavo SAS con la linguetta rivolta verso il basso (nella parte inferiore del connettore). Per i controller, l'orientamento delle porte SAS può variare a seconda del modello di piattaforma; pertanto, l'orientamento corretto del connettore del cavo SAS varia.</block>
   <block id="f40ad7d263effd48cd15f5ec54dc2775" category="list-text">È possibile fare riferimento alla seguente illustrazione per il cablaggio degli shelf IOM12/IOM12B su uno shelf stack IOM6 in una configurazione che non utilizza bridge FC-SAS.</block>
-  <block id="80e0a56bad8ed4beffb511e7a7644751" category="paragraph">Questa illustrazione è specifica di uno stack con connettività ha multipath; tuttavia, il concetto di cablaggio può essere applicato a stack con configurazioni multipercorso, ha a percorso singolo, a percorso singolo e MetroCluster stretch.</block>
   <block id="9eae6e522d01233eda31813671040bc9" category="image-alt">stack misto drw sas2 sas3</block>
   <block id="5c5d06fa180884eea62ba831b980ed33" category="list-text">Per il cablaggio degli shelf IOM12/IOM12B su uno shelf stack IOM6 in una configurazione MetroCluster con collegamento a ponte, fare riferimento alla seguente illustrazione. <block ref="3bf7d126d94220be52cd0d278e98261d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a4450110a0add0d3dc0ed544c4dc9587" category="list-text">Identificare fisicamente l'ultimo shelf logico nello stack.</block>
-  <block id="dcb30e1abfaaa4b668dce7194e9a2977" category="paragraph">A seconda del modello di piattaforma e della connettività dello stack (ha multipath, multipath, ha single-path o single-path), l'ultimo shelf logico è lo shelf con connessioni controller-to-stack dalle porte SAS del controller B e D, In alternativa, lo shelf non dispone di connessioni a nessun controller (perché la connettività controller-to-stack è al top logico dello stack, attraverso le porte SAS A e C del controller).</block>
   <block id="3d7f99cbbf1b9ba05ea3a6ec89eae8b6" category="list-text">Se lo shelf IOM12/IOM12B che si sta aggiungendo a caldo è lo shelf IOM12/IOM12B iniziale che viene aggiunto allo stack IOM6, il che significa che non esistono altri shelf IOM12/IOM12B nello shelf stack IOM6, completare i passaggi secondari applicabili.</block>
   <block id="2cb6637a5fdf450f80c9f19b8c718a47" category="admonition">Assicurarsi di attendere almeno 70 secondi tra lo scollegamento e il ricollegamento di un cavo e quando si sostituisce un cavo con un altro.</block>
   <block id="3290caa995109a5019ab331bcbb4fd8c" category="paragraph">In caso contrario, passare alla fase 3.</block>
   <block id="49ae96093ef4318ebea3748695f1f2ec" category="cell">Se la connettività dello stack IOM6 è...</block>
-  <block id="86ce44b3919ce611e611db5c55786de7" category="paragraph">Ha multipath o multipath o ha a percorso singolo con connettività del controller all'ultimo shelf logico (incluse le configurazioni Stretch MetroCluster)</block>
   <block id="f90e83f0fc16f0b31efebdcbd9c72739" category="list-text">Scollegare il cavo controller-to-stack dall'ultima porta IOM A circolare dello shelf IOM6 al controller o al bridge.</block>
   <block id="fd92699fb017101c94c8dbf35e4f1c24" category="paragraph">Prendere nota della porta del controller.</block>
   <block id="8ac5fbac18bdb8a392c9db2f9781f0fe" category="paragraph">Mettere da parte il cavo. Non è più necessario.</block>
@@ -6516,16 +6459,13 @@
   <block id="41cb447e88bb124a5db517ed30198998" category="list-text">Se si aggiunge a caldo un altro shelf IOM12/IOM12B, collegare il collegamento shelf-to-shelf tra la porta IOM A 3 dello shelf IOM12/IOM12B collegato e la porta IOM A 1 dello shelf IOM12/IOM12B successiva.</block>
   <block id="8904fa6bfff4cd47f36ebe61b80ba07e" category="paragraph">Utilizzare un cavo SAS HD-mini-SAS in rame-mini-SAS.</block>
   <block id="e2e2c21437bf854e94458bf7484b889d" category="paragraph">In caso contrario, passare alla fase successiva.</block>
-  <block id="926c9efdfde9f0aef47047a0e5f7949b" category="list-text">Ristabilire la connessione controller-to-stack cablando la stessa porta sul controller o sul bridge (nella fase a) alla nuova porta IOM A 3 dell'ultimo shelf IOM12.</block>
   <block id="88a9a5978bd68dcd7789cf66763e32e0" category="paragraph">Utilizzare un cavo SAS HD da QSFP a Mini SAS in rame o un cavo Mini SAS HD-Mini SAS HD-SAS, a seconda del tipo di porta sul controller.</block>
   <block id="f0ae24e4bd1fbe613eaf4033ecfa3b35" category="list-text">Ripetere i passaggi secondari da a a d per IOM B.</block>
   <block id="069bc69fbf8862340aea67e1cee8ebf1" category="paragraph">In caso contrario, passare alla fase 4.</block>
   <block id="7830f5d1f77c11f64cb999e574fc8f3f" category="paragraph">Connettività con collegamento a ponte in una configurazione MetroCluster</block>
   <block id="8086de199e5cb4c9290c11b750a84678" category="list-text">Scollegare il cavo bridge-to-stack inferiore dall'ultima porta IOM A circolare dello shelf IOM6 al bridge.</block>
   <block id="7a59e011c42c6e3179dcd77e8259dd0f" category="paragraph">Prendere nota della porta bridge.</block>
-  <block id="6abc41dcfb66265b141bc0c3d6bd404f" category="list-text">Collegare il collegamento shelf-to-shelf tra l'ultima porta IOM A circolare dello shelf IOM6 (dalla fase a) alla nuova porta IOM A dello shelf IOM12 1.</block>
   <block id="f1c72d9035552f6b2e5c43b27f1fd1cc" category="list-text">Ripetere i passaggi secondari b e c per collegare i collegamenti shelf-to-shelf per IOM B.</block>
-  <block id="63fc6622bd95c4421099340dd35535b4" category="list-text">Ristabilire la connessione bridge-to-stack inferiore cablando la stessa porta sul bridge (nella fase a) alla nuova porta IOM A 3 dell'ultimo shelf IOM12.</block>
   <block id="87787cb4b43228e79111842d0ca7ad92" category="list-text">Passare alla fase 4.</block>
   <block id="53446fdb493b04597baa8f53eb3225a7" category="paragraph">Ha a percorso singolo o a percorso singolo senza connettività del controller all'ultimo shelf logico</block>
   <block id="c5053835d12fc440bf9519cf51926077" category="list-text">Cablare il collegamento shelf-to-shelf tra l'ultima porta IOM A circolare dello shelf IOM e la nuova porta IOM A dello shelf IOM IOM M12/IOM 12B 1.</block>
@@ -6534,7 +6474,6 @@
   <block id="cc6b443dcaf375914e07667f9d494608" category="list-text">Se lo shelf IOM12/IOM12B che si sta aggiungendo a caldo è uno shelf IOM12/IOM12B aggiuntivo a uno stack misto esistente, il che significa che uno o più shelf IOM12/IOM12B sono già presenti nello stack, completare i passaggi secondari applicabili.</block>
   <block id="dbe0afeaa91b9a08168e98b33a4c7de8" category="admonition">Assicurarsi di attendere almeno 70 secondi tra lo scollegamento e il ricollegamento di un cavo e se si sta sostituendo un cavo più lungo.</block>
   <block id="fbeb13900997a66117589107666778fd" category="cell">Se la connettività dello stack misto è...</block>
-  <block id="2959cd4f37c3034d02125ecfe63d8c4b" category="paragraph">Ha multipath o multipath o ha a percorso singolo con connettività controller all'ultimo shelf logico o connettività bridge-attached in una configurazione MetroCluster</block>
   <block id="323be85d169cf65d9f2dff0b9daf0dd6" category="list-text">Spostare il cavo controller-to-stack dall'ultima porta IOM A dello shelf IOM12/IOM12B alla stessa porta del nuovo shelf IOM12/IOM12B.</block>
   <block id="4a234d60639e9340f8ce3de65d81db69" category="list-text">Se si sta aggiungendo a caldo uno shelf IOM12/IOM12B, collegare il collegamento shelf-to-shelf tra la vecchia porta IOM A 3 dello shelf IOM12/IOM12B alla nuova porta IOM A 1 dello shelf IOM12/IOM12B.</block>
   <block id="633e2691f3d334f1861df8688fb8aff3" category="list-text">Se si aggiungono a caldo più shelf IOM12/IOM12B, collegare il collegamento shelf-to-shelf tra l'ultima porta IOM A dello shelf IOM12/IOM12B precedente 3 e la porta IOM A 1 dello shelf IOM12/IOM12B successiva, quindi ripetere questa operazione per gli shelf IOM12/IOM12B aggiuntivi.</block>
@@ -6581,8 +6520,6 @@
   <block id="bd7b8cb1f03ceb90528c843b3cd8c0a4" category="summary">È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12 (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire lo shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.</block>
   <block id="314802b9b5ea5477ad3c17cc48db0ca8" category="doc">Shelf a hot-remove - shelf con moduli IOM12/IOM12B</block>
   <block id="f6516aa66806c66f90b17f54c90fc724" category="paragraph">È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12/IOM12B (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire uno shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.</block>
-  <block id="c5cabc5bd527563ec2a9e03c2ca16ab6" category="list-text">Il sistema deve essere una configurazione ha multipath, multipath, ha quad-path o quad-path.</block>
-  <block id="a545c2ce8d557ac97c60d7fea8129606" category="paragraph">Per le piattaforme con storage integrato, come i sistemi AFF A200, AFF A220, FAS2600 e FAS2700, lo storage esterno deve essere cablato come ha multipath o multipath.</block>
   <block id="079a7f8e81dcfa4ea9fb370c9901815f" category="admonition">Per un sistema a controller singolo della serie FAS2600 dotato di storage esterno cablato con connettività multipath, il sistema è una configurazione a percorso misto in quanto lo storage interno utilizza la connettività a percorso singolo.</block>
   <block id="7aef33153293755f25958302c5aed92b" category="paragraph">È possibile scaricare ed eseguire Active IQ Config Advisor per visualizzare eventuali messaggi di errore relativi al cablaggio SAS e le azioni correttive da intraprendere.</block>
   <block id="a87e1a96f2d7d8d3f543485f49e17ff9" category="list-text">Le configurazioni di coppia HA non possono essere in uno stato di Takeover.</block>
@@ -6592,7 +6529,6 @@
   <block id="00124b65b0475ef5a1ef8812a9a5aa02" category="list-text">*Best practice:* la Best practice consiste nel rimuovere la proprietà del disco dopo aver rimosso gli aggregati dai dischi negli shelf che si stanno rimuovendo.</block>
   <block id="d861952ae543b7ab12c97b76ba5a6d22" category="paragraph">La rimozione delle informazioni di proprietà da un disco spare consente di integrare correttamente il disco in un altro nodo (in base alle necessità).</block>
   <block id="82a0e673933c66d13ebe9ac1bf565aa9" category="paragraph">La procedura per la rimozione della proprietà dai dischi richiede la disattivazione dell'assegnazione automatica della proprietà dei dischi. Al termine di questa procedura, viene riattivata l'assegnazione automatica della proprietà del disco.</block>
-  <block id="c917987d5d8844333d3271b88c9ef8ec" category="paragraph"><block ref="c917987d5d8844333d3271b88c9ef8ec" category="inline-link-rx"></block></block>
   <block id="6d262abed5885a9a0e7edfe9d9df36e8" category="list-text">Per un sistema ONTAP in cluster con più di due nodi, la Best practice consiste nel riassegnare epsilon a una coppia ha diversa da quella in fase di manutenzione pianificata.</block>
   <block id="aae869bb20c68bfa1b78ddb6bdd06a3d" category="paragraph">La riassegnazione di epsilon riduce al minimo il rischio di errori imprevisti che influiscono su tutti i nodi di un sistema ONTAP in cluster. Per determinare il nodo che contiene epsilon e riassegnare epsilon, se necessario, procedere come segue:</block>
   <block id="75a7fdc720f737b1c4798195fa81dd5a" category="list-text">Impostare il livello di privilegio su avanzato:<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block></block>
@@ -6602,9 +6538,6 @@
   <block id="859b2518ddc407ed154103ca5d61902f" category="list-text">Assegnare epsilon a un nodo di un'altra coppia ha:<block ref="15bad7069cd7f71577acf6ccca0cab3e" prefix=" " category="inline-code"></block></block>
   <block id="1319d9c9945c8d2b36ffa9c0945c9db6" category="list-text">Se si rimuove a caldo uno shelf di dischi da uno stack (ma si mantiene lo stack), è possibile recuperare e verificare un percorso alla volta (percorso A e percorso B) per bypassare lo shelf di dischi che si sta rimuovendo in modo da mantenere sempre la connettività a percorso singolo dai controller allo stack.</block>
   <block id="be52806c806fdd72f6b18960841d7459" category="admonition">Se non si mantiene la connettività a percorso singolo dai controller allo stack quando si modifica lo stack per evitare lo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.</block>
-  <block id="0c19992873d54086f9866be6126e317c" category="list-text">*Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, vedere la sezione, <block ref="2dfa5cde780121ff739815d2402836cf" category="inline-xref-macro-rx"></block> al termine di questa procedura.</block>
-  <block id="bb4fc12c448337a0baf229180b8301a3" category="list-text">Verificare che la configurazione del sistema sia<block ref="7331911b71ec7e78bff5c45bd2c5aaf9" prefix=" " category="inline-code"></block>,<block ref="30cd2ef2a4cf8bde2668292e60ce425e" prefix=" " category="inline-code"></block>,<block ref="98a06331c5019fee7c2bec76b5d289fb" prefix=" " category="inline-code"></block>, o.<block ref="3a22361329a9005da35e1a3654fdb1ea" prefix=" " category="inline-code"></block>:<block ref="d4b15528721ed3ac7910f1fa2cacec13" prefix=" " category="inline-code"></block></block>
-  <block id="d4e4c353414a921b7e83ae256c64c7c3" category="paragraph">Questo comando viene eseguito dal nodeshell di entrambi i controller. Il completamento del rilevamento potrebbe richiedere fino a un minuto.</block>
   <block id="ed6b750b8843d7a7df75da2dbf5fe1e8" category="paragraph">La configurazione viene elencata in<block ref="bcd87154f25ef0dd1da8c6e024c2597e" prefix=" " category="inline-code"></block> campo.</block>
   <block id="ed7a174149f5c6131e9541d84860b876" category="admonition">Per un sistema a controller singolo serie FAS2600 con storage esterno cablato con connettività multipath, l'output viene visualizzato come<block ref="864c2004fbb86b41fd41ecb867289c11" prefix=" " category="inline-code"></block> perché lo storage interno utilizza la connettività a percorso singolo.</block>
   <block id="7cc8d0bc29251cecfd1b637849b731d6" category="list-text">Verificare che i dischi negli shelf che si stanno rimuovendo non dispongano di aggregati (sono parti di ricambio) e che la proprietà sia rimossa:</block>
@@ -6632,12 +6565,9 @@
   <block id="9fd4326c6ab2d997562f5767f3df7b73" category="list-text">Rimuovere eventuali cavi shelf-to-shelf dalle porte IOM A 1 e 2 o dalle porte 3 e 4 sullo shelf di dischi da rimuovere e IOM A dello shelf di dischi successivo, quindi metterli da parte.</block>
   <block id="ea478137f9f3f510d78ded85ca711328" category="list-text">Scollegare il cablaggio shelf-to-shelf rimanente collegato alle porte IOM A sullo shelf di dischi che si sta rimuovendo e collegarlo alle stesse porte IOM A sullo shelf di dischi successivo nello stack. Lo shelf di dischi "`next`" può trovarsi sopra o sotto lo shelf di dischi che si sta rimuovendo, a seconda delle porte IOM A (1 e 2 o 3 e 4) da cui è stato rimosso il cablaggio.</block>
   <block id="ecb0971ba53e44dba0504141a48c9f2f" category="paragraph">Per la rimozione di uno shelf di dischi da un'estremità di uno stack o dal centro di uno stack, fare riferimento ai seguenti esempi di cablaggio. Prendere nota degli esempi di cablaggio riportati di seguito:</block>
-  <block id="36cd08727706401ebefa64f1f844f7b4" category="list-text">I moduli IOM12 sono disposti affiancati come in uno shelf di dischi DS224C o DS212C; se si dispone di un DS460C, i moduli IOM12 sono disposti uno sopra l'altro.</block>
-  <block id="3c41c9d7f79dc14dd41849a0139018f6" category="list-text">Lo stack in ogni esempio è cablato con cablaggio standard shelf-to-shelf, utilizzato negli stack cablati con connettività ha multipath o multipath.</block>
   <block id="5fea7092c0a88a4150d45ceb8b855a04" category="paragraph">È possibile dedurre la ricablaggio se lo stack è cablato con connettività ha quad-path o quad-path, che utilizza un cablaggio shelf-to-shelf doppio-wide.</block>
   <block id="8fd0f0ba5d2b2db036e96ecd3ee6d8aa" category="list-text">Gli esempi di cablaggio dimostrano la ricablaggio di uno dei percorsi: Percorso A (IOM A).</block>
   <block id="ec63bd7bc48ac55f299c9d68ecffd51e" category="paragraph">Ripetere la procedura di ricablaggio per il percorso B (IOM B).</block>
-  <block id="9417829bbfaa2b6bc90f4631eba2650e" category="list-text">L'esempio di cablaggio per la rimozione di uno shelf di dischi dalla fine di uno stack dimostra la rimozione dell'ultimo shelf logico di dischi in uno stack cablato con connettività ha multipath.</block>
   <block id="211fa836e39f7f323e02691753f9da66" category="paragraph">È possibile dedurre la ricablaggio se si sta rimuovendo il primo shelf logico di un disco in uno stack o se lo stack dispone di connettività multipath.</block>
   <block id="c2f61fd2c187c56b3314931c01a8eaf7" category="image-alt">estremità di rimozione rapida drw</block>
   <block id="147a645b8f80ab0559368234fa51e963" category="image-alt">drw hotremove centrale</block>
@@ -6661,7 +6591,6 @@
   <block id="60f2a3cfd26e6f6c57aebe8c8e233493" category="list-text">Rimuovere gli shelf di dischi dal rack o dall'armadietto.</block>
   <block id="2832373659f325a28de2b5462611f72c" category="paragraph">Per gli shelf di dischi DS460C, uno shelf completamente caricato può pesare circa 112 kg (247 libbre); pertanto, prestare la seguente attenzione quando si rimuove uno shelf da un rack o da un cabinet.</block>
   <block id="69803fc9f7acd429df0403558d86852a" category="admonition">Si consiglia di utilizzare un sollevatore meccanico o quattro persone che utilizzano le maniglie di sollevamento per spostare in sicurezza uno shelf DS460C.</block>
-  <block id="d2190ca0f2bf90686cb089f6fb2d5e2b" category="paragraph">Se si sposta lo shelf DS460C in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione seguente, <block ref="2dfa5cde780121ff739815d2402836cf" category="inline-xref-macro-rx"></block>.</block>
   <block id="40eaf65b2964a77febbd5ac5e16bf92b" category="paragraph-title">Spostare o trasportare gli shelf DS460C</block>
   <block id="1d5287e79870e687badf4e2da0612ad0" category="paragraph">Se si sposta uno shelf DS460C in una parte diversa del data center o si trasporta lo shelf in una posizione diversa, è necessario rimuovere le unità dai cassetti delle unità per evitare possibili danni ai cassetti e alle unità.</block>
   <block id="c3fdb0812209f286e664a4d0cd47c328" category="list-text">Se quando si installano gli shelf DS460C come parte della nuova installazione del sistema o dell'aggiunta a caldo dello shelf, si sono salvati i materiali di imballaggio del disco, utilizzarli per reimballare i dischi prima di spostarli.</block>
@@ -7006,9 +6935,6 @@
   <block id="16e515f4f7ddf43ca6fc5f5321a960e5" category="list-text">Se si aggiunge a caldo uno shelf di dischi con moduli IOM12/IOM12B a uno stack esistente (di shelf di dischi con moduli IOM12/IOM12B), è possibile aggiungere a caldo lo shelf di dischi a entrambe le estremità, ovvero il primo o l'ultimo shelf logico dello stack.</block>
   <block id="f0e56e4ad757d6fad89dfcfe1aa12d88" category="paragraph">Per le configurazioni ha a percorso singolo e singolo, come applicabile ai sistemi AFF A200, AFF A220, FAS2600 e FAS2700, è possibile aggiungere a caldo shelf di dischi alla fine dello stack che non dispongono di connessioni controller.</block>
   <block id="4a6c06310d2bcd1c9758407cb59a423d" category="list-text">Gli shelf di dischi con moduli IOM12/IOM12B devono essere nel proprio stack unico; non possono essere aggiunti a uno stack che dispone di shelf con moduli IOM6 o moduli IOM3.</block>
-  <block id="1297a8f1ac3fcf90ab0c70ff5e47b71d" category="paragraph">Questa procedura non riguarda la miscelazione di uno stack: Aggiunta a caldo di uno shelf con moduli IOM12/IOM12B a uno stack di shelf con moduli IOM6.</block>
-  <block id="0712df39e8d2ca11a74df9f3fe275482" category="list-text">Un sistema può disporre di stack di shelf di dischi a percorso multiplo e quadruplo con moduli IOM12/IOM12B.</block>
-  <block id="835ecba5eb095440eda54c2f50f1ef89" category="paragraph">Se si dispone di una coppia ha, ONTAP mostra la configurazione del sistema come<block ref="6a2261f2aa8f6f694724a61b378ae0ea" prefix=" " category="inline-code"></block>. Se si dispone di una configurazione a controller singolo, ONTAP mostra la configurazione del sistema come<block ref="90870fcbef383147c684a1554de0fb6c" prefix=" " category="inline-code"></block>.</block>
   <block id="23799cee6c2d33512d5d7c2c4dd066da" category="list-text">Questa procedura presuppone che la configurazione utilizzi ACP in-band.</block>
   <block id="0a21ef57c079b8fb55adaac84e5c7dc9" category="paragraph">Per le configurazioni con ACP in-band attivato, ACP in-band viene attivato automaticamente sugli shelf di dischi aggiunti a caldo. Per le configurazioni in cui ACP in-band non è abilitato, gli shelf di dischi aggiunti a caldo funzionano senza alcuna funzionalità ACP.</block>
   <block id="512350f125bb7245b3fb215fde5ff006" category="list-text">La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di aggiungere a caldo uno shelf di dischi.</block>
@@ -7035,7 +6961,6 @@
   <block id="82fd485bd66b7a7cf95b41701aff95f4" category="list-text">Impostare l'ID shelf per ogni shelf di dischi che si sta aggiungendo a caldo a un ID univoco nella configurazione a coppia ha o a controller singolo.</block>
   <block id="50a5f31124b37f0e6f0175b4691d290a" category="paragraph">Se disponi di un modello di piattaforma con uno shelf di dischi interno, gli shelf ID devono essere univoci nello shelf di dischi interno e negli shelf di dischi collegati esternamente.</block>
   <block id="437cff47077287b8acaab6cf6eb3f66e" category="inline-link-macro">Modificare un ID shelf</block>
-  <block id="f44e011a4789f1353840c4446705dbef" category="paragraph">È possibile utilizzare i seguenti passaggi secondari per modificare gli ID degli shelf o per istruzioni più dettagliate, utilizzare <block ref="7a954fe7521681b1209c8a82ea854632" category="inline-link-macro-rx"></block>.</block>
   <block id="be888bc11355717d8c2ff0800204b0b3" category="list-text">Se necessario, verificare gli shelf ID già in uso eseguendo Config Advisor.</block>
   <block id="6ae7d8c1c63fd7d672348ff39f88f68f" category="list-text">Modificare l'ID dello shelf con un ID valido (da 00 a 99).</block>
   <block id="e8ba9d2b66f43c95b2ebc98ff752fc70" category="list-text">Spegnere e riaccendere lo shelf di dischi per rendere effettivo l'ID dello shelf.</block>
@@ -7043,7 +6968,6 @@
   <block id="e721fed5752af28a811f95c9517647d5" category="paragraph">L'ID dello shelf lampeggia e il LED ambra del display operatore lampeggia fino a quando non viene spento e riacceso lo shelf di dischi.</block>
   <block id="114b5f5f60d5305cae68f7358becbb08" category="list-text">Ripetere i passaggi secondari da a a d per ogni shelf di dischi che si sta aggiungendo a caldo.</block>
   <block id="7c100d04606be0913d1347f47c7198ab" category="section-title">Shelf di dischi per cavi con moduli IOM12/IOM12B per aggiunta a caldo</block>
-  <block id="7d1f085b961baef4ee505ff0b202f8af" category="paragraph">I collegamenti SAS (shelf-to-shelf e controller-to-stack) sono collegati a caldo, in modo che siano collegati al sistema.</block>
   <block id="c920d4841ecd46b57d9a50e7295a2153" category="inline-link-macro">Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12</block>
   <block id="36779ed778ea1fac61fae3be46917d43" category="inline-link-macro">Installare shelf di dischi con moduli IOM12 per un hot-add</block>
   <block id="56ccacf68c60aa589cdd947ffabc6a40" category="paragraph">È necessario aver soddisfatto i requisiti indicati in <block ref="38d5024537883b0bd86511e0b5e50dba" category="inline-link-macro-rx"></block> E installato, acceso e impostato gli ID shelf per ogni shelf di dischi come indicato in <block ref="2957551c96808bfde01acb853ddbc0af" category="inline-link-macro-rx"></block>.</block>
@@ -7061,7 +6985,6 @@
   <block id="3f876ffd29608a6fdd6c56b2bcd2373a" category="list-text">Se si sta aggiungendo a caldo uno stack di shelf di dischi direttamente a un controller, completare i seguenti passaggi secondari; in caso contrario, passare al punto 3.</block>
   <block id="aab34a0f20291dc4eca51492b7dda4a1" category="list-text">Se lo stack che si sta aggiungendo a caldo dispone di più shelf di dischi, cablare i collegamenti shelf-to-shelf; in caso contrario, passare al sottopase b.</block>
   <block id="bfa9de45095a3a90ebc55708a5ee6dd2" category="cell">Se...</block>
-  <block id="eb6b116ad264c3ca003c27162d0d11cf" category="paragraph">Si sta cablando uno stack con connettività ha multipath, multipath, ha a percorso singolo o a percorso singolo ai controller</block>
   <block id="4488830a541dd347507e71eccb3f4943" category="paragraph">Collegare i collegamenti shelf-to-shelf come connettività "`standard`" (utilizzando le porte IOM 3 e 1):</block>
   <block id="779c08e01ec265d0aff357c180fceb48" category="list-text">A partire dal primo shelf logico nello stack, collegare la porta IOM A 3 alla porta IOM A 1 dello shelf successivo fino a collegare ciascun IOM A dello stack.</block>
   <block id="e35dc83f4e69b7ee09cb18fffad51f70" category="list-text">Ripetere la fase i per IOM B.</block>
@@ -7070,18 +6993,12 @@
   <block id="e3a77aa5b3bcde007d2fae9a8ec6064a" category="list-text">A partire dal primo shelf logico nello stack, collegare la porta IOM A 4 alla porta IOM A 2 dello shelf successivo fino a collegare ciascun IOM A dello stack.</block>
   <block id="3695fc6217ea304b073a799f547f9347" category="list-text">Ripetere i passaggi secondari i e II per IOM B.</block>
   <block id="11eaf61422cf68224e34ee6875a0eaf8" category="list-text">Controllare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per verificare l'eventuale presenza di un foglio di lavoro completo per la configurazione.</block>
-  <block id="df890e7b6d800ea7f63516f78dc7b333" category="inline-link-macro">Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme AFF e FAS con storage integrato</block>
-  <block id="4831f887bab13b0957b607ad184c87f7" category="paragraph"><block ref="4831f887bab13b0957b607ad184c87f7" category="inline-link-macro-rx"></block></block>
-  <block id="157171cdb89a7c3ef4163f5ab09c52b9" category="inline-link-macro">Fogli di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath comuni</block>
-  <block id="5d50d12c536a18b90ff261c6cb3dd2ff" category="paragraph"><block ref="5d50d12c536a18b90ff261c6cb3dd2ff" category="inline-link-macro-rx"></block></block>
   <block id="5c2ad194cf23987186d5cbe5c49ce2a6" category="inline-link-macro">Esempio di cablaggio e foglio di lavoro controller-to-stack per una configurazione ha quad-path con due HBA SAS quad-port</block>
   <block id="02548e03b89f23365c2f51edd44d2173" category="paragraph"><block ref="02548e03b89f23365c2f51edd44d2173" category="inline-link-macro-rx"></block></block>
   <block id="9495b7b73fbc9016369ec183980f3b98" category="list-text">Se è disponibile un foglio di lavoro completo per la configurazione, collegare le connessioni controller-to-stack utilizzando il foglio di lavoro completo; in caso contrario, passare alla fase successiva.</block>
   <block id="f392b2fad24e1eda0414e5cf3d45429c" category="list-text">Se non è disponibile un foglio di lavoro completo per la configurazione, compilare il modello di foglio di lavoro appropriato, quindi collegare le connessioni controller-to-stack utilizzando il foglio di lavoro completo.</block>
   <block id="52c50d0ed319a8e8651dbd6633a6eb4b" category="list-text">Verificare che tutti i cavi siano fissati saldamente.</block>
-  <block id="15d747925bd876379293d3f7b381a24a" category="list-text">Se si aggiungono a caldo uno o più shelf di dischi a un'estremità, ovvero il primo o l'ultimo shelf di dischi logico, di uno stack esistente, completare i passaggi secondari applicabili per la configurazione; in caso contrario, passare al punto successivo.</block>
   <block id="f869ea7ce9a752fc1c1184b74b7c48b7" category="cell">Se sei...</block>
-  <block id="98aa5d35b682331617bfb7e16474e48b" category="paragraph">Aggiunta a caldo di uno shelf di dischi alla fine di uno stack con connettività ha multipath, multipath, ha quad-path o quad-path ai controller</block>
   <block id="e5db3fb8bc84ca3e26b513ea750c6127" category="list-text">Scollegare eventuali cavi dal modulo IOM A dello shelf di dischi alla fine dello stack collegati a qualsiasi controller; in caso contrario, passare alla fase e.</block>
   <block id="eded78be6c2ef5bdeed5cb2e044b45ea" category="paragraph">Lasciare l'altra estremità di questi cavi collegata ai controller o sostituire i cavi con cavi più lunghi, se necessario.</block>
   <block id="30a13f506678dd37c6740d0a8210db83" category="list-text">Collegare i collegamenti shelf-to-shelf tra IOM A dello shelf di dischi alla fine dello stack e IOM A dello shelf di dischi che si sta aggiungendo a caldo.</block>
@@ -7093,7 +7010,6 @@
   <block id="a3d47aa3e93dad380f8eddea49e10329" category="list-text">Verificare che il cavo sia fissato correttamente.</block>
   <block id="310e6246fbcbc6ffbcf046392bd9519f" category="list-text">Ripetere i passaggi secondari applicabili per IOM B.</block>
   <block id="125273384fcb185d3d30fb428a9882ad" category="list-text">Se è stato aggiunto a caldo uno shelf di dischi con cavi ottici SAS HD mini-SAS a uno stack di shelf di dischi collegati con cavi di rame SAS, sostituire i cavi di rame SAS; in caso contrario, passare alla fase successiva.</block>
-  <block id="d723d62f22ae4fd78c33384440e5978e" category="paragraph">Lo stack deve soddisfare i requisiti indicati nella <block ref="b97fb0f13d8cc81479b53e89d9178105" category="inline-xref-macro-rx"></block> sezione di questa procedura.</block>
   <block id="20244777af6f97db49ab4dc75a00ca87" category="paragraph">Sostituire i cavi uno alla volta e attendere almeno 70 secondi tra lo scollegamento e il collegamento di un cavo nuovo.</block>
   <block id="cffaa419df3085d01136e2b025db708e" category="paragraph">Se vengono generati errori di cablaggio SAS, seguire le azioni correttive fornite.</block>
   <block id="de46960b44022dd01adfc6091d8e17ba" category="list-text">Verificare la connettività SAS per ogni shelf di dischi aggiunto a caldo:<block ref="a8562efc8f11591bbf23ca4b6d02f983" prefix=" " category="inline-code"></block></block>
@@ -7149,7 +7065,6 @@
   <block id="20b0dc7787284cb0afa2dbc5d95136a2" category="paragraph">I moduli IOM12 si distinguono per l'etichetta "IOM12":</block>
   <block id="5416d570ace1334ffbc27d0d9486ebe5" category="paragraph">I moduli IOM12B sono caratterizzati da una striscia blu e da un'etichetta "IOM12B":</block>
   <block id="d2a8fdadc8d18dd445c56f47cea6197a" category="image-alt">iom12b</block>
-  <block id="f85a60cb0afe5b75f4c43ed293c8a779" category="list-text">Per le configurazioni multipath (ha multipath o multipath) e quad-path (ha quad-path o quad-path), è possibile sostituire a caldo un IOM shelf (sostituire senza interruzioni un IOM shelf in un sistema che è acceso e che serve dati - i/o è in corso).</block>
   <block id="9785f45e8f6989c9b8cb2419a2b695da" category="list-text">Per le configurazioni ha a percorso singolo della serie FAS2600 e FAS2700, è necessario eseguire un'operazione di takeover e giveback per sostituire un IOM shelf in un sistema acceso e in grado di fornire dati. I/o in corso.</block>
   <block id="0894c7928fa1bee8fd4a0207429b7254" category="list-text">Per le configurazioni a percorso singolo della serie FAS2600, è necessario arrestare il sistema per sostituire un IOM shelf.</block>
   <block id="f00eb102fd21bbf5e0dd612fcc8a9fde" category="admonition">Se si tenta di sostituire a caldo un IOM di shelf su uno shelf di dischi con una connessione a percorso singolo, si perde l'accesso ai dischi nello shelf e agli eventuali shelf di dischi sottostanti. È anche possibile ridurre l'intero sistema.</block>
@@ -7161,7 +7076,6 @@
   <block id="27f828dc47aef9b25b9f0603b1307a44" category="list-text">Identificare fisicamente l'IOM dello shelf guasto dal messaggio di avviso della console di sistema e il LED di attenzione illuminato (ambra) sullo shelf IOM guasto.</block>
   <block id="44a79028b8e2f56c8d1164ae1aedc076" category="list-text">Eseguire una delle seguenti operazioni in base al tipo di configurazione in uso:</block>
   <block id="e8599f3c8ef213317efbf60b0379685c" category="cell">Se si dispone di un...</block>
-  <block id="099e230bc4db13968f2d136f79693703" category="paragraph">Configurazione ha multipath, multipath, ha quad-path o quad-path</block>
   <block id="373a5d24b1aa2958990518bcd5ed56ab" category="paragraph">Configurazione ha a percorso singolo serie FAS2600 e serie FAS2700</block>
   <block id="5de1791487db34e32b1323bb994c054c" category="list-text">Determinare il nodo di destinazione (il nodo a cui appartiene lo shelf IOM guasto).</block>
   <block id="1e5e667063d28d41ec828c8438a56b89" category="paragraph">IOM A appartiene al controller 1. IOM B appartiene al controller 2.</block>
@@ -7190,7 +7104,6 @@
   <block id="22de385bc846aff8918c00418f396af3" category="summary">Sono disponibili le seguenti regole di cablaggio SAS, esempi e fogli di lavoro per facilitare il collegamento dei shelf di unità SAS con i moduli IOM12 al sistema storage.</block>
   <block id="e0c4907423e9966f80fb30cb4ce6df57" category="doc">Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12/IOM12B</block>
   <block id="87fe7ea614796dffe614513028372aa9" category="paragraph">Per facilitare il collegamento dei shelf di dischi SAS con i moduli IOM12/IOM12B al sistema storage, è possibile utilizzare una qualsiasi delle regole di cablaggio SAS, fogli di lavoro ed esempi di contenuto disponibili in base alle esigenze.</block>
-  <block id="dec8d0bac5e3e019cf604b191c0cd1fc" category="paragraph">*Regole di cablaggio SAS*</block>
   <block id="eb631b70ae7c721773f91b506c815082" category="inline-link-macro">Configurazioni</block>
   <block id="2c20867b019d706a391ac25e6929487d" category="list-text"><block ref="2c20867b019d706a391ac25e6929487d" category="inline-link-macro-rx"></block></block>
   <block id="fde7507300690e9e5b82885ffbc9508b" category="inline-link-macro">Numerazione degli slot del controller</block>
@@ -7202,10 +7115,6 @@
   <block id="ec5bf10bb724f1090f587e3f483ad17f" category="inline-link-macro">Cavi ottici SAS mini-SAS HD</block>
   <block id="183816ad8f9602df1b79177a9a701a9e" category="list-text"><block ref="183816ad8f9602df1b79177a9a701a9e" category="inline-link-macro-rx"></block></block>
   <block id="466938affa9a199b1c83c75ca5cb1a5b" category="paragraph">*Fogli di lavoro e esempi di cablaggio*</block>
-  <block id="9da6ad063de2521b4320f53e9eaef62c" category="inline-link-macro">Configurazioni ha multipath comuni</block>
-  <block id="d9e855b435b4d134eea547e0fa310441" category="list-text"><block ref="d9e855b435b4d134eea547e0fa310441" category="inline-link-macro-rx"></block></block>
-  <block id="e188406fb2d6108447e3bc6cb9155625" category="inline-link-macro">Piattaforme AFF e FAS con storage integrato</block>
-  <block id="7a63e08a24ae8c9c1ab5dcddaf6f551f" category="list-text"><block ref="7a63e08a24ae8c9c1ab5dcddaf6f551f" category="inline-link-macro-rx"></block></block>
   <block id="d0b14672f568caba4ff0c9e7e94adbfd" category="inline-link-macro">Configurazioni ha quad-path</block>
   <block id="c9652f347c61d0d2c370d1229afb9e37" category="list-text"><block ref="c9652f347c61d0d2c370d1229afb9e37" category="inline-link-macro-rx"></block></block>
   <block id="8ae471d6400ac43c05cee2f01574b10c" category="paragraph">*Modelli di fogli di lavoro per il cablaggio*</block>
@@ -7234,10 +7143,7 @@
   <block id="1d4c0fb2a243494a984412dc5b5381a1" category="admonition">Se si dispone di una coppia ha con almeno due stack, lo shelf di dischi contenente gli aggregati root per il secondo stack ha l'ID shelf preimpostato su 10.</block>
   <block id="f2717497b83e7964ce960a0ca5ac4860" category="paragraph">È necessario impostare gli shelf ID in modo che siano univoci all'interno della configurazione a coppia ha o a controller singolo. È possibile impostare manualmente gli ID degli shelf o assegnare automaticamente gli ID degli shelf per tutti gli shelf di dischi nella configurazione a coppia ha o a controller singolo utilizzando un comando in modalità di manutenzione. Vengono fornite le istruzioni per entrambi i metodi.</block>
   <block id="b1b6e8ddb338daabf15cdf510590fae4" category="list-text">Gli shelf di dischi contenenti gli aggregati root possono essere identificati dalle etichette presenti sullo shelf box di dischi e sullo chassis dello shelf di dischi.</block>
-  <block id="5c542a7e2ad58397aad1271e4d3a0117" category="paragraph">Le etichette indicano il numero dello stack, ad esempio *Loop o Stack n.: 1* e *Loop o Stack n.: 2*. Gli shelf di dischi che non contengono gli aggregati root mostrano solo il numero di serie dello shelf di dischi sulle etichette.</block>
   <block id="ecf2c214f39b200ba60904cb20770b94" category="list-text">Se durante l'installazione e la configurazione del sistema non si configura il sistema per l'utilizzo dell'assegnazione automatica della proprietà del disco, è necessario assegnare manualmente la proprietà del disco.</block>
-  <block id="3e4b78a10116c79b33b35d6940601a98" category="list-text">Il percorso di controllo alternativo in-band (ACP) viene attivato automaticamente.</block>
-  <block id="a465c0fe78962946e881b32ab9ec2b88" category="paragraph">ACP in-band non supportato su configurazioni ha a percorso singolo o a percorso singolo.</block>
   <block id="d0239e887ec2c441679c67bab9e771e2" category="list-text">La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP).</block>
   <block id="83b7fe235f4d243b23ebf6cb04f9c234" category="list-text">La procedura consigliata consiste nel scaricare ed eseguire Config Advisor dopo l'installazione di un nuovo sistema.</block>
   <block id="f04a5c047df778cea3df6efa23d65eae" category="paragraph">L'esecuzione di Config Advisor dopo l'installazione di un nuovo sistema consente di verificare che le connessioni SAS siano cablate correttamente e che gli ID shelf siano univoci all'interno della configurazione a coppia ha o a controller singolo.</block>
@@ -7248,12 +7154,10 @@
   <block id="76a74383605253628e7771913e3eb749" category="admonition">Non accendere gli shelf di dischi in questo momento.</block>
   <block id="cff4c6a80d673a91abe24c8dff38731f" category="section-title">Shelf di dischi per cavi con moduli IOM12/IOM12B per una nuova installazione del sistema</block>
   <block id="b8fe06fa8cda2e641eeef95ff91ef16f" category="paragraph">Le connessioni SAS per shelf di dischi via cavo (shelf-to-shelf) e controller-to-shelf (controller-to-shelf) consentono di stabilire la connettività dello storage per il sistema.</block>
-  <block id="1143d5c25aa2f693537222d1f3260323" category="paragraph">È necessario aver soddisfatto i requisiti indicati in <block ref="d785cc9ecd460c8d1bff7d4aeeca8c73" category="inline-xref-macro-rx"></block> e hanno installato gli shelf di dischi nel rack.</block>
   <block id="eb0ef620e7c33a9d328a59925c63f641" category="paragraph">Dopo aver collegato gli shelf di dischi, accenderli, impostare gli ID degli shelf e completare la configurazione e la configurazione del sistema.</block>
   <block id="938b81eb4d9b969de0bb315b1f640378" category="list-text">Collegare i collegamenti shelf-to-shelf all'interno di ogni stack se lo stack dispone di più shelf di dischi; in caso contrario, passare alla fase successiva:</block>
   <block id="a7d77ef34ce2b9d850f4769f4d7e7a6c" category="inline-link-macro">regole di connessione shelf-to-shelf</block>
   <block id="f43f298ef090aeeea5ee30105943fc22" category="paragraph">Per una spiegazione dettagliata e per esempi di cablaggio shelf-to-shelf "`standard`" e di cablaggio shelf-to-shelf "`dDouble-wide`", vedere <block ref="26ae17222c3b6b055eac72da397050a1" category="inline-link-macro-rx"></block>.</block>
-  <block id="1c0e65520c35332052a7497245e722c4" category="paragraph">Si sta cablando una configurazione ha multipath, multipath, ha a percorso singolo o a percorso singolo</block>
   <block id="e6b5dfec5e2c0904b5ee95122da9b6a5" category="list-text">Ripetere la sottofase a per IOM B.</block>
   <block id="56767a43c2f3e9180e63f6a9f40436fa" category="list-text">Ripetere i passaggi secondari a e b per ogni stack.</block>
   <block id="fd4ece52db86a5d9850377adfb59fc89" category="paragraph">Si sta cablando una configurazione ha quad-path o quad-path</block>
@@ -7564,8 +7468,6 @@
   <block id="fcaf8c1ce832814314e7cdc51233676b" category="sidebar">Upgrade della piattaforma (maggior parte dei sistemi)</block>
   <block id="7c4365c5c3b36c349d31ac07e90053ce" category="sidebar">Upgrade della piattaforma (configurazione MetroCluster)</block>
   <block id="46edf46f46a5fc2267bcf312e1955d28" category="sidebar">Documentazione del software ONTAP</block>
-  <block id="c8a6259aed44fea9ff6723eeb59cce9e" category="sidebar">Documentazione di Digital Advisor</block>
-  <block id="974ad78dc53c253ebfe5b2b8b376f353" category="sidebar">Strumenti e supporto</block>
   <block id="bc8be72fdc9d6054f356bb2b7f80fd12" category="sidebar">Matrice di interoperabilità NetApp</block>
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="sidebar">Knowledge base di NetApp</block>
   <block id="2bae42f280067110dfd52cc69a468364" category="sidebar">Active IQ (accesso richiesto)</block>
@@ -7888,9 +7790,7 @@
   <block id="2392f11d96d6fc4362b42688f146c995" category="sidebar">Installazione e shelf per cavi per il nuovo sistema</block>
   <block id="4ccd403eb19c48e7ebdaaeb982ef2481" category="sidebar">Shelf hot-add</block>
   <block id="cf999199f9d4c3e90d15399860476f13" category="sidebar">Modificare l'ID dello shelf</block>
-  <block id="b32341112e04cf53228eb2711e7faa5c" category="sidebar">Fogli di lavoro per il cablaggio ed esempi di configurazioni ha multipath comuni</block>
   <block id="3f9904dabd6885ddf815902aade7d320" category="sidebar">Fogli di lavoro per il cablaggio ed esempi per piattaforme con storage interno</block>
-  <block id="99035f209c8d40299210fe873096f23b" category="sidebar">Foglio di lavoro per il cablaggio ed esempio di configurazione ha quad-path con due HBA SAS quad-port</block>
   <block id="f64eba4acc825268e4959bef4c193b11" category="sidebar">Modello di foglio di lavoro per il cablaggio per la connettività multipath</block>
   <block id="ce6374cb8d43c65f66d31cf1a0ede69e" category="sidebar">Modello di foglio di lavoro per il cablaggio per la connettività quad-path</block>
   <block id="c9dbe70bac035df0f96f45c02dcf5bd9" category="sidebar">Come leggere il foglio di lavoro da collegare via cavo per la connettività multipath</block>
@@ -7996,4 +7896,466 @@
   <block id="04924b20a91a5f5b238ee6721421d3cb" category="list-text">È possibile utilizzare le porte di rete dati UTA2 o le porte di rete dati ethernet per collegare i controller alla rete host:</block>
   <block id="be838816a39a48461edd5a1e87b6d8e5" category="list-text">Collegare il laptop o la console allo switch di gestione.</block>
   <block id="fea0a68e925a0ae2df0aa5bbdbe7c891" category="list-text">Assegnare un indirizzo TCP/IP al laptop o alla console, utilizzando un indirizzo che si trova sullo switch di gestione.</block>
+  <block id="71d4d064630d70cfb9adf86452b9de52" category="paragraph">Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home:<block ref="985591930e85610706940dd82967bd61" prefix=" " category="inline-code"></block></block>
+  <block id="5f9489878c0e21ab14f2c4768367bc39" category="list-text">Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="fe5bb47bbec2cc6ab51288fa7ec602da" category="paragraph">Possibilità di ricable le connessioni di rete e di storage del modulo controller.</block>
+  <block id="8f71288719d23ae490bd8fa8ba6d2988" category="paragraph">Se le interfacce sono elencate come<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>, ripristinare tali interfacce alla porta home utilizzando<block ref="71c4baf0f55b5bfce2627ab279a13043" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="1ccdd49d3b4e697ec664a985a5983b41" category="list-text">Ripristinare AutoSupport se è stato disattivato utilizzando<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
+  <block id="657e1e449c74518bb94702c89e392c1b" category="list-text">Sul nodo _healthy_, controllare l'ora di sistema:<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block></block>
+  <block id="6071c318b780c1f56da250b5fe0334d8" category="paragraph">La data e l'ora si basano sul fuso orario configurato.</block>
+  <block id="408525dec83104bf941d9a7d0a93d454" category="list-text">Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_:<block ref="5fc732311905cb27e82d67f4f6511f7f" prefix=" " category="inline-code"></block></block>
+  <block id="598dc5e99f2a14bda43240b77ca40634" category="section-title">Fase 2: Richiamare il sistema</block>
+  <block id="a5878fdf6c8d3698ab74c4f473608246" category="paragraph">Se si dispone di una piattaforma con storage interno, utilizzare il seguente foglio di lavoro:</block>
+  <block id="e80602d70a12972f8bf4a77f853d5172" category="inline-link-macro">Regole e concetti relativi al cablaggio SAS</block>
+  <block id="21a6c3bb04b7d126a65edcb02e25ec46" category="list-text">Se necessario, fare riferimento a. <block ref="513d554484deefc85e1b679659a84cbc" category="inline-link-macro-rx"></block> per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).</block>
+  <block id="33541e56b6653b3ccd3503e7d446f985" category="summary">È possibile utilizzare i fogli di lavoro completi di cablaggio controller-to-stack ed esempi di cablaggio per collegare le piattaforme con storage interno.</block>
+  <block id="84c55d9e8eb41695e92702bc9aa7e417" category="list-text">Se necessario, fare riferimento a. <block ref="513d554484deefc85e1b679659a84cbc" category="inline-link-macro-rx"></block> per informazioni sulle configurazioni supportate, la connettività shelf-to-shelf e la connettività controller-to-shelf.</block>
+  <block id="84f61db881175683de35ce39e2e25556" category="list-text">Gli esempi di cablaggio mostrano i cavi controller-stack come solidi o tratteggiati per distinguere le connessioni delle porte 0b/0b1 del controller dalle connessioni delle porte 0a del controller.</block>
+  <block id="dd4d7242739fdb8eb5eab6889088e71a" category="image-alt">Controller drw fas2600 per stack tipo di cavo chiave IEOPS 947</block>
+  <block id="559ab6a66b2bfa274b38981fac849dbe" category="section-title">Piattaforma FAS2800 in una configurazione ha multipath senza shelf esterni</block>
+  <block id="c551f9f047036ae88cefbff0f867bfd7" category="paragraph">L'esempio seguente mostra che non è necessario alcun cablaggio per la connettività ha multipath:</block>
+  <block id="7520d8de654d9ba2c8c8616c324533eb" category="image-alt">Drw fas2800 noshelf mpha IEOPS 954</block>
+  <block id="dce517c194d8aadca050f89acd9479f9" category="section-title">Piattaforma FAS2800 in configurazione ha a tre percorsi senza shelf esterni</block>
+  <block id="96093137909588511c6efc52b70c20f0" category="paragraph">Il seguente esempio di cablaggio mostra il cablaggio necessario tra i due controller per ottenere la connettività a tre percorsi:</block>
+  <block id="24511779e02007e937b5e09eb22acd22" category="image-alt">Drw fas2800 tpha IEOPS 955</block>
+  <block id="45eccdceb680b5fc042ecd5f2cb2f360" category="section-title">Piattaforma FAS2800 in una configurazione ha a tre percorsi con uno stack multi-shelf</block>
+  <block id="f9fe60b0d5b0a173d8e8a93ef1fad4fa" category="paragraph">Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b1:</block>
+  <block id="94d112c03cbc394f8f2a92ff360b41b9" category="image-alt">Foglio di lavoro drw fas2800 IEOPS 948</block>
+  <block id="68f4d5ceedad60b68609111dd83bb1dd" category="image-alt">Drw fas2800 con shelf tpha IEOPS 949</block>
+  <block id="b1e743b8776f5252291595e89248eca8" category="admonition">Questa sezione non si applica ai sistemi FAS2800 o FAS25XX.</block>
+  <block id="b3bbdd3382ae9ee68dc7a3c014a9e55f" category="image-alt">Foglio di lavoro drw fas2600 mpha IEOPS 1255</block>
+  <block id="7e1de3653f38ae49017d6c9db4292905" category="image-alt">Drw fas2600 mpha IEOPS 1256</block>
+  <block id="889643b70d8973adb82162d572e085b6" category="list-text">Per le configurazioni multipath (ha multipath o multipath), ha trio-path e quad-path (ha quad-path o quad-path), è possibile sostituire a caldo un IOM shelf (senza interruzioni, sostituire un IOM shelf in un sistema acceso e che serve dati - i/o è in corso).</block>
+  <block id="78e2c67b6cd9683131c2d5cc3b5f52eb" category="paragraph">Configurazione ha multipath, ha tri-path, multipath, ha quad-path o quad-path</block>
+  <block id="6d777385d5ec907bb961f7417dca8878" category="paragraph"><block ref="6d777385d5ec907bb961f7417dca8878" category="inline-link-rx"></block></block>
+  <block id="0ee240824d7af98d85ac767eaccc865a" category="paragraph"><block ref="0ee240824d7af98d85ac767eaccc865a" category="inline-link-rx"></block></block>
+  <block id="6d0d5f63b661f0d75b4bc5a5a2c970fc" category="paragraph"><block ref="6d0d5f63b661f0d75b4bc5a5a2c970fc" category="inline-link-rx"></block></block>
+  <block id="874f447ea48b8a01b3d6036d97f74e27" category="list-text">Il sistema deve avere un numero inferiore al numero massimo di dischi supportati, almeno del numero di dischi che possono essere installati negli shelf IOM12/IOM12B che si stanno aggiungendo a caldo.</block>
+  <block id="9ede2d6e7ff2c506f18985f68e692af9" category="paragraph"><block ref="9ede2d6e7ff2c506f18985f68e692af9" category="inline-link-rx"></block></block>
+  <block id="3e13397e3855003e83c5bd90f17f8b8d" category="list-text">Se le porte SAS bridge sono disponibili nella configurazione corrente, aggiungere gli shelf IOM12/IOM12B come stack separato.</block>
+  <block id="59fc52719ae405798ce33ec8377fff0f" category="paragraph"><block ref="59fc52719ae405798ce33ec8377fff0f" category="inline-link-rx"></block></block>
+  <block id="1b7414640eba82929db27856a548aa7d" category="paragraph"><block ref="1b7414640eba82929db27856a548aa7d" category="inline-link-rx"></block></block>
+  <block id="c4df39668489dc5a0445eefa1b0ae993" category="list-text">Quando si aggiungono a caldo shelf con moduli IOM12/IOM12B a uno stack di shelf con moduli IOM6, le prestazioni dell'intero stack funzionano a 6 Gbps (funziona alla velocità comune più bassa).</block>
+  <block id="f5397894a1a5219c58306fcf93f44e66" category="paragraph">Se gli shelf che si stanno aggiungendo a caldo sono shelf che sono stati aggiornati dai moduli IOM3 o IOM6 ai moduli IOM12/IOM12B, lo stack funziona a 12 Gbps; tuttavia, le funzionalità del disco e del backplane dello shelf possono limitare le prestazioni dei dischi a 3 Gbps o 6 Gbps.</block>
+  <block id="0e2ac0f21198c430c971dd9e441f6fc7" category="list-text">Per i sistemi in cui IBACP è in esecuzione, IBACP viene attivato automaticamente sugli shelf IOM12/IOM12B aggiunti a caldo.</block>
+  <block id="269e042dc90ba45b8f4ba99cc4811c43" category="list-text">Per i sistemi in cui è abilitato l'ACP out-of-band, le funzionalità ACP non sono disponibili sugli shelf IOM12/IOM12B.</block>
+  <block id="145cb3ca8681febc2695ed384e8786c0" category="paragraph"><block ref="145cb3ca8681febc2695ed384e8786c0" category="inline-link-rx"></block></block>
+  <block id="97887a2b9e5437b59f9205502aa6f821" category="paragraph">Se si assegna manualmente la proprietà del disco per gli shelf IOM12/IOM12B che si stanno aggiungendo a caldo, è necessario disattivare l'assegnazione automatica del disco, se attivata.</block>
+  <block id="44efd2e3c1edf2a13d788173c8c6bedb" category="paragraph">Un ID shelf valido va da 00 a 99. Si consiglia di impostare gli ID dello shelf in modo che gli shelf IOM6 utilizzino numeri inferiori (1 - 9) e gli shelf IOM12/IOM12B utilizzino numeri superiori (10 e superiori).</block>
+  <block id="0301e862598fef61b159e918e47fbf91" category="paragraph">Il modo in cui collegare uno shelf IOM12/IOM12B a uno stack di shelf IOM6 dipende dal fatto che lo shelf IOM12/IOM12B sia lo shelf IOM12/IOM12B iniziale, il che significa che non esistono altri shelf IOM12/IOM12B nello stack, Oppure se si tratta di uno shelf IOM12/IOM12B aggiuntivo per uno stack misto esistente, il che significa che uno o più shelf IOM12/IOM12B sono già presenti nello stack. Dipende anche dal fatto che lo stack disponga di connettività ha multipath, ha triPath, multipath, ha single-path o single path.</block>
+  <block id="6ddd0f1b8cb9cab2c51d86f276a4eafd" category="list-text">In una coppia ha con storage interno (IOM12E/IOM12G), una singola transizione di velocità all'interno di uno stack avente due shelf IOM12/IOM12B e due shelf IOM6 è rappresentata come:</block>
+  <block id="3efe63a3802447c66b1e1340cc37011c" category="paragraph">La porta di storage interna 0b/0b1 è la porta dello storage interno (espansore) e poiché si collega allo shelf IOM12/IOM12B aggiunto a caldo (l'ultimo shelf nello stack), il gruppo di shelf IOM12/IOM12B viene mantenuto insieme e viene mantenuta una singola transizione attraverso lo stack e lo storage IOM12E/IOM12G interno.</block>
+  <block id="17540f86c10768e4e727e19e559e374f" category="paragraph">Questa illustrazione è specifica di uno stack con connettività ha multipath; tuttavia, il concetto di cablaggio può essere applicato a stack con configurazioni ha multipath, ha a tre percorsi, ha a percorso singolo, a percorso singolo e MetroCluster stretch.</block>
+  <block id="e7066e65ab6d0d00e13f5776fdc410f6" category="paragraph">A seconda del modello di piattaforma e della connettività dello stack (ha multipath, ha tri-path, multipath, ha single path o single path), L'ultimo shelf logico è lo shelf con connessioni controller-to-stack dalle porte SAS B e D del controller, oppure lo shelf non ha connessioni a nessun controller (perché la connettività controller-to-stack è al top logico dello stack, attraverso le porte SAS del controller A e C).</block>
+  <block id="6367f42eda55c79ca60e48d6384ab2f1" category="paragraph">Ha multipath, ha tri-path, multipath o ha single-path con connettività del controller all'ultimo shelf logico (incluse le configurazioni Stretch MetroCluster)</block>
+  <block id="f239ca80a281b7e3098e53bf849bbc6d" category="list-text">Ristabilire la connessione controller-to-stack cablando la stessa porta sul controller o sul bridge (nella fase a) alla nuova porta IOM A dello shelf IOM12/IOM12B 3.</block>
+  <block id="d0d9f013532d105b4493bf4a40659776" category="list-text">Ristabilire la connessione bridge-to-stack inferiore cablando la stessa porta sul bridge (nella fase a) alla nuova porta IOM A 3 dello shelf IOM12/IOM12B.</block>
+  <block id="364a89e35ed719e51e59a60ec21ff69a" category="paragraph">Ha multipath, ha tri-path, multipath o ha single-path con connettività controller all'ultimo shelf logico o connettività bridge-attached in una configurazione MetroCluster</block>
+  <block id="d52293a37620938ba7e4feb13708edf9" category="doc">Regole e concetti di cablaggio SAS - shelf con moduli IOM12/IOM12B</block>
+  <block id="f10aa207b12f6aea0d49aa15d0d2b698" category="admonition">Le regole di cablaggio SAS relative alle regole di numerazione degli slot dei controller, alle regole di connessione shelf-to-shelf e alle regole di connessione controller-to-stack descritte in questa guida sono le stesse che si applicano a tutti gli shelf di dischi SAS, indipendentemente dal fatto che dispongano di moduli IOM12/IOM12B, IOM6 o IOM3. Tuttavia, le informazioni contenute in questa guida sono specifiche per le caratteristiche esclusive degli shelf di dischi con moduli IOM12/IOM12B e per il loro utilizzo nelle configurazioni supportate.</block>
+  <block id="8f3e1bfcac5ebf3ae518d7d0b7183191" category="paragraph">Gli shelf di dischi con moduli IOM12/IOM12B sono supportati su specifici tipi di configurazioni a coppia ha e a controller singolo.</block>
+  <block id="6c5fe9aff643cb6f6afc0c56cef693b2" category="paragraph">Per informazioni aggiornate sulle configurazioni di cablaggio supportate per il modello di piattaforma in uso, consultare la Hardware Universe.</block>
+  <block id="38c7dba0bfe978540fdb2f9598267e27" category="list-text">Le piattaforme con storage interno non supportano la connettività ha quad-path.</block>
+  <block id="0fecc4c819e73e375d9c40a95ba6fec2" category="list-text">Una coppia ha FAS2800 può essere cablata come ha a tre percorsi.</block>
+  <block id="bd0ab5deac45d462eafb4c6094f38b07" category="paragraph">Per informazioni sulla connettività FAS2800, consultare la <block ref="44cb6d44583fef757ae54be5d72211f9" category="inline-xref-macro-rx"></block> sezione.</block>
+  <block id="379f6edbaf8caad99a93caabf81a3374" category="list-text">Le piattaforme con storage interno possono essere cablate come configurazioni ha a percorso singolo (dalla porta 0b/0b1 agli shelf esterni) per supportare la connettività a un dispositivo di backup su nastro SAS esterno (dalla porta 0a).</block>
+  <block id="e543cae57757f63f8d1f193133213927" category="paragraph">Per le coppie ha FAS2800, sebbene il cablaggio agli shelf esterni sia ha a percorso singolo, a causa della connessione interna di ciascun controller della porta 0b all'espansore locale (IOM12G) e della porta 0c all'espansore del partner, la configurazione della coppia ha è ha multipath.</block>
+  <block id="9331810e62f51c7489e12877891ef496" category="list-text">Le configurazioni a controller singolo della serie FAS2600 possono essere cablate come configurazioni a percorso singolo.</block>
+  <block id="58e545ebba1044e5ef472e1c15a83e56" category="list-text">La connettività standard shelf-to-shelf viene utilizzata in qualsiasi stack di shelf di dischi con più shelf di dischi.</block>
+  <block id="0d93f50b6ba07d734a4fc535331feeba" category="paragraph">È necessaria una connessione via cavo tra shelf di dischi in ciascun dominio: Dominio A (IOM A) e dominio B (IOM B).</block>
+  <block id="8e6be4e546371eb88e215e42e577faf9" category="section-title">Regole di connessione delle porte del controller 0b/0b1 e 0a per piattaforme con storage interno</block>
+  <block id="bdc324833c79d07a6e6e0a64fe5be5f7" category="paragraph">Le piattaforme con storage interno dispongono di un insieme univoco di regole di connessione, in quanto ciascun controller deve mantenere la stessa connettività di dominio tra lo storage interno (porta 0b/0b1) e lo stack. Ciò significa che quando un controller si trova nello slot A dello chassis (controller 1) si trova nel dominio A (IOM A) e quindi la porta 0b/0b1 deve connettersi a IOM A nello stack. Quando un controller si trova nello slot B dello chassis (controller 2), si trova nel dominio B (IOM B) e pertanto la porta 0b/0b1 deve connettersi all'IOM B nello stack.</block>
+  <block id="3efcc2e815502067db645cea76a01d7e" category="admonition">Se non si connette la porta 0b/0b1 al dominio corretto (domini con connessione incrociata), si espone il sistema a problemi di resilienza che impediscono l'esecuzione di procedure senza interruzioni in modo sicuro.</block>
+  <block id="ade459d42d6d857cbd96a94e336a0f85" category="list-text">Porta 0b/0b1 del controller (porta storage interna):</block>
+  <block id="3bab20a687a982595c77f77ac9a95999" category="list-text">La porta 0b/0b1 del controller 1 si collega sempre a IOM A (dominio A).</block>
+  <block id="aba2d6429487fb8312ccf308c2b4282d" category="list-text">La porta 0b/0b1 del controller 2 si collega sempre a IOM B (dominio B).</block>
+  <block id="e30f4f926e91db6b95bd6a2e7d8e8db8" category="list-text">La porta 0b/0b1 è sempre il percorso primario.</block>
+  <block id="f37147b373a7dab930e9ad58967b110f" category="list-text">La porta 0b/0b1 si collega sempre all'ultimo shelf logico di dischi in uno stack.</block>
+  <block id="ec50871e5c9ed1add9f37e13b5f6dcc5" category="list-text">La porta 0b/0b1 si collega sempre alla porta IOM 3 dello shelf di dischi.</block>
+  <block id="5cc45636165f15166974ddab3dfb0fd7" category="paragraph">La seguente illustrazione evidenzia la connettività di dominio della porta di storage interna (0b/0b1) a uno stack esterno di shelf:</block>
+  <block id="cb9e9a1b808c7a4e6312fd5827f6c84e" category="image-alt">Esempio di dominio mpha drw fas2600 IEOPS 1172</block>
+  <block id="45219ca27a4ad91c17dcca93a96dd284" category="section-title">Connettività ha tri-path</block>
+  <block id="7125880b6305be48cdd0760966c349f2" category="paragraph">La connettività ha Tri-path è disponibile sulle coppie ha FAS2800. La connettività ha Tri-path ha tre percorsi da ciascun controller agli shelf interni (IOM12G) ed esterni:</block>
+  <block id="c8c29757ef852a483118b80a57d4b5ac" category="list-text">La connessione interna della porta 0b di ciascun controller al proprio IOM12G locale e la porta 0c al proprio IOM12G del partner fornisce una connettività ha multipath a coppia.</block>
+  <block id="494edf65cd0a33575dc779a9df2979d6" category="list-text">Il cablaggio delle porte di storage esterne di ciascun controller, 0a e 0b1, fornisce una connettività ha a tre percorsi.</block>
+  <block id="a35c30ba1541ae1d8a44ed5229f19650" category="paragraph">Le porte 0a e 0b1 sono cablate tra i due controller quando non sono presenti shelf esterni o sono cablate su shelf esterni per ottenere una connettività ha a tre percorsi.</block>
+  <block id="77f105a56bd1c2ae99c93daa98950ddb" category="paragraph">Di seguito sono illustrati i collegamenti interni e i cavi esterni del controller che consentono la connettività ha a tre percorsi:</block>
+  <block id="d16f504f7bfcd6bdd9341d281e367431" category="image-alt">Concetto di drw fas2800 tpha IEOPS 950</block>
+  <block id="56aa5946d918a9c287c3413f16a7f6a8" category="paragraph">Le porte SAS esterne di FAS2800:</block>
+  <block id="49c992eee9e3421ed1fbdca1cea6cc70" category="list-text">La porta 0a proviene dall'HBA interno (come altre piattaforme con shelf interno).</block>
+  <block id="21f39b91f6bc9739ca0f20af09effa4e" category="list-text">La porta 0b1 proviene dallo shelf interno (come le porte 0b su altre piattaforme con shelf interno).</block>
+  <block id="cd00b581ae35cc28e22b76f1f56e73a3" category="list-text">La porta 0b2 non viene utilizzata. È disattivato. Se un cavo è collegato, viene generato un messaggio di errore.</block>
+  <block id="89c7c407656d81769624b64d696a7e5e" category="image-alt">Porte drw sas3 su fas2800 IEOPS 946 (1)</block>
+  <block id="4d29df0cb21d81560d8799a21074035f" category="paragraph">Gli esempi di cablaggio di coppia ha FAS2800 sono disponibili nella <block ref="c19123e6031c139d66f534ae4311d605" category="inline-link-macro-rx"></block> sezione.</block>
+  <block id="d781db166642a4d3afbe74add6458ec0" category="paragraph">*Regole e concetti di cablaggio SAS*</block>
+  <block id="8f8530d523c868e5ee729783d7b0a04a" category="list-text"><block ref="8f8530d523c868e5ee729783d7b0a04a" category="inline-link-macro-rx"></block></block>
+  <block id="f70fe2f81dab8d7ddd64b2b8e46c9db9" category="inline-link-macro">Configurazioni ha multipath</block>
+  <block id="4cdce5b4db97f8a8cccd6d629adfc065" category="list-text"><block ref="4cdce5b4db97f8a8cccd6d629adfc065" category="inline-link-macro-rx"></block></block>
+  <block id="49a079fbeac70af49f3d165faa90d12f" category="inline-link-macro">Piattaforme con storage interno</block>
+  <block id="fb02e210d25a1db1f9a1388e23551987" category="list-text"><block ref="fb02e210d25a1db1f9a1388e23551987" category="inline-link-macro-rx"></block></block>
+  <block id="4b077b9294c983e4fcb79f22bbbd7059" category="list-text">Il sistema deve essere una configurazione ha multipath, ha tri-path, multipath, ha quad-path o quad-path.</block>
+  <block id="47d1c6074cdb766b8570365bf3c957b4" category="paragraph">Per le piattaforme con storage interno, lo storage esterno deve essere cablato come ha multipath, ha tri-path o multipath.</block>
+  <block id="b47ee462126834b65b6cb8631735e9b6" category="list-text">*Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione "spostamento o trasporto degli shelf DS460C" alla fine di questa procedura.</block>
+  <block id="b30291dbc620b5f1b37a40f305a02f42" category="list-text">Verificare che la configurazione del sistema sia<block ref="7331911b71ec7e78bff5c45bd2c5aaf9" prefix=" " category="inline-code"></block>,<block ref="e48889091c7b245a01ec6e7c96d076a6" prefix=" " category="inline-code"></block>,<block ref="30cd2ef2a4cf8bde2668292e60ce425e" prefix=" " category="inline-code"></block>,<block ref="98a06331c5019fee7c2bec76b5d289fb" prefix=" " category="inline-code"></block>, o.<block ref="3a22361329a9005da35e1a3654fdb1ea" prefix=" " category="inline-code"></block> eseguendo il<block ref="d4b15528721ed3ac7910f1fa2cacec13" prefix=" " category="inline-code"></block> comando dal nodeshell di entrambi i controller.</block>
+  <block id="8c39b7226de6fd48c0c5d30d8d9d17c4" category="paragraph">Il completamento del rilevamento potrebbe richiedere fino a un minuto.</block>
+  <block id="2336de80553a028befa65fff819c1dde" category="list-text">I moduli IOM12/IOM12B sono disposti affiancati come in uno shelf di dischi DS224C o DS212C; se si dispone di DS460C, i moduli IOM12/IOM12B sono disposti uno sopra l'altro.</block>
+  <block id="62770b693e525340d1e88f2ad5bcea2d" category="list-text">Lo stack in ogni esempio è cablato con cablaggio standard shelf-to-shelf, utilizzato negli stack cablati con connettività ha multipath, ha trio-path o multipath.</block>
+  <block id="f4507ab39b62bbe20965312721a8efcc" category="list-text">L'esempio di cablaggio per la rimozione di uno shelf di dischi dalla fine di uno stack dimostra la rimozione dell'ultimo shelf logico di dischi in uno stack cablato con connettività ha multipath o ha a tre percorsi.</block>
+  <block id="09c4b41de089c23d1a678473dad5d4b0" category="paragraph">Se si sposta lo shelf DS460C in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione "spostamento o trasporto degli shelf DS460C".</block>
+  <block id="d1439ffc926f9eb464ebdd314a0ffff3" category="doc">Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath - shelf con moduli IOM12/IOM12B</block>
+  <block id="1803219dad807bec033016996a2a80f6" category="admonition">Queste informazioni si applicano alle piattaforme senza storage interno.</block>
+  <block id="9c5e6dce379da9748afc258e9d7006a5" category="list-text">Se necessario, fare riferimento a. <block ref="513d554484deefc85e1b679659a84cbc" category="inline-link-macro-rx"></block> per informazioni sulle configurazioni supportate, la convenzione di numerazione degli slot del controller, la connettività shelf-to-shelf e la connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).</block>
+  <block id="ed696617fba9412fed0e3069a929b5b7" category="list-text">Se necessario, fare riferimento a. <block ref="513d554484deefc85e1b679659a84cbc" category="inline-link-macro-rx"></block> per informazioni sulla convenzione di numerazione degli slot del controller, sulla connettività shelf-to-shelf e sulla connettività controller-to-shelf (incluso l'utilizzo di coppie di porte).</block>
+  <block id="60564c6a5dbb582ea0f8b967540d266c" category="paragraph">Le etichette indicano il numero dello stack, ad esempio *Loop o Stack n.: 1* e *Loop o Stack n.: 2*. Gli shelf di dischi che non contengono gli aggregati root mostrano solo il numero di serie dello shelf di dischi sulle etichette.</block>
+  <block id="e50b176d298cced2ec9cfd5bbe516332" category="list-text">IBACP (in-band Alternate Control Path) viene attivato automaticamente.</block>
+  <block id="e5db155980df3ce33a16c9ed4af83e4e" category="paragraph">IBACP non è supportato nelle configurazioni ha a percorso singolo o a percorso singolo.</block>
+  <block id="ba809f57bc3e36546d8a47b82a5d995c" category="paragraph"><block ref="ba809f57bc3e36546d8a47b82a5d995c" category="inline-link-rx"></block></block>
+  <block id="d37bef5353b917df46bc5ea30882b3a9" category="paragraph">È necessario aver soddisfatto i requisiti indicati in <block ref="45a94b67f53095b9a49e00311fb0216a" category="inline-xref-macro-rx"></block> e hanno installato gli shelf di dischi nel rack.</block>
+  <block id="59e65b256ff4505ae2cefd9f9a823d8b" category="paragraph">Si sta cablando una configurazione ha multipath, ha tri-path, multipath, ha single path o single path</block>
+  <block id="7e8bbc30dce4dc23bd053149c93370be" category="inline-link-macro">Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath</block>
+  <block id="909231a59b5cc48f6b48e61f36f7ab60" category="paragraph"><block ref="909231a59b5cc48f6b48e61f36f7ab60" category="inline-link-macro-rx"></block></block>
+  <block id="bc50a6f8ac8dfb2c580781d34e24ae74" category="paragraph">È possibile utilizzare i seguenti passaggi secondari per modificare gli ID degli shelf o per istruzioni più dettagliate, utilizzare <block ref="1bf0acf64e45d0c785cbad3f63f469c6" category="inline-link-macro-rx"></block>.</block>
+  <block id="c1c6bb3499071a6bae963462682776e0" category="paragraph">È possibile collegare le connessioni SAS (shelf-to-shelf e controller-to-stack) in base alle esigenze degli shelf di dischi aggiunti a caldo, in modo che possano essere collegate al sistema.</block>
+  <block id="0f3465a3f0de913b314ff9fa769f5b77" category="paragraph">Si sta cablando uno stack con connettività ha multipath, ha tri-path, multipath, ha single path o single path ai controller</block>
+  <block id="a9965269fc2882517b2f7404230818ad" category="list-text">Se si aggiungono a caldo uno o più shelf di dischi a una fine (il primo o l'ultimo shelf logico) di uno stack esistente, completare i passaggi secondari applicabili per la configurazione; in caso contrario, passare al punto successivo.</block>
+  <block id="ca067501330c228a786fd00d17229575" category="paragraph">Aggiunta a caldo di uno shelf di dischi alla fine di uno stack che dispone di connettività ha multipath, ha tri-path, multipath, ha quad-path o quad-path ai controller</block>
+  <block id="fa3d4e5360018aa45e5104272d43148c" category="paragraph">Lo stack deve soddisfare i requisiti indicati nella <block ref="d7ead9d51e0253f97f9c0ae83a2ee9eb" category="inline-xref-macro-rx"></block> sezione di questa procedura.</block>
+  <block id="5be896a9c15045aaa6d68be3afa13034" category="list-text">Al prompt DEL CARICATORE, accedere ai driver speciali appositamente progettati per la diagnostica per funzionare correttamente:<block ref="87ee09e2a5f76fd0b04e7f6e02d1e3ef" prefix=" " category="inline-code"></block></block>
+  <block id="2aaf80f49dd70b27832d7aa8d96090d0" category="list-text">Se nell'output del comando viene visualizzato &lt;lno-DARE&gt; o &lt;1Ono-DARE&gt;, il sistema non supporta NVE, passare a. <block ref="89ef15e2cd441b6b5852f79de56e5549" category="inline-xref-macro-rx"></block>.</block>
+  <block id="78fe270cb69c9ecda90d7e049a571c28" category="list-text">Se &lt;lno-DARE&gt; non viene visualizzato nell'output del comando e il sistema esegue ONTAP 9.6 o versione successiva, passare alla sezione successiva, <block ref="a913f4e8384864716d5146884ff27f0e" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d9b691280dde7c1805e39052719c9c29" category="list-text">Disattiva il giveback automatico dal controller integro:
+storage failover modify -node local -auto-giveback false`
+oppure<block ref="1d2c479b57949de891a15e148e1ebcf5" prefix=" " category="inline-code"></block></block>
+  <block id="ce62d26f194e7c2888ff8e53c7d011c5" category="paragraph">Una volta selezionate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi che hanno attivato Gestione chiavi integrata (OKM), crittografia storage NetApp (NSE) o crittografia volume NetApp (NVE) utilizzando le impostazioni acquisite all'inizio di questa procedura.</block>
+  <block id="a9b1f8d4946ebf3182e44c224cfa7997" category="doc">Spegnere il controller compromesso - FAS2800</block>
+  <block id="ba1ddb4c1d6bdc698ece9a974aae0713" category="paragraph">Spegnere o sostituire il controller compromesso.</block>
+  <block id="3ab3867dfd753c1ff0d27e903bff1cc4" category="doc">Sostituire il supporto di avvio - FAS2800</block>
+  <block id="1a829a672d8f4a1ab6936c766164f3fe" category="image-alt">Drw 2850 pcm Remove install IEOPS 694</block>
+  <block id="5d9c656065fa74e7cb14500497b33617" category="list-text">Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.</block>
+  <block id="206f40d3d3a553b715b00b4ada962595" category="image-alt">Drw 2850 coperchio aperto del modulo controller IEOPS 695</block>
+  <block id="ac250ab529052385767cc5abd9d02efe" category="paragraph">Pulsante di rilascio del coperchio del modulo controller</block>
+  <block id="02196554e362859bf13fdb8c354bd53c" category="paragraph">Individuare il supporto di avvio nel modulo controller, situato sotto la scheda mezzanine e seguire le istruzioni per sostituirlo.</block>
+  <block id="b269a4583845b75a99e2494b866181d5" category="inline-image-macro">larghezza=500</block>
+  <block id="ab18556462377223339c421c568ab231" category="paragraph"><block ref="ab18556462377223339c421c568ab231" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6b6e58fb741960f0300c7783438276a5" category="paragraph">Linguetta di blocco dei supporti di avvio</block>
+  <block id="fa8b2d8b91c1c89065d3652288dbddc1" category="list-text">Rimuovere la scheda mezzanine utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:</block>
+  <block id="c684d6ba7251084d87edf6423b1ebd24" category="list-text">Rimuovere il pannello della scheda mezzanine facendolo scorrere verso l'esterno dal modulo controller.</block>
+  <block id="d62aede9e33b9cbeca49d6fcc6de78c2" category="list-text">Allentare le viti a testa zigrinata sulla scheda mezzanino.</block>
+  <block id="db1a320c26dfcefe739a659ae4724890" category="admonition">È possibile allentare le viti a testa zigrinata con le dita o con un cacciavite. Se si utilizzano le dita, potrebbe essere necessario ruotare la batteria NV verso l'alto per un migliore acquisto con le dita sulla vite a testa zigrinata accanto ad essa.</block>
+  <block id="1a64138e0b66965c80b909462ba9543f" category="list-text">Sollevare la scheda mezzanine.</block>
+  <block id="60e9fb8867837c6cef006a1e1ea9fb0a" category="list-text">Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, ruotare il supporto di avvio verso l'alto, quindi estrarlo delicatamente dalla presa del supporto di avvio.</block>
+  <block id="716d7fa9776f190a42806b2c391aa047" category="list-text">Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+Controllare il supporto di avvio per assicurarsi che sia inserito correttamente e completamente nella presa e, se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.</block>
+  <block id="253b929f8465fe80f44b0c6026acc584" category="list-text">Premere il pulsante di blocco blu, ruotare il supporto di avvio completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il supporto di avvio in posizione.</block>
+  <block id="d29b17eb668c51029bfa0626ffe7500f" category="list-text">Reinstallare la scheda mezzanine:</block>
+  <block id="834f618686de8125c24ea965ba281757" category="list-text">Allineare lo zoccolo della scheda madre allo zoccolo della scheda mezzanine, quindi inserire delicatamente la scheda nello zoccolo.</block>
+  <block id="361016e8b59dfa6e2e2f28d3e38835e1" category="list-text">Serrare le tre viti a testa zigrinata sulla scheda mezzanino.</block>
+  <block id="31276a19caaffd6d8a485978edefcae8" category="list-text">Reinstallare il pannello del mezzanino.</block>
+  <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">Reinstallare il coperchio del modulo controller e bloccarlo in posizione.</block>
+  <block id="1aecc8a01c9fc90b26bed0f39865bc18" category="paragraph">Installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando un'unità flash USB con l'immagine installata. Durante questa procedura, è necessario ripristinare il file system var.</block>
+  <block id="4c10168d5e2592171ac54097149079b0" category="list-text">È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con almeno 4 GB di capacità.</block>
+  <block id="2d62115b923af681ab92f0d122a64860" category="list-text">È necessario disporre di una connessione di rete.</block>
+  <block id="f1d3e9055855dc043c18702a6852bc69" category="list-text">Scaricare la versione dell'immagine appropriata di ONTAP sull'unità flash USB formattata:</block>
+  <block id="95601ad37ef55b6b9cad60bc467a3328" category="inline-link">Come determinare se la versione di ONTAP in esecuzione supporta la crittografia dei volumi NetApp (NVE)</block>
+  <block id="df64ce1e5d600ef517b23604e94d93bd" category="list-text">Utilizzare<block ref="eeb276fd288c995d07ccaa70ededcc33" category="inline-link-rx"></block> per determinare se la crittografia del volume è attualmente supportata.</block>
+  <block id="c5dfa5f01cf1c0d03284861e71d31370" category="list-text">Se NVE è supportato sul cluster, scaricare l'immagine con crittografia volume NetApp.</block>
+  <block id="a3dc3f912569e20eb3139702fd4a6206" category="inline-link">Quale immagine ONTAP è necessario scaricare? Con o senza crittografia del volume?</block>
+  <block id="1532b93706d24d095538566641303954" category="list-text">Se NVE non è supportato sul cluster, scaricare l'immagine senza crittografia volume NetApp.
+Vedere<block ref="087e4d006962c8ba6c4d8fdb71ff8e38" category="inline-link-rx"></block> per ulteriori dettagli.</block>
+  <block id="b455521e9b63749ce3c5c792316849ca" category="list-text">Decomprimere l'immagine scaricata.</block>
+  <block id="0f844d6324319ebe9b4aabd24f1b88dd" category="list-text">Installare il modulo controller:</block>
+  <block id="6bfde1459ef866428e3532004887b3b8" category="list-text">Ricable del modulo controller.</block>
+  <block id="aa22e2fb20ea26cf3d0b89dfcd65a440" category="doc">Panoramica della sostituzione dello chassis - FAS2800</block>
+  <block id="2655035d8bc59ea5bd6dd9f09d821e65" category="doc">Sostituire una scheda mezzanine - FAS2800</block>
+  <block id="db5c04ca6cb958f296ff071cf8420f54" category="paragraph">Sostituire la scheda mezzanine scollegando i cavi e i moduli SFP e QSFP dalla scheda, sostituire la scheda mezzanine guasta, quindi riposizionarla.</block>
+  <block id="783de30113379b15fc6135387f11b7e6" category="video-title">Animazione - sostituire la scheda mezzanino</block>
+  <block id="a0ff1a6d16d908c33e10409aed0ac623" category="paragraph">Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.</block>
+  <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">Fase 3: Sostituire la scheda mezzanine</block>
+  <block id="6918dd1d1ecfa7a18a047a925c4f30ee" category="paragraph">Sostituire la scheda mezzanine.</block>
+  <block id="808ce573561d6717a3c0cc395df3a504" category="image-alt">Drw 2850 sostituire HIC IEOPS 700</block>
+  <block id="b98f82c68dbd20395815986320582ec2" category="paragraph">Pannello di montaggio</block>
+  <block id="83b54898f0ac014b1e217ee413643205" category="paragraph">Scheda mezzanine PCIe</block>
+  <block id="64016c063cf6b470fdcccc5a97f852b1" category="list-text">Allentare le viti a testa zigrinata sulla scheda mezzanine e sollevare la scheda mezzanine.</block>
+  <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">Allineare lo zoccolo della spina della scheda mezzanine sostitutiva con lo zoccolo della scheda madre, quindi inserire delicatamente la scheda nello zoccolo.</block>
+  <block id="f2972968e044e6666c42c0182107b4f6" category="paragraph">Reinstallare il modulo controller.</block>
+  <block id="f36f34bd21dc87823e156cd47c7d7440" category="list-text">Capovolgere il modulo controller e allineare l'estremità con l'apertura dello chassis.</block>
+  <block id="3ab31ac30e2ad91e2f7e6a9ecd045f6e" category="list-text">Spingere delicatamente il modulo controller a metà nel sistema.allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il modulo controller a metà nel sistema.</block>
+  <block id="d32890221c5529cefc96a956073d9844" category="list-text">Ripristinare il giveback automatico utilizzando<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="e2306cfc3634594ca9e5483d541a9eb2" category="doc">Ripristino completo del sistema - FAS2800</block>
+  <block id="954e375575b9fbd9370aa08dd503d453" category="paragraph">Ripristinare il funzionamento completo del sistema ripristinando le configurazioni crittografia dello storage NetApp o crittografia del volume (se necessario), installando le licenze per il controller sostitutivo e restituendo il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="ff3a1a304de699b15bd2a5a39798c5a8" category="section-title">Fase 2: Ripristino delle funzionalità di storage e crittografia dei volumi</block>
+  <block id="332c846459ecae57b885b30c41482384" category="section-title">Fase 3: Verificare i file LIF e registrare il numero di serie</block>
+  <block id="458c640b6a96cac4ef20be523ebb7f89" category="doc">Sostituire la batteria NVMEM - FAS2800</block>
+  <block id="26e700524d9a1c0b6c28c8ad2d207679" category="section-title">Fase 2: Rimuovere e aprire il modulo controller</block>
+  <block id="2a0805526339647b20ef0fc7df37dd6f" category="paragraph">Rimuovere e aprire il modulo controller.</block>
+  <block id="9ae3f8b33ac65ec233f1c5afa0e5b31c" category="paragraph">Rimuovere la batteria NVMEM guasta dal sistema e sostituirla con una nuova.</block>
+  <block id="6858cb3dca131d0d76332f3bd5160ce7" category="video-title">Animazione - sostituire la batteria NV</block>
+  <block id="cf7e5cd262adf1cc20a08505755f07a3" category="image-alt">Drw 2850 sostituire Nvbattery IEOPS 715</block>
+  <block id="168d99dab7a9fe08ab26290312dd16e7" category="paragraph">Linguetta di rilascio della batteria</block>
+  <block id="33d1a8451c69f74459695562e91ceef8" category="paragraph">Connettore di alimentazione della batteria</block>
+  <block id="c0c80117cce7bb03ee803f73b530673c" category="list-text">Rimuovere la batteria guasta dal modulo controller:</block>
+  <block id="5dde822876459fe513ddd782ee62b081" category="list-text">Premere il pulsante blu sul lato del modulo controller.</block>
+  <block id="cfbaff2fca685ca6d49a66c7783234eb" category="list-text">Far scorrere la batteria verso l'alto fino a liberare le staffe di supporto, quindi estrarre la batteria dal modulo controller.</block>
+  <block id="ffdab672b5303a82bceb504a929ac040" category="list-text">Scollegare la batteria dal modulo controller</block>
+  <block id="3236ef72d450eec8cfc673cc7faea15d" category="list-text">Rimuovere la batteria sostitutiva dalla confezione.
+Installare la batteria sostitutiva:</block>
+  <block id="702681b0ddd2d2e77a632f93dea9da08" category="list-text">Ricollegare la spina della batteria alla presa del modulo controller.</block>
+  <block id="1c7abce2557996fd20076d25e06502f1" category="paragraph">Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.</block>
+  <block id="d6974842c352301a8a23606fd8d04519" category="list-text">Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.</block>
+  <block id="2b4753778df73e034bbfe714d2d4741f" category="list-text">Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.</block>
+  <block id="98589dc004f09ae0dad7e1b6f02b49cc" category="list-text">Riavviare il modulo controller.</block>
+  <block id="77eded9438a3613ba447a2592768431f" category="section-title">Fase 5: Ripristino del giveback automatico e del supporto automatico</block>
+  <block id="c7e6662de773deb97f21acca554ecb2a" category="paragraph">Ripristina giveback automatico e AutoSupport se sono stati disattivati.</block>
+  <block id="e8ee04904c783a5522b8e5d05e929ec0" category="doc">Video - FAS2800</block>
+  <block id="89ec55d6caf5c08b62f951c13868846e" category="video-title">Animazione - istruzioni di installazione e configurazione di FAS2800</block>
+  <block id="b1431e23e98302fc2fdbdf8a76f33d8d" category="doc">Sostituire l'hardware del modulo controller - FAS2800</block>
+  <block id="d27d70d1f85fe30f676b7d8f18fbcc20" category="paragraph">Sostituire l'hardware del modulo controller guasto rimuovendo il controller guasto, spostando i componenti FRU nel modulo controller sostitutivo, installando il modulo controller sostitutivo nello chassis e avviando il modulo controller sostitutivo.</block>
+  <block id="1c196a814e5043cb74dc86df6c03ff47" category="paragraph">Rimuovere il modulo controller guasto dal telaio.</block>
+  <block id="27d23c72f7120f51677aa7a5c4e3c7fb" category="list-text">Se i moduli SFP sono stati lasciati nel sistema dopo aver rimosso i cavi, spostarli nel modulo controller sostitutivo.</block>
+  <block id="1702b5ed07427fec23228fc597ce204d" category="paragraph">Rimuovere la batteria NVMEM dal modulo controller guasto e installarla nel modulo controller sostitutivo.</block>
+  <block id="f0c32c78b60207518b286f8da455dc65" category="admonition">Non collegare la batteria NVMEM fino a quando non viene richiesto.</block>
+  <block id="26a1f7d3ba4c51ef22c4cfdbdfda1d8c" category="paragraph">Pulsante di rilascio della batteria NVMEM</block>
+  <block id="68bb8073b782fccb191b6577e7b6daed" category="paragraph">Spina della batteria NVMEM</block>
+  <block id="d18072dacf447878404b5ad0bae39da2" category="list-text">Rimuovere la batteria dal modulo controller:</block>
+  <block id="8583fb4771a40b0c84c5bda299897d93" category="list-text">Scollegare la spina della batteria premendo il fermaglio posto sulla parte anteriore della spina della batteria per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.</block>
+  <block id="2549b95d18de43d1c8602f07ed634585" category="list-text">Spostare la batteria nel modulo controller sostitutivo e installarlo:</block>
+  <block id="350a3cd01c92197375fa1dd80773199d" category="admonition">Non collegare ancora la batteria.  La si collega una volta spostati i componenti restanti nel modulo controller sostitutivo.</block>
+  <block id="ba9da6f2122b24c495dd034a4a5ec818" category="section-title">Fase 3: Rimuovere la scheda mezzanine</block>
+  <block id="853a9f16e976ca6346fa38e81f8476a8" category="paragraph">Rimuovere il pannello mezzanino e la scheda mezzanine PCIe dal modulo controller compromesso.</block>
+  <block id="539df95ed4f8e5993f75e19be1a36f64" category="list-text">Rimuovere il pannello della scheda mezzanine facendolo scorrere verso l'esterno dal modulo controller.</block>
+  <block id="7bb524aff91b85838c807523fc1e4828" category="admonition">È possibile allentare le viti a testa zigrinata con le dita o con un cacciavite.</block>
+  <block id="099cf7f6040f65b3c9d7fb3f7393d4c3" category="list-text">Sollevare la scheda mezzanine e metterla da parte su una superficie antistatica.</block>
+  <block id="3356d87e196ed94acd2635f8d405e53f" category="paragraph">Rimuovere il supporto di avvio dal modulo controller guasto e installarlo nel modulo controller sostitutivo.</block>
+  <block id="fed0c92cdbae5ea9c1adbf11ed80e55a" category="list-text">Dopo aver rimosso la scheda mezzanine, individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:</block>
+  <block id="45602b20a419ba91959f6389b3e025a3" category="image-alt">Drw 2850 sostituisce il supporto di boot IEOPS 696</block>
+  <block id="a9ddd021b293dcac2e98382851f85f92" category="paragraph">Pulsante di rilascio del supporto di avvio</block>
+  <block id="f77adf36adb0721ff6a3bdb4c40ae967" category="list-text">Rimuovere il supporto di avvio:</block>
+  <block id="7716b5b822ee00aa2c3fbd58b6ff2117" category="list-text">Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento.</block>
+  <block id="fb6ae5bf6634b7a6d673563f05601387" category="list-text">Ruotare il supporto di avvio verso l'alto, quindi estrarlo delicatamente dalla presa per supporti di avvio.</block>
+  <block id="d0bb83c57c80aa63779da3b7ad8fe497" category="list-text">Installare il supporto di avvio sul modulo controller sostitutivo:</block>
+  <block id="918c073c7d2d0879662be83044a3838c" category="list-text">Premere il pulsante blu di blocco sull'alloggiamento del supporto di avvio, ruotare il supporto di avvio completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il supporto di avvio in posizione.</block>
+  <block id="e22316649109edfe291449028ee7da74" category="section-title">Fase 5: Installare la scheda mezzanine nel controller sostitutivo</block>
+  <block id="a00bf690f9db0be90ea5ab9cde9db677" category="paragraph">Installare la scheda mezzanine nel modulo controller sostitutivo.</block>
+  <block id="507e7243ab4a1d0bdbfa4edd5c9733d3" category="list-text">Allineare la scheda mezzanine allo zoccolo della scheda madre.</block>
+  <block id="fc7fc35188ad3f7c32f3328839f4dff2" category="list-text">Spingere delicatamente la scheda verso il basso per inserire la scheda nello zoccolo.</block>
+  <block id="803bc905348545eacfc8739f67ee6fc2" category="list-text">Reinstallare il pannello della scheda mezzanine.</block>
+  <block id="ec782fd2b49f0e4d6edd263c0d30d7f7" category="paragraph">Rimuovere i DIMM dal modulo controller guasto e installarli nel modulo controller sostitutivo.</block>
+  <block id="64b66263e264f63be40a6135bb7e5f04" category="image-alt">Drw 2850 sostituisce i dimm IEOPS 699</block>
+  <block id="2a7c25f4f62d559672aaa2da18086b65" category="paragraph">Fermi di blocco del DIMM</block>
+  <block id="97d11e594531d9157ff1f8acb63fd22c" category="list-text">Individuare i DIMM sul modulo controller</block>
+  <block id="dab2480c00fbe3b34d9af825595e97ae" category="admonition">Prendere nota della posizione del DIMM nei socket in modo da poter inserire il DIMM nella stessa posizione del modulo controller sostitutivo e con l'orientamento corretto.</block>
+  <block id="c9e2d45ba9969e527f9d0fa047c621bd" category="list-text">Rimuovere i DIMM dal modulo controller guasto:</block>
+  <block id="870ee50e7b3cc6d93b98e9ec6a8ab100" category="list-text">Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM.</block>
+  <block id="dc1bab551db9ce9e5c5fe8cabfa84a76" category="paragraph">Il DIMM ruota leggermente verso l'alto.</block>
+  <block id="685636dc5350b778abfb785eaf60ca39" category="list-text">Ruotare il modulo DIMM fino in fondo, quindi estrarlo dallo zoccolo.</block>
+  <block id="81a434fab7192536678c765fcb18c594" category="list-text">Verificare che la batteria NVMEM non sia collegata al modulo controller sostitutivo.</block>
+  <block id="f70897638195a2f326f7183edf6a3cf8" category="list-text">Installare i DIMM nel controller sostitutivo nello stesso punto in cui si trovavano nel controller compromesso:</block>
+  <block id="3ef62fc6a162d755622021a1d6a1ed56" category="list-text">Ripetere questa procedura per l'altro DIMM.</block>
+  <block id="873b72e260492016e7a701ecefab8d34" category="section-title">Fase 7: Spostare un modulo di caching</block>
+  <block id="2123f32d0c6f36af91430296709196a1" category="paragraph">Rimuovere il modulo di caching dal modulo controller compromesso, installarlo nel modulo controller sostitutivo.</block>
+  <block id="60f4158622c1b93ba749ee47777762b7" category="image-alt">Drw 2850 sostituisce il modulo di caching IEOPS 697</block>
+  <block id="bdf54b9db8bfe07cda14f003e5b4afea" category="paragraph">Pulsante di blocco del modulo di caching</block>
+  <block id="d6be971cb9546606b4106e2ce6594564" category="list-text">Individuare il modulo di caching vicino alla parte posteriore del modulo controller e rimuoverlo:</block>
+  <block id="86afc3ba2df9db0892f3d7b13977fdb3" category="list-text">Premere il pulsante blu di blocco e ruotare il modulo di caching verso l'alto.</block>
+  <block id="5933b9f61a8881951d2ee1bf05dd260a" category="list-text">Installare il modulo di caching nel modulo controller sostitutivo:</block>
+  <block id="2688650848e4f3835aba141aab8abd77" category="list-text">Premere il pulsante blu di blocco, ruotare il modulo di caching completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il modulo di caching in posizione.</block>
+  <block id="11eeb319e60e9bfcf687bb45298baa8c" category="list-text">Collegare la batteria NVMEM.</block>
+  <block id="52171524851f62cb3baf11036da62cb6" category="paragraph">Assicurarsi che la spina sia bloccata nella presa di alimentazione della batteria sulla scheda madre.</block>
+  <block id="d3c9127aa6a1eedcb9187315657c4cbf" category="admonition">Se il collegamento della batteria risulta difficoltoso, rimuovere la batteria dal modulo controller, collegarlo, quindi reinstallare la batteria nel modulo controller.</block>
+  <block id="86976c899464bf7c145a1a100eb56931" category="section-title">Fase 8: Installare la batteria NV</block>
+  <block id="0aa269b91aaa67ad4a33798a5addcade" category="paragraph">Installare la batteria NV nel modulo controller sostitutivo.</block>
+  <block id="e2a7c878d6256dd0131d41af9940ac59" category="section-title">Fase 9: Installare il controller</block>
+  <block id="8265ef3502f8ac77f57d832ac049580a" category="paragraph">Installare il modulo controller sostitutivo nello chassis del sistema e avviare il ONTAP.</block>
+  <block id="cbde4763aa08c054c18d5c779d9c5b23" category="list-text">Ruotare il modulo controller.</block>
+  <block id="2242e742287f23709fa714deab7eb578" category="admonition">Cercare un messaggio nella console di aggiornamento automatico del firmware. Se viene visualizzato il messaggio di aggiornamento, non premere<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block> interrompere il processo di avvio fino a quando non viene visualizzato un messaggio che conferma il completamento dell'aggiornamento. Se l'aggiornamento del firmware viene interrotto, il processo di avvio viene chiuso al prompt DEL CARICATORE. È necessario eseguire<block ref="af718f67c26a0f44692db1ab31eb6a36" prefix=" " category="inline-code"></block> e quindi immettere<block ref="1442f7a5af9f43702c90a69a8357a46d" prefix=" " category="inline-code"></block> per riavviare il sistema.</block>
+  <block id="5dc33b8c32ff69779a908c84d65a7b21" category="list-text">Viene visualizzato un messaggio di avviso che indica una mancata corrispondenza dell'ID di sistema e chiede di ignorare l'ID di sistema. Rispondere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> a questo prompt.</block>
+  <block id="7ac264b7d08fb9d1106ac983e7478d8a" category="list-text">Un avviso che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo. Rispondere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> a questo prompt.</block>
+  <block id="75127c072b8dbfcfddece3f2cfd7f451" category="doc">Ripristinare e verificare la configurazione - FAS2800</block>
+  <block id="e6c254ab2bdf1b6e7e1ef07d143a13af" category="paragraph">Verificare lo stato ha del telaio che attiva il sistema e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="9596a3101174a610f7547f1a64ef5318" category="list-text">Impostare lo stato ha per lo chassis in base alla configurazione esistente del sistema:<block ref="8c04088c57a1d68914caed5df5031ed1" prefix=" " category="inline-code"></block></block>
+  <block id="fc7de36232e6d564fdd8b86d9b96e5c3" category="list-text">Uscire dalla modalità di manutenzione:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block>.    Viene visualizzato il prompt DEL CARICATORE.</block>
+  <block id="05feda261599a7466b383d9e10f43f27" category="list-text">Avviare i moduli controller.</block>
+  <block id="eba8408f37a356fdabfeb21f5ae29286" category="doc">Sostituire il modulo di caching - FAS2800</block>
+  <block id="dec0306e681fc720cf31bc4851ebcee4" category="inline-link">Guida di riferimento per l'amministrazione del sistema ONTAP 9</block>
+  <block id="b95a2b769ddc69403557ab79e1942007" category="paragraph"><block ref="b95a2b769ddc69403557ab79e1942007" category="inline-link-rx"></block></block>
+  <block id="a9c8e259606b559907dfb2f00a204be4" category="paragraph">Individuare il modulo di caching all'interno del controller, rimuovere il modulo di caching guasto e sostituirlo.</block>
+  <block id="ee92b073f59fe189ba6ba0d749a2475e" category="video-title">Animazione - sostituire il modulo di caching</block>
+  <block id="310b3fddb492900dc2073bfed3ad2e76" category="list-text">Individuare il modulo di caching guasto vicino alla parte posteriore del modulo controller e rimuoverlo.</block>
+  <block id="7c54a0f1ea1ead89a0c9b6aeef198946" category="list-text">Premere il pulsante blu di rilascio e ruotare il modulo di caching verso l'alto.</block>
+  <block id="1861e494e4e49e7521421f1074d1c277" category="paragraph">Pulsante di rilascio del modulo di caching</block>
+  <block id="8154cefebd8252a7cccd4805ef747b70" category="list-text">Allineare i bordi del modulo di caching sostitutivo con lo zoccolo nell'alloggiamento, quindi spingerlo delicatamente nello zoccolo.</block>
+  <block id="51561c50b0a48bfa0a140f7c1afdb558" category="paragraph">Reinstallare il modulo controller nel telaio.</block>
+  <block id="c5f938bfc527c4bc823a887db137e442" category="list-text">Spingere delicatamente il modulo controller a metà nel sistema.</block>
+  <block id="ee92a9f0097994689e1bda7bed36ad5d" category="paragraph">Il controller inizia ad avviarsi non appena viene inserito completamente nello chassis.</block>
+  <block id="7712b02131dda6b0cd207e6b834af33f" category="section-title">Fase 5: Ripristinare il giveback automatico e AutoSupport</block>
+  <block id="58a4b1c93d94014eec48898453bccf6b" category="list-text">Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
+  <block id="f13ddfa8c0e2762d2f399acfc6f0806b" category="summary">La sostituzione di un alimentatore comporta lo spegnimento, lo scollegamento e la rimozione dell'alimentatore non alimentato e l'installazione, il collegamento e l'accensione dell'alimentatore sostitutivo.</block>
+  <block id="de1b8802ef132a49eb27c58d444b128f" category="doc">Sostituire un alimentatore - FAS2800</block>
+  <block id="9b0f331e43ad447dbbb78d71a44b1734" category="video-title">Animazione - sostituire l'alimentatore</block>
+  <block id="ad74e1b8d39de33b6e8b9df71820c85f" category="image-alt">Drw 2850 sostituire PSU IEOPS 702</block>
+  <block id="4f57674d148f7c749c1795267b17a2b1" category="doc">Riscrivere il sistema e riassegnare i dischi - FAS2800</block>
+  <block id="2675f497966bc5cad0cdd88dbe6eab31" category="list-text">Attendere il<block ref="f1cce1d6823a5337ea1ed313f3bc1d65" prefix=" " category="inline-code"></block> comando da completare prima di emettere il giveback.</block>
+  <block id="578b3122a990bee5553a818b631268ef" category="admonition">Se il giveback viene veto, risolvere il problema del veto. Se il veto non è critico da risolvere, è possibile ignorare il veto.</block>
+  <block id="cf71e2640e92b433c3b638e9e94411a3" category="doc">Restituire il componente guasto a NetApp - FAS2800</block>
+  <block id="d3b5d00b3ac932c953d2ab9864fd8409" category="doc">Sostituire la batteria dell'orologio in tempo reale - FAS2800</block>
+  <block id="103256b354864966fcc74d6466bc1cc4" category="paragraph">Sostituire la batteria RTC individuandola all'interno del controller e seguire la sequenza specifica di passaggi.</block>
+  <block id="51f7be1d2b3585b769547e04e7036ed9" category="image-alt">Drw 2850 sostituire la batteria rtc IEOPS 701</block>
+  <block id="9f463a2feadd622498da11734b7d3548" category="paragraph">Reinstallare il modulo controller e avviarlo al prompt DEL CARICATORE.</block>
+  <block id="8133c5bbfd79c61b3d28f53fd52d6b77" category="section-title">Fase 5: Impostare la data e l'ora dopo la sostituzione della batteria RTC</block>
+  <block id="c9f8b929f9ab0b6a880c4fbdb297685c" category="doc">Ripristinare OKM, NSE e NVE secondo necessità - FAS2800</block>
+  <block id="e8b941fcc944e0bbefda4636b0900a37" category="list-text"><block ref="e8b941fcc944e0bbefda4636b0900a37" category="inline-link-macro-rx"></block></block>
+  <block id="531b14cc35d21cdbdd3198396f0be9e2" category="list-text"><block ref="531b14cc35d21cdbdd3198396f0be9e2" category="inline-link-macro-rx"></block></block>
+  <block id="64bd602d0544a5fe1fc2a2419daab9cb" category="list-text"><block ref="64bd602d0544a5fe1fc2a2419daab9cb" category="inline-link-macro-rx"></block></block>
+  <block id="57d485c98e6887d6e9203bac1d90bb5b" category="summary">Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto allo chassis sostitutivo, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con lo chassis sostitutivo dello stesso modello dello chassis guasto.</block>
+  <block id="4366f74c4f2ef88a08284a5d59c6119c" category="doc">Spostare e sostituire l'hardware - FAS2800</block>
+  <block id="7c5cfb9ddad014365f0de74ba951ffc3" category="paragraph">Lo spostamento di un alimentatore durante la sostituzione di uno chassis comporta lo spegnimento, lo scollegamento e la rimozione dell'alimentatore dallo chassis difettoso e l'installazione e il collegamento dello stesso sullo chassis sostitutivo.</block>
+  <block id="075968c9cfe201324f67c6dd57423623" category="paragraph">Rimuovere il modulo controller o i moduli dal telaio guasto.</block>
+  <block id="ecd88b88f167b4220060f55cd515a5d0" category="list-text">Ripetere questa procedura per il secondo modulo controller nello chassis.</block>
+  <block id="ff6be4cd8fc3c7dd2668ce38b9f0c0d6" category="section-title">Fase 3: Spostare le unità nello chassis sostitutivo</block>
+  <block id="cb222b0662bfcc0873a126c023d18639" category="paragraph">Spostare le unità da ciascuna apertura dell'alloggiamento del disco nello chassis non utilizzato allo stesso alloggiamento dello chassis sostitutivo.</block>
+  <block id="122d24dfbf9f05e990c3628541000cab" category="list-text">Premere il pulsante di rilascio sul lato opposto dei LED.</block>
+  <block id="781e632f918c0d9c096496d8f4cea093" category="list-text">Allineare l'unità dallo chassis compromesso con la stessa apertura dello chassis sostitutivo.</block>
+  <block id="666dbbf9aa205d3a1a84cd2586d5321d" category="paragraph">La maniglia della camma si innesta e inizia a ruotare in posizione chiusa.</block>
+  <block id="e20b40789c08ab02225f933f48bd8f73" category="list-text">Spingere con decisione l'unità fino in fondo nel telaio, quindi bloccare la maniglia della camma spingendola contro il supporto dell'unità.</block>
+  <block id="10ed17eeda7cfb1251b50b19d4e83cd2" category="paragraph">Rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema e installarlo nel rack dell'apparecchiatura o nell'armadietto del sistema.</block>
+  <block id="d9b58093a09ff3f9f4ee47e855e10b09" category="paragraph">Installare il modulo controller e gli altri componenti nel telaio sostitutivo, avviarlo in modalità manutenzione.</block>
+  <block id="a1b1abf2b9f93afc61b501cc65856321" category="list-text">Ripetere i passi precedenti per il secondo controller nello chassis sostitutivo.</block>
+  <block id="fb7c806d17ac05daec934e824397154e" category="list-text">Ripetere i passi precedenti per il secondo modulo controller nel telaio sostitutivo.</block>
+  <block id="939dd100817795c3c406debd7b6667d8" category="doc">Panoramica della sostituzione del modulo controller - FAS2800</block>
+  <block id="b7b41b094d20b126c69180a1751fc468" category="doc">Controllare le chiavi di crittografia integrate - FAS2800</block>
+  <block id="8e605f57d62f3d1be204e98b9b4935f7" category="doc">Sostituire l'unità SSD o HDD - FAS2800</block>
+  <block id="9e88aae04cfd42bd2e0b9f18c79e6b08" category="doc">Panoramica sulla sostituzione dei supporti di avvio - FAS2800</block>
+  <block id="cffd34bd4c8c92699b3202d7f451d2ae" category="doc">Ripristinare e verificare la configurazione di sistema - FAS2800</block>
+  <block id="5a78b16de65a946feda8c56392de99d0" category="paragraph">Dopo aver sostituito l'hardware e avviato il controller sostitutivo, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="3fc70ee0f25a2808ad9e1ace34edd095" category="list-text">Se lo stato del sistema visualizzato per il controller non corrisponde alla configurazione del sistema, impostare lo stato ha per il modulo controller sostitutivo:<block ref="83ac5421ebdbb8b86762e96ecda44c4a" prefix=" " category="inline-code"></block></block>
+  <block id="0da3888f81e8e56d2de2a92a42b512a3" category="doc">Avviare l'immagine di ripristino - FAS2800</block>
+  <block id="c5ad83e174ba7727e76fc50c8366e589" category="list-text">Ripristinare il file system var:</block>
+  <block id="e51ecd8f185715278ef737fd290e62f5" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di ripristinare la copia di configurazione.</block>
+  <block id="17fb1354460acbac7ab4abe6c27a24a2" category="list-text">Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito <block ref="4b98be10d46a75a522880bc01a177aa5" category="inline-xref-macro-rx"></block></block>
+  <block id="1a037944aedbce3040a5314200246858" category="list-text">Al prompt del cluster, controllare le interfacce logiche con<block ref="55cf88a325a6e0574aef732566cc984c" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">Se le interfacce sono elencate come "false", ripristinarle alla porta home utilizzando<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">Se non si utilizza la crittografia dello storage, ripristinare il giveback automatico e AutoSupport:</block>
+  <block id="fde9b148f6eb9655d65658597326b4ee" category="doc">Fasi dettagliate - FAS2800</block>
+  <block id="c507fc907e52c0d3d2a5b32d101a1559" category="paragraph">Per installare il sistema FAS2800, è necessario creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
+  <block id="82374f90663d7205d26c38028c93cb8d" category="inline-link">Note di rilascio per la versione di ONTAP 9 in uso</block>
+  <block id="4afcf4b1bce6c3df1cc1e778d2d69e65" category="paragraph">È necessario disporre dell'accesso a<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. È possibile anche avere accesso a<block ref="eaa168831c6fecf820d5605f3f5de542" category="inline-link-rx"></block> Per ulteriori informazioni su questo sistema, consultare la versione di ONTAP in uso.</block>
+  <block id="94f11775f11fcb36a20933d06500449a" category="list-text">Registrare il sistema tramite <block ref="1cbd3811871137aa1e003e1ccae3894e" category="inline-link-rx"></block></block>
+  <block id="4aed417c4620186c402fe3b82713076b" category="list-text">Scaricare e installare<block ref="56697f7f340a212f549439c89b0cabd2" category="inline-link-rx"></block> sul computer portatile.</block>
+  <block id="202c6b9676e6e0879f99a323aacdd76b" category="paragraph">La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> individuare il cavo e identificarne l'utilizzo.</block>
+  <block id="21d9a13ac1bf780b5a88db05a215c05d" category="paragraph">10 GbE, cavo SFP28 (in base all'ordine)</block>
+  <block id="68ddfa29cb0d12a802225c5426557710" category="paragraph">X6566B-05-R6, .5,</block>
+  <block id="4d60abe9b21979209fc33ec224620c9f" category="paragraph">X6566B-2-R6, 2 m</block>
+  <block id="38ee836908ff6e63d2fe51cba40af515" category="paragraph">Ethernet da 25 GB, SFP28</block>
+  <block id="9e4563e9b028264514409ab230a5da42" category="paragraph">X66240A-05, 0,5 m.</block>
+  <block id="0aeb49c9fa6e4bb6f0e2ba133818122d" category="paragraph">X66240-2, 2 m</block>
+  <block id="f6f5073d92449b0a0e2bd3034fc1ecea" category="paragraph">X66240A-5, 5 m.</block>
+  <block id="dea505bfaa4f0d732b7c8f5f9938f6be" category="image-alt">Cavo oie 25GB Ethernet SFP28 IEOPS 1069</block>
+  <block id="cd438f3250a6932c30ca2344ae39b00e" category="paragraph">Fibre Channel da 32 GB,
+SFP+ (destinazione/iniziatore)</block>
+  <block id="2c4afc06b1fdae4cd99b305968ffe5d2" category="paragraph">X66250-2, 2 m</block>
+  <block id="4f4ed96765dcb8c23de6679e6a7ca755" category="paragraph">X66250-5, 5 m.</block>
+  <block id="cfdd6b2015d7d026f3cd6c1eb78a3ee1" category="paragraph">X66250-15, 15 m.</block>
+  <block id="f740a217496c1f42a51b7a745f62930e" category="paragraph">Rete FC</block>
+  <block id="6e421f2c1b8bf174d208a91d7f5dc0ae" category="paragraph">X6561-R6</block>
+  <block id="9f1d44b1644f80b8412d9dd6de6d8982" category="paragraph">X6562-R6</block>
+  <block id="a49ba2f6b0c90ba38b8dcd0a94db081d" category="paragraph">X66030A, 0,5 m</block>
+  <block id="d3b3da5c1301d8d6a324ad66c58950cb" category="paragraph">X66031A, 1 m.</block>
+  <block id="d5e936a50b968238745495b8619c3de2" category="paragraph">X66032A, 2 m</block>
+  <block id="7176bca53e61f926de4367eb107ce7c8" category="paragraph">Cavo console USB-C.</block>
+  <block id="34dc50315428bf6e6940b722c6a21ee9" category="paragraph">Cavo FC opzionale</block>
+  <block id="01b24af9f8a6b3efddd64ee9ab57a42e" category="paragraph">Cavo di rete FC aggiuntivo</block>
+  <block id="3f23ceafafc807d2b7578916c6816fcb" category="inline-link">Configurare il cluster con l'interfaccia utente di ONTAP</block>
+  <block id="a41ad0c41b61aa6e16a86ba5e2432d9f" category="list-text">Scaricare e completare le schede di lavoro disponibili in <block ref="a7d19322be231451e03428c8b87e512f" category="inline-link-rx"></block>.</block>
+  <block id="3157ab12e29c7ae731c3bbc36443b23f" category="image-alt">Avvertenza peso oie fas2800 IEOPS 1070</block>
+  <block id="bb4787913f600ff690f937a7622bfef5" category="paragraph">Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.</block>
+  <block id="9646d1820777de5269873d2317186ecb" category="paragraph">Switch di rete di gestione</block>
+  <block id="e80abcbf02cd3bed5561a16253c1dea0" category="paragraph">Switch di rete host</block>
+  <block id="3b9d43c8f889d04a7e7e50ecc887f626" category="paragraph">Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster senza switch a due nodi.</block>
+  <block id="724b63ff77d309630df65f6af09956a2" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.</block>
+  <block id="b81e7d6a7be0cc8238b538c4b907282a" category="paragraph">È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch.</block>
+  <block id="43f3f164715da7f3368f26b28f4ef36f" category="video-title">Animazione - cablaggio di un cluster senza switch a due nodi</block>
+  <block id="00cdc1c050c54120647c95f8ac43e946" category="list-text">Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:</block>
+  <block id="64d64c32d62f821e30eb2ef5d4583099" category="paragraph">*Cavi di interconnessione cluster*</block>
+  <block id="0d31c2b61f0790381bf124be78a40d97" category="image-alt">Drw 2800 tnsc - cablaggio cluster IEOPS 892</block>
+  <block id="329a1da79dbbba5ea7dea23acd21eb44" category="paragraph">*Cavi RJ45*</block>
+  <block id="71148769b55621d50b01310cdb17af44" category="image-alt">Connessione di gestione drw 2800 IEOPS 1077</block>
+  <block id="69dc61becc19938a9333356069afeddb" category="list-text">Collegare le porte della scheda mezzanine alla rete host.</block>
+  <block id="a773f522f61f6a463095f90a0f74a848" category="image-alt">Cablaggio di rete drw 2800 IEOPS 894</block>
+  <block id="1d249cc4581bfebd1ac174f1d758e2de" category="list-text">Se si dispone di una rete dati Ethernet a 4 porte, collegare le porte e1a tramite e1d alla rete dati Ethernet.</block>
+  <block id="1cc0b86b94e25e4841fd242fdbd850e8" category="list-text">4 porte, Ethernet 10 GB, SFP28</block>
+  <block id="213b283921a16f109ab5a42efd1afde7" category="list-text">4 PORTE, 10GBASE-T, RJ45</block>
+  <block id="245589e179b64a47376b04123778941c" category="list-text">Se si dispone di una rete dati Fibre Channel a 4 porte, collegare le porte da 1a a 1d per la rete FC.</block>
+  <block id="9a867735c4f604a49c9d27393e56dfe2" category="list-text">4 porte, 32 GB Fibre Channel, SFP+ (solo destinazione)</block>
+  <block id="0d483d1755efbe3138752df4c802b435" category="list-text">4 porte, 32 GB Fibre Channel, SFP+ (iniziatore/destinazione)</block>
+  <block id="8bb7b23c936cb70e2890bdc1e1a55118" category="list-text">Se si dispone di una scheda 2+2 (2 porte con connessioni Ethernet e 2 porte con connessioni Fibre Channel), collegare le porte e1a e e1b alla rete dati FC e le porte e1c e e1d alla rete dati Ethernet.</block>
+  <block id="e664a3bf047f98da138d06dd6bbecf60" category="list-text">2 porte, 10 GB Ethernet (SFP28) + 2 porte 32 GB FC (SFP+)</block>
+  <block id="c76e1890be7e78a7e7f8b44303d6f072" category="admonition">NON collegare i cavi di alimentazione.</block>
+  <block id="945919717a9a1b9de8896baef8c155a5" category="paragraph">Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster con switch.</block>
+  <block id="4b3a23428d43b0cc1ea88affb10b1421" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.</block>
+  <block id="b6713b6dcccfb0ea851ac5892871d1ce" category="paragraph">Collegare i controller allo storage esterno.</block>
+  <block id="80ae6b7de29ff0be35e926815150d39e" category="paragraph">È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli shelf di dischi.</block>
+  <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">Animazione - cablaggio dello shelf del disco</block>
+  <block id="2728bec52c30a9bf554b834ce8cfd335" category="admonition">Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Vedere<block ref="6f4656a8b776447b5b4debad13e7a22e" category="inline-link-rx"></block> per ulteriori informazioni.</block>
+  <block id="936f11624ce65028d5f2861c02e343af" category="image-alt">icona legenda oie 1 lo</block>
+  <block id="c40e49e90ec7d35ff60916a8d39fe6e8" category="image-alt">icona legenda oie 2 mb</block>
+  <block id="3b7d5f20d28c201cdbde659df3e31649" category="image-alt">icona legenda oie 3 t</block>
+  <block id="6ac0c621e44f0d6d3cfb9a6035ba969b" category="list-text">Dalla porta 1 su IOM A alla porta 3 sull'IOM A sullo shelf direttamente sotto.</block>
+  <block id="a2a4a3ef1017cf43a3cf109d61286633" category="list-text">Porta 1 su IOM B alla porta 3 sull'IOM B sullo shelf direttamente sotto.</block>
+  <block id="9f8e1f093714df2b4e4cea2483986e1f" category="paragraph">*Cavi da mini-SAS HD a mini-SAS HD*</block>
+  <block id="202f3ec29ba7fc0c62960a60ae2f794f" category="image-alt">Cablaggio da shelf a shelf drw 2800 IEOPS 895</block>
+  <block id="b1905c91f00e1e7ad75a290938d0c0ae" category="list-text">Collegare il controller a agli shelf di dischi.</block>
+  <block id="7414b28752291f5ed73122cbbe85acd3" category="list-text">Porta del controller A da 0a a IOM B porta 1 sul primo shelf di dischi nello stack.</block>
+  <block id="d490aaf97e1fdf82eb244edca242e5f7" category="list-text">Controller A port 0b1 to IOM A port 3 on the last drive shelf in the stack.</block>
+  <block id="0d5514b466e4b55a41f3994d3034c96f" category="image-alt">dwr 2800 controller1 per gli shelf IEOPS 896</block>
+  <block id="575f5a968bfa57f9d0a99b09b5f73ff2" category="list-text">Collegare il controller B agli shelf di dischi.</block>
+  <block id="49fefb8508936cb5a0f672b0146c0013" category="list-text">Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack.</block>
+  <block id="0cbd55a3e4a33973ae5e025f7565fe75" category="list-text">Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.</block>
+  <block id="8f61138caddaadc30f99b723e123cf22" category="image-alt">dwr 2800 controller2 a shelf IEOPS 897</block>
+  <block id="a63d383da174eddb392adcd87d936c44" category="paragraph">Se la funzione di rilevamento della rete è attivata sul laptop, completare la configurazione e l'installazione del sistema utilizzando la funzione di rilevamento automatico del cluster.</block>
+  <block id="17eddeb5ca42d640ce98ba7b90523804" category="image-alt">dwr 2800 accendere l'alimentazione IEOPS 898</block>
+  <block id="9e4e9e3678bbed5f0d0698cff8427b61" category="list-text">Utilizzare la configurazione guidata di System Manager per configurare il sistema utilizzando i dati raccolti in<block ref="492b1b89e16fbed782c0f28e34fb9371" category="inline-link-rx"></block></block>
+  <block id="5725fc4af65adef1b57d4b7c9a365287" category="paragraph">Se il rilevamento della rete non è abilitato sul laptop, completare manualmente la configurazione e la configurazione.</block>
+  <block id="3b1f7398f44c65a5f8ab979cc8757340" category="list-text">Collegare il cavo della console al laptop o alla console, quindi collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema, quindi ccollegare il laptop o la console allo switch sulla subnet di gestione.</block>
+  <block id="6f196fc99c938b047a2dbbae60694da9" category="image-alt">Drw 2800 laptop per passare al controller IEOPS 1084</block>
+  <block id="1f61f05d390e702160f04da6c21786d5" category="list-text">Una volta completata la configurazione iniziale, passare a. <block ref="8203f64117389bb7bbdf8d4d70d36e4d" category="inline-link-rx"></block> Per informazioni sulla configurazione di funzionalità aggiuntive in ONTAP.</block>
+  <block id="1063e487d045f7cd17b5712ab35a43b6" category="doc">Documentazione del sistema FAS2800</block>
+  <block id="40ab4deb5c724a3e2d6c8f6d96a94554" category="doc">Spegnere i controller - FAS2800</block>
+  <block id="5f81816799fe408c4f5d0d2b06be7dd0" category="doc">Guida rapida - FAS2800</block>
+  <block id="b0f0e558d3522c3be05dd8c2dd0af1cc" category="inline-link-macro">Istruzioni per l'installazione e la configurazione dei sistemi FAS2800</block>
+  <block id="dcd1fb87d1725e210ef205f9a1c5e788" category="paragraph"><block ref="dcd1fb87d1725e210ef205f9a1c5e788" category="inline-link-macro-rx"></block></block>
+  <block id="30d72b7769d2368f3a2f7fcacca60c27" category="doc">Sostituire un DIMM - FAS2800</block>
+  <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio del modulo controller.</block>
+  <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">Individuare il modulo DIMM all'interno del controller, rimuoverlo e sostituirlo.</block>
+  <block id="95da017c37970d073ec39c2d3a5f57a0" category="admonition">Prima di sostituire un modulo DIMM, scollegare la batteria NVMEM dal modulo controller.</block>
+  <block id="fa59f7fdc751f040e98449eb5f9bab77" category="list-text">Rimuovere la batteria dal modulo controller premendo il pulsante blu sul lato del modulo controller.</block>
+  <block id="e460f960683865692d03871b47a39fd8" category="list-text">Individuare il cavo della batteria, premere il fermaglio sulla spina della batteria per sganciare il fermaglio di blocco dalla presa, quindi scollegare il cavo della batteria dalla presa.</block>
+  <block id="5f2a29b0970aac5a4425f7cf26343e24" category="list-text">Ricollegare il connettore della batteria e controllare nuovamente il LED sul retro del controller.</block>
+  <block id="2bb5a458e01d43f7e5641661b16f0d46" category="list-text">Scollegare il cavo della batteria.</block>
+  <block id="82b2c56e53a487cba16496c5167ec489" category="list-text">Prendere nota dell'orientamento e della posizione del DIMM nello zoccolo in modo da poter inserire il DIMM sostitutivo con l'orientamento corretto.</block>
+  <block id="72d609b19c1bf7528c15b9f03dffdc1f" category="paragraph">Pulsante di rilascio della batteria NVRAM</block>
+  <block id="4ec1b0ed9e4f78833f020b2b7ed423ce" category="paragraph">DIMM</block>
+  <block id="c8bfe0a5fc27fb76ba86b0b3f8e488a3" category="list-text">Ricollegare la batteria NVMRM:</block>
+  <block id="b7cf9d5fc111cce87031b050032fe85f" category="list-text">Collegare la batteria NVRAM.</block>
+  <block id="44e9bf23cac339f1a46833e07d1be621" category="list-text">Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.</block>
+  <block id="cca6b082b0a0af8dfe622b365bd85350" category="section-title">Fase 5: Restituire il componente guasto a NetApp - AFF A700s</block>
+  <block id="a334af0b164fc0db79711e89abe4cb0d" category="sidebar">FAS2800</block>
+  <block id="4ec6a95192d18718a540794417c8fa63" category="sidebar">Consulente digitale NetApp Active IQ</block>
+  <block id="519131237f79eadb2dc6a1e003a087bc" category="sidebar">NetApp Active IQ Config Advisor</block>
+  <block id="b1a2e879032b7693396d5911fdb9ee8f" category="sidebar">Schede mezzanine</block>
+  <block id="7655464c949e17f83cc9f89554f784e5" category="sidebar">Fogli di lavoro per il cablaggio ed esempi per ha multipath</block>
+  <block id="c2b6b3b554d53a9298b53bc5f03d3830" category="sidebar">Foglio di lavoro per il cablaggio e esempio di ha quad-path</block>
+  <block id="84f80d47c3a3934ba083c16827645698" category="sidebar">Sistemi FAS2800</block>
+  <block id="0822c3a3c2088294acf4b156198fab16" category="sidebar">Installazione e configurazione di FAS2800</block>
+  <block id="52082133ddafec6f44b27acdb0e80d2a" category="sidebar">Manutenzione di FAS2800</block>
+  <block id="79f9aa553b7d76f8fd255e9277fa5ed0" category="sidebar">FAS2800 Boot Media</block>
+  <block id="1823853a2ff016fa1f167769ab335876" category="sidebar">Sostituire il supporto di avvio e trasferire l'immagine di avvio</block>
+  <block id="e8beac267c4a923aec553646307b83eb" category="sidebar">Modulo caching FAS2800</block>
+  <block id="c1c62fce3287ee9fb4c1d797a1feba55" category="sidebar">Chassis FAS2800</block>
+  <block id="94e71ac35b9db70fff06a5064f80e3f9" category="sidebar">Controller FAS2800</block>
+  <block id="ff67b04dba165a63ada544868c9096f3" category="sidebar">DIMM FAS2800</block>
+  <block id="082f3ddfd8b928e971f0ca5feb57e067" category="sidebar">Disco FAS2800</block>
+  <block id="7f6c436a2d5532b606b07a676e696d32" category="sidebar">Batteria FAS2800 NVMEM</block>
+  <block id="aee81807d892ce8f0557ee7ba4da62af" category="sidebar">Scheda Mezzanine FAS2800</block>
+  <block id="9287ab39836157b975fad28f9782a821" category="sidebar">Alimentatore FAS2800</block>
+  <block id="3dfd3fa9bee4e9b9ad14ec588c8e9ed4" category="sidebar">Batteria con clock in tempo reale FAS2800</block>
 </blocks>

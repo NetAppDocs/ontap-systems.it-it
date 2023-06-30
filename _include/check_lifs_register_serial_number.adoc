@@ -7,7 +7,7 @@ Prima di riportare il nodo _replacement_ in servizio, verificare che i AutoSuppo
 .Fasi
 . Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
 +
-Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert`
+Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert -vserver * -lif *`
 
 . Registrare il numero di serie del sistema presso il supporto NetApp.
 +
@@ -15,5 +15,6 @@ Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network 
 ** Se AutoSupport non è attivato, chiamare https://mysupport.netapp.com["Supporto NetApp"] per registrare il numero di serie.
 
 
+. Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 . Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
 

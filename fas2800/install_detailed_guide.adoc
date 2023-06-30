@@ -1,0 +1,628 @@
+---
+permalink: fas2800/install-detailed-guide.html 
+sidebar: sidebar 
+keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, setup, discovery 
+summary: 'Questa guida fornisce istruzioni dettagliate e dettagliate per l"installazione di un sistema NetApp tipico.' 
+---
+= Fasi dettagliate - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa guida fornisce istruzioni dettagliate e dettagliate per l'installazione di un sistema NetApp tipico. Utilizzare questa guida per ottenere istruzioni di installazione più dettagliate.
+
+
+
+== Fase 1: Preparazione per l'installazione
+
+Per installare il sistema FAS2800, è necessario creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
+
+È necessario disporre dell'accesso a https://hwu.netapp.com["NetApp Hardware Universe"] per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. È possibile anche avere accesso a http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Note di rilascio per la versione di ONTAP 9 in uso"] Per ulteriori informazioni su questo sistema, consultare la versione di ONTAP in uso.
+
+Devi fornire quanto segue presso la tua sede:
+
+* Spazio rack per il sistema storage
+* Cacciavite Phillips n. 2
+* Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
+* Computer portatile o console con connessione RJ-45 e accesso a un browser Web
+
+
+.Fasi
+. Disimballare il contenuto di tutte le confezioni.
+. Annotare il numero di serie del sistema dai controller.
++
+image::../media/drw_ssn_label.svg[etichetta drw sn]
+
+. Configurazione dell'account:
++
+.. Accedi al tuo account esistente o crea un account.
+.. Registrare il sistema tramite  https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["Registrazione del prodotto NetApp"]
+
+
+. Scaricare e installare https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Config Advisor"] sul computer portatile.
+. Fare un inventario e prendere nota del numero e dei tipi di cavi ricevuti.
++
+La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare https://hwu.netapp.com["NetApp Hardware Universe"] individuare il cavo e identificarne l'utilizzo.
+
++
+[cols="1,2,1,2"]
+|===
+| Tipo di cavo... | Codice e lunghezza del ricambio | Tipo di connettore | Per... 
+
+
+ a| 
+10 GbE, cavo SFP28 (in base all'ordine)
+ a| 
+X6566B-05-R6, .5,
+
+X6566B-2-R6, 2 m
+ a| 
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+ a| 
+Cavo di rete
+
+
+
+ a| 
+Ethernet da 25 GB, SFP28
+ a| 
+X66240A-05, 0,5 m.
+
+X66240-2, 2 m
+
+X66240A-5, 5 m.
+ a| 
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo oie 25GB Ethernet SFP28 IEOPS 1069]
+ a| 
+Cavo di rete
+
+
+
+ a| 
+Fibre Channel da 32 GB,
+SFP+ (destinazione/iniziatore)
+ a| 
+X66250-2, 2 m
+
+X66250-5, 5 m.
+
+X66250-15, 15 m.
+ a| 
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+ a| 
+Rete FC
+
+
+
+ a| 
+Cat 6, RJ-45 (in base all'ordine)
+ a| 
+X6561-R6
+
+X6562-R6
+ a| 
+image::../media/oie_cable_rj45.svg[cavo oie rj45]
+ a| 
+Rete di gestione e dati Ethernet
+
+
+
+ a| 
+Storage
+ a| 
+X66030A, 0,5 m
+
+X66031A, 1 m.
+
+X66032A, 2 m
+ a| 
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+ a| 
+Storage
+
+
+
+ a| 
+Cavo console USB-C.
+ a| 
+Non applicabile
+ a| 
+image::../media/oie_cable_micro_usb.svg[cavo oie micro usb]
+ a| 
+Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac
+
+
+
+ a| 
+Cavi di alimentazione
+ a| 
+Non applicabile
+ a| 
+image::../media/oie_cable_power.svg[cavo di alimentazione dell'oie]
+ a| 
+Accensione del sistema
+
+
+
+ a| 
+Cavo FC opzionale
+ a| 
+Cavo FC opzionale
+ a| 
+image::../media/oie_cable_fiber_lc_connector.svg[connettore lc in fibra ottica per cavo oie]
+ a| 
+Cavo di rete FC aggiuntivo
+
+|===
+. Scaricare e completare le schede di lavoro disponibili in  https://docs.netapp.com/us-en/ontap/software_setup/concept_set_up_the_cluster.html#cluster-setup-worksheets["Configurare il cluster con l'interfaccia utente di ONTAP"^].
+
+
+
+
+== Fase 2: Installare l'hardware
+
+È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
+
+.Fasi
+. Installare i kit di guide, secondo necessità.
+. Installare e fissare il sistema seguendo le istruzioni fornite con il kit di guide.
++
+
+NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
+
++
+image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[Avvertenza peso oie fas2800 IEOPS 1070]
+
+. Collegare i dispositivi di gestione dei cavi (come illustrato).
++
+image::../media/drw_cable_management_arm_install.svg[installazione di ARM per la gestione dei cavi drw]
+
+. Posizionare il pannello anteriore del sistema.
+
+
+
+
+== Fase 3: Collegare i controller alla rete
+
+Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.
+
+La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.
+
+[cols="20%,80%"]
+|===
+| Cablaggio | Tipo di connessione 
+
+
+ a| 
+image::../media/oie_legend_icon_1_lg.svg[icona legenda oie 1 lg]
+ a| 
+Interconnessione del cluster
+
+
+
+ a| 
+image::../media/oie_legend_icon_2_lp.svg[icona legenda oie 2 lp]
+ a| 
+Switch di rete di gestione
+
+
+
+ a| 
+image::../media/oie_legend_icon_3_o.svg[icona legenda oie 3 o]
+ a| 
+Switch di rete host
+
+|===
+[role="tabbed-block"]
+====
+.Opzione 1: Collegare un cluster senza switch a due nodi
+--
+Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster senza switch a due nodi.
+
+.Prima di iniziare
+Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
+
+Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
+
+image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+
+
+NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.
+
+
+NOTE: Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.
+
+.A proposito di questa attività
+È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch.
+
+.Animazione - cablaggio di un cluster senza switch a due nodi
+video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
+.Fasi
+. Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:
++
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo oie 25GB Ethernet SFP28 IEOPS 1069]
+
++
+*Cavi di interconnessione cluster*
+
++
+image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[Drw 2800 tnsc - cablaggio cluster IEOPS 892]
+
+. Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
++
+image::../media/oie_cable_rj45.svg[cavo oie rj45]
+
++
+*Cavi RJ45*
+
++
+image::../media/drw_2800_management_connection_IEOPS-1077.svg[Connessione di gestione drw 2800 IEOPS 1077]
+
+. Collegare le porte della scheda mezzanine alla rete host.
++
+image::../media/drw_2800_network_cabling_IEOPS-894.svg[Cablaggio di rete drw 2800 IEOPS 894]
+
++
+.. Se si dispone di una rete dati Ethernet a 4 porte, collegare le porte e1a tramite e1d alla rete dati Ethernet.
++
+*** 4 porte, Ethernet 10 GB, SFP28
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
++
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo oie 25GB Ethernet SFP28 IEOPS 1069]
+
+*** 4 PORTE, 10GBASE-T, RJ45
++
+image::../media/oie_cable_rj45.svg[cavo oie rj45]
+
+
+
+.. Se si dispone di una rete dati Fibre Channel a 4 porte, collegare le porte da 1a a 1d per la rete FC.
++
+*** 4 porte, 32 GB Fibre Channel, SFP+ (solo destinazione)
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
+*** 4 porte, 32 GB Fibre Channel, SFP+ (iniziatore/destinazione)
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
+
+
+.. Se si dispone di una scheda 2+2 (2 porte con connessioni Ethernet e 2 porte con connessioni Fibre Channel), collegare le porte e1a e e1b alla rete dati FC e le porte e1c e e1d alla rete dati Ethernet.
++
+*** 2 porte, 10 GB Ethernet (SFP28) + 2 porte 32 GB FC (SFP+)
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
+
+
+
+
+
+
+
+IMPORTANT: NON collegare i cavi di alimentazione.
+
+--
+.Opzione 2: Cavo a del cluster con switch
+--
+Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster con switch.
+
+
+NOTE: Per informazioni sulla connessione del sistema agli switch, contattare l'amministratore di rete.
+
+Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
+
+image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+
+
+NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.
+
+.A proposito di questa attività
+È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch.
+
+.Animazione - cablaggio del cluster con switch
+video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
+.Fasi
+. Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:
++
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo oie 25GB Ethernet SFP28 IEOPS 1069]
+
++
+image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[Drw 2800 tnsc - cablaggio cluster IEOPS 892]
+
+. Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
++
+image::../media/oie_cable_rj45.svg[cavo oie rj45]
+
++
+image::../media/drw_2800_management_connection_IEOPS-1077.svg[Connessione di gestione drw 2800 IEOPS 1077]
+
+. Collegare le porte della scheda mezzanine alla rete host.
++
+image::../media/drw_2800_network_cabling_IEOPS-894.svg[Cablaggio di rete drw 2800 IEOPS 894]
+
++
+.. Se si dispone di una rete dati Ethernet a 4 porte, collegare le porte e1a tramite e1d alla rete dati Ethernet.
++
+*** 4 porte, Ethernet 10 GB, SFP28
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
++
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo oie 25GB Ethernet SFP28 IEOPS 1069]
+
+*** 4 PORTE, 10GBASE-T, RJ45
++
+image::../media/oie_cable_rj45.svg[cavo oie rj45]
+
+
+
+.. Se si dispone di una rete dati Fibre Channel a 4 porte, collegare le porte da 1a a 1d per la rete FC.
++
+*** 4 porte, 32 GB Fibre Channel, SFP+ (solo destinazione)
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
+*** 4 porte, 32 GB Fibre Channel, SFP+ (iniziatore/destinazione)
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
+
+
+.. Se si dispone di una scheda 2+2 (2 porte con connessioni Ethernet e 2 porte con connessioni Fibre Channel), collegare le porte e1a e e1b alla rete dati FC e le porte e1c e e1d alla rete dati Ethernet.
++
+*** 2 porte, 10 GB Ethernet (SFP28) + 2 porte 32 GB FC (SFP+)
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
++
+image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+
+
+
+
+
+
+
+
+IMPORTANT: NON collegare i cavi di alimentazione.
+
+--
+====
+
+
+== Fase 4: Collegare i controller dei cavi agli shelf di dischi
+
+Collegare i controller allo storage esterno.
+
+
+NOTE: L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati.
+
+Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
+
+image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+
+.A proposito di questa attività
+È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli shelf di dischi.
+
+.Animazione - cablaggio dello shelf del disco
+video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
+
+NOTE: Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] per ulteriori informazioni.
+
+La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.
+
+[cols="20%,80%"]
+|===
+| Cablaggio | Tipo di connessione 
+
+
+ a| 
+image::../media/oie_legend_icon_1_lo.svg[icona legenda oie 1 lo]
+ a| 
+Interconnessione del cluster
+
+
+
+ a| 
+image::../media/oie_legend_icon_2_mb.svg[icona legenda oie 2 mb]
+ a| 
+Switch di rete di gestione
+
+
+
+ a| 
+image::../media/oie_legend_icon_3_t.svg[icona legenda oie 3 t]
+ a| 
+Switch di rete host
+
+|===
+.Fasi
+. Cablare le porte shelf-to-shelf.
++
+.. Dalla porta 1 su IOM A alla porta 3 sull'IOM A sullo shelf direttamente sotto.
+.. Porta 1 su IOM B alla porta 3 sull'IOM B sullo shelf direttamente sotto.
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+
++
+*Cavi da mini-SAS HD a mini-SAS HD*
+
++
+image::../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[Cablaggio da shelf a shelf drw 2800 IEOPS 895]
+
+
+
+. Collegare il controller a agli shelf di dischi.
++
+.. Porta del controller A da 0a a IOM B porta 1 sul primo shelf di dischi nello stack.
+.. Controller A port 0b1 to IOM A port 3 on the last drive shelf in the stack.
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+
++
+*Cavi da mini-SAS HD a mini-SAS HD*
+
++
+image::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[dwr 2800 controller1 per gli shelf IEOPS 896]
+
+
+
+. Collegare il controller B agli shelf di dischi.
++
+.. Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack.
+.. Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+
++
+*Cavi da mini-SAS HD a mini-SAS HD*
+
++
+image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[dwr 2800 controller2 a shelf IEOPS 897]
+
+
+
+
+
+
+
+== Fase 5: Completare l'installazione e la configurazione del sistema
+
+È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Se la funzione di rilevamento della rete è attivata
+--
+Se la funzione di rilevamento della rete è attivata sul laptop, completare la configurazione e l'installazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
+
+.Fasi
+. Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi
++
+.Animazione - impostazione degli ID dello shelf di dischi
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
+. Accendere gli interruttori di alimentazione su entrambi i nodi.
++
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[dwr 2800 accendere l'alimentazione IEOPS 898]
+
++
+
+NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+
+. Assicurarsi che il rilevamento della rete sia attivato sul laptop.
++
+Per ulteriori informazioni, consultare la guida in linea del portatile.
+
+. Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.
++
+.Animazione - collegare il laptop allo switch di gestione
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. Selezionare un'icona ONTAP elencata per scoprire:
++
+image::../media/drw_autodiscovery_controler_select.svg[selezione del controllo di rilevamento automatico drw]
+
++
+.. Aprire file Explorer.
+.. Fare clic su Network (rete) nel riquadro sinistro.
+.. Fare clic con il pulsante destro del mouse e selezionare Aggiorna.
+.. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
++
+
+NOTE: XXXXX è il numero di serie del sistema per il nodo di destinazione.
+
++
+Viene visualizzato Gestione sistema.
+
+
+
+. Utilizzare la configurazione guidata di System Manager per configurare il sistema utilizzando i dati raccolti in https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"]
+. Verificare lo stato del sistema eseguendo Config Advisor.
+. Una volta completata la configurazione iniziale, passare alla https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP  risorse di documentazione per il gestore di sistema ONTAP"] Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.
+
+
+--
+.Opzione 2: Se il rilevamento di rete non è attivato
+--
+Se il rilevamento della rete non è abilitato sul laptop, completare manualmente la configurazione e la configurazione.
+
+.Fasi
+. Cablare e configurare il laptop o la console:
++
+.. Impostare la porta della console del portatile o della console su 115,200 baud con N-8-1.
++
+
+NOTE: Per informazioni su come configurare la porta della console, consultare la guida in linea del portatile o della console.
+
+.. Collegare il cavo della console al laptop o alla console, quindi collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema, quindi ccollegare il laptop o la console allo switch sulla subnet di gestione.
++
+image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[Drw 2800 laptop per passare al controller IEOPS 1084]
+
+.. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
+
+
+. Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi:
++
+.Animazione - impostazione degli ID dello shelf di dischi
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
+. Accendere gli interruttori di alimentazione su entrambi i nodi.
++
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[dwr 2800 accendere l'alimentazione IEOPS 898]
+
+
+
+
+NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+
+. Assegnare un indirizzo IP di gestione del nodo iniziale a uno dei nodi.
++
+[cols="20%,80%"]
+|===
+| Se la rete di gestione dispone di DHCP... | Quindi... 
+
+
+ a| 
+Configurato
+ a| 
+Registrare l'indirizzo IP assegnato ai nuovi controller.
+
+
+
+ a| 
+Non configurato
+ a| 
+.. Aprire una sessione della console utilizzando putty, un server terminal o un server equivalente per l'ambiente in uso.
++
+
+NOTE: Se non si sa come configurare PuTTY, consultare la guida in linea del portatile o della console.
+
+.. Inserire l'indirizzo IP di gestione quando richiesto dallo script.
+
+
+|===
+. Utilizzando System Manager sul laptop o sulla console, configurare il cluster:
++
+.. Puntare il browser sull'indirizzo IP di gestione del nodo.
++
+
+NOTE: Il formato dell'indirizzo è https://x.x.x.x[].
+
+.. Configurare il sistema utilizzando i dati raccolti in https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"].
+
+
+. Verificare lo stato del sistema eseguendo Config Advisor.
+. Una volta completata la configurazione iniziale, passare a.  https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP  risorse di documentazione per il gestore di sistema ONTAP"] Per informazioni sulla configurazione di funzionalità aggiuntive in ONTAP.
+
+
+--
+====

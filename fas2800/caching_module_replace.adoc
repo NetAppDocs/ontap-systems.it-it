@@ -1,0 +1,216 @@
+---
+permalink: fas2800/caching-module-replace.html 
+sidebar: sidebar 
+keywords: replace, caching, module,  fas2800, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, replace, reinstall 
+summary: 'È necessario sostituire il modulo di caching nel modulo controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline; in caso contrario, le prestazioni si sono degradate.' 
+---
+= Sostituire il modulo di caching - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario sostituire il modulo di caching nel modulo controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline; in caso contrario, le prestazioni si sono degradate.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso.
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["Guida di riferimento per l'amministrazione del sistema ONTAP 9"^]
+
+Si consiglia di cancellare il contenuto del modulo di caching prima di sostituirlo.
+
+.Fasi
+. Anche se i dati sul modulo di caching sono crittografati, è possibile cancellare i dati dal modulo di caching compromesso e verificare che il modulo di caching non abbia dati:
++
+.. Cancellare i dati sul modulo di caching: `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
++
+
+NOTE: Eseguire `system controller flash-cache show` Comando se non si conosce l'ID del dispositivo flashcache.
+
+.. Verificare che i dati siano stati cancellati dal modulo di caching: `system controller flash-cache secure-erase show`
++
+L'output dovrebbe visualizzare lo stato del modulo di caching come cancellato.
+
+
+
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se il controller non funzionante fa parte di una coppia ha, disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Assumere il controllo o arrestare il controller compromesso:
+
+** Per una coppia ha, prendere il controllo del controller compromesso dal controller sano: `storage failover takeover -ofnode _impaired_node_name_`
++
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+** Per un sistema standalone: `system node halt _impaired_node_name_`
+
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
+. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
++
+image::../media/drw_2240_x_opening_cam_latch.svg[drw 2240 x apertura del fermo a camma]
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Drw 2850 coperchio aperto del modulo controller IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio del coperchio del modulo controller
+
+|===
+
+
+== Fase 3: Sostituire un modulo di caching
+
+Individuare il modulo di caching all'interno del controller, rimuovere il modulo di caching guasto e sostituirlo.
+
+.Animazione - sostituire il modulo di caching
+video::12b339c5-640a-4be8-a5fc-af47017276fd[panopto]
+Il sistema storage deve soddisfare determinati criteri a seconda della situazione:
+
+* Deve disporre del sistema operativo appropriato per il modulo di caching che si sta installando.
+* Deve supportare la capacità di caching.
+* Tutti gli altri componenti del sistema di storage devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individuare il modulo di caching guasto vicino alla parte posteriore del modulo controller e rimuoverlo.
++
+.. Premere il pulsante blu di rilascio e ruotare il modulo di caching verso l'alto.
+.. Estrarre delicatamente il modulo di caching dall'alloggiamento.
++
+image::../media/drw_2850_replace_caching module_IEOPS-697.svg[Drw 2850 sostituisce il modulo di caching IEOPS 697]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[icona legenda 01]
+ a| 
+Pulsante di rilascio del modulo di caching
+
+|===
+
+
+. Allineare i bordi del modulo di caching sostitutivo con lo zoccolo nell'alloggiamento, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il modulo di caching sia posizionato correttamente e completamente nel socket.
++
+Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
+
+. Premere il pulsante blu di blocco, ruotare il modulo di caching completamente verso il basso, quindi rilasciare il pulsante di blocco per bloccare il modulo di caching in posizione.
+. Reinstallare il coperchio del modulo controller e bloccarlo in posizione.
+
+
+
+
+== Fase 4: Reinstallare il modulo controller
+
+Reinstallare il modulo controller nel telaio.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, riposizionare il coperchio sul modulo controller.
+. Capovolgere il modulo controller e allineare l'estremità con l'apertura dello chassis.
+. Spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Completare la reinstallazione del modulo controller:
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+
+
+
+
+
+
+== Fase 5: Ripristinare il giveback automatico e AutoSupport
+
+Ripristina giveback automatico e AutoSupport se sono stati disattivati.
+
+. Ripristinare il giveback automatico utilizzando `storage failover modify -node local -auto-giveback true` comando.
+. Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+
+== Fase 6: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

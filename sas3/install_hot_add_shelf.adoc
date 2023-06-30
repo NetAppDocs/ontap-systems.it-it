@@ -28,14 +28,14 @@ Il sistema deve soddisfare determinati requisiti prima di aggiungere a caldo she
 
 * Il sistema e la versione di ONTAP devono supportare gli shelf di dischi che si stanno aggiungendo a caldo, inclusi gli IOM, i dischi e i cavi SAS.
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * Il sistema deve avere un numero inferiore al numero massimo di dischi supportati, almeno del numero di shelf di dischi che si intende aggiungere a caldo.
 +
 Non è possibile superare il numero massimo di dischi supportati dal sistema dopo l'aggiunta a caldo di shelf di dischi.
 
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * Se si aggiunge a caldo uno stack di uno o più shelf di dischi (direttamente ai controller della piattaforma), il sistema deve disporre di un numero sufficiente di porte HBA PCI SAS o SAS integrate o di una combinazione di entrambe.
 +
@@ -54,7 +54,7 @@ Scaricare ed eseguire Config Advisor per verificare che le connessioni SAS siano
 È necessario correggere eventuali errori di cablaggio utilizzando le azioni correttive fornite dai messaggi di errore.
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 
 
@@ -84,13 +84,6 @@ Prima di aggiungere a caldo shelf di dischi, è necessario acquisire familiarit�
 Per le configurazioni ha a percorso singolo e singolo, come applicabile ai sistemi AFF A200, AFF A220, FAS2600 e FAS2700, è possibile aggiungere a caldo shelf di dischi alla fine dello stack che non dispongono di connessioni controller.
 
 * Gli shelf di dischi con moduli IOM12/IOM12B devono essere nel proprio stack unico; non possono essere aggiunti a uno stack che dispone di shelf con moduli IOM6 o moduli IOM3.
-+
-Questa procedura non riguarda la miscelazione di uno stack: Aggiunta a caldo di uno shelf con moduli IOM12/IOM12B a uno stack di shelf con moduli IOM6.
-
-* Un sistema può disporre di stack di shelf di dischi a percorso multiplo e quadruplo con moduli IOM12/IOM12B.
-+
-Se si dispone di una coppia ha, ONTAP mostra la configurazione del sistema come `multipath HA`. Se si dispone di una configurazione a controller singolo, ONTAP mostra la configurazione del sistema come `multipath`.
-
 * Questa procedura presuppone che la configurazione utilizzi ACP in-band.
 +
 Per le configurazioni con ACP in-band attivato, ACP in-band viene attivato automaticamente sugli shelf di dischi aggiunti a caldo. Per le configurazioni in cui ACP in-band non è abilitato, gli shelf di dischi aggiunti a caldo funzionano senza alcuna funzionalità ACP.
@@ -123,17 +116,17 @@ Se vengono generati errori di cablaggio SAS o ID shelf duplicati, seguire le azi
 Per scaricare Config Advisor è necessario disporre dell'accesso di rete.
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 * La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
 +
 Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
 
 
 
@@ -291,7 +284,7 @@ CAUTION: *Possibile perdita di accesso ai dati:* non chiudere mai il cassetto. S
 Se disponi di un modello di piattaforma con uno shelf di dischi interno, gli shelf ID devono essere univoci nello shelf di dischi interno e negli shelf di dischi collegati esternamente.
 
 +
-È possibile utilizzare i seguenti passaggi secondari per modificare gli ID degli shelf o per istruzioni più dettagliate, utilizzare link:install-change-shelf-id.html["Modificare un ID shelf"].
+È possibile utilizzare i seguenti passaggi secondari per modificare gli ID degli shelf o per istruzioni più dettagliate, utilizzare link:install-change-shelf-id.html["Modificare un ID shelf"^].
 
 +
 .. Se necessario, verificare gli shelf ID già in uso eseguendo Config Advisor.
@@ -316,7 +309,7 @@ L'ID dello shelf lampeggia e il LED ambra del display operatore lampeggia fino a
 
 == Shelf di dischi per cavi con moduli IOM12/IOM12B per aggiunta a caldo
 
-I collegamenti SAS (shelf-to-shelf e controller-to-stack) sono collegati a caldo, in modo che siano collegati al sistema.
+È possibile collegare le connessioni SAS (shelf-to-shelf e controller-to-stack) in base alle esigenze degli shelf di dischi aggiunti a caldo, in modo che possano essere collegate al sistema.
 
 .Prima di iniziare
 È necessario aver soddisfatto i requisiti indicati in link:install-hot-add-shelf.html#requirements-for-hot-adding-disk-shelves-with-iom12iom12b-modules["Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12"] E installato, acceso e impostato gli ID shelf per ogni shelf di dischi come indicato in link:install-hot-add-shelf.html#install-disk-shelves-with-iom12iom12b-modules-for-a-hot-add["Installare shelf di dischi con moduli IOM12 per un hot-add"].
@@ -363,7 +356,7 @@ Se l'assegnazione automatica della proprietà del disco è attivata, l'output mo
 
 
  a| 
-Si sta cablando uno stack con connettività ha multipath, multipath, ha a percorso singolo o a percorso singolo ai controller
+Si sta cablando uno stack con connettività ha multipath, ha tri-path, multipath, ha single path o single path ai controller
  a| 
 Collegare i collegamenti shelf-to-shelf come connettività "`standard`" (utilizzando le porte IOM 3 e 1):
 
@@ -386,10 +379,10 @@ Cablare le connessioni shelf-to-shelf come connettività "`dDouble-wide`": È po
 |===
 .. Controllare i fogli di lavoro del cablaggio controller-to-stack e gli esempi di cablaggio per verificare l'eventuale presenza di un foglio di lavoro completo per la configurazione.
 +
-link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme AFF e FAS con storage integrato"]
+link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"]
 
 +
-link:install-cabling-worksheets-examples-multipath.html["Fogli di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath comuni"]
+link:install-cabling-worksheets-examples-multipath.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per configurazioni ha multipath"]
 
 +
 link:install-worksheets-examples-quadpath.html["Esempio di cablaggio e foglio di lavoro controller-to-stack per una configurazione ha quad-path con due HBA SAS quad-port"]
@@ -405,7 +398,7 @@ link:install-cabling-worksheet-template-quadpath.html["Modello di foglio di lavo
 .. Verificare che tutti i cavi siano fissati saldamente.
 
 
-. Se si aggiungono a caldo uno o più shelf di dischi a un'estremità, ovvero il primo o l'ultimo shelf di dischi logico, di uno stack esistente, completare i passaggi secondari applicabili per la configurazione; in caso contrario, passare al punto successivo.
+. Se si aggiungono a caldo uno o più shelf di dischi a una fine (il primo o l'ultimo shelf logico) di uno stack esistente, completare i passaggi secondari applicabili per la configurazione; in caso contrario, passare al punto successivo.
 +
 
 NOTE: Assicurarsi di attendere almeno 70 secondi tra lo scollegamento e il ricollegamento di un cavo e se si sta sostituendo un cavo più lungo.
@@ -417,7 +410,7 @@ NOTE: Assicurarsi di attendere almeno 70 secondi tra lo scollegamento e il ricol
 
 
  a| 
-Aggiunta a caldo di uno shelf di dischi alla fine di uno stack con connettività ha multipath, multipath, ha quad-path o quad-path ai controller
+Aggiunta a caldo di uno shelf di dischi alla fine di uno stack che dispone di connettività ha multipath, ha tri-path, multipath, ha quad-path o quad-path ai controller
  a| 
 .. Scollegare eventuali cavi dal modulo IOM A dello shelf di dischi alla fine dello stack collegati a qualsiasi controller; in caso contrario, passare alla fase e.
 +
@@ -444,14 +437,14 @@ Queste istruzioni sono per l'aggiunta a caldo alla fine dello stack che non disp
 |===
 . Se è stato aggiunto a caldo uno shelf di dischi con cavi ottici SAS HD mini-SAS a uno stack di shelf di dischi collegati con cavi di rame SAS, sostituire i cavi di rame SAS; in caso contrario, passare alla fase successiva.
 +
-Lo stack deve soddisfare i requisiti indicati nella <<Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12>> sezione di questa procedura.
+Lo stack deve soddisfare i requisiti indicati nella <<Requisiti per shelf di dischi con aggiunta a caldo con moduli IOM12/IOM12B>> sezione di questa procedura.
 
 +
 Sostituire i cavi uno alla volta e attendere almeno 70 secondi tra lo scollegamento e il collegamento di un cavo nuovo.
 
 . Scaricare ed eseguire Config Advisor per verificare che le connessioni SAS siano cablate correttamente.
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
+https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 +
 Se vengono generati errori di cablaggio SAS, seguire le azioni correttive fornite.

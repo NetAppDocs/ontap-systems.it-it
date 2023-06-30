@@ -35,7 +35,7 @@ I moduli IOM12B sono caratterizzati da una striscia blu e da un'etichetta "IOM12
 +
 image::../media/iom12b.png[iom12b]
 
-* Per le configurazioni multipath (ha multipath o multipath) e quad-path (ha quad-path o quad-path), è possibile sostituire a caldo un IOM shelf (sostituire senza interruzioni un IOM shelf in un sistema che è acceso e che serve dati - i/o è in corso).
+* Per le configurazioni multipath (ha multipath o multipath), ha trio-path e quad-path (ha quad-path o quad-path), è possibile sostituire a caldo un IOM shelf (senza interruzioni, sostituire un IOM shelf in un sistema acceso e che serve dati - i/o è in corso).
 * Per le configurazioni ha a percorso singolo della serie FAS2600 e FAS2700, è necessario eseguire un'operazione di takeover e giveback per sostituire un IOM shelf in un sistema acceso e in grado di fornire dati. I/o in corso.
 * Per le configurazioni a percorso singolo della serie FAS2600, è necessario arrestare il sistema per sostituire un IOM shelf.
 +
@@ -47,10 +47,10 @@ NOTE: Se si tenta di sostituire a caldo un IOM di shelf su uno shelf di dischi c
 Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
 
 * Il firmware dello shelf di dischi (IOM) viene aggiornato automaticamente (senza interruzioni) su un nuovo IOM dello shelf con una versione del firmware non aggiornata.
 +
@@ -78,7 +78,7 @@ Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce
 
 
  a| 
-Configurazione ha multipath, multipath, ha quad-path o quad-path
+Configurazione ha multipath, ha tri-path, multipath, ha quad-path o quad-path
  a| 
 Passare alla fase successiva.
 
@@ -141,7 +141,7 @@ I connettori dei cavi SAS sono dotati di chiavi; quando sono orientati correttam
 
 
  a| 
-Configurazione ha multipath, multipath, ha quad-path o quad-path
+Configurazione ha multipath, ha tri-path, multipath, ha quad-path o quad-path
  a| 
 Passare alla fase successiva.
 

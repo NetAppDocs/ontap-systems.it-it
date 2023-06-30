@@ -28,9 +28,9 @@ Dopo aver sostituito l'hardware e avviato la modalità di manutenzione, verifica
 
 .Fasi
 . Se il nodo _replacement_ non si trova al prompt DEL CARICATORE, arrestare il sistema al prompt DEL CARICATORE.
-. Sul nodo _healthy_, controllare l'ora di sistema: `show date`
+. Sul nodo _healthy_, controllare l'ora di sistema: `cluster date show`
 +
-La data e l'ora sono indicate in GMT.
+La data e l'ora si basano sul fuso orario configurato.
 
 . Al prompt DEL CARICATORE, controllare la data e l'ora nel nodo _replacement_: `show date`
 +
@@ -38,7 +38,7 @@ La data e l'ora sono indicate in GMT.
 
 . Se necessario, impostare la data in GMT sul nodo sostitutivo: `set date _mm/dd/yyyy_`
 . Se necessario, impostare l'ora in GMT sul nodo sostitutivo: `set time _hh:mm:ss_`
-. Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_: `show date`
+. Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_: `date`
 +
 La data e l'ora sono indicate in GMT.
 
