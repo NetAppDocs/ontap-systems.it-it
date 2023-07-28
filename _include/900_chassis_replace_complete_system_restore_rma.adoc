@@ -1,0 +1,62 @@
+= Fase 1: Verificare e impostare lo stato ha del telaio
+:allow-uri-read: 
+
+
+Per completare la sostituzione dello chassis, è necessario completare attività specifiche.
+
+
+
+== Fase 1: Verificare e impostare lo stato ha del telaio
+
+È necessario verificare lo stato ha dello chassis e, se necessario, aggiornarlo in modo che corrisponda alla configurazione del sistema.
+
+. In modalità Maintenance (manutenzione), da uno dei moduli controller, visualizzare lo stato ha del modulo controller locale e dello chassis: `ha-config show`
++
+Lo stato ha deve essere lo stesso per tutti i componenti.
+
+. Se lo stato del sistema visualizzato per lo chassis non corrisponde alla configurazione del sistema:
++
+.. Impostare lo stato ha per lo chassis: `ha-config modify chassis _ha-state_`
++
+Il valore dello stato ha può essere uno dei seguenti:
+
++
+*** ha
+*** non ha
+
+
+
+
+. Verificare che l'impostazione sia stata modificata: `ha-config show`
+. Se non lo si è già fatto, recuperare il resto del sistema.
+
+
+
+
+== Fase 2: Richiamare il sistema
+
+. In caso contrario, ricollegare i cavi di alimentazione alle PSU.
+. Accendere le PSU portando il selettore su *ON* e attendere che i controller si accendano completamente.
+. Dopo l'accensione, controllare la parte anteriore e posteriore dello chassis e dei controller per verificare l'eventuale presenza di spie di guasto.
+. Connettersi all'indirizzo IP SP o BMC dei nodi tramite SSH. Questo sarà lo stesso indirizzo utilizzato per arrestare i nodi.
+. Eseguire ulteriori controlli dello stato di salute come descritto in https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["How_to_Perform_a_cluster_Health_check_with_a_script_in_ONTAP"^]
+. Riattivare AutoSupport (terminare il messaggio della finestra di manutenzione):
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+
+[]
+====
+
+NOTE: Come Best practice, devi effettuare le seguenti operazioni:
+
+* Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"^] (Active IQ richiederà tempo per elaborare i servizi di assistenza automatica post-accensione - prevedendo un ritardo nei risultati)
+* Eseguire https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]
+* Controllare lo stato del sistema utilizzando https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["How_to_Perform_a_cluster_Health_check_with_a_script_in_ONTAP"^]
+
+
+====
+
+
+== Fase 3: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

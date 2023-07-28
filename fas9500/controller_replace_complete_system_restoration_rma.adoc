@@ -20,7 +20,9 @@ Per completare la procedura di sostituzione e ripristinare il funzionamento comp
 È necessario installare nuove licenze per il nodo _replacement_ se il nodo compromesso utilizzava funzioni ONTAP che richiedono una licenza standard (bloccata da nodo). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
 
 .A proposito di questa attività
-Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzionalità senza licenza sul nodo potrebbe non essere conforme al contratto di licenza, pertanto è necessario installare la chiave o le chiavi di licenza sostitutive sul nodo _replacement_ il prima possibile.
+Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione.
+
+Inoltre, l'utilizzo di funzionalità senza licenza sul nodo potrebbe non essere conforme al contratto di licenza, pertanto è necessario installare la chiave o le chiavi di licenza sostitutive sul nodo _replacement_ il prima possibile.
 
 Le chiavi di licenza devono essere in formato a 28 caratteri.
 
@@ -28,17 +30,12 @@ Si dispone di un periodo di prova di 90 giorni per l'installazione delle chiavi 
 
 Se il nodo si trova in una configurazione MetroCluster e tutti i nodi di un sito sono stati sostituiti, le chiavi di licenza devono essere installate sul nodo o sui nodi _replacement_ prima dello switchback.
 
-. Se sono necessarie nuove chiavi di licenza, procurarsi le chiavi di licenza sostitutive sul sito di supporto NetApp nella sezione My Support (Assistenza) sotto Software licenss (licenze software).
-+
-https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"]
-
+.Fasi
+. Se sono necessarie nuove chiavi di licenza, procurarsi le chiavi di licenza sostitutive sul https://mysupport.netapp.com/site/global/dashboard["Sito di supporto NetApp"] Nella sezione My Support (supporto personale) sotto Software licensed (licenze software).
 +
 
 NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e inviate all'indirizzo e-mail in archivio. Se non si riceve l'e-mail contenente le chiavi di licenza entro 30 giorni, contattare il supporto tecnico.
 
-
-
-.Fasi
 . Installare ogni chiave di licenza: `+system license add -license-code license-key, license-key...+`
 . Rimuovere le vecchie licenze, se necessario:
 +

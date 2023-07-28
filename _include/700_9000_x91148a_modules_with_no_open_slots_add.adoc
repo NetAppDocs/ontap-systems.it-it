@@ -1,0 +1,159 @@
+= Opzione 1: Aggiunta di un modulo X91148A come modulo NIC in un sistema senza slot aperti
+:allow-uri-read: 
+
+
+Per installare uno o più moduli storage X91148A nel sistema completamente popolato, è necessario rimuovere uno o più moduli NIC o storage esistenti.
+
+* Il sistema deve eseguire ONTAP 9.8 e versioni successive.
+* Per aggiungere senza interruzioni il modulo X91148A, è necessario eseguire il takeover del controller di destinazione, aggiungere il modulo e restituire il controller di destinazione.
+* Se si aggiunge il modulo X91148A come adattatore storage, è necessario installarlo negli slot 3 e/o 7.
+* Se si aggiunge il modulo X91148A come scheda di rete 100GbE, è possibile utilizzare qualsiasi slot aperto. Tuttavia, per impostazione predefinita, gli slot 3 e 7 sono impostati come slot di storage. Se si desidera utilizzare questi slot come slot di rete e non si desidera aggiungere shelf NS224, è necessario modificare gli slot per l'utilizzo in rete con `storage port modify -node _node name_ -port _port name_ -mode network` comando per ciascuna porta. Consultare Hardware Universe per gli altri slot che possono essere utilizzati dal modulo X91148A per il collegamento in rete.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Opzione 1: Aggiunta di un modulo X91148A come modulo NIC in un sistema senza slot aperti
+
+È necessario rimuovere uno o più moduli NIC o storage esistenti nel sistema per installare uno o più moduli NIC X91148A nel sistema completamente popolato.
+
+.Fasi
+. Se si aggiunge un modulo X91148A in uno slot che contiene un modulo NIC con lo stesso numero di porte del modulo X91148A, i LIF migrano automaticamente quando il modulo controller viene spento. Se il modulo NIC da sostituire dispone di più porte rispetto al modulo X91148A, è necessario riassegnare in modo permanente i LIF interessati a una porta home diversa. Vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"] Per informazioni sull'utilizzo di System Manager per spostare in modo permanente i file LIF
+. Spegnere il controller A:
++
+.. Disattiva giveback automatico: `storage failover modify -node local -auto-giveback false`
+.. Assumere il controllo del nodo di destinazione: `storage failover takeover -ofnode _target_node_name_`
++
+La connessione alla console indica che il nodo viene visualizzato al prompt DEL CARICATORE al termine del Takeover.
+
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare eventuali cavi dal modulo i/o di destinazione.
+. Rimuovere il modulo i/o di destinazione dallo chassis:
++
+.. Premere il tasto contrassegnato e numerato CAM.
++
+Il pulsante CAM si allontana dal telaio.
+
+.. Ruotare il fermo della camma verso il basso fino a portarlo in posizione orizzontale.
++
+Il modulo i/o si disinnesta dallo chassis e si sposta di circa 1/2 pollici fuori dallo slot i/O.
+
+.. Rimuovere il modulo i/o dallo chassis tirando le linguette sui lati del lato anteriore del modulo.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
++
+image::../media/drw_9000_remove_pcie_module.png[drw 9000 rimuovere il modulo pcie]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Latch i/o Cam intestato e numerato
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo i/o Cam completamente sbloccato
+
+|===
+
+
+. Installare il modulo X91148A nello slot di destinazione:
++
+.. Allineare il modulo X91148A ai bordi dello slot.
+.. Far scorrere il modulo X91148A nello slot fino a quando il dispositivo di chiusura della camma i/o con lettere e numeri inizia a innestarsi nel perno della camma i/O.
+.. Spingere il fermo della i/o Cam completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Ripetere la procedura di rimozione e installazione per sostituire i moduli aggiuntivi per il controller A.
+. Collegare il modulo o i moduli agli switch dati.
+. Riavviare il controller A: `boot_ontap`
+. Giveback del nodo dal nodo partner: `storage failover giveback -ofnode target_node_name`
+. Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
+. Se è stato aggiunto il modulo X91148A come modulo NIC negli slot 3 o 7, per il collegamento in rete, utilizzare `storage port modify -node _node name_ -port _port name_ -mode network` comando per ciascuna porta.
+. Ripetere questi passi per il controller B.
+
+
+
+
+== Opzione 2: Aggiunta di un modulo X91148A come modulo storage in un sistema senza slot aperti
+
+Per installare uno o più moduli storage X91148A nel sistema completamente popolato, è necessario rimuovere uno o più moduli NIC o storage esistenti.
+
+* Questa procedura presuppone l'installazione del modulo X91148A negli slot 3 e/o 7.
+
+
+.Fasi
+. Se si aggiunge un modulo X91148A come modulo storage negli slot 3 e/o 7 in uno slot che contiene un modulo NIC esistente, utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"].
+. Spegnere il controller A:
++
+.. Disattiva giveback automatico: `storage failover modify -node local -auto-giveback false`
+.. Assumere il controllo del nodo di destinazione: `storage failover takeover -ofnode target_node_name`
++
+La connessione alla console indica che il nodo viene visualizzato al prompt DEL CARICATORE al termine del Takeover.
+
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare eventuali cavi dal modulo i/o di destinazione.
+. Rimuovere il modulo i/o di destinazione dallo chassis:
++
+.. Premere il tasto contrassegnato e numerato CAM.
++
+Il pulsante CAM si allontana dal telaio.
+
+.. Ruotare il fermo della camma verso il basso fino a portarlo in posizione orizzontale.
++
+Il modulo i/o si disinnesta dallo chassis e si sposta di circa 1/2 pollici fuori dallo slot i/O.
+
+.. Rimuovere il modulo i/o dallo chassis tirando le linguette sui lati del lato anteriore del modulo.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
++
+image::../media/drw_9000_remove_pcie_module.png[drw 9000 rimuovere il modulo pcie]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Latch i/o Cam intestato e numerato
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo i/o Cam completamente sbloccato
+
+|===
+
+
+. Installare il modulo X91148A nello slot 3:
++
+.. Allineare il modulo X91148A ai bordi dello slot.
+.. Far scorrere il modulo X91148A nello slot fino a quando il dispositivo di chiusura della camma i/o con lettere e numeri inizia a innestarsi nel perno della camma i/O.
+.. Spingere il fermo della i/o Cam completamente verso l'alto per bloccare il modulo in posizione.
+.. Se si installa un secondo modulo X91148A per lo storage, ripetere la procedura di rimozione e installazione del modulo nello slot 7.
+
+
+. Riavviare il controller A: `boot_ontap`
+. Giveback del nodo dal nodo partner: `storage failover giveback -ofnode _target_node_name_`
+. Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
+. Ripetere questi passi per il controller B.
+. Installare e cablare gli shelf NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["Aggiunta a caldo di uno shelf di dischi NS224"].
+

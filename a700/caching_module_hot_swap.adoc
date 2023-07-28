@@ -1,0 +1,142 @@
+---
+permalink: a700/caching-module-hot-swap.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, hot swap, replace, FlashCache 
+summary: 'I moduli FlashCache SSD NVMe (moduli FlashCache o caching) si trovano nella parte anteriore del modulo NVRAM10 solo nello slot 6 dei sistemi FAS9000. A partire da ONTAP 9.4, è possibile sostituire a caldo il modulo di caching della stessa capacità dello stesso fornitore o di un altro fornitore supportato.' 
+---
+= Modulo di caching hot-swap - AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I moduli FlashCache SSD NVMe (moduli FlashCache o caching) si trovano nella parte anteriore del modulo NVRAM10 solo nello slot 6 dei sistemi FAS9000. A partire da ONTAP 9.4, è possibile sostituire a caldo il modulo di caching della stessa capacità dello stesso fornitore o di un altro fornitore supportato.
+
+.Prima di iniziare
+Il sistema storage deve soddisfare determinati criteri a seconda della situazione:
+
+* Deve disporre del sistema operativo appropriato per il modulo di caching che si sta installando.
+* Deve supportare la capacità di caching.
+* Il modulo di caching sostitutivo deve avere la stessa capacità del modulo di caching guasto, ma può provenire da un altro vendor supportato.
+* Tutti gli altri componenti del sistema di storage devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individuare il modulo di caching guasto, nello slot 6, tramite il LED di attenzione acceso di colore ambra sulla parte anteriore del modulo di caching.
+. Preparare lo slot del modulo di caching per la sostituzione come segue:
++
+.. Per ONTAP 9.7 e versioni precedenti:
++
+... Registrare la capacità del modulo di caching, il numero di parte e il numero di serie sul nodo di destinazione: `system node run local sysconfig -av 6`
+... Nel livello di privilegio admin, preparare lo slot NVMe di destinazione per la sostituzione, rispondendo `y` quando viene richiesto se continuare: `system controller slot module replace -node _node_name -slot slot_number_` Il seguente comando prepara lo slot 6-2 sul nodo 1 per la sostituzione e visualizza un messaggio che indica che è possibile sostituire in modo sicuro:
++
+[listing]
+----
+::> system controller slot module replace -node node1 -slot 6-2
+
+Warning: NVMe module in slot 6-2 of the node node1 will be powered off for replacement.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered off.  It can now be safely replaced.
+After the replacement module is inserted, use the "system controller slot module insert" command to place the module into service.
+----
+... Visualizzare lo stato dello slot con il comando show del modulo dello slot del controller di sistema.
++
+Lo stato dello slot NVMe visualizza l'attesa della sostituzione nell'output dello schermo per il modulo di caching che deve essere sostituito.
+
+
+
+.. Per ONTAP 9.8 e versioni successive:
++
+... Registrare la capacità del modulo di caching, il numero di parte e il numero di serie sul nodo di destinazione: `system node run local sysconfig -av 6`
+... Nel livello di privilegio admin, preparare lo slot NVMe di destinazione per la rimozione, rispondendo `y` quando viene richiesto se continuare: `system controller slot module remove -node node_name -slot slot_number` Il seguente comando prepara lo slot 6-2 sul nodo 1 per la rimozione e visualizza un messaggio che indica che è possibile rimuovere in modo sicuro:
++
+[listing]
+----
+::> system controller slot module remove -node node1 -slot 6-2
+
+Warning: SSD module in slot 6-2 of the node node1 will be powered off for removal.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+... Visualizzare lo stato dello slot con `system controller slot module show` comando.
++
+Viene visualizzato lo stato dello slot NVMe `powered-off` nell'output dello schermo per il modulo di caching che deve essere sostituito.
+
+
+
+
+
++
+
+NOTE: Vedere https://docs.netapp.com/us-en/ontap-cli-9121/["Pagine man del comando"^] Per ulteriori informazioni sulla versione di ONTAP in uso.
+
+. Rimuovere il modulo di caching:
++
+image::../media/drw_9000_remove_flashcache.png[drw 9000 rimuovere flashcache]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Pulsante di rilascio arancione.
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Handle CAM del modulo di caching.
+
+|===
++
+.. Premere il pulsante di rilascio arancione sulla parte anteriore del modulo di caching.
++
+
+NOTE: Non utilizzare il latch i/o Cam numerato e con lettere per espellere il modulo di caching. Il latch i/o Cam numerato e con lettere espelle l'intero modulo NVRAM10 e non il modulo di caching.
+
+.. Ruotare l'impugnatura della camma fino a quando il modulo di caching inizia a scorrere fuori dal modulo NVRAM10.
+.. Tirare delicatamente la maniglia della camma verso di sé per rimuovere il modulo di caching dal modulo NVRAM10.
++
+Assicurarsi di supportare il modulo di caching durante la rimozione dal modulo NVRAM10.
+
+
+
+. Installare il modulo di caching:
++
+.. Allineare i bordi del modulo di caching con l'apertura nel modulo NVRAM10.
+.. Spingere delicatamente il modulo di caching nell'alloggiamento fino a quando la maniglia della camma non si aggancia.
+.. Ruotare la maniglia della camma fino a bloccarla in posizione.
+
+
+. Portare online il modulo di caching sostitutivo utilizzando `system controller slot module insert` eseguire il comando come segue:
++
+Il seguente comando prepara lo slot 6-2 sul nodo 1 per l'accensione e visualizza un messaggio che indica che è acceso:
+
++
+[listing]
+----
+::> system controller slot module insert -node node1 -slot 6-2
+
+Warning: NVMe module in slot 6-2 of the node localhost will be powered on and initialized.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. Verificare lo stato dello slot utilizzando `system controller slot module show` comando.
++
+Assicurarsi che l'output del comando segnali lo stato per lo slot 6-1 o 6-2 come `powered-on` e pronto per il funzionamento.
+
+. Verificare che il modulo di caching sostitutivo sia online e riconosciuto, quindi verificare visivamente che il LED di attenzione ambra non sia acceso: `sysconfig -av slot_number`
++
+
+NOTE: Se si sostituisce il modulo di caching con un modulo di caching di un altro vendor, il nuovo nome vendor viene visualizzato nell'output del comando.
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"^] per ulteriori informazioni.
+

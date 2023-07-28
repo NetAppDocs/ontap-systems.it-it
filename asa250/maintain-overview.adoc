@@ -1,0 +1,74 @@
+---
+permalink: asa250/maintain-overview.html 
+sidebar: sidebar 
+keywords: asa A250 maintenance, maintenance, repairing A250, repairing asa A250, replace asa A250 components, replace asa A250 components 
+summary: 'Manutenzione dell"hardware ASA A250' 
+---
+= Manutenzione dell'hardware ASA A250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il sistema storage ASA A250, è possibile eseguire le procedure di manutenzione dei seguenti componenti.
+
+
+
+== Supporto di boot
+
+Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+
+== Chassis
+
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
+
+
+
+== DIMM
+
+È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
+
+
+
+== Disco
+
+Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
+
+
+
+== Ventola
+
+La ventola raffredda il controller.
+
+
+
+== Scheda mezzanino
+
+Una scheda Mezzanine è una scheda a circuito stampato che si collega direttamente a un'altra scheda plug-in.
+
+
+
+== Batteria NVEM
+
+Una batteria è inclusa nel controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+
+
+
+== Alimentatore
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
+
+
+
+== Batteria con orologio in tempo reale
+
+Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.

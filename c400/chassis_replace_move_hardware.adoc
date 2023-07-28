@@ -1,7 +1,7 @@
 ---
 permalink: c400/chassis-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: aff c400, aff, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, diagnostic, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, run diagnostics, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
+keywords: aff c400, aff, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, run, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: 'Spostare le ventole, i dischi rigidi e il modulo controller o i moduli dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis compromesso dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.' 
 ---
 = Sostituire l'hardware - AFF C400
@@ -11,7 +11,7 @@ summary: 'Spostare le ventole, i dischi rigidi e il modulo controller o i moduli
 
 
 [role="lead"]
-Spostare le ventole, i dischi rigidi e il modulo controller o i moduli dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis compromesso dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.
+Spostare le ventole, i dischi rigidi e il modulo controller dallo chassis compromesso al nuovo chassis e sostituire lo chassis compromesso con quello nuovo dello stesso modello dello chassis compromesso.
 
 
 
@@ -84,7 +84,7 @@ Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis e
 
 == Fase 4: Installare i moduli controller
 
-Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo in uno stato in cui è possibile eseguire il test diagnostico.
+Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo.
 
 Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
 

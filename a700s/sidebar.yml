@@ -1,7 +1,6 @@
 ---
 section: a700s
 title: Sistemi AFF A700s
-url: "/a700s/index.html"
 entries:
 - title: Installazione e configurazione
   pdf-filename: Installazione e configurazione di AFF A700s
@@ -17,6 +16,8 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A700
   entries:
+  - title: Panoramica
+    url: "/a700s/maintain-overview.html"
   - title: Supporto di boot
     pdf-filename: Supporti di avvio AFF A700s
     entries:
@@ -86,5 +87,3 @@ entries:
   - title: Batteria con orologio in tempo reale
     pdf-filename: Batteria con clock in tempo reale AFF A700s
     url: "/a700s/rtc-battery-replace.html"
-  - title: Diagnostica a livello di sistema
-    url: "/a700s/system-level-diags-linkout.html"

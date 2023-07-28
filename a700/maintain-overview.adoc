@@ -1,0 +1,92 @@
+---
+permalink: a700/maintain-overview.html 
+sidebar: sidebar 
+keywords: aff A700 maintenance, maintenance, repairing A700, repairing aff A700, replace aff A700 components, replace aff A700 components 
+summary: 'Manutenzione dell"hardware ASA A700' 
+---
+= Manutenzione dell'hardware AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il sistema storage AFF A700, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
+
+
+
+== Supporto di boot
+
+Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+
+== Modulo di caching
+
+È necessario sostituire il modulo di caching del controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline.
+
+
+
+== Chassis
+
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
+
+
+
+== DCPM
+
+Il DCPM (destage controller power module) contiene la batteria NVRAM11.
+
+
+
+== DIMM
+
+È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
+
+
+
+== Ventola
+
+La ventola raffredda il controller.
+
+
+
+== Modulo i/O.
+
+Il modulo i/o (modulo Input/Output) è un componente hardware che funge da intermediario tra il controller e vari dispositivi o sistemi che devono scambiare dati con il controller.
+
+
+
+== USB LED
+
+Il modulo LED USB fornisce connettività alle porte della console e allo stato del sistema.
+
+
+
+== NVRAM
+
+Il modulo NVRAM (non-volatile Random Access Memory) consente al controller di conservare i dati durante i cicli di alimentazione o il riavvio del sistema.
+
+
+
+== Alimentatore
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
+
+
+
+== Batteria con orologio in tempo reale
+
+Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.
+
+
+
+== Modulo X91148A
+
+Il modulo X91148A è un modulo i/o che funge da intermediario tra il controller e vari dispositivi o sistemi che devono scambiare dati con il controller.

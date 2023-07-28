@@ -1,0 +1,50 @@
+---
+permalink: a700/dcpm-power-replace.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, replace, dcpm, module, fail 
+summary: Per sostituire il modulo DCPM nel sistema, è necessario rimuovere il modulo DCPM guasto dal sistema e sostituirlo con un nuovo modulo DCPM. 
+---
+= Sostituire il modulo DCPM - AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il modulo DCPM nel sistema, è necessario rimuovere il modulo DCPM guasto dal sistema e sostituirlo con un nuovo modulo DCPM.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello anteriore del sistema e metterlo da parte.
+. Individuare il modulo DCPM guasto nella parte anteriore del sistema cercando il LED di attenzione sul modulo.
++
+Se il modulo è guasto, il LED diventa ambra fisso.
+
++
+
+NOTE: Il modulo DCPM deve essere sostituito nello chassis entro cinque minuti dalla rimozione, altrimenti il controller associato si spegnerà.
+
+. Premere il pulsante di blocco arancione sulla maniglia del modulo, quindi far scorrere il modulo DCPM fuori dal telaio.
++
+image::../media/drw_9000_remove_nv_battery.png[drw 9000 rimuovere la batteria nv]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Pulsante di blocco arancione del modulo DCPM
+
+|===
+. Allineare l'estremità del modulo DCPM con l'apertura dello chassis, quindi farlo scorrere delicatamente nello chassis fino a farlo scattare in posizione.
++
+
+NOTE: Il modulo e lo slot sono dotati di chiavi. Non forzare il modulo nell'apertura. Se il modulo non si inserisce facilmente, riallineare il modulo e inserirlo nello chassis.
+
++
+Il LED del modulo DCPM si accende quando il modulo è completamente inserito nel telaio.
+
+

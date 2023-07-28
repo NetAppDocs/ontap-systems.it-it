@@ -1,0 +1,359 @@
+---
+permalink: asa800/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: asa a800, replace a pcie card 
+summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuovere i moduli SFP e QSFP dalle schede prima di rimuovere il riser, reinstallare il riser, quindi reinstallare i moduli SFP e QSFP prima di collegare le schede. 
+---
+= Sostituire la scheda PCIe - ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuovere i moduli SFP e QSFP dalle schede prima di rimuovere il riser, reinstallare il riser, quindi reinstallare i moduli SFP e QSFP prima di collegare le schede.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[rimozione del modulo pcm drw a800]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Fermo di bloccaggio 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
++
+.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
++
+image::../media/drw_a800_open_air_duct.png[condotto d'aria aperto drw a800]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Linguette di bloccaggio del condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Far scorrere il condotto dell'aria verso i moduli delle ventole
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Ruotare il condotto dell'aria verso i moduli delle ventole
+
+|===
+
+
+
+
+
+
+== Fase 3: Sostituire una scheda PCIe
+
+Per sostituire una scheda PCIe, è necessario rimuovere il cablaggio ed eventuali QSFP e SFP dalle porte delle schede PCIe nel riser di destinazione, rimuovere il riser dal modulo controller, rimuovere e sostituire la scheda PCIe, reinstallare il riser ed eventuali QSFP e SFP sulle porte, e cablare le porte.
+
+. Determinare se la scheda che si sta sostituendo è di tipo Riser 1 o Riser 2 o 3.
++
+** Se si sta sostituendo la scheda PCIe 100GbE in Riser 1, seguire i passaggi 2 - 3 e 6 - 7.
+** Se si sta sostituendo una scheda PCIe da Riser 2 o 3, seguire i passaggi da 4 a 7.
+
+
+. Rimuovere il riser 1 dal modulo controller:
++
+.. Rimuovere i moduli QSFP che potrebbero trovarsi nella scheda PCIe.
+.. Ruotare verso l'alto e verso i moduli delle ventole il fermo di blocco del riser sul lato sinistro del riser.
++
+Il riser si solleva leggermente dal modulo controller.
+
+.. Sollevare il riser, spostarlo verso le ventole in modo che il bordo di lamiera del riser si allontani dal bordo del modulo controller, sollevare il riser ed estrarlo dal modulo controller, quindi posizionarlo su una superficie piana e stabile.
++
+image::../media/drw_a800_pcie_1_replace.png[sostituzione drw a800 pcie 1]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo di bloccaggio del riser
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Staffa di blocco della scheda
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Riser 1 (riser sinistro) con scheda PCIe 100GbE nello slot 1.
+
+|===
+
+
+. Rimuovere la scheda PCIe dal riser 1:
++
+.. Ruotare il riser in modo da poter accedere alla scheda PCIe.
+.. Premere la staffa di blocco sul lato del riser PCIe, quindi ruotarla in posizione aperta.
+.. Rimuovere la scheda PCIe dal riser.
+
+
+. Rimuovere il riser PCIe dal modulo controller:
++
+.. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
+.. Ruotare verso l'alto e verso i moduli delle ventole il fermo di blocco del riser sul lato sinistro del riser.
++
+Il riser si solleva leggermente dal modulo controller.
+
+.. Sollevare il riser, spostarlo verso le ventole in modo che il bordo di lamiera del riser si allontani dal bordo del modulo controller, sollevare il riser ed estrarlo dal modulo controller, quindi posizionarlo su una superficie piana e stabile.
++
+image::../media/drw_a800_pcie_2_5_replace.gif[drw a800 pcie 2 5 sostituire]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Fermo di blocco del riser 2 (riser centrale) o 3 (riser destro)
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Staffa di blocco della scheda
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Pannello laterale sul riser 2 o 3
+
+
+
+ a| 
+image:../media/legend_icon_05.png[""]
+ a| 
+Schede PCIe nel riser 2 o 3
+
+|===
+
+
+. Rimuovere la scheda PCIe dal riser:
++
+.. Ruotare il riser in modo da poter accedere alle schede PCIe.
+.. Premere la staffa di blocco sul lato del riser PCIe, quindi ruotarla in posizione aperta.
+.. Estrarre il pannello laterale dal riser.
+.. Rimuovere la scheda PCIe dal riser.
+
+
+. Installare la scheda PCIe nello stesso slot del riser:
++
+.. Allineare la scheda con lo slot del riser, quindi inserirla correttamente nello slot del riser.
++
+
+NOTE: Assicurarsi che la scheda sia inserita correttamente nella presa del riser.
+
+.. Per Riser 2 o 3, chiudere il pannello laterale.
+.. Ruotare il fermo di bloccaggio in posizione fino a quando non scatta in posizione di blocco.
+
+
+. Installare il riser nel modulo controller:
++
+.. Allineare il bordo del riser con la parte inferiore della lamiera del modulo controller.
+.. Guidare il riser lungo i pin nel modulo controller, quindi abbassare il riser nel modulo controller.
+.. Ruotare il fermo di bloccaggio verso il basso e farlo scattare in posizione di blocco.
++
+Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del riser e il riser è posizionato correttamente nel modulo controller.
+
+.. Reinserire tutti i moduli SFP rimossi dalle schede PCIe.
+
+
+
+
+
+
+== Fase 4: Reinstallare il modulo controller
+
+Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema e avviarlo.
+
+. In caso contrario, chiudere il condotto dell'aria:
++
+.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
+.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
+.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
++
+image::../media/drw_a800_close_air_duct.png[drw a800 chiudere il condotto dell'aria]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Linguette di bloccaggio 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Far scorrere lo stantuffo
+
+|===
+
+
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
+. Collegare i cavi di alimentazione agli alimentatori e reinstallare i fermi dei cavi di alimentazione.
+. Completare la reinstallazione del modulo controller:
++
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+.. Ruotare i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, quindi abbassarli in posizione di blocco.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+
+
+. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 5: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

@@ -1,7 +1,6 @@
 ---
 section: a150
 title: Sistemi AFF A150
-url: "/a150/index.html"
 entries:
 - title: Installazione e configurazione
   pdf-filename: Installazione e configurazione di AFF A150
@@ -17,6 +16,8 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A150
   entries:
+  - title: Panoramica
+    url: "/a150/maintain-overview.html"
   - title: Supporto di boot
     pdf-filename: Supporti di avvio AFF A150
     entries:
@@ -44,7 +45,7 @@ entries:
       url: "/a150/chassis-replace-overview.html"
     - title: Spegnere il controller compromesso
       url: "/a150/chassis-replace-shutdown.html"
-    - title: Sostituire l'hardware
+    - title: Sostituire il telaio
       url: "/a150/chassis-replace-move-hardware.html"
     - title: Ripristinare la configurazione
       url: "/a150/chassis-replace-complete-system-restore-rma.html"
@@ -55,7 +56,7 @@ entries:
       url: "/a150/controller-replace-overview.html"
     - title: Spegnere il controller compromesso
       url: "/a150/controller-replace-shutdown.html"
-    - title: Sostituire l'hardware del controller
+    - title: Sostituire il controller
       url: "/a150/controller-replace-move-hardware.html"
     - title: Ripristinare la configurazione del sistema
       url: "/a150/controller-replace-system-config-restore-and-verify.html"

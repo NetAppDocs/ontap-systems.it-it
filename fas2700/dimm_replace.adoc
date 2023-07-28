@@ -1,10 +1,10 @@
 ---
 permalink: fas2700/dimm-replace.html 
 sidebar: sidebar 
-keywords: fas2700, aff, a220, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, diagnostics, module, filed, part, aggregates, 
+keywords: fas2700, aff, a220, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall,  module, filed, part, aggregates, 
 summary: 'È necessario sostituire un modulo DIMM nel modulo controller quando il sistema registra un numero crescente di codici di correzione degli errori correggibili (ECC); in caso contrario, si verifica un errore di sistema.' 
 ---
-= Sostituire un modulo DIMM - AFF A220 e FAS2700
+= Sostituire un DIMM - FAS2700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -194,7 +194,7 @@ Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di re
  a| 
 Una coppia ha
  a| 
-Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
 
 .. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.
 +
@@ -206,12 +206,6 @@ Il controller inizia ad avviarsi non appena viene inserito nello chassis.
 
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
 .. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
-.. Quando viene visualizzato il messaggio `Press Ctrl-C for Boot Menu`, premere `Ctrl-C` per interrompere il processo di avvio.
-+
-
-NOTE: Se il prompt non viene visualizzato e il modulo controller viene avviato in ONTAP, immettere `halt`, Quindi, al prompt DEL CARICATORE, immettere `boot_ontap`, premere `Ctrl-C` Quando richiesto, quindi avviare in modalità manutenzione.
-
-.. Selezionare l'opzione per avviare la modalità di manutenzione dal menu visualizzato.
 
 
 
@@ -226,12 +220,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
 .. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
-.. Ricollegare i cavi di alimentazione agli alimentatori e alle fonti di alimentazione, accendere l'alimentazione per avviare il processo di avvio, quindi premere `Ctrl-C` dopo aver visualizzato `Press Ctrl-C for Boot Menu` messaggio.
-+
-
-NOTE: Se il prompt non viene visualizzato e il modulo controller viene avviato in ONTAP, immettere `halt`, Quindi, al prompt DEL CARICATORE, immettere `boot_ontap`, premere `Ctrl-C` Quando richiesto, quindi avviare in modalità manutenzione.
-
-.. Dal menu di avvio, selezionare l'opzione per la modalità di manutenzione.
+.. Ricollegare i cavi di alimentazione agli alimentatori e alle fonti di alimentazione, quindi accendere l'alimentazione per avviare il processo di avvio.
 
 
 |===
@@ -239,143 +228,7 @@ NOTE: Se il prompt non viene visualizzato e il modulo controller viene avviato i
 
 
 
-== Fase 5: Eseguire la diagnostica a livello di sistema
-
-Dopo aver installato un nuovo DIMM, eseguire la diagnostica.
-
-Per avviare la diagnostica a livello di sistema, il sistema deve essere al prompt DEL CARICATORE.
-
-Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
-
-.Fasi
-. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, attenersi alla seguente procedura:
-+
-.. Selezionare l'opzione Maintenance mode (modalità manutenzione) dal menu visualizzato.
-.. Una volta avviato il controller in modalità di manutenzione, arrestare il controller: `halt`
-+
-Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-+
-
-NOTE: Durante il processo di avvio, è possibile rispondere in modo sicuro `y` a prompt:
-
-+
-*** Un messaggio di avviso che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo.
-
-
-
-
-. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
-+
-Durante il processo di avvio, è possibile rispondere in modo sicuro `y` Fino a visualizzare il prompt della modalità di manutenzione (*>).
-
-. Eseguire la diagnostica sulla memoria di sistema: `sldiag device run -dev mem`
-. Verificare che la sostituzione dei DIMM non abbia causato problemi hardware: `sldiag device status -dev mem -long -state failed`
-+
-La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
-
-. Procedere in base al risultato del passaggio precedente:
-+
-[cols="1,2"]
-|===
-| Se il test di diagnostica a livello di sistema... | Quindi... 
-
-
- a| 
-Sono stati completati senza guasti
- a| 
-.. Cancellare i registri di stato: `sldiag device clearstatus`
-.. Verificare che il registro sia stato cancellato: `sldiag device status`
-+
-Viene visualizzata la seguente risposta predefinita:
-
-+
-SLDIAG: Nessun messaggio di log presente.
-
-.. Uscire dalla modalità di manutenzione: `halt`
-+
-Il controller visualizza il prompt DEL CARICATORE.
-
-.. Avviare il controller dal prompt DEL CARICATORE: `bye`
-.. Riportare il controller al funzionamento normale:
-
-
-|===
-+
-[cols="1,2"]
-|===
-| Se il controller si trova in... | Quindi... 
-
-
- a| 
-Una coppia ha
- a| 
-Eseguire un give back: `storage failover giveback -ofnode _replacement_node_name_`
-
-
-NOTE: Se il giveback automatico è stato disattivato, riattivarlo con il comando di modifica del failover dello storage.
-
-
-
- a| 
-Una configurazione MetroCluster a due nodi
- a| 
-Passare alla fase successiva.
-
-La procedura di switchback MetroCluster viene eseguita nell'attività successiva del processo di sostituzione.
-
-
-
- a| 
-Una configurazione standalone
- a| 
-Passare alla fase successiva.
-
-Non è richiesta alcuna azione.
-
-La diagnostica a livello di sistema è stata completata.
-
-
-
- a| 
-Ha causato alcuni errori di test
- a| 
-Determinare la causa del problema:
-
-.. Uscire dalla modalità di manutenzione: `halt`
-+
-Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-.. Spegnere o lasciare accesi gli alimentatori, a seconda del numero di moduli controller presenti nello chassis:
-+
-*** Se nello chassis sono presenti due moduli controller, lasciare accesi gli alimentatori per fornire alimentazione all'altro modulo controller.
-*** Se nello chassis è presente un modulo controller, spegnere gli alimentatori e scollegarli dalle fonti di alimentazione.
-
-
-.. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
-.. Avviare il modulo controller che si sta eseguendo la manutenzione, interrompendo l'avvio premendo `Ctrl-C` Quando viene richiesto di accedere al menu di avvio:
-+
-*** Se nello chassis sono presenti due moduli controller, inserire completamente il modulo controller che si sta eseguendo la manutenzione nello chassis.
-+
-Il modulo controller si avvia quando è completamente inserito.
-
-*** Se si dispone di un modulo controller nello chassis, collegare gli alimentatori e accenderli.
-
-
-.. Selezionare Boot to maintenance mode (Avvia alla modalità di manutenzione) dal menu.
-.. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
-+
-Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-.. Eseguire nuovamente il test diagnostico a livello di sistema.
-
-
-|===
-
-
-
-
-== Fase 6: Switch back aggregates in una configurazione MetroCluster a due nodi
+== Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
 
@@ -433,6 +286,6 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
-== Fase 7: Restituire il componente guasto a NetApp
+== Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

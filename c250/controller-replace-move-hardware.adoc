@@ -17,7 +17,6 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 == Fase 1: Rimuovere il modulo controller
 
-[role="lead"]
 È necessario rimuovere il modulo controller dallo chassis quando si sostituisce un componente all'interno del modulo controller.
 
 Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
@@ -84,7 +83,6 @@ image::../media/drw_a250_remove_airduct_cover.png[rimuovere il coperchio del con
 
 == Fase 2: Spostare l'alimentatore
 
-[role="lead"]
 Quando si sostituisce un modulo controller, è necessario spostare l'alimentatore dal modulo controller guasto al modulo controller sostitutivo.
 
 . Scollegare l'alimentatore.
@@ -132,7 +130,6 @@ CAUTION: Per evitare di danneggiare il connettore interno, non esercitare una fo
 
 == Fase 3: Spostare le ventole
 
-[role="lead"]
 Quando si sostituisce un modulo controller guasto, è necessario spostare le ventole dal modulo controller danneggiato al modulo sostitutivo.
 
 . Rimuovere il modulo della ventola pizzicando il lato del modulo della ventola, quindi sollevandolo per estrarlo dal modulo del controller.
@@ -156,8 +153,7 @@ image:../media/legend_icon_01.png[""]
 
 == Fase 4: Spostare il supporto di avvio
 
-[role="lead"]
-Nel AFF C250, sotto il condotto dell'aria nel modulo controller, è presente un dispositivo di avvio. È necessario spostarlo dal modulo controller compromesso al modulo controller sostitutivo.
+Nel sistema AFF A250, sotto il condotto dell'aria nel modulo controller, è presente un dispositivo di avvio. È necessario spostarlo dal modulo controller compromesso al modulo controller sostitutivo.
 
 Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a croce magnetico n. 1. A causa dei limiti di spazio all'interno del modulo controller, è necessario disporre anche di un magnete per trasferire la vite in modo da non perderla.
 
@@ -197,7 +193,6 @@ NOTE: Non esercitare forza durante il serraggio della vite sul supporto di avvio
 
 == Fase 5: Spostamento dei DIMM
 
-[role="lead"]
 Per spostare i moduli DIMM, individuarli e spostarli dal controller compromesso al controller sostitutivo e seguire la sequenza specifica dei passaggi.
 
 image::../media/drw_a250_dimm_replace.png[sostituzione del modulo dimm drw a250]
@@ -223,7 +218,6 @@ I DIMM sono inseriti saldamente nello zoccolo. In caso contrario, reinserire il 
 
 == Fase 6: Spostamento di una scheda mezzanine
 
-[role="lead"]
 Per spostare una scheda mezzanine, è necessario rimuovere il cablaggio e gli eventuali QSFP e SFP dalle porte, spostare la scheda mezzanine nel controller sostitutivo, reinstallare eventuali QSFP e SFP sulle porte e cablare le porte.
 
 . Individuare e spostare le schede mezzanine dal modulo controller compromesso.
@@ -277,7 +271,6 @@ NOTE: Non esercitare una forza durante il serraggio della vite sulla scheda mezz
 
 == Fase 7: Spostare la batteria NV
 
-[role="lead"]
 Quando si sostituisce il modulo controller, è necessario spostare la batteria NV dal modulo controller guasto al modulo controller sostitutivo.
 
 . Individuare e spostare la batteria NVMEM dal modulo controller guasto al modulo controller sostitutivo.
@@ -326,7 +319,6 @@ Estrarre la batteria dal supporto e dal modulo controller.
 
 == Fase 8: Installare il modulo controller
 
-[role="lead"]
 Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
 
 Per installare il modulo controller sostitutivo nel telaio, è possibile utilizzare le seguenti illustrazioni o i passaggi scritti.

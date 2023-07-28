@@ -11,7 +11,7 @@ summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo
 
 
 [role="lead"]
-Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.
+Spostare gli alimentatori, i dischi rigidi e il modulo controller dallo chassis compromesso al nuovo chassis e sostituire lo chassis compromesso con quello nuovo dello stesso modello dello chassis compromesso.
 
 
 
@@ -110,7 +110,7 @@ Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis e
 
 == Fase 4: Installare i moduli controller
 
-Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo in uno stato in cui è possibile eseguire il test diagnostico.
+Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo.
 
 Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
 

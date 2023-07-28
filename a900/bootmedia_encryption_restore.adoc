@@ -11,14 +11,12 @@ summary: 'Una volta controllate le variabili di ambiente, è necessario completa
 
 
 [role="lead"]
-Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per ripristinare Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) e NetApp Volume Encryption (NVE).
+Dopo aver controllato le variabili di ambiente, è necessario completare la procedura specifica per ripristinare il gestore delle chiavi integrato (OKM), la crittografia dello storage NetApp (NSE) e la crittografia del volume NetApp (NVE).
 
-. Determinare la sezione da utilizzare per ripristinare le configurazioni OKM, NSE o NVE: Se NSE o NVE sono attivati insieme a Onboard Key Manager, è necessario ripristinare le impostazioni acquisite all'inizio di questa procedura.
-+
-** Se NSE o NVE sono attivati e Onboard Key Manager è attivato, passare a. <<Restore NVE or NSE (Ripristina NVE o NSE) quando Onboard Key Manager è attivato>>.
-** Se NSE o NVE sono abilitati per ONTAP 9.6, passare a. <<Ripristinare NSE/NVE nei sistemi che eseguono ONTAP 9.6 e versioni successive>>.
+Determinare la sezione da utilizzare per ripristinare le configurazioni OKM, NSE o NVE: Se NSE o NVE sono attivati insieme a Onboard Key Manager, è necessario ripristinare le impostazioni acquisite all'inizio di questa procedura.
 
-
+* Se NSE o NVE sono attivati e Onboard Key Manager è attivato, passare a. <<Restore NVE or NSE (Ripristina NVE o NSE) quando Onboard Key Manager è attivato>>.
+* Se NSE o NVE sono abilitati per ONTAP 9.6, passare a. <<Ripristinare NSE/NVE nei sistemi che eseguono ONTAP 9.6 e versioni successive>>.
 
 
 

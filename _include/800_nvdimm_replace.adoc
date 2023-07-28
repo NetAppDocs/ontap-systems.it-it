@@ -1,0 +1,256 @@
+= Fase 1: Spegnere il controller compromesso
+:allow-uri-read: 
+
+
+È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[rimozione del modulo pcm drw a800]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Fermo di bloccaggio 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
++
+.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
++
+image::../media/drw_a800_open_air_duct.png[condotto d'aria aperto drw a800]
+
+
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Linguette di bloccaggio del condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Far scorrere il condotto dell'aria verso i moduli delle ventole
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Ruotare il condotto dell'aria verso i moduli delle ventole
+
+|===
+
+
+
+
+== Fase 3: Sostituire il modulo NVDIMM
+
+Per sostituire il modulo NVDIMM, individuarlo nel modulo del controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi sostituirlo seguendo la sequenza specifica dei passaggi.
+
+. Se si rimuove o si sposta un NVDIMM, sbloccare il fermo di blocco sul riser, quindi rimuovere il riser applicabile.
++
+image::../media/drw_a800_nvdimm_replace.png[drw a800 nvdimm sostituire]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Coperchio del condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser 2 e NVDIMM 11
+
+|===
+. Prendere nota dell'orientamento della NVDIMM nello zoccolo in modo da poter inserire la NVDIMM nel modulo del controller sostitutivo con l'orientamento corretto.
+. Estrarre il modulo NVDIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione del modulo NVDIMM su entrambi i lati del modulo, quindi estrarre il modulo NVDIMM dallo zoccolo e metterlo da parte.
++
+
+NOTE: Tenere il modulo NVDIMM dai bordi con cautela per evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo NVDIMM.
+
+. Rimuovere il modulo NVDIMM di ricambio dalla confezione antistatica, tenere il modulo NVDIMM per gli angoli, quindi allinearlo allo slot.
++
+La tacca tra i pin del modulo NVDIMM deve allinearsi con la linguetta del connettore.
+
+. Individuare lo slot in cui si desidera installare il modulo NVDIMM.
+. Inserire il modulo NVDIMM nello slot.
++
+Il modulo NVDIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il modulo NVDIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, il bordo superiore del modulo NVDIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del modulo NVDIMM.
+. Reinstallare eventuali riser rimossi dal modulo controller.
+. Chiudere il condotto dell'aria.
+
+
+
+
+== Fase 4: Reinstallare il modulo controller e avviare il sistema
+
+Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.
+
+. In caso contrario, chiudere il condotto dell'aria:
++
+.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
+.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
+.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
++
+image::../media/drw_a700s_close_air_duct.png[drw a700s chiudere il condotto dell'aria]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| Linguette di bloccaggio 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Far scorrere lo stantuffo
+
+|===
+
+
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Collegare il cavo di alimentazione all'alimentatore, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare l'alimentatore alla fonte di alimentazione.
+. Completare la reinstallazione del modulo controller:
++
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+
+.. Ruotare i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, quindi abbassarli in posizione di blocco.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+
+
+
+
+
+
+== Fase 4: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

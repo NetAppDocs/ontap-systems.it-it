@@ -1,0 +1,77 @@
+---
+section: asa250
+title: Sistemi ASA A250
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di ASA A250
+  entries:
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/asa250/install-setup.html"
+  - title: Passaggi rapidi
+    url: "/asa250/install-quick-guide.html"
+  - title: Video fasi
+    url: "/asa250/install-videos.html"
+  - title: Passaggi dettagliati
+    url: "/asa250/install-detailed-guide.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di ASA A250
+  entries:
+  - title: Panoramica
+    url: "/asa250/maintain-overview.html"
+  - title: Supporto di boot
+    pdf-filename: Supporti per l'avvio ASA A250
+    entries:
+    - title: Panoramica
+      url: "/asa250/bootmedia-replace-overview.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/asa250/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa250/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa250/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/asa250/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/asa250/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa250/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis ASA A250
+    entries:
+    - title: Panoramica
+      url: "/asa250/chassis-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa250/chassis-replace-shutdown.html"
+    - title: Sostituire il telaio
+      url: "/asa250/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa dello chassis
+      url: "/asa250/chassis-replace-complete-system-restore-rma.html"
+  - title: Controller
+    pdf-filename: Modulo controller A250 ASA
+    entries:
+    - title: Panoramica
+      url: "/asa250/controller-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa250/controller-replace-shutdown.html"
+    - title: Sostituire il controller
+      url: "/asa250/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/asa250/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema ricable
+      url: "/asa250/controller-replace-recable-reassign-disks.html"
+    - title: Ripristino completo del sistema
+      url: "/asa250/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/asa250/dimm-replace.html"
+  - title: Disco
+    url: "/asa250/drive-replace.html"
+  - title: Ventola
+    url: "/asa250/fan-replace.html"
+  - title: Scheda mezzanino
+    url: "/asa250/mezzanine-replace.html"
+  - title: Batteria NVMEM
+    url: "/asa250/nvmem-nvram-battery-replace.html"
+  - title: Alimentatore
+    url: "/asa250/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/asa250/rtc-battery-replace.html"

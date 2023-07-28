@@ -1,0 +1,123 @@
+= Fase 1: Rimuovere il modulo controller
+:allow-uri-read: 
+
+
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
++
+image::../media/drw_25xx_cable_management_arm.png[ARM di gestione dei cavi drw 25xx]
+
+. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
++
+image::../media/drw_2240_x_opening_cam_latch.png[drw 2240 x apertura del fermo a camma]
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio facendo scorrere le linguette blu per sganciarlo, quindi ruotare il coperchio verso l'alto e aprirlo.
++
+image::../media/drw_2600_opening_pcm_cover.png[drw 2600 apertura del coperchio del pcm]
+
+
+
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Individuare il supporto di avvio nel controller e seguire le istruzioni per sostituirlo.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
++
+image::../media/drw_2600_boot_media_move_aminated_gif.png[drw 2600 boot media move amined gif]
+
+. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+. Premere il supporto di avvio verso il basso per inserire il pulsante di blocco sull'alloggiamento del supporto di avvio.
+. Chiudere il coperchio del modulo controller.
+
+
+
+
+== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
+
+È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando un'unità flash USB su cui è installata l'immagine. Tuttavia, è necessario ripristinare il file system var durante questa procedura.
+
+* È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+
+
+.Fasi
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori di supporti (SFP) se sono stati rimossi.
+
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Inserire completamente il modulo controller nel sistema, assicurandosi che la maniglia della camma si allontani dall'unità flash USB, spingere con decisione la maniglia della camma per terminare l'inserimento del modulo controller, spingere la maniglia della camma in posizione chiusa, quindi serrare la vite a testa zigrinata.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+. Interrompere il processo di avvio per interrompere il CARICAMENTO premendo Ctrl-C quando viene visualizzato Avvio DI AUTOBOOT premere Ctrl-C per interrompere....
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+. Per i sistemi con un controller nello chassis, ricollegare l'alimentazione e accendere gli alimentatori.
++
+Il sistema inizia ad avviarsi e si arresta al prompt DEL CARICATORE.
+
+. Impostare il tipo di connessione di rete al prompt DEL CARICATORE:
++
+** Se si sta configurando DHCP: `ifconfig e0a -auto`
++
+
+NOTE: La porta di destinazione configurata è la porta di destinazione utilizzata per comunicare con il controller compromesso dal controller integro durante il ripristino del file system var con una connessione di rete. È anche possibile utilizzare la porta e0M in questo comando.
+
+** Se si configurano connessioni manuali: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
++
+*** Filer_addr è l'indirizzo IP del sistema di storage.
+*** Netmask è la maschera di rete della rete di gestione connessa al partner ha.
+*** gateway è il gateway per la rete.
+*** dns_addr è l'indirizzo IP di un name server sulla rete.
+*** dns_domain è il nome di dominio DNS (Domain Name System).
++
+Se si utilizza questo parametro opzionale, non è necessario un nome di dominio completo nell'URL del server netboot. È necessario solo il nome host del server.
+
+
+
+
+
++
+
+NOTE: Potrebbero essere necessari altri parametri per l'interfaccia. È possibile immettere `help ifconfig` al prompt del firmware per ulteriori informazioni.
+
+

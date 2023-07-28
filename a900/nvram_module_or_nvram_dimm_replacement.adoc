@@ -36,7 +36,6 @@ Poiché l'ID di sistema deriva dal modulo NVRAM, in caso di sostituzione del mod
 
 == Fase 1: Spegnere il controller compromesso
 
-.Fasi
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
 
 [role="tabbed-block"]
@@ -301,7 +300,7 @@ Schede di espulsione DIMM e DIMM
 
 
 
-== Fase 4: Riavviare il controller dopo la sostituzione della FRU
+== Fase 4: Riavviare il controller
 
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
@@ -310,7 +309,7 @@ Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
 
 
-== Fase 5: Riassegnazione dei dischi
+== Fase 5: Riassegnare i dischi
 
 È necessario confermare la modifica dell'ID di sistema al momento dell'avvio del controller sostitutivo e verificare che la modifica sia stata implementata.
 

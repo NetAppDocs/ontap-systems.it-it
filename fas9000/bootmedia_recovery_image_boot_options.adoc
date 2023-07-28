@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration 
 summary: 'La procedura per avviare il nodo con problemi dall"immagine di ripristino dipende dal fatto che il sistema si trovi in una configurazione MetroCluster a due nodi.' 
 ---
-= Avviare l'immagine di ripristino - AFF A700 e FAS9000
+= Avviare l'immagine di ripristino - FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ La procedura per avviare il nodo con problemi dall'immagine di ripristino dipend
 
 
 
-== Opzione 1 avviare l'immagine di ripristino nella maggior parte dei sistemi
+== Opzione 1: Avviare l'immagine di ripristino nella maggior parte dei sistemi
 
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 

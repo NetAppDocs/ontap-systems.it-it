@@ -1,10 +1,10 @@
 ---
 permalink: fas9000/dcpm-nvram10-battery-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, replace, destage, controller, power, module, nvram10, battery, dcpm, dispose, return, failed, part 
+keywords: fas9000, replace, destage, controller, power, module, nvram10, battery, dcpm, dispose, return, failed, part 
 summary: 'Per sostituire a caldo un modulo di alimentazione del controller di de-stage (DCPM), che contiene la batteria NVRAM10, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.' 
 ---
-= Modulo di alimentazione del controller di defase (DCPM) hot-swap - AFF A700 e FAS9000
+= Modulo di alimentazione del controller (DCPM) hot-swap - FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ Per sostituire a caldo un modulo di alimentazione del controller di de-stage (DC
 
 
 
-== Sostituzione del modulo DCPM
+== Fase 1: Sostituire il modulo DCPM
 
 Per sostituire il modulo DCPM nel sistema, è necessario rimuovere il modulo DCPM guasto dal sistema e sostituirlo con un nuovo modulo DCPM.
 
@@ -58,7 +58,7 @@ Il LED del modulo DCPM si accende quando il modulo è completamente inserito nel
 
 
 
-== Smaltire le batterie
+== Fase 2: Smaltire le batterie
 
 È necessario smaltire le batterie in conformità alle normative locali in materia di riciclaggio o smaltimento delle batterie. Se non si riesce a smaltire correttamente le batterie, è necessario restituirle a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 
@@ -66,6 +66,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMP12475945[]
 
 
 
-== Restituire la parte guasta a NetApp
+== Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

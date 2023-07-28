@@ -18,6 +18,12 @@ La procedura per avviare il controller compromesso dall'immagine di ripristino d
 == Opzione 1: La maggior parte dei sistemi
 
 [role="lead"]
+La procedura per avviare il controller compromesso dall'immagine di ripristino dipende dalla configurazione MetroCluster a due nodi del sistema.
+
+
+
+== Opzione 1: La maggior parte dei sistemi
+
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
 Questa procedura si applica ai sistemi che non si trovano in una configurazione MetroCluster a due nodi.
@@ -110,7 +116,6 @@ Se le interfacce sono elencate come "false", ripristinarle alla porta home utili
 
 == Opzione 2: Controller in un MetroCluster a due nodi
 
-[role="lead"]
 È necessario avviare l'immagine ONTAP dall'unità USB e verificare le variabili ambientali.
 
 Questa procedura si applica ai sistemi in una configurazione MetroCluster a due nodi.

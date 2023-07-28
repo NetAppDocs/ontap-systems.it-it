@@ -1,13 +1,68 @@
 ---
-layout: landing-page 
-sidebar: sidebar 
 permalink: a150/index.html 
-summary: La documentazione del sistema di storage consente di installare, configurare e gestire il sistema. 
+sidebar: sidebar 
+keywords: aff A150 maintenance, maintenance, repairing a150, repairing aff a150, replace aff a150 components, replace aff a150 components 
+summary: 'Manutenzione dell"hardware ASA A150' 
 ---
-= Documentazione del sistema AFF A150
-:hardbreaks:
+= Manutenzione dell'hardware ASA A150
 :allow-uri-read: 
-:linkattrs: 
-:imagesdir: ./media/
+:icons: font
+:imagesdir: ../media/
 
 
+[role="lead"]
+Per il sistema storage AFF A150, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
+
+
+
+== Supporto di boot
+
+Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+
+== Modulo di caching
+
+È necessario sostituire il modulo di caching del controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline.
+
+
+
+== Chassis
+
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
+
+
+
+== DIMM
+
+È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
+
+
+
+== Disco
+
+Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
+
+
+
+== Batteria NVEM
+
+Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+
+
+
+== Alimentatore
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
+
+
+
+== Batteria con orologio in tempo reale
+
+Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.

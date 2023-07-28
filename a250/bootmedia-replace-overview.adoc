@@ -14,9 +14,9 @@ summary: 'Il supporto di avvio memorizza un set primario e secondario di file di
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio.
 
 .Prima di iniziare
-È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
+* È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
+* È inoltre necessario copiare il `image_xxx.tgz` Sul disco flash USB per utilizzarlo successivamente in questa procedura.
 
-È inoltre necessario copiare il `image_xxx.tgz` Sul disco flash USB per utilizzarlo successivamente in questa procedura.
 
 .A proposito di questa attività
 * I metodi senza interruzioni e senza interruzioni per la sostituzione di un supporto di avvio richiedono entrambi il ripristino di `var` file system:

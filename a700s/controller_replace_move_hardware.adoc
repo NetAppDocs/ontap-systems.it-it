@@ -169,7 +169,10 @@ NOTE: Assicurarsi che la scheda sia inserita correttamente nella presa del riser
 
 == Fase 3: Spostare le schede PCIe
 
-Come parte del processo di sostituzione del controller, è necessario rimuovere entrambi i moduli riser PCIe, Riser 2 (riser centrale) e Riser 3 (riser all'estrema destra) dal modulo controller compromesso, rimuovere le schede PCIe dai moduli riser, e installarli negli stessi moduli riser nel modulo controller sostitutivo. I moduli riser verranno installati nel modulo controller sostitutivo una volta spostati i DIMM nel modulo controller sostitutivo.
+Come parte del processo di sostituzione del controller, è necessario rimuovere entrambi i moduli riser PCIe, Riser 2 (riser centrale) e Riser 3 (riser all'estrema destra) dal modulo controller compromesso, rimuovere le schede PCIe dai moduli riser, e installare le schede negli stessi moduli riser nel modulo controller sostitutivo. I moduli riser verranno installati nel modulo controller sostitutivo una volta spostati i DIMM nel modulo controller sostitutivo.
+
+
+IMPORTANT: Non installare i riser dal modulo controller guasto nel modulo controller sostitutivo.
 
 . Rimuovere il riser PCIe dal modulo controller:
 +
@@ -222,13 +225,13 @@ Riser 2 (riser centrale) e schede PCI negli slot riser 2 e 3.
 
 
 . Rimuovere il riser corrispondente dal modulo controller sostitutivo.
-. Installare la scheda PCIe nello stesso slot del riser PCIe:
+. Installare la scheda PCIe nel riser dal controller sostitutivo, quindi reinstallare il riser nel controller sostitutivo:
 +
 .. Allineare la scheda alla relativa guida sul riser e allo zoccolo del riser, quindi inserirla correttamente nello slot del riser.
 +
+Assicurarsi che la scheda sia inserita correttamente nella presa del riser.
 
-NOTE: Assicurarsi che la scheda sia inserita correttamente nella presa del riser.
-
+.. Reinstallare il riser nel modulo controller sostitutivo.
 .. Ruotare il fermo di bloccaggio in posizione fino a quando non scatta in posizione di blocco.
 
 

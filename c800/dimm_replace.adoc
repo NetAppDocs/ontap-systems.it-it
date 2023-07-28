@@ -21,56 +21,18 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 == Fase 1: Spegnere il controller compromesso
 
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-.A proposito di questa attività
-* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
-* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
-+
-Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-
+Possibilità di ricable le connessioni di rete e di storage del modulo controller.
 
 .Fasi
-. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. Ricable del sistema.
+. Verificare che il cablaggio sia corretto utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
 +
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-+
-
-NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
-
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
+.. Scaricare e installare Config Advisor.
+.. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
+.. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
+.. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
 
 
- a| 
-Il prompt DEL CARICATORE
- a| 
-Andare a Rimozione del modulo controller.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password
- a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
 
 
 
@@ -260,42 +222,16 @@ I fermi di bloccaggio si sollevano quando il modulo controller è completamente 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
 +
-Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
 
 .. Ruotare i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, quindi abbassarli in posizione di blocco.
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
-.. Interrompere il normale processo di avvio premendo `Ctrl-C`.
 
 
 
 
 
 
-== Fase 5: Eseguire la diagnostica
-
-Dopo aver sostituito un componente del sistema, è necessario eseguire test diagnostici su tale componente.
-
-Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
-
-Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
-
-. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node node_name`
-+
-Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
-. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
-. Selezionare *Test Memory* dal menu visualizzato.
-. Procedere in base al risultato del passaggio precedente:
-+
-** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
-** Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
-
-
-
-
-
-
-== Fase 6: Restituire la parte guasta a NetApp
+== Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

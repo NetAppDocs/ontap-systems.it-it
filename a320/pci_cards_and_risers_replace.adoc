@@ -1,7 +1,7 @@
 ---
 permalink: a320/pci-cards-and-risers-replace.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, replace, pcie, card, disconnect, cable, card, sfp, qsfp, module, riser, reinstall, shut, down, controller, operation, diagnostic, complete, process, replace a pcie card, shut down the impaired controller, remove the controller module, replace a pcie card, install the controller module, restore the controller module to operation after running diagnostics, complete the replacement process 
+keywords: aff, a320, aff a320, replace, pcie, card, disconnect, cable, card, sfp, qsfp, module, riser, reinstall, shut, down, controller, operation, complete, process, replace a pcie card, shut down the impaired controller, remove the controller module, replace a pcie card, install the controller module, restore the controller module to operation, complete the replacement process 
 summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuovere i moduli SFP e QSFP dalle schede prima di rimuovere il riser, reinstallare il riser, quindi reinstallare i moduli SFP e QSFP prima di collegare le schede. 
 ---
 = Sostituire una scheda PCIe - AFF A320
@@ -147,7 +147,7 @@ image::../media/drw_a320_pci_card_replace_animated_gif.png[scheda pci drw a320 s
 
 == 4 settembre: Installare il modulo controller
 
-Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
+Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo.
 
 . Se non è già stato fatto, chiudere il condotto dell'aria sul retro del modulo controller e reinstallare il coperchio sulle schede PCIe.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
@@ -179,7 +179,6 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 .. Rilasciare i fermi per bloccare il modulo controller in posizione.
 .. Rieseguire l'alimentatore.
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
-.. Interrompere il normale processo di avvio premendo `Ctrl-C`.
 
 
 
@@ -188,7 +187,7 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 == Fase 5: Ripristinare il funzionamento del modulo controller
 
-Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
+È necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
 
 . Ricable il sistema, come necessario.
 +

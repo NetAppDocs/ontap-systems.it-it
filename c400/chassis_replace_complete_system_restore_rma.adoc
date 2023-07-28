@@ -1,8 +1,8 @@
 ---
 permalink: c400/chassis-replace-complete-system-restore-rma.html 
 sidebar: sidebar 
-keywords: aff c400, verify and set HA state, run diagnostics, complete the replacement process 
-summary: Verificare lo stato ha dello chassis, eseguire la diagnostica e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. 
+keywords: aff c400, verify and set HA state, complete the replacement process 
+summary: Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. 
 ---
 = Completare il processo di ripristino e sostituzione - AFF C400
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Verificare lo stato ha dello chassis, eseguire la diagnostica e restitu
 
 
 [role="lead"]
-Verificare lo stato ha dello chassis, eseguire la diagnostica e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 
 
 
@@ -46,33 +46,7 @@ Il valore per _ha-state_ può essere uno dei seguenti:
 
 
 
-== Fase 2: Eseguire la diagnostica
-
-Dopo aver sostituito un componente del sistema, è necessario eseguire test diagnostici su tale componente.
-
-Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
-
-Tutti i comandi delle procedure diagnostiche vengono emessi dal nodo in cui viene sostituito il componente.
-
-. Se il nodo da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il nodo: `system node halt -node node_name`
-+
-Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
-. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
-. Selezionare *Test system* dal menu visualizzato per eseguire i test di diagnostica.
-. Selezionare il test o la serie di test dai vari sottomenu.
-. Procedere in base al risultato del passaggio precedente:
-+
-** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
-** Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
-
-
-
-
-
-
-== Fase 3: Switch back aggregates in una configurazione MetroCluster a due nodi
+== Fase 2: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
 
@@ -130,6 +104,6 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
-== Fase 4: Restituire la parte guasta a NetApp
+== Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

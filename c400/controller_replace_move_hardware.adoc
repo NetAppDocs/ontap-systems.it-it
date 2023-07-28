@@ -19,6 +19,10 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
+Per rimuovere il modulo controller dal telaio, utilizzare la seguente illustrazione o la procedura scritta.
+
+.Animazione - rimuovere il modulo controller
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
@@ -33,23 +37,6 @@ Il modulo controller si sposta leggermente fuori dallo chassis.
 +
 image:../media/drw_A400_Remove_controller.png[""]
 
-+
-|===
-
-
- a| 
-image:../media/legend_icon_01.png[""]
- a| 
-Fermi di bloccaggio
-
-
-
- a| 
-image:../media/legend_icon_02.png[""]
- a| 
-Il controller si sposta leggermente fuori dallo chassis
-
-|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -256,32 +243,18 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 
 Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
 
+Per installare il modulo controller sostitutivo nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
+
+.Animazione - Installazione del modulo controller
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
+
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 
 NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
 
-+
-image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
-
-+
-|===
-
-
- a| 
-image:../media/legend_icon_01.png[""]
- a| 
-Far scorrere il controller nello chassis
-
-
-
- a| 
-image:../media/legend_icon_02.png[""]
- a| 
-Fermi di bloccaggio
-
-|===
 . Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
 +
 

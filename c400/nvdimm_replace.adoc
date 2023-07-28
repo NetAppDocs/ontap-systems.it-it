@@ -1,7 +1,7 @@
 ---
 permalink: c400/nvdimm-replace.html 
 sidebar: sidebar 
-keywords: aff c400, aff, c400, replace, nvdimm, controller, module, system, register, flash, lifetime, healthy, system, panic, shut, down, impair, run, diagnostic, two-node, metrocluster, complete, replacement, process, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, run diagnostics, restore the controller module to operation after running diagnostics, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
+keywords: aff c400, aff, c400, replace, nvdimm, controller, module, system, register, flash, lifetime, healthy, system, panic, shut, down, impair, two-node, metrocluster, complete, replacement, process, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation,switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema. 
 ---
 = Sostituire un modulo NVDIMM - AFF C400
@@ -21,14 +21,12 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 == Fase 1: Spegnere il controller compromesso
 
-[role="lead"]
 Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
 
 [role="tabbed-block"]
 ====
 .Opzione 1: La maggior parte delle configurazioni
 --
-[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -84,7 +82,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 --
 .Opzione 2: Controller in un MetroCluster a due nodi
 --
-[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -183,8 +180,13 @@ mcc1A::> metrocluster operation show
 
 == Fase 2: Rimuovere il modulo controller
 
-[role="lead"]
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
+
+Per rimuovere il modulo controller dal telaio, è possibile utilizzare le seguenti animazioni, illustrazioni o istruzioni scritte.
+
+.Animazione - rimuovere il modulo controller
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
+image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
@@ -197,26 +199,6 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 +
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
-+
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
-
-+
-|===
-
-
- a| 
-image:../media/legend_icon_01.png[""]
- a| 
-Fermi di bloccaggio
-
-
-
- a| 
-image:../media/legend_icon_02.png[""]
- a| 
-Il controller si sposta leggermente fuori dallo chassis
-
-|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -228,7 +210,6 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 == Fase 3: Sostituire il modulo NVDIMM
 
-[role="lead"]
 Per sostituire il modulo NVDIMM, posizionarlo nel modulo controller utilizzando la mappa FRU sulla parte superiore del condotto dell'aria o la mappa FRU sulla parte superiore del riser dello slot 1.
 
 * Il LED NVDIMM lampeggia durante la destaging del contenuto quando si arresta il sistema. Una volta completata la destage, il LED si spegne.
@@ -279,8 +260,13 @@ NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e 
 
 == Fase 4: Installare il modulo controller
 
-[role="lead"]
-Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
+Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo.
+
+Per installare il modulo controller nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
+
+.Animazione - Installazione del modulo controller
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
 
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
@@ -312,47 +298,15 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
 
 .. Al prompt DEL CARICATORE, immettere `bye` Per reinizializzare le schede PCIe e altri componenti.
-.. Interrompere il processo di avvio e avviare il CARICATORE premendo `Ctrl-C`.
-+
-Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
 
 
 
 
 
 
+== Fase 5: Ripristinare il funzionamento del modulo controller
 
-== Fase 5: Eseguire la diagnostica
-
-[role="lead"]
-Dopo aver sostituito il modulo NVDIMM nel sistema, eseguire test diagnostici su tale componente.
-
-Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
-
-Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
-
-. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node node_name`
-+
-Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
-. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
-. Selezionare *Test Memory* dal menu visualizzato.
-. Selezionare *NVDIMM Test* dal menu visualizzato.
-. Procedere in base al risultato del passaggio precedente:
-+
-** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
-** Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
-
-
-
-
-
-
-== Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica
-
-[role="lead"]
-Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
+È necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
 
 . Ricable il sistema, come necessario.
 +
@@ -364,9 +318,8 @@ Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di re
 
 
 
-== Fase 7: Switch back aggregates in una configurazione MetroCluster a due nodi
+== Fase 6: Switch back aggregates in una configurazione MetroCluster a due nodi
 
-[role="lead"]
 Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -423,7 +376,6 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
-== Fase 8: Restituire il componente guasto a NetApp
+== Fase 7: Restituire il componente guasto a NetApp
 
-[role="lead"]
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

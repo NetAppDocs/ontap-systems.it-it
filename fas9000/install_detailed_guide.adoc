@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, detailed, guide, prepare, install, hardware, two, node, switchless, cluster, cable, controller, ds212c, ds224c, ns224, drive, shelf, complete, system, setup, configuration, network, discovery 
 summary: 'Questa guida fornisce istruzioni dettagliate e dettagliate per l"installazione di un sistema NetApp tipico.' 
 ---
-= Guida dettagliata - AFF A700 e FAS9000
+= Guida dettagliata - FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -323,11 +323,11 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
 
 
 
-=== Opzione 2: Collegare i controller a un singolo shelf di dischi NS224 solo nei sistemi AFF A700 e ASA AFF A700 con ONTAP 9.8 e versioni successive
+=== Opzione 2: Collegare i controller a un singolo shelf di dischi NS224 solo nei sistemi ASA AFF A700 con ONTAP 9.8 e versioni successive
 
 È necessario collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224 su un AFF A700 o ASA AFF A700 con sistema ONTAP 9.8 o successivo.
 
-* Questa attività è valida solo per AFF A700 e ASA AFF A700 con ONTAP 9.8 o versione successiva.
+* Questa attività si applica solo a ASA AFF A700 con ONTAP 9.8 o versione successiva.
 * I sistemi devono avere almeno un modulo X91148A installato negli slot 3 e/o 7 per ciascun controller. L'animazione o le illustrazioni mostrano questo modulo installato in entrambi gli slot 3 e 7.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 +
@@ -358,11 +358,11 @@ image::../media/single_NS224_shelf.png[Singolo shelf NS224]
 
 
 
-=== Opzione 3: Collegare i controller a due shelf di dischi NS224 solo nei sistemi AFF A700 e ASA AFF A700 con ONTAP 9.8 e versioni successive
+=== Opzione 3: Collegare i controller a due shelf di dischi NS224 nei sistemi ASA AFF A700 che eseguono solo ONTAP 9.8 e versioni successive
 
 È necessario collegare ciascun controller ai moduli NSM sugli shelf di dischi NS224 su un AFF A700 o ASA AFF A700 con sistema ONTAP 9.8 o successivo.
 
-* Questa attività è valida solo per AFF A700 e ASA AFF A700 con ONTAP 9.8 o versione successiva.
+* Questa attività si applica solo a ASA AFF A700 con ONTAP 9.8 o versione successiva.
 * I sistemi devono avere due moduli X91148A, per controller, installati negli slot 3 e 7.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 +

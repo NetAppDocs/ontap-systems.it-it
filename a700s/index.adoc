@@ -1,13 +1,79 @@
 ---
-layout: landing-page 
-sidebar: sidebar 
 permalink: a700s/index.html 
-summary: La documentazione del sistema AFF A700s consente di installare, configurare e gestire il sistema. 
+sidebar: sidebar 
+keywords: aff A700s maintenance, maintenance, repairing A700s, repairing aff A700s, replace aff A700s components, replace aff A700s components 
+summary: 'Manutenzione dell"hardware del ASA A700s' 
 ---
-= Documentazione del sistema AFF A700s
-:hardbreaks:
+= Manutenzione dell'hardware AFF A700s
 :allow-uri-read: 
-:linkattrs: 
-:imagesdir: ./media/
+:icons: font
+:imagesdir: ../media/
 
 
+[role="lead"]
+Per il sistema storage AFF A700s, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
+
+
+
+== Supporto di boot
+
+Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+
+== Chassis
+
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
+
+
+
+== DIMM
+
+È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
+
+
+
+== Disco
+
+Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
+
+
+
+== Ventola
+
+La ventola raffredda il controller.
+
+
+
+== Batteria NVRAM
+
+Una batteria NVRAM è responsabile del mantenimento dell'alimentazione al modulo NVRAM.
+
+
+
+== NVRAM
+
+ The NVRAM module (Non-Volatile Random Access Memory) allows the controller to retain data across power cycles or system reboots.
+
+
+== Scheda PCIe
+
+Una scheda PCIe (Peripheral Component Interconnect Express) è una scheda di espansione che si inserisce nello slot PCIe della scheda madre.
+
+
+
+== Alimentatore
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
+
+
+
+== Batteria con orologio in tempo reale
+
+Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.

@@ -11,7 +11,7 @@ summary: Per sostituire un modulo controller, è necessario rimuovere il control
 
 
 [role="lead"]
-Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
+Per sostituire il controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nello chassis, quindi avviare il sistema in modalità manutenzione.
 
 
 
@@ -19,7 +19,11 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
-. Se non si è già collegati a terra, mettere a terra l'utente.
+. Nella parte anteriore dello chassis, premere con decisione ciascun disco fino a quando non si avverte un arresto positivo. In questo modo, i dischi sono posizionati saldamente sulla scheda intermedia dello chassis.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Disco drw a800 installato IEOPS 960]
+
+. Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
@@ -50,11 +54,12 @@ image:../media/legend_icon_02.png[""]
 Perno di bloccaggio
 
 |===
-. Estrarre il modulo controller dal telaio.
+. Estrarre il modulo controller dallo chassis e posizionarlo su una superficie piana e stabile.
 +
-Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis. .
 
-. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
+. Posizionare il modulo controller su una superficie piana e stabile.
+. Aprire il condotto dell'aria del modulo controller:
 +
 .. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
 .. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
@@ -75,7 +80,9 @@ Linguette di bloccaggio del condotto dell'aria
 
  a| 
 image:../media/legend_icon_02.png[""]
-| Far scorrere il condotto dell'aria verso i moduli delle ventole 
+ a| 
+Far scorrere il condotto dell'aria verso i moduli delle ventole
+
 
 
  a| 
@@ -272,7 +279,6 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 == Fase 7: Spostamento dei moduli NVDIMM
 
-[role="lead"]
 Per spostare i moduli NVDIMM, individuarli e spostarli dal controller compromesso al controller sostitutivo e seguire la sequenza specifica di passaggi.
 
 . Individuare i moduli NVDIMM sul modulo controller.
@@ -318,7 +324,7 @@ NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e 
 
 == Fase 8: Spostare il supporto di avvio
 
-Nel sistema AFF C800 è presente un dispositivo di avvio. È necessario spostarlo dal controller compromesso e installarlo nel controller _replacement_.
+Nel sistema AFF A800 è presente un dispositivo di avvio. È necessario spostarlo dal controller compromesso e installarlo nel controller _replacement_.
 
 Il supporto di avvio si trova sotto Riser 3.
 
@@ -462,4 +468,8 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 . Collegare i cavi di sistema e i moduli transceiver al modulo controller e reinstallare il dispositivo di gestione dei cavi.
 . Collegare i cavi di alimentazione agli alimentatori e reinstallare i fermi dei cavi di alimentazione.
++
+
+NOTE: Se il sistema dispone di alimentatori CC, assicurarsi che le viti a testa zigrinata sul cavo di alimentazione siano serrate.
+
 

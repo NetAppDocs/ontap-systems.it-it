@@ -1,7 +1,7 @@
 ---
 permalink: a400/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
-keywords: aff a400, restore and verify the system configuration, verify and set the ha state of the controller module, run system-level diagnostics 
+keywords: aff a400, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
 ---
 = Ripristinare e verificare la configurazione del sistema - AFF A400
@@ -68,39 +68,4 @@ Il valore dello stato ha può essere uno dei seguenti:
 
 . Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
 . Verificare che l'impostazione sia stata modificata: `ha-config show`
-
-
-
-
-== Fase 3: Eseguire la diagnostica
-
-Dopo aver sostituito un componente del sistema, è necessario eseguire test diagnostici su tale componente.
-
-Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
-
-Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
-
-. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node node_name`
-+
-Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-. Al prompt DEL CARICATORE, accedere ai driver speciali appositamente progettati per la diagnostica per funzionare correttamente: `boot_diags`
-. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
-. Selezionare *Test system* dal menu visualizzato per eseguire i test di diagnostica.
-. Selezionare il test o la serie di test dai vari sottomenu.
-. Procedere in base al risultato del passaggio precedente:
-+
-** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
-** Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
-+
-
-NOTE: Durante il processo di avvio, potrebbero essere visualizzati i seguenti prompt:
-
-+
-*** Viene visualizzato un messaggio di avviso che indica una mancata corrispondenza dell'ID di sistema e chiede di ignorare l'ID di sistema.
-*** Un avviso che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo. Puoi rispondere in tutta sicurezza `y` a questi prompt.
-
-
-
-
 

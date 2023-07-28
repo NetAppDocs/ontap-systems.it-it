@@ -1,0 +1,83 @@
+---
+section: asa900
+title: Sistemi ASA A900
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di ASA A900
+  entries:
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/asa900/install_setup.html"
+  - title: Passaggi rapidi
+    url: "/asa900/install_quick_guide.html"
+  - title: Video fasi
+    url: "/asa900/install_videos.html"
+  - title: Passaggi dettagliati
+    url: "/asa900/install_detailed_guide.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di ASA A900
+  entries:
+  - title: Panoramica
+    url: "/asa900/index.html"
+  - title: Supporto di boot
+    pdf-filename: Supporti per l'avvio ASA A900
+    entries:
+    - title: Panoramica
+      url: "/asa900/bootmedia_replace_overview.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa900/bootmedia_impaired_controller_shutdown.html"
+    - title: Sostituire il supporto di avvio guasto
+      url: "/asa900/bootmedia_replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/asa900/bootmedia_recovery_image.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/asa900/bootmedia_encryption_restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa900/bootmedia_complete_rma.html"
+  - title: Chassis
+    pdf-filename: Chassis ASA A900
+    entries:
+    - title: Panoramica
+      url: "/asa900/chassis_replace_overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa900/chassis_replace_shutdown.html"
+    - title: Sostituire il telaio
+      url: "/asa900/chassis_replace_move_hardware.html"
+    - title: Ripristinare e verificare la configurazione
+      url: "/asa900/chassis_replace_complete_system_restore_rma.html"
+  - title: Controller
+    pdf-filename: Modulo controller A900 ASA
+    entries:
+    - title: Panoramica
+      url: "/asa900/controller_replace_overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa900/controller_replace_shutdown.html"
+    - title: Sostituire il controller
+      url: "/asa900/controller_replace.html"
+    - title: Ripristinare e verificare la configurazione del sistema
+      url: "/asa900/controller_replace_system_config_restore_and_verify.html"
+    - title: Sistema ricable
+      url: "/asa900/controller_replace_recable_reassign_disks.html"
+    - title: Ripristino completo del sistema
+      url: "/asa900/controller_replace_complete_system_restoration_rma.html"
+  - title: DIMM
+    url: "/asa900/dimm_replace.html"
+  - title: DCPM
+    url: "/asa900/dcpm_NVRAM11_battery_replace.html"
+  - title: Ventola
+    url: "/asa900/fan_swap_out.html"
+  - title: Modulo i/O.
+    entries:
+    - title: Sostituire il modulo i/O.
+      url: "/asa900/pci_cards_and_risers_replace.html"
+    - title: Aggiungere il modulo i/O.
+      url: "/asa900/add_io_module.html"
+  - title: USB LED
+    url: "/asa900/led_module_replace.html"
+  - title: NVRAM
+    url: "/asa900/nvram_module_or_nvram_dimm_replacement.html"
+  - title: Alimentatore
+    url: "/asa900/power_supply_swap_out.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/asa900/rtc_battery_replace.html"

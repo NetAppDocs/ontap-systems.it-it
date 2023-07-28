@@ -1,0 +1,62 @@
+= Fase 1: Sostituire il modulo DCPM
+:allow-uri-read: 
+
+
+Per sostituire a caldo un modulo di alimentazione del controller di de-stage (DCPM), che contiene la batteria NVRAM10, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.
+
+È necessario disporre di un modulo DCPM sostitutivo prima di rimuovere il modulo guasto dal telaio e sostituirlo entro cinque minuti dalla rimozione. Una volta rimosso il modulo DCPM dallo chassis, non esiste alcuna protezione per lo shutdown per il modulo controller proprietario del modulo DCPM, ad eccezione del failover verso l'altro modulo controller.
+
+
+
+== Fase 1: Sostituire il modulo DCPM
+
+Per sostituire il modulo DCPM nel sistema, è necessario rimuovere il modulo DCPM guasto dal sistema e sostituirlo con un nuovo modulo DCPM.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello anteriore del sistema e metterlo da parte.
+. Individuare il modulo DCPM guasto nella parte anteriore del sistema cercando il LED di attenzione sul modulo.
++
+Se il modulo è guasto, il LED diventa ambra fisso.
+
++
+
+NOTE: Il modulo DCPM deve essere sostituito nello chassis entro cinque minuti dalla rimozione, altrimenti il controller associato si spegnerà.
+
+. Premere il pulsante di blocco arancione sulla maniglia del modulo, quindi far scorrere il modulo DCPM fuori dal telaio.
++
+image::../media/drw_9000_remove_nv_battery.png[drw 9000 rimuovere la batteria nv]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Pulsante di blocco arancione del modulo DCPM
+
+|===
+. Allineare l'estremità del modulo DCPM con l'apertura dello chassis, quindi farlo scorrere delicatamente nello chassis fino a farlo scattare in posizione.
++
+
+NOTE: Il modulo e lo slot sono dotati di chiavi. Non forzare il modulo nell'apertura. Se il modulo non si inserisce facilmente, riallineare il modulo e inserirlo nello chassis.
+
++
+Il LED del modulo DCPM si accende quando il modulo è completamente inserito nel telaio.
+
+
+
+
+
+== Fase 2: Smaltire le batterie
+
+È necessario smaltire le batterie in conformità alle normative locali in materia di riciclaggio o smaltimento delle batterie. Se non si riesce a smaltire correttamente le batterie, è necessario restituirle a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12475945[]
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

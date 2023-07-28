@@ -1,0 +1,12 @@
+= 
+:allow-uri-read: 
+
+
+Per sostituire lo chassis, è necessario spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis con problemi al nuovo chassis e sostituire lo chassis con problemi dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis con problemi.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Questa procedura si basa sul presupposto che si stiano spostando tutti i dischi e i moduli controller nel nuovo chassis e che lo chassis sia un nuovo componente di NetApp.
+* Questa procedura ha un'interruzione. Per un cluster a due controller, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+

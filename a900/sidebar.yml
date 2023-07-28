@@ -1,7 +1,6 @@
 ---
 section: a900
 title: Sistemi AFF A900
-url: "/a900/index.html"
 entries:
 - title: Installazione e configurazione
   pdf-filename: Installazione e configurazione di AFF A900
@@ -17,22 +16,22 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A900
   entries:
-  - title: Aggiungere il modulo i/O.
-    url: "/a900/add_io_module.html"
+  - title: Panoramica
+    url: "/a900/maintain-overview.html"
   - title: Supporto di boot
     pdf-filename: Supporti per l'avvio AFF A900
     entries:
     - title: Panoramica
       url: "/a900/bootmedia_replace_overview.html"
-    - title: Pre-shutdown controlla le chiavi di crittografia integrate
+    - title: Controllare le chiavi di crittografia integrate
       url: "/a900/bootmedia_encryption_preshutdown_checks.html"
     - title: Spegnere il controller compromesso
       url: "/a900/bootmedia_impaired_controller_shutdown.html"
     - title: Sostituire l'immagine di boot
       url: "/a900/bootmedia_replace.html"
-    - title: Avviare l'immagine di ripristino
+    - title: Immagine di recovery all'avvio
       url: "/a900/bootmedia_recovery_image.html"
-    - title: Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE
+    - title: Ripristinare OKM, NSE e NVE
       url: "/a900/bootmedia_encryption_restore.html"
     - title: Restituire la parte guasta a NetApp
       url: "/a900/bootmedia_complete_rma.html"
@@ -43,38 +42,42 @@ entries:
       url: "/a900/chassis_replace_overview.html"
     - title: Spegnere il controller compromesso
       url: "/a900/chassis_replace_shutdown.html"
-    - title: Sostituire l'hardware
+    - title: Sostituire il telaio
       url: "/a900/chassis_replace_move_hardware.html"
-    - title: Ripristino e verifica della configurazione
+    - title: Ripristinare e verificare la configurazione
       url: "/a900/chassis_replace_complete_system_restore_rma.html"
-  - title: Modulo controller
+  - title: Controller
     pdf-filename: Modulo controller A900 AFF
     entries:
     - title: Panoramica
       url: "/a900/controller_replace_overview.html"
     - title: Spegnere il controller compromesso
       url: "/a900/controller_replace_shutdown.html"
-    - title: Sostituire l'hardware del modulo controller
+    - title: Sostituire il controller
       url: "/a900/controller_replace.html"
     - title: Ripristinare e verificare la configurazione del sistema
       url: "/a900/controller_replace_system_config_restore_and_verify.html"
-    - title: Ricable del sistema
+    - title: Sistema ricable
       url: "/a900/controller_replace_recable_reassign_disks.html"
     - title: Ripristino completo del sistema
       url: "/a900/controller_replace_complete_system_restoration_rma.html"
   - title: DIMM
     url: "/a900/dimm_replace.html"
-  - title: Modulo di alimentazione del controllo Destage
+  - title: DCPM
     url: "/a900/dcpm_NVRAM11_battery_replace.html"
   - title: Ventola
     url: "/a900/fan_swap_out.html"
   - title: Modulo i/O.
-    url: "/a900/pci_cards_and_risers_replace.html"
-  - title: Modulo LED USB
+    entries:
+    - title: Sostituire il modulo i/O.
+      url: "/a900/pci_cards_and_risers_replace.html"
+    - title: Aggiungere il modulo i/O.
+      url: "/a900/add_io_module.html"
+  - title: USB LED
     url: "/a900/led_module_replace.html"
-  - title: Modulo NVRAM e/o DIMM NVRAM
+  - title: NVRAM
     url: "/a900/nvram_module_or_nvram_dimm_replacement.html"
   - title: Alimentatore
     url: "/a900/power_supply_swap_out.html"
-  - title: Batteria RTC
+  - title: Batteria con orologio in tempo reale
     url: "/a900/rtc_battery_replace.html"

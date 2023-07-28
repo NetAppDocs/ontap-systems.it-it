@@ -1,0 +1,245 @@
+= Fase 1: Rimuovere il modulo controller
+:allow-uri-read: 
+
+
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[rimozione del modulo pcm drw a800]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Fermo di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
++
+.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
+
+
+
+
+image::../media/drw_a800_open_air_duct.png[condotto d'aria aperto drw a800]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Linguette di bloccaggio del condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Far scorrere il condotto dell'aria verso i moduli delle ventole
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Ruotare il condotto dell'aria verso i moduli delle ventole
+
+|===
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Individuare il supporto di avvio guasto nel modulo controller rimuovendo il riser 3 sul modulo controller prima di sostituire il supporto di avvio.
+
+Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a stella.
+
+. Individuare il supporto di avvio:
++
+image::../media/drw_a800_boot_media_replace.png[sostituzione del supporto di avvio drw a800]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser 3
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+ a| 
+Cacciavite Phillips n. 1
+
+
+
+ a| 
+image:../media/legend_icon_04.png[""]
+ a| 
+Vite del supporto di avvio
+
+
+
+ a| 
+image:../media/legend_icon_05.png[""]
+ a| 
+Supporto di boot
+
+|===
+. Rimuovere il supporto di avvio dal modulo controller:
++
+.. Utilizzando un cacciavite Phillips n. 1, rimuovere la vite che fissa il supporto di avvio e mettere da parte la vite in un luogo sicuro.
+.. Afferrare i lati del supporto di avvio, ruotare delicatamente il supporto di avvio verso l'alto, quindi estrarre il supporto di avvio dalla presa e metterlo da parte.
+
+
+. Installare il supporto di avvio sostitutivo nel modulo controller:
++
+.. Allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente a squadra nello zoccolo.
+.. Ruotare il supporto di avvio verso il basso verso la scheda madre.
+.. Fissare il supporto di avvio alla scheda madre utilizzando la vite del supporto di avvio.
++
+Non serrare eccessivamente la vite per evitare di danneggiare il supporto di avvio.
+
+
+
+. Reinstallare il riser nel modulo controller.
+. Chiudere il condotto dell'aria:
++
+.. Ruotare il condotto dell'aria verso il basso.
+.. Far scorrere il condotto dell'aria verso i montanti fino a farlo scattare in posizione.
+
+
+
+
+
+
+== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
+
+Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.
+
+.Prima di iniziare
+* È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+
+
+.Fasi
+. Scaricare e copiare l'immagine del servizio appropriata dal sito del supporto NetApp sull'unità flash USB.
++
+.. Scarica l'immagine del servizio nel tuo spazio di lavoro sul laptop.
+.. Decomprimere l'immagine del servizio.
++
+
+NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
+
++
+Il file di immagine del servizio decompresso contiene due cartelle:
+
++
+*** avviare
+*** efi
+
+
+.. Copiare la cartella efi nella directory principale dell'unità flash USB. + l'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
+.. Rimuovere l'unità flash USB dal computer portatile.
+
+
+. In caso contrario, chiudere il condotto dell'aria:
++
+.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
+.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
+.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
++
+image::../media/drw_a800_close_air_duct.png[drw a800 chiudere il condotto dell'aria]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Riser
+
+|===
+
+
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori multimediali (SFP o QSFP) se sono stati rimossi.
+
+. Collegare il cavo di alimentazione all'alimentatore e reinstallare il fermo del cavo di alimentazione.
+. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+. Spingere delicatamente il modulo controller completamente nel sistema fino a quando i ganci di bloccaggio del modulo controller non iniziano a sollevarsi, spingere con decisione i ganci di bloccaggio per terminare l'alloggiamento del modulo controller, quindi ruotare i ganci di bloccaggio in posizione di blocco sui piedini del modulo controller.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+

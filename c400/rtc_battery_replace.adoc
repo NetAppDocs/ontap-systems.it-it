@@ -21,14 +21,12 @@ Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo control
 
 == Fase 1: Spegnere il controller compromesso
 
-[role="lead"]
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
 
 [role="tabbed-block"]
 ====
 .Opzione 1: La maggior parte delle configurazioni
 --
-[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -84,7 +82,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 --
 .Opzione 2: Controller in un MetroCluster a due nodi
 --
-[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -183,8 +180,13 @@ mcc1A::> metrocluster operation show
 
 == Fase 2: Rimuovere il modulo controller
 
-[role="lead"]
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
+
+Per rimuovere il modulo controller dal telaio, è possibile utilizzare le seguenti animazioni, illustrazioni o istruzioni scritte.
+
+.Animazione - rimuovere il modulo controller
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
+image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
@@ -197,26 +199,6 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 +
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
-+
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
-
-+
-|===
-
-
- a| 
-image:../media/legend_icon_01.png[""]
- a| 
-Fermi di bloccaggio
-
-
-
- a| 
-image:../media/legend_icon_02.png[""]
- a| 
-Il controller si sposta leggermente fuori dallo chassis
-
-|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -228,7 +210,6 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 == Fase 3: Sostituire la batteria RTC
 
-[role="lead"]
 È necessario individuare la batteria RTC all'interno del modulo del controller, quindi seguire la sequenza specifica di passaggi. Consultare la mappa FRU all'interno del modulo controller per individuare la posizione della batteria RTC.
 
 Per sostituire la batteria RTC, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.
@@ -264,8 +245,13 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 == Fase 4: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
 
-[role="lead"]
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
+
+Per installare il modulo controller nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
+
+.Animazione - Installazione del modulo controller
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
 
 . Se non è già stato fatto, chiudere il condotto dell'aria o il coperchio del modulo controller.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
@@ -317,7 +303,6 @@ NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avvi
 
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
-[role="lead"]
 Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -376,5 +361,4 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 == Fase 6: Restituire la parte guasta a NetApp
 
-[role="lead"]
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

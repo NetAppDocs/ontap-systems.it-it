@@ -1,0 +1,109 @@
+---
+permalink: a700/x91148a-modules-with-open-slots-add.html 
+sidebar: sidebar 
+keywords: aff a700, ass, x91148a, module, open, slots, nic, storage 
+summary: È possibile aggiungere un modulo X91148A in uno slot vuoto del sistema come scheda di rete 100GbE o come modulo storage per gli shelf di storage NS224. 
+---
+= Aggiunta di un modulo X91148A in un sistema con slot aperti - A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere un modulo X91148A in uno slot vuoto del sistema come scheda di rete 100GbE o come modulo storage per gli shelf di storage NS224.
+
+* Il sistema deve eseguire ONTAP 9.8 e versioni successive.
+* Per aggiungere senza interruzioni il modulo X91148A, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione, aggiungere il modulo e restituire il controller di destinazione.
+* Sul sistema devono essere disponibili uno o più slot aperti.
+* Se sono disponibili più slot, installare il modulo in base alla matrice di priorità degli slot per il modulo X91148A in Hardware Universe.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Se si aggiunge il modulo X91148A come modulo storage, è necessario installare gli slot 3 e/o 7.
+* Se si aggiunge il modulo X91148A come scheda di rete 100GbE, è possibile utilizzare qualsiasi slot aperto. Tuttavia, per impostazione predefinita, gli slot 3 e 7 sono impostati come slot di storage. Se si desidera utilizzare questi slot come slot di rete e non si desidera aggiungere shelf NS224, è necessario modificare gli slot per l'utilizzo in rete con `storage port modify -node _node name_ -port _port name_ -mode network` comando. Consultare Hardware Universe per gli altri slot che possono essere utilizzati dal modulo X91148A per il collegamento in rete.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Opzione 1: Aggiunta di un modulo X91148A come modulo NIC in un sistema con slot aperti
+
+Per aggiungere un modulo X91148A come modulo NIC in un sistema con slot aperti, è necessario seguire la sequenza specifica di passaggi.
+
+.Fasi
+. Spegnere il controller A:
++
+.. Disattiva giveback automatico: `storage failover modify -node local -auto-giveback false`
+.. Assumere il controllo del nodo di destinazione: `storage failover takeover -ofnode _target_node_name_`
++
+La connessione alla console indica che il nodo viene visualizzato al prompt DEL CARICATORE al termine del Takeover.
+
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere l'otturatore dello slot di destinazione:
++
+.. Premere il tasto contrassegnato e numerato CAM.
+.. Ruotare il fermo della camma verso il basso fino a portarlo in posizione orizzontale.
+.. Staccare l'otturatore.
+
+
+. Installare il modulo X91148A:
++
+.. Allineare il modulo X91148A ai bordi dello slot.
+.. Far scorrere il modulo X91148A nello slot fino a quando il dispositivo di chiusura della camma i/o con lettere e numeri inizia a innestarsi nel perno della camma i/O.
+.. Spingere il fermo della i/o Cam completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Collegare il modulo agli interruttori dati.
+. Riavviare il controller A: `boot_ontap`
+. Giveback del nodo dal nodo partner: `storage failover giveback -ofnode _target_node_name_`
+. Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
+. Ripetere questi passi per il controller B.
+
+
+
+
+== Opzione 2: Aggiunta di un modulo X91148A come modulo storage in un sistema con slot aperti
+
+Per aggiungere un modulo X91148A come modulo di storage in un sistema con slot aperti, è necessario seguire la sequenza specifica di passaggi.
+
+* Questa procedura presuppone che gli slot 3 e/o 7 siano aperti.
+
+
+.Fasi
+. Spegnere il controller A:
++
+.. Disattiva giveback automatico: `storage failover modify -node local -auto-giveback false`
+.. Assumere il controllo del nodo di destinazione: `storage failover takeover -ofnode target_node_name`
++
+La connessione alla console indica che il nodo viene visualizzato al prompt DEL CARICATORE al termine del Takeover.
+
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere l'otturatore dello slot di destinazione:
++
+.. Premere il tasto contrassegnato e numerato CAM.
+.. Ruotare il fermo della camma verso il basso fino a portarlo in posizione orizzontale.
+.. Staccare l'otturatore.
+
+
+. Installare il modulo X91148A nello slot 3:
++
+.. Allineare il modulo X91148A ai bordi dello slot.
+.. Far scorrere il modulo X91148A nello slot fino a quando il dispositivo di chiusura della camma i/o con lettere e numeri inizia a innestarsi nel perno della camma i/O.
+.. Spingere il fermo della i/o Cam completamente verso l'alto per bloccare il modulo in posizione.
+.. Se si installa un secondo modulo X91148A per lo storage, ripetere questa procedura per il modulo nello slot 7.
+
+
+. Riavviare il controller A: `boot_ontap`
+. Giveback del nodo dal nodo partner: `storage failover giveback -ofnode target_node_name`
+. Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
+. Ripetere questi passi per il controller B.
+. Installare e cablare gli shelf NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["Hot-add: Shelf NS224"].
+

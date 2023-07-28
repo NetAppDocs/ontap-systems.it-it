@@ -1,7 +1,6 @@
 ---
 section: fas9000
 title: Sistemi FAS9000
-url: "/fas9000/index.html"
 entries:
 - title: Installazione e configurazione
   pdf-filename: Installazione e configurazione di FAS9000
@@ -17,6 +16,8 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di FAS9000
   entries:
+  - title: Panoramica
+    url: "/fas9000/maintain-overview.html"
   - title: Supporto di boot
     pdf-filename: Supporto di avvio FAS9000
     entries:
@@ -51,7 +52,7 @@ entries:
       url: "/fas9000/chassis-replace-move-hardware.html"
     - title: Sostituzione completa
       url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
-  - title: Modulo controller
+  - title: Controller
     pdf-filename: Controller FAS9000
     entries:
     - title: Panoramica
@@ -74,20 +75,20 @@ entries:
     url: "/fas9000/fan-swap-out.html"
   - title: Modulo i/O.
     url: "/fas9000/pci-cards-and-risers-replace.html"
-  - title: Modulo LED USB
+  - title: USB LED
     url: "/fas9000/led-module-replace.html"
   - title: NVRAM
     url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
   - title: Alimentatore
     url: "/fas9000/power-supply-swap-out.html"
-  - title: Batteria RTC
+  - title: Batteria con orologio in tempo reale
     url: "/fas9000/rtc-battery-replace.html"
   - title: Modulo X91148A
     pdf-filename: Modulo FAS9000 X91148A
     entries:
     - title: Panoramica
       url: "/fas9000/x91148a-module-install-overview.html"
-    - title: Sistema AFF A700 con slot aperti
+    - title: Aggiunta del modulo X91148A nel sistema con slot aperti
       url: "/fas9000/x91148a-modules-with-open-slots-add.html"
-    - title: Sistema AFF A700 senza slot aperti
+    - title: Aggiungere X91148A con modulo nel sistema senza slot aperti
       url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"

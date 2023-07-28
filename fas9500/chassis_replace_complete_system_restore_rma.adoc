@@ -1,8 +1,8 @@
 ---
 permalink: fas9500/chassis_replace_complete_system_restore_rma.html 
 sidebar: sidebar 
-keywords: aff fas9500, verify and set HA state, run diagnostics, complete the replacement process 
-summary: Verificare lo stato ha dello chassis, eseguire la diagnostica e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. 
+keywords: aff fas9500, verify and set HA state, complete the replacement process 
+summary: Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. 
 ---
 = Ripristinare e verificare la configurazione - FAS9500
 :allow-uri-read: 
@@ -66,125 +66,6 @@ NOTE: Come Best practice, devi effettuare le seguenti operazioni:
 ====
 
 
-== Fase 3: Eseguire la diagnostica a livello di sistema
-
-Dopo aver installato un nuovo chassis, eseguire la diagnostica di interconnessione.
-
-.Prima di iniziare
-Per avviare la diagnostica a livello di sistema, il sistema deve essere al prompt DEL CARICATORE.
-
-Tutti i comandi delle procedure diagnostiche vengono emessi dal nodo in cui viene sostituito il componente.
-
-. Se il nodo da sottoporre a manutenzione non si trova al prompt DEL CARICATORE, attenersi alla seguente procedura:
-+
-.. Selezionare l'opzione Maintenance mode (modalità manutenzione) dal menu visualizzato.
-.. Una volta avviato il nodo in modalità Maintenance, arrestare il nodo: `halt`
-+
-Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
-
-+
-
-NOTE: Durante il processo di avvio, è possibile rispondere in modo sicuro `y` a prompt:
-
-
-
-. Ripetere il passaggio precedente sul secondo nodo se si è in una configurazione ha.
-+
-
-NOTE: Per eseguire il test di interconnessione, entrambi i controller devono essere in modalità di manutenzione.
-
-. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
-+
-Durante il processo di avvio, è possibile rispondere in modo sicuro `y` Fino a visualizzare il prompt della modalità di manutenzione (*>).
-
-. Attivare i test di diagnostica di interconnessione dal prompt della modalità di manutenzione: `sldiag device modify -dev interconnect -sel enable`
-+
-I test di interconnessione sono disattivati per impostazione predefinita e devono essere attivati per essere eseguiti separatamente.
-
-. Eseguire il test di diagnostica di interconnessione dal prompt della modalità di manutenzione: `sldiag device run -dev interconnect`
-+
-È sufficiente eseguire il test di interconnessione da un solo controller.
-
-. Verificare che non vi siano problemi hardware dovuti alla sostituzione dello chassis: `sldiag device status -dev interconnect -long -state failed`
-+
-La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
-
-. Procedere in base al risultato del passaggio precedente.
-
-
-|===
-| Se il test di diagnostica a livello di sistema... | Quindi... 
-
-
- a| 
-Sono stati completati senza guasti
- a| 
-. Cancellare i registri di stato: `sldiag device clearstatus`
-. Verificare che il registro sia stato cancellato: `sldiag device status`
-+
-Viene visualizzata la seguente risposta predefinita:
-
-+
-[listing]
-----
-SLDIAG: No log messages are present.
-----
-. Uscire dalla modalità di manutenzione su entrambi i controller: `halt`
-+
-Il sistema visualizza il prompt DEL CARICATORE.
-
-+
-
-NOTE: Prima di procedere, uscire dalla modalità di manutenzione su entrambi i controller.
-
-. Immettere il seguente comando su entrambi i controller al prompt DEL CARICATORE: `bye`
-. Ripristinare il funzionamento normale del nodo.
-
-
-|===
-|===
-| Se sul sistema è in esecuzione ONTAP... | Quindi... 
-
-
- a| 
-Con due nodi nel cluster
- a| 
-Eseguire questi comandi: `node::> cluster ha modify -configured true`
-`node::> storage failover modify -node node0 -enabled true`
-
-
-
- a| 
-Con più di due nodi nel cluster
- a| 
-Eseguire questo comando: ``node::> storage failover modify -node node0 -enabled true``
-
-
-
- a| 
-In una configurazione standalone
- a| 
-Non hai ulteriori passaggi in questa specifica attività. La diagnostica a livello di sistema è stata completata.
-
-
-
- a| 
-Ha causato alcuni errori di test
- a| 
-Determinare la causa del problema.
-
-. Uscire dalla modalità di manutenzione: `halt`
-. Eseguire un arresto pulito, quindi scollegare gli alimentatori.
-. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
-. Ricollegare gli alimentatori, quindi accendere il sistema storage.
-. Eseguire nuovamente il test di diagnostica a livello di sistema.
-+
- If the system-level diagnostics test fails again, contact link:http://mysupport.netapp.com/[mysupport.netapp.com^].
-
-
-|===
-
-
-== Fase 4: Restituire la parte guasta a NetApp
+== Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

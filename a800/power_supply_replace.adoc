@@ -10,23 +10,21 @@ summary: 'La sostituzione di un alimentatore comporta lo scollegamento dell"alim
 :imagesdir: ../media/
 
 
-.Prima di iniziare
 [role="lead"]
 La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione dell'alimentatore precedente e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.
 
-* Gli alimentatori sono ridondanti e sostituibili a caldo.
-* Questa procedura è stata scritta per la sostituzione di una PSU alla volta.
-+
+Gli alimentatori sono ridondanti e sostituibili a caldo.
+
+.A proposito di questa attività
+Questa procedura è stata scritta per la sostituzione di una PSU alla volta.
+
 
 NOTE: Si consiglia di sostituire l'alimentatore entro due minuti dalla rimozione dallo chassis. Il sistema continua a funzionare, ma ONTAP invia messaggi alla console relativi all'alimentatore danneggiato fino alla sostituzione dell'alimentatore.
 
-+
 
 IMPORTANT: Non combinare PSU con diversi livelli di efficienza o tipi di input diversi. Sostituire sempre come per come.
 
-
-
-Utilizzare la procedura appropriata per il tipo di alimentatore in uso, CA o CC.
+Utilizzare la procedura appropriata per il tipo di alimentatore in uso: CA o CC.
 
 [role="tabbed-block"]
 ====
