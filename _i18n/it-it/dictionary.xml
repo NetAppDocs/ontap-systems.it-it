@@ -8356,4 +8356,80 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9287ab39836157b975fad28f9782a821" category="sidebar">Alimentatore FAS2800</block>
   <block id="3dfd3fa9bee4e9b9ad14ec588c8e9ed4" category="sidebar">Batteria con clock in tempo reale FAS2800</block>
   <block id="f298a7570713e4b8f24128c2f7dcc05c" category="sidebar">Strumenti e supporto</block>
+  <block id="0a90cb9b1ee5610139d0e39856363c8c" category="summary">È possibile monitorare lo stato dello shelf di dischi comprendendo la posizione e le condizioni di stato dei LED sui componenti dello shelf di dischi.</block>
+  <block id="039c72bbf63892ab7a9a7d88f01d9ef1" category="doc">LED dello shelf del disco del monitor - shelf NS224</block>
+  <block id="4c1e87d961b7abad7899274630f1a96a" category="list-text">È possibile attivare i LED di posizione (blu), sul pannello ODP (Operator Display Panel) di uno shelf e su entrambi i moduli NSM, per facilitare l'individuazione fisica dello shelf che necessita di assistenza:<block ref="d6bcc7ed2edc5b8ad7e7188bba8189eb" prefix=" " category="inline-code"></block></block>
+  <block id="3417b5f666a273fe6204a90a40cd960a" category="paragraph">I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando<block ref="3262d48df5d75e3452f0f16b313b7808" prefix=" " category="inline-code"></block> opzione.</block>
+  <block id="90c4ae9a3664954df72efa181f417914" category="list-text">Uno stato LED può essere:</block>
+  <block id="5f77ac1006b54df5d09a24404a213642" category="list-text">"On" (acceso): L'illuminazione LED è fissa/fissa</block>
+  <block id="ca49a7e42f16a88fc179226bfe0edde8" category="list-text">"OFF" (spento): Il LED non si accende</block>
+  <block id="117106b46f3b11e3bbfc40ae15a1f678" category="list-text">"Lampeggiante": Il LED si accende e si spegne a intervalli variabili a seconda dello stato della FRU</block>
+  <block id="e3248bada0dd8141e2ab87552806328f" category="list-text">"Qualsiasi stato": Il LED può essere acceso, spento o lampeggiante</block>
+  <block id="6afbd49803e44c3aa6797e42828fd734" category="paragraph">I LED sul pannello ODP (Front Operator Display) del ripiano dei dischi indicano se il ripiano dei dischi funziona normalmente o se si verificano problemi con l'hardware.</block>
+  <block id="98b358c9e04e87becfb72379a2b4c9d5" category="paragraph">L'illustrazione e la tabella seguenti descrivono i tre LED dell'ODP:</block>
+  <block id="138149667750b6d9b839cc79c8d6b29a" category="image-alt">LED odp drw ns224 IEOPS 1262</block>
+  <block id="6984fd43f67a1bf48379d74906b421c0" category="cell">Nome e colore del LED</block>
+  <block id="89a44a0e4b47aa8032cdb05ec66374e8" category="paragraph">Alimentazione (verde)</block>
+  <block id="521c36a31c2762741cf0f8890cbe05e3" category="paragraph">Acceso</block>
+  <block id="7ab85b9335b729ddfdd50939907e5626" category="paragraph">Uno o più alimentatori alimentano lo shelf di dischi.</block>
+  <block id="7ad8ba1fe94fd72fd9f74d14e7037f4a" category="paragraph">Attenzione (ambra)</block>
+  <block id="e83364f6cc636130c2c04e44b8f47f19" category="list-text">Si è verificato un errore nella funzione di una o più FRU dello shelf.</block>
+  <block id="792a0f450d52c98560941fc89bf34430" category="list-text">Se lampeggia anche l'ID dello shelf a due cifre, l'ID dello shelf è in stato di attesa.</block>
+  <block id="c71218e03c7b1d130d35a210073b7500" category="paragraph">Spegnere e riaccendere lo shelf del disco per modificare l'ID dello shelf.</block>
+  <block id="fdb5296df84be4098a8bcf7a2eafe291" category="paragraph">Posizione (blu)</block>
+  <block id="fa5f455b4bf3d012d2777718991d0440" category="paragraph">L'amministratore di sistema ha attivato questa funzione LED.</block>
+  <block id="745d735db3f2e8f31dbbfa30d77113d9" category="section-title">LED del modulo NSM</block>
+  <block id="2abced28d6da640242f441beadbf8ee0" category="paragraph">I LED di un modulo NSM indicano se il modulo funziona correttamente, se è pronto per il traffico i/o e se si verificano problemi con l'hardware.</block>
+  <block id="eb21c45722f5ff9bf64973b0ac209180" category="paragraph">L'illustrazione e le tabelle seguenti descrivono i LED del modulo NSM associati alla funzione di un modulo e alla funzione di ciascuna porta NVMe di un modulo.</block>
+  <block id="68f54317fa8b23ea7098189416f011eb" category="image-alt">LED nsm drw ns224 IEOPS 1270</block>
+  <block id="a5b225465f65d6810c16d66ba3172319" category="cell">Chiama</block>
+  <block id="cb5feb1b7314637725a2e73bdc9f7295" category="cell">Colore</block>
+  <block id="9594eec95be70e7b1710f730fdda33d9" category="paragraph">Blu</block>
+  <block id="6d9957aa3906726ca4d7614d877977df" category="paragraph">Modulo NSM: Posizione</block>
+  <block id="88068e33c78eb72f1b371c7110846085" category="paragraph">Ambra</block>
+  <block id="1903810490ad85ac105168a3e90068d0" category="paragraph">Modulo NSM: Attenzione</block>
+  <block id="e5b3a965934bf3ca0a50c8cda04e1b3f" category="paragraph">NVMe port/link: Status (porta/collegamento NVMe)</block>
+  <block id="e03b09748657a5b63a0374112f96cef8" category="paragraph">Porta/collegamento NVMe: Attenzione</block>
+  <block id="ec53a8c4f07baed5d8825072c89799be" category="cell">Stato</block>
+  <block id="5767ccac8b9ab75a17e52eb709fb26e8" category="cell">Attenzione NSM (ambra)</block>
+  <block id="a2164070412e695d73fc2ab64c01f149" category="cell">Porta LNK (verde)</block>
+  <block id="5a1dea4ae3ffb6c0ab8f9acbbf3c4fda" category="cell">Attenzione porta (ambra)</block>
+  <block id="f7461aec7fcfa3f30f604927ef643ebc" category="paragraph">NSM normale</block>
+  <block id="d60fd197e540446192f328624ebc9be2" category="paragraph">Qualsiasi stato</block>
+  <block id="956b8d84f48336f2a0e561c66edb7f07" category="paragraph">Guasto NSM</block>
+  <block id="7e5905b08296770ebd816f86cfb84b60" category="paragraph">Errore NSM VPD</block>
+  <block id="ec280b965c05518ec9a4070c43b19c7f" category="paragraph">Nessuna connessione alla porta host</block>
+  <block id="1401dfc837785ee5fb45ba2c53fd991b" category="paragraph">Collegamento alla porta host attivo</block>
+  <block id="923a074db98ee6d8f18ca11712164fff" category="paragraph">Acceso/lampeggiante con attività</block>
+  <block id="25570bb9d9339942629f14699f8f977e" category="paragraph">Connessione porta host con guasto</block>
+  <block id="4402fe228b0b8a78da9019341eb36b7f" category="paragraph">On/Off se tutte le corsie sono guainate</block>
+  <block id="ae56bf029d48aa72a5f72c3a20e780b9" category="paragraph">Eseguire l'avvio del BIOS dall'immagine del BIOS dopo l'accensione</block>
+  <block id="cfad0a7419f44ea0c64db24197abbf70" category="paragraph">Lampeggia</block>
+  <block id="6b6aa0b6d9b620cfef1de19db2c781e5" category="paragraph">I LED di un alimentatore CA o CC (PSU) indicano se l'alimentatore funziona normalmente o se si verificano problemi hardware.</block>
+  <block id="ddf6d4204e991f952d5f65cedae767ce" category="paragraph">L'illustrazione e le tabelle seguenti descrivono il LED di un alimentatore. (L'illustrazione mostra un alimentatore CA; tuttavia, la posizione dei LED è la stessa sull'alimentatore CC):</block>
+  <block id="cb64a8852ed883dfc686d51492e31bfa" category="image-alt">LED psu drw ns224 IEOPS 1261</block>
+  <block id="7609b319dac3aca8b9d7c805388fc5e6" category="paragraph">Il LED bicolore indica alimentazione/attività quando è verde e un errore quando è ambra.</block>
+  <block id="0cb6b469a5da43eb5225c25fab0b5ff0" category="cell">Alimentazione/attività (verde)</block>
+  <block id="cd5f6c10b859eea6eaed71a2e494c0db" category="paragraph">Assenza di alimentazione CA/CC nell'enclosure</block>
+  <block id="aade40c62d1308360c2f119536da1c63" category="paragraph">Nessuna alimentazione CA/CC all'alimentatore</block>
+  <block id="cf335ef3413e902db7461d8f15450cae" category="paragraph">Alimentazione CA/CC attiva, ma PSU non presente nell'enclosure</block>
+  <block id="215c6f78a1c194e6228514ff7bdd71cd" category="paragraph">PSU funzionante correttamente</block>
+  <block id="3f01099f03de6897d7388ee1c31f6770" category="paragraph">Guasto PSU</block>
+  <block id="0da2a2ed379c0a511e6346492e61a8e8" category="paragraph">Guasto alla ventola</block>
+  <block id="d78c48ba978ed998f8c4aaf41f2003a1" category="paragraph">Modalità di aggiornamento del firmware</block>
+  <block id="0485558d80ce3f9e356a60181cefb758" category="section-title">LED delle unità</block>
+  <block id="ec2086f8c8aa32f4039431accf799e7e" category="paragraph">I LED di un'unità NVMe indicano se funziona normalmente o se si verificano problemi con l'hardware.</block>
+  <block id="1789a93f2267580a7b3d61d32fd8de64" category="paragraph">L'illustrazione e le tabelle seguenti descrivono i due LED di un'unità NVMe:</block>
+  <block id="82e7f0e876b2809cacccfffb630802cf" category="image-alt">LED del disco drw ns224 IEOPS 1263</block>
+  <block id="31eef7712c15110e77d39c33fa6398b8" category="paragraph">Alimentazione/attività</block>
+  <block id="4f64599448fa0ed6d8c8631c9c782051" category="cell">Alimentazione/attività (verde)</block>
+  <block id="d24aa27125c051e29098493eceace539" category="cell">LED ODP associato</block>
+  <block id="73adb82b35cf9e200ec112cf75d968b7" category="paragraph">Disco installato e operativo</block>
+  <block id="382b0f5185773fa0f67a8ed8056c7759" category="paragraph">N/A.</block>
+  <block id="04e450c5eabdbe5208c912ed16aa5c5f" category="paragraph">Guasto al disco</block>
+  <block id="81c36a08fce93b18a65d7e5214ab26cb" category="paragraph">Set di identificazione del dispositivo SES</block>
+  <block id="0adb6ff7f0bdadd155910f204b3330d5" category="paragraph">Lampeggia</block>
+  <block id="cc818334a12195812c946efa74959a44" category="paragraph">Attenzione (ambra) disattivata</block>
+  <block id="830de589dead0df6a61213a5dc116efd" category="paragraph">Set di bit di errore del dispositivo SES</block>
+  <block id="2475cae13a65975fd4da631c78689624" category="paragraph">Guasto al circuito di controllo dell'alimentazione</block>
 </blocks>
