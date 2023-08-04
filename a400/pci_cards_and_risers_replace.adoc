@@ -21,12 +21,14 @@ Per sostituire una scheda PCIe o mezzanino, scollegare i cavi e i moduli SFP e Q
 
 == Fase 1: Spegnere il controller compromesso
 
+[role="lead"]
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
 
 [role="tabbed-block"]
 ====
 .Opzione 1: La maggior parte delle configurazioni
 --
+[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -82,6 +84,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 --
 .Opzione 2: Controller in un MetroCluster a due nodi
 --
+[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -180,13 +183,8 @@ mcc1A::> metrocluster operation show
 
 == Fase 2: Rimuovere il modulo controller
 
+[role="lead"]
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
-
-Per rimuovere il modulo controller dal telaio, è possibile utilizzare le seguenti animazioni, illustrazioni o istruzioni scritte.
-
-.Animazione - rimuovere il modulo controller
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
@@ -199,6 +197,26 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 +
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
++
+image::../media/drw_c400_remove_controller_IEOPS-1216.svg[Drw C400 rimuovere la centralina IEOPS 1216]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Fermi di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Il controller si sposta leggermente fuori dallo chassis
+
+|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -210,13 +228,14 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 == Fase 3: Sostituire una scheda PCIe
 
+[role="lead"]
 Per sostituire una scheda PCIe, individuare la scheda PCIe guasta, rimuovere il riser che contiene la scheda dal modulo controller, sostituire la scheda, quindi reinstallare il riser PCIe nel modulo controller.
 
 Per sostituire una scheda PCIe, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.
 
 .Animazione - sostituire una scheda PCIe
-video::84339f87-321c-400e-985e-aae10182cd24[panopto]
-image:../media/drw_A400_Replace-PCIe-cards_IEOPS-1008.svg["larghezza = 500 px"]
+video::ed42334e-8eb2-48dd-b447-b0300189230f[panopto]
+image:../media/drw_c400_replace_PCIe_cards_IEOPS-1235.svg["larghezza = 500 px"]
 
 . Rimuovere il riser contenente la scheda da sostituire:
 +
@@ -258,13 +277,14 @@ NOTE: Se si sta installando una scheda nello slot inferiore e non si riesce a ve
 
 == Fase 4: Sostituire la scheda mezzanine
 
+[role="lead"]
 La scheda mezzanine si trova sotto il riser numero 3 (slot 4 e 5). Rimuovere il riser per accedere alla scheda mezzanine, sostituire la scheda mezzanine, quindi reinstallare il riser numero 3. Per ulteriori informazioni, vedere la mappa FRU sul modulo controller.
 
 Per sostituire la scheda mezzanine, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
 
 .Animazione - sostituire la scheda mezzanino
-video::4e00f5b1-8ca5-4cd6-9881-aadb01578e52[panopto]
-image::../media/drw_A400_Replace-mezz-card_IEOPS-1006.svg[Drw A400 Sostituisci la scheda di memoria IEOPS 1006]
+video::e3fd32b6-bdbb-4c53-b666-b030018a5744[panopto]
+image::../media/drw_c400_replace-mezz-card_IEOPS-1236.svg[Drw C400 sostituire scheda mezz IEOPS 1236]
 
 . Rimuovere il riser numero 3 (slot 4 e 5):
 +
@@ -299,12 +319,6 @@ Il riser si solleva leggermente dal modulo controller.
 == Fase 5: Installare il modulo controller
 
 Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
-
-Per installare il modulo controller nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
-
-.Animazione - Installazione del modulo controller
-video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
-image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
 
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.

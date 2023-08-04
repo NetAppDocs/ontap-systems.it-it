@@ -2420,18 +2420,13 @@
   <block id="cd2699a4d57f54778810b017b2525727" category="doc">Sostituire una ventola - AFF C250</block>
   <block id="42fdad873ef48294568bf60cb6c3f2a3" category="paragraph">Per sostituire una ventola, fare riferimento al video seguente o alla tabella:</block>
   <block id="fdef2d1361e0c12e51c8a0eb2279a3f0" category="list-text">Allineare i bordi del modulo della ventola di ricambio con l'apertura nel modulo del controller, quindi far scorrere il modulo della ventola di ricambio nel modulo del controller.</block>
-  <block id="6129b7ac1ccc31146cb5299a148a51de" category="summary">Per essere operativi con i sistemi AFF, FAS e ASA, è necessario installare componenti hardware, configurare gli switch e configurare lo storage in ONTAP.</block>
-  <block id="5ffdf920c790023dff209052146f3717" category="doc">Sfrutta i sistemi di storage AFF e FAS</block>
-  <block id="c2e2567b93e54427d80c6e00b15817db" category="paragraph">Per essere operativi con i sistemi AFF e FAS, è necessario installare componenti hardware, configurare gli switch e configurare lo storage in ONTAP.</block>
   <block id="5580e672f0ec2eb7f97978674ab11acb" category="inline-link">Sito MetroCluster doc</block>
   <block id="1a4af28a3bbd2601782d5a7f4300eace" category="paragraph">Se il sistema è in una configurazione MetroCluster, passare a.<block ref="7a41c0ceac7b7f46cc98ba334d076153" category="inline-link-rx"></block> E seguire le istruzioni di installazione applicabili al tipo di configurazione MetroCluster in uso.</block>
   <block id="71e3f3adc231b164f4f0837d133f2bc6" category="paragraph">Utilizzare il seguente flusso di lavoro per implementare il sistema storage quando non è configurato in una configurazione MetroCluster.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Uno</block>
   <block id="1488c7c37653a45223ebecdfabcefa04" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Installare i controller AFF/FAS</block>
-  <block id="05a183c8bc1fc9522f554a0dcc45645f" category="paragraph">Installare i controller AFF/FAS nel rack o nell'armadietto. Accedere alle istruzioni di installazione e configurazione del modello di piattaforma AFF/FAS. Per tutti i sistemi ARRAY SAN (ASA), seguire le istruzioni di installazione del modello AFF a-Series corrispondente.</block>
   <block id="7877fbd25ecba999ab0a739fe29df547" category="paragraph">**Sistemi AFF Serie A**</block>
   <block id="8fd3ca5f66dff5be16e79560dd28171e" category="inline-link">AFF A220</block>
-  <block id="564ec135f22614fd51e7ace4addc3c82" category="list-text"><block ref="564ec135f22614fd51e7ace4addc3c82" category="inline-link-rx"></block></block>
   <block id="68b23d3f7da36f1f08be0727f515bcb1" category="inline-link">AFF A250</block>
   <block id="5173935e91aef44c51b8afd57f32f13f" category="list-text"><block ref="5173935e91aef44c51b8afd57f32f13f" category="inline-link-rx"></block></block>
   <block id="540dacfeb5577ce4282c41e9c7518680" category="inline-link">AFF A400</block>
@@ -2441,7 +2436,6 @@
   <block id="53270fbfda62583949b287e08ae3d063" category="inline-link">AFF A800</block>
   <block id="2f143cdae4fee80d6697460e215b8a02" category="list-text"><block ref="2f143cdae4fee80d6697460e215b8a02" category="inline-link-rx"></block></block>
   <block id="ec5e81cea4c5ee83d635778e86350e80" category="inline-link">AFF A900</block>
-  <block id="5ac126eccd9cedace8ba8c1ea4723760" category="list-text"><block ref="5ac126eccd9cedace8ba8c1ea4723760" category="inline-link-rx"></block></block>
   <block id="999865050c05a9851fa1100ea708f735" category="paragraph">**Sistemi AFF C-Series**</block>
   <block id="b6000f9eed7f8ea9ee4632bd2f77961a" category="inline-link">AFF C190</block>
   <block id="8e4eec704f9a8706e1a3cf96accb2c17" category="list-text"><block ref="8e4eec704f9a8706e1a3cf96accb2c17" category="inline-link-rx"></block></block>
@@ -2450,7 +2444,6 @@
   <block id="c9996a1b1fe92047dfbcfbef9989c233" category="inline-link">AFF C400</block>
   <block id="90a9e7415b88be6a0d94cebc7d4a7a57" category="list-text"><block ref="90a9e7415b88be6a0d94cebc7d4a7a57" category="inline-link-rx"></block></block>
   <block id="e0d8a184e851ebead0da8ef2d160d077" category="inline-link">AFF C800</block>
-  <block id="7f5c0eb40943093a2da99c8caf6992b7" category="list-text"><block ref="7f5c0eb40943093a2da99c8caf6992b7" category="inline-link-rx"></block></block>
   <block id="fb4b827f429720ceefe590267f9978cf" category="paragraph">**Sistemi FAS**</block>
   <block id="9cce52969ddef317310e7d9d1c259895" category="inline-link">FAS500f</block>
   <block id="266197ce8fb9d3417e159a8b375e04ef" category="list-text"><block ref="266197ce8fb9d3417e159a8b375e04ef" category="inline-link-rx"></block></block>
@@ -2515,7 +2508,6 @@
   <block id="09ebf9105e3a0e85568481422cb709d1" category="list-text"><block ref="09ebf9105e3a0e85568481422cb709d1" category="inline-link-macro-rx"></block></block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Sei</block>
   <block id="aea7345148c1589735242fc13ad81924" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Completare la configurazione del sistema</block>
-  <block id="e7d43e43255aab7a6db982e220c4d532" category="paragraph">Dopo aver configurato gli switch e installato il software richiesto, accedere alle istruzioni di installazione e configurazione del modello di piattaforma AFF/FAS per completare la configurazione del sistema. Per tutti i sistemi ARRAY SAN (ASA), seguire le istruzioni di installazione del modello AFF a-Series corrispondente.</block>
   <block id="93a86d433d6f98e9a80d74b972237ee6" category="paragraph">**Sistemi AFF**</block>
   <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">Sette</block>
   <block id="8f5988d6d5abedb5da92f0fcbc79872d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> Configurazione completa di ONTAP</block>
@@ -2578,7 +2570,6 @@
   <block id="3caccb46026f8affc6c95f65aa0c8af1" category="list-text">Estrarre il modulo controller dallo chassis e posizionarlo su una superficie piana e stabile.</block>
   <block id="9bc9bee1c7c86ea6e815437b4f02ff6c" category="paragraph">Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis. .</block>
   <block id="1422875ceb77c2edc7c07474b11b3c6f" category="list-text">Aprire il condotto dell'aria del modulo controller:</block>
-  <block id="59127b0f44ecf00024ded8cfe59f8f12" category="paragraph">Nel sistema AFF A800 è presente un dispositivo di avvio. È necessario spostarlo dal controller compromesso e installarlo nel controller _replacement_.</block>
   <block id="14a4774e9c6245d6341272988d1f5fbe" category="admonition">Se il sistema dispone di alimentatori CC, assicurarsi che le viti a testa zigrinata sul cavo di alimentazione siano serrate.</block>
   <block id="f3a01cef2d9918b3669edb9ee2a1c2b8" category="doc">Video - AFF A800</block>
   <block id="26115a2b78227837b2498242d7c3a180" category="video-title">"Animazione - Installazione e configurazione di un AFF A800</block>
@@ -2609,15 +2600,11 @@
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marchi</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, il logo NETAPP e i marchi elencati nella pagina dei marchi NetApp sono marchi di NetApp, Inc. Altri nomi di società e prodotti potrebbero essere marchi dei rispettivi proprietari.</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevetti</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Un elenco aggiornato dei brevetti di proprietà di NetApp è disponibile all'indirizzo:</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Direttiva sulla privacy</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="27e4f654e31a54c18c3f94846eb8fcc2" category="inline-link">Avviso per shelf di dischi</block>
@@ -4738,8 +4725,6 @@
   <block id="1cd8a39839471e937855a3c54b6b84d9" category="doc">Panoramica della sostituzione dei supporti di avvio - AFF A150</block>
   <block id="178a6a7a54abe615089fef92a8499c05" category="doc">Avviare l'immagine di ripristino - AFF A150</block>
   <block id="16319414c65274d365d86327a61ef5dc" category="doc">Documentazione sui sistemi AFF e FAS</block>
-  <block id="426345b53ce830fc944ab03c4c6232df" category="summary">Scopri le nuove funzionalità dei sistemi FAS e AFF.</block>
-  <block id="2f2c60dca423ec5715985231d7044062" category="doc">Novità per i sistemi FAS e AFF</block>
   <block id="b7cfb975a50851418ad4bf0bcad4933f" category="section-title">Nuovi miglioramenti per l'aggiornamento dell'hardware</block>
   <block id="176cf5dfe0545aace2d630a3f6ef2208" category="summary">È necessario rimuovere lo sportello e i pannelli laterali dell'armadio di sistema per spostare il badge illuminato e i componenti e per invertire lo sportello.</block>
   <block id="0983ab86dcc412b07fb9139c43a350fb" category="doc">Rimuovere lo sportello del cabinet di sistema</block>
@@ -6903,9 +6888,6 @@
   <block id="8d5e185ac32326457521ab7ce1024be6" category="sidebar">Scheda PCIe o mezzanino</block>
   <block id="de76cd60441abcdc9d5a84858b3a0fad" category="sidebar">Shelf SAS</block>
   <block id="ccd67995cab28bf139c1e242119020df" category="sidebar">Switch supportati</block>
-  <block id="6db27f68adde7b6578b513891108402f" category="sidebar">BES-53248</block>
-  <block id="5aec304982416461faa5bf9b3a0b2cf3" category="sidebar">Cisco Nexus 9336C-FX2</block>
-  <block id="47b6f3be1213edd22611d686b390abda" category="sidebar">Cisco Nexus 9336C-FX2 in configurazione condivisa</block>
   <block id="a7d3b6d16f07555f1105a7d1e5d0821b" category="sidebar">Più risorse di documentazione</block>
   <block id="d44f3a6dbf7d14380c862fdbf2b79c35" category="sidebar">Aggiornamento dell'hardware di sistema</block>
   <block id="f7e891dd188ea1d7b94852cb50ec354e" category="sidebar">Aggiornamento del software ONTAP</block>
@@ -6948,7 +6930,6 @@
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">Scheda informativa su ASA</block>
   <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">Analisi della soluzione ASA</block>
   <block id="6c713e33f81bfdf294d75a585966fd05" category="sidebar">Report tecnico di ASA</block>
-  <block id="262434bb76bf9aa49a3efe7de43d9a4e" category="sidebar">Documentazione sui sistemi AFF e FAS</block>
   <block id="b5bfe3d61bf9be292418cb9d21eec19c" category="sidebar">Iniziare a lavorare</block>
   <block id="c89a58741e7240ddf3c43ec7dbb21cd7" category="sidebar">Shelf di dischi</block>
   <block id="3b4f8423fb92aace5b1c957248b6fd18" category="sidebar">Cabinet e kit di guide</block>
@@ -7778,7 +7759,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b7cf9d5fc111cce87031b050032fe85f" category="list-text">Collegare la batteria NVRAM.</block>
   <block id="44e9bf23cac339f1a46833e07d1be621" category="list-text">Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.</block>
   <block id="cca6b082b0a0af8dfe622b365bd85350" category="section-title">Fase 5: Restituire il componente guasto a NetApp - AFF A700s</block>
-  <block id="b1a2e879032b7693396d5911fdb9ee8f" category="sidebar">Schede mezzanine</block>
   <block id="7655464c949e17f83cc9f89554f784e5" category="sidebar">Fogli di lavoro per il cablaggio ed esempi per ha multipath</block>
   <block id="c2b6b3b554d53a9298b53bc5f03d3830" category="sidebar">Foglio di lavoro per il cablaggio e esempio di ha quad-path</block>
   <block id="84f80d47c3a3934ba083c16827645698" category="sidebar">Sistemi FAS2800</block>
@@ -8369,7 +8349,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="ac8239cbe6a7d46c72f3e9111b7a640e" category="sidebar">Manutenzione degli shelf SAS</block>
   <block id="0d15b077865ff751c51f5dab813a9ea6" category="sidebar">Ventola nello shelf DS460C</block>
   <block id="eaede3cca67a867c9e94c14b2f787088" category="sidebar">I sistemi di fine disponibilità non sono più disponibili per l'acquisto, ma sono ancora supportati.</block>
-  <block id="505476a6b3e65663fca6229242e89d23" category="sidebar">I sistemi di storage AFF e FAS di NetApp e All SAN Array offrono storage all-flash o ibrido scale-out di livello Enterprise all'avanguardia con la gestione dei dati più avanzata del settore. Utilizzare i documenti di questo sito per installare, espandere, aggiornare e gestire i sistemi AFF, FAS o tutti gli array SAN.</block>
   <block id="1e5c40b1bf2557793e21f12b8450b6d8" category="sidebar">Piattaforme di storage</block>
   <block id="66c2e7aa58c59d739dda76e6d38b06a4" category="sidebar">Sistemi AFF Serie A.</block>
   <block id="41b3869a7c52f072660b62d2724ca1c7" category="sidebar">Sistemi AFF serie C.</block>
@@ -8457,4 +8436,66 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="38a7a370db7e825d6ae11492a25bbf4c" category="sidebar">Scheda PCIe o mezzanine ASA A400</block>
   <block id="4ad30ae349c6e2a00c505685283569c4" category="sidebar">Alimentatore ASA A400</block>
   <block id="a876a1a0c70aad6f175618bf59efec73" category="sidebar">Batteria con clock in tempo reale A400 ASA</block>
+  <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">Drw C400 rimuovere la centralina IEOPS 1216</block>
+  <block id="771f4aeef9d68203f402ef43f2428c23" category="paragraph">Il controller si sposta leggermente fuori dallo chassis</block>
+  <block id="8fd39c2eb9c2c19fb66fabb13ca5407d" category="image-alt">Drw C400 nvdimm batt IEOPS 1227</block>
+  <block id="6eabe3dfd3272d314cbb0448ef86a7ca" category="section-title">Fase 5: Eseguire la diagnostica</block>
+  <block id="794b73a50d9f5595ccb242091ccf6e88" category="paragraph">Dopo aver sostituito un componente del sistema, è necessario eseguire test diagnostici su tale componente.</block>
+  <block id="1292b9de6b55a89a9f27c917af53c51e" category="paragraph">Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.</block>
+  <block id="1082bfd13ce3c25ccfc85ed699b54126" category="paragraph">Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.</block>
+  <block id="e7715fbdf353439bc04c101e641a6a00" category="list-text">Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller:<block ref="d9a3ee635a736b8059849c211af96e57" prefix=" " category="inline-code"></block></block>
+  <block id="cafeac4841bc727e191d8e441daae473" category="paragraph">Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.</block>
+  <block id="14a78bce1fad359d61fd0d2e4a24c3f0" category="list-text">Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente:<block ref="87ee09e2a5f76fd0b04e7f6e02d1e3ef" prefix=" " category="inline-code"></block></block>
+  <block id="4d0d7afa62744b6e8fc6dc6801b2da31" category="list-text">Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.</block>
+  <block id="4c82586ad94f678fd41f1bb0af345849" category="list-text">Selezionare *Test Memory* dal menu visualizzato per eseguire i test di diagnostica.</block>
+  <block id="62b108a49afeed7e7e1892a4157f8715" category="list-text">Procedere in base al risultato del passaggio precedente:</block>
+  <block id="9e1e2230ae8a4b73d9a6a3b77c93c501" category="list-text">Se la scansione presenta problemi, correggere il problema, quindi eseguire nuovamente la scansione.</block>
+  <block id="c46c5861f25b8f00cf91204cfc2402e9" category="list-text">Se la scansione non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.</block>
+  <block id="88f619f79a466f76f35e017863a94304" category="section-title">Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica</block>
+  <block id="9e70237e8106527e732b0c345e0d528e" category="paragraph">Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.</block>
+  <block id="6d9502ea6880092a4496782c893e3da2" category="image-alt">DRW C400 psu IEOPS 1237</block>
+  <block id="f953d8cdae44d8d3483abb899a001088" category="image-alt">Drw C400 sostituzione schede PCIe IEOPS 1235 (1)</block>
+  <block id="8a8905b8ba33c894ca2404f3ecc9601d" category="image-alt">Drw C400 condotto aria aperto IEOPS 1215</block>
+  <block id="7f3e7059150c562376058a9c62805700" category="image-alt">Drw C400 sostituire il supporto di avvio IEOPS 1217</block>
+  <block id="8f9d84ce0761e9cbbd0e69dc419011a6" category="paragraph"><block ref="8f9d84ce0761e9cbbd0e69dc419011a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80c14517a78070e49e0abac5d7f9ddbf" category="image-alt">Drw C400 sostituire scheda mezz IEOPS 1236</block>
+  <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">Drw C400 rtc batt IEOPS 1239</block>
+  <block id="bd47a35792b075014fd52e08e307f334" category="paragraph">Per sostituire l'alimentatore, utilizzare la seguente illustrazione con la procedura scritta.</block>
+  <block id="6867fc910d131de047b47f8e69a79887" category="paragraph">Dopo aver sostituito un modulo DIMM di sistema nel sistema, è necessario eseguire test diagnostici su tale componente.</block>
+  <block id="627dae9b7fdce24278b6e4ff295eb7be" category="list-text">Selezionare *Test Memory* dal menu visualizzato.</block>
+  <block id="ec0d0904d577b30f49df1757109008c2" category="list-text">Selezionare un'opzione dal sottomenu visualizzato ed eseguire il test.</block>
+  <block id="79934a1e2f37ff48405809bfef33e025" category="list-text">Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.</block>
+  <block id="7795a0b926d5a3e9bb0b6489d5f08336" category="list-text">Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.</block>
+  <block id="319906493abbf4e43070e2a96baf7c1a" category="paragraph">Dopo aver sostituito il modulo NVDIMM nel sistema, eseguire test diagnostici su tale componente.</block>
+  <block id="3c6a6919b7e370565fb312ed482c731f" category="list-text">Selezionare *NVDIMM Test* dal menu visualizzato.</block>
+  <block id="b5775fd5494c53337ae6cdf9684c92bb" category="paragraph">È necessario spostare il dispositivo multimediale di avvio dal controller danneggiato e installarlo nel controller sostitutivo.</block>
+  <block id="e1e22f74d03ae53f2b284cc33a49e335" category="paragraph">È necessario spostare il dispositivo multimediale di avvio dal modulo controller danneggiato al modulo controller sostitutivo.</block>
+  <block id="5f5c8582e186539c05898d22a8d895e8" category="paragraph">Il supporto di avvio si trova sotto il coperchio del condotto dell'aria precedentemente rimosso in questa procedura.</block>
+  <block id="52af7d4516c9a231debbc59d16540841" category="summary">Eseguire la manutenzione dell'hardware FAS2800</block>
+  <block id="a15b9605ee28854b0a879286a11a485d" category="doc">Manutenzione dell'hardware FAS2800</block>
+  <block id="3bf4e15c5081d9414a6cd3448aae890e" category="paragraph">Per il sistema di archiviazione FAS2800, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="1ddc1fb5b0cd55faae476600a06e1a0b" category="summary">Per iniziare a utilizzare i sistemi AFF, ASA e FAS, puoi installare componenti hardware, configurare gli switch e configurare lo storage in ONTAP.</block>
+  <block id="d90835a42340aac8a036ef710a1aa68a" category="doc">Inizia a utilizzare i sistemi storage AFF, ASA e FAS</block>
+  <block id="ced81397dd782da72bb7c38992c64be4" category="paragraph">Installare i controller AFF, ASA e FAS nel rack o nel cabinet. Accedere alle istruzioni di installazione e configurazione per il modello di piattaforma in uso.</block>
+  <block id="fe16224741a81fa9747d82d6dc05182c" category="list-text"><block ref="fe16224741a81fa9747d82d6dc05182c" category="inline-link-rx"></block></block>
+  <block id="ecd8dd92a7f4e8e4e42627b4e7b33118" category="list-text"><block ref="ecd8dd92a7f4e8e4e42627b4e7b33118" category="inline-link-rx"></block></block>
+  <block id="550e0f3f38fa7f062f0cd580e8ec9904" category="list-text"><block ref="550e0f3f38fa7f062f0cd580e8ec9904" category="inline-link-rx"></block></block>
+  <block id="52142476f2ac75ac73f5e40f09d0e6d4" category="list-text"><block ref="52142476f2ac75ac73f5e40f09d0e6d4" category="inline-link-rx"></block></block>
+  <block id="b9cc4cc5d585d56b19a0b0bf8c7ff71f" category="list-text"><block ref="b9cc4cc5d585d56b19a0b0bf8c7ff71f" category="inline-link-rx"></block></block>
+  <block id="0ac6aa3296c0437f3274277862d88d2b" category="list-text"><block ref="0ac6aa3296c0437f3274277862d88d2b" category="inline-link-rx"></block></block>
+  <block id="a334af0b164fc0db79711e89abe4cb0d" category="inline-link">FAS2800</block>
+  <block id="53e69397147d83b3fa253cab22a92a98" category="list-text"><block ref="53e69397147d83b3fa253cab22a92a98" category="inline-link-rx"></block></block>
+  <block id="842e9311855e597be1c8f81082e70046" category="paragraph">Dopo aver configurato gli switch e installato il software necessario, accedere alle istruzioni di installazione e configurazione per il modello di piattaforma in uso per completare l'installazione del sistema.</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="7654764586a53c997b8c1df9098532f4" category="summary">Scopri le nuove funzionalità dei sistemi AFF, ASA e FAS.</block>
+  <block id="3e2d1e468d09ac8c0d6588070ba9373f" category="doc">Novità dei sistemi AFF, ASA e FAS</block>
+  <block id="e0bcfdcb3cdb0fb1cf75064d4e0a8516" category="sidebar">I sistemi di storage AFF, ASA e FAS di NetApp offrono storage all-flash o ibrido scale-out, di livello Enterprise e all'avanguardia, con la gestione dei dati più avanzata del settore. Utilizzare i documenti presenti in questo sito per installare, espandere, aggiornare e gestire i sistemi.</block>
+  <block id="834c650e32073b55fedca10accbda908" category="sidebar">Documentazione sui sistemi AFF, ASA e FAS</block>
 </blocks>

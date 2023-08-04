@@ -182,12 +182,6 @@ mcc1A::> metrocluster operation show
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
-Per rimuovere il modulo controller dal telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
-
-.Animazione - rimuovere il modulo controller
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
-
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
@@ -199,6 +193,26 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 +
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
++
+image::../media/drw_c400_remove_controller_IEOPS-1216.svg[Drw C400 rimuovere la centralina IEOPS 1216]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+Fermi di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Il controller si sposta leggermente fuori dallo chassis
+
+|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -218,7 +232,7 @@ Per sostituire un DIMM di sistema, è possibile utilizzare l'animazione, l'illus
 NOTE: L'animazione e l'illustrazione mostrano gli slot vuoti per i socket senza DIMM. Questi socket vuoti sono popolati con spazi vuoti.
 
 .Animazione - sostituire un DIMM di sistema
-video::175c6597-449e-4dc8-8c02-aad9012f08b5[panopto]
+video::93025369-2f61-46b1-bd51-b03100040fe6[panopto]
 image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Drw A400 sostituire il DIMM NVDIMM]
 
 I DIMM si trovano negli zoccoli 2, 4, 13 e 15. Il modulo NVDIMM si trova nello slot 11.
@@ -256,13 +270,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 == Fase 4: Installare il modulo controller
 
-Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo.
-
-Per installare il modulo controller nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
-
-.Animazione - Installazione del modulo controller
-video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
-image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
+Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
 
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
@@ -294,15 +302,45 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
 
 .. Al prompt DEL CARICATORE, immettere `bye` Per reinizializzare le schede PCIe e altri componenti.
+.. Interrompere il processo di avvio e avviare il CARICATORE premendo `Ctrl-C`.
++
+Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
 
 
 
 
 
 
-== Fase 5: Ripristinare il funzionamento del modulo controller
 
-È necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
+== Fase 5: Eseguire la diagnostica
+
+Dopo aver sostituito un modulo DIMM di sistema nel sistema, è necessario eseguire test diagnostici su tale componente.
+
+Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
+
+. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller: `system node halt -node node_name`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
+. Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.
+. Selezionare *Test Memory* dal menu visualizzato.
+. Selezionare un'opzione dal sottomenu visualizzato ed eseguire il test.
+. Procedere in base al risultato del passaggio precedente:
++
+** Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.
+** Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.
+
+
+
+
+
+
+== Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica
+
+Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
 
 . Ricable il sistema, come necessario.
 +
@@ -314,7 +352,7 @@ Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di re
 
 
 
-== Fase 6: Switch back aggregates in una configurazione MetroCluster a due nodi
+== Fase 7: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
 
@@ -372,6 +410,6 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
-== Fase 7: Restituire il componente guasto a NetApp
+== Fase 8: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.
