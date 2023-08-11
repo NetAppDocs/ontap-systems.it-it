@@ -5043,18 +5043,12 @@
   <block id="496b4a3650aab467cf608b170b892ff0" category="summary">È possibile sostituire una PDU guasta nel cabinet di sistema o una PDU esistente con un tipo diverso di PDU.</block>
   <block id="ef229ddf3c0a14a70216a92856d40161" category="doc">Sostituire le PDU</block>
   <block id="88cf45a15ad0d90bd6e19a24f810822a" category="paragraph">La PDU sostitutiva deve essere supportata dall'armadio del sistema e fornire alimentazione sufficiente all'apparecchiatura installata.</block>
-  <block id="4fbff5b4dee9636bd56900af51fdd7a8" category="list-text">Spegnere gli interruttori di circuito sulla PDU di destinazione, quindi scollegare la vecchia PDU dalla fonte di alimentazione CA.</block>
-  <block id="1989ca3bd819f1099182bcf6351ed5b4" category="list-text">Collegare a massa l'armadio di sistema, quindi scollegare i cavi di alimentazione da ciascun componente del sistema e dalla PDU.</block>
   <block id="9ad9ea8490a641161f4adb6e3f2bc0ef" category="list-text">Rimuovere le viti dal telaio della PDU, quindi prima la vite inferiore.</block>
   <block id="17de7c609b4fa11bfbd42b27506a7686" category="admonition">Assicurarsi di sostenere la PDU con una mano mentre si rimuove l'ultima vite dalla parte superiore della PDU. In questo modo si evita che la PDU cada o cada verso di sé dopo la rimozione della vite.</block>
-  <block id="3ac6263fbfd63ebfc4e426b2da956c22" category="list-text">Rimuovere la vecchia PDU dal cabinet di sistema.</block>
   <block id="4dda4611a9de699220bc9f60e9d529c5" category="paragraph">Assicurarsi di tenere traccia delle viti di montaggio in modo da poterle riutilizzare durante l'installazione della PDU sostitutiva.</block>
-  <block id="420bae0ac211e6a209a8ca28f7ce8fed" category="list-text">Rimuovere le staffe dalla vecchia PDU, quindi installarle sul retro della nuova PDU.</block>
-  <block id="199516540a6f5c3cc527e2233f00e852" category="list-text">Mentre si sostiene la PDU sostitutiva, allineare lo slot sulla staffa di montaggio della PDU con i fori superiori del telaio all'interno dell'armadietto del sistema, quindi fissare la PDU al telaio dell'armadietto del sistema utilizzando le viti di montaggio della vecchia PDU.</block>
   <block id="1663c81c2800071abb2416ac1f02af7b" category="list-text">Fissare la parte inferiore della PDU al telaio del cabinet di sistema, quindi serrare tutte le viti di montaggio.</block>
   <block id="50557c0f929805d051808d32d02f4238" category="list-text">Verificare che tutti gli interruttori di alimentazione o gli interruttori di circuito siano in posizione Off.</block>
   <block id="2198cda48b40760064274c533a0bb100" category="paragraph">Se gli interruttori automatici non sono in posizione Off, spingere un piccolo cacciavite o una graffetta dritta nello slot a destra dell'etichetta Off per far scattare l'interruttore e spegnere il circuito.</block>
-  <block id="3f1c6da286f9a0a50c82f505309eac01" category="list-text">Collegare i cavi di alimentazione del sistema alla PDU, collegando ciascun componente alla presa PDU direttamente di fronte al componente.</block>
   <block id="c6a29e7ba231ff756ea033da9fcf39b0" category="admonition">Una Best practice consiste nel distribuire il carico totale tra le diramazioni PDU, rendendo ogni carico di diramazione il più uguale possibile.</block>
   <block id="baaa322344b84f330d59cb629097f0f7" category="list-text">Bloccare ogni spina del cavo di alimentazione in posizione con il fermo del cavo sopra di essa facendo scorrere il bordo curvo del fermo del cavo sopra la spalla del connettore.</block>
   <block id="2f4e88c25cdf52e68455a1402fb5bf5b" category="list-text">Collegare il cavo di alimentazione PDU alla fonte di alimentazione CA.</block>
@@ -5063,9 +5057,6 @@
   <block id="9682abea21a8105e25e53a664815f083" category="summary">È necessario collegare i componenti del sistema alle PDU, instradare i cavi PDU alle fonti di alimentazione CA, collegarli alle fonti di alimentazione e accendere il sistema.</block>
   <block id="de377ff4f06113db5f03b6d5d7501baa" category="doc">Accendere l'armadio di sistema</block>
   <block id="44626aa3377a470ee951473cc16b9064" category="paragraph">È necessario disporre di circuiti di alimentazione separati per ciascuna PDU nell'armadio del sistema.</block>
-  <block id="446a4e63e0c973838e08a5473045915d" category="list-text">Collegare l'apparecchiatura alle PDU, assicurandosi di collegare gli alimentatori di ciascun componente a una PDU sui lati opposti dell'armadio del sistema.</block>
-  <block id="8c74169b1ab62a22c3b2a90a3051cfd3" category="list-text">Inserire i cavi di alimentazione della PDU attraverso un'apertura nell'armadio del sistema.</block>
-  <block id="2965b9f0cdabb572eee3c29e940336c6" category="paragraph">Utilizzare una delle seguenti aperture:</block>
   <block id="43fd8e637b5fa8a0480393ffec052db1" category="list-text">Nella parte superiore dell'armadietto del sistema</block>
   <block id="845cc1d7e0e6e805d0656362d228ee19" category="list-text">Tra la parte inferiore dello sportello posteriore e il telaio dell'armadietto del sistema</block>
   <block id="5c04468bd8d9f11247b1e74c799efff1" category="list-text">Attraverso l'apertura a pavimento e sotto l'armadietto del sistema</block>
@@ -6925,7 +6916,6 @@
   <block id="3b94033c8a5b93831bf0d7c1fa418f82" category="sidebar">Installare uno shelf in un nuovo sistema storage</block>
   <block id="bb1befc9e7977eedfa3877ae4c91a4ac" category="sidebar">Regole di cablaggio SAS, fogli di lavoro ed esempi</block>
   <block id="3cf53d4c9bda935f2527cd9e3072ef82" category="sidebar">Modulo IOM12/IOM12B</block>
-  <block id="711fec659e5c52bba32ca7f6f3439502" category="sidebar">Condizioni di stato dei LED dello shelf</block>
   <block id="27562113eba41d0820398afd585cb267" category="sidebar">Configurazione del software ASA</block>
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">Scheda informativa su ASA</block>
   <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">Analisi della soluzione ASA</block>
@@ -7743,7 +7733,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="40ab4deb5c724a3e2d6c8f6d96a94554" category="doc">Spegnere i controller - FAS2800</block>
   <block id="5f81816799fe408c4f5d0d2b06be7dd0" category="doc">Guida rapida - FAS2800</block>
   <block id="b0f0e558d3522c3be05dd8c2dd0af1cc" category="inline-link-macro">Istruzioni per l'installazione e la configurazione dei sistemi FAS2800</block>
-  <block id="dcd1fb87d1725e210ef205f9a1c5e788" category="paragraph"><block ref="dcd1fb87d1725e210ef205f9a1c5e788" category="inline-link-macro-rx"></block></block>
   <block id="30d72b7769d2368f3a2f7fcacca60c27" category="doc">Sostituire un DIMM - FAS2800</block>
   <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio del modulo controller.</block>
   <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">Individuare il modulo DIMM all'interno del controller, rimuoverlo e sostituirlo.</block>
@@ -7873,12 +7862,8 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="0ab7f92a68b16764d7667e3b826e3433" category="paragraph">Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare quale versione di ONTAP è in esecuzione sul sistema.</block>
   <block id="28a80c9e2cd7e688ac36b9d1d600c170" category="summary">È necessario verificare lo stato ha del telaio, rieseguire gli aggregati e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
   <block id="69f3a5a3fa19fee640389983d958d940" category="section-title">Fase 2: Switch back aggregates in una configurazione MetroCluster a due nodi</block>
-  <block id="cd48288105e3b8975765f5dfc4eb68c6" category="paragraph">400_fan_swap_out.adoc
-Per sostituire un modulo ventola senza interrompere il servizio, è necessario eseguire una sequenza specifica di attività.</block>
   <block id="341b682adfeb628f1bd1c2eb360fa9a4" category="paragraph">Spostare le ventole, i dischi rigidi e il modulo controller dallo chassis compromesso al nuovo chassis e sostituire lo chassis compromesso con quello nuovo dello stesso modello dello chassis compromesso.</block>
   <block id="6b78a305de67da849895158b569b9d11" category="paragraph">Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo.</block>
-  <block id="4971d1d0e646704442f36457f270bd80" category="paragraph">400_nvdimm_replace.adoc
-È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema.</block>
   <block id="bfce71371c42897290715d3a240df4ba" category="paragraph">Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo.</block>
   <block id="f57ac97281a56eb21b6c67d6f8d23883" category="paragraph">È necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.</block>
   <block id="0e7d06b3f50f9081b15d133e07f647b6" category="summary">Manutenzione dell'hardware ASA A400</block>
@@ -8438,19 +8423,14 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="a876a1a0c70aad6f175618bf59efec73" category="sidebar">Batteria con clock in tempo reale A400 ASA</block>
   <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">Drw C400 rimuovere la centralina IEOPS 1216</block>
   <block id="771f4aeef9d68203f402ef43f2428c23" category="paragraph">Il controller si sposta leggermente fuori dallo chassis</block>
-  <block id="8fd39c2eb9c2c19fb66fabb13ca5407d" category="image-alt">Drw C400 nvdimm batt IEOPS 1227</block>
   <block id="6eabe3dfd3272d314cbb0448ef86a7ca" category="section-title">Fase 5: Eseguire la diagnostica</block>
-  <block id="794b73a50d9f5595ccb242091ccf6e88" category="paragraph">Dopo aver sostituito un componente del sistema, è necessario eseguire test diagnostici su tale componente.</block>
   <block id="1292b9de6b55a89a9f27c917af53c51e" category="paragraph">Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.</block>
   <block id="1082bfd13ce3c25ccfc85ed699b54126" category="paragraph">Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.</block>
   <block id="e7715fbdf353439bc04c101e641a6a00" category="list-text">Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller:<block ref="d9a3ee635a736b8059849c211af96e57" prefix=" " category="inline-code"></block></block>
   <block id="cafeac4841bc727e191d8e441daae473" category="paragraph">Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.</block>
   <block id="14a78bce1fad359d61fd0d2e4a24c3f0" category="list-text">Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente:<block ref="87ee09e2a5f76fd0b04e7f6e02d1e3ef" prefix=" " category="inline-code"></block></block>
   <block id="4d0d7afa62744b6e8fc6dc6801b2da31" category="list-text">Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.</block>
-  <block id="4c82586ad94f678fd41f1bb0af345849" category="list-text">Selezionare *Test Memory* dal menu visualizzato per eseguire i test di diagnostica.</block>
   <block id="62b108a49afeed7e7e1892a4157f8715" category="list-text">Procedere in base al risultato del passaggio precedente:</block>
-  <block id="9e1e2230ae8a4b73d9a6a3b77c93c501" category="list-text">Se la scansione presenta problemi, correggere il problema, quindi eseguire nuovamente la scansione.</block>
-  <block id="c46c5861f25b8f00cf91204cfc2402e9" category="list-text">Se la scansione non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.</block>
   <block id="88f619f79a466f76f35e017863a94304" category="section-title">Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica</block>
   <block id="9e70237e8106527e732b0c345e0d528e" category="paragraph">Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.</block>
   <block id="6d9502ea6880092a4496782c893e3da2" category="image-alt">DRW C400 psu IEOPS 1237</block>
@@ -8461,9 +8441,7 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="80c14517a78070e49e0abac5d7f9ddbf" category="image-alt">Drw C400 sostituire scheda mezz IEOPS 1236</block>
   <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">Drw C400 rtc batt IEOPS 1239</block>
   <block id="bd47a35792b075014fd52e08e307f334" category="paragraph">Per sostituire l'alimentatore, utilizzare la seguente illustrazione con la procedura scritta.</block>
-  <block id="6867fc910d131de047b47f8e69a79887" category="paragraph">Dopo aver sostituito un modulo DIMM di sistema nel sistema, è necessario eseguire test diagnostici su tale componente.</block>
   <block id="627dae9b7fdce24278b6e4ff295eb7be" category="list-text">Selezionare *Test Memory* dal menu visualizzato.</block>
-  <block id="ec0d0904d577b30f49df1757109008c2" category="list-text">Selezionare un'opzione dal sottomenu visualizzato ed eseguire il test.</block>
   <block id="79934a1e2f37ff48405809bfef33e025" category="list-text">Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.</block>
   <block id="7795a0b926d5a3e9bb0b6489d5f08336" category="list-text">Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.</block>
   <block id="319906493abbf4e43070e2a96baf7c1a" category="paragraph">Dopo aver sostituito il modulo NVDIMM nel sistema, eseguire test diagnostici su tale componente.</block>
@@ -8498,4 +8476,55 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="3e2d1e468d09ac8c0d6588070ba9373f" category="doc">Novità dei sistemi AFF, ASA e FAS</block>
   <block id="e0bcfdcb3cdb0fb1cf75064d4e0a8516" category="sidebar">I sistemi di storage AFF, ASA e FAS di NetApp offrono storage all-flash o ibrido scale-out, di livello Enterprise e all'avanguardia, con la gestione dei dati più avanzata del settore. Utilizzare i documenti presenti in questo sito per installare, espandere, aggiornare e gestire i sistemi.</block>
   <block id="834c650e32073b55fedca10accbda908" category="sidebar">Documentazione sui sistemi AFF, ASA e FAS</block>
+  <block id="ca31c0aa49625e7cda9cae921b597ddc" category="admonition">Il controller ver2 dispone di un numero inferiore di socket DIMM. Non vi è alcuna riduzione nel numero di DIMM supportati o modifica nella numerazione dei socket DIMM. Quando si spostano i moduli DIMM nel nuovo modulo controller, installare i moduli DIMM nello stesso numero/posizione del modulo controller danneggiato.  Vedere il diagramma della mappa FRU sul modulo controller ver2 per le posizioni dei socket DIMM.</block>
+  <block id="41f70b901e92516347e56b1eee6fe77b" category="section-title">Fase 5: Eseguire la diagnostica a livello di sistema</block>
+  <block id="2a075cce7e33313e84aaa96ceb86a4c8" category="paragraph">Dopo aver installato un nuovo DIMM, eseguire la diagnostica.</block>
+  <block id="df1e43716c35bc8d4504c85a27a53747" category="paragraph">Per avviare la diagnostica a livello di sistema, il sistema deve essere al prompt DEL CARICATORE.</block>
+  <block id="a9aa9ee572e50473b1c62b2a894e2043" category="list-text">Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, attenersi alla seguente procedura:</block>
+  <block id="a62ebd9a348c36c016869d6133f9d6a7" category="list-text">Selezionare l'opzione Maintenance mode (modalità manutenzione) dal menu visualizzato.</block>
+  <block id="2f550a4de949e9364b8ac6aefff7f6b7" category="list-text">Una volta avviato il controller in modalità di manutenzione, arrestare il controller:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
+  <block id="c63722af0556df99585d9c4de88eb02d" category="admonition">Durante il processo di avvio, è possibile rispondere in modo sicuro<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> a prompt.</block>
+  <block id="92a410b1608886e36ab28b2f459ca694" category="list-text">Se viene visualizzato un messaggio che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo.</block>
+  <block id="7e3c65608f93c3fbf4ce1a591a4d2340" category="paragraph">Durante il processo di avvio, è possibile rispondere in modo sicuro<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Fino a visualizzare il prompt della modalità di manutenzione (*&gt;).</block>
+  <block id="e580ca306f46568a79f3f99e6ff00dd4" category="list-text">Eseguire la diagnostica sulla memoria di sistema:<block ref="9cc327d245a3e2bf3cf969c94332f389" prefix=" " category="inline-code"></block></block>
+  <block id="0779a45c530b8731effd7061f49b82c5" category="list-text">Verificare che la sostituzione dei DIMM non abbia causato problemi hardware:<block ref="0d54fb4fe6de512f295c58294a4c56a7" prefix=" " category="inline-code"></block></block>
+  <block id="5da59e51284514317dd89943fd6da2c6" category="paragraph">La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.</block>
+  <block id="c444e1d5af673cd5dfdeb1085082e165" category="cell">Se il test di diagnostica a livello di sistema...</block>
+  <block id="e51b992cacbc73ddca29fb6c03d6002d" category="paragraph">Sono stati completati senza guasti</block>
+  <block id="629e9741b680c5d2f9b826ad2827a093" category="list-text">Cancellare i registri di stato:<block ref="5337cb249c294f16f70e226d13832fe2" prefix=" " category="inline-code"></block></block>
+  <block id="b136ba63933bc4583a57c094dbaf6a54" category="list-text">Verificare che il registro sia stato cancellato:<block ref="ffcce1e10203a888408d6b38d996935b" prefix=" " category="inline-code"></block></block>
+  <block id="d83539fafeb4a565a2af47953e3b18ff" category="paragraph">Viene visualizzata la seguente risposta predefinita:</block>
+  <block id="4b8070f17628f093b654845050b5340a" category="paragraph">SLDIAG: Nessun messaggio di log presente.</block>
+  <block id="9130288fde26913b149c87c0c3f09798" category="paragraph">Il controller visualizza il prompt DEL CARICATORE.</block>
+  <block id="e98eb54c273dabf46f95d865ffe06863" category="list-text">Avviare il controller dal prompt DEL CARICATORE:<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="72b23f149d410394a99402b17b524532" category="cell">Se il controller si trova in...</block>
+  <block id="beae2577508dff32956933c72e8af78a" category="paragraph">Eseguire un give back:<block ref="06b377d178eed8a76119920cc708363f" prefix=" " category="inline-code"></block>        *Nota:* se è stato disattivato il giveback automatico, riattivarlo con il comando di modifica del failover dello storage.</block>
+  <block id="834caefd76621a278dc8eb267498ba4b" category="paragraph">Ha causato alcuni errori di test</block>
+  <block id="36b7b39e8866d307e74c69b213e9f048" category="paragraph">Determinare la causa del problema:</block>
+  <block id="723c3f20f55eb14062651aca6c8a7346" category="paragraph">Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.</block>
+  <block id="cfc0c5504a92f839aa78f19ba2247644" category="list-text">Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.</block>
+  <block id="8764a3167d4b2a62ad3ab1024610e8a0" category="list-text">Avviare il modulo controller che si sta eseguendo la manutenzione, interrompendo l'avvio premendo<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block> Quando viene richiesto di accedere al menu di avvio:</block>
+  <block id="c644e1bd6ef1c961f0ee51f0001a2a80" category="list-text">Se nello chassis sono presenti due moduli controller, inserire completamente il modulo controller che si sta eseguendo la manutenzione nello chassis.</block>
+  <block id="c73474569fe6618d9069e1f3b42bbb62" category="paragraph">Il modulo controller si avvia quando è completamente inserito.</block>
+  <block id="cd344280bdd1b4c0a3bfe1c043079039" category="list-text">Se si dispone di un modulo controller nello chassis, collegare gli alimentatori e accenderli.</block>
+  <block id="0a04c386b1c4aba682caa8fbe7cfe6a5" category="list-text">Selezionare Boot to maintenance mode (Avvia alla modalità di manutenzione) dal menu.</block>
+  <block id="b68d60431d57a95615f83d1a1fa1b999" category="list-text">Uscire dalla modalità di manutenzione immettendo il seguente comando:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
+  <block id="7de4082b4319513bf089f060127a9d55" category="list-text">Eseguire nuovamente il test diagnostico a livello di sistema.</block>
+  <block id="f7ed34876dbd3974ede0b50d2019fcc5" category="paragraph"><block ref="f7ed34876dbd3974ede0b50d2019fcc5" category="inline-link-macro-rx"></block></block>
+  <block id="cac76ada4fbfca68ed190eb21810e1af" category="inline-link">FAS2820</block>
+  <block id="d269857d9f0df177f932595366b187b5" category="paragraph"><block ref="d269857d9f0df177f932595366b187b5" category="inline-link-rx"></block></block>
+  <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="paragraph">ONTAP 9.13.1</block>
+  <block id="93f637af8ac5da333e550231ad3ba0fa" category="admonition">Per evitare un'interruzione del sistema in caso di errore di una PDU, non collegare entrambi i cavi di alimentazione di un componente in una PDU. Distribuire il carico attraverso il PDS collegato a circuiti diversi, come mostrato nell'illustrazione.</block>
+  <block id="c8d15ffad402fb5c47edd1a01fc0bddc" category="list-text">Collegare l'apparecchiatura alle PDU:</block>
+  <block id="3ded18266b7e48e45601da3a7e439064" category="list-text">Collegare gli alimentatori del controller a diverse PDU collegate a diverse fonti di alimentazione.</block>
+  <block id="0c634889e74dcc29e25f327dc059325d" category="list-text">Collegare gli alimentatori dello shelf di unità a diverse PDU collegate a diverse fonti di alimentazione.</block>
+  <block id="d62665e6ca42d66f7798a47b3de173c1" category="list-text">Collegare qualsiasi alimentatore switch a diverse PDU collegate a diverse fonti di alimentazione.</block>
+  <block id="491e0bd8633c24f663133d28bbca00b6" category="image-alt">Cablaggio di alimentazione armadio IEOPS 1320</block>
+  <block id="a8160b1047e34e32f29ffcef388142ae" category="paragraph">Inserire i cavi di alimentazione PDU in una delle seguenti aperture nell'armadio di sistema:</block>
+  <block id="9f708794421d9c2f9fa55bb42915f824" category="list-text">Spegnere gli interruttori automatici sulla PDU danneggiata, quindi scollegare la PDU danneggiata dalla fonte di alimentazione CA.</block>
+  <block id="16eadd18e8cd7dafc21fca24e9d774c0" category="list-text">Collegare a terra l'armadietto del sistema, quindi scollegare i cavi di alimentazione da ciascuno dei componenti del sistema e dalla PDU danneggiata.</block>
+  <block id="c9144dd81d5fb57474d7493f00d69ad5" category="list-text">Rimuovere la PDU danneggiata dall'armadio di sistema.</block>
+  <block id="6693af315bf1c245b8a89cbbb645b36c" category="list-text">Rimuovere le staffe dalla PDU danneggiata, quindi installarle sul retro della PDU sostitutiva.</block>
+  <block id="0fa3e40fa136f7cfe1746d5ce1d7e9ee" category="list-text">Mentre si supporta la PDU di ricambio, allineare lo slot sulla staffa di montaggio della PDU ai fori superiori del telaio all'interno dell'armadietto di sistema, quindi fissare la PDU al telaio dell'armadietto di sistema utilizzando le viti di montaggio della PDU danneggiata.</block>
+  <block id="143d47d33d1ad99e226055b46abe364d" category="list-text">Collegare i cavi di alimentazione scollegati dal sistema di storage, dagli switch e dagli shelf di unità alla PDU sostitutiva, collegando ciascun componente alla presa PDU direttamente di fronte al componente.</block>
 </blocks>

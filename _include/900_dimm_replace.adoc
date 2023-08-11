@@ -182,6 +182,9 @@ Pulsante di bloccaggio del coperchio del modulo controller
 
 Per sostituire i moduli DIMM, individuarli all'interno del controller e seguire la sequenza di passaggi specifica.
 
+
+NOTE: Il controller ver2 dispone di un numero inferiore di socket DIMM. Non vi è alcuna riduzione nel numero di DIMM supportati o modifica nella numerazione dei socket DIMM. Quando si spostano i moduli DIMM nel nuovo modulo controller, installare i moduli DIMM nello stesso numero/posizione del modulo controller danneggiato.  Vedere il diagramma della mappa FRU sul modulo controller ver2 per le posizioni dei socket DIMM.
+
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Individuare i DIMM sul modulo controller.
 
@@ -303,15 +306,123 @@ I fermi di bloccaggio si sollevano quando il modulo controller è completamente 
 IMPORTANT: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
 +
-Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
 
 .. Ruotare i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, quindi abbassarli in posizione di blocco.
+.. Interrompere il processo di avvio premendo `Ctrl-C` Quando viene visualizzato, premere Ctrl-C per il menu di avvio.
+.. Selezionare l'opzione per avviare la modalità di manutenzione dal menu visualizzato.
 
 
 
 
 
 
-== Fase 5: Restituire il componente guasto a NetApp
+== Fase 5: Eseguire la diagnostica a livello di sistema
+
+Dopo aver installato un nuovo DIMM, eseguire la diagnostica.
+
+Per avviare la diagnostica a livello di sistema, il sistema deve essere al prompt DEL CARICATORE.
+
+Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.
+
+. Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, attenersi alla seguente procedura:
++
+.. Selezionare l'opzione Maintenance mode (modalità manutenzione) dal menu visualizzato.
+.. Una volta avviato il controller in modalità di manutenzione, arrestare il controller: `halt`
++
+Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
++
+
+IMPORTANT: Durante il processo di avvio, è possibile rispondere in modo sicuro `y` a prompt.
+
++
+*** Se viene visualizzato un messaggio che avvisa che quando si accede alla modalità di manutenzione in una configurazione ha, è necessario assicurarsi che il controller integro rimanga inattivo.
+
+
+
+
+. Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente: `boot_diags`
++
+Durante il processo di avvio, è possibile rispondere in modo sicuro `y` Fino a visualizzare il prompt della modalità di manutenzione (*>).
+
+. Eseguire la diagnostica sulla memoria di sistema: `sldiag device run -dev mem`
+. Verificare che la sostituzione dei DIMM non abbia causato problemi hardware: `sldiag device status -dev mem -long -state failed`
++
+La diagnostica a livello di sistema riporta al prompt se non ci sono errori di test o elenca lo stato completo degli errori risultanti dal test del componente.
+
+. Procedere in base al risultato del passaggio precedente:
++
+[cols="1,2"]
+|===
+| Se il test di diagnostica a livello di sistema... | Quindi... 
+
+
+ a| 
+Sono stati completati senza guasti
+ a| 
+.. Cancellare i registri di stato: `sldiag device clearstatus`
+.. Verificare che il registro sia stato cancellato: `sldiag device status`
++
+Viene visualizzata la seguente risposta predefinita:
+
++
+SLDIAG: Nessun messaggio di log presente.
+
+.. Uscire dalla modalità di manutenzione: `halt`
++
+Il controller visualizza il prompt DEL CARICATORE.
+
+.. Avviare il controller dal prompt DEL CARICATORE: `bye`
+.. Riportare il controller al funzionamento normale:
+
+
+|===
++
+[cols="1,2"]
+|===
+| Se il controller si trova in... | Quindi... 
+
+
+ a| 
+Una coppia ha
+ a| 
+Eseguire un give back: `storage failover giveback -ofnode replacement_node_name`        *Nota:* se è stato disattivato il giveback automatico, riattivarlo con il comando di modifica del failover dello storage.
+
+
+
+ a| 
+Ha causato alcuni errori di test
+ a| 
+Determinare la causa del problema:
+
+.. Uscire dalla modalità di manutenzione: `halt`
++
+Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+.. Verificare di aver osservato tutte le considerazioni identificate per l'esecuzione della diagnostica a livello di sistema, che i cavi siano collegati saldamente e che i componenti hardware siano installati correttamente nel sistema di storage.
+.. Avviare il modulo controller che si sta eseguendo la manutenzione, interrompendo l'avvio premendo `Ctrl-C` Quando viene richiesto di accedere al menu di avvio:
++
+*** Se nello chassis sono presenti due moduli controller, inserire completamente il modulo controller che si sta eseguendo la manutenzione nello chassis.
++
+Il modulo controller si avvia quando è completamente inserito.
+
+*** Se si dispone di un modulo controller nello chassis, collegare gli alimentatori e accenderli.
+
+
+.. Selezionare Boot to maintenance mode (Avvia alla modalità di manutenzione) dal menu.
+.. Uscire dalla modalità di manutenzione immettendo il seguente comando: `halt`
++
+Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.
+
+.. Eseguire nuovamente il test diagnostico a livello di sistema.
+
+
+|===
+
+
+
+
+== Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

@@ -13,17 +13,28 @@ summary: È necessario collegare i componenti del sistema alle PDU, instradare i
 [role="lead"]
 È necessario collegare i componenti del sistema alle PDU, instradare i cavi PDU alle fonti di alimentazione CA, collegarli alle fonti di alimentazione e accendere il sistema.
 
+
+IMPORTANT: Per evitare un'interruzione del sistema in caso di errore di una PDU, non collegare entrambi i cavi di alimentazione di un componente in una PDU. Distribuire il carico attraverso il PDS collegato a circuiti diversi, come mostrato nell'illustrazione.
+
 È necessario disporre di circuiti di alimentazione separati per ciascuna PDU nell'armadio del sistema.
 
-. Collegare l'apparecchiatura alle PDU, assicurandosi di collegare gli alimentatori di ciascun componente a una PDU sui lati opposti dell'armadio del sistema.
-. Inserire i cavi di alimentazione della PDU attraverso un'apertura nell'armadio del sistema.
+. Collegare l'apparecchiatura alle PDU:
 +
-Utilizzare una delle seguenti aperture:
+.. Collegare gli alimentatori del controller a diverse PDU collegate a diverse fonti di alimentazione.
+.. Collegare gli alimentatori dello shelf di unità a diverse PDU collegate a diverse fonti di alimentazione.
+.. Collegare qualsiasi alimentatore switch a diverse PDU collegate a diverse fonti di alimentazione.
++
+image::../media/cabinet_power_cabling_IEOPS-1320.svg[Cablaggio di alimentazione armadio IEOPS 1320]
 
 +
-** Nella parte superiore dell'armadietto del sistema
-** Tra la parte inferiore dello sportello posteriore e il telaio dell'armadietto del sistema
-** Attraverso l'apertura a pavimento e sotto l'armadietto del sistema
+Inserire i cavi di alimentazione PDU in una delle seguenti aperture nell'armadio di sistema:
+
++
+*** Nella parte superiore dell'armadietto del sistema
+*** Tra la parte inferiore dello sportello posteriore e il telaio dell'armadietto del sistema
+*** Attraverso l'apertura a pavimento e sotto l'armadietto del sistema
+
+
 
 
 . Spegnere gli interruttori di alimentazione o gli interruttori automatici delle PDU.
