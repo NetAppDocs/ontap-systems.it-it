@@ -1,10 +1,10 @@
 ---
-permalink: a900/dcpm_NVRAM11_battery_replace.html 
+permalink: fas9500/dcpm-nvram11-battery-replace.html 
 sidebar: sidebar 
-keywords: AFF A900 
-summary: 'Per sostituire a caldo un modulo di alimentazione del controller di de-stage (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dal telaio e installare il modulo DCPM sostitutivo.' 
+keywords: FAS9500 
+summary: 'Per sostituire a caldo un modulo di alimentazione del controller di destinazione (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.' 
 ---
-= Sostituire il modulo di alimentazione del controllo di emergenza contenente la batteria NVRAM11 - AFF A900
+= Sostituire il modulo di alimentazione Destage Control contenente la batteria NVRAM11 - FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -31,20 +31,20 @@ Se il modulo è guasto, il LED diventa ambra fisso.
 
 IMPORTANT: Il modulo DCPM deve essere sostituito nello chassis entro cinque minuti dalla rimozione, altrimenti il controller associato si spegnerà.
 
-. Premere il pulsante di rilascio della terracotta sulla maniglia del modulo, quindi estrarre il modulo DCPM dal telaio.
+. Premere il pulsante di blocco terracotta sulla maniglia del modulo, quindi estrarre il modulo DCPM dal telaio.
 +
 .Animazione - rimuovere/installare DCPM
-video::ade18276-5dbc-4b91-9a0e-adf9016b4e55[panopto]
+video::c067cf9d-35b8-4fbe-9573-ae78004c2328[panopto]
 +
-image::../media/drw_9000_remove_nv_battery.svg[drw 9000 rimuovere la batteria nv]
+image::../media/drw_9500_remove_NV_battery.svg[Drw 9500 rimuovere la batteria NV]
 
 +
-[cols="10,90"]
+[cols="20%,80%"]
 |===
 
 
  a| 
-image:../media/legend_icon_01.png[""]
+image::../media/legend_icon_01.svg[icona legenda 01]
  a| 
 Pulsante di blocco terracotta del modulo DCPM
 
