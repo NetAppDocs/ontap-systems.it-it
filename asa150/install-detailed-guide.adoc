@@ -19,7 +19,6 @@ Se si dispone di una configurazione MetroCluster, utilizzare https://docs.netapp
 
 == Fase 1: Preparazione per l'installazione
 
-[role="lead"]
 Per installare il sistema, creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
 
 .Prima di iniziare
@@ -40,7 +39,7 @@ Per installare il sistema, creare un account sul sito del supporto NetApp, regis
 . Disimballare il contenuto di tutte le confezioni.
 . Annotare il numero di serie del sistema dai controller.
 +
-image::../media/drw_ssn_label.png[etichetta drw sn]
+image::../media/drw_ssn_label.png[Esempio del numero di serie del sistema che mostra la posizione del numero]
 
 . Configurazione dell'account:
 +
@@ -96,7 +95,7 @@ X6536-R6 (112-00090), 5 m.
 
 X6554-R6 (112-00189), 15 m.
  a| 
-image:../media/oie_cable_fiber_lc_connector.png[""]
+image:../media/oie_cable_fiber_lc_connector.png["Immagine che mostra un connettore LC in fibra ottica"]
  a| 
 Rete host FC
 
@@ -137,7 +136,7 @@ Cavo per console micro-USB
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_micro_usb.png[""]
+image:../media/oie_cable_micro_usb.png["Immagine che mostra un connettore micro USB"]
  a| 
 Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac
 
@@ -160,7 +159,6 @@ Accensione del sistema
 
 == Fase 2: Installare l'hardware
 
-[role="lead"]
 Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
 
 .Fasi
@@ -184,7 +182,6 @@ image::../media/drw_cable_management_arm_install.png[installazione di ARM per la
 
 == Fase 3: Collegare i controller alla rete
 
-[role="lead"]
 Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.
 
 La rete di gestione, la rete dati UTA2, la rete dati Ethernet e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.
@@ -232,7 +229,7 @@ Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per 
 ** Per un host FC, utilizzare 0c e 0d *o* 0e e 0f.
 ** Per un sistema 10GbE, utilizzare e0c e e0d *o* e0e ed e0f.
 +
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connessioni della porta dati come descritto nel testo circostante"]
 
 +
 È possibile collegare una coppia di porte come CNA e una coppia di porte come FC oppure entrambe le coppie di porte come CNA o entrambe come FC.
@@ -302,7 +299,7 @@ Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per 
 ** Per un host FC, utilizzare 0c e 0d **o** 0e e 0f.
 ** Per un sistema 10GbE, utilizzare e0c e e0d **o** e0e ed e0f.
 +
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connessioni della porta dati come descritto nel testo circostante"]
 
 +
 È possibile collegare una coppia di porte come CNA e una coppia di porte come FC oppure entrambe le coppie di porte come CNA o entrambe come FC.
@@ -384,7 +381,6 @@ Se si dispone di più stack di shelf di dischi, vedere link:../com.netapp.doc.hw
 
 == Fase 5: Completare la configurazione del sistema
 
-[role="lead"]
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
 [role="tabbed-block"]

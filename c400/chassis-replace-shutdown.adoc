@@ -17,7 +17,6 @@ Arrestare o sostituire il controller con problemi utilizzando la procedura appro
 
 == Opzione 1: Spegnere i controller quando si sostituisce uno chassis
 
-[role="lead"]
 Questa procedura è valida solo per configurazioni a 2 nodi non MetroCluster. Se si dispone di un sistema con più di due nodi, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Come eseguire uno spegnimento e l'accensione di una coppia ha in un cluster a 4 nodi"^].
 
 .Prima di iniziare
@@ -86,7 +85,6 @@ NOTE: Per i cluster che utilizzano SnapMirror con funzionamento sincrono in moda
 
 == Opzione 2: Spegnere un controller in una configurazione MetroCluster a due nodi
 
-[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività

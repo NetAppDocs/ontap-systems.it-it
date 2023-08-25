@@ -244,7 +244,6 @@ Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
 == Fase 5: Riassegnazione dei dischi
 
-[role="lead"]
 È necessario confermare la modifica dell'ID di sistema al momento dell'avvio del controller sostitutivo e verificare che la modifica sia stata implementata.
 
 
@@ -350,7 +349,6 @@ dr-group-id            cluster node           configuration-state
 
 == Fase 6: Ripristino delle funzionalità di storage e crittografia dei volumi
 
-[role="lead"]
 Se la crittografia dello storage è attivata, utilizzare la procedura appropriata.
 
 [role="tabbed-block"]
@@ -496,5 +494,4 @@ NOTE: È possibile utilizzare `security key-manager key query -key-type NSE-AK` 
 
 == Fase 7: Restituire il componente guasto a NetApp
 
-[role="lead"]
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

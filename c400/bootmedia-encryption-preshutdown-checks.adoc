@@ -40,7 +40,6 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 
 == Controllare NVE o NSE nei sistemi che eseguono ONTAP 9.6 e versioni successive
 
-[role="lead"]
 Prima di spegnere il controller compromesso, è necessario verificare se il sistema ha abilitato NetApp Volume Encryption (NVE) o NetApp Storage Encryption (NSE). In tal caso, è necessario verificare la configurazione.
 
 . Verificare se NVE è in uso per qualsiasi volume nel cluster: `volume show -is-encrypted true`
