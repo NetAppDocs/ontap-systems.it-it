@@ -305,10 +305,7 @@ Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 È necessario confermare la modifica dell'ID di sistema al momento dell'avvio del controller sostitutivo e verificare che la modifica sia stata implementata.
 
 
-NOTE: Questa procedura si applica solo ai sistemi che eseguono ONTAP in una coppia ha.
-
-
-CAUTION: La riassegnazione dei dischi è necessaria solo quando si sostituisce il modulo NVRAM.
+CAUTION: La riassegnazione del disco è necessaria solo quando si sostituisce il modulo NVRAM e non si applica alla sostituzione del DIMM NVRAM.
 
 .Fasi
 . Se il controller sostitutivo è in modalità di manutenzione (che mostra il `*>` Prompt), uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
@@ -408,6 +405,9 @@ dr-group-id            cluster node           configuration-state
 == Fase 6: Ripristino delle funzionalità di storage e crittografia dei volumi
 
 Se la crittografia dello storage è attivata, utilizzare la procedura appropriata.
+
+
+IMPORTANT: Questa operazione non si applica alla sostituzione del DIMM NVRAM.
 
 [role="tabbed-block"]
 ====
