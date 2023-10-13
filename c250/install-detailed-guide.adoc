@@ -251,6 +251,9 @@ IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
 
 Si dispone di un cablaggio opzionale dipendente dalla configurazione per le reti host Fibre Channel o iSCSI o lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile disporre di un cablaggio a una rete host e a uno storage.
 
+
+NOTE: link:https://hwu.netapp.com["NetApp Hardware Universe"^] La priorità dello slot per le schede di rete host (Fibre Channel o 25GbE) è lo slot 2. Tuttavia, se si dispone di entrambe le schede, la scheda Fibre Channel va nello slot 2 e la scheda 25GbE va nello slot 1 (come illustrato nelle opzioni seguenti). Se si dispone di uno scaffale esterno, la scheda di memoria si inserisce nello slot 1, l'unico slot supportato per gli scaffali.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Cavo alla rete host Fibre Channel

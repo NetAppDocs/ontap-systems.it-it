@@ -224,7 +224,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"^]
 .. Immettere il comando di sincronizzazione del gestore delle chiavi di sicurezza integrato: `security key-manager onboard sync`
 +
 
-NOTE: Inserire la passphrase di gestione della chiave integrata del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp. http://mysupport.netapp.com/["mysupport.netapp.com"^]
+NOTE: Immettere la passphrase di gestione della chiave alfanumerica integrata a 32 caratteri del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp. http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
 .. Verificare `Restored` viene visualizzata la colonna `yes` per tutte le chiavi di autenticazione: `security key-manager key query`
 .. Verificare che il `Key Manager` viene visualizzato il tipo `onboard`, Quindi eseguire manualmente il backup delle informazioni OKM.
@@ -279,7 +279,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"^]
 +
 .. Immettere il comando di sincronizzazione del gestore delle chiavi di sicurezza integrato: `security key-manager onboard sync`
 +
-Inserire la passphrase di gestione della chiave integrata del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.
+Immettere la passphrase di gestione della chiave alfanumerica integrata a 32 caratteri del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.
 
 +
 http://mysupport.netapp.com/["mysupport.netapp.com"^]

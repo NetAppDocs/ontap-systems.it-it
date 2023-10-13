@@ -273,7 +273,6 @@
   <block id="c5df4dcae9a001142a36959487445ff6" category="list-text">Risolvere qualsiasi<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block>. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.</block>
   <block id="3923b7d5100131c85be2160c8b680704" category="list-text">Accedere al cluster tramite SSH o da qualsiasi nodo del cluster utilizzando un cavo della console locale e un laptop/console.</block>
   <block id="d9e8189e14354652821e1f0f10f12dfe" category="list-text">Disattivare AutoSupport e indicare per quanto tempo si prevede che il sistema sia offline:</block>
-  <block id="ff3faabe8aca2ae4a92cf7dec5b62b8f" category="paragraph"><block ref="14fb036c43dbcde966a639d33554da5c" prefix="" category="inline-code"></block></block>
   <block id="ac2a6618449930e8abeb32fd078d7716" category="list-text">Identificare l'indirizzo SP/BMC di tutti i nodi:</block>
   <block id="0d16db60da2c01b63ef84ee8d616c2fb" category="paragraph"><block ref="b206d268f79aeaa7c4f1e44684d2f080" prefix="" category="inline-code"></block></block>
   <block id="a0fd5b31be719aeb26e2fc9c6991da9f" category="list-text">Uscire dalla shell del cluster:<block ref="f24f62eeb789199b9b2e467df3b1876b" prefix=" " category="inline-code"></block></block>
@@ -608,14 +607,12 @@
   <block id="e084232082046eab4e75b332c2a9fbe5" category="list-text">Verificare che il<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> colonna uguale a.<block ref="a6105c0a611b41b08f1209506350279e" prefix=" " category="inline-code"></block> per tutte le chiavi di autenticazione:<block ref="c9b37f9017fc101cecef415e707e7b5f" prefix=" " category="inline-code"></block></block>
   <block id="09344dc6761d2a7f8e0074911899de26" category="list-text">Se il<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> display dei tipi<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> e a.<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> la colonna visualizza un valore diverso da<block ref="a6105c0a611b41b08f1209506350279e" prefix=" " category="inline-code"></block>:</block>
   <block id="f5321e091dead7c4ead8728aa3332803" category="list-text">Immettere il comando di sincronizzazione del gestore delle chiavi di sicurezza integrato:<block ref="1fd11ad9c6fc9e17e9729cd939a2b47b" prefix=" " category="inline-code"></block></block>
-  <block id="60db4a77031ab02d5c7d793d8ee8e564" category="admonition">Inserire la passphrase di gestione della chiave integrata del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
   <block id="7ef95216354d37756f204adf213d9c42" category="list-text">Verificare<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> viene visualizzata la colonna<block ref="a6105c0a611b41b08f1209506350279e" prefix=" " category="inline-code"></block> per tutte le chiavi di autenticazione:<block ref="c9b37f9017fc101cecef415e707e7b5f" prefix=" " category="inline-code"></block></block>
   <block id="b1dfba2b33907e87a5254267b34a3e32" category="list-text">Verificare che il<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> viene visualizzato il tipo<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>, Quindi eseguire manualmente il backup delle informazioni OKM.</block>
   <block id="5420f491e628cc60c7e1ffcad20d35da" category="list-text">Immettere il comando per visualizzare le informazioni di backup per la gestione delle chiavi:<block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix=" " category="inline-code"></block></block>
   <block id="9e81e760541928935bc75be3ec2823a3" category="list-text">È possibile spegnere il controller in modo sicuro.</block>
   <block id="8eb91adaedfd18d8e21833ed58db7673" category="section-title">Verificare la configurazione NSE</block>
   <block id="1f7aa359582e430ea0f9f103a2603e1e" category="list-text">Visualizzare gli ID delle chiavi di autenticazione memorizzati nei server di gestione delle chiavi:<block ref="eb3cf23f0c9c60ca759ddca34bbfbf56" prefix=" " category="inline-code"></block></block>
-  <block id="f0bb66ccc33b2423473b4997076e2e15" category="paragraph">Inserire la passphrase di gestione della chiave integrata del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.</block>
   <block id="d21dc442f2ac95e798154d9d5d6e5d0a" category="doc">Spegnere il controller non utilizzato - AFF A400</block>
   <block id="aeb37e440c5f2e1087a4396fdd1d260b" category="paragraph">Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.</block>
   <block id="f5febbe164036410d93a5fc97b5bb033" category="paragraph">Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.</block>
@@ -816,12 +813,8 @@
   <block id="8647835bebea663e6009839ccbd3ce9e" category="paragraph">Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.</block>
   <block id="ef4c4a16058180d2b1384df9210877f6" category="paragraph">Per installare il modulo controller sostitutivo nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.</block>
   <block id="561273ebb17be6fcb781473771bc32cb" category="summary">Sono disponibili due video: Uno che mostra come installare e collegare il sistema in rack e uno che mostra un esempio di utilizzo della configurazione guidata di System Manager per eseguire la configurazione iniziale del sistema.</block>
-  <block id="a45631fee94bb9189db5b0c74b176a42" category="doc">Video - AFF A400</block>
-  <block id="2ff6b785c9bbb9bd149f3c338b823e06" category="section-title">Video uno di due: Installazione hardware e cablaggio</block>
   <block id="9ed9163b4599600e6378be760fd75fa8" category="paragraph">Il seguente video mostra come installare e collegare il nuovo sistema.</block>
   <block id="f56310c49687a40fd4b43bced4b3dcc8" category="video-title">Animazione - istruzioni per l'installazione e la configurazione di AFF A400</block>
-  <block id="d92d79541486453c440f5d479e7c2937" category="section-title">Video due di due: Esecuzione della configurazione software end-to-end</block>
-  <block id="6fcf86e967a5b349290bdafc15f7033f" category="paragraph">Il seguente video mostra la configurazione software end-to-end per i sistemi che eseguono ONTAP 9.2 e versioni successive.</block>
   <block id="d6cd25c7a2ec0fe6ad8621d4562ce0ae" category="summary">La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione dell'alimentatore precedente e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento dell'alimentatore sostitutivo alla fonte di alimentazione.</block>
   <block id="897fb2e62dec5276f207c3447d27e6c4" category="doc">Sostituzione di un alimentatore - AFF A400</block>
   <block id="f044adaf132925553df56c50232bae8a" category="paragraph">La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione dell'alimentatore precedente e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento dell'alimentatore sostitutivo alla fonte di alimentazione.</block>
@@ -921,8 +914,6 @@
   <block id="c32ad4a5390f985bde71f85fd8251878" category="paragraph">Per sostituire una scheda PCIe, individuare la scheda PCIe guasta, rimuovere il riser che contiene la scheda dal modulo controller, sostituire la scheda, quindi reinstallare il riser PCIe nel modulo controller.</block>
   <block id="b1c76afa8183e9e38bbcdc2b07081516" category="paragraph">Per sostituire una scheda PCIe, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.</block>
   <block id="5823654bd1d2c1d66c7f14b181b09611" category="video-title">Animazione - sostituire una scheda PCIe</block>
-  <block id="e7f3c0051e6bc5cbd205f59b35151985" category="inline-image-macro">larghezza = 500 px</block>
-  <block id="6a226d8716b094e1702259265b496684" category="paragraph"><block ref="6a226d8716b094e1702259265b496684" category="inline-image-macro-rx" type="image"></block></block>
   <block id="765cdfe024498fe63a6e735a5900aa5e" category="list-text">Rimuovere il riser contenente la scheda da sostituire:</block>
   <block id="4a1758eb84982eba0ae7e92f4805a0fd" category="list-text">Aprire il condotto dell'aria premendo le linguette di bloccaggio sui lati del condotto dell'aria, farlo scorrere verso la parte posteriore del modulo controller, quindi ruotarlo in posizione completamente aperta.</block>
   <block id="ae2da50d12990b504fe0386dd31104d2" category="list-text">Sollevare il riser e metterlo da parte su una superficie piana e stabile.</block>
@@ -942,7 +933,6 @@
   <block id="d0d8c1208244a56dcbb2146e7f481b69" category="paragraph">La scheda mezzanine si trova sotto il riser numero 3 (slot 4 e 5). Rimuovere il riser per accedere alla scheda mezzanine, sostituire la scheda mezzanine, quindi reinstallare il riser numero 3. Per ulteriori informazioni, vedere la mappa FRU sul modulo controller.</block>
   <block id="7b0bb567223271e2fe30743264b3e7e4" category="paragraph">Per sostituire la scheda mezzanine, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.</block>
   <block id="f3a3cf7eab7750309059903e1cc7d3c1" category="video-title">Animazione - sostituire la scheda mezzanino</block>
-  <block id="afe794b290a5da51dd8b580fadd2b035" category="image-alt">Drw A400 Sostituisci la scheda di memoria IEOPS 1006</block>
   <block id="92110eec090dd64cd9c33fdb9e290990" category="list-text">Rimuovere il riser numero 3 (slot 4 e 5):</block>
   <block id="53dc6c1f3f975e8decef52e58bc2aff1" category="list-text">Sostituire la scheda mezzanine:</block>
   <block id="66dd4076c9302ca4e5be977c29e387f4" category="list-text">Rimuovere eventuali moduli QSFP o SFP dalla scheda.</block>
@@ -960,7 +950,6 @@
   <block id="4f4fd54acab309f1a5e65fa28f282bda" category="paragraph">È necessario individuare la batteria RTC all'interno del modulo del controller, quindi seguire la sequenza specifica di passaggi. Consultare la mappa FRU all'interno del modulo controller per individuare la posizione della batteria RTC.</block>
   <block id="1d865762dc572ea89458b46f1d146cdf" category="paragraph">Per sostituire la batteria RTC, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.</block>
   <block id="5e67b9c469093782258f9da50efaaa49" category="video-title">Animazione - sostituire la batteria RTC</block>
-  <block id="f7e6cca62df33f4887013e8daaa9e77d" category="image-alt">Batteria rtc drw A400 IEOPS 1003</block>
   <block id="373905f2383b6a7f8d43c02143d4933e" category="list-text">Individuare, rimuovere e sostituire la batteria RTC:</block>
   <block id="a4d0ae56587a2cd3019212721f46adfa" category="list-text">Utilizzando la mappa FRU, individuare la batteria RTC sul modulo controller.</block>
   <block id="e789dadff6ab02fe418b101bca452d66" category="list-text">Estrarre delicatamente la batteria dal supporto, ruotarla verso l'esterno, quindi estrarla dal supporto.</block>
@@ -2028,8 +2017,6 @@
   <block id="7f162e118d7c5841e35145af500cfea2" category="section-title">Fase 10: Installare il modulo controller</block>
   <block id="99c63b9bf884dd51a946aceee88a56e0" category="paragraph">Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.</block>
   <block id="c4565f27e7eb1d0640e258fb796df9c4" category="list-text">Collegare i cavi di sistema e i moduli transceiver al modulo controller e reinstallare il dispositivo di gestione dei cavi.</block>
-  <block id="7879dde42cda05c8d4a155645c4a2b6d" category="doc">Video - AFF C800</block>
-  <block id="71eb59c59a42227ae8b45d0cfaf6f52f" category="paragraph">Sono disponibili due video: Uno che mostra come installare e collegare il sistema in rack e uno che mostra un esempio di utilizzo della configurazione guidata di System Manager per eseguire la configurazione iniziale del sistema.</block>
   <block id="6b60c2f33c9927e16d390be43c988aa0" category="video-title">Animazione - Installazione e configurazione di un AFF C800</block>
   <block id="9fc6e6ebb195a8b268f686a0f8256e7b" category="summary">La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione del vecchio alimentatore e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.</block>
   <block id="555193cbb314d41872f483748d489825" category="doc">Sostituire un alimentatore - AFF C800</block>
@@ -2397,9 +2384,7 @@
   <block id="dd33af940cfd986282d97dc9269783a9" category="summary">La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione del vecchio alimentatore e l'installazione del nuovo alimentatore, quindi il ricollegamento alla fonte di alimentazione.</block>
   <block id="9c0f44d79b852189eca9e0c3c970c0ff" category="doc">Sostituire un alimentatore - AFF C250</block>
   <block id="1419ac825716a209020b33adb96907c3" category="video-title">Animazione - sostituire l'alimentatore</block>
-  <block id="bf6b6560f6b1f050d2a1808c4b6336aa" category="doc">Video - AFF C250</block>
   <block id="ff0126462ebf63e99c0e579efb8f1760" category="video-title">Animazione - Installazione e configurazione di un AFF C250</block>
-  <block id="4606294616375644c4f16fd95c0c6358" category="section-title">Video due di due: Esecuzione della configurazione software end-to-end</block>
   <block id="7e48994ab2d6db5f4a1f1971bdb7686f" category="doc">Spegnere i controller - AFF C250</block>
   <block id="4d3408827df16f2063082b26e489e785" category="summary">Per spegnere il modulo controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.</block>
   <block id="3232f137ca5f81b881073e30f07d4927" category="doc">Spegnere il modulo controller guasto - AFF C250</block>
@@ -2563,7 +2548,6 @@
   <block id="9bc9bee1c7c86ea6e815437b4f02ff6c" category="paragraph">Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis. .</block>
   <block id="1422875ceb77c2edc7c07474b11b3c6f" category="list-text">Aprire il condotto dell'aria del modulo controller:</block>
   <block id="14a4774e9c6245d6341272988d1f5fbe" category="admonition">Se il sistema dispone di alimentatori CC, assicurarsi che le viti a testa zigrinata sul cavo di alimentazione siano serrate.</block>
-  <block id="f3a01cef2d9918b3669edb9ee2a1c2b8" category="doc">Video - AFF A800</block>
   <block id="26115a2b78227837b2498242d7c3a180" category="video-title">"Animazione - Installazione e configurazione di un AFF A800</block>
   <block id="80185b76790082a23c34d9ebf9a01f7e" category="doc">Sostituire un alimentatore - AFF A800</block>
   <block id="baf107967ece7d67d1783f4502771ad4" category="admonition">Non combinare PSU con diversi livelli di efficienza o tipi di input diversi. Sostituire sempre come per come.</block>
@@ -3454,9 +3438,6 @@
   <block id="cf55af4b4668a579d36bfd91785ecbec" category="paragraph">Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.</block>
   <block id="686631a3f808d481cbff656f883e6657" category="section-title">Opzione 3: Controller in un MetroCluster a due nodi</block>
   <block id="70fd333a51cca9f21f1a0312f3dc6984" category="doc">Restituire il componente guasto a NetApp - AFF A300</block>
-  <block id="ac49971fc6b0529cef97f29235b4bd53" category="doc">Video di installazione e configurazione - AFF A300</block>
-  <block id="61472088a460f1e915085268c1df2237" category="inline-link-macro">Video di configurazione di AFF A300</block>
-  <block id="1189b15f1d0e31e54b7a7a00343985c9" category="paragraph"><block ref="1189b15f1d0e31e54b7a7a00343985c9" category="inline-link-macro-rx"></block></block>
   <block id="11cedb2a3ea1c051845c4666a3942624" category="doc">Spegnere i controller - - AFF A300</block>
   <block id="8db7a5b6ece2af3b075639e41512d618" category="section-title">Opzione 1: Spegnere il controller</block>
   <block id="4cbf72a112e69e9ca004dad9b0b05d49" category="section-title">Opzione 2: I controller sono in una configurazione MetroCluster a due nodi</block>
@@ -3811,7 +3792,6 @@
   <block id="2f338557f8c0be16e8ae51b661b071b1" category="image-alt">drw telco montato al centro 1</block>
   <block id="17bc73815850fd6dc60d586cf707300e" category="section-title">Installare il kit di guide per il montaggio a incasso a due montanti</block>
   <block id="ef2cbc76f2fb85efc97170002c910e15" category="image-alt">supporto anteriore per telco drw 1</block>
-  <block id="d43c376026dc1771be0ad5086e3b8cb7" category="summary">Sono disponibili due video: Uno che mostra come installare e collegare il sistema in rack e uno che mostra un esempio di utilizzo della configurazione guidata di System Manager per eseguire la configurazione iniziale del sistema.</block>
   <block id="8f73eb9fb7acfd413cf2778aacee51b6" category="doc">Video fasi - AFF A900</block>
   <block id="6d7841c213a127c5b39ed3e64b1501d2" category="video-title">Animazione - istruzioni per l'installazione e la configurazione di AFF A900</block>
   <block id="4a11061a1e6cf88a01ac0a8a2d4682c6" category="doc">Sostituire l'hardware del modulo controller - AFF A900</block>
@@ -4077,7 +4057,6 @@
   <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">Inserire il modulo controller nel telaio.</block>
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">Sostituire la batteria NVMEM - FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">Per sostituire la batteria NVMEM, è possibile utilizzare il seguente video o la procedura riportata in tabella:</block>
-  <block id="77dde4ad7c98f99f807ec139e659b972" category="doc">Video - FAS500f</block>
   <block id="44de44e43d612d76f985580ff643993b" category="video-title">Animazione - Installazione e configurazione di un FAS500f</block>
   <block id="b94c622729a1c3b9f221ed4f8376e65b" category="doc">Sostituire un alimentatore - FAS500f</block>
   <block id="af9d8ec1fd1a942d04dce1dd9b6787b7" category="paragraph">La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione del vecchio alimentatore e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.</block>
@@ -4487,12 +4466,10 @@
   <block id="76afa3fde08aeab96dca3e3a39dcd27a" category="list-text">mcc-2n</block>
   <block id="0d76ca0117187df0c8275a536ccc39ef" category="doc">Sostituire l'hardware del modulo controller - AFF C190</block>
   <block id="ab16b7659f1f3d151837f3f6574edbce" category="paragraph">Per sostituire il modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.</block>
-  <block id="e66322388322d8b74707e920c5738c23" category="doc">Video - AFF C190</block>
   <block id="1d4ac53db25f608efca8dafa3f3d6b43" category="paragraph">Utilizza i seguenti video per scoprire come collegare in rack e cablare il sistema ed eseguire la configurazione iniziale del sistema.</block>
   <block id="95a15694e7d6d23376f741970900ef8e" category="list-text">Installazione e cablaggio dell'hardware</block>
   <block id="4657c74c0fa17e5f15e4a506f177b913" category="paragraph">Il video seguente mostra come installare e collegare il sistema.</block>
   <block id="3cd3e935edf9c045e37729c1ec0175c2" category="video-title">Animazione - Installazione e configurazione di un AFF C190</block>
-  <block id="d4b6f94dadb3f20b9bf031b9b9983ce3" category="list-text">Configurazione software end-to-end</block>
   <block id="fefd734f0bdff8f12e4dd22d5240abe0" category="summary">La documentazione del sistema AFF C190 consente di installare, configurare e gestire il sistema.</block>
   <block id="69df5da6ba52630e5f329314c7e74f75" category="doc">Documentazione del sistema AFF C190</block>
   <block id="7182b14422325235a1325aec0997297b" category="summary">Individuare il supporto di avvio nel modulo del controller e seguire le istruzioni per sostituirlo.</block>
@@ -4572,9 +4549,6 @@
   <block id="9d1976464339a2dc5b681ea4cacc276d" category="doc">Documentazione del sistema FAS8200</block>
   <block id="e742eb9c2d018e1c3855d10b4906368d" category="doc">Sostituire il supporto di avvio - FAS8200</block>
   <block id="757216293ea1da04339a2c9b8eaa2641" category="admonition">Il file tar.gz deve essere collocato in una partizione formattata con FAT32 di almeno 4 GB. Mentre le partizioni FAT32 possono essere grandi fino a 2 TB, i tool integrati di Windows (ad esempio diskpart) non possono formattare partizioni FAT32 di dimensioni superiori a 32 GB.</block>
-  <block id="b311ba9effd852411b6aecb7b5d10b32" category="doc">Video di installazione e configurazione - FAS8200</block>
-  <block id="fa6a624a35788d7850475e93ee843b20" category="inline-link-macro">Video di configurazione di AFF FAS8200</block>
-  <block id="29698929d201e3c2b1138892d941cbfb" category="paragraph"><block ref="29698929d201e3c2b1138892d941cbfb" category="inline-link-macro-rx"></block></block>
   <block id="d48c73102976c851dd07cb5e9103a138" category="doc">Sostituire una scheda PCIe - FAS8200</block>
   <block id="9285e5d96d62653cbfc04067e2de249c" category="list-text"><block ref="9285e5d96d62653cbfc04067e2de249c" category="inline-link-macro-rx"></block></block>
   <block id="ddd1a9511bc4cec117e8b939fbe7f2cc" category="list-text"><block ref="ddd1a9511bc4cec117e8b939fbe7f2cc" category="inline-link-macro-rx"></block></block>
@@ -4622,7 +4596,6 @@
   <block id="965cc3fcca40fe72903f2bf567787bd9" category="list-text">Ricollegare il cavo di alimentazione all'alimentatore.</block>
   <block id="81118bbf4dc8e737a15cb33e309d5928" category="list-text">Svitare il connettore del cavo di alimentazione CC D-SUB utilizzando le viti a testa zigrinata sulla spina.</block>
   <block id="a11fffebed2ec4e6399a05866d830825" category="list-text">Scollegare il cavo di alimentazione dall'alimentatore e metterlo da parte.</block>
-  <block id="b1e7f6a5c1f5cafe5e944efafcf29500" category="doc">Video - AFF A250</block>
   <block id="1c64f1c5688ce9bb74294cc4d2c9a9f1" category="video-title">Animazione - Installazione e configurazione di un sistema AFF A250</block>
   <block id="b0a5349e52bfc1b486c0f4bb7f8c6b18" category="doc">Spegnere i controller - AFF A250</block>
   <block id="d79b377e4ffb63d9f7bc2cd5de1e04de" category="doc">Spegnere il modulo controller guasto - AFF A250</block>
@@ -4632,7 +4605,6 @@
   <block id="b08dcca279bedeebb1e6f621d1a5afa2" category="list-text"><block ref="b08dcca279bedeebb1e6f621d1a5afa2" category="inline-link-macro-rx"></block></block>
   <block id="d4ec9448190c18c9b85b138eae5cfe04" category="doc">Controllare le chiavi di crittografia integrate - AFF A250</block>
   <block id="e2e8db7924e3d9318e09779273f259de" category="doc">Sostituire una ventola - AFF a250</block>
-  <block id="263bd6e17bf6db34d525455907f3ed3e" category="paragraph">*1*</block>
   <block id="00a7f3c2d2e90362fce77e39121e81ff" category="summary">Upgrade dei moduli controller AFF e FAS.</block>
   <block id="15ec95a1d0a631e3b92b0edbb8cc676a" category="doc">Procedure di aggiornamento</block>
   <block id="121b7f57f2237bf67b44a7e14ee89c24" category="inline-link">Aggiornare il sito documentazione dei sistemi AFF e FAS</block>
@@ -4704,7 +4676,6 @@
   <block id="ca5a5e07d656cff35da2184538cfc5fb" category="paragraph"><block ref="ca5a5e07d656cff35da2184538cfc5fb" category="inline-link-macro-rx"></block></block>
   <block id="e822ef8c7b4b17d3230b125760d56e76" category="doc">Ripristinare e verificare la configurazione del sistema - AFF A150</block>
   <block id="f9195e4f2cbce0b6d30752619eae4687" category="doc">Sostituire l'hardware del modulo controller - AFF A150</block>
-  <block id="477b007cc84cc2f34c8bc4e37baeafa7" category="doc">Video - AFF A150</block>
   <block id="c4c07270ebbe6cd1bc5aa6f45be76f02" category="video-title">Animazione - Installazione e configurazione di un AFF A150</block>
   <block id="31f2d2d52e4c5c09696388fc953ce437" category="doc">Sostituire il supporto di avvio - AFF A150</block>
   <block id="882c273cdfcc452f3288c0e3d97ccb3a" category="doc">Sostituire il modulo di caching - AFF A150</block>
@@ -5169,7 +5140,6 @@
   <block id="4ea7136415cb99f780a4177ea7ada9f4" category="doc">Ripristinare e verificare la configurazione di sistema - FAS9500</block>
   <block id="b139dc4b4943474860d7b90b369c2b27" category="doc">Video fasi - FAS9500</block>
   <block id="1b251c10d7185e8e92bbc89e18a05085" category="video-title">Animazione - istruzioni di installazione e configurazione di FAS9500 (ISI)</block>
-  <block id="2ab60626c3ca1f306ba2c65e1e8f5d49" category="paragraph">Il seguente video mostra la configurazione software end-to-end per i sistemi che eseguono ONTAP 9.6 e versioni successive.</block>
   <block id="737b04c7e695216162d794c71001099a" category="doc">Sostituire l'hardware del modulo controller - FAS9500</block>
   <block id="58f1a63de110893e27e2b9974273d710" category="video-title">Animazione - sostituire il modulo controller, completare il processo</block>
   <block id="eee0b061ed19ecc08e6c30167f3b0ca9" category="image-alt">drw 9500 rimuovere lo sviluppo boot</block>
@@ -5252,7 +5222,6 @@
   <block id="454f2d4445f738afc6491f938272785d" category="doc">Ricable the system and reassign disks - AFF C400 (riscrivere il sistema e riassegnare i dischi)</block>
   <block id="a637f1b4c2a1d9b5cb9f0347c7e77539" category="doc">Ripristinare e verificare la configurazione del sistema - AFF C400</block>
   <block id="e6423ca3487b9b75d5af512862698175" category="doc">Sostituire l'hardware del modulo controller - AFF C400</block>
-  <block id="719e61ffcf0d96924351db01f7e50603" category="doc">Video - AFF C400</block>
   <block id="51e4f59a1aaa143b8d5c910f0a77328e" category="video-title">Animazione - istruzioni per l'installazione e la configurazione di AFF C400</block>
   <block id="327f4c7d5141a205c506afea880dfdef" category="doc">Sostituzione di un alimentatore - AFF C400</block>
   <block id="d026008f7eb80e36926da619f0e8aa79" category="summary">La documentazione del sistema AFF C400 consente di installare, configurare e gestire il sistema.</block>
@@ -5372,7 +5341,6 @@
   <block id="b769c31ad04360afee6ce7c21e51f91b" category="list-text">Ruotare il modulo di caching verso il basso verso la scheda madre.</block>
   <block id="6fa69afac2c36bdcc90389549843343d" category="list-text">Posizionando il dito all'estremità del modulo di caching tramite il pulsante blu, premere con decisione verso il basso l'estremità del modulo di caching, quindi sollevare il pulsante di blocco per bloccare il modulo di caching in posizione.</block>
   <block id="838316a92edbe8e931b912c827cad7b7" category="section-title">Fase 7: Spostare i DIMM</block>
-  <block id="d5329d1a1e1dddf29f9d62bdc1cd54ad" category="doc">Video - FAS8300 e FAS8700</block>
   <block id="a3fad5983ba1f7c61a46ffcf74ea359a" category="video-title">Animazione - istruzioni di installazione e configurazione di FAS8300 e FAS8700</block>
   <block id="3a08488c499949ce994ce7beebe666ee" category="doc">Sostituire un alimentatore - FAS8300 e FAS8700</block>
   <block id="07198f13a474589e15ec90df05d856ff" category="doc">Documentazione del sistema FAS8300 e FAS8700</block>
@@ -5445,9 +5413,6 @@
   <block id="5dfe4c7eb319ce6f2ebfab2e157e0c1b" category="doc">Panoramica della sostituzione dello chassis - AFF A200</block>
   <block id="5a87b33b6d65f98aa6d162e0e81a802e" category="paragraph">Per sostituire lo chassis, spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.</block>
   <block id="ec98690855a2ac4306447ccfbffa94ef" category="doc">Restituire il componente guasto a NetApp - AFF A200</block>
-  <block id="7ae81662bd11820c2773e2c5dd7cc5fe" category="doc">Video di installazione e configurazione - AFF A200</block>
-  <block id="034a1a146ef2121dfec2fdbe9d4d6dca" category="inline-link-macro">Video di configurazione di AFF A200</block>
-  <block id="9eb9c148662d69c22bab62cf12a75812" category="paragraph">Il <block ref="36ed39ac78f542a04e83212067a271f3" category="inline-link-macro-rx"></block> Mostra la configurazione software end-to-end per i sistemi che eseguono ONTAP 9.2.</block>
   <block id="7406636825b302f07932b3580dc3aa5b" category="doc">Spegnere i controller - AFF A200</block>
   <block id="a5f480251d9a5927a8c47d76fc2930e3" category="doc">Spegnere il controller non utilizzato - AFF A200</block>
   <block id="1c91d351b95f21de02a1d9bc700d73d0" category="list-text"><block ref="1c91d351b95f21de02a1d9bc700d73d0" category="inline-link-macro-rx"></block></block>
@@ -6813,7 +6778,6 @@
   <block id="b7605bcb79eb6de60b5238953bb38de0" category="doc">Ripristinare e verificare la configurazione del sistema - AFF A320</block>
   <block id="3704d1b563dc6b0a84e78627c5e9af06" category="doc">Panoramica della sostituzione dello chassis - AFF A320</block>
   <block id="de13eae43e74bcedacee29c89051ee54" category="list-text">Questa procedura si basa sul presupposto che si stiano spostando i moduli controller nel nuovo chassis e che lo chassis sia un nuovo componente di NetApp.</block>
-  <block id="c694147ee40e260d30d4121d2213ee14" category="doc">Video - AFF A320</block>
   <block id="1e219bacf0333e38a778a5310117e12a" category="doc">Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB - AFF A320</block>
   <block id="b070946475ca76a9891046ef46e3262c" category="list-text">Se il ripristino ha esito positivo, premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> sul controller compromesso quando viene richiesto di utilizzare la copia ripristinata?.</block>
   <block id="0d1483a76a1f71437aa9197bfa562122" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene visualizzato il messaggio confirm backup procedure was successful (conferma procedura di backup riuscita), quindi premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di riavviare il controller.</block>
@@ -7506,7 +7470,6 @@ Installare la batteria sostitutiva:</block>
   <block id="98589dc004f09ae0dad7e1b6f02b49cc" category="list-text">Riavviare il modulo controller.</block>
   <block id="77eded9438a3613ba447a2592768431f" category="section-title">Fase 5: Ripristino del giveback automatico e del supporto automatico</block>
   <block id="c7e6662de773deb97f21acca554ecb2a" category="paragraph">Ripristina giveback automatico e AutoSupport se sono stati disattivati.</block>
-  <block id="e8ee04904c783a5522b8e5d05e929ec0" category="doc">Video - FAS2800</block>
   <block id="89ec55d6caf5c08b62f951c13868846e" category="video-title">Animazione - istruzioni di installazione e configurazione di FAS2800</block>
   <block id="b1431e23e98302fc2fdbdf8a76f33d8d" category="doc">Sostituire l'hardware del modulo controller - FAS2800</block>
   <block id="d27d70d1f85fe30f676b7d8f18fbcc20" category="paragraph">Sostituire l'hardware del modulo controller guasto rimuovendo il controller guasto, spostando i componenti FRU nel modulo controller sostitutivo, installando il modulo controller sostitutivo nello chassis e avviando il modulo controller sostitutivo.</block>
@@ -7904,7 +7867,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="cd6cad2927af0a8738645aef0eddfef3" category="doc">Sostituire un modulo DIMM - ASA A250</block>
   <block id="d649204274d2da7722da732bfeda71c3" category="doc">Panoramica e requisiti ASA A250</block>
   <block id="a73823d14db47bd43fd209723a8a0f78" category="doc">Ripristinare e verificare la configurazione del sistema - ASA A250</block>
-  <block id="eb6ba0c5fe7c9a99834343b25a7666cd" category="doc">Video - ASA A250</block>
   <block id="e6f6041e49a048399457259bb308d074" category="admonition">Il sistema ASA A250 utilizza la stessa procedura di installazione del sistema AFF A250.</block>
   <block id="65874038049e4c1254e182578d50f9a6" category="doc">Ripristino completo del sistema - ASA A250</block>
   <block id="247ba1eaff46a863c502ad82319286c6" category="doc">Spegnere il controller - ASA A250</block>
@@ -8018,7 +7980,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="caa8aa4a595b6f33857d21fb97a3622e" category="paragraph">Questa pagina fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
   <block id="f0d6a8fa292b0f0965c180c3ec81b98c" category="admonition">Il sistema ASA A800 utilizza la stessa procedura di installazione del sistema AFF A800.</block>
   <block id="027df07ace2b49bdd101ed7de8831a66" category="doc">Avviare l'immagine di ripristino - ASA A800</block>
-  <block id="a9d726d2e97d882c1207e42039a6857a" category="doc">Video - ASA A800</block>
   <block id="1809d57833f6aee6ca28a7a9976f3c02" category="doc">Sostituire l'unità SSD o HDD - ASA A800</block>
   <block id="8efb05cbcb76a25c9260967bb6da74ea" category="doc">Sostituire l'alimentatore - ASA A800</block>
   <block id="4ec9ac1d6cfd564e14c7762ed15dd4ca" category="doc">Controllare le chiavi di crittografia integrate - ASA A800</block>
@@ -8149,7 +8110,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="dd3e1b2974ba653fef81686173aafcb6" category="doc">Ripristino completo del sistema - FAS2700</block>
   <block id="6375580a439a26351f5f73fdcb39f1ff" category="doc">Guida rapida - FAS2700</block>
   <block id="16a3fde330c06892c7676575d0819f6e" category="doc">Avviare l'immagine di ripristino - FAS2700</block>
-  <block id="9d81f4c4d7531500bffc05974eb9b71b" category="doc">Video - FAS2700</block>
   <block id="ffbcfe33101a940248596cf681644346" category="doc">Sostituire l'hardware del modulo controller - FAS2700</block>
   <block id="f2a5f0054d69581f330396af4e7b9b3e" category="doc">Panoramica della sostituzione dello chassis - FAS2700</block>
   <block id="b975712b276c632e6e3ed246ddd046a0" category="doc">Ripristinare e verificare la configurazione - FAS2700</block>
@@ -8188,7 +8148,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="1273c9fbc5c944f1ba9781560b258420" category="summary">Questa pagina fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema.</block>
   <block id="fd21e05e00e82c93ae08fac45c859f89" category="doc">Guida rapida - AFF A220</block>
   <block id="107531ef4f423dd82a8f37d8f67c7072" category="doc">Avviare l'immagine di ripristino - AFF A220</block>
-  <block id="7da34aa98ad460a61274e35987ef8e04" category="doc">Video - AFF A220</block>
   <block id="00b19d37023cc17089dc310c38ea5b12" category="doc">Sostituire l'unità SSD o HDD - AFF A220</block>
   <block id="f0495ce31f2221593161d6c143dfca0c" category="doc">Controllare le chiavi di crittografia integrate - AFF A220</block>
   <block id="c008920266f52508b3f86b5b90ae91bd" category="doc">Sostituire l'hardware del modulo controller - AFF A220</block>
@@ -8235,7 +8194,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="44b5b262e7713dd5aa3d82f5e04c6ab6" category="doc">Guida rapida - ASA A150</block>
   <block id="85b480bf87d91a2932c8ed43e4def5f4" category="admonition">Il sistema ASA A150 utilizza la stessa procedura di installazione del sistema AFF A150.</block>
   <block id="48a9a0f255a122f383dce55509b5a79a" category="doc">Avviare l'immagine di ripristino - ASA A150</block>
-  <block id="80973bcb6908e71fe4eed882ff215d80" category="doc">Video - ASA A150</block>
   <block id="76ee45904d9d171832835353313011a4" category="doc">Sostituire l'unità SSD o HDD - ASA 150</block>
   <block id="fbbc44ce8ce19560615b28dfcbfe46d3" category="doc">Controllare le chiavi di crittografia integrate - ASA A150</block>
   <block id="070bdcad0142d8cf21268dca6275fe89" category="doc">Sostituire il controller - ASA A150</block>
@@ -8283,7 +8241,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="9e386c9e794f2f2e7ef00f62fb22c636" category="doc">Avviare l'immagine di ripristino - ASA A400</block>
   <block id="b65dcf1c7ad6c86f6d2d5bed4626bcc6" category="doc">Guida rapida - ASA A400</block>
   <block id="5eb8101a6e8a2a3f54c56549ab21ade4" category="admonition">Il sistema ASA A400 utilizza la stessa procedura di installazione del sistema AFF A400.</block>
-  <block id="b87492f8acdc430db5ce4001f724bfe5" category="doc">Video - ASA A400</block>
   <block id="b26cf0fc163ec7e9ea966514eed60da1" category="doc">Sostituzione di un alimentatore - ASA A400</block>
   <block id="5f2eeb826d2873b3f4c3b6f5107d3feb" category="doc">Controllare la crittografia integrata - ASA A400</block>
   <block id="2d7c6c8ec11dfd6f4583d91c8d94d5d0" category="doc">Sostituire il controller - ASA A400</block>
@@ -8410,31 +8367,12 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="38a7a370db7e825d6ae11492a25bbf4c" category="sidebar">Scheda PCIe o mezzanine ASA A400</block>
   <block id="4ad30ae349c6e2a00c505685283569c4" category="sidebar">Alimentatore ASA A400</block>
   <block id="a876a1a0c70aad6f175618bf59efec73" category="sidebar">Batteria con clock in tempo reale A400 ASA</block>
-  <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">Drw C400 rimuovere la centralina IEOPS 1216</block>
   <block id="771f4aeef9d68203f402ef43f2428c23" category="paragraph">Il controller si sposta leggermente fuori dallo chassis</block>
-  <block id="6eabe3dfd3272d314cbb0448ef86a7ca" category="section-title">Fase 5: Eseguire la diagnostica</block>
-  <block id="1292b9de6b55a89a9f27c917af53c51e" category="paragraph">Il sistema deve essere al prompt DEL CARICATORE per avviare la diagnostica.</block>
   <block id="1082bfd13ce3c25ccfc85ed699b54126" category="paragraph">Tutti i comandi delle procedure diagnostiche vengono emessi dalla centralina in cui viene sostituito il componente.</block>
-  <block id="e7715fbdf353439bc04c101e641a6a00" category="list-text">Se il controller da sottoporre a manutenzione non viene visualizzato al prompt DEL CARICATORE, riavviare il controller:<block ref="d9a3ee635a736b8059849c211af96e57" prefix=" " category="inline-code"></block></block>
   <block id="cafeac4841bc727e191d8e441daae473" category="paragraph">Dopo aver eseguito il comando, attendere che il sistema si arresti al prompt DEL CARICATORE.</block>
   <block id="14a78bce1fad359d61fd0d2e4a24c3f0" category="list-text">Al prompt DEL CARICATORE, accedere ai driver speciali progettati appositamente per la diagnostica a livello di sistema per funzionare correttamente:<block ref="87ee09e2a5f76fd0b04e7f6e02d1e3ef" prefix=" " category="inline-code"></block></block>
-  <block id="4d0d7afa62744b6e8fc6dc6801b2da31" category="list-text">Selezionare *Scan System* (sistema di scansione) dal menu visualizzato per abilitare l'esecuzione dei test di diagnostica.</block>
   <block id="62b108a49afeed7e7e1892a4157f8715" category="list-text">Procedere in base al risultato del passaggio precedente:</block>
-  <block id="88f619f79a466f76f35e017863a94304" category="section-title">Fase 6: Ripristinare il funzionamento del modulo controller dopo aver eseguito la diagnostica</block>
-  <block id="9e70237e8106527e732b0c345e0d528e" category="paragraph">Una volta completata la diagnostica, è necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.</block>
-  <block id="6d9502ea6880092a4496782c893e3da2" category="image-alt">DRW C400 psu IEOPS 1237</block>
-  <block id="f953d8cdae44d8d3483abb899a001088" category="image-alt">Drw C400 sostituzione schede PCIe IEOPS 1235 (1)</block>
-  <block id="8a8905b8ba33c894ca2404f3ecc9601d" category="image-alt">Drw C400 condotto aria aperto IEOPS 1215</block>
-  <block id="7f3e7059150c562376058a9c62805700" category="image-alt">Drw C400 sostituire il supporto di avvio IEOPS 1217</block>
-  <block id="8f9d84ce0761e9cbbd0e69dc419011a6" category="paragraph"><block ref="8f9d84ce0761e9cbbd0e69dc419011a6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="80c14517a78070e49e0abac5d7f9ddbf" category="image-alt">Drw C400 sostituire scheda mezz IEOPS 1236</block>
-  <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">Drw C400 rtc batt IEOPS 1239</block>
   <block id="bd47a35792b075014fd52e08e307f334" category="paragraph">Per sostituire l'alimentatore, utilizzare la seguente illustrazione con la procedura scritta.</block>
-  <block id="627dae9b7fdce24278b6e4ff295eb7be" category="list-text">Selezionare *Test Memory* dal menu visualizzato.</block>
-  <block id="79934a1e2f37ff48405809bfef33e025" category="list-text">Se il test non ha avuto esito positivo, correggerlo ed eseguire nuovamente il test.</block>
-  <block id="7795a0b926d5a3e9bb0b6489d5f08336" category="list-text">Se il test non ha rilevato errori, selezionare Reboot (Riavvia) dal menu per riavviare il sistema.</block>
-  <block id="319906493abbf4e43070e2a96baf7c1a" category="paragraph">Dopo aver sostituito il modulo NVDIMM nel sistema, eseguire test diagnostici su tale componente.</block>
-  <block id="3c6a6919b7e370565fb312ed482c731f" category="list-text">Selezionare *NVDIMM Test* dal menu visualizzato.</block>
   <block id="b5775fd5494c53337ae6cdf9684c92bb" category="paragraph">È necessario spostare il dispositivo multimediale di avvio dal controller danneggiato e installarlo nel controller sostitutivo.</block>
   <block id="e1e22f74d03ae53f2b284cc33a49e335" category="paragraph">È necessario spostare il dispositivo multimediale di avvio dal modulo controller danneggiato al modulo controller sostitutivo.</block>
   <block id="5f5c8582e186539c05898d22a8d895e8" category="paragraph">Il supporto di avvio si trova sotto il coperchio del condotto dell'aria precedentemente rimosso in questa procedura.</block>
@@ -8499,7 +8437,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="0a04c386b1c4aba682caa8fbe7cfe6a5" category="list-text">Selezionare Boot to maintenance mode (Avvia alla modalità di manutenzione) dal menu.</block>
   <block id="b68d60431d57a95615f83d1a1fa1b999" category="list-text">Uscire dalla modalità di manutenzione immettendo il seguente comando:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
   <block id="7de4082b4319513bf089f060127a9d55" category="list-text">Eseguire nuovamente il test diagnostico a livello di sistema.</block>
-  <block id="f7ed34876dbd3974ede0b50d2019fcc5" category="paragraph"><block ref="f7ed34876dbd3974ede0b50d2019fcc5" category="inline-link-macro-rx"></block></block>
   <block id="cac76ada4fbfca68ed190eb21810e1af" category="inline-link">FAS2820</block>
   <block id="d269857d9f0df177f932595366b187b5" category="paragraph"><block ref="d269857d9f0df177f932595366b187b5" category="inline-link-rx"></block></block>
   <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="paragraph">ONTAP 9.13.1</block>
@@ -8540,4 +8477,50 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
 <block ref="23c439b7ef31021d610e4d3b988f3cd1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10fbfa6320d8e7c72e731fbd9a6e6c69" category="admonition">La riassegnazione del disco è necessaria solo quando si sostituisce il modulo NVRAM e non si applica alla sostituzione del DIMM NVRAM.</block>
   <block id="099f7b942e4e89631784891716949599" category="admonition">Questa operazione non si applica alla sostituzione del DIMM NVRAM.</block>
+  <block id="ce75c7b2bf3b15b7659cc85a9c36c6f8" category="admonition">Immettere la passphrase di gestione della chiave alfanumerica integrata a 32 caratteri del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
+  <block id="2f061f16ff1dc3668b0b979718bcf140" category="paragraph">Immettere la passphrase di gestione della chiave alfanumerica integrata a 32 caratteri del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.</block>
+  <block id="f44ae95a820a7e92672103acdefa1387" category="paragraph"><block ref="5e48dfc079c01fd7f817337abb01a320" prefix="" category="inline-code"></block></block>
+  <block id="4d2ddfe3e3c29216d5f6b430195c79ea" category="paragraph">Linguette di bloccaggio DIMM</block>
+  <block id="61442583e1c58477c0407d6793d8994b" category="paragraph">Socket DIMM</block>
+  <block id="d29d6bf2e5a715077adb0e295955fc92" category="paragraph">Dispositivi di bloccaggio della centralina</block>
+  <block id="5165d02c271e4ccb721ce18d6870adbf" category="paragraph">Spina batteria</block>
+  <block id="f961d430c4493499006fd8fba8e3d862" category="paragraph">Linguetta di bloccaggio</block>
+  <block id="1f25549d09d9fee6b326b3ae80c2ed1b" category="image-alt">drw a400 rimozione riser vuoto</block>
+  <block id="7f8edcba2fa9fe4c07e4da59fa96b68f" category="paragraph">Fermi di rilascio del montante</block>
+  <block id="5aebd0a51655336d4e63f45f4d8699cd" category="paragraph">Linguetta di bloccaggio dell'alimentatore</block>
+  <block id="2c741817612fe801331c1ab28fc54399" category="paragraph">Fermo del cavo di alimentazione</block>
+  <block id="6883ec22ed9fad7be1550f7fcb75a7a4" category="paragraph">Linguetta di blocco della batteria NVDIMM</block>
+  <block id="0a430afe4fbd1dc67017c4844963415a" category="paragraph">Dispositivo di blocco della scheda PCI</block>
+  <block id="4b84ebefc04c1c28f67356b635667565" category="paragraph">Piastra di bloccaggio PCI</block>
+  <block id="81132024d53583d588cfc220ba419763" category="paragraph">Scheda PCI</block>
+  <block id="f8edc02e7b075268c8d93bf3433201bc" category="paragraph">Maniglia della ventola</block>
+  <block id="e3e29abcd624744c82654d9487f70f59" category="paragraph">LED di stato</block>
+  <block id="68ead321739d393fb461326104dc603a" category="paragraph">Riser PCI</block>
+  <block id="abb4bcb42289e1d079bce363235b8710" category="paragraph">Vite a testa zigrinata dell'alzata</block>
+  <block id="4eeebc2159d360f3ea1194928bb48f02" category="cell">Scheda di montaggio</block>
+  <block id="8df156db0521f5b51f8c4605ed8aed73" category="paragraph">Montante centrale</block>
+  <block id="31464fee840ac27fb57e475ca871c9aa" category="paragraph">Rimuovere la batteria RTC</block>
+  <block id="00c5745f792e1901ee8e2e1e1d041ee1" category="paragraph">Batteria RTC del sedile</block>
+  <block id="ce0aad779020493a2d4e98a385762d2b" category="summary">Il video mostra come installare e collegare il nuovo sistema.</block>
+  <block id="997b68807482ea64cc9ef5f725f9309b" category="doc">Fasi video - AFF A400</block>
+  <block id="be804c6631fd09c10e34c693ad05b79b" category="doc">Fasi video - AFF C190</block>
+  <block id="f2f9e5e5861340b4511769cf5cb0c85c" category="doc">Fasi video - FAS2800</block>
+  <block id="94ca5512de5bd6bb38f58c383086a2a8" category="paragraph"><block ref="94ca5512de5bd6bb38f58c383086a2a8" category="inline-link-macro-rx"></block></block>
+  <block id="110062ecc4941a387b27997f0c7ae5ef" category="doc">Fasi video - ASA A400</block>
+  <block id="abc8a9a1aab13018556d024a5691afae" category="doc">Fasi video - FAS8300 e FAS8700</block>
+  <block id="57fcdb44384a01811b20cb55bd021011" category="doc">Fasi video - AFF A320</block>
+  <block id="f4c78bd954ecc6d38092f7c504ddfb9a" category="doc">Fasi video - FAS2700</block>
+  <block id="3620e8833d6beeecd610b282d65a89b5" category="admonition"><block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> La priorità dello slot per le schede di rete host (Fibre Channel o 25GbE) è lo slot 2. Tuttavia, se si dispone di entrambe le schede, la scheda Fibre Channel va nello slot 2 e la scheda 25GbE va nello slot 1 (come illustrato nelle opzioni seguenti). Se si dispone di uno scaffale esterno, la scheda di memoria si inserisce nello slot 1, l'unico slot supportato per gli scaffali.</block>
+  <block id="de8a85d6bcdb94b40275e65134363d85" category="doc">Fasi video - AFF C250</block>
+  <block id="0b22644145264cc3d3c89acc64fc435a" category="doc">Fasi video - AFF A150</block>
+  <block id="0f2e7671fbc778ffb86bcc59f57731e6" category="doc">Fasi video - AFF A800</block>
+  <block id="781b1fa6778b9993b5d63e1c5ea22106" category="doc">Fasi video - ASA A150</block>
+  <block id="51ee1645426dc62fc133d17a450c3479" category="doc">Fasi video - AFF C800</block>
+  <block id="965d244544acb766ba421f29e927c182" category="doc">Fasi video - AFF A220</block>
+  <block id="e9ec2c534be811bcd6c8fa9eb7fde561" category="doc">Fasi video - AFF C400</block>
+  <block id="17faa87026dc066df4cb6a815fa4044b" category="doc">Fasi video - ASA A800</block>
+  <block id="0bc106512a736143ad0980352b77e513" category="doc">Fasi video - AFF A250</block>
+  <block id="c4d97f649f8fd0bc0d2842c98374b325" category="summary">Il video Installazione e configurazione mostra come installare e collegare il nuovo sistema.</block>
+  <block id="728c8b35a059c5debd8717ebc5eef9cc" category="doc">Fasi video - ASA A250</block>
+  <block id="da8c100a35e67a4a9a03589f6afa9ddc" category="doc">Fasi video - FAS500f</block>
 </blocks>

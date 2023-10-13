@@ -35,7 +35,7 @@ Come Best practice prima dello spegnimento, è necessario:
 . Accedere al cluster tramite SSH o da qualsiasi nodo del cluster utilizzando un cavo della console locale e un laptop/console.
 . Disattivare AutoSupport e indicare per quanto tempo si prevede che il sistema sia offline:
 +
-`system node autosupport invoke -node * -type all -messages "MAINT=8h Power Maintenance"`
+`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
 
 . Identificare l'indirizzo SP/BMC di tutti i nodi:
 +

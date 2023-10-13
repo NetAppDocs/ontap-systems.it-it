@@ -173,12 +173,6 @@ mcc1A::> metrocluster operation show
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
-Per rimuovere il modulo controller dal telaio, è possibile utilizzare le seguenti animazioni, illustrazioni o istruzioni scritte.
-
-.Animazione - rimuovere il modulo controller
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
-
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
@@ -190,6 +184,27 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 +
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
++
+image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+ a| 
+Fermi di bloccaggio
+
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Il controller si sposta leggermente fuori dallo chassis
+
+|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -207,8 +222,32 @@ Per sostituire la batteria RTC, è possibile utilizzare la seguente animazione, 
 
 .Animazione - sostituire la batteria RTC
 video::80fe7a9b-de6f-46e0-a18b-aadb0157263d[panopto]
-image::../media/drw_A400_rtc-batt_IEOPS-1003.svg[Batteria rtc drw A400 IEOPS 1003]
+image::../media/drw_A400_rtc-batt.png[Batteria rtc drw A400]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+ a| 
+Montante centrale
+
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Rimuovere la batteria RTC
+
+
+
+ a| 
+image:../media/legend_icon_03.png["Numero di didascalia 3"]
+ a| 
+Batteria RTC del sedile
+
+|===
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Aprire il condotto dell'aria:
 +
@@ -244,6 +283,23 @@ Per installare il modulo controller nel telaio, è possibile utilizzare l'animaz
 video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
 image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+ a| 
+Modulo controller
+
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Dispositivi di bloccaggio della centralina
+
+|===
 . Se non è già stato fatto, chiudere il condotto dell'aria o il coperchio del modulo controller.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
