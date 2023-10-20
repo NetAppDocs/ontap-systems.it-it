@@ -632,7 +632,6 @@
   <block id="e3a2cdbe22ad29e03fbebb6c1261ed15" category="doc">Guida rapida - AFF A400</block>
   <block id="350cd17d7031de85301f98a531f45f4c" category="paragraph">Accedere al poster PDF _istruzioni per l'installazione e la configurazione_:</block>
   <block id="34a75c3c3d31678dc9bc82fd2d547569" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF A400</block>
-  <block id="617bafb92e72c64d9d65b60de9aea456" category="paragraph"><block ref="617bafb92e72c64d9d65b60de9aea456" category="inline-link-macro-rx"></block></block>
   <block id="1cfa6f391685fda6b74bedcb88fa1418" category="summary">È necessario sostituire un modulo DIMM nel modulo controller quando il sistema registra un numero crescente di codici di correzione degli errori correggibili (ECC); in caso contrario, si verifica un errore di sistema.</block>
   <block id="c98df33d69df5ef2c70238c6ec12241c" category="doc">Sostituire un modulo DIMM - AFF A400</block>
   <block id="a695ddd31702bf0ddff2a7cf2f63d196" category="paragraph">Per rimuovere il modulo controller dal telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.</block>
@@ -5217,7 +5216,6 @@
   <block id="bb2c0218cb7e6195837599cbb3d03ac1" category="doc">Switch back aggregates in una configurazione MetroCluster a due nodi - AFF C400</block>
   <block id="28dd2419d5232cd5e390f590d7d76b55" category="doc">Guida rapida - AFF C400</block>
   <block id="bef061f2ba2a880a4d71960c6fb14a8f" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF C400</block>
-  <block id="78504a496ba3e0d8a682fe929b4d61d9" category="paragraph"><block ref="78504a496ba3e0d8a682fe929b4d61d9" category="inline-link-macro-rx"></block></block>
   <block id="5254fce53c38649f011fdb307e35d4b3" category="doc">Sostituire un modulo DIMM - AFF C400</block>
   <block id="454f2d4445f738afc6491f938272785d" category="doc">Ricable the system and reassign disks - AFF C400 (riscrivere il sistema e riassegnare i dischi)</block>
   <block id="a637f1b4c2a1d9b5cb9f0347c7e77539" category="doc">Ripristinare e verificare la configurazione del sistema - AFF C400</block>
@@ -7955,7 +7953,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="88145bf2af138ed528349e08d441968a" category="paragraph">Per il sistema storage AFF A320, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="8486b7c66d6ece05f01d5c8074d027a1" category="paragraph">Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviare il sistema.</block>
   <block id="416d28e93ee53a5fe99f4863443c9bf3" category="summary">I sistemi di storage AFF, ASA e FAS di NetApp offrono storage all-flash o ibrido scale-out, di livello Enterprise e all'avanguardia, con la gestione dei dati più avanzata del settore. Utilizza i documenti di questo sito per installare, espandere, aggiornare e gestire i sistemi AFF, ASA e FAS, oltre agli shelf di storage e agli switch di cluster.</block>
-  <block id="260cb1f5fe1c4de4b0952530884debda" category="doc">Documentazione sui sistemi AFF, ASA e FAS</block>
   <block id="9dbc6de9e979960d269ff45dfa541d76" category="doc">Ricable the system and reassign disks - ASA A800 (riscrivere il sistema e riassegnare i dischi)</block>
   <block id="0b61404420e238ba6738c723b617ba4f" category="doc">Panoramica della sostituzione dei supporti di avvio - ASA A800</block>
   <block id="308e5629f56cd85980c01c5a7d6b4a5e" category="doc">Sostituire una ventola - ASA A800</block>
@@ -8401,8 +8398,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="7654764586a53c997b8c1df9098532f4" category="summary">Scopri le nuove funzionalità dei sistemi AFF, ASA e FAS.</block>
   <block id="3e2d1e468d09ac8c0d6588070ba9373f" category="doc">Novità dei sistemi AFF, ASA e FAS</block>
-  <block id="e0bcfdcb3cdb0fb1cf75064d4e0a8516" category="sidebar">I sistemi di storage AFF, ASA e FAS di NetApp offrono storage all-flash o ibrido scale-out, di livello Enterprise e all'avanguardia, con la gestione dei dati più avanzata del settore. Utilizzare i documenti presenti in questo sito per installare, espandere, aggiornare e gestire i sistemi.</block>
-  <block id="834c650e32073b55fedca10accbda908" category="sidebar">Documentazione sui sistemi AFF, ASA e FAS</block>
   <block id="ca31c0aa49625e7cda9cae921b597ddc" category="admonition">Il controller ver2 dispone di un numero inferiore di socket DIMM. Non vi è alcuna riduzione nel numero di DIMM supportati o modifica nella numerazione dei socket DIMM. Quando si spostano i moduli DIMM nel nuovo modulo controller, installare i moduli DIMM nello stesso numero/posizione del modulo controller danneggiato.  Vedere il diagramma della mappa FRU sul modulo controller ver2 per le posizioni dei socket DIMM.</block>
   <block id="41f70b901e92516347e56b1eee6fe77b" category="section-title">Fase 5: Eseguire la diagnostica a livello di sistema</block>
   <block id="2a075cce7e33313e84aaa96ceb86a4c8" category="paragraph">Dopo aver installato un nuovo DIMM, eseguire la diagnostica.</block>
@@ -8523,4 +8518,180 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="c4d97f649f8fd0bc0d2842c98374b325" category="summary">Il video Installazione e configurazione mostra come installare e collegare il nuovo sistema.</block>
   <block id="728c8b35a059c5debd8717ebc5eef9cc" category="doc">Fasi video - ASA A250</block>
   <block id="da8c100a35e67a4a9a03589f6afa9ddc" category="doc">Fasi video - FAS500f</block>
+  <block id="0fc2bce08e8e93df5954329e4439b224" category="paragraph">La procedura di installazione fornisce istruzioni grafiche per un'installazione tipica del sistema da rack e cablaggio, fino alla messa in funzione iniziale del sistema. Utilizzare questa procedura se si ha familiarità con l'installazione dei sistemi NetApp.</block>
+  <block id="658749712c1f894d4be0afd96a2e5f1d" category="paragraph">Accedere a. <block ref="617bafb92e72c64d9d65b60de9aea456" category="inline-link-macro-rx"></block>.</block>
+  <block id="0a5ad698c7446792fa1695e8ef9001ee" category="image-alt">Drw 2800 cablaggio cluster commutato IEOPS 893</block>
+  <block id="9bf3d28b6f86b0747100312dce20ff66" category="paragraph">La procedura di installazione di ASA A400 fornisce istruzioni grafiche per un'installazione tipica del sistema da rack e cablaggio, fino all'avvio iniziale del sistema. Se si ha familiarità con l'installazione dei sistemi NetApp, attenersi alle istruzioni riportate di seguito.</block>
+  <block id="0117839c8787354fc8b23cefed0984e8" category="inline-link-macro">Istruzioni per l'installazione e il setup di ASA A400</block>
+  <block id="dc752cf6900478701aac225362320867" category="paragraph">Accedere a. <block ref="d646334093abec0f8f7152331712c776" category="inline-link-macro-rx"></block>.</block>
+  <block id="646d7d5f93b4a6d7bbbc65acf5ac1077" category="doc">Documentazione dei sistemi hardware ONTAP</block>
+  <block id="0f99f9a5d3161caa81a9cf870bfb3c1a" category="summary">La documentazione del sistema di storage consente di installare, configurare ed eseguire la manutenzione del sistema ASA C-Series.</block>
+  <block id="8d44a819ce1a0d042dc4afd48b415863" category="doc">Tutti i sistemi C-series con array SAN (ASA)</block>
+  <block id="92217d103cec461ace2aded92b4f42ab" category="doc">Restituire il componente guasto a NetApp - ASA C400</block>
+  <block id="f4b7b756855e1111bd19648537226e16" category="doc">Gestire l'hardware ASA C400</block>
+  <block id="f85c225eac9932f77dacb6e6236f7ce2" category="paragraph">Per il sistema di archiviazione ASA C400, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="2097e20950ae1f46d998ba486146b369" category="doc">Sostituire un NVDIMM - ASA C400</block>
+  <block id="76707ae3bb72f26856ca1367c5a4ac26" category="doc">Panoramica della sostituzione del telaio - ASA C400</block>
+  <block id="c2e0801f4fc7b1cf02d78195b3131f54" category="doc">Ripristino di OKM, NSE e NVE in base alle necessità - ASA C400</block>
+  <block id="ec587342818437cd0c6a0daf4be599a1" category="doc">Sposta gli aggregati di back-up in una configurazione MetroCluster a due nodi - ASA C400</block>
+  <block id="d01d4189a4ad8b718886cbc79fe007a5" category="doc">Controllare la crittografia integrata - ASA C400</block>
+  <block id="f7f6cafa82cca0d649fec769636a374b" category="doc">Spegnere il controller danneggiato - ASA C400</block>
+  <block id="124e5d993905ca8fc1e3ed8fa62e76ad" category="doc">Sostituire un modulo DIMM - ASA C400</block>
+  <block id="987d3338a5584fedd4b7efd844691246" category="doc">Sostituire il supporto di avvio - ASA C400</block>
+  <block id="9187e0a8947f2ca2039bb2793202300f" category="doc">Sostituire la batteria NVDIMM - ASA C400</block>
+  <block id="d8f9a29ce7164ac54d9904be12998cb5" category="doc">Panoramica della sostituzione del modulo controller - ASA C400</block>
+  <block id="d593ab590ed489d6717b0d0fbc84376f" category="doc">Sostituire l'hardware del modulo controller - ASA C400</block>
+  <block id="00e85c9b81ade8fe5e2f38c4a31d4388" category="doc">Modulo ventola hot-swap a - ASA C400</block>
+  <block id="c1f915ba5e3e17f84a3238a75c84e2c9" category="doc">Avviare l'immagine di ripristino - ASA C400</block>
+  <block id="b31b0c352e7abb4634524d9d53f5fcce" category="doc">Sostituire una scheda PCIe o mezzanine - ASA C400</block>
+  <block id="b4247ab28006e796109bb9e6443b612f" category="doc">Panoramica sulla sostituzione dei supporti di avvio - ASA C400</block>
+  <block id="967b266f7bf42739746ff8ee10704ec8" category="doc">Ripristino completo del sistema - ASA C400</block>
+  <block id="a2e400b53e6df30e6ea808a7a8d9cf03" category="doc">Possibilità di recuperare il sistema e di riassegnare i dischi - ASA C400</block>
+  <block id="d87d17cd765dde0b8f553a33b6d61945" category="doc">Sostituire l'hardware - ASA C400</block>
+  <block id="6b6916e7dab19d8ffcd0bc0fa006d0c2" category="doc">Sostituzione di un alimentatore - ASA C400</block>
+  <block id="d8548c2140dedaa5fc883590a1f7009a" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA C400</block>
+  <block id="90276cd1568977c0a841334b01c793ee" category="doc">Ripristinare e verificare la configurazione di sistema - ASA C400</block>
+  <block id="9f50c74c54d6b3ee3b7485498ed65016" category="doc">Completare il processo di ripristino e sostituzione - ASA C400</block>
+  <block id="5a972d773b9decff387b74f08a2d2667" category="doc">Guida dettagliata - ASA C400</block>
+  <block id="32ac5939b95c8c78023dc781483445ea" category="doc">Video - ASA C400</block>
+  <block id="821658381dd4d43cfc5669ce2ad16856" category="admonition">ASA C400 utilizza la stessa procedura di installazione del sistema AFF C400.</block>
+  <block id="f1084d8cd382249e44f01c6daef01a18" category="list-text"><block ref="f1084d8cd382249e44f01c6daef01a18" category="inline-link-macro-rx"></block></block>
+  <block id="3341fbafbe354cc961331b2c72c37cc8" category="list-text"><block ref="3341fbafbe354cc961331b2c72c37cc8" category="inline-link-macro-rx"></block></block>
+  <block id="f7655848002e8aaa751343ece73cc869" category="list-text"><block ref="f7655848002e8aaa751343ece73cc869" category="inline-link-macro-rx"></block></block>
+  <block id="7bc99d09a7bcacf207b0881cb2ae0094" category="doc">Spegnere le centraline - ASA C400</block>
+  <block id="8c5f08066225243efefc6d89726bbae1" category="doc">Guida rapida - ASA C400</block>
+  <block id="d7bb31e777ffd65def4f500154e3d8f6" category="paragraph">La procedura di installazione e configurazione fornisce istruzioni grafiche per un'installazione tipica del sistema da rack e cablaggio, fino alla messa in funzione iniziale del sistema. Utilizzare questa guida se si ha familiarità con l'installazione dei sistemi NetApp.</block>
+  <block id="c87f658e413784f6727d69e5f3a504e9" category="paragraph">Accedere a. <block ref="78504a496ba3e0d8a682fe929b4d61d9" category="inline-link-macro-rx"></block>.</block>
+  <block id="d86ad8650b661d28cc2d4ab2c5649c4a" category="doc">Restituire il componente guasto a NetApp - ASA C250</block>
+  <block id="bcf1e5f5ec2f5fa0fb4df4081483cf5a" category="doc">Gestire l'hardware ASA C250</block>
+  <block id="d856c63691d6118cb3531626f4c662b5" category="paragraph">Per il sistema di archiviazione ASA C250, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="778936817303ec79ea5a4c275ed17135" category="doc">Panoramica della sostituzione del telaio - ASA C250</block>
+  <block id="b01e565a4186b159f90650ce3ca4196a" category="doc">Ripristino di OKM, NSE e NVE in base alle necessità - ASA C250</block>
+  <block id="0c80834eb80ee789c355be4e4a0edad5" category="doc">Controllare le chiavi di crittografia integrate - ASA C250</block>
+  <block id="706f40f792c3dab367a62e0d94e461ee" category="doc">Sostituire o installare una scheda mezzanine - ASA C250</block>
+  <block id="8336f1f72044234f7e63ccadc716be3d" category="doc">Sostituire un modulo DIMM - ASA C250</block>
+  <block id="bc2311b6a715da1a660ee0a9afd2016e" category="doc">Sostituire il supporto di avvio - ASA C250</block>
+  <block id="7171d5f82a6b13d62d4f7f70326df021" category="doc">Spegnere il modulo controller danneggiato - ASA C250</block>
+  <block id="b4609e09d3094c196af6ccbdb8c9afbf" category="doc">Panoramica della sostituzione del modulo controller - ASA C250</block>
+  <block id="42e2b7c9fbe6b6256660bb0bbb7a0962" category="doc">Sostituire una ventola — ASA C250</block>
+  <block id="13a410359da23b13900f5c285e105e81" category="doc">Sostituire l'hardware del modulo controller - ASA C250</block>
+  <block id="0c85f60a3a546be806bd89d1770b2cdb" category="doc">Sostituire l'unità SSD o l'unità HDD - ASA C250</block>
+  <block id="363dbb7bd38c3746663861884552a6ca" category="doc">Panoramica sulla sostituzione dei supporti di avvio - ASA C250</block>
+  <block id="43e2c8d81f6919e7565affdd6dcb959f" category="doc">Ripristino completo del sistema - ASA C250</block>
+  <block id="d4990258d82ec1b42d1a3f07bbdd9d8c" category="doc">Spegnere il controller - ASA C250</block>
+  <block id="e6b4abf5b92977063300e1d579857b79" category="doc">Possibilità di recuperare il sistema e di riassegnare i dischi - ASA C250</block>
+  <block id="12e315d8c52faa94677b1901adfb8eb4" category="doc">Sostituire l'hardware - ASA C250</block>
+  <block id="e6d96f81a26c1a2a35065ae9c3793837" category="doc">Sostituire la batteria NVMEM - ASA C250</block>
+  <block id="5a3293bed167a0eb16f492a5ce0b1ed5" category="doc">Sostituire l'alimentatore - ASA C250</block>
+  <block id="7382bde7f210f74c2e89d6849d2c853c" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA C250</block>
+  <block id="d39ab7984d0a9959c51323b1566d39fd" category="doc">Ripristinare e verificare la configurazione di sistema - ASA C250</block>
+  <block id="4011a7882485055cdc06ec93e7092124" category="doc">Completare il processo di ripristino e sostituzione - ASA C250</block>
+  <block id="65cdd5bec4dba0253649d58817a20251" category="summary">Questa sezione fornisce istruzioni dettagliate dettagliate per l'installazione di un sistema ASA C250.</block>
+  <block id="96aa7639aa86f7fa2dc06bc23ab17535" category="doc">Procedura dettagliata - ASA C250</block>
+  <block id="6f986992e70a8e97c82b44d5221b88bd" category="doc">Avviare l'immagine di ripristino - ASA C250</block>
+  <block id="f1c66226b2b6383309a98f2006bd38a4" category="doc">Video - ASA C250</block>
+  <block id="cfa5d83bbf18bd39f133033e09af4872" category="admonition">ASA C250 utilizza la stessa procedura di installazione del sistema AFF A250.</block>
+  <block id="6e3c2edda84ea010e7f61a1a8d889444" category="list-text"><block ref="6e3c2edda84ea010e7f61a1a8d889444" category="inline-link-macro-rx"></block></block>
+  <block id="968f3a8f6f2d17318565778ed89fe60e" category="list-text"><block ref="968f3a8f6f2d17318565778ed89fe60e" category="inline-link-macro-rx"></block></block>
+  <block id="8cbcc8d109afe5c1880ad74857d5f039" category="list-text"><block ref="8cbcc8d109afe5c1880ad74857d5f039" category="inline-link-macro-rx"></block></block>
+  <block id="117802f52fb0f0fc020147893a4130c5" category="doc">Spegnere le centraline - ASA C250</block>
+  <block id="0bec81f6d2e70dbe308b882253ae1ad4" category="doc">Procedura rapida - ASA C250</block>
+  <block id="3bb369b5461fced54dd1e1e11d3295e9" category="inline-link-macro">Istruzioni per l'installazione e il setup di ASA A250</block>
+  <block id="f445f8f3baee3e9d681e87f062865a42" category="list-text">Inglese: <block ref="94f0ecafae085a43bf1e5c5f7e70443c" category="inline-link-macro-rx"></block></block>
+  <block id="1c60d609b30b7ea4b8a9fe84f62f1d6b" category="inline-link">Istruzioni per l'installazione e il setup dei sistemi ASA A250</block>
+  <block id="561edde01bf058a77040944512b4abc3" category="list-text">Giapponese:<block ref="c8810e622f8e460212fed12e7e215db6" category="inline-link-rx"></block></block>
+  <block id="923cb9da2234b70162cf030969c9c64d" category="list-text">Cinese:<block ref="8e65669da6e18daec356d618e3ea94ac" category="inline-link-rx"></block></block>
+  <block id="56e4846e0597740899e073a1ec45d163" category="doc">Restituire il componente guasto a NetApp - ASA C800</block>
+  <block id="1074d363c9086b22a355d4527d32b28c" category="doc">Gestire l'hardware ASA C800</block>
+  <block id="f9ea5dff2f002c5b2f6eeeb84451e9f5" category="paragraph">Per il sistema di archiviazione ASA C800, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="3f9ba83126a2d0a1b4562908efe4870c" category="doc">Sostituire un NVDIMM - ASA C800</block>
+  <block id="50097ad5c1b5e616bbe0f94d6918f272" category="doc">Sostituire il telaio - ASA C800</block>
+  <block id="8e0d3110e2fb313b0ac5d7178af78d83" category="doc">Ripristino di OKM, NSE e NVE in base alle necessità - ASA C800</block>
+  <block id="2927ec98383ea38a218c0b37add3584b" category="doc">Controllare le chiavi di crittografia integrate - ASA C800</block>
+  <block id="f672d90fc8d0ab339549e32ae4a18c26" category="doc">Sostituire un modulo DIMM - ASA C800</block>
+  <block id="dccd487628e9e3fb202bf1d54f224f85" category="doc">Sostituire il supporto di avvio - ASA C800</block>
+  <block id="16c54e4c9f50a83bb13eddc18729c9e7" category="doc">Sostituire la batteria NVDIMM - ASA C800</block>
+  <block id="6a9d061449e03d1a36e0711f39abff8f" category="doc">Spegnere il controller danneggiato - ASA C800</block>
+  <block id="f5811521c6ed1fabe9020730715bf6ec" category="doc">Panoramica della sostituzione del modulo controller - ASA C800</block>
+  <block id="a77bfb07153ea54985cd6d32b137a0c8" category="doc">Sostituire una ventola - ASA C800</block>
+  <block id="0033b3cf7bd066a6dcb42aab6d55a7f7" category="doc">Sostituire l'hardware del modulo controller - ASA C800</block>
+  <block id="bc6187f0b8778014377ccebd8b17d2ed" category="doc">Sostituire l'unità SSD o l'unità HDD - ASA C800</block>
+  <block id="d9fe8c436c5cbc472b9ebf52adbbc858" category="doc">Trasferire l'immagine di avvio sul supporto di avvio - ASA C800</block>
+  <block id="2f7ac9575acad766cc32c4e3e9719d24" category="doc">Sostituire una scheda PCIe - ASA C800</block>
+  <block id="dee67159310079d1b0fb667da81d6e9e" category="doc">Panoramica sulla sostituzione dei supporti di avvio - ASA C800</block>
+  <block id="7aceb406cd07b754209377738399299c" category="doc">Ripristino completo del sistema - ASA C800</block>
+  <block id="6099221a831c734ee14418269bc9c024" category="doc">Spegnere il controller - ASA C800</block>
+  <block id="7eb1428cde412a152576637c584b14c0" category="doc">Possibilità di recuperare il sistema e di riassegnare i dischi - ASA C800</block>
+  <block id="ea1dc19906ddc0d31254dd6f8ec34328" category="doc">Spostare e sostituire la bulloneria - ASA C800</block>
+  <block id="5bb05bb37b0f50f78a66bcb870b4f799" category="doc">Sostituire l'alimentatore - ASA C800</block>
+  <block id="bf0c9d599368cd33e5930b660050f4e0" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA C800</block>
+  <block id="d7839b53c88c4bbaff7e95ac9d3c76fc" category="doc">Ripristinare e verificare la configurazione di sistema - ASA C800</block>
+  <block id="cbc21197c1871348bbf882e4a113a8cf" category="doc">Completare il processo di ripristino e sostituzione - ASA C800</block>
+  <block id="4a9663f34d974f62e97bc12e3339b829" category="summary">Questa sezione fornisce istruzioni dettagliate dettagliate per l'installazione di un sistema ASA C800.</block>
+  <block id="785cd996138f338b507afb4b1a247f7a" category="doc">Procedura dettagliata - ASA C800</block>
+  <block id="0638f850898c092d5e1fe72b87242595" category="paragraph">Per installare il sistema ASA C800, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
+  <block id="9c62e171f059c8600997ae4e0f96ab7d" category="image-alt">drw asac800 peso attenzione</block>
+  <block id="d2946c650fd878fb1382f852e7ae21f2" category="image-alt">gestione cavi di installazione drw asac800</block>
+  <block id="8f9611c57f280dcf3707a77790073f5e" category="list-text">da e1b a e1b
+<block ref="15891b31f94aa5c1d8d701dc45f31a49" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e2ffd86efabaa66f6caa4720f826af5e" category="list-text">da e1a a e1a
+<block ref="a384f044b9ce696d7af96248c96af5c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1ddae32aa15704bfdbaa2aab1a7d6dfe" category="paragraph">Collegare le porte di gestione agli switch della rete di gestione    <block ref="006022f2d0575aac941d853d15f04b9e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d6f4ba76330aa95c5eaaaf0d9035fea2" category="paragraph">Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE.
+** e0a
+** e1a
+<block ref="f2a41a3e16faf723b039ff4278135de5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8546314cef10b9e9e364344875d77237" category="paragraph">Collegare le porte da 2a a 2d agli switch host FC.<block ref="4f1b9e5dfcbddf179a4286f1703ef51b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="607da72d58aff35499a7aec17d5e19bb" category="paragraph">Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.<block ref="90048d1fb5dca95cfe62abfa6b205214" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="25f831637542d41012246381c8ca1ec9" category="paragraph">Collegare il controller del cavo A allo shelf:    <block ref="f81613a889a36c93366a9575275b2581" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="335c41450f222d4ab520fa32b2542214" category="paragraph">Collegare il controller del cavo B allo shelf:    <block ref="678df8700f02a110e9ca97a297deb31d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="157dc2a3553e3f5202fbc40d49878754" category="paragraph">Collegare il controller dei cavi A agli shelf:    <block ref="118747470262b69831582f8c5b0f6061" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="48d33cbc5ff82c101c057c7286bba92e" category="paragraph">Collegare il controller dei cavi B agli shelf:    <block ref="f09535d2d5af9c437ea1775f9a22dea3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9f9162027a6469a02a5740c7a72369e3" category="image-alt">connettore console drw asac800</block>
+  <block id="6fe0915ad0c3735187132d7dfe2356b4" category="image-alt">subnet di gestione client drw asac800</block>
+  <block id="3682f89576a4cb3869bd075b26450b14" category="doc">Avviare l'immagine di ripristino - ASA C800</block>
+  <block id="1a127c6545345af120647a9618b2e726" category="doc">Video - ASA C800</block>
+  <block id="71eb59c59a42227ae8b45d0cfaf6f52f" category="paragraph">Sono disponibili due video: Uno che mostra come installare e collegare il sistema in rack e uno che mostra un esempio di utilizzo della configurazione guidata di System Manager per eseguire la configurazione iniziale del sistema.</block>
+  <block id="2ff6b785c9bbb9bd149f3c338b823e06" category="section-title">Video uno di due: Installazione hardware e cablaggio</block>
+  <block id="d3197b7ca449b7c51aff0fa9f3ba9085" category="video-title">"Animazione - Installazione e configurazione di un ASA C800</block>
+  <block id="d92d79541486453c440f5d479e7c2937" category="section-title">Video due di due: Esecuzione della configurazione software end-to-end</block>
+  <block id="6fcf86e967a5b349290bdafc15f7033f" category="paragraph">Il seguente video mostra la configurazione software end-to-end per i sistemi che eseguono ONTAP 9.2 e versioni successive.</block>
+  <block id="8e91b5d8fea45643b42fc43b5dd641c2" category="list-text"><block ref="8e91b5d8fea45643b42fc43b5dd641c2" category="inline-link-macro-rx"></block></block>
+  <block id="5aed20998b90c6c33b24d8487f2e41d8" category="list-text"><block ref="5aed20998b90c6c33b24d8487f2e41d8" category="inline-link-macro-rx"></block></block>
+  <block id="4b48480a8d391a98b9979af312308b7c" category="list-text"><block ref="4b48480a8d391a98b9979af312308b7c" category="inline-link-macro-rx"></block></block>
+  <block id="5d9efacb191134a47eddaca6b86550ef" category="doc">Spegnere le centraline - ASA C800</block>
+  <block id="2fb9d81c2751b72c6f0f19e7ab0e2e6b" category="doc">Procedura rapida - ASA C800</block>
+  <block id="0a1b788d1099f65afcbd5d2617f3ed92" category="inline-link-macro">Istruzioni per l'installazione e il setup di ASA C800</block>
+  <block id="27e19165ae3633b64ea0d1e5828b6473" category="paragraph">Questa guida fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare <block ref="8e51076e81612ebc2edf3ef44ea3a905" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
+  <block id="2b9953635f286a5f88d8f368e0aa5465" category="sidebar">I sistemi storage hardware ONTAP di NetApp forniscono storage ibrido o all-flash scale-out, Enterprise e all'avanguardia, con la gestione dei dati più avanzata del settore. Utilizzare i documenti presenti in questo sito per installare, espandere, aggiornare e gestire i sistemi.</block>
+  <block id="c3e7f9784130f33ec58f778a7d364a56" category="sidebar">Sistemi ASA C-series</block>
+  <block id="ce75e61b074bab0c8e79b911972ddbf1" category="sidebar">Shelf e switch</block>
+  <block id="efb7d807a9229170619783564ab9a186" category="sidebar">ASA C250</block>
+  <block id="8be061f2ffd8e5438d395c1e9844b4ff" category="sidebar">ASA C400</block>
+  <block id="fd395a2e4925de0736e72f97908d353b" category="sidebar">ASA C800</block>
+  <block id="b00c4b4112816929de0eb8a79af19e7f" category="sidebar">Documentazione sui sistemi hardware ONTAP</block>
+  <block id="c1370c033cc8d9c44f943c71c77e2612" category="sidebar">Sistemi ASA C400</block>
+  <block id="84f8b16af6e61b50a60f6963a3714dce" category="sidebar">Installazione e configurazione di ASA C400</block>
+  <block id="6e6b83322f27e0a481920c1942ca4d06" category="sidebar">Manutenzione di ASA C400</block>
+  <block id="42dcbb2a8a1d5c203703489b6bfd2d41" category="sidebar">Supporti di avvio di ASA C400</block>
+  <block id="ccf8018b3d654d823bd222ff5852d94c" category="sidebar">Chassis ASA C400</block>
+  <block id="f1ce6ee6a9b6701ded3e7305d1a47f8b" category="sidebar">Modulo controller ASA C400</block>
+  <block id="037942e17a72efbec3fbd02f17ae222e" category="sidebar">DIMM ASA C400</block>
+  <block id="a476b30aedf19d74cc76a81c627ef010" category="sidebar">Modulo ventola ASA C400</block>
+  <block id="5ac4d65b443121440994b5efbc6fe2db" category="sidebar">Batteria ASA C400 NVDIMM</block>
+  <block id="7da162a63ee18d83599a6f39dfad99f3" category="sidebar">Scheda Mezzanine o PCIe ASA C400</block>
+  <block id="e7d6c70be60310d753bb04f93958a99e" category="sidebar">Alimentatore ASA C400</block>
+  <block id="6e1f6b52dcbf426bd04e045b833f7989" category="sidebar">Batteria orologio in tempo reale ASA C400</block>
+  <block id="47bbce6e33bd7d62fd92094dd6a0818b" category="sidebar">Sistemi ASA C250</block>
+  <block id="07b2916c602e93a800620d6a7f3da559" category="sidebar">Installazione e configurazione di ASA C250</block>
+  <block id="1dd94b2bf84735727f2fca5364f3b083" category="sidebar">Manutenzione di ASA C250</block>
+  <block id="2353e9e67ec4eecfe39f1b7cc0ebfc1d" category="sidebar">Supporti di avvio di ASA C250</block>
+  <block id="194ead111a8c6fa1777a5e82a7f91b2f" category="sidebar">Chassis ASA C250</block>
+  <block id="f625798c697d484421b27bd2637a4a66" category="sidebar">Modulo controller ASA C250</block>
+  <block id="f52cc0c002eb630b3aee28324fd8a0a0" category="sidebar">Sistemi ASA C800</block>
+  <block id="5185f6f6f1211a7e3fff65634642f7bf" category="sidebar">Installazione e configurazione di ASA C800</block>
+  <block id="6254a52fafb7f7564e91436cf4b47113" category="sidebar">Manutenzione di ASA C800</block>
+  <block id="052bc2e859c31b84b04f42db7b60abff" category="sidebar">Supporti di avvio di ASA C800</block>
+  <block id="801fdf5b112137a107d3f17390e4042d" category="sidebar">Chassis ASA C800</block>
+  <block id="ca7dce9cd06f0f2ef6e548c8c26d54d9" category="sidebar">Modulo controller ASA C800</block>
 </blocks>

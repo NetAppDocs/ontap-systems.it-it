@@ -1,0 +1,253 @@
+---
+permalink: asa-c250/mezzanine-replace.html 
+sidebar: sidebar 
+keywords: asa c250, replace or install a mezzanine card 
+summary: Per sostituire una scheda mezzanino guasta, rimuovere i cavi e i moduli SFP o QSFP, sostituire la scheda, reinstallare i moduli SFP o QSFP e rieseguire le schede. Per installare una nuova scheda mezzanine, è necessario disporre dei cavi e dei moduli SFP o QSFP appropriati. 
+---
+= Sostituire o installare una scheda mezzanine - ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire una scheda mezzanino guasta, rimuovere i cavi e i moduli SFP o QSFP, sostituire la scheda, reinstallare i moduli SFP o QSFP e rieseguire le schede. Per installare una nuova scheda mezzanine, è necessario disporre dei cavi e dei moduli SFP o QSFP appropriati.
+
+.A proposito di questa attività
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Ripristino dei SED in modalità non protetta"].
+* Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento  `cluster kernel-service show`) Per blade SCSI del controller deteriorati. Il `cluster kernel-service show` command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Andare a Rimozione del modulo controller.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il modulo controller
+
+Rimuovere il modulo controller dal telaio quando si sostituisce un componente all'interno del modulo controller.
+
+Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.
++
+
+NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
++
+image::../media/drw_a250_pcm_remove_install.png[installazione rimozione pcm drw a250]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+| Leva 
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Meccanismo di blocco
+
+|===
+. Con entrambe le mani, afferrare i lati del modulo controller ed estrarlo delicatamente dallo chassis e posizionare il modulo su una superficie piana e stabile.
+. Ruotare la vite a testa zigrinata sulla parte anteriore del modulo controller in senso antiorario e aprire il coperchio del modulo controller.
++
+image::../media/drw_a250_open_controller_module_cover.png[drw a250 aprire il coperchio del modulo controller]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+| Vite a testa zigrinata 
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Coperchio del modulo controller.
+
+|===
+
+
+
+
+== Fase 3: Sostituire o installare una scheda mezzanine
+
+Per sostituire una scheda mezzanino, è necessario rimuovere la scheda danneggiata e installare la scheda sostitutiva; per installare una scheda mezzanino, rimuovere la mascherina e installare la nuova scheda.
+
+Per sostituire una scheda mezzanine, utilizzare il seguente video o la procedura riportata in tabella:
+
+.Animazione - sostituire una scheda mezzanino
+video::d8e7d4d9-8d28-4be1-809b-ac5b01643676[panopto]
+. Per sostituire una scheda mezzanine:
+. Individuare e sostituire la scheda mezzanine danneggiata sul modulo controller.
++
+image::../media/drw_a250_replace_mezz_card.png[drw a250 sostituire la scheda di memoria]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+| Rimuovere le viti sulla parte anteriore del modulo controller. 
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Allentare la vite nel modulo controller.
+
+
+
+ a| 
+image:../media/legend_icon_03.png["Numero di didascalia 3"]
+ a| 
+Rimuovere la scheda mezzanine.
+
+|===
++
+.. Scollegare i cavi associati alla scheda mezzanine danneggiata.
++
+Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
+
+.. Rimuovere eventuali moduli SFP o QSFP presenti nella scheda mezzanine danneggiata e metterli da parte.
+.. Utilizzando il cacciavite magnetico n. 1, rimuovere le viti dalla parte anteriore del modulo controller e metterle da parte in modo sicuro sul magnete.
+.. Utilizzando il cacciavite magnetico n. 1, allentare la vite sulla scheda mezzanine danneggiata.
+.. Utilizzando il cacciavite magnetico n. 1, sollevare delicatamente la scheda mezzanine danneggiata direttamente dallo zoccolo e metterla da parte.
+.. Rimuovere la scheda mezzanine sostitutiva dal sacchetto antistatico per la spedizione e allinearla alla superficie interna del modulo controller.
+.. Allineare delicatamente la scheda mezzanine sostitutiva in posizione.
+.. Utilizzando il cacciavite magnetico n. 1, inserire e serrare le viti sulla parte anteriore del modulo controller e sulla scheda mezzanine.
++
+
+NOTE: Non esercitare una forza durante il serraggio della vite sulla scheda mezzanino, poiché potrebbe rompersi.
+
+.. Inserire eventuali moduli SFP o QSFP rimossi dalla scheda mezzanine danneggiata nella scheda mezzanine sostitutiva.
+
+
+. Per installare una scheda mezzanine:
+. Se il sistema non ne dispone, viene installata una nuova scheda mezzanine.
++
+.. Utilizzando il cacciavite magnetico n. 1, rimuovere le viti dalla parte anteriore del modulo controller e dalla piastra anteriore che copre lo slot per schede mezzanine e metterle da parte in modo sicuro sul magnete.
+.. Rimuovere la scheda mezzanine dal sacchetto antistatico per la spedizione e allinearla alla parte interna del modulo controller.
+.. Allineare delicatamente la scheda mezzanine in posizione.
+.. Utilizzando il cacciavite magnetico n. 1, inserire e serrare le viti sulla parte anteriore del modulo controller e sulla scheda mezzanine.
++
+
+NOTE: Non esercitare una forza durante il serraggio della vite sulla scheda mezzanino, poiché potrebbe rompersi.
+
+
+
+
+
+
+
+== Fase 4: Reinstallare il modulo controller
+
+Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema e avviarlo.
+
+. Chiudere il coperchio del modulo controller e serrare la vite a testa zigrinata.
++
+image::../media/drw_a250_close_controller_module_cover.png[drw a250 chiudere il coperchio del modulo controller]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["Numero di didascalia 1"]
+| Coperchio del modulo controller 
+
+
+ a| 
+image:../media/legend_icon_02.png["Numero di didascalia 2"]
+ a| 
+Vite a testa zigrinata
+
+|===
+. Inserire il modulo controller nel telaio:
++
+.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
+.. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
+.. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+
+
+
++
+Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
+
+. Ricable il sistema, come necessario.
+. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 5: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

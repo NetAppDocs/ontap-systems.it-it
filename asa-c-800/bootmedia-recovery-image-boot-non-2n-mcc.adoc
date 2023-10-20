@@ -1,0 +1,122 @@
+---
+permalink: asa-c800/bootmedia-recovery-image-boot-non-2n-mcc.html 
+sidebar: sidebar 
+keywords: asa c800, boot the recovery image 
+summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+---
+= Avviare l'immagine di ripristino - ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
+
+. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
++
+L'immagine viene scaricata dall'unità flash USB.
+
+. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
+. Ripristinare il file system var:
++
+[cols="1,2"]
+|===
+| Se il sistema dispone di... | Quindi... 
+
+
+ a| 
+Una connessione di rete
+ a| 
+.. Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
+.. Impostare il controller integro su un livello di privilegio avanzato: `set -privilege advanced`
+.. Eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+.. Riportare il controller al livello di amministrazione: `set -privilege admin`
+.. Premere `y` quando viene richiesto di utilizzare la configurazione ripristinata.
+.. Premere `y` quando viene richiesto di riavviare il controller.
+
+
+
+
+ a| 
+Nessuna connessione di rete
+ a| 
+.. Premere `n` quando viene richiesto di ripristinare la configurazione di backup.
+.. Riavviare il sistema quando richiesto dal sistema.
+.. Selezionare l'opzione *Update flash from backup config* (Sync flash) dal menu visualizzato.
++
+Se viene richiesto di continuare con l'aggiornamento, premere `*y*`.
+
+
+
+
+
+ a| 
+Nessuna connessione di rete e si trova in una configurazione MetroCluster IP
+ a| 
+.. Premere `n` quando viene richiesto di ripristinare la configurazione di backup.
+.. Riavviare il sistema quando richiesto dal sistema.
+.. Attendere che le connessioni dello storage iSCSI si connettano.
++
+È possibile procedere dopo aver visualizzato i seguenti messaggi:
+
++
+[listing]
+----
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+----
+.. Selezionare l'opzione *Update flash from backup config* (Sync flash) dal menu visualizzato.
++
+Se viene richiesto di continuare con l'aggiornamento, premere `*y*`.
+
+
+
+|===
+. Assicurarsi che le variabili ambientali siano impostate come previsto:
++
+.. Portare il controller al prompt DEL CARICATORE.
+.. Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
+.. Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv _environment_variable_name_ _changed_value_` comando.
+.. Salvare le modifiche utilizzando `savenv` comando.
+
+
+. Il successivo dipende dalla configurazione del sistema:
++
+** Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito xref:bootmedia-encryption-restore.adoc[Ripristinare OKM, NSE e NVE secondo necessità]
+** Se il sistema non dispone di onboard keymanager, NSE o NVE configurati, completare la procedura descritta in questa sezione.
+
+
+. Dal prompt DEL CARICATORE, immettere `boot_ontap` comando.
++
+[cols="1,2"]
+|===
+| Se viene visualizzato... | Quindi... 
+
+
+ a| 
+Prompt di login
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+.. Accedere al controller partner.
+.. Verificare che il controller di destinazione sia pronto per il giveback con `storage failover show` comando.
+
+
+|===
+. Collegare il cavo della console al controller partner.
+. Restituire il controller utilizzando `storage failover giveback -fromnode local` comando
+. Al prompt del cluster, controllare le interfacce logiche con `net int -is-home false` comando.
++
+Se le interfacce sono elencate come "false", ripristinarle alla porta home utilizzando `net int revert` comando.
+
+. Spostare il cavo della console sul controller riparato ed eseguire `version -v` Per controllare le versioni di ONTAP.
+. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+
