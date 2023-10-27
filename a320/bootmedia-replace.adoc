@@ -201,7 +201,7 @@ Il nodo compromesso recupera lo storage, termina l'avvio, quindi si riavvia e vi
 NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
 
 +
-http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["Guida alla configurazione ad alta disponibilità di ONTAP 9"]
+https://docs.netapp.com/us-en/ontap/high-availability/index.html["Gestione delle coppie HA"^]
 
 ... Monitorare l'avanzamento dell'operazione di giveback utilizzando `storage failover show-giveback` comando.
 ... Una volta completata l'operazione di giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover utilizzando `storage failover show` comando.

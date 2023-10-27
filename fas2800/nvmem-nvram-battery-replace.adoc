@@ -13,7 +13,7 @@ summary: Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere 
 [role="lead"]
 Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
 
 
 
@@ -73,14 +73,26 @@ Rimuovere e aprire il modulo controller.
 Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
-. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda di collegamento centrale, quindi, con due mani, estrarre il modulo controller a metà del telaio.
 +
 image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Drw 2850 pcm Remove install IEOPS 694]
 
-. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
-. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
+. Controllare il LED NVMEM situato sul retro del modulo controller.  Cercare l'icona NV:
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Drw 2850 coperchio aperto del modulo controller IEOPS 695]
+image::../media/drw_hw_nvram_icon.svg[icona nvram drw hw]
+
++
+
+NOTE: Il LED NV verde sulla mascherina inizia a lampeggiare quando l'alimentazione viene rimossa dal controller se il sistema si trovava nello stato "in attesa di giveback" o se il sistema non è stato preso in consegna o arrestato correttamente (dati non impegnati).  Se il modulo controller non funziona correttamente, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"]
+
++
+** Se il LED di stato NV verde inizia a lampeggiare quando il modulo controller viene rimosso dal telaio:
++
+*** Confermare che il controller ha avuto un'acquisizione pulita da parte del modulo controller partner o che il controller danneggiato mostra _in attesa di giveback_, il LED lampeggiante può essere ignorato ed è possibile completare la rimozione del controller danneggiato dallo chassis.
+
+
+** Se il LED NV verde è spento, è possibile completare la rimozione del controller danneggiato dal telaio.
+
 
 
 
@@ -92,26 +104,11 @@ Rimuovere la batteria NVMEM guasta dal sistema e sostituirla con una nuova.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Controllare il LED NVMEM:
+. Rimuovere il modulo di comando dal telaio.
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
 +
-** Se il sistema si trova in una configurazione ha, passare alla fase successiva.
-** Se il sistema si trova in una configurazione standalone, spegnere completamente il modulo controller, quindi controllare il LED NVRAM identificato dall'icona NV.
-+
-image::../media/drw_hw_nvram_icon.svg[icona nvram drw hw]
-
-+
-
-NOTE: Il LED NVRAM lampeggia durante il trasferimento dei contenuti nella memoria flash quando si arresta il sistema. Una volta completata la destage, il LED si spegne.
-
-+
-*** In caso di interruzione dell'alimentazione senza un arresto completo, il LED NVMEM lampeggia fino al completamento della destage, quindi il LED si spegne.
-*** Se il LED è acceso e l'alimentazione è accesa, i dati non scritti vengono memorizzati su NVMEM.
-+
-Questo si verifica in genere durante un arresto non controllato dopo l'avvio di ONTAP.
-
-
-
-
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Drw 2850 coperchio aperto del modulo controller IEOPS 695]
 
 . Individuare la batteria NVMEM nel modulo del controller.
 +
