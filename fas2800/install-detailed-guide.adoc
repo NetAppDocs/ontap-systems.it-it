@@ -1,8 +1,8 @@
 ---
 permalink: fas2800/install-detailed-guide.html 
 sidebar: sidebar 
-keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, setup, discovery 
-summary: 'Questa guida fornisce istruzioni dettagliate e dettagliate per l"installazione di un sistema NetApp tipico.' 
+keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
+summary: 'Questo procurement fornisce istruzioni dettagliate e dettagliate per l"installazione di un tipico sistema di storage NetApp.' 
 ---
 = Fasi dettagliate - FAS2800
 :allow-uri-read: 
@@ -11,42 +11,51 @@ summary: 'Questa guida fornisce istruzioni dettagliate e dettagliate per l"insta
 
 
 [role="lead"]
-Questa guida fornisce istruzioni dettagliate e dettagliate per l'installazione di un sistema NetApp tipico. Utilizzare questa guida per ottenere istruzioni di installazione più dettagliate.
+Questa procedura fornisce istruzioni dettagliate per l'installazione di un tipico sistema di storage NetApp. Utilizzare questa procedura se si desidera ottenere istruzioni di installazione più dettagliate.
 
 
 
 == Fase 1: Preparazione per l'installazione
 
-Per installare il sistema FAS2800, è necessario creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
-
-È necessario disporre dell'accesso a https://hwu.netapp.com["NetApp Hardware Universe"] per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. È possibile anche avere accesso a http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Note di rilascio per la versione di ONTAP 9 in uso"] Per ulteriori informazioni su questo sistema, consultare la versione di ONTAP in uso.
-
+.Prima di iniziare
 Devi fornire quanto segue presso la tua sede:
 
-* Spazio rack per il sistema storage
+* Spazio rack per il sistema di archiviazione in un rack per telecomunicazioni o in un cabinet di sistema.
++
+** 2U per il sistema di storage
+** 2U o 4U per ogni shelf di dischi del sistema
+
+
 * Cacciavite Phillips n. 2
-* Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
+* Cavi di rete aggiuntivi per collegare il sistema di storage allo switch di rete e al portatile o alla console con un browser Web
 * Computer portatile o console con connessione RJ-45 e accesso a un browser Web
++
+** Accesso a https://hwu.netapp.com["NetApp Hardware Universe"] per informazioni sui requisiti del sito e ulteriori informazioni sul sistema di archiviazione configurato.
+** È possibile anche avere accesso a http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Note di rilascio per la versione di ONTAP 9 in uso"] Per la versione di ONTAP in uso per ulteriori informazioni su questo sistema di storage.
+
+
 
 
 .Fasi
-. Disimballare il contenuto di tutte le confezioni.
-. Annotare il numero di serie del sistema dai controller.
+. Disimballare tutte le confezioni e fare l'inventario del contenuto.
++
+
+IMPORTANT: I clienti con requisiti di alimentazione specifici devono verificare https://hwu.netapp.com["NetApp Hardware Universe"] per le relative opzioni di configurazione.
+
+. Accedere a. https://docs.netapp.com/us-en/ontap/task_configure_ontap.html#assign-a-node-management-ip-address["Configurare ONTAP su un nuovo cluster con Gestione di sistema"^]
++
+.. Rivedere i requisiti della procedura amd.
+.. Raccogliere informazioni sul proprio sistema di storage completando la https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Foglio di lavoro di installazione^ (è necessario l'URL del foglio di lavoro)"].
+.. Registrare il numero di serie del sistema storage dalle unità di controllo.
 +
 image::../media/drw_ssn_label.svg[etichetta drw sn]
 
-. Configurazione dell'account:
-+
-.. Accedi al tuo account esistente o crea un account.
-.. Registrare il sistema tramite  https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["Registrazione del prodotto NetApp"]
 
 
-. Scaricare e installare https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Config Advisor"] sul computer portatile.
-. Fare un inventario e prendere nota del numero e dei tipi di cavi ricevuti.
-+
+
+
 La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare https://hwu.netapp.com["NetApp Hardware Universe"] individuare il cavo e identificarne l'utilizzo.
 
-+
 [cols="1,2,1,2"]
 |===
 | Tipo di cavo... | Codice e lunghezza del ricambio | Tipo di connettore | Per... 
@@ -127,7 +136,7 @@ Storage
  a| 
 Cavo console USB-C.
  a| 
-Non applicabile
+Nessuna etichetta con il numero di parte
  a| 
 image::../media/oie_cable_micro_usb.svg[cavo oie micro usb]
  a| 
@@ -138,11 +147,11 @@ Connessione della console durante la configurazione del software su computer por
  a| 
 Cavi di alimentazione
  a| 
-Non applicabile
+Nessuna etichetta con il numero di parte
  a| 
 image::../media/oie_cable_power.svg[cavo di alimentazione dell'oie]
  a| 
-Accensione del sistema
+Accensione del sistema storage
 
 
 
@@ -156,21 +165,18 @@ image::../media/oie_cable_fiber_lc_connector.svg[connettore lc in fibra ottica p
 Cavo di rete FC aggiuntivo
 
 |===
-. Scaricare e completare le schede di lavoro disponibili in  https://docs.netapp.com/us-en/ontap/software_setup/concept_set_up_the_cluster.html#cluster-setup-worksheets["Configurare il cluster con l'interfaccia utente di ONTAP"^].
-
-
 
 
 == Fase 2: Installare l'hardware
 
-È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
+Installare il sistema di storage in un rack per telecomunicazioni o in un cabinet del sistema di storage NetApp, a seconda dei casi.
 
 .Fasi
 . Installare i kit di guide, secondo necessità.
-. Installare e fissare il sistema seguendo le istruzioni fornite con il kit di guide.
+. Installare e fissare il sistema di archiviazione attenendosi alle istruzioni fornite con il kit guide.
 +
 
-NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
+NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema di stoccaggio.
 
 +
 image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[Avvertenza peso oie fas2800 IEOPS 1070]
@@ -179,16 +185,16 @@ image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[Avvertenza peso oie fa
 +
 image::../media/drw_cable_management_arm_install.svg[installazione di ARM per la gestione dei cavi drw]
 
-. Posizionare il pannello anteriore del sistema.
+. Posizionare il frontalino sulla parte anteriore del sistema di archiviazione.
 
 
 
 
 == Fase 3: Collegare i controller alla rete
 
-Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.
+Collegare i controller alla rete come cluster senza switch a due nodi o come cluster con switch.
 
-La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.
+La tabella seguente identifica il tipo di cavo con il numero di didascalia e il colore del cavo nelle illustrazioni sia per il cluster senza switch a due nodi che per il cluster con switch.
 
 [cols="20%,80%"]
 |===
@@ -215,27 +221,26 @@ image::../media/oie_legend_icon_3_o.svg[icona legenda oie 3 o]
 Switch di rete host
 
 |===
+.Prima di iniziare
+* Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch.
+* Verificare l'orientamento corretto della linguetta di estrazione del connettore del cavo nella freccia dell'illustrazione.
++
+** Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.
+** Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.
+
+
+
+
+image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Collegare un cluster senza switch a due nodi
 --
 Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster senza switch a due nodi.
 
-.Prima di iniziare
-Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
-image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
-
-
-NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.
-
-
-NOTE: Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.
-
 .A proposito di questa attività
-È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch.
+Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra le centraline e gli interruttori.
 
 .Animazione - cablaggio di un cluster senza switch a due nodi
 video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
@@ -315,18 +320,8 @@ IMPORTANT: NON collegare i cavi di alimentazione.
 --
 Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster con switch.
 
-
-NOTE: Per informazioni sulla connessione del sistema agli switch, contattare l'amministratore di rete.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
-image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
-
-
-NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.
-
 .A proposito di questa attività
-È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch.
+Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra le centraline e gli interruttori.
 
 .Animazione - cablaggio del cluster con switch
 video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
@@ -403,22 +398,10 @@ IMPORTANT: NON collegare i cavi di alimentazione.
 
 Collegare i controller allo storage esterno.
 
+La tabella seguente identifica il tipo di cavo con il numero di didascalia e il colore del cavo nelle illustrazioni per il cablaggio degli shelf di dischi al sistema di storage.
 
-NOTE: L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati.
 
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
-
-image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
-
-.A proposito di questa attività
-È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli shelf di dischi.
-
-.Animazione - cablaggio dello shelf del disco
-video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
-
-NOTE: Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] per ulteriori informazioni.
-
-La seguente tabella identifica il tipo di cavo con il numero di chiamata e il colore del cavo nelle illustrazioni sia per il cablaggio di rete cluster senza switch a due nodi che per il cablaggio di rete cluster con switch.
+NOTE: L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installazione e shelf per l'installazione di un nuovo sistema - shelf con moduli IOM12/IOM12B"^] per ulteriori informazioni.
 
 [cols="20%,80%"]
 |===
@@ -428,23 +411,35 @@ La seguente tabella identifica il tipo di cavo con il numero di chiamata e il co
  a| 
 image::../media/oie_legend_icon_1_lo.svg[icona legenda oie 1 lo]
  a| 
-Interconnessione del cluster
+Cablaggio da shelf a shelf
 
 
 
  a| 
 image::../media/oie_legend_icon_2_mb.svg[icona legenda oie 2 mb]
  a| 
-Switch di rete di gestione
+Dal controller A agli shelf di dischi
 
 
 
  a| 
 image::../media/oie_legend_icon_3_t.svg[icona legenda oie 3 t]
  a| 
-Switch di rete host
+Dal controller B agli shelf di dischi
 
 |===
+Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
+
+image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+
+.A proposito di questa attività
+Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra i controller e i ripiani delle unità.
+
+
+IMPORTANT: Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] per ulteriori informazioni.
+
+.Animazione - cablaggio dello shelf del disco
+video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .Fasi
 . Cablare le porte shelf-to-shelf.
 +
@@ -495,39 +490,40 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[dwr 2800 controlle
 
 
 
-== Fase 5: Completare l'installazione e la configurazione del sistema
+== Fase 5: Completare la configurazione e la configurazione del sistema di archiviazione
 
-È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
+Completare l'installazione e la configurazione del sistema di storage utilizzando l'opzione 1: Se la funzione di rilevamento della rete è attivata o l'opzione 2: Se la funzione di rilevamento della rete non è attivata.
 
 [role="tabbed-block"]
 ====
 .Opzione 1: Se la funzione di rilevamento della rete è attivata
 --
-Se la funzione di rilevamento della rete è attivata sul laptop, completare la configurazione e l'installazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
+Se sul portatile è abilitata la funzione di rilevamento della rete, completare la configurazione e la configurazione del sistema storage utilizzando la funzione di rilevamento automatico del cluster.
 
 .Fasi
-. Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi
+. Utilizzare l'animazione seguente per attivare l'alimentazione degli scaffali e impostare gli ID degli scaffali.
 +
 .Animazione - impostazione degli ID dello shelf di dischi
 video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
-. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
-. Accendere gli interruttori di alimentazione su entrambi i nodi.
+. Accendere i controller
 +
-image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[dwr 2800 accendere l'alimentazione IEOPS 898]
-
+.. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
+.. Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
 
 NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+
++
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[dwr 2800 accendere l'alimentazione IEOPS 898]
+
+
 
 . Assicurarsi che il rilevamento della rete sia attivato sul laptop.
 +
 Per ulteriori informazioni, consultare la guida in linea del portatile.
 
-. Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.
-+
-.Animazione - collegare il laptop allo switch di gestione
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
-. Selezionare un'icona ONTAP elencata per scoprire:
+. Collegare il laptop allo switch di gestione.
+. Utilizza l'immagine o le procedure per rilevare il nodo del sistema storage da configurare:
 +
 image::../media/drw_autodiscovery_controler_select.svg[selezione del controllo di rilevamento automatico drw]
 
@@ -538,16 +534,27 @@ image::../media/drw_autodiscovery_controler_select.svg[selezione del controllo d
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 
-NOTE: XXXXX è il numero di serie del sistema per il nodo di destinazione.
+NOTE: XXXXX è il numero di serie del sistema storage per il nodo di destinazione.
 
 +
 Viene visualizzato Gestione sistema.
 
 
 
-. Utilizzare la configurazione guidata di System Manager per configurare il sistema utilizzando i dati raccolti in https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"]
-. Verificare lo stato del sistema eseguendo Config Advisor.
-. Una volta completata la configurazione iniziale, passare alla https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP  risorse di documentazione per il gestore di sistema ONTAP"] Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.
+. Utilizzare la configurazione guidata di System Manager per configurare il sistema storage utilizzando i dati raccolti in <<Fase 1: Preparazione per l'installazione>>.
+. Crea un account o accedi al tuo account.
++
+.. Fare clic su https://mysupport.netapp.com["mysupport.netapp.com"]
+.. Fai clic su _Crea account_ se devi creare un account o accedere al tuo account.
+
+
+. Scaricare e installare https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]
++
+.. Verifica dello stato di salute del tuo sistema storage eseguendo Active IQ Config Advisor.
+
+
+. Registrare il sistema all'indirizzo https://mysupport.netapp.com/site/systems/register[].
+. Una volta completata la configurazione iniziale, passare alla https://www.netapp.com/support-and-training/documentation/["Risorse NetApp ONTAP"] Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.
 
 
 --
@@ -563,7 +570,7 @@ Se il rilevamento della rete non è abilitato sul laptop, completare manualmente
 
 NOTE: Per informazioni su come configurare la porta della console, consultare la guida in linea del portatile o della console.
 
-.. Collegare il cavo della console al laptop o alla console, quindi collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema, quindi ccollegare il laptop o la console allo switch sulla subnet di gestione.
+.. Collegare il cavo della console al computer portatile o alla console e collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema di archiviazione, quindi collegare il computer portatile o la console allo switch sulla subnet di gestione.
 +
 image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[Drw 2800 laptop per passare al controller IEOPS 1084]
 
@@ -616,11 +623,22 @@ NOTE: Se non si sa come configurare PuTTY, consultare la guida in linea del port
 
 NOTE: Il formato dell'indirizzo è https://x.x.x.x[].
 
-.. Configurare il sistema utilizzando i dati raccolti in https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"].
+.. Configurare il sistema di archiviazione utilizzando i dati raccolti in <<Fase 1: Preparazione per l'installazione>>..
 
 
-. Verificare lo stato del sistema eseguendo Config Advisor.
-. Una volta completata la configurazione iniziale, passare a.  https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP  risorse di documentazione per il gestore di sistema ONTAP"] Per informazioni sulla configurazione di funzionalità aggiuntive in ONTAP.
+. Crea un account o accedi al tuo account.
++
+.. Fare clic su https://mysupport.netapp.com["mysupport.netapp.com"]
+.. Fai clic su _Crea account_ se devi creare un account o accedere al tuo account.
+
+
+. Scaricare e installare https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]
++
+.. Verifica dello stato di salute del tuo sistema storage eseguendo Active IQ Config Advisor.
+
+
+. Registrare il sistema all'indirizzo https://mysupport.netapp.com/site/systems/register[].
+. Una volta completata la configurazione iniziale, passare alla https://www.netapp.com/support-and-training/documentation/["Risorse NetApp ONTAP"] Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.
 
 
 --

@@ -1921,7 +1921,6 @@
   <block id="7d9036d60bbca8f733402060d735f7ba" category="summary">Questa sezione fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare questa guida se si ha familiarità con l'installazione dei sistemi NetApp.</block>
   <block id="c7567cf7dbf1c0e5da4f2ff1ced923ef" category="doc">Passaggi rapidi - AFF C800</block>
   <block id="f8eb42a3c2c9e8d82c874d7ccd6ef2a9" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF C800</block>
-  <block id="1b687c0cb9f5dcfa6fe0020541ed6d97" category="paragraph"><block ref="1b687c0cb9f5dcfa6fe0020541ed6d97" category="inline-link-macro-rx"></block></block>
   <block id="96575ba10e2fbb7c8295e344411ca2d1" category="doc">Sostituire un modulo DIMM - AFF C800</block>
   <block id="9bcb203190e45fed6ef1d56a224cc2de" category="list-text">Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.</block>
   <block id="3df9f71f0d9a072a7166e0d233cad24a" category="list-text">Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:</block>
@@ -2369,7 +2368,6 @@
   <block id="d9d59ddb1bc0ff1000e4664413e713fe" category="list-text">Dal prompt DEL CARICATORE sul controller _replacement_, avviare il controller, immettendo<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema:</block>
   <block id="d667058635875eca097800e4379f58cd" category="doc">Passaggi rapidi - AFF C250</block>
   <block id="84918b89947f6a68e4b25fe4753c02bc" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF C250</block>
-  <block id="66e0597e25a38bc180d5270f4021127a" category="paragraph"><block ref="66e0597e25a38bc180d5270f4021127a" category="inline-link-macro-rx"></block></block>
   <block id="930fad66fb3a257a1d24f20ac59c003f" category="doc">Panoramica della sostituzione del modulo controller - AFF C250</block>
   <block id="bb948df5a06fd8fb2e2b9e9f99cc69d4" category="doc">Avviare l'immagine di ripristino - AFF C250</block>
   <block id="30748b1b116d9335e2b8cdb6ec3038d0" category="list-text">Se una variabile di ambiente non è impostata come previsto, modificarla con<block ref="c9518832c08f9faecfc35f8473eb7398" prefix=" " category="inline-code"></block> comando.</block>
@@ -2533,7 +2531,6 @@
   <block id="7103ae2dc232b897a89408d0cd914f59" category="doc">Controllare le chiavi di crittografia integrate - AFF A800</block>
   <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">Passaggi rapidi - AFF A800</block>
   <block id="42e8099baf01da8bcc3b8362f29f317c" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF A800</block>
-  <block id="08b9fb46f5aced4cd732b3ae62e9764f" category="paragraph">Questa guida fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
   <block id="9194957b9ba15b1fae65a0f5a08ad128" category="doc">Sostituire un modulo DIMM - AFF A800</block>
   <block id="12abc0287f5162e3fd98e6515d1cc063" category="doc">Ricable the system and reassign disks - AFF A800 (riscrivere il sistema e riassegnare i dischi)</block>
   <block id="ea00def363aacc8779f9b5afd4cc8812" category="doc">Ripristinare e verificare la configurazione del sistema - AFF A800</block>
@@ -6062,18 +6059,15 @@
   <block id="4c82db0a209f87ecd6fed6664e1ef758" category="cell">Icona LED</block>
   <block id="3999567db5b4a29bd6505aaadb3f807e" category="cell">Nome del LED</block>
   <block id="46a2a41cc6e552044816a2d04634545d" category="cell">Stato</block>
-  <block id="f14917f9ec9b86a2d84112bf8ff01347" category="paragraph"><block ref="f14917f9ec9b86a2d84112bf8ff01347" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd4fe0cc913f704600b97d1f5dd285de" category="paragraph">Potenza</block>
   <block id="31cb02e89902f67343e47bc70e628c6d" category="paragraph">Verde fisso</block>
   <block id="ceee41d559bf6e4c8eec9d1995cd0b4c" category="paragraph">Uno o più alimentatori alimentano lo shelf di dischi.</block>
-  <block id="c61664b995859451c9b18dba9398d36e" category="cell"><block ref="c61664b995859451c9b18dba9398d36e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa97e44cace7cb882c9dcba32940f8f" category="cell">Attenzione</block>
   <block id="75e6252bb5a504fc80a435f3c6fc7c82" category="paragraph">Ambra fisso</block>
   <block id="42532600d34fb5884550b5ba06c71866" category="paragraph">Controllare i messaggi di evento per determinare l'azione correttiva da intraprendere.</block>
   <block id="5bb2376fdbdd8b69f07ffed693784a70" category="paragraph">Ambra lampeggiante</block>
   <block id="59ee562359b2b7e862570a57471bda07" category="paragraph">L'ID dello shelf è in sospeso.</block>
   <block id="8fcbf556597a139b46e7a7b6c6878f08" category="paragraph">Spegnere e riaccendere lo shelf di dischi per modificare l'ID dello shelf.</block>
-  <block id="965881f89ebf03830d8c6f3d7b4af499" category="paragraph"><block ref="965881f89ebf03830d8c6f3d7b4af499" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d4300cfa84e2e26784840198a0cbd030" category="paragraph">Blu fisso</block>
   <block id="dcef7e6e25f4d0285a65c6e2456b274e" category="paragraph">L'amministratore di sistema ha attivato questa funzione LED per facilitare l'individuazione fisica dello shelf di dischi che richiede assistenza.</block>
   <block id="735b119b02d7cf2ed75726f0f7dd0561" category="paragraph">A seconda del modello di shelf di dischi in uso, il display dell'operatore ha un aspetto diverso; tuttavia, i tre LED sono disposti allo stesso modo.</block>
@@ -6102,7 +6096,6 @@
   <block id="a7d0fabb0e19581fdc7108acf3ea86ca" category="paragraph">La seguente tabella descrive i LED sulle ventole utilizzate negli shelf di dischi DS460C:</block>
   <block id="7d74f3b92b19da5e606d737d339a9679" category="cell">Elemento</block>
   <block id="c850737320566d21e1b271caa9a83a80" category="paragraph">Si è verificato un errore nella funzione della ventola.</block>
-  <block id="97fcf3382eccbc982589a926d4ab13ed" category="paragraph"><block ref="97fcf3382eccbc982589a926d4ab13ed" category="inline-image-macro-rx" type="image"></block></block>
   <block id="73ed5be94772342ead2304a505ea672f" category="section-title">LED del disco</block>
   <block id="556d06da2336f75dff1cbca3a26c81fa" category="paragraph">I LED di un disco indicano se funziona normalmente o se si verificano problemi con l'hardware.</block>
   <block id="92baf731ccf3fd5eea26e98890d366d6" category="section-title">LED delle unità disco per shelf di dischi DS224C e DS212C</block>
@@ -7176,7 +7169,6 @@
   <block id="9e493c35f280e1be11ab7f0f286f498b" category="sidebar">Unità AFF A220</block>
   <block id="ca55628a813bde8148e26c974fb5bd2e" category="sidebar">Batteria con clock in tempo reale A220 AFF</block>
   <block id="79386daaa48888ed81c00ef493d329e9" category="paragraph">Se si dispone di una configurazione MetroCluster, utilizzare<block ref="d4b6e949edad9293b177bc65e2892165" category="inline-link-rx"></block>.</block>
-  <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">NOTA:</block>
   <block id="25ca1a1b0a04d8f5341dca5c9e9eed8a" category="list-text">Assicurarsi di disporre dell'accesso a <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> (HWU) per informazioni sui requisiti del sito.</block>
   <block id="b00f162fad84edda46484fcada242a8c" category="inline-link">HWU</block>
   <block id="0b596d3b9a72deeb4bca2c3f00662c30" category="list-text">I clienti con requisiti di alimentazione specifici devono verificare<block ref="911e5b8f28f318acfdc1d057cd36b40e" category="inline-link-rx"></block> per le opzioni di configurazione.</block>
@@ -7581,11 +7573,7 @@ Installare la batteria sostitutiva:</block>
   <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">Se le interfacce sono elencate come "false", ripristinarle alla porta home utilizzando<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> comando.</block>
   <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">Se non si utilizza la crittografia dello storage, ripristinare il giveback automatico e AutoSupport:</block>
   <block id="fde9b148f6eb9655d65658597326b4ee" category="doc">Fasi dettagliate - FAS2800</block>
-  <block id="c507fc907e52c0d3d2a5b32d101a1559" category="paragraph">Per installare il sistema FAS2800, è necessario creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
   <block id="82374f90663d7205d26c38028c93cb8d" category="inline-link">Note di rilascio per la versione di ONTAP 9 in uso</block>
-  <block id="4afcf4b1bce6c3df1cc1e778d2d69e65" category="paragraph">È necessario disporre dell'accesso a<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato. È possibile anche avere accesso a<block ref="eaa168831c6fecf820d5605f3f5de542" category="inline-link-rx"></block> Per ulteriori informazioni su questo sistema, consultare la versione di ONTAP in uso.</block>
-  <block id="94f11775f11fcb36a20933d06500449a" category="list-text">Registrare il sistema tramite <block ref="1cbd3811871137aa1e003e1ccae3894e" category="inline-link-rx"></block></block>
-  <block id="4aed417c4620186c402fe3b82713076b" category="list-text">Scaricare e installare<block ref="56697f7f340a212f549439c89b0cabd2" category="inline-link-rx"></block> sul computer portatile.</block>
   <block id="202c6b9676e6e0879f99a323aacdd76b" category="paragraph">La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> individuare il cavo e identificarne l'utilizzo.</block>
   <block id="21d9a13ac1bf780b5a88db05a215c05d" category="paragraph">10 GbE, cavo SFP28 (in base all'ordine)</block>
   <block id="68ddfa29cb0d12a802225c5426557710" category="paragraph">X6566B-05-R6, .5,</block>
@@ -7609,15 +7597,11 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7176bca53e61f926de4367eb107ce7c8" category="paragraph">Cavo console USB-C.</block>
   <block id="34dc50315428bf6e6940b722c6a21ee9" category="paragraph">Cavo FC opzionale</block>
   <block id="01b24af9f8a6b3efddd64ee9ab57a42e" category="paragraph">Cavo di rete FC aggiuntivo</block>
-  <block id="3f23ceafafc807d2b7578916c6816fcb" category="inline-link">Configurare il cluster con l'interfaccia utente di ONTAP</block>
-  <block id="a41ad0c41b61aa6e16a86ba5e2432d9f" category="list-text">Scaricare e completare le schede di lavoro disponibili in <block ref="a7d19322be231451e03428c8b87e512f" category="inline-link-rx"></block>.</block>
   <block id="3157ab12e29c7ae731c3bbc36443b23f" category="image-alt">Avvertenza peso oie fas2800 IEOPS 1070</block>
-  <block id="bb4787913f600ff690f937a7622bfef5" category="paragraph">Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.</block>
   <block id="9646d1820777de5269873d2317186ecb" category="paragraph">Switch di rete di gestione</block>
   <block id="e80abcbf02cd3bed5561a16253c1dea0" category="paragraph">Switch di rete host</block>
   <block id="3b9d43c8f889d04a7e7e50ecc887f626" category="paragraph">Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster senza switch a due nodi.</block>
   <block id="724b63ff77d309630df65f6af09956a2" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.</block>
-  <block id="b81e7d6a7be0cc8238b538c4b907282a" category="paragraph">È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch.</block>
   <block id="43f3f164715da7f3368f26b28f4ef36f" category="video-title">Animazione - cablaggio di un cluster senza switch a due nodi</block>
   <block id="00cdc1c050c54120647c95f8ac43e946" category="list-text">Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:</block>
   <block id="64d64c32d62f821e30eb2ef5d4583099" category="paragraph">*Cavi di interconnessione cluster*</block>
@@ -7636,9 +7620,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e664a3bf047f98da138d06dd6bbecf60" category="list-text">2 porte, 10 GB Ethernet (SFP28) + 2 porte 32 GB FC (SFP+)</block>
   <block id="c76e1890be7e78a7e7f8b44303d6f072" category="admonition">NON collegare i cavi di alimentazione.</block>
   <block id="945919717a9a1b9de8896baef8c155a5" category="paragraph">Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster con switch.</block>
-  <block id="4b3a23428d43b0cc1ea88affb10b1421" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.</block>
   <block id="b6713b6dcccfb0ea851ac5892871d1ce" category="paragraph">Collegare i controller allo storage esterno.</block>
-  <block id="80ae6b7de29ff0be35e926815150d39e" category="paragraph">È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli shelf di dischi.</block>
   <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">Animazione - cablaggio dello shelf del disco</block>
   <block id="2728bec52c30a9bf554b834ce8cfd335" category="admonition">Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Vedere<block ref="6f4656a8b776447b5b4debad13e7a22e" category="inline-link-rx"></block> per ulteriori informazioni.</block>
   <block id="936f11624ce65028d5f2861c02e343af" category="image-alt">icona legenda oie 1 lo</block>
@@ -7656,13 +7638,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="49fefb8508936cb5a0f672b0146c0013" category="list-text">Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack.</block>
   <block id="0cbd55a3e4a33973ae5e025f7565fe75" category="list-text">Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.</block>
   <block id="8f61138caddaadc30f99b723e123cf22" category="image-alt">dwr 2800 controller2 a shelf IEOPS 897</block>
-  <block id="a63d383da174eddb392adcd87d936c44" category="paragraph">Se la funzione di rilevamento della rete è attivata sul laptop, completare la configurazione e l'installazione del sistema utilizzando la funzione di rilevamento automatico del cluster.</block>
   <block id="17eddeb5ca42d640ce98ba7b90523804" category="image-alt">dwr 2800 accendere l'alimentazione IEOPS 898</block>
-  <block id="9e4e9e3678bbed5f0d0698cff8427b61" category="list-text">Utilizzare la configurazione guidata di System Manager per configurare il sistema utilizzando i dati raccolti in<block ref="492b1b89e16fbed782c0f28e34fb9371" category="inline-link-rx"></block></block>
   <block id="5725fc4af65adef1b57d4b7c9a365287" category="paragraph">Se il rilevamento della rete non è abilitato sul laptop, completare manualmente la configurazione e la configurazione.</block>
-  <block id="3b1f7398f44c65a5f8ab979cc8757340" category="list-text">Collegare il cavo della console al laptop o alla console, quindi collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema, quindi ccollegare il laptop o la console allo switch sulla subnet di gestione.</block>
   <block id="6f196fc99c938b047a2dbbae60694da9" category="image-alt">Drw 2800 laptop per passare al controller IEOPS 1084</block>
-  <block id="1f61f05d390e702160f04da6c21786d5" category="list-text">Una volta completata la configurazione iniziale, passare a. <block ref="8203f64117389bb7bbdf8d4d70d36e4d" category="inline-link-rx"></block> Per informazioni sulla configurazione di funzionalità aggiuntive in ONTAP.</block>
   <block id="1063e487d045f7cd17b5712ab35a43b6" category="doc">Documentazione del sistema FAS2800</block>
   <block id="40ab4deb5c724a3e2d6c8f6d96a94554" category="doc">Spegnere i controller - FAS2800</block>
   <block id="5f81816799fe408c4f5d0d2b06be7dd0" category="doc">Guida rapida - FAS2800</block>
@@ -7812,8 +7790,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8d468b5fdd20b5347cabd9609c9b129c" category="doc">Tutti i sistemi SAN array (ASA) Serie A.</block>
   <block id="9260991b91fdf449af1f97b5d09a9db6" category="summary">Gli shelf NS224 e SAS sono progettati appositamente per i sistemi NetApp AFF e FAS per supportare le diverse esigenze aziendali e applicative.</block>
   <block id="0add3a06a3c8079fac5caa294ad21965" category="doc">Shelf di dischi per sistemi AFF e FAS</block>
-  <block id="681b1f89b87b1eb21b78d5ec326b22f7" category="paragraph">Direttiva irrisolta in &lt;stdin&gt; - include:../_include/250_install-Detailed-guide.adoc[]
-Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema AFF C250.</block>
   <block id="4de4b37af472f8b6bb5aa5b5732538f0" category="summary">Manutenzione dell'hardware ASA C250</block>
   <block id="80b77aae28ed3360a8b704371f5188e1" category="doc">Manutenzione dell'hardware AFF C250</block>
   <block id="ab253cf54adf6fdbb65cbb0ed70cb2cf" category="paragraph">Per il sistema storage AFF C250, è possibile eseguire le procedure di manutenzione dei seguenti componenti.</block>
@@ -8503,7 +8479,6 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="728c8b35a059c5debd8717ebc5eef9cc" category="doc">Fasi video - ASA A250</block>
   <block id="da8c100a35e67a4a9a03589f6afa9ddc" category="doc">Fasi video - FAS500f</block>
   <block id="0fc2bce08e8e93df5954329e4439b224" category="paragraph">La procedura di installazione fornisce istruzioni grafiche per un'installazione tipica del sistema da rack e cablaggio, fino alla messa in funzione iniziale del sistema. Utilizzare questa procedura se si ha familiarità con l'installazione dei sistemi NetApp.</block>
-  <block id="658749712c1f894d4be0afd96a2e5f1d" category="paragraph">Accedere a. <block ref="617bafb92e72c64d9d65b60de9aea456" category="inline-link-macro-rx"></block>.</block>
   <block id="0a5ad698c7446792fa1695e8ef9001ee" category="image-alt">Drw 2800 cablaggio cluster commutato IEOPS 893</block>
   <block id="9bf3d28b6f86b0747100312dce20ff66" category="paragraph">La procedura di installazione di ASA A400 fornisce istruzioni grafiche per un'installazione tipica del sistema da rack e cablaggio, fino all'avvio iniziale del sistema. Se si ha familiarità con l'installazione dei sistemi NetApp, attenersi alle istruzioni riportate di seguito.</block>
   <block id="0117839c8787354fc8b23cefed0984e8" category="inline-link-macro">Istruzioni per l'installazione e il setup di ASA A400</block>
@@ -8693,4 +8668,69 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
   <block id="699b31ad01a325baded3de0b74220957" category="list-text"><block ref="56abd8a9e334744fb66750bee3a52178" category="inline-xref-macro-rx"></block></block>
   <block id="74e404c1f33731e0a999a4fc54ab33df" category="list-text"><block ref="893f29ac32188f4c8d29836a3587e127" category="inline-xref-macro-rx"></block></block>
   <block id="a192a372cc891c7f0839a86b1b42a3e2" category="list-text">Passare a. <block ref="39ef488856eb21b3aaabcded4bff7c5d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="2866d26481b1c521c672b3cb60930e47" category="paragraph">Accedere a. <block ref="130b74705762cd99c7dfbbbc83d14934" category="inline-link-macro-rx"></block>.</block>
+  <block id="7484b7e82acc4757b26226229997810e" category="summary">Questo procurement fornisce istruzioni dettagliate e dettagliate per l'installazione di un tipico sistema di storage NetApp.</block>
+  <block id="d9652a5ef2ee620cb0b558db1a0b0abd" category="paragraph">Questa procedura fornisce istruzioni dettagliate per l'installazione di un tipico sistema di storage NetApp. Utilizzare questa procedura se si desidera ottenere istruzioni di installazione più dettagliate.</block>
+  <block id="f4c3757c8a20a3155f18506671b4a147" category="list-text">Spazio rack per il sistema di archiviazione in un rack per telecomunicazioni o in un cabinet di sistema.</block>
+  <block id="a7fe55285588ce3bc863c28bb05d4186" category="list-text">2U per il sistema di storage</block>
+  <block id="4051d118060db51dd307c06bb01d5c8a" category="list-text">2U o 4U per ogni shelf di dischi del sistema</block>
+  <block id="f4c8d594d87ccd7fe60c3c68ef97a3da" category="list-text">Cavi di rete aggiuntivi per collegare il sistema di storage allo switch di rete e al portatile o alla console con un browser Web</block>
+  <block id="79c640bc8c4f86920cd6b693e9a21456" category="list-text">Accesso a<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> per informazioni sui requisiti del sito e ulteriori informazioni sul sistema di archiviazione configurato.</block>
+  <block id="345d4ee16e4fd18df3bf44484bbebc45" category="list-text">È possibile anche avere accesso a<block ref="eaa168831c6fecf820d5605f3f5de542" category="inline-link-rx"></block> Per la versione di ONTAP in uso per ulteriori informazioni su questo sistema di storage.</block>
+  <block id="902a58c29fa1a98185c0f23af51caade" category="list-text">Disimballare tutte le confezioni e fare l'inventario del contenuto.</block>
+  <block id="f77f28a461c720358d6020b852d2d688" category="admonition">I clienti con requisiti di alimentazione specifici devono verificare<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> per le relative opzioni di configurazione.</block>
+  <block id="16b35791c547ec7b12d2d1bc88d72f59" category="inline-link">Configurare ONTAP su un nuovo cluster con Gestione di sistema</block>
+  <block id="aae9567818a18efd162e71b32afe8898" category="list-text">Accedere a.<block ref="d606117105bd83c1b32ab081f09267a6" category="inline-link-rx"></block></block>
+  <block id="45c050678e91022d79d101d15217e470" category="list-text">Rivedere i requisiti della procedura amd.</block>
+  <block id="13013f81efc98ccada60da62130b9fda" category="inline-link">Foglio di lavoro di installazione^ (è necessario l'URL del foglio di lavoro)</block>
+  <block id="941956b63246ffa79f1347062e5d39b0" category="list-text">Raccogliere informazioni sul proprio sistema di storage completando la<block ref="346507d5ee7f653b48b0f3d6fc2965af" category="inline-link-rx"></block>.</block>
+  <block id="949db25fbbc3fc1f22a242c3944885b4" category="list-text">Registrare il numero di serie del sistema storage dalle unità di controllo.</block>
+  <block id="0d6cee59f00c392fcb698e283937aa19" category="paragraph">Nessuna etichetta con il numero di parte</block>
+  <block id="521655e96e994a693d54321af1548de6" category="paragraph">Accensione del sistema storage</block>
+  <block id="3ec9117c12f43a6786d62d4287191808" category="paragraph">Installare il sistema di storage in un rack per telecomunicazioni o in un cabinet del sistema di storage NetApp, a seconda dei casi.</block>
+  <block id="a13315633e3bd5a1b8934263ef3de247" category="list-text">Installare e fissare il sistema di archiviazione attenendosi alle istruzioni fornite con il kit guide.</block>
+  <block id="6c686ee1cca98c427670aae5dfe576bf" category="admonition">È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema di stoccaggio.</block>
+  <block id="084f071d7110f0c4d1fb187b85854586" category="list-text">Posizionare il frontalino sulla parte anteriore del sistema di archiviazione.</block>
+  <block id="3d8c8d712263193f63b8949c3ee9c62c" category="paragraph">Collegare i controller alla rete come cluster senza switch a due nodi o come cluster con switch.</block>
+  <block id="1c893d208d4a91c970226886751e800d" category="paragraph">La tabella seguente identifica il tipo di cavo con il numero di didascalia e il colore del cavo nelle illustrazioni sia per il cluster senza switch a due nodi che per il cluster con switch.</block>
+  <block id="1ab7eafd757e6d1eae57d16228e5edc3" category="list-text">Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch.</block>
+  <block id="089568b0e72f52eda465bac3d797022f" category="list-text">Verificare l'orientamento corretto della linguetta di estrazione del connettore del cavo nella freccia dell'illustrazione.</block>
+  <block id="cef25943b26eeebcaa1241ede0442fb2" category="paragraph">Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra le centraline e gli interruttori.</block>
+  <block id="86ef3e62afc46d4fbce176cfff238447" category="paragraph">La tabella seguente identifica il tipo di cavo con il numero di didascalia e il colore del cavo nelle illustrazioni per il cablaggio degli shelf di dischi al sistema di storage.</block>
+  <block id="225172475d1dd48d2f55426f1792f1b5" category="admonition">L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati. Vedere<block ref="defd6f8cbcbf4438c52ada1e92d7a17f" category="inline-link-rx"></block> per ulteriori informazioni.</block>
+  <block id="8a811c8bdca2987d299cfb24cf85ad86" category="paragraph">Cablaggio da shelf a shelf</block>
+  <block id="3fa1bc4f962d0649f457ff7e994b46d8" category="paragraph">Dal controller A agli shelf di dischi</block>
+  <block id="353960fbbf75aa5a4dd1042a20bf18dc" category="paragraph">Dal controller B agli shelf di dischi</block>
+  <block id="a01af11c268599bde566d99055019251" category="paragraph">Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra i controller e i ripiani delle unità.</block>
+  <block id="9aca62ddbd88e63be7ec9f9c2469acab" category="section-title">Fase 5: Completare la configurazione e la configurazione del sistema di archiviazione</block>
+  <block id="b3308aded4f838607d118fa8281f0f4e" category="paragraph">Completare l'installazione e la configurazione del sistema di storage utilizzando l'opzione 1: Se la funzione di rilevamento della rete è attivata o l'opzione 2: Se la funzione di rilevamento della rete non è attivata.</block>
+  <block id="cc76013bd2ca10d4b55bab3a0f8d5331" category="paragraph">Se sul portatile è abilitata la funzione di rilevamento della rete, completare la configurazione e la configurazione del sistema storage utilizzando la funzione di rilevamento automatico del cluster.</block>
+  <block id="89fb7289455abb973e1e1d1887a8172d" category="list-text">Utilizzare l'animazione seguente per attivare l'alimentazione degli scaffali e impostare gli ID degli scaffali.</block>
+  <block id="9be08f77b7ab4837ae1dadad63405dc2" category="list-text">Accendere i controller</block>
+  <block id="4a8d781d6ae79557515be034fcf4bd6e" category="list-text">Utilizza l'immagine o le procedure per rilevare il nodo del sistema storage da configurare:</block>
+  <block id="38c0c9e875391d2dc0f78f243ecc4f59" category="admonition">XXXXX è il numero di serie del sistema storage per il nodo di destinazione.</block>
+  <block id="9d2c2c7e4ecf1a64105e37b923e42295" category="list-text">Utilizzare la configurazione guidata di System Manager per configurare il sistema storage utilizzando i dati raccolti in <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>.</block>
+  <block id="b9d390deee7ae9c55c02ce9081338f2c" category="list-text">Crea un account o accedi al tuo account.</block>
+  <block id="e53df79e8b12228ebe8ba9013009c4b6" category="list-text">Fare clic su<block ref="47d83efabc4122be28a80bdea228d0a5" category="inline-link-rx"></block></block>
+  <block id="d163335d3a2ab0b3365c69b66c8b8218" category="list-text">Fai clic su _Crea account_ se devi creare un account o accedere al tuo account.</block>
+  <block id="d636be81d2c6c9af66f5d43b321f4b3c" category="inline-link">Active IQ Config Advisor</block>
+  <block id="ded166a9ef25ba71c1c5b2cca6dfb3ac" category="list-text">Scaricare e installare<block ref="67f241779d92e72fc906fdc854002c63" category="inline-link-rx"></block></block>
+  <block id="91c22f99c650eff9cfd4e3a5797f1276" category="list-text">Verifica dello stato di salute del tuo sistema storage eseguendo Active IQ Config Advisor.</block>
+  <block id="70cdb4752e56964c8e382c73c4dad5a3" category="list-text">Registrare il sistema all'indirizzo<block ref="609ce97692648785b01245072a80d78d" category="inline-link-rx"></block>.</block>
+  <block id="6ef8afe0d08cfff8d7c63feeb46c3bbe" category="inline-link">Risorse NetApp ONTAP</block>
+  <block id="1e030dc8ef51cc0c3b7cfdf5b1fb31ef" category="list-text">Una volta completata la configurazione iniziale, passare alla<block ref="0d9c07b12aa4e6262cc31099f94c22ac" category="inline-link-rx"></block> Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.</block>
+  <block id="c1abdda48959ad5305acdea9199b4083" category="list-text">Collegare il cavo della console al computer portatile o alla console e collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema di archiviazione, quindi collegare il computer portatile o la console allo switch sulla subnet di gestione.</block>
+  <block id="ea6092d42464dfafd164efeca17f02cc" category="list-text">Configurare il sistema di archiviazione utilizzando i dati raccolti in <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>..</block>
+  <block id="6a1952da65ff3ad3728cd89ec078bfa2" category="paragraph">Questa procedura fornisce istruzioni dettagliate dettagliate per l'installazione di un sistema di archiviazione AFF C250.</block>
+  <block id="476542f0e09454bd6ccd672453fee1fd" category="paragraph"><block ref="476542f0e09454bd6ccd672453fee1fd" category="inline-link-macro-rx"></block></block>
+  <block id="79917755b07c1e2ce974040457996cd1" category="paragraph">Questa guida fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare <block ref="ce9d9eed382ae5ac1650ec89550136ac" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
+  <block id="bcf0b3352838b481d0374edbdb31f0a0" category="image-alt">icona di alimentazione sas drw</block>
+  <block id="f598000290b443eb531fea17b731ed46" category="image-alt">icona di errore sas drw</block>
+  <block id="7b1f02d808dfc03ff26bec5de1c435de" category="image-alt">icona posizione drw sas3</block>
+  <block id="5b090b2a445dc9d064841a86f8433483" category="paragraph"><block ref="5b090b2a445dc9d064841a86f8433483" category="inline-link-macro-rx"></block></block>
+  <block id="a2cb8617cb158198389b743ac2b50756" category="inline-image-macro">larghezza=5px</block>
+  <block id="a28edc89fe8bb6fcbeda4a8c5427d04f" category="cell"><block ref="a28edc89fe8bb6fcbeda4a8c5427d04f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="df6fc52eeceab2497b885a798c538a6f" category="cell"><block ref="df6fc52eeceab2497b885a798c538a6f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b6daa4c4df8e50b04c2ed3f923979e3" category="paragraph">Accedere a. <block ref="1ede88745168187a218abc6fed7fade9" category="inline-link-macro-rx"></block>.</block>
+  <block id="69389a2dcdac250c7be80b621e53e8b6" category="list-text">Inglese: <block ref="69854c1d21b3991324c802c8a6aabc4a" category="inline-link-macro-rx"></block></block>
 </blocks>
