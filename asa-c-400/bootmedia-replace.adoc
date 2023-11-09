@@ -1,5 +1,5 @@
 ---
-permalink: asa-c400/bootmedia-replace.html 
+permalink: asa-c-400/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: asa c400, asa, c400, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
 summary: 'Individuare il supporto di avvio nel modulo controller (vedere la mappa FRU sul modulo controller), quindi seguire le istruzioni per sostituirlo.' 
@@ -19,10 +19,6 @@ Per sostituire il supporto di avvio, è necessario rimuovere il modulo controlle
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
-Per rimuovere il modulo controller dal telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
-
-.Animazione - rimuovere il modulo controller
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
@@ -36,7 +32,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
 +
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
+image::../media/drw_c400_remove_controller_IEOPS-1216.svg[Drw C400 rimuovere la centralina IEOPS 1216]
 
 +
 [cols="10,90"]
@@ -53,7 +49,7 @@ Fermi di bloccaggio
  a| 
 image:../media/legend_icon_02.png["Numero di didascalia 2"]
  a| 
-Estrarre il controller dallo chassis
+Il controller si sposta leggermente fuori dallo chassis
 
 |===
 . Estrarre il modulo controller dal telaio.
@@ -78,11 +74,11 @@ NOTE: Per visualizzare la _Dichiarazione di volatilità_ del sistema, è necessa
 Per sostituire il supporto di avvio, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.
 
 .Animazione - sostituire il supporto di avvio
-video::e0825a97-c57d-47d7-b87d-aad9012efa12[panopto]
+video::034f21ac-da55-4129-aaaa-b030017e5b49[panopto]
 .Fasi
 . Aprire il condotto dell'aria:
 +
-image::../media/drw_A400_open-air-duct.png[Condotto aria aperto drw A400]
+image::../media/drw_c400_open_air_duct_IEOPS-1215.svg[Drw C400 condotto aria aperto IEOPS 1215]
 
 +
 [cols="10,90"]
@@ -116,7 +112,7 @@ Ruotare il condotto dell'aria verso l'alto
 
 . Individuare e rimuovere il supporto di avvio dal modulo controller:
 +
-image::../media/drw_A400_Replace-boot_media_IEOPS-1007.svg[Drw A400 Sostituisci il supporto di boot IEOPS 1007]
+image::../media/drw_c400_replace_boot_media_IEOPS-1217.svg[Drw C400 sostituire il supporto di avvio IEOPS 1217]
 
 +
 [cols="10,90"]
