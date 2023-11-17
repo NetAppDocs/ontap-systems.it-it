@@ -174,11 +174,11 @@ https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-inst
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_asac800_weight_caution.png[drw asac800 peso attenzione]
+image::../media/drw_affa800_weight_caution.png[attenzione peso drw affa800]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_asac800_install_cable_mgmt.png[gestione cavi di installazione drw asac800]
+image::../media/drw_affc800_install_cable_mgmt.png[gestione cavi di installazione drw affc800]
 
 . Posizionare il pannello anteriore del sistema.
 
@@ -228,8 +228,7 @@ image:../media/oie_legend_icon_1_dp.png[""]
 Collegare le porte di interconnessione ha:
 
 ** da e0b a e0b
-** da e1b a e1b
-image:../media/drw_asac800_ha_pair_cabling.png[""]
+** da e1b a e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
 
 
 
@@ -240,8 +239,7 @@ image:../media/oie_legend_icon_2_lg.png[""]
 Collegare via cavo le porte di interconnessione del cluster:
 
 ** da e0a e0a
-** da e1a a e1a
-image:../media/drw_asac800_tnsc_clust_cabling.png[""]
+** da e1a a e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
 
 
 
@@ -249,7 +247,7 @@ image:../media/drw_asac800_tnsc_clust_cabling.png[""]
  a| 
 image:../media/oie_legend_icon_3_lp.png[""]
  a| 
-Collegare le porte di gestione agli switch della rete di gestione    image:../media/drw_asac800_mgmt_cabling.png["Immagine che mostra la posizione delle porte di gestione sul retro del sistema"]
+Collegare le porte di gestione agli switch della rete di gestione    image:../media/drw_affa800_mgmt_cabling.png["Immagine che mostra la posizione delle porte di gestione sul retro del sistema"]
 
 
 
@@ -303,8 +301,7 @@ image:../media/oie_legend_icon_1_dp.png[""]
 Collegare le porte di interconnessione ha:
 
 ** da e0b a e0b
-** da e1b a e1b
-image:../media/drw_asac800_ha_pair_cabling.png[""]
+** da e1b a e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
 
 
 
@@ -312,17 +309,14 @@ image:../media/drw_asac800_ha_pair_cabling.png[""]
  a| 
 image:../media/oie_legend_icon_2_lg.png[""]
  a| 
-Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE.
-** e0a
-** e1a
-image:../media/drw_asac800_switched_clust_cabling.png[""]
+Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE. ** e0a ** e1aimage:../media/drw_affa800_switched_clust_cabling.png[""]
 
 
 
  a| 
 image:../media/oie_legend_icon_3_lp.png[""]
  a| 
-Collegare le porte di gestione agli switch della rete di gestione    image:../media/drw_asac800_mgmt_cabling.png["Immagine che mostra la posizione delle porte di gestione sul retro del sistema"]
+Collegare le porte di gestione agli switch della rete di gestione    image:../media/drw_affa800_mgmt_cabling.png["Immagine che mostra la posizione delle porte di gestione sul retro del sistema"]
 
 
 
@@ -373,7 +367,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
  a| 
 1
  a| 
-Collegare le porte da 2a a 2d agli switch host FC.image:../media/drw_asac800_fc_host_cabling.png[""]
+Collegare le porte da 2a a 2d agli switch host FC.image:../media/drw_affa800_fc_host_cabling.png[""]
 
 
 
@@ -418,7 +412,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
  a| 
 1
  a| 
-Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.image:../media/drw_asac800_10gbe_host_cabling.png[""]
+Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.image:../media/drw_affa800_10gbe_host_cabling.png[""]
 
 
 
@@ -465,14 +459,14 @@ video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
  a| 
 image:../media/oie_legend_icon_1_mb.png[""]
  a| 
-Collegare il controller del cavo A allo shelf:    image:../media/drw_asac800_1shelf_cabling_a.png[""]
+Collegare il controller del cavo A allo shelf: image:../media/drw_affa800_1shelf_cabling_a.png[""]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png[""]
  a| 
-Collegare il controller del cavo B allo shelf:    image:../media/drw_asac800_1shelf_cabling_b.png[""]
+Collegare il controller del cavo B allo shelf: image:../media/drw_affa800_1shelf_cabling_b.png[""]
 
 |===
 Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -503,14 +497,14 @@ video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
  a| 
 image:../media/oie_legend_icon_1_mb.png[""]
  a| 
-Collegare il controller dei cavi A agli shelf:    image:../media/drw_asac800_2shelf_cabling_a.png[""]
+Collegare il controller dei cavi A agli shelf: image:../media/drw_affa800_2shelf_cabling_a.png[""]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png[""]
  a| 
-Collegare il controller dei cavi B agli shelf:    image:../media/drw_asac800_2shelf_cabling_b.png[""]
+Collegare il controller dei cavi B agli shelf: image:../media/drw_affa800_2shelf_cabling_b.png[""]
 
 |===
 Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -579,11 +573,11 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al computer portatile o alla console e la porta della console sul controller utilizzando il cavo della console fornito con il sistema.
 +
-image::../media/drw_console_connect_asac800.png[connettore console drw asac800]
+image::../media/drw_console_connect_affa800.png[console drw collegare affa800]
 
 .. Collegare il laptop o la console allo switch sulla subnet di gestione.
 +
-image::../media/drw_client_mgmt_subnet_asac800.png[subnet di gestione client drw asac800]
+image::../media/drw_client_mgmt_subnet_affa800.png[subnet affa800 mgmt client drw]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 
