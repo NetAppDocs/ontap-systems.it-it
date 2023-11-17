@@ -1,0 +1,20 @@
+---
+permalink: asa-c400/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: asa c400, asa, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
+summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+---
+= Panoramica della sostituzione del telaio - ASA C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire lo chassis, è necessario spostare le ventole e i moduli controller dallo chassis compromesso al nuovo chassis dello stesso modello dello chassis compromesso.
+
+Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+
+* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Questa procedura ha un'interruzione. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+

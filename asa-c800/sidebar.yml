@@ -1,0 +1,79 @@
+---
+section: asa-c800
+title: Sistemi ASA C800
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di ASA C800
+  entries:
+  - title: Scegli l'esperienza di installazione e configurazione
+    url: "/asa-c800/install-setup.html"
+  - title: Passaggi rapidi
+    url: "/asa-c800/install-quick-guide.html"
+  - title: Video fasi
+    url: "/asa-c800/install-videos.html"
+  - title: Passaggi dettagliati
+    url: "/asa-c800/install-detailed-guide.html"
+- title: Mantenere
+  pdf-filename: Manutenzione di ASA C800
+  entries:
+  - title: Panoramica
+    url: "/asa-c800/maintain-overview.html"
+  - title: Supporto di boot
+    pdf-filename: Supporti di avvio di ASA C800
+    entries:
+    - title: Panoramica
+      url: "/asa-c800/bootmedia-replace-overview.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/asa-c800/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa-c800/bootmedia-shutdown.html"
+    - title: Sostituire l'immagine di boot
+      url: "/asa-c800/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/asa-c800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Ripristinare OKM, NSE e NVE
+      url: "/asa-c800/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa-c800/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis ASA C800
+    entries:
+    - title: Panoramica
+      url: "/asa-c800/chassis-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa-c800/chassis-replace-shutdown.html"
+    - title: Sostituire il telaio
+      url: "/asa-c800/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa dello chassis
+      url: "/asa-c800/chassis-replace-complete-system-restore-rma.html"
+  - title: Controller
+    pdf-filename: Modulo controller ASA C800
+    entries:
+    - title: Panoramica
+      url: "/asa-c800/controller-replace-overview.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa-c800/controller-replace-shutdown.html"
+    - title: Sostituire il controller
+      url: "/asa-c800/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/asa-c800/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema ricable
+      url: "/asa-c800/controller-replace-recable-reassign-disks.html"
+    - title: Sostituzione completa del controller
+      url: "/asa-c800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/asa-c800/dimm-replace.html"
+  - title: Disco
+    url: "/asa-c800/drive-replace.html"
+  - title: Ventola
+    url: "/asa-c800/fan-replace.html"
+  - title: NVDIMM
+    url: "/asa-c800/nvdimm-replace.html"
+  - title: Batteria NVDIMM
+    url: "/asa-c800/nvdimm-battery-replace.html"
+  - title: Scheda PCIe
+    url: "/asa-c800/pci-cards-and-risers-replace.html"
+  - title: Alimentatore
+    url: "/asa-c800/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/asa-c800/rtc-battery-replace.html"
