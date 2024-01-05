@@ -42,12 +42,16 @@ entries:
     url: "/sas3/service-hot-swap-drive-ds460c.html"
   - title: Cassetto di dischi nello shelf DS460C
     url: "/sas3/service-replace-drawer-ds460c.html"
-  - title: LED dello shelf di dischi
-    url: "/sas3/service-monitor-leds.html"
+  - title: Shelf di dischi
+    entries:
+    - title: Sostituire il ripiano a freddo
+      url: "/sas3/cold-replace-shelf.html"
+    - title: Ripiano a rimozione a caldo
+      url: "/sas3/hot-remove-shelf.html"
+    - title: LED dello shelf del monitor
+      url: "/sas3/service-monitor-leds.html"
   - title: Modulo ventole nello shelf DS460C
     url: "/sas3/service-replace-fan-ds460c.html"
-  - title: Ripiano a rimozione a caldo
-    url: "/sas3/hot-remove-shelf.html"
   - title: Modulo IOM12/IOM12B
     url: "/sas3/service-hot-swap-iom.html"
   - title: Alimentatore

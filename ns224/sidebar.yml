@@ -20,12 +20,16 @@ entries:
     url: "/ns224/service-replace-dimm.html"
   - title: Disco
     url: "/ns224/service-replace-drive.html"
-  - title: LED dello shelf di dischi
-    url: "/ns224/service-monitor-leds.html"
+  - title: Shelf di dischi
+    entries:
+    - title: Sostituire il ripiano a freddo
+      url: "/ns224/cold-replace-shelf.html"
+    - title: Ripiano a rimozione a caldo
+      url: "/ns224/hot-remove-shelf.html"
+    - title: LED dello shelf del monitor
+      url: "/ns224/service-monitor-leds.html"
   - title: Ventola
     url: "/ns224/service-replace-fan.html"
-  - title: Ripiano a rimozione a caldo
-    url: "/ns224/hot-remove-shelf.html"
   - title: Modulo NSM
     url: "/ns224/service-replace-nsm100.html"
   - title: Alimentatore
