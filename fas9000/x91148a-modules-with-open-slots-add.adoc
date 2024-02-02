@@ -16,22 +16,16 @@ summary: È possibile aggiungere un modulo X91148A in uno slot vuoto del sistema
 * Il sistema deve eseguire ONTAP 9.8 e versioni successive.
 * Per aggiungere senza interruzioni il modulo X91148A, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione, aggiungere il modulo e restituire il controller di destinazione.
 * Sul sistema devono essere disponibili uno o più slot aperti.
-* Se sono disponibili più slot, installare il modulo in base alla matrice di priorità degli slot per il modulo X91148A in Hardware Universe.
-+
-https://hwu.netapp.com["NetApp Hardware Universe"]
-
+* Se sono disponibili più slot, installare il modulo in base alla matrice di priorità dello slot per il modulo X91148A in https://hwu.netapp.com["NetApp Hardware Universe"^].
 * Se si aggiunge il modulo X91148A come modulo storage, è necessario installare gli slot 3 e/o 7.
-* Se si aggiunge il modulo X91148A come scheda di rete 100GbE, è possibile utilizzare qualsiasi slot aperto. Tuttavia, per impostazione predefinita, gli slot 3 e 7 sono impostati come slot di storage. Se si desidera utilizzare questi slot come slot di rete e non si desidera aggiungere shelf NS224, è necessario modificare gli slot per l'utilizzo in rete con `storage port modify -node _node name_ -port _port name_ -mode network` comando. Consultare Hardware Universe per gli altri slot che possono essere utilizzati dal modulo X91148A per il collegamento in rete.
-+
-https://hwu.netapp.com["NetApp Hardware Universe"]
-
+* Se si aggiunge il modulo X91148A come scheda di rete 100GbE, è possibile utilizzare qualsiasi slot aperto. Tuttavia, per impostazione predefinita, gli slot 3 e 7 sono impostati come slot di storage. Se si desidera utilizzare questi slot come slot di rete e non si desidera aggiungere shelf NS224, è necessario modificare gli slot per l'utilizzo in rete con `storage port modify -node _node name_ -port _port name_ -mode network` comando. Vedere https://hwu.netapp.com["NetApp Hardware Universe"^] Per gli altri slot che possono essere utilizzati dal modulo X91148A per il collegamento in rete.
 * Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
 
 
-
-
-== Opzione 1: Aggiunta di un modulo X91148A come modulo NIC in un sistema con slot aperti
-
+[role="tabbed-block"]
+====
+--
+.Opzione 1: Aggiungere un modulo X91148A come modulo NIC
 Per aggiungere un modulo X91148A come modulo NIC in un sistema con slot aperti, è necessario seguire la sequenza specifica di passaggi.
 
 .Fasi
@@ -60,16 +54,19 @@ La connessione alla console indica che il nodo viene visualizzato al prompt DEL 
 
 
 . Collegare il modulo agli interruttori dati.
-. Riavviare il controller A: `boot_ontap`
+. Riavviare il controller A dal prompt del CARICATORE: `bye`
++
+
+NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
 . Giveback del nodo dal nodo partner: `storage failover giveback -ofnode _target_node_name_`
 . Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
 . Ripetere questi passi per il controller B.
 
 
-
-
-== Opzione 2: Aggiunta di un modulo X91148A come modulo storage in un sistema con slot aperti
-
+--
+.Opzione 2: Aggiungere un modulo X91148A come modulo di archiviazione
+--
 Per aggiungere un modulo X91148A come modulo di storage in un sistema con slot aperti, è necessario seguire la sequenza specifica di passaggi.
 
 * Questa procedura presuppone che gli slot 3 e/o 7 siano aperti.
@@ -101,9 +98,26 @@ La connessione alla console indica che il nodo viene visualizzato al prompt DEL 
 .. Se si installa un secondo modulo X91148A per lo storage, ripetere questa procedura per il modulo nello slot 7.
 
 
-. Riavviare il controller A: `boot_ontap`
+. Riavviare il controller A:
++
+** Se il modulo sostitutivo non è dello stesso modello del modulo precedente, riavviare BMC :
++
+... Dal prompt DEL CARICATORE, passare alla modalità avanzata dei privilegi: `set -privilege advanced`
+... Riavviare BMC: `sp reboot`
+
+
+** Se il modulo di sostituzione è lo stesso del vecchio modulo, eseguire l'avvio dal prompt del CARICATORE: `bye`
++
+
+NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
+
+
 . Giveback del nodo dal nodo partner: `storage failover giveback -ofnode target_node_name`
 . Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
 . Ripetere questi passi per il controller B.
-. Installare e cablare gli shelf NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["Hot-add: Shelf NS224"].
+. Installare e cablare gli shelf NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["Hot-add: Shelf NS224"^].
 
+
+--
+====
