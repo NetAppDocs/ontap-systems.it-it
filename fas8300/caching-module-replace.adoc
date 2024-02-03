@@ -13,6 +13,9 @@ summary: 'È necessario sostituire il modulo di caching nel modulo controller qu
 [role="lead"]
 È necessario sostituire il modulo di caching nel modulo controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline; in caso contrario, le prestazioni si sono degradate.
 
+
+NOTE: Il modulo controller Ver2 dispone di un solo socket per modulo di caching nel modello FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.
+
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
 
@@ -213,6 +216,9 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 == Fase 3: Sostituire un modulo di caching
 
 Per sostituire un modulo di caching, indicato come Flash cache sull'etichetta del controller, individuare lo slot all'interno del controller e seguire la sequenza di passaggi specifica. Consultare la mappa FRU sul modulo controller per la posizione di Flash cache.
+
+
+NOTE: Lo slot 6 è disponibile solo nel controller FAS8300 ver2.
 
 Il sistema storage deve soddisfare determinati criteri a seconda della situazione:
 

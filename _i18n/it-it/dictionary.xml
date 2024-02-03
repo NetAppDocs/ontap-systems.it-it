@@ -5285,7 +5285,6 @@
   <block id="d5e62cab20ddc280f38e9a81562855fc" category="paragraph"><block ref="d5e62cab20ddc280f38e9a81562855fc" category="inline-link-rx"></block></block>
   <block id="b8f99a879bdae690f650b2171355b5bb" category="image-alt">drw 8300 rimozione del riser vuoto</block>
   <block id="956cd238a27c95a8b7705902c6d96082" category="image-alt">Drw A400 sostituire il supporto di avvio</block>
-  <block id="ae17f8ad6d4ad0752e9da66715863b23" category="paragraph">È possibile utilizzare le seguenti animazioni, illustrazioni. Oppure i passaggi scritti per spostare i riser PCIe e la scheda mezzanine dal modulo controller guasto al modulo controller sostitutivo.</block>
   <block id="702848fda50b66572d07fb0de7038e26" category="image-alt">Drw A400 sostituire le schede PCIe</block>
   <block id="cfeb91223ab0ffbe58ae834c4189db80" category="image-alt">Drw A400 sostituire la scheda di memoria</block>
   <block id="6976de191bb895bccff42aea7f5ef312" category="section-title">Fase 6: Spostare i moduli di caching</block>
@@ -8792,4 +8791,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f0770a756304b05e8fc4f321e0babe43" category="open-title">Opzione 2: Aggiunta di un modulo X91148A come modulo di archiviazione</block>
   <block id="9e41ec46d0af5ba1b01d8b3bde9b4f52" category="list-text">Se si aggiunge un modulo X91148A come modulo storage negli slot 3 e/o 7 in uno slot che contiene un modulo NIC esistente, utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>.</block>
   <block id="c81f78014b983d44adbb454f838c2ae9" category="list-text">Installare e cablare gli shelf NS224, come descritto in<block ref="a84558faf7b836b9db418a291f2462b5" category="inline-link-rx"></block>.</block>
+  <block id="68439e6a6b3d21f29b1f4c3391b0fc9d" category="admonition">Il modulo controller Ver2 dispone di un solo socket per modulo di caching (slot 6) nel FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.</block>
+  <block id="c70a0b227334f67f05309732ae67641e" category="paragraph">È possibile utilizzare le seguenti animazioni, illustrazioni, la mappa FUR sul sistema o i passaggi scritti per spostare i riser PCIe e la scheda mezzanine dal modulo controller danneggiato al modulo controller sostitutivo.</block>
+  <block id="e0b36bb653f20c62f1b87229ea86e61e" category="admonition">Non è necessario rimuovere le schede PCIe dai riser. Trasferire i riser, con le schede PCIe ancora installate, al modulo controller sostitutivo.</block>
+  <block id="569455efa28fef99f37a55bfd832334e" category="admonition">Il modulo controller Ver2 dispone di un solo socket per modulo di caching nel modello FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.</block>
+  <block id="f30c92bb3a7434fbf14bd27327ab95f7" category="admonition">Lo slot 6 è disponibile solo nel controller FAS8300 ver2.</block>
 </blocks>

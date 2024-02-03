@@ -14,6 +14,9 @@ summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuove
 Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
 
 
+NOTE: Il modulo controller Ver2 dispone di un solo socket per modulo di caching (slot 6) nel FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.
+
+
 
 == Fase 1: Rimuovere il modulo controller
 
@@ -156,7 +159,10 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 Nell'ambito del processo di sostituzione del controller, è necessario spostare i riser PCIe e la scheda mezzanine dal modulo controller compromesso al modulo controller sostitutivo.
 
-È possibile utilizzare le seguenti animazioni, illustrazioni. Oppure i passaggi scritti per spostare i riser PCIe e la scheda mezzanine dal modulo controller guasto al modulo controller sostitutivo.
+È possibile utilizzare le seguenti animazioni, illustrazioni, la mappa FUR sul sistema o i passaggi scritti per spostare i riser PCIe e la scheda mezzanine dal modulo controller danneggiato al modulo controller sostitutivo.
+
+
+NOTE: Non è necessario rimuovere le schede PCIe dai riser. Trasferire i riser, con le schede PCIe ancora installate, al modulo controller sostitutivo.
 
 Spostamento dei riser PCIe 1 e 2 (riser sinistro e centrale):
 
@@ -202,6 +208,9 @@ Il riser si solleva leggermente dal modulo controller.
 == Fase 6: Spostare i moduli di caching
 
 Quando si sostituisce un modulo controller, è necessario spostare i moduli di caching dai moduli controller non adeguati al modulo controller sostitutivo.
+
+
+NOTE: Il modulo controller Ver2 dispone di un solo socket per modulo di caching nel modello FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.
 
 Per spostare i moduli di caching nel nuovo modulo controller, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.
 
