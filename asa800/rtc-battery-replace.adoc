@@ -150,11 +150,13 @@ Ruotare il condotto dell'aria verso i moduli delle ventole
 
 
 
-== Fase 3: Rimuovere i riser PCIe
+== Fase 3: Sostituire la batteria RTC
 
-È necessario rimuovere uno o più riser PCIe quando si sostituiscono componenti hardware specifici nel modulo controller.
-
-. Rimuovere il riser PCIe dal modulo controller:
+[role="tabbed-block"]
+====
+.Centralina originale
+--
+. Rimuovere il riser PCIe 2 (riser centrale) dal modulo controller:
 +
 .. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
 .. Ruotare verso l'alto e verso i moduli delle ventole il fermo di blocco del riser sul lato sinistro del riser.
@@ -182,14 +184,6 @@ Fermo di bloccaggio del riser 2 (montante centrale)
 
 |===
 
-
-
-
-
-
-== Fase 4: Sostituire la batteria RTC
-
-Per sostituire la batteria RTC, individuarla all'interno del controller e seguire la sequenza specifica dei passaggi.
 
 . Individuare la batteria RTC sotto il riser 2.
 +
@@ -226,14 +220,6 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 . Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
 . Prendere nota della polarità della batteria RTC, quindi inserirla nel supporto inclinandola e spingendola verso il basso.
 . Controllare visivamente che la batteria sia completamente installata nel supporto e che la polarità sia corretta.
-
-
-
-
-== Fase 5: Installare i riser PCIe
-
-I riser PCIe vengono reinstallati dopo aver sostituito i componenti hardware nel controller compromesso.
-
 . Installare il riser nel modulo controller:
 +
 .. Allineare il bordo del riser con la parte inferiore della lamiera del modulo controller.
@@ -247,9 +233,44 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 
 
+--
+.Controller ver2
+--
+. Individuare la batteria RTC vicino ai DIMM.
++
+image::../media/drw_a800_rtc_battery_replace_v2.png[batteria drw a800 rtc sostituire v2]
+
++
+[cols="1,4"]
+|===
 
 
-== Fase 6: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
+ a| 
+image:../media/legend_icon_01.png[""]
+| Condotto dell'aria 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+Batteria e alloggiamento RTC
+
+|===
+. Estrarre delicatamente la batteria dal supporto, ruotarla verso l'esterno, quindi estrarla dal supporto.
++
+
+NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supporto. La batteria è contrassegnata con un segno più e deve essere posizionata correttamente nel supporto. Un segno più vicino al supporto indica come posizionare la batteria.
+
+. Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
+. Prendere nota della polarità della batteria RTC, quindi inserirla nel supporto inclinandola e spingendola verso il basso.
+. Controllare visivamente che la batteria sia completamente installata nel supporto e che la polarità sia corretta.
+
+
+--
+====
+
+
+== Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
 
@@ -297,6 +318,6 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 
 
-== Fase 7: Restituire il componente guasto a NetApp
+== Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.
