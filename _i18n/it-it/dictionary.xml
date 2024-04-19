@@ -364,8 +364,6 @@
   <block id="c8782f79268c8ea2b77de4c0c5d30c89" category="paragraph">È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.</block>
   <block id="c7e602fe7db61b23799d51454d70f0cd" category="open-title">Opzione 1: La maggior parte delle configurazioni</block>
   <block id="3a11addb86720d7891a7b14fea7f4776" category="paragraph">Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.</block>
-  <block id="692418fcc9983296fd6b89b4072b99d2" category="inline-link-macro">Ripristino dei SED in modalità non protetta</block>
-  <block id="aa641c641cc4509747c629778ceba1e6" category="list-text">Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate in <block ref="deeaf76d485e47e462d03c774bc2ca5e" category="inline-link-macro-rx"></block>.</block>
   <block id="dca9d9d34ff973dbf261373e223aa9e4" category="list-text">Se si dispone di un sistema SAN, è necessario controllare i messaggi di evento <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>) Per blade SCSI del controller deteriorati. Il<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block> command visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.</block>
   <block id="d341e954ddede02e8d2c553ecfba224a" category="paragraph">Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.</block>
   <block id="6fdf23777adc5b39f52f2829b69833e5" category="inline-link-macro">Sincronizzare un nodo con il cluster</block>
@@ -7141,7 +7139,6 @@
   <block id="eba4465f65ac7360936f8f238b09999c" category="list-text">Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web.</block>
   <block id="c7e4a9edbb9ec3bb0052efd3332763a3" category="section-title">Fase 3: Collegare i controller al cluster</block>
   <block id="089103029c56ad66034dfe6bd70cfdcb" category="paragraph">Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra i controller e gli switch. Eseguire le operazioni su ciascun controller.</block>
-  <block id="38e134ad6d648c53626268f8b6a82510" category="list-text">Collegare le porte di interconnessione del cluster da e0c a e0c e da e0d a e0 con il cavo di interconnessione del cluster da 25 GbE<block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>:</block>
   <block id="5d8d8fe980b572286e75db6ff18d3cbc" category="paragraph"><block ref="5d8d8fe980b572286e75db6ff18d3cbc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="84e68180cd83b83ca12149fed857f1ac" category="list-text">Collegare le porte di interconnessione del cluster e0c e e0d agli switch di interconnessione del cluster 25 GbE.</block>
   <block id="ee3f9d0ec20204c7d48b52d859e31c4d" category="paragraph"><block ref="ee3f9d0ec20204c7d48b52d859e31c4d" category="inline-image-macro-rx" type="image"></block></block>
@@ -7751,7 +7748,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="fbc33e94068f7206fe1f29c2cdd767fe" category="paragraph">Una scheda Mezzanine è una scheda di espansione progettata per essere inserita in uno slot specializzato sulla scheda madre.</block>
   <block id="e8bc49790ccdd5f485eb537cc7b3081d" category="summary">Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
   <block id="9260991b91fdf449af1f97b5d09a9db6" category="summary">Gli shelf NS224 e SAS sono progettati appositamente per i sistemi NetApp AFF e FAS per supportare le diverse esigenze aziendali e applicative.</block>
-  <block id="0add3a06a3c8079fac5caa294ad21965" category="doc">Shelf di dischi per sistemi AFF e FAS</block>
   <block id="4de4b37af472f8b6bb5aa5b5732538f0" category="summary">Manutenzione dell'hardware ASA C250</block>
   <block id="80b77aae28ed3360a8b704371f5188e1" category="doc">Manutenzione dell'hardware AFF C250</block>
   <block id="ab253cf54adf6fdbb65cbb0ed70cb2cf" category="paragraph">Per il sistema storage AFF C250, è possibile eseguire le procedure di manutenzione dei seguenti componenti.</block>
@@ -8792,4 +8788,8 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4169d3d04b863ba6044225d783c8511c" category="paragraph">Utilizzare <block ref="760faf2edba83a3b2dfe198c423cd5ec" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
   <block id="230fb764922530d0d527b96fb40d15f8" category="paragraph"><block ref="230fb764922530d0d527b96fb40d15f8" category="inline-link-macro-rx"></block></block>
   <block id="9e4682a37df843156979b712e93e942d" category="paragraph"><block ref="9e4682a37df843156979b712e93e942d" category="inline-link-macro-rx"></block></block>
+  <block id="370d65afeef540ea21d331a7da8675ec" category="list-text">Collegare le porte di cluster Interconnect da e0c a e0c e da e0d a e0d con cavi di cluster Interconnect 25GbE.</block>
+  <block id="45c0f160ca0efa09fc0b198986db5e31" category="image-alt">cablaggio drw affa250 switch clust</block>
+  <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">Gli shelf NS224 e gli shelf SAS di NetApp contribuiscono a fornire le performance, la resilienza e la flessibilità richieste dalla trasformazione digitale.</block>
+  <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">Shelf di dischi per sistemi hardware ONTAP</block>
 </blocks>

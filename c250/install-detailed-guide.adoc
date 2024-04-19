@@ -191,7 +191,10 @@ Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra 
 .Animazione - collegare un cluster senza switch a due nodi
 video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
 .Fasi
-. Collegare le porte di interconnessione del cluster da e0c a e0c e da e0d a e0 con il cavo di interconnessione del cluster da 25 GbEimage:../media/oie_cable_sfp_gbe_copper.png[""]:
+. Collegare le porte di cluster Interconnect da e0c a e0c e da e0d a e0d con cavi di cluster Interconnect 25GbE.
++
+image:../media/oie_cable_sfp_gbe_copper.png[""]:
+
 +
 image:../media/drw_affa250_tnsc_cabling.png[""]
 
@@ -229,7 +232,7 @@ video::bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto]
 .Fasi
 . Collegare le porte di interconnessione del cluster e0c e e0d agli switch di interconnessione del cluster 25 GbE.
 +
-image:../media/drw_affa250_switched_clust_cabling.png[""]
+image::../media/drw_affa250_switched_clust_cabling.png[cablaggio drw affa250 switch clust]
 
 . Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
 +
