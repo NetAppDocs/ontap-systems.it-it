@@ -289,8 +289,6 @@
   <block id="268f653b0107cd8d721a5e6a0707445b" category="list-text">Verificare che tutti i controller dello chassis non utilizzato siano spenti.</block>
   <block id="c41b3a61f99c2acfc4df4b56cbc1ea35" category="section-title">Opzione 2: Spegnere un controller in una configurazione MetroCluster a due nodi</block>
   <block id="0c2cb7a10e04116783dbfedc59540a50" category="paragraph">Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.</block>
-  <block id="518d2076bf387a28038f7558530bb987" category="inline-link-macro">Panoramica di NetApp Encryption con CLI</block>
-  <block id="063a6c27f42a062a6ece0163f4444fc3" category="list-text">Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "Restituisci un'unità FIPS o SED in modalità non protetta" di <block ref="bb6c6af86c0c41920e9753bb15981800" category="inline-link-macro-rx"></block>.</block>
   <block id="230cc8b63d72a2bf47b7c87ead7ab0b8" category="list-text">Al termine di questa procedura, è necessario lasciare accesi gli alimentatori per alimentare il controller integro.</block>
   <block id="eec0e5f9d553c7b70402acd4568f1ec7" category="list-text">Controllare lo stato MetroCluster per determinare se il controller compromesso è passato automaticamente al controller integro:<block ref="0d51371cbb850772d2130a36f4368df4" prefix=" " category="inline-code"></block></block>
   <block id="a4d3e0e884bda08238ebcf294cd22173" category="list-text">A seconda che si sia verificato uno switchover automatico, procedere come indicato nella seguente tabella:</block>
@@ -2357,7 +2355,6 @@
   <block id="84918b89947f6a68e4b25fe4753c02bc" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF C250</block>
   <block id="930fad66fb3a257a1d24f20ac59c003f" category="doc">Panoramica della sostituzione del modulo controller - AFF C250</block>
   <block id="bb948df5a06fd8fb2e2b9e9f99cc69d4" category="doc">Avviare l'immagine di ripristino - AFF C250</block>
-  <block id="30748b1b116d9335e2b8cdb6ec3038d0" category="list-text">Se una variabile di ambiente non è impostata come previsto, modificarla con<block ref="c9518832c08f9faecfc35f8473eb7398" prefix=" " category="inline-code"></block> comando.</block>
   <block id="414efa7edc26a4a7b5a28ac4965ea178" category="list-text">Salvare le modifiche utilizzando<block ref="8d7578ebf6b1d6483a876337d887a337" prefix=" " category="inline-code"></block> comando.</block>
   <block id="ab8a572131275958428f9007945f684f" category="doc">Panoramica della sostituzione del telaio - AFF C250</block>
   <block id="7efc07dce9135b59eda99eab451a8d33" category="doc">Restituire il componente guasto a NetApp - AFF C250</block>
@@ -2959,7 +2956,6 @@
   <block id="6378f7fb953fa140d999f1d68c5e6145" category="section-title">Fase 5: Verificare la modifica dell'ID di sistema su un sistema ha</block>
   <block id="1e2a0fcc2986a119062540d6a8a9681f" category="inline-link">Trova la guida alla configurazione ad alta disponibilità per la tua versione di ONTAP 9</block>
   <block id="8761710e49b8b20d4b6cc2adb064a0b2" category="paragraph"><block ref="8761710e49b8b20d4b6cc2adb064a0b2" category="inline-link-rx"></block></block>
-  <block id="3bf4c288b20a882f54f61cd8cb0618a7" category="section-title">Fase 6: Ripristino delle funzionalità di storage e crittografia dei volumi</block>
   <block id="639008d04bbddd83a85cafeeb0a39a18" category="paragraph">Per i sistemi storage precedentemente configurati per l'utilizzo di Storage o Volume Encryption, è necessario eseguire ulteriori passaggi per fornire una funzionalità di crittografia senza interruzioni. È possibile ignorare questa attività nei sistemi storage che non hanno abilitato Storage o Volume Encryption.</block>
   <block id="96e55b268667b462cab9bd34069f1863" category="admonition">Questa fase non è necessaria quando si sostituisce un DIMM.</block>
   <block id="e68c8836280fba147b04a2b14b196600" category="list-text">Utilizzare una delle seguenti procedure, a seconda che si utilizzi la gestione delle chiavi integrata o esterna:</block>
@@ -3791,7 +3787,6 @@
   <block id="fc86636cc733253cec13dbbddcd9f251" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di riavviare il controller compromesso.</block>
   <block id="35e25520eae4191769a5f17749607c22" category="list-text">Portare la centralina danneggiata al prompt DEL CARICATORE.</block>
   <block id="2ddd54a208744ec5e2ccb1b7ac83aa05" category="list-text">Controllare le impostazioni delle variabili di ambiente con il comando printenv.</block>
-  <block id="edb5a1f64879356169f323de78b718be" category="list-text">Se una variabile di ambiente non è impostata come previsto, modificarla con il comando setenventment_variable_name changed_value.</block>
   <block id="eeacd9b31ab0c2f60f1d13e5632f7f13" category="list-text">Salvare le modifiche utilizzando il comando saveenv.</block>
   <block id="d2f83f17d591f35e8d5d48e486cff011" category="inline-xref-macro">Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE</block>
   <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
@@ -3939,26 +3934,6 @@
   <block id="11cd58ab2810de65be01109093020b63" category="list-text">Il controller sostitutivo è l'attuale proprietario dei dischi nel sito di disastro.</block>
   <block id="7285c4012d903a86f08da4d4eb643a35" category="paragraph">Vedere<block ref="1c9dcde47ee822b3ac120aae2f296f05" category="inline-link-rx"></block> per ulteriori informazioni.</block>
   <block id="0ea0d47e034118a7f063c35eaf67ebd2" category="list-text">Se la crittografia dello storage è attivata, è necessario ripristinare la funzionalità.</block>
-  <block id="74458273e576f4b2da617a6e0e209a5f" category="paragraph">Se la crittografia dello storage è attivata, utilizzare la procedura appropriata.</block>
-  <block id="2c35abfceaabbce6e9a2f24491d249c0" category="open-title">Opzione 1: Utilizzo di Onboard Key Manager</block>
-  <block id="86b112e5aa1ced4fbffb09dded147e9f" category="list-text">Avviare il nodo dal menu di boot.</block>
-  <block id="e07ae2ef2fbd56f8a3ced5a2ab602ded" category="list-text">Selezionare l'opzione 10,<block ref="cdca34dc3d7defb03d741a65d78de01c" prefix=" " category="inline-code"></block>.</block>
-  <block id="23620cc2fa7491aefb480afbef75dac2" category="list-text">Inserire la passphrase per il gestore delle chiavi integrato ottenuto dal cliente.</block>
-  <block id="15247f97704eb964c60d179c321c1370" category="list-text">Quando richiesto, incollare i dati della chiave di backup dall'output di<block ref="6b6f6c1a8bc1fede794cda92ed140953" prefix=" " category="inline-code"></block> OPPURE<block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="8726b2ef66dc0e734b269a3191597e11" category="paragraph">----------------------------------------------------- INIZIA IL BACKUP------------------------------------------------------</block>
-  <block id="328f6eaec3741c1d0f9558d6c40c1da4" category="paragraph">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA . . . AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</block>
-  <block id="718ea359d9cc2d2bff619909d16ec537" category="admonition">Il controller torna al menu di avvio.</block>
-  <block id="0a2404583aab34668c1c8004bddabbaa" category="list-text">Selezionare l'opzione 1,<block ref="e6922a1788401c5ef431db829a2c387b" prefix=" " category="inline-code"></block></block>
-  <block id="1e4d7cab6ce42bcab6973efa42fc0b2c" category="list-text">Eseguire la sincronizzazione integrata del Security Key-Manager:</block>
-  <block id="377fca3965b001b9bcc8843e1b287fe7" category="list-text">Reimpostare il MSID, se precedentemente impostato e acquisito all'inizio di questa procedura:</block>
-  <block id="a967d40ef247a202e5f1ce7a9626a0ca" category="list-text">Assegnare una chiave di autenticazione dei dati a un'unità FIPS o SED utilizzando<block ref="8fc59e93e98503b6d1b1230269b06192" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="551eb7af7cdc6ae3394d506bd47a783d" category="admonition">È possibile utilizzare<block ref="eb3cf23f0c9c60ca759ddca34bbfbf56" prefix=" " category="inline-code"></block> Per visualizzare gli ID chiave.</block>
-  <block id="6f44d6d36af2c0294f4e53a2e6947b94" category="list-text">Verificare che le chiavi di autenticazione siano state assegnate utilizzando<block ref="46353f4e0bb2c136591c37c9eeedcf40" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="c566d4828cd295258aa8097a90880602" category="open-title">Opzione 2: Utilizzo di External Manager</block>
-  <block id="a9cbabd3f42c5ad7f4796dbf5e384b08" category="list-text">Avviare il controller nel menu di avvio.</block>
-  <block id="0a05a9975c9259ea331a85366e41d3ce" category="list-text">Selezionare l'opzione 11,<block ref="0dd518498ab98fe1fd543910856e6153" prefix=" " category="inline-code"></block>.</block>
-  <block id="960bc5d7d199e0e148cd3dd0e517250d" category="list-text">Inserire le informazioni del certificato di gestione quando richiesto.</block>
-  <block id="1e37c9a4ea44b0a302091f02c74564c1" category="admonition">Una volta completate le informazioni del certificato di gestione, il controller torna al menu di avvio.</block>
   <block id="1e9b0aa552aa50eb60a5f0b0da0057b0" category="summary">Per sostituire un modulo i/o, è necessario eseguire una sequenza specifica di attività.</block>
   <block id="2aba05ee9a4093e5315b48903c27d988" category="doc">Sostituire un modulo i/o - AFF A900</block>
   <block id="6ba4f7d92194f0cbca5f6652f992bebf" category="paragraph">Per sostituire un modulo i/o, individuarlo all'interno dello chassis e seguire la sequenza specifica dei passaggi.</block>
@@ -7339,7 +7314,6 @@ oppure<block ref="1d2c479b57949de891a15e148e1ebcf5" prefix=" " category="inline-
   <block id="ab18556462377223339c421c568ab231" category="paragraph"><block ref="ab18556462377223339c421c568ab231" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6b6e58fb741960f0300c7783438276a5" category="paragraph">Linguetta di blocco dei supporti di avvio</block>
   <block id="fa8b2d8b91c1c89065d3652288dbddc1" category="list-text">Rimuovere la scheda mezzanine utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:</block>
-  <block id="c684d6ba7251084d87edf6423b1ebd24" category="list-text">Rimuovere il pannello della scheda mezzanine facendolo scorrere verso l'esterno dal modulo controller.</block>
   <block id="d62aede9e33b9cbeca49d6fcc6de78c2" category="list-text">Allentare le viti a testa zigrinata sulla scheda mezzanino.</block>
   <block id="db1a320c26dfcefe739a659ae4724890" category="admonition">È possibile allentare le viti a testa zigrinata con le dita o con un cacciavite. Se si utilizzano le dita, potrebbe essere necessario ruotare la batteria NV verso l'alto per un migliore acquisto con le dita sulla vite a testa zigrinata accanto ad essa.</block>
   <block id="1a64138e0b66965c80b909462ba9543f" category="list-text">Sollevare la scheda mezzanine.</block>
@@ -7350,7 +7324,6 @@ Controllare il supporto di avvio per assicurarsi che sia inserito correttamente 
   <block id="d29b17eb668c51029bfa0626ffe7500f" category="list-text">Reinstallare la scheda mezzanine:</block>
   <block id="834f618686de8125c24ea965ba281757" category="list-text">Allineare lo zoccolo della scheda madre allo zoccolo della scheda mezzanine, quindi inserire delicatamente la scheda nello zoccolo.</block>
   <block id="361016e8b59dfa6e2e2f28d3e38835e1" category="list-text">Serrare le tre viti a testa zigrinata sulla scheda mezzanino.</block>
-  <block id="31276a19caaffd6d8a485978edefcae8" category="list-text">Reinstallare il pannello del mezzanino.</block>
   <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">Reinstallare il coperchio del modulo controller e bloccarlo in posizione.</block>
   <block id="1aecc8a01c9fc90b26bed0f39865bc18" category="paragraph">Installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando un'unità flash USB con l'immagine installata. Durante questa procedura, è necessario ripristinare il file system var.</block>
   <block id="4c10168d5e2592171ac54097149079b0" category="list-text">È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con almeno 4 GB di capacità.</block>
@@ -7373,7 +7346,6 @@ Vedere<block ref="087e4d006962c8ba6c4d8fdb71ff8e38" category="inline-link-rx"></
   <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">Fase 3: Sostituire la scheda mezzanine</block>
   <block id="6918dd1d1ecfa7a18a047a925c4f30ee" category="paragraph">Sostituire la scheda mezzanine.</block>
   <block id="808ce573561d6717a3c0cc395df3a504" category="image-alt">Drw 2850 sostituire HIC IEOPS 700</block>
-  <block id="b98f82c68dbd20395815986320582ec2" category="paragraph">Pannello di montaggio</block>
   <block id="83b54898f0ac014b1e217ee413643205" category="paragraph">Scheda mezzanine PCIe</block>
   <block id="64016c063cf6b470fdcccc5a97f852b1" category="list-text">Allentare le viti a testa zigrinata sulla scheda mezzanine e sollevare la scheda mezzanine.</block>
   <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">Allineare lo zoccolo della spina della scheda mezzanine sostitutiva con lo zoccolo della scheda madre, quindi inserire delicatamente la scheda nello zoccolo.</block>
@@ -7383,8 +7355,6 @@ Vedere<block ref="087e4d006962c8ba6c4d8fdb71ff8e38" category="inline-link-rx"></
   <block id="d32890221c5529cefc96a956073d9844" category="list-text">Ripristinare il giveback automatico utilizzando<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> comando.</block>
   <block id="e2306cfc3634594ca9e5483d541a9eb2" category="doc">Ripristino completo del sistema - FAS2800</block>
   <block id="954e375575b9fbd9370aa08dd503d453" category="paragraph">Ripristinare il funzionamento completo del sistema ripristinando le configurazioni crittografia dello storage NetApp o crittografia del volume (se necessario), installando le licenze per il controller sostitutivo e restituendo il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
-  <block id="ff3a1a304de699b15bd2a5a39798c5a8" category="section-title">Fase 2: Ripristino delle funzionalità di storage e crittografia dei volumi</block>
-  <block id="332c846459ecae57b885b30c41482384" category="section-title">Fase 3: Verificare i file LIF e registrare il numero di serie</block>
   <block id="458c640b6a96cac4ef20be523ebb7f89" category="doc">Sostituire la batteria NVMEM - FAS2800</block>
   <block id="26e700524d9a1c0b6c28c8ad2d207679" category="section-title">Fase 2: Rimuovere e aprire il modulo controller</block>
   <block id="2a0805526339647b20ef0fc7df37dd6f" category="paragraph">Rimuovere e aprire il modulo controller.</block>
@@ -7420,8 +7390,6 @@ Installare la batteria sostitutiva:</block>
   <block id="2549b95d18de43d1c8602f07ed634585" category="list-text">Spostare la batteria nel modulo controller sostitutivo e installarlo:</block>
   <block id="350a3cd01c92197375fa1dd80773199d" category="admonition">Non collegare ancora la batteria.  La si collega una volta spostati i componenti restanti nel modulo controller sostitutivo.</block>
   <block id="ba9da6f2122b24c495dd034a4a5ec818" category="section-title">Fase 3: Rimuovere la scheda mezzanine</block>
-  <block id="853a9f16e976ca6346fa38e81f8476a8" category="paragraph">Rimuovere il pannello mezzanino e la scheda mezzanine PCIe dal modulo controller compromesso.</block>
-  <block id="539df95ed4f8e5993f75e19be1a36f64" category="list-text">Rimuovere il pannello della scheda mezzanine facendolo scorrere verso l'esterno dal modulo controller.</block>
   <block id="7bb524aff91b85838c807523fc1e4828" category="admonition">È possibile allentare le viti a testa zigrinata con le dita o con un cacciavite.</block>
   <block id="099cf7f6040f65b3c9d7fb3f7393d4c3" category="list-text">Sollevare la scheda mezzanine e metterla da parte su una superficie antistatica.</block>
   <block id="3356d87e196ed94acd2635f8d405e53f" category="paragraph">Rimuovere il supporto di avvio dal modulo controller guasto e installarlo nel modulo controller sostitutivo.</block>
@@ -7437,7 +7405,6 @@ Installare la batteria sostitutiva:</block>
   <block id="a00bf690f9db0be90ea5ab9cde9db677" category="paragraph">Installare la scheda mezzanine nel modulo controller sostitutivo.</block>
   <block id="507e7243ab4a1d0bdbfa4edd5c9733d3" category="list-text">Allineare la scheda mezzanine allo zoccolo della scheda madre.</block>
   <block id="fc7fc35188ad3f7c32f3328839f4dff2" category="list-text">Spingere delicatamente la scheda verso il basso per inserire la scheda nello zoccolo.</block>
-  <block id="803bc905348545eacfc8739f67ee6fc2" category="list-text">Reinstallare il pannello della scheda mezzanine.</block>
   <block id="ec782fd2b49f0e4d6edd263c0d30d7f7" category="paragraph">Rimuovere i DIMM dal modulo controller guasto e installarli nel modulo controller sostitutivo.</block>
   <block id="64b66263e264f63be40a6135bb7e5f04" category="image-alt">Drw 2850 sostituisce i dimm IEOPS 699</block>
   <block id="2a7c25f4f62d559672aaa2da18086b65" category="paragraph">Fermi di blocco del DIMM</block>
@@ -8380,7 +8347,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d5fe92183ddfd6502c92a350a2928047" category="list-text">da e0b a e0b
 <block ref="23c439b7ef31021d610e4d3b988f3cd1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10fbfa6320d8e7c72e731fbd9a6e6c69" category="admonition">La riassegnazione del disco è necessaria solo quando si sostituisce il modulo NVRAM e non si applica alla sostituzione del DIMM NVRAM.</block>
-  <block id="099f7b942e4e89631784891716949599" category="admonition">Questa operazione non si applica alla sostituzione del DIMM NVRAM.</block>
   <block id="ce75c7b2bf3b15b7659cc85a9c36c6f8" category="admonition">Immettere la passphrase di gestione della chiave alfanumerica integrata a 32 caratteri del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
   <block id="2f061f16ff1dc3668b0b979718bcf140" category="paragraph">Immettere la passphrase di gestione della chiave alfanumerica integrata a 32 caratteri del cliente al prompt. Se non è possibile fornire la passphrase, contattare il supporto NetApp.</block>
   <block id="f44ae95a820a7e92672103acdefa1387" category="paragraph"><block ref="5e48dfc079c01fd7f817337abb01a320" prefix="" category="inline-code"></block></block>
@@ -8792,4 +8758,11 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="45c0f160ca0efa09fc0b198986db5e31" category="image-alt">cablaggio drw affa250 switch clust</block>
   <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">Gli shelf NS224 e gli shelf SAS di NetApp contribuiscono a fornire le performance, la resilienza e la flessibilità richieste dalla trasformazione digitale.</block>
   <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">Shelf di dischi per sistemi hardware ONTAP</block>
+  <block id="4ab265d37ededf839a389d0b0bedcb7f" category="paragraph">30 cm</block>
+  <block id="70f83c59fcbb747c1a869b38caf783e3" category="list-text">Se una variabile di ambiente non è impostata come previsto, modificarla con<block ref="ac4028a4cb48838c0a22ab27fa6e6920" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="f0c3921d8aabdebf1548d35d830083d9" category="list-text">Rimuovere la piastra io facendola scorrere verso l'esterno dal modulo controller.</block>
+  <block id="4dfabb2b4515ceefb323f4a3eb8d4a32" category="list-text">Rimontare la piastra io.</block>
+  <block id="ed991b7c3c7e4af5c89a603772f54dd1" category="paragraph">Rimuovere la piastra di i/o e la scheda mezzanine PCIe dal modulo controller danneggiato.</block>
+  <block id="eeb8f13cb25825752e216fedcd65a6b1" category="paragraph">Piastra io</block>
+  <block id="c746ae924024283281476c33315a4598" category="list-text">Rimuovere la piastra io facendola scorrere fuori dal modulo controller.</block>
 </blocks>

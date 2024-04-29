@@ -99,7 +99,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
-* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "Restituisci un'unità FIPS o SED in modalità non protetta" di link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Panoramica di NetApp Encryption con CLI"^].
 * Al termine di questa procedura, è necessario lasciare accesi gli alimentatori per alimentare il controller integro.
 
 
@@ -636,25 +635,6 @@ Devi rispondere con `y` quando viene richiesto di passare alla modalità avanzat
 ====
 
 
-== Fase 6: Ripristino delle funzionalità di storage e crittografia dei volumi
-
-Per i sistemi storage precedentemente configurati per l'utilizzo di Storage o Volume Encryption, è necessario eseguire ulteriori passaggi per fornire una funzionalità di crittografia senza interruzioni. È possibile ignorare questa attività nei sistemi storage che non hanno abilitato Storage o Volume Encryption.
-
-
-NOTE: Questa fase non è necessaria quando si sostituisce un DIMM.
-
-.Fasi
-. Utilizzare una delle seguenti procedure, a seconda che si utilizzi la gestione delle chiavi integrata o esterna:
-+
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Ripristinare le chiavi di crittografia integrate per la gestione delle chiavi"^]
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Ripristinare le chiavi di crittografia esterne per la gestione delle chiavi"^]
-
-
-. Reimpostare il MSID SED
-
-
-
-
-== Fase 7: Restituire il componente guasto a NetApp
+== Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.

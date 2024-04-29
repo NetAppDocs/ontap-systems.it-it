@@ -88,7 +88,6 @@ NOTE: Per i cluster che utilizzano SnapMirror con funzionamento sincrono in moda
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
-* Se si utilizza NetApp Storage Encryption, è necessario reimpostare il MSID seguendo le istruzioni riportate nella sezione "Restituisci un'unità FIPS o SED in modalità non protetta" di link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["Panoramica di NetApp Encryption con CLI"^].
 * Al termine di questa procedura, è necessario lasciare accesi gli alimentatori per alimentare il controller integro.
 
 
