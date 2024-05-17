@@ -90,7 +90,7 @@ Ad esempio, se gli HBA SAS occupano gli slot PCI fisici 3, 5 e 7, verranno desig
 In questo documento, gli slot e le porte degli slot sono illustrati come segue:
 
 +
-image::../media/slot0_rules.png[regole dello slot0]
+image::../media/slot0_rules.png[slot e slot [convocazioni porta]
 
 
 
@@ -116,7 +116,7 @@ Dal primo shelf logico all'ultimo shelf logico di uno stack, collegare la porta 
 
 
 
-image::../media/drw_shelf_to_shelf_standard.gif[standard di drw shelf-to-shelf]
+image::../media/drw_shelf_to_shelf_standard.gif[connettività standard da shelf a shelf]
 
 
 
@@ -132,7 +132,7 @@ Dal primo shelf logico all'ultimo shelf logico di uno stack, collegare la porta 
 
 
 
-image::../media/drw_shelf_to_shelf_double_wide.gif[larghezza doppia tra shelf e shelf drw]
+image::../media/drw_shelf_to_shelf_double_wide.gif[connettività da shelf a shelf doppia]
 
 
 
@@ -164,7 +164,7 @@ La porta IOM 2 viene utilizzata solo per configurazioni quad-path ha e quad-path
 
 La seguente illustrazione evidenzia come le porte a e C del controller si connettono in una configurazione ha multipath con un HBA a quattro porte e due stack di shelf di dischi. Le connessioni allo stack 1 sono visualizzate in blu. Le connessioni allo stack 2 sono visualizzate in arancione.
 
-image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[esempio di controller drw per lo stack delle porte delle regole a e c.]
+image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[Regole di connessione delle porte A e C del controller per piattaforme senza storage interno]
 
 
 
@@ -183,7 +183,7 @@ La porta IOM 4 viene utilizzata solo per configurazioni quad-path ha e quad-path
 
 La seguente illustrazione evidenzia come le porte B e D dei controller si connettono in una configurazione ha multipath con un HBA a quattro porte e due stack di shelf di dischi. Le connessioni allo stack 1 sono visualizzate in blu. Le connessioni allo stack 2 sono visualizzate in arancione.
 
-image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[esempio di controller drw per lo stack delle porte delle regole b e d.]
+image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[Regole di connessione delle porte B e D del controller per piattaforme senza storage interno]
 
 
 
@@ -211,7 +211,7 @@ Ad esempio: 1b, 2b, 3b, 1d, 2d, 3d
 
 .. Riscrivere l'elenco delle porte D e B in modo che la prima porta dell'elenco venga spostata alla fine dell'elenco.
 +
-Ad esempio: image:../media/drw_gen_sas_cable_step2.png[""]
+Ad esempio: image:../media/drw_gen_sas_cable_step2.png["Riscrivere l'elenco delle porte D e B."]
 
 +
 L'offset dell'ordine degli slot di uno bilancia le coppie di porte su più slot (slot PCI fisici e slot integrati) quando sono disponibili più slot di porte SAS, impedendo quindi il collegamento di uno stack a un singolo HBA SAS.
@@ -240,7 +240,7 @@ Ad esempio, se sono state identificate sei coppie di porte per il sistema e si d
 Ad esempio, se sono state identificate sei coppie di porte per il sistema e si dispone di tre stack da cablare come multipath, è possibile cablare ogni altra coppia di porte nell'elenco:
 
 +
-image::../media/drw_portpair_connection_rules_list_skip.gif[elenco regole di connessione portpair drw skip]
+image::../media/drw_portpair_connection_rules_list_skip.gif[opzione per saltare le coppie di porte]
 
 +
 
@@ -290,7 +290,7 @@ NOTE: Se non si connette la porta 0b/0b1 al dominio corretto (domini con conness
 
 La seguente illustrazione evidenzia la connettività di dominio della porta di storage interna (0b/0b1) a uno stack esterno di shelf:
 
-image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[Esempio di dominio mpha drw fas2600 IEOPS 1172]
+image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[connettività dominio porta di archiviazione interna 0b/0b1]
 
 
 
@@ -307,7 +307,7 @@ Le porte 0a e 0b1 sono cablate tra i due controller quando non sono presenti she
 
 Di seguito sono illustrati i collegamenti interni e i cavi esterni del controller che consentono la connettività ha a tre percorsi:
 
-image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[Concetto di drw fas2800 tpha IEOPS 950]
+image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[Connettività ha tri-path]
 
 Le porte SAS esterne di FAS2800:
 
@@ -316,7 +316,7 @@ Le porte SAS esterne di FAS2800:
 * La porta 0b2 non viene utilizzata. È disattivato. Se un cavo è collegato, viene generato un messaggio di errore.
 
 
-image::../media/drw_sas3_ports_on_fas2800_IEOPS-946 (1).svg[Porte drw sas3 su fas2800 IEOPS 946 (1)]
+image::../media/drw-sas3-ports-on-fas2800.svg[porte drw sas3 su fas2800]
 
 Gli esempi di cablaggio di coppia ha FAS2800 sono disponibili nella link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"] sezione.
 
