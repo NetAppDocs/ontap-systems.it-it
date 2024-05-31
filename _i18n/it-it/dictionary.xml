@@ -2126,9 +2126,7 @@
   <block id="38b15850492133a635d50ad8448e62b9" category="list-text">La modalità di sostituzione a caldo del disco dipende dal modo in cui viene utilizzato il disco. Se l'autenticazione SED è attivata, è necessario utilizzare le istruzioni per la sostituzione SED contenute in<block ref="fc87e4868a863f484cb32d2391c4aa0d" category="inline-link-rx"></block>. Le presenti istruzioni descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.</block>
   <block id="6e3d311e755c860fa8be4786c7ffe617" category="list-text">L'unità sostitutiva deve essere supportata dalla piattaforma. Vedere<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>.</block>
   <block id="b2503ad254a75d9be517466a531e8187" category="open-title">Opzione 1: Sostituire l'SSD</block>
-  <block id="455e7132916e2cfdc2ed81e21742458e" category="paragraph">Direttiva irrisolta in &lt;stdin&gt; - include:../_include/drive_hotswap_sas.adoc[]</block>
   <block id="3862a4353217fcdcd0118bfd4cc1c05a" category="open-title">Opzione 2: Sostituire il disco rigido</block>
-  <block id="ed6243b9da8cbb52d7ded5d7a78d3b37" category="paragraph">Direttiva irrisolta in &lt;stdin&gt; - include:../_include/drive_hotswap_sas.ado.ado[]</block>
   <block id="094124db560bb515e3d41248ca00f18a" category="doc">Sostituire l'hardware - AFF C250</block>
   <block id="586424cb167133a0adfaf4650a20127e" category="paragraph">Per sostituire il telaio, utilizzare il video seguente o le istruzioni riportate in tabella; si presuppone la rimozione e la sostituzione del pannello frontale:</block>
   <block id="05abcf9139e29a0aa72cc49a536d1635" category="video-title">Animazione - Sostituzione del telaio</block>
@@ -8687,7 +8685,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">Gli shelf NS224 e gli shelf SAS di NetApp contribuiscono a fornire le performance, la resilienza e la flessibilità richieste dalla trasformazione digitale.</block>
   <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">Shelf di dischi per sistemi hardware ONTAP</block>
   <block id="4ab265d37ededf839a389d0b0bedcb7f" category="paragraph">30 cm</block>
-  <block id="70f83c59fcbb747c1a869b38caf783e3" category="list-text">Se una variabile di ambiente non è impostata come previsto, modificarla con<block ref="ac4028a4cb48838c0a22ab27fa6e6920" prefix=" " category="inline-code"></block> comando.</block>
   <block id="f0c3921d8aabdebf1548d35d830083d9" category="list-text">Rimuovere la piastra io facendola scorrere verso l'esterno dal modulo controller.</block>
   <block id="4dfabb2b4515ceefb323f4a3eb8d4a32" category="list-text">Rimontare la piastra io.</block>
   <block id="ed991b7c3c7e4af5c89a603772f54dd1" category="paragraph">Rimuovere la piastra di i/o e la scheda mezzanine PCIe dal modulo controller danneggiato.</block>
@@ -8754,4 +8751,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3336aa3ff360375747634c1e3385684b" category="paragraph">Per la manutenzione degli shelf SAS puoi intraprendere le seguenti azioni:</block>
   <block id="db84f3feadfa946e6f025822cc6bb942" category="doc">Aggiunta a caldo di un disco, ovvero gli shelf SAS</block>
   <block id="532733c728150f3f848affd8d9840374" category="sidebar">Disco di aggiunta a caldo</block>
+  <block id="0a2a423f4439c54ecca356a8fb8eb51a" category="sidebar">Modulo i/o ASA A900</block>
+  <block id="dc0e78bb347a9452f2f910586b57cb0e" category="sidebar">MODULO I/O FAS9000</block>
+  <block id="774c0226814e0f61e839b7a7ba1bf4ee" category="sidebar">MODULO I/O FAS9500</block>
+  <block id="1f07f30ffd2c12b9cf3727d864face5b" category="sidebar">Modulo i/o AFF A700</block>
+  <block id="7c5471ad0d8503f56474b0e9d10bff2a" category="sidebar">Modulo i/o AFF A900</block>
 </blocks>
