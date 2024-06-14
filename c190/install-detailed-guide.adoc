@@ -62,7 +62,7 @@ X6566B-05-R6 (112-00297), 0,5 m
 
 X6566B-2-R6 (112-00299), 2 m
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]
  a| 
 Rete di interconnessione del cluster
 
@@ -103,7 +103,7 @@ X6585-R6 (112-00291), 3 m.
 
 X6562-R6 (112-00196), 5 m.
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["Connettore del cavo RJ-45"]
  a| 
 Host Ethernet e rete di gestione
 
@@ -125,7 +125,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["Cavi di alimentazione"]
  a| 
 Accensione del sistema
 
@@ -147,11 +147,11 @@ Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp,
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_oie_fas2700_weight_caution.png[drw oie fas2700 attenzione sul peso]
+image::../media/drw_oie_fas2700_weight_caution.png[Avvertenza sollevamento a due persone]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_cable_management_arm_install.png[installazione di ARM per la gestione dei cavi drw]
+image::../media/drw_cable_management_arm_install.png[Collegamento dei dispositivi di gestione dei cavi]
 
 . Posizionare il pannello anteriore del sistema.
 
@@ -200,7 +200,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -228,7 +228,9 @@ image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[gif anim
 Eseguire le seguenti operazioni su ciascun modulo controller.
 
 .Fasi
-. Collegare le porte di interconnessione del cluster e0a e0a e e0b a e0b con il cavo di interconnessione del cluster. +image:../media/drw_c190_u_tnsc_clust_cbling.png[""]
+. Collegare le porte di interconnessione del cluster e0a e0a e e0b a e0b con il cavo di interconnessione del cluster.
+ +
+image:../media/drw_c190_u_tnsc_clust_cbling.png["Cablaggio di interconnessione in cluster"]
 . Collegare i controller a una rete dati UTA2 o a una rete Ethernet.
 +
 Configurazioni di rete dati UTA2:: Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati e0c/0c e e0d/0d o e0e/0e e e0f/0f alla rete host.
@@ -240,14 +242,14 @@ image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connession
 Configurazioni di rete Ethernet:: Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host. nella seguente illustrazione.
 +
 --
-image:../media/drw_c190_e_rj45_cbling.png[""]
+image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
 
 --
 
 
 . Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
 +
-image:../media/drw_c190_u_mgmt_cbling.png[""]
+image:../media/drw_c190_u_mgmt_cbling.png["Cablaggio delle porte di gestione"]
 
 
 
@@ -264,7 +266,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -294,7 +296,7 @@ Eseguire le seguenti operazioni su ciascun modulo controller.
 .Fasi
 . Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster.
 +
-image:../media/drw_c190_u_switched_clust_cbling.png[""]
+image:../media/drw_c190_u_switched_clust_cbling.png["Cablaggio ClusterInterconnect"]
 
 . Collegare i controller a una rete dati UTA2 o a una rete Ethernet.
 +
@@ -307,14 +309,14 @@ image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connession
 Configurazioni di rete Ethernet:: Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host.
 +
 --
-image:../media/drw_c190_e_rj45_cbling.png[""]
+image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
 
 --
 
 
 . Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
 +
-image:../media/drw_c190_u_mgmt_cbling.png[""]
+image:../media/drw_c190_u_mgmt_cbling.png["Cablaggio delle porte di gestione"]
 
 
 
@@ -339,7 +341,7 @@ Scopri come completare la configurazione del sistemaSe hai attivato il rilevamen
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
-image::../media/drw_turn_on_power_switches_to_psus.png[drw attivare gli interruttori di alimentazione delle psu]
+image::../media/drw_turn_on_power_switches_to_psus.png[Accensione]
 
 +
 
@@ -356,7 +358,7 @@ image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
 
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.
@@ -396,11 +398,11 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al computer portatile o alla console e la porta della console sul controller utilizzando il cavo della console fornito con il sistema.
 +
-image::../media/drw_console_connect_fas2700_affa200.png[la console del drw collega il fas2700 affa200]
+image::../media/drw_console_connect_fas2700_affa200.png[Collegamento alla porta della console]
 
 .. Collegare il laptop o la console allo switch sulla subnet di gestione.
 +
-image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[dal client drw alla subnet fas2700 affa220 mgmt]
+image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[Connessione alla subnet di gestione in corso]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 
@@ -408,7 +410,7 @@ image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[dal client drw all
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
-image::../media/drw_turn_on_power_switches_to_psus.png[drw attivare gli interruttori di alimentazione delle psu]
+image::../media/drw_turn_on_power_switches_to_psus.png[Accensione]
 
 +
 

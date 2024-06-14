@@ -61,7 +61,7 @@ X6566B-3-R6, 112-00300, 3 m.
 
 X6566B-5-R6 , 112-00301, 5 m.
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]
  a| 
 Cavo di rete
 
@@ -76,7 +76,7 @@ X66100-1,112-00542, 1 m.
 
 X66100-3,112-00543, 3 m.
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore 100 GbE QSFP28"]
  a| 
 Rete 40 GbE
 
@@ -97,7 +97,7 @@ X66211A-2 (112-00574), 2 m
 
 X66211A-5 (112-00574), 5 m.
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore 100 GbE QSFP28"]
  a| 
 Cavo di rete
 
@@ -128,7 +128,7 @@ Codici X6585-R6 (112-00291), 3 m.
 
 X6562-R6 (112-00196), 5 m.
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["Connettore del cavo RJ-45"]
  a| 
 Rete di gestione e dati Ethernet
 
@@ -143,7 +143,7 @@ X66032A (112-00437), 2 m
 
 X66033A (112-00438), 3 m.
  a| 
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS a mini-SAS"]
  a| 
 Storage
 
@@ -165,7 +165,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["Cavi di alimentazione"]
  a| 
 Accensione del sistema
 
@@ -220,7 +220,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -247,7 +247,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -278,9 +278,9 @@ image:../media/drw_9000_switched_cluster_cabling.png[""]
 
 I cavi vengono inseriti nello shelf con le linguette rivolte verso il basso, mentre l'altra estremità del cavo viene inserita nei moduli di storage del controller con le linguette rivolte verso l'alto.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 .Fasi
 . Utilizzare le seguenti animazioni o illustrazioni per collegare gli shelf di dischi ai controller.
@@ -296,7 +296,7 @@ NOTE: Gli esempi utilizzano shelf DS224C. Il cablaggio è simile agli altri shel
 .Animazione - cavo storage SAS - ONTAP 9.7 e versioni precedenti
 video::a312e09e-df56-47b3-9b5e-ab2300477f67[panopto]
 +
-image:../media/SAS_storage_ONTAP_9.7_and_earlier.png[""]
+image:../media/SAS_storage_ONTAP_9.7_and_earlier.png["Cablaggio storage SAS per ONTAP 9,7 e versioni precedenti"]
 
 +
 ** Cablaggio degli shelf SAS in FAS9000, AFF A700, ASA AFF A700, ONTAP 9.8 e versioni successive:
@@ -306,7 +306,7 @@ image:../media/SAS_storage_ONTAP_9.7_and_earlier.png[""]
 .Animazione - cavo storage SAS - ONTAP 9.8 e versioni successive
 video::61d23302-9526-4a2b-9335-ac5b0032eafd[panopto]
 +
-image:../media/SAS_storage_ONTAP_9.8_and_later.png[""]
+image:../media/SAS_storage_ONTAP_9.8_and_later.png["Cablaggio storage SAS per ONTAP 9,8 e versioni successive"]
 
 +
 
@@ -316,7 +316,7 @@ NOTE: Se si dispone di più shelf di dischi, consultare la _Guida all'installazi
 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installazione e shelf per cavi per un'installazione di un nuovo sistema - shelf con moduli IOM12"]
 
 +
-image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
+image:../media/Cable_shelves_new_system_IOM12_shelves.png["Cablaggio del sistema storage con shelf SAS"]
 
 . Passare a. <<Fase 5: Completare l'installazione e la configurazione del sistema>> per completare l'installazione e la configurazione del sistema.
 
@@ -331,10 +331,10 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
 * I sistemi devono avere almeno un modulo X91148A installato negli slot 3 e/o 7 per ciascun controller. L'animazione o le illustrazioni mostrano questo modulo installato in entrambi gli slot 3 e 7.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 +
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 +
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 +
 
@@ -348,10 +348,10 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - collegare un singolo shelf NS224 - ONTAP 9.8 e versioni successive
 video::6520eb01-87b3-4520-9109-ac5b0032ea4e[panopto]
 +
-image::../media/drw_ns224_a700_1shelf.png[drw ns224 a700 1 shelf]
+image::../media/drw_ns224_a700_1shelf.png[Collegamento di una coppia ha a uno shelf di dischi singolo]
 
 +
-image::../media/single_NS224_shelf.png[Singolo shelf NS224]
+image::../media/single_NS224_shelf.png[Cablaggio a shelf singolo]
 
 . Passare a. <<Fase 5: Completare l'installazione e la configurazione del sistema>> per completare l'installazione e la configurazione del sistema.
 
@@ -366,10 +366,10 @@ image::../media/single_NS224_shelf.png[Singolo shelf NS224]
 * I sistemi devono avere due moduli X91148A, per controller, installati negli slot 3 e 7.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 +
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 +
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 +
 
@@ -383,10 +383,10 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - cavo due shelf NS224 - ONTAP 9.8 e versioni successive
 video::34098e39-73ad-45de-9af7-ac5b0032ea9a[panopto]
 +
-image::../media/drw_ns224_a700_2shelves.png[drw ns224 a700 2 shelf]
+image::../media/drw_ns224_a700_2shelves.png[Collegamento di una coppia ha a due shelf di dischi]
 
 +
-image::../media/two_NS224_shelves.png[Due shelf NS224]
+image::../media/two_NS224_shelves.png[Cablaggio a doppio shelf]
 
 . Passare a. <<Fase 5: Completare l'installazione e la configurazione del sistema>> per completare l'installazione e la configurazione del sistema.
 
@@ -430,7 +430,7 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.
@@ -486,7 +486,7 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al laptop o alla console utilizzando il cavo della console fornito con il sistema, quindi collegare il laptop allo switch di gestione sulla subnet di gestione .
 +
-image::../media/drw_9000_cable_console_switch_controller.png[controller switch console a cavo drw 9000]
+image::../media/drw_9000_cable_console_switch_controller.png[Cablaggio della console]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 

@@ -199,7 +199,7 @@ Per sostituire il modulo NVRAM, posizionarlo nello slot 6 dello chassis e seguir
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Spostare il modulo FlashCache dal vecchio modulo NVRAM al nuovo modulo NVRAM:
 +
-image::../media/drw_9000_remove_flashcache.png[drw 9000 rimuovere flashcache]
+image::../media/drw_9000_remove_flashcache.png[Sostituzione del modulo di caching]
 
 +
 |===
@@ -613,7 +613,7 @@ dr-group-id            cluster node           configuration-state
 .. Verificare che MetroCluster sia configurato e in modalità normale: `metrocluster show`
 .. Eseguire un controllo MetroCluster: `metrocluster check run`
 .. Visualizzare i risultati del controllo MetroCluster: `metrocluster check show`
-.. Eseguire Config Advisor. Accedere alla pagina Config Advisor sul sito del supporto NetApp all'indirizzo http://support.netapp.com/NOW/download/tools/config_advisor/["support.netapp.com/NOW/download/tools/config_advisor/"].
+.. Eseguire Config Advisor. Accedere alla pagina Config Advisor sul sito del supporto NetApp all'indirizzo https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/["support.netapp.com/NOW/download/tools/config_advisor/"].
 +
 Dopo aver eseguito Config Advisor, esaminare l'output dello strumento e seguire le raccomandazioni nell'output per risolvere eventuali problemi rilevati.
 

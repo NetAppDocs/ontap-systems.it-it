@@ -72,7 +72,7 @@ X6566B-05-R6 (112-00297), 0,5 m
 
 X6566B-2-R6 (112-00299), 2 m
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]
  a| 
 Rete di interconnessione del cluster
 
@@ -87,7 +87,7 @@ O X6566B-3-R6 (112-00300), 3 m.
 
 X6566B-5-R6 (112-00301), 5 m.
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]
  a| 
 Dati
 
@@ -115,7 +115,7 @@ Codici X6585-R6 (112-00291), 3 m.
 
 X6562-R6 (112-00196), 5 m.
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["Connettore del cavo RJ-45"]
  a| 
 Rete di gestione e dati Ethernet
 
@@ -132,7 +132,7 @@ X66032A (112-00437), 2 m
 
 X66033A (112-00438), 3 m.
  a| 
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS a mini-SAS"]
  a| 
 Storage
 
@@ -154,7 +154,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["Cavi di alimentazione"]
  a| 
 Accensione del sistema
 
@@ -179,11 +179,11 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Foglio di lavoro 
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_oie_fas2700_weight_caution.png[drw oie fas2700 attenzione sul peso]
+image::../media/drw_oie_fas2700_weight_caution.png[Avvertenza sollevamento a due persone]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_cable_management_arm_install.png[installazione di ARM per la gestione dei cavi drw]
+image::../media/drw_cable_management_arm_install.png[Collegamento dei dispositivi di gestione dei cavi]
 
 . Posizionare il pannello anteriore del sistema.
 
@@ -204,7 +204,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -212,7 +212,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Fasi
 . È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:
 +
-image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[file gif animato per il cablaggio di rete unificato drw 2700 tnsc]
+image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[Cablaggio cluster senza switch a due nodi in una configurazione di rete unificata]
 
 +
 [cols="1,3"]
@@ -221,18 +221,19 @@ image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[file gif 
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png[""]
+image:../media/oie_legend_icon_1_lg.png["Fase 1"]
  a| 
 Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster:
 
 ** da e0a e0a
-** da e0b a e0bimage:../media/drw_c190_u_tnsc_clust_cbling.png[""]
+** da e0b a e0b
+image:../media/drw_c190_u_tnsc_clust_cbling.png["Cablaggio di interconnessione in cluster"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png[""]
+image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
  a| 
 Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati UTA2 alla rete host:
 
@@ -252,16 +253,16 @@ image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connession
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
-image:../media/drw_c190_u_mgmt_cbling.png[""]
+image:../media/drw_c190_u_mgmt_cbling.png["Cablaggio delle porte di gestione"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
@@ -279,7 +280,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -287,7 +288,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Fasi
 . È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:
 +
-image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[gif animato con cablaggio di rete unificato con switch drw 2700]
+image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[Cablaggio di rete unificato con switch luster]
 
 +
 [cols="1,3"]
@@ -296,16 +297,16 @@ image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[gif a
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png[""]
+image:../media/oie_legend_icon_1_lg.png["Fase 1"]
  a| 
 Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster:
 
-image:../media/drw_c190_u_switched_clust_cbling.png[""]
+image:../media/drw_c190_u_switched_clust_cbling.png["Cablaggio ClusterInterconnect"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png[""]
+image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
  a| 
 Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati UTA2 alla rete host:
 
@@ -329,16 +330,16 @@ image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connession
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
-image:../media/drw_c190_u_mgmt_cbling.png[""]
+image:../media/drw_c190_u_mgmt_cbling.png["Cablaggio delle porte di gestione"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
@@ -356,7 +357,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -364,7 +365,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Fasi
 . È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:
 +
-image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[cablaggio di rete ethernet drw 2700 tnsc gif animato]
+image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[Cablaggio di rete senza switch a due nodi]
 
 +
 [cols="1,3"]
@@ -373,7 +374,7 @@ image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[cablaggi
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png[""]
+image:../media/oie_legend_icon_1_lg.png["Fase 1"]
  a| 
 Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster:
 
@@ -385,25 +386,25 @@ image:../media/drw_c190_e_tnsc_clust_cbling.png["Immagine che mostra le intercon
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png[""]
+image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
  a| 
 Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host:
 
-image:../media/drw_c190_e_rj45_cbling.png[""]
+image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
-image:../media/drw_c190_e_mgmt_cbling.png[""]
+image:../media/drw_c190_e_mgmt_cbling.png["Cablaggio delle porte di gestione"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
@@ -421,7 +422,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -429,7 +430,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Fasi
 . È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:
 +
-image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[cablaggio di rete ethernet con switch drw 2700 gif animato]
+image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[Cablaggio Ethernet commutato]
 
 +
 [cols="1,2"]
@@ -438,34 +439,34 @@ image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[cabl
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png[""]
+image:../media/oie_legend_icon_1_lg.png["Fase 1"]
  a| 
 Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster:
 
-image:../media/drw_c190_e_switched_clust_cbling.png[""]
+image:../media/drw_c190_e_switched_clust_cbling.png["Cablaggio di interconnessione in cluster"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png[""]
+image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
  a| 
 Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host:
 
-image:../media/drw_c190_e_rj45_cbling.png[""]
+image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
-image:../media/drw_c190_e_mgmt_cbling.png[""]
+image:../media/drw_c190_e_mgmt_cbling.png["Cablaggio delle porte di gestione"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
@@ -487,7 +488,7 @@ NON collegare i cavi di alimentazione a questo punto.
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 .Fasi
 . Cablare la coppia ha con shelf di dischi esterni:
@@ -496,7 +497,7 @@ image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie
 NOTE: L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati.
 
 +
-image::../media/drw_2700_ha_storage_cabling_animated_gif.png[gif animato cablaggio storage drw 2700 ha]
+image::../media/drw_2700_ha_storage_cabling_animated_gif.png[Cablaggio degli shelf in coppia ha]
 
 +
 [cols="1,3"]
@@ -505,40 +506,41 @@ image::../media/drw_2700_ha_storage_cabling_animated_gif.png[gif animato cablagg
 
 
  a| 
-image:../media/oie_legend_icon_1_lo.png[""]
+image:../media/oie_legend_icon_1_lo.png["Numero di didascalia 1"]
  a| 
 Cablare le porte shelf-to-shelf.
 
 ** Dalla porta 3 su IOM A alla porta 1 sull'IOM A sullo shelf direttamente sotto.
 ** Dalla porta 3 su IOM B alla porta 1 sull'IOM B sullo shelf direttamente sotto.
 +
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] Cavi da mini-SAS HD a mini-SAS HD
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS a mini-SAS"]     Cavi da mini-SAS HD a mini-SAS HD
 
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_mb.png[""]
+image:../media/oie_legend_icon_2_mb.png["Passaggio 2"]
  a| 
 Collegare ciascun nodo a IOM A nello stack.
 
 ** Porta da controller 1 0b a IOM A porta 3 sull'ultimo shelf di dischi nello stack.
 ** Porta del controller 2 0a a IOM A porta 1 sul primo shelf di dischi dello stack.
 +
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] Cavi da mini-SAS HD a mini-SAS HD
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS a mini-SAS"]     Cavi da mini-SAS HD a mini-SAS HD
 
 
 
 
 
  a| 
-image:../media/oie_legend_icon_3_t.png[""]
+image:../media/oie_legend_icon_3_t.png["Passaggio 3"]
  a| 
 Collegare ciascun nodo all'IOM B nello stack
 
 ** Porta del controller 1 0a alla porta IOM B 1 sul primo shelf di dischi nello stack.
-** Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] Cavi da mini-SAS HD a mini-SAS HD
+** Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS a mini-SAS"]     Cavi da mini-SAS HD a mini-SAS HD
 
 
 |===
@@ -568,7 +570,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
-image::../media/drw_turn_on_power_switches_to_psus.png[drw attivare gli interruttori di alimentazione delle psu]
+image::../media/drw_turn_on_power_switches_to_psus.png[Accensione]
 
 +
 
@@ -584,7 +586,7 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.
@@ -624,11 +626,11 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al computer portatile o alla console e la porta della console sul controller utilizzando il cavo della console fornito con il sistema.
 +
-image::../media/drw_console_connect_fas2700_affa200.png[la console del drw collega il fas2700 affa200]
+image::../media/drw_console_connect_fas2700_affa200.png[Collegamento alla porta della console]
 
 .. Collegare il laptop o la console allo switch sulla subnet di gestione.
 +
-image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[dal client drw alla subnet fas2700 affa220 mgmt]
+image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[Connessione alla subnet di gestione in corso]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 
@@ -640,7 +642,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
-image::../media/drw_turn_on_power_switches_to_psus.png[drw attivare gli interruttori di alimentazione delle psu]
+image::../media/drw_turn_on_power_switches_to_psus.png[Accensione]
 
 +
 
@@ -677,7 +679,7 @@ NOTE: Se non si sa come configurare PuTTY, consultare la guida in linea del port
 .. Puntare il browser sull'indirizzo IP di gestione del nodo.
 +
 
-NOTE: Il formato dell'indirizzo è https://x.x.x.x[].
+NOTE: Il formato dell'indirizzo è +https://x.x.x.x.+
 
 .. Configurare il sistema utilizzando i dati raccolti nella _Guida alla configurazione di NetApp ONTAP_.
 +

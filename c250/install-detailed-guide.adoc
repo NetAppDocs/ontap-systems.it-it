@@ -64,7 +64,7 @@ X66240A-05 (112-00595), 0,5 m;
 
 X66240-2 (112-00573), 2 m
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore 100 GbE QSFP28"]
  a| 
 Rete di interconnessione del cluster
 
@@ -95,7 +95,7 @@ RJ-45 (in base all'ordine)
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["Connettore del cavo RJ-45"]
  a| 
 Rete di gestione (BMC e porta chiave) e dati Ethernet (e0a e e0b)
 
@@ -112,7 +112,7 @@ X66250-15 (112-00346) 15 m;
 
 X66250-30 (112-00347) 30 m.
  a| 
-image:../media/oie_cable_fc_optical.png[""]
+image:../media/oie_cable_fc_optical.png["Cavo ottico Fibre Channel OIE"]
  a| 
 
 
@@ -133,7 +133,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["Cavi di alimentazione"]
  a| 
 Accensione del sistema
 
@@ -155,7 +155,7 @@ Accensione del sistema
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_affa250_weight_caution.png[drw affa250 attenzione sul peso]
+image::../media/drw_affa250_weight_caution.png[Avvertenza sollevamento a due persone]
 
 . Identificare e gestire i cavi perché questo sistema non dispone di un dispositivo di gestione dei cavi.
 . Posizionare il pannello anteriore del sistema.
@@ -177,7 +177,7 @@ Le porte di gestione, Fibre Channel e di rete dati o host sui moduli controller 
 * Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 +
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 +
 
@@ -193,14 +193,14 @@ video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
 .Fasi
 . Collegare le porte di cluster Interconnect da e0c a e0c e da e0d a e0d con cavi di cluster Interconnect 25GbE.
 +
-image:../media/oie_cable_sfp_gbe_copper.png[""]:
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]:
 
 +
-image:../media/drw_affa250_tnsc_cabling.png[""]
+image:../media/drw_affa250_tnsc_cabling.png["Cablaggio di interconnessione in cluster in un cluster senza switch a due nodi"]
 
 . Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
 +
-image::../media/drw_affa250_mgmt_cabling.png[cablaggio di 250 mgmt drw affa250]
+image::../media/drw_affa250_mgmt_cabling.png[Cablaggio delle porte di gestione]
 
 
 
@@ -216,7 +216,7 @@ Tutte le porte dei controller sono collegate a switch; interconnessione cluster,
 * Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 +
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 +
 
@@ -232,11 +232,11 @@ video::bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto]
 .Fasi
 . Collegare le porte di interconnessione del cluster e0c e e0d agli switch di interconnessione del cluster 25 GbE.
 +
-image::../media/drw_affa250_switched_clust_cabling.png[cablaggio drw affa250 switch clust]
+image::../media/drw_affa250_switched_clust_cabling.png[Cablaggio di interconnessione in cluster]
 
 . Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
 +
-image::../media/drw_affa250_mgmt_cabling.png[cablaggio di 250 mgmt drw affa250]
+image::../media/drw_affa250_mgmt_cabling.png[Cablaggio delle porte di gestione]
 
 
 
@@ -264,7 +264,7 @@ Le porte Fibre Channel dei controller sono collegate agli switch di rete host Fi
 * Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 +
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 +
 
@@ -278,7 +278,7 @@ Eseguire la procedura su ciascun modulo controller.
 .Fasi
 . Collegare le porte da 2a a 2d agli switch host FC.
 +
-image:../media/drw_affa250_fc_host_cabling.png[""]
+image:../media/drw_affa250_fc_host_cabling.png["Cablaggio host Fibre Channel"]
 
 
 
@@ -291,7 +291,7 @@ Le porte da 25 GbE sui controller sono collegate a switch di rete host o dati da
 * Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 +
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 +
 
@@ -305,7 +305,7 @@ Eseguire la procedura su ciascun modulo controller.
 .Fasi
 . Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.
 +
-image:../media/drw_affa250_25gbe_host_cabling.png[""]
+image:../media/drw_affa250_25gbe_host_cabling.png["Cablaggio 25 GbE"]
 
 
 
@@ -317,7 +317,7 @@ Collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224.
 .Prima di iniziare
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -330,11 +330,11 @@ video::3f92e625-a19c-4d10-9028-ac68017fbf57[panopto]
 .Fasi
 . Collegare il controller a allo shelf.
 +
-image:../media/drw_affa250_1shelf_cabling_a.png[""]
+image:../media/drw_affa250_1shelf_cabling_a.png["Cablaggio del controller A."]
 
 . Collegare il controller B allo shelf.
 +
-image:../media/drw_affa250_1shelf_cabling_b.png[""]
+image:../media/drw_affa250_1shelf_cabling_b.png["Cablaggio del controller B."]
 
 
 
@@ -375,7 +375,7 @@ image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
 
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.

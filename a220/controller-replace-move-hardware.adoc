@@ -26,17 +26,17 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
 +
-image::../media/drw_25xx_cable_management_arm.png[ARM di gestione dei cavi drw 25xx]
+image::../media/drw_25xx_cable_management_arm.png[Inserimento o rimozione del ARM di gestione dei cavi]
 
 . Se i moduli SFP sono stati lasciati nel sistema dopo aver rimosso i cavi, spostarli nel nuovo modulo controller.
 . Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
 +
-image::../media/drw_2240_x_opening_cam_latch.png[drw 2240 x apertura del fermo a camma]
+image::../media/drw_2240_x_opening_cam_latch.png[Apertura del dispositivo di chiusura della maniglia della camma]
 
 . Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
 . Aprire il coperchio facendo scorrere le linguette blu per sganciarlo, quindi ruotare il coperchio verso l'alto e aprirlo.
 +
-image::../media/drw_2600_opening_pcm_cover.png[drw 2600 apertura del coperchio del pcm]
+image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo controller]
 
 
 
@@ -51,7 +51,7 @@ Per spostare la batteria NVMEM dal vecchio modulo controller al nuovo modulo con
 ** Se il sistema si trova in una configurazione ha, passare alla fase successiva.
 ** Se il sistema si trova in una configurazione standalone, spegnere completamente il modulo controller, quindi controllare il LED NVRAM identificato dall'icona NV.
 +
-image::../media/drw_hw_nvram_icon.png[icona nvram drw hw]
+image::../media/drw_hw_nvram_icon.png[LED NV]
 
 +
 
@@ -69,7 +69,7 @@ Questo si verifica in genere durante un arresto non controllato dopo l'avvio di 
 
 . Individuare la batteria NVMEM nel modulo del controller.
 +
-image::../media/drw_2600_nvmem_battery_move_animated_gif.png[drw 2600 nvmem battery move animated gif]
+image::../media/drw_2600_nvmem_battery_move_animated_gif.png[Sostituzione della batteria NVMEM]
 
 . Individuare la spina della batteria e premere il fermaglio sulla parte anteriore della spina per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
 . Afferrare la batteria e premere la linguetta di bloccaggio blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller.
@@ -87,7 +87,7 @@ Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecc
 
 . Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
 +
-image::../media/drw_2600_boot_media_repl_animated_gif.png[drw 2600 boot media repl animated gif]
+image::../media/drw_2600_boot_media_repl_animated_gif.png[Sostituzione del supporto di avvio]
 
 . Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
 +
@@ -124,7 +124,7 @@ Il numero e la posizione dei DIMM di sistema dipendono dal modello del sistema.
 La seguente illustrazione mostra la posizione dei DIMM di sistema:
 
 +
-image::../media/drw_2600_dimms.png[drw 2600 dimm]
+image::../media/drw_2600_dimms.png[Posizione dei DIMM di sistema]
 
 . Ripetere questa procedura per rimuovere altri DIMM secondo necessità.
 . Verificare che la batteria NVMEM non sia collegata al nuovo modulo controller.
@@ -159,7 +159,7 @@ Il nuovo modulo controller deve essere pronto in modo da poter spostare il modul
 
 
 +
-image::../media/drw_2600_fcache.png[drw 2600 fcache]
+image::../media/drw_2600_fcache.png[Rimozione di un modulo di caching]
 
 . Estrarre delicatamente il modulo di caching dall'alloggiamento.
 . Spostare il modulo di caching nel nuovo modulo controller, quindi allineare i bordi del modulo di caching con l'alloggiamento dello zoccolo e spingerlo delicatamente nello zoccolo.

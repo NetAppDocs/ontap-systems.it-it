@@ -35,7 +35,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 . Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
 . Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
 +
-image::../media/drw_A400_Remove_controller.png[Drw A400 rimuovere il controller]
+image::../media/drw_A400_Remove_controller.png[Rilascio del modulo controller]
 
 +
 Il modulo controller si sposta leggermente fuori dallo chassis.
@@ -69,7 +69,7 @@ Per spostare gli alimentatori nel modulo controller sostitutivo, è possibile ut
 
 .Animazione - spostare gli alimentatori
 video::92060115-1967-475b-b517-aad9012f130c[panopto]
-image::../media/drw_A400_psu.png[psu drw A400]
+image::../media/drw_A400_psu.png[Sostituzione dell'alimentatore]
 
 . Rimuovere l'alimentatore:
 +
@@ -109,7 +109,7 @@ video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
 . Individuare la batteria NVDIMM nel modulo del controller.
 
 
-image::../media/drw_A400_nvdimm-batt.png[Batteria nvdimm drw A400]
+image::../media/drw_A400_nvdimm-batt.png[Rimozione della batteria NVDIMM]
 
 . Individuare la spina della batteria e premere il fermaglio sulla parte anteriore della spina per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
 . Afferrare la batteria e premere la linguetta di bloccaggio blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller.
@@ -131,7 +131,7 @@ Individuare il supporto di avvio, quindi seguire le istruzioni per rimuoverlo da
 
 .Animazione - spostare il supporto di avvio
 video::2a14099c-85de-4a84-867c-aad9012efac8[panopto]
-image::../media/drw_A400_Replace-boot_media.png[Drw A400 sostituire il supporto di avvio]
+image::../media/drw_A400_Replace-boot_media.png[Rimozione del supporto di avvio]
 
 . Individuare e rimuovere il supporto di avvio dal modulo controller:
 +
@@ -168,13 +168,13 @@ Spostamento dei riser PCIe 1 e 2 (riser sinistro e centrale):
 
 .Animazione - spostamento dei riser PCI 1 e 2
 video::f4ee1d4d-6029-4fe6-a063-aad9012f170b[panopto]
-image::../media/drw_A400_Replace-PCIe-cards.png[Drw A400 sostituire le schede PCIe]
+image::../media/drw_A400_Replace-PCIe-cards.png[Rimozione delle schede PCIe]
 
 Spostamento della scheda mezzanine e del riser 3 (riser destro):
 
 .Animazione - spostare la scheda mezzanine e il riser 3
 video::b0c3b575-3434-4e00-a421-aad9012f2e9e[panopto]
-image::../media/drw_A400_Replace-mezz-card.png[Drw A400 sostituire la scheda di memoria]
+image::../media/drw_A400_Replace-mezz-card.png[Rimozione della scheda mezzanine]
 
 . Spostare i riser PCIe uno e due dal modulo controller guasto al modulo controller sostitutivo:
 +
@@ -242,7 +242,7 @@ Il nuovo modulo controller deve essere pronto in modo da poter spostare i DIMM d
 
 .Animazione - spostare i DIMM
 video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Drw A400 sostituire il DIMM NVDIMM]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Spostamento dei DIMM]
 
 . Individuare i DIMM sul modulo controller.
 . Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
@@ -283,7 +283,7 @@ Per installare il modulo controller sostitutivo nel telaio, è possibile utilizz
 
 .Animazione - Installazione del modulo controller
 video::9249fdb8-1522-437d-9280-aae10007c97b[panopto]
-image::../media/drw_A400_Install_controller_source.png[Drw A400 installare la sorgente del controller]
+image::../media/drw_A400_Install_controller_source.png[Installazione della centralina]
 
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.

@@ -187,11 +187,11 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
 +
-image::../media/drw_32xx_cbl_mgmt_arm.png[ARM. gestione cbl. 32xx drw]
+image::../media/drw_32xx_cbl_mgmt_arm.png[Rimozione dei bracci di gestione dei cavi][]
 
 . Allentare la vite a testa zigrinata sulla maniglia della camma sul modulo controller.
 +
-image::../media/drw_8020_cam_handle_thumbscrew.png[vite a testa zigrinata con impugnatura a camma drw 8020]
+image::../media/drw_8020_cam_handle_thumbscrew.png[Allentare la vite a testa zigrinata per aprire la maniglia della camma]
 
 +
 |===
@@ -225,7 +225,7 @@ Per sostituire i moduli DIMM, individuarli all'interno del controller e seguire 
 Prima di sostituire i componenti del sistema, è necessario eseguire un arresto pulito del sistema per evitare la perdita di dati non scritti nella memoria non volatile (NVMEM). Il LED si trova sul retro del modulo controller. Individuare la seguente icona:
 
 +
-image::../media/drw_hw_nvram_icon.png[icona nvram drw hw]
+image::../media/drw_hw_nvram_icon.png[LED NV]
 
 . Se il LED NVMEM non lampeggia, NVMEM non contiene alcun contenuto; è possibile saltare i passaggi seguenti e passare all'attività successiva di questa procedura.
 . Scollegare la batteria:
@@ -242,7 +242,7 @@ Questo si verifica in genere durante un arresto non controllato dopo l'avvio di 
 +
 ... Aprire il condotto dell'aria della CPU e individuare la batteria NVMEM.
 +
-image::../media/drw_rxl_nvmem_battery.png[batteria nvmem drw rxl]
+image::../media/drw_rxl_nvmem_battery.png[Sostituzione della batteria NVMEM]
 
 +
 |===
@@ -280,7 +280,7 @@ Il numero e la posizione dei DIMM di sistema dipendono dal modello del sistema.
 La seguente illustrazione mostra la posizione dei DIMM di sistema:
 
 +
-image::../media/drw_rxl_dimms.png[dimm rxl drw]
+image::../media/drw_rxl_dimms.png[Sostituzione dei moduli DIMM]
 
 . Rimuovere il modulo DIMM di ricambio dalla confezione antistatica, tenerlo per gli angoli e allinearlo allo slot.
 +

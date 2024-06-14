@@ -61,7 +61,7 @@ X66240A-05 (112-00595), 0,5 m;
 
 X66240-2 (112-00573), 2 m
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore 100 GbE QSFP28"]
  a| 
 Rete di interconnessione del cluster
 
@@ -92,7 +92,7 @@ RJ-45 (in base all'ordine)
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["Connettore del cavo RJ-45"]
  a| 
 Rete di gestione (BMC e porta chiave) e dati Ethernet (e0a e e0b)
 
@@ -109,7 +109,7 @@ X66250-15 (112-00346) 15 m;
 
 X66250-30 (112-00347) 30 m.
  a| 
-image:../media/oie_cable_fc_optical.png[""]
+image:../media/oie_cable_fc_optical.png["Cavo ottico Fibre Channel OIE"]
  a| 
 
 
@@ -130,7 +130,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["Cavi di alimentazione"]
  a| 
 Accensione del sistema
 
@@ -152,7 +152,7 @@ Accensione del sistema
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_affa250_weight_caution.png[drw affa250 attenzione sul peso]
+image::../media/drw_affa250_weight_caution.png[Avvertenza sollevamento a due persone]
 
 . Identificare e gestire i cavi perché questo sistema non dispone di un dispositivo di gestione dei cavi.
 . Posizionare il pannello anteriore del sistema.
@@ -181,7 +181,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -196,29 +196,30 @@ video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png[""]
+image:../media/oie_legend_icon_1_lg.png["Fase 1"]
  a| 
 Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster da 25 GbE
 
-image:../media/oie_cable_sfp_gbe_copper.png[""]:
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]:
 
 * da e0c a e0c
-* da e0d a e0dimage:../media/drw_affa250_tnsc_cabling.png[""]
+* da e0d a e0d
+image:../media/drw_affa250_tnsc_cabling.png["Cablaggio di interconnessione in cluster in un cluster senza switch a due nodi"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_dr.png[""]
+image:../media/oie_legend_icon_2_dr.png["Numero di didascalia 2"]
  a| 
 Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
 
-image::../media/drw_affa250_mgmt_cabling.png[cablaggio di 250 mgmt drw affa250]
+image::../media/drw_affa250_mgmt_cabling.png[Cablaggio delle porte di gestione]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
@@ -236,7 +237,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_down.png[linguetta di estrazione del cavo oie verso il basso]
+image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -251,27 +252,28 @@ video::bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png[""]
+image:../media/oie_legend_icon_1_lg.png["Fase 1"]
  a| 
 Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 25 GbE.
 
 * e0c
-* e0dimage:../media/drw_affa250_switched_clust_cabling.png[""]
+* e0d
+image:../media/drw_affa250_switched_clust_cabling.png["Cablaggio di interconnessione in cluster"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_dr.png[""]
+image:../media/oie_legend_icon_2_dr.png["Numero di didascalia 2"]
  a| 
 Collegare le porte chiave agli switch della rete di gestione con i cavi RJ45.
 
-image::../media/drw_affa250_mgmt_cabling.png[cablaggio di 250 mgmt drw affa250]
+image::../media/drw_affa250_mgmt_cabling.png[Cablaggio delle porte di gestione]
 
 
 
  a| 
-image::../media/oie_legend_icon_attn_symbol.png[icona legenda oie simbolo attn]
+image::../media/oie_legend_icon_attn_symbol.png[Simbolo di attenzione]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
@@ -295,7 +297,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -310,7 +312,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
  a| 
 Collegare le porte da 2a a 2d agli switch host FC.
 
-image::../media/drw_affa250_fc_host_cabling.png[cablaggio host drw affa250 fc]
+image::../media/drw_affa250_fc_host_cabling.png[Cablaggio host Fibre Channel]
 
 
 
@@ -342,7 +344,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -357,7 +359,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
  a| 
 Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.
 
-image::../media/drw_affa250_25gbe_host_cabling.png[cablaggio host drw affa250 25gbe]
+image::../media/drw_affa250_25gbe_host_cabling.png[Cablaggio 25 GbE]
 
 
 
@@ -386,7 +388,7 @@ Per completare la configurazione del sistema, vedere link:install-detailed-guide
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -401,16 +403,16 @@ video::3f92e625-a19c-4d10-9028-ac68017fbf57[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png[""]
+image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
  a| 
-Collegare il controller del cavo A allo shelf: image:../media/drw_affa250_1shelf_cabling_a.png[""]
+Collegare il controller del cavo A allo shelf:    image:../media/drw_affa250_1shelf_cabling_a.png["Cablaggio del controller A."]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png[""]
+image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
  a| 
-Collegare il controller del cavo B allo shelf: image:../media/drw_affa250_1shelf_cabling_b.png[""]
+Collegare il controller del cavo B allo shelf:    image:../media/drw_affa250_1shelf_cabling_b.png["Cablaggio del controller B."]
 
 |===
 Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -439,7 +441,7 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.
@@ -476,7 +478,7 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il laptop o la console allo switch sulla subnet di gestione.
 +
-image::../media/drw_console_client_mgmt_subnet_affa250.png[subnet affa250 di gestione del client della console drw]
+image::../media/drw_console_client_mgmt_subnet_affa250.png[Connessione alla subnet di gestione in corso]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 

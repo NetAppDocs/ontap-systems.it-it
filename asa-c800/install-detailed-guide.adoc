@@ -60,7 +60,7 @@ Cavo da 100 GbE
  a| 
 X66211A-05 (112-00595), 0,5 m.
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore 100 GbE QSFP28"]
  a| 
 Interconnessione HA
 
@@ -111,7 +111,7 @@ RJ-45 (in base all'ordine)
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["Connettore del cavo RJ-45"]
  a| 
 Gestione
 
@@ -128,7 +128,7 @@ X66250-15 (112-00346) 15 m;
 
 X66250-30 (112-00347) 30 m.
  a| 
-image:../media/oie_cable_fc_optical.png[""]
+image:../media/oie_cable_fc_optical.png["Cavo ottico Fibre Channel OIE"]
  a| 
 
 
@@ -149,7 +149,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["Cavi di alimentazione"]
  a| 
 Accensione del sistema
 
@@ -174,11 +174,11 @@ https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-inst
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_affa800_weight_caution.png[attenzione peso drw affa800]
+image::../media/drw_affa800_weight_caution.png[Avvertenza per sollevamento a quattro persone]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_affa800_install_cable_mgmt.png[gestione cavi installazione drw affa800]
+image::../media/drw_affa800_install_cable_mgmt.png[Collegamento del dispositivo di gestione dei cavi]
 
 . Posizionare il pannello anteriore del sistema.
 
@@ -206,7 +206,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -223,46 +223,48 @@ video::edc42447-f721-4cbe-b080-ab0c0123a139[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_dp.png[""]
+image:../media/oie_legend_icon_1_dp.png["Numero di didascalia 1"]
  a| 
 Collegare le porte di interconnessione ha:
 
 ** da e0b a e0b
-** da e1b a e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+** da e1b a e1b
+image:../media/drw_affa800_ha_pair_cabling.png["Cablaggio di coppia HA"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lg.png[""]
+image:../media/oie_legend_icon_2_lg.png["Numero di didascalia 2"]
  a| 
 Collegare via cavo le porte di interconnessione del cluster:
 
 ** da e0a e0a
-** da e1a a e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
+** da e1a a e1a
+image:../media/drw_affa800_tnsc_clust_cabling.png["Cablaggio di interconnessione in cluster in un cluster senza switch a due nodi"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
  a| 
 Collegare le porte di gestione agli switch della rete di gestione    image:../media/drw_affa800_mgmt_cabling.png["Immagine che mostra la posizione delle porte di gestione sul retro del sistema"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
 |===
 . Per eseguire il cablaggio opzionale, vedere:
 +
-** <<Option 1: Connect to a Fibre Channel host>>
-** <<Option 2: Connect to a 10GbE host>>
-** <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
-** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+** <<Opzione 1: Collegamento via cavo a una rete host Fibre Channel>>
+** <<Opzione 2: Collegamento via cavo a una rete host 10 GbE>>
+** <<Opzione 3: Collegare i controller a un singolo shelf di dischi>>
+** <<Opzione 4: Collegare i controller a due shelf di dischi>>
 
 
 . Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -279,7 +281,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -296,42 +298,46 @@ video::49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_dp.png[""]
+image:../media/oie_legend_icon_1_dp.png["Numero di didascalia 1"]
  a| 
 Collegare le porte di interconnessione ha:
 
 ** da e0b a e0b
-** da e1b a e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+** da e1b a e1b
+image:../media/drw_affa800_ha_pair_cabling.png["Cablaggio di coppia HA"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lg.png[""]
+image:../media/oie_legend_icon_2_lg.png["Numero di didascalia 2"]
  a| 
-Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE. ** e0a ** e1aimage:../media/drw_affa800_switched_clust_cabling.png[""]
+Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE.
+** e0a
+** e1a
+image:../media/drw_affa800_switched_clust_cabling.png["Cablaggio di interconnessione in cluster"]
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
  a| 
 Collegare le porte di gestione agli switch della rete di gestione    image:../media/drw_affa800_mgmt_cabling.png["Immagine che mostra la posizione delle porte di gestione sul retro del sistema"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["Simbolo di attenzione"]
  a| 
 NON collegare i cavi di alimentazione a questo punto.
 
 |===
 . Per eseguire il cablaggio opzionale, vedere:
 +
-** <<Option 1: Connect to a Fibre Channel host>>
-** <<Option 2: Connect to a 10GbE host>>
-** <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
-** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+** <<Opzione 1: Collegamento via cavo a una rete host Fibre Channel>>
+** <<Opzione 2: Collegamento via cavo a una rete host 10 GbE>>
+** <<Opzione 3: Collegare i controller a un singolo shelf di dischi>>
+** <<Opzione 4: Collegare i controller a due shelf di dischi>>
 
 
 . Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -354,7 +360,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -367,7 +373,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
  a| 
 1
  a| 
-Collegare le porte da 2a a 2d agli switch host FC.image:../media/drw_affa800_fc_host_cabling.png[""]
+Collegare le porte da 2a a 2d agli switch host FC.image:../media/drw_affa800_fc_host_cabling.png["Cablaggio di rete host Fibre Channel"]
 
 
 
@@ -376,8 +382,8 @@ Collegare le porte da 2a a 2d agli switch host FC.image:../media/drw_affa800_fc_
  a| 
 Per eseguire altri cablaggi opzionali, scegliere tra:
 
-* <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
-* <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+* <<Opzione 3: Collegare i controller a un singolo shelf di dischi>>
+* <<Opzione 4: Collegare i controller a due shelf di dischi>>
 
 
 
@@ -399,7 +405,7 @@ Per informazioni sulla connessione del sistema agli switch, rivolgersi all'ammin
 
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -412,7 +418,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
  a| 
 1
  a| 
-Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.image:../media/drw_affa800_10gbe_host_cabling.png[""]
+Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.image:../media/drw_affa800_10gbe_host_cabling.png["Cablaggio di rete host"]
 
 
 
@@ -421,8 +427,8 @@ Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.image:../medi
  a| 
 Per eseguire altri cablaggi opzionali, scegliere tra:
 
-* <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
-* <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+* <<Opzione 3: Collegare i controller a un singolo shelf di dischi>>
+* <<Opzione 4: Collegare i controller a due shelf di dischi>>
 
 
 
@@ -442,7 +448,7 @@ Per completare la configurazione del sistema, vedere link:install-detailed-guide
 .Prima di iniziare
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -457,16 +463,16 @@ video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png[""]
+image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
  a| 
-Collegare il controller del cavo A allo shelf: image:../media/drw_affa800_1shelf_cabling_a.png[""]
+Collegare il controller del cavo A allo shelf:    image:../media/drw_affa800_1shelf_cabling_a.png["Collegare i controller a un singolo shelf"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png[""]
+image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
  a| 
-Collegare il controller del cavo B allo shelf: image:../media/drw_affa800_1shelf_cabling_b.png[""]
+Collegare il controller del cavo B allo shelf:    image:../media/drw_affa800_1shelf_cabling_b.png["Collegare il controller B a un unico ripiano"]
 
 |===
 Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -480,7 +486,7 @@ Per completare la configurazione del sistema, vedere link:install-detailed-guide
 .Prima di iniziare
 Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-image::../media/oie_cable_pull_tab_up.png[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -495,16 +501,16 @@ video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png[""]
+image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
  a| 
-Collegare il controller dei cavi A agli shelf: image:../media/drw_affa800_2shelf_cabling_a.png[""]
+Collegare il controller dei cavi A agli shelf:    image:../media/drw_affa800_2shelf_cabling_a.png["Collegare il controller A a due ripiani"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png[""]
+image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
  a| 
-Collegare il controller dei cavi B agli shelf: image:../media/drw_affa800_2shelf_cabling_b.png[""]
+Collegare il controller dei cavi B agli shelf:    image:../media/drw_affa800_2shelf_cabling_b.png["Collegare il controller B a due ripiani"]
 
 |===
 Per completare la configurazione del sistema, vedere link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["Fase 4: Completare l'installazione e la configurazione del sistema"].
@@ -536,7 +542,7 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.
@@ -573,11 +579,11 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al computer portatile o alla console e la porta della console sul controller utilizzando il cavo della console fornito con il sistema.
 +
-image::../media/drw_console_connect_affa800.png[console drw collegare affa800]
+image::../media/drw_console_connect_affa800.png[Collegamento alla porta della console]
 
 .. Collegare il laptop o la console allo switch sulla subnet di gestione.
 +
-image::../media/drw_client_mgmt_subnet_affa800.png[subnet affa800 mgmt client drw]
+image::../media/drw_client_mgmt_subnet_affa800.png[Collegamento del laptop o della console per attivare la subnet di gestione]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 

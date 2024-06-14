@@ -26,12 +26,12 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
 +
-image::../media/drw_32xx_cbl_mgmt_arm.png[ARM. gestione cbl. 32xx drw]
+image::../media/drw_32xx_cbl_mgmt_arm.png[Rimozione dei bracci di gestione dei cavi][]
 
 . Se i moduli SFP sono stati lasciati nel sistema dopo aver rimosso i cavi, spostarli nel nuovo modulo controller.
 . Allentare la vite a testa zigrinata sulla maniglia della camma sul modulo controller.
 +
-image::../media/drw_8020_cam_handle_thumbscrew.png[vite a testa zigrinata con impugnatura a camma drw 8020]
+image::../media/drw_8020_cam_handle_thumbscrew.png[Allentare la vite a testa zigrinata per aprire la maniglia della camma]
 
 +
 |===
@@ -62,7 +62,7 @@ Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecc
 
 . Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
 +
-image::../media/drw_rxl_boot_media.png[supporto di avvio drw rxl]
+image::../media/drw_rxl_boot_media.png[Rimozione del supporto di avvio hte]
 
 . Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
 +
@@ -88,7 +88,7 @@ Per spostare la batteria NVMEM dal vecchio modulo controller al nuovo modulo con
 ** Se il sistema si trova in una configurazione ha, passare alla fase successiva.
 ** Se il sistema si trova in una configurazione standalone, spegnere completamente il modulo controller, quindi controllare il LED NVRAM identificato dall'icona NV.
 +
-image::../media/drw_hw_nvram_icon.png[icona nvram drw hw]
+image::../media/drw_hw_nvram_icon.png[LED NV]
 
 +
 
@@ -106,7 +106,7 @@ Questo si verifica in genere durante un arresto non controllato dopo l'avvio di 
 
 . Aprire il condotto dell'aria della CPU e individuare la batteria NVMEM.
 +
-image::../media/drw_rxl_nvmem_battery.png[batteria nvmem drw rxl]
+image::../media/drw_rxl_nvmem_battery.png[Sostituzione della batteria NVMEM]
 
 +
 |===
@@ -147,7 +147,7 @@ Il numero e la posizione dei DIMM di sistema dipendono dal modello del sistema.
 La seguente illustrazione mostra la posizione dei DIMM di sistema:
 
 +
-image::../media/drw_rxl_dimms.png[dimm rxl drw]
+image::../media/drw_rxl_dimms.png[Sostituzione dei moduli DIMM]
 
 . Individuare lo slot in cui si desidera installare il DIMM.
 . Assicurarsi che le linguette di espulsione del modulo DIMM sul connettore siano aperte, quindi inserire il modulo DIMM correttamente nello slot.
@@ -174,7 +174,7 @@ Il nuovo modulo controller deve essere pronto in modo da poter spostare le sched
 . Allentare la vite a testa zigrinata sul pannello laterale del modulo controller.
 . Estrarre il pannello laterale dal modulo controller.
 +
-image::../media/drw_rxl_pcie.png[pcie drw rxl]
+image::../media/drw_rxl_pcie.png[Rimozione o installazione di una scheda PCIe]
 
 +
 |===
