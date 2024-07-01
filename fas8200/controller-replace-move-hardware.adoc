@@ -26,7 +26,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
 +
-image::../media/drw_32xx_cbl_mgmt_arm.png[Rimozione dei bracci di gestione dei cavi][]
+image::../media/drw_32xx_cbl_mgmt_arm.png[Rimozione dei bracci di gestione dei cavi]
 
 . Se i moduli SFP sono stati lasciati nel sistema dopo aver rimosso i cavi, spostarli nel nuovo modulo controller.
 . Allentare la vite a testa zigrinata sulla maniglia della camma sul modulo controller.
@@ -34,12 +34,15 @@ image::../media/drw_32xx_cbl_mgmt_arm.png[Rimozione dei bracci di gestione dei c
 image::../media/drw_8020_cam_handle_thumbscrew.png[Allentare la vite a testa zigrinata per aprire la maniglia della camma]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["Numero di didascalia 1"]
-| Vite a testa zigrinata 
+ a| 
+Vite a testa zigrinata
+
 
 
  a| 
@@ -109,12 +112,15 @@ Questo si verifica in genere durante un arresto non controllato dopo l'avvio di 
 image::../media/drw_rxl_nvmem_battery.png[Sostituzione della batteria NVMEM]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["Numero di didascalia 1"]
-| Linguetta di blocco della batteria 
+ a| 
+Linguetta di blocco della batteria
+
 
 
  a| 
@@ -177,14 +183,12 @@ Il nuovo modulo controller deve essere pronto in modo da poter spostare le sched
 image::../media/drw_rxl_pcie.png[Rimozione o installazione di una scheda PCIe]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["Numero di didascalia 1"]
-
-
-
  a| 
 Pannello laterale
 
@@ -192,9 +196,6 @@ Pannello laterale
 
  a| 
 image:../media/legend_icon_02.png["Numero di didascalia 2"]
-
-
-
  a| 
 Scheda PCIe
 
@@ -226,7 +227,7 @@ Quando si sostituisce un modulo controller, è necessario spostare i moduli di c
 Il sistema storage viene fornito con due slot disponibili per il modulo di caching e un solo slot è occupato, per impostazione predefinita.
 
 +
-image::../media/drw_rxl_fcache.png[drw rxl fcache]
+image::../media/drw_rxl_fcache.png[Rimuovere e sostituire il modulo di caching]
 
 
 

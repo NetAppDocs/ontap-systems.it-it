@@ -2745,7 +2745,6 @@
   <block id="8b70ff461d015cb15798b71a827488de" category="list-text">Allineare i bordi del modulo di caching con lo zoccolo nell'alloggiamento, quindi spingerlo delicatamente nello zoccolo.</block>
   <block id="fd0db0c0a8315e064601a11ecc8c2b49" category="doc">Sostituire la batteria dell'orologio in tempo reale</block>
   <block id="65c45f25b11ef516aa4180bd435460a0" category="list-text">Individuare la batteria RTC.</block>
-  <block id="78cdea792972b347c50369463c3d2407" category="image-alt">batteria rtc drw 2600</block>
   <block id="b1288294c924e966dd5f1e52dc50d8fa" category="list-text">Individuare il supporto batteria vuoto nel modulo controller.</block>
   <block id="dc298218cd8d376ae5e0ca1a1c66832b" category="section-title">Fase 4: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC</block>
   <block id="11ecaa8360379504a6aba6752c5f87ed" category="summary">Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.</block>
@@ -2771,7 +2770,6 @@
   <block id="5cee811338d57ecf44d6f22dca7fcd4b" category="list-text">Ruotare verso l'alto e verso le ventole il fermo di blocco del riser sul lato sinistro del riser.</block>
   <block id="62b41ad108afe6b4d651d8da18394eea" category="paragraph">Il riser NVRAM si solleva leggermente dal modulo controller.</block>
   <block id="d3110f91324e5f8cfcd28600df5ac2d9" category="list-text">Sollevare il riser NVRAM, spostarlo verso le ventole in modo che il bordo di lamiera del riser si allontani dal bordo del modulo controller, sollevare il riser ed estrarlo dal modulo controller. Quindi posizionarla su una superficie piana e stabile in modo da poter accedere alla scheda NVRAM.</block>
-  <block id="2d0b5667d44ad59ef139c09efe0999d0" category="image-alt">sostituzione nvme drw a700s</block>
   <block id="f3be4d98894ffbfb83050debf5045c14" category="paragraph">Fermo di bloccaggio del riser 1</block>
   <block id="ae936646ba28c5499caf8ff8a09c1158" category="paragraph">Connettore del cavo della batteria NVRAM che collega la scheda NVRAM</block>
   <block id="2466ce84e0b8be725ba14bd0f97ac7cc" category="paragraph">Scheda NVRAM</block>
@@ -2801,7 +2799,6 @@
   <block id="72031a15fbaab6eb40b617b0663962bb" category="section-title">Fase 2: Rimuovere il modulo controller - AFF A700s</block>
   <block id="fedeae451b36efcc460d172d9fe45850" category="section-title">Fase 3: Sostituire la ventola - AFF A700s</block>
   <block id="62052f557603d07beccb5c5c5b7c8d48" category="list-text">Identificare il modulo della ventola da sostituire controllando i messaggi di errore della console.</block>
-  <block id="fe45ee98537552d5aae5b293496a5f0f" category="image-alt">drw a700s sostituire la ventola</block>
   <block id="e1d83f38808259079bf63398959b5064" category="section-title">Fase 4: Reinstallare il modulo controller - AFF A700</block>
   <block id="4c6ce16f45f7004dafb410a6fe342bcf" category="list-text">Se il sistema è configurato per supportare connessioni dati e di interconnessione cluster a 10 GbE su schede di rete 40 GbE o porte integrate, convertire queste porte in connessioni a 10 GbE utilizzando il comando nicadmin convert dalla modalità Maintenance.</block>
   <block id="ccfa1cc380a451bf6234e36543721fae" category="admonition">Assicurarsi di uscire dalla modalità di manutenzione dopo aver completato la conversione.</block>
@@ -2817,7 +2814,6 @@
   <block id="e603d2510eeff2fb744840a8b8277f7c" category="doc">Sostituire un alimentatore - AFF A700</block>
   <block id="25b17a241b7878627647c78d24614092" category="paragraph">Sostituire un alimentatore scollegando l'alimentatore di destinazione dalla fonte di alimentazione, scollegando il cavo di alimentazione, rimuovendo il vecchio alimentatore e installando il nuovo alimentatore, quindi ricollegandolo alla fonte di alimentazione.</block>
   <block id="ea0af08f58acd216c0cdbf8f9611bc62" category="list-text">Il numero di alimentatori nel sistema dipende dal modello.</block>
-  <block id="c27a73d454940b40747d6959d070735e" category="image-alt">i drw a700s sostituiscono l'alimentatore</block>
   <block id="667ec5d2e7ff49916ac90c31eb178520" category="list-text">Chiudere la maniglia della camma ruotandola fino in fondo.</block>
   <block id="002bb0675c02757351d3b908720a16cf" category="doc">Controllare le chiavi di crittografia integrate - AFF A700s</block>
   <block id="e1782167c4ccac91c29c561fbdf9bd10" category="summary">È possibile utilizzare il poster PDF per installare e configurare il nuovo sistema. Il poster in formato PDF fornisce istruzioni dettagliate con collegamenti in tempo reale a contenuti aggiuntivi.</block>
@@ -2829,7 +2825,6 @@
   <block id="94a2f43b7e5299d436a356db402524cc" category="section-title">Fase 3: Sostituire la batteria NVRAM</block>
   <block id="b6e4e85c37e79abd40b307ddc60db9d3" category="paragraph">Per sostituire la batteria NVRAM, rimuovere la batteria NVRAM guasta dal modulo controller e installare la batteria NVRAM sostitutiva nel modulo controller.</block>
   <block id="50596866677de4b15c95c4f2ac253894" category="list-text">Individuare la batteria NVRAM sul lato sinistro del modulo di montaggio, Riser 1.</block>
-  <block id="cad0b5b8d9a3a648fed2d2cf9843ff68" category="image-alt">batteria nvme drw a700s sostituita</block>
   <block id="5a66fe4f16ba9a8ec80a9b48be30d41b" category="paragraph">Spina della batteria NVRAM</block>
   <block id="8e50b634b9172df00520f757e65899a2" category="paragraph">Linguetta blu di blocco della batteria NVRAM</block>
   <block id="e4191ffb24cf00ba5d94d1981ea4fb72" category="list-text">Premere la linguetta di bloccaggio blu sul supporto della batteria in modo che il fermo si sblocchi dal supporto.</block>
@@ -2840,7 +2835,6 @@
   <block id="e160675dcb2bc6ebdb28380884820e26" category="paragraph">Quando viene visualizzato il controller alterato<block ref="fd66c964768074eb90f4f1426229bf3e" prefix=" " category="inline-code"></block>, Premere Ctrl-C, quindi rispondere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>.</block>
   <block id="3f09782d88b17a1d4d58adb09f8cd8ee" category="paragraph">Per sostituire un modulo DIMM, è necessario individuarlo nel modulo controller utilizzando la mappa DIMM all'interno del modulo controller, quindi sostituirlo seguendo la sequenza di passaggi specifica.</block>
   <block id="9de291eec146aa309ed46727b945c6d4" category="list-text">Rimuovere il riser applicabile.</block>
-  <block id="36ac39cea070e713b0fb0a0f54db88b7" category="image-alt">sostituzione del modulo dimm drw a700s</block>
   <block id="ce1a3d7dcbc5b34bf0ed36bacde61766" category="paragraph">Riser 1 e DIMM bank 1-4</block>
   <block id="526b2479f6412e63d5f244b19de1b2d9" category="paragraph">Riser 2 e DIMM bank 5-8 e 9-12</block>
   <block id="7207a07e9c674a681223cfc87894dd12" category="paragraph">Riser 3 e DIMM 13-16</block>
@@ -2860,7 +2854,6 @@
   <block id="25e84b8b11804a262c8f96f5c0494341" category="list-text">Ruotare verso l'alto e verso i moduli delle ventole il fermo di blocco del modulo sul lato sinistro del riser.</block>
   <block id="9b87501921d55169b6d5df97c4ac5eff" category="paragraph">Il riser PCIe si solleva leggermente dal modulo controller.</block>
   <block id="2995e2f5de5ab5f7e237aaaca60f083f" category="list-text">Sollevare il riser PCIe, spostarlo verso le ventole in modo che il bordo di lamiera del riser si allontani dal bordo del modulo controller, sollevare il riser ed estrarlo dal modulo controller, quindi posizionarlo su una superficie piana e stabile.</block>
-  <block id="8301780f2b7742ba6677d0c2900a7256" category="image-alt">sostituzione pcie drw a700s</block>
   <block id="2bc8b7df71c8cc78b90710217056fad5" category="paragraph">Riser 2 (riser centrale) e schede PCI negli slot riser 2 e 3.</block>
   <block id="e3560786e78900dd0335bb4a2a6903bd" category="list-text">Rimuovere il riser corrispondente dal modulo controller sostitutivo.</block>
   <block id="a8d388baf53b90495c7c71be1ec89798" category="list-text">Installare la scheda PCIe nello stesso slot del riser PCIe:</block>
@@ -2870,7 +2863,6 @@
   <block id="37574ed52700f32d94a2d5116467a266" category="paragraph">I supporti di avvio si trovano sotto Riser 2, il modulo riser PCIe centrale. Questo modulo PCIe deve essere rimosso per accedere al supporto di boot.</block>
   <block id="ea47f8c3d75d0ae8c63333493732e287" category="list-text">Aprire il condotto dell'aria, se necessario.</block>
   <block id="95b0ed2bf52614c4803a52c7bfbc4da6" category="list-text">Se necessario, rimuovere il riser 2, il modulo PCIe centrale, sbloccando il fermo di blocco e rimuovendo il riser dal modulo controller.</block>
-  <block id="c5f3456e0fd8df43b4786bdc636b23b4" category="image-alt">sostituzione dei supporti di avvio drw a700s</block>
   <block id="3e4e796f89697f9552e6f9741f53026c" category="paragraph">Riser 2 (modulo PCIe centrale)</block>
   <block id="b7dbb1be616fad247b3d6aed3164e853" category="admonition">Installare il supporto di avvio nello stesso socket del modulo controller sostitutivo installato nel modulo controller guasto; nello slot 1, nello slot 1, nello slot 1, nello slot 1, nello slot 2 e nello slot 2, nello slot 2, nello slot 2, nello slot 2, nello slot 2, per supporti di avvio secondari.</block>
   <block id="db804e965118c7ddc7ce55f19a1af1bc" category="section-title">Fase 5: Spostare le ventole</block>
@@ -2939,7 +2931,6 @@
   <block id="1790a5691629705d1dfd90934b6c5f4d" category="doc">Foglio di lavoro per la configurazione del cluster - AFF A700s</block>
   <block id="29bd1f640adeeec5f2bc6e197d0840c4" category="paragraph"><block ref="29bd1f640adeeec5f2bc6e197d0840c4" category="inline-link-macro-rx"></block></block>
   <block id="28746dbce7c4fc8053d035e3b2295bde" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A700s</block>
-  <block id="6199e9ac737bb64b5d2e7bfb2a3da5a0" category="image-alt">batteria rtc drw a700s sostituita</block>
   <block id="8a9d9ac73cd783fd8be1adef7a7b3710" category="summary">Il supporto di avvio principale memorizza l'immagine di avvio ONTAP utilizzata dal sistema all'avvio. È possibile ripristinare l'immagine principale del supporto di avvio utilizzando l'immagine ONTAP sul supporto di avvio secondario o, se necessario, utilizzando un'unità flash USB.</block>
   <block id="505ba7be41620674b2d6d7caf7f3453d" category="doc">Panoramica della sostituzione dei supporti di avvio - AFF A700</block>
   <block id="327cba4c3b39fe95536adbd9bda04a68" category="paragraph">Se il supporto di avvio secondario non funziona o manca il file image.tgz, è necessario ripristinare il supporto di avvio primario utilizzando un'unità flash USB. Il disco deve essere formattato in FAT32 e disporre della quantità di storage appropriata per contenere il file image_xxx.tgz.</block>
@@ -4115,7 +4106,6 @@
   <block id="09e00942626b9d2b5187768ea624369a" category="list-text">Assicurarsi di disporre dell'accesso a <block ref="9d7659179eb5b5c244263cabf30336a7" category="inline-link-macro-rx"></block> Per ulteriori informazioni su questo sistema, consultare la versione di ONTAP in uso.</block>
   <block id="841cf46b69a4b2c782c980b795074554" category="list-text">Assicurarsi di disporre dei seguenti elementi presso la propria sede:</block>
   <block id="3fdd87b9e91d1f4dbea3152a3a2b8d0b" category="paragraph">X6566B-3-R6 (112-00300), 3 m.</block>
-  <block id="caaa8a847335f7164117894cfe79e731" category="paragraph"><block ref="caaa8a847335f7164117894cfe79e731" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fea037cb34a319bd3b823395ee5fdd07" category="paragraph">Rete host SFP + FC</block>
   <block id="490cb76fd3c75ff8166e251d789f799e" category="paragraph">Host Ethernet e rete di gestione</block>
   <block id="85220111cf8764a6d5eefe427de4fbde" category="paragraph">Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.</block>
@@ -4123,17 +4113,13 @@
   <block id="434c44657e12928e06a65124dfb073b0" category="paragraph">Scopri come collegare un cluster senza switch a due nodi.</block>
   <block id="fcca883f68c4e92b98d0f294614cda60" category="admonition">Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.</block>
   <block id="48114454330840b73674b4d456819a4e" category="list-text">Configurazioni di rete dati UTA2</block>
-  <block id="73da34bccb5db786798534ea5b6eb1d6" category="image-alt">gif animata: cablaggio di rete unificato tnsc drw c190</block>
   <block id="e6746873d55c9a028bc3eae1ed6cd0db" category="list-text">Configurazioni di rete Ethernet</block>
-  <block id="0df32eef6f99f6d05877f5da86a45063" category="image-alt">gif animato cablaggio di rete ethernet tnsc drw c190</block>
   <block id="f9655777cbdbded95ebaf4fdc1ed1c83" category="paragraph">Eseguire le seguenti operazioni su ciascun modulo controller.</block>
   <block id="54254076225178d5782bc5158de2ffd3" category="list-text">Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati e0c/0c e e0d/0d o e0e/0e e e0f/0f alla rete host.</block>
   <block id="43083753a8bd4d126f4e9d226b24d42f" category="list-text">Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host. nella seguente illustrazione.</block>
   <block id="9dfe7ca4d480fd4e10a0954286489a0f" category="list-text">Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.</block>
   <block id="5cb31a934f99a854350d21ffae22067d" category="paragraph">Scopri come collegare un cluster con switch.</block>
   <block id="3c82d1b8b75fddcd5945e9505cb93e2a" category="list-text">Configurazioni di rete unificate</block>
-  <block id="d7d7ce9a70c375da7dd9edb7b21a9134" category="image-alt">gif animato con cablaggio di rete unificato con switch drw c190</block>
-  <block id="ac3d560a40b4d6d28fac097677ecaa8d" category="image-alt">cablaggio di rete ethernet con switch drw c190 animato</block>
   <block id="98632dc1c45ca0b18d4707328081c4e1" category="list-text">Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster.</block>
   <block id="119bf83fa4465fb53f4c1cb409fbd677" category="list-text">Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host.</block>
   <block id="94ba17d1769cd415862a18057c1938b2" category="section-title">Fase 4: Completare la configurazione del sistema</block>
@@ -4260,7 +4246,6 @@
   <block id="f53e901ff746fe820463f62ff93fcef4" category="paragraph">Quando si sostituisce un modulo controller, è necessario spostare i moduli di caching dai moduli controller non adeguati al modulo controller sostitutivo.</block>
   <block id="29fe2fec672e63081cef240547ac4ab3" category="list-text">Individuare il modulo di caching sul retro del modulo controller e rimuoverlo:</block>
   <block id="72899bf5d7c3e86a01a078b9f3c1b933" category="paragraph">Il sistema storage viene fornito con due slot disponibili per il modulo di caching e un solo slot è occupato, per impostazione predefinita.</block>
-  <block id="407e11715a937f08e831c6ea7ba60d89" category="image-alt">drw rxl fcache</block>
   <block id="06c9138c9dda8dce357c29f596493704" category="list-text">Verificare che il modulo di caching sia posizionato correttamente e completamente nel socket. Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.</block>
   <block id="8f5132f3a780453031116d8c02ee992d" category="list-text">Ripetere i passaggi se si dispone di un secondo modulo di caching. Chiudere il coperchio del modulo controller.</block>
   <block id="c15449579d92fa124a659aa412ed32be" category="section-title">Fase 7: Installare il controller</block>
@@ -4978,10 +4963,7 @@
   <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
   <block id="9b0500b65158795cfc5abb2becae4e80" category="paragraph">La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> individuare il cavo e identificarne l'utilizzo.</block>
   <block id="e9e9a6de5e421dfe8a5ccc0b156ecc94" category="admonition">Se le etichette delle porte sulla scheda non sono visibili, controllare l'orientamento di installazione della scheda (lo zoccolo del connettore PCIe si trova sul lato sinistro dello slot della scheda in A400 e FAS8300/8700), quindi cercare la scheda, quindi cercare la scheda, in base al numero di parte, in<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> per un'immagine del pannello che mostra le etichette delle porte. Il numero di parte della scheda può essere trovato utilizzando<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> o nell'elenco di imballaggio del sistema.</block>
-  <block id="0082203fcfff94aab099c16763176076" category="image-alt">Cablaggio di rete TNSC drw fas8300</block>
-  <block id="507f9f4c8680d2c9a9bcba815a7976e8" category="image-alt">cablaggio di rete con switch drw fas8300</block>
   <block id="598ec2ec2714b9a699a42898b690e48d" category="section-title">Opzione 1: Collegare i controller agli shelf di dischi SAS</block>
-  <block id="56cbc310abb53560871f37318fe0636d" category="image-alt">drw fas8300 tre shelf ds224c</block>
   <block id="976b50556e35cc2ef44062a69fc6b2fc" category="list-text"><block ref="976b50556e35cc2ef44062a69fc6b2fc" category="inline-link-macro-rx"></block></block>
   <block id="1fc23df34c1ef373bc238879bf1082e5" category="list-text"><block ref="1fc23df34c1ef373bc238879bf1082e5" category="inline-link-macro-rx"></block></block>
   <block id="b8a901030a76c92bf9e4426d81439fa5" category="list-text"><block ref="b8a901030a76c92bf9e4426d81439fa5" category="inline-link-macro-rx"></block></block>
@@ -5017,11 +4999,9 @@
   <block id="406be05f374ba93dabeb2514a008179a" category="doc">Sostituire l'hardware del modulo controller - FAS8300 e FAS8700</block>
   <block id="8555f8973ccc4539a56ac495380c89d5" category="inline-link">Rimozione dei riser vuoti dal modulo controller sostitutivo</block>
   <block id="d5e62cab20ddc280f38e9a81562855fc" category="paragraph"><block ref="d5e62cab20ddc280f38e9a81562855fc" category="inline-link-rx"></block></block>
-  <block id="b8f99a879bdae690f650b2171355b5bb" category="image-alt">drw 8300 rimozione del riser vuoto</block>
   <block id="6976de191bb895bccff42aea7f5ef312" category="section-title">Fase 6: Spostare i moduli di caching</block>
   <block id="1e6c27613480cee2fca639b93121fd62" category="paragraph">Per spostare i moduli di caching nel nuovo modulo controller, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.</block>
   <block id="1d3cf3e64d50da3c959f6c6aefc86da4" category="video-title">Animazione - spostare i moduli di caching</block>
-  <block id="98e31120864bf3bc3ac05e5585fc2718" category="image-alt">Drw A400 Sostituisci flashcache</block>
   <block id="6ce420982732936565ee6cdc23281310" category="list-text">Spostare i moduli di caching dal modulo controller compromesso al modulo controller sostitutivo:</block>
   <block id="37532f61023625948a2dff3e87ad659d" category="list-text">Premere la linguetta blu di rilascio all'estremità del modulo di caching, ruotare il modulo verso l'alto, quindi rimuovere il modulo dallo zoccolo.</block>
   <block id="d84a3f8a48a291e94be45b2446ab30e1" category="list-text">Spostare il modulo di caching nello stesso socket del modulo controller sostitutivo.</block>
@@ -5046,7 +5026,6 @@
   <block id="70edce28424200208b28981e9b221707" category="list-text">Sebbene il contenuto del modulo di caching sia crittografato, è consigliabile cancellare il contenuto del modulo prima di sostituirlo. Per ulteriori informazioni, consultare<block ref="89de74d6a86df9137b0ef3fb03a43036" category="inline-link-rx"></block> Per il tuo sistema sul sito di supporto NetApp.</block>
   <block id="bb90eba065615f7ac639d1758ba84812" category="paragraph">Per sostituire un modulo di caching, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.</block>
   <block id="dd6deb08e1adc766a156e3146f0b65e7" category="video-title">Animazione - sostituire il modulo di caching</block>
-  <block id="540a3a140ba4c7da7729d8bbfbe06861" category="image-alt">Drw 8300 sostituire flashcache</block>
   <block id="b08a9c5bee019bb00ec5f4f00b59819e" category="list-text">Utilizzando la mappa FRU sul modulo controller, individuare il modulo di caching guasto e rimuoverlo:</block>
   <block id="2ceb6141859316070c657f406135cd1c" category="paragraph">A seconda della configurazione, il modulo controller potrebbe contenere zero, uno o due moduli di caching. Utilizzare la mappa FRU all'interno del modulo controller per individuare il modulo di caching.</block>
   <block id="58a5256eec02e1fef80c02b3deffc3f5" category="list-text">Premere la linguetta blu di rilascio.</block>
@@ -5059,7 +5038,6 @@
   <block id="e4b932cfae8ec488091c7615924cd4d0" category="video-title">Animazione - Installazione del modulo controller</block>
   <block id="9fd188207b0f7e77aa563d18053142c8" category="section-title">Fase 8: Completare il processo di sostituzione</block>
   <block id="c0925c06c8c424f377718df251d2ae9f" category="doc">Sostituire la batteria dell'orologio in tempo reale - FAS8300 e FAS8700</block>
-  <block id="ec83112a8c30bb826b259d5c77a3c3ca" category="image-alt">Batteria rtc drw A400</block>
   <block id="97a3946d5380c45539697b463767b69c" category="section-title">Fase 4: Reinstallare il modulo controller e impostare data/ora dopo la sostituzione della batteria RTC</block>
   <block id="fe0e817b3bc5b4c3f92a0bd2fc673648" category="doc">Panoramica sulla sostituzione dei supporti di avvio - AFF FAS8300 e FAS8700</block>
   <block id="88afeb50c76c0c11cfa02af19240816d" category="doc">Spostare e sostituire l'hardware - AFF A200</block>
@@ -8790,4 +8768,36 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="360e760cf4c2611f24bef9936525c878" category="image-alt">Disposizione orizzontale del supporto di trasmissione</block>
   <block id="9302993f1cbe0a62b1c08bac8ff42e30" category="image-alt">LED di attività dell'unità</block>
   <block id="6daeeb8640b388bf728f2d3fa2ceac68" category="image-alt">LED di attenzione dell'unità</block>
+  <block id="3d01b4425d5fa4915f6e209ff5ebc5fa" category="image-alt">Sostituire la scheda NVRAM</block>
+  <block id="1471ac39cb9785883e4f8e0156141768" category="image-alt">Sostituire una scheda PCIe</block>
+  <block id="d41ba6049ada491c1bedd4e982b5a12a" category="image-alt">Sostituire una ventola</block>
+  <block id="732cb0105e10dcf3046c4f8dd9a5a991" category="image-alt">Sostituire la batteria NVRAM</block>
+  <block id="ca80c728e158c474fa562e4e6fe53868" category="image-alt">Sostituire l'alimentatore</block>
+  <block id="ba465a4963e9d81b0df00697f6765e53" category="image-alt">Sostituire la batteria RTC</block>
+  <block id="b64d12e71baab796101791fd15a05a3d" category="image-alt">Cablaggio cluster a due nodi senza switch</block>
+  <block id="9405a4b49345c23900c5d7b5d872d67a" category="image-alt">Cablaggio di rete cluster commutato</block>
+  <block id="2808a423f10e955f0c8304464c9f2414" category="image-alt">Collegare NS224 ripiani ai controller</block>
+  <block id="c0ec9acb24ae98cfebde995d130a61a6" category="image-alt">Collegare tre ripiani NS224 ai controller</block>
+  <block id="92f7f93ee79f5a69c599aa1657e9464d" category="inline-image-macro">Cavo di rete ottica SFP</block>
+  <block id="2fd2c03db6de3bb625cb5f3d864f2dc0" category="paragraph"><block ref="2fd2c03db6de3bb625cb5f3d864f2dc0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40583e3c9e34e396cefb248dc9173b2d" category="image-alt">Cavo LC rete Fibre Channel</block>
+  <block id="c81e616187fdaca7623c438cb82e7556" category="image-alt">Animazione del cablaggio di rete unificato del cluster senza switch a due nodi</block>
+  <block id="44fd0bb5c642a9c9019ef389713404b7" category="image-alt">Cluster senza switch a due nodi. Animazione del cablaggio di rete Eternet</block>
+  <block id="ed839f063b04ef2bf205198607e99c45" category="image-alt">Animazione del cablaggio di rete unificato del cluster commutato</block>
+  <block id="9aa93e3b751066980500f1c3a9b9a3ad" category="image-alt">Animazione del cablaggio di rete Ethernet del cluster commutato</block>
+  <block id="a288981c3d3562c19205360c4a1975aa" category="image-alt">Sostituire la batteria RTC</block>
+  <block id="080a22aca65cc690a4adc58019e01c5b" category="image-alt">Rimozione dei bracci di gestione dei cavi</block>
+  <block id="415d68191d2fba8f12396142cd83b078" category="image-alt">Rimozione o sostituzione del modulo di caching</block>
+  <block id="fc29ed0d741870e4e8c36ca82510cf9a" category="image-alt">Rimuovere e sostituire il modulo di caching</block>
+  <block id="6bc6ce8422771329317122532e3badfd" category="image-alt">Rimuovere e sostituire il modulo di caching</block>
+  <block id="88d9a1b17863a743c5d31333c8bd6c82" category="image-alt">Rimuovere il riser vuoto</block>
+  <block id="8edb2beda5152e63e95d47b37fce7aa7" category="image-alt">Rimuovere la scheda mezzanine</block>
+  <block id="3e86dd6511e223ecedd044d86cd934bf" category="image-alt">Schema di cablaggio del cluster senza switch a due nodi</block>
+  <block id="2d2cf47916959433721b7cc7d46cdea2" category="image-alt">Schema del cablaggio di rete del quadro strumenti commutato</block>
+  <block id="f9fdbcb98f873b6faf3dd8bc1752740e" category="image-alt">Diagramma di cablaggio dei tre ripiani DS224C</block>
+  <block id="4af594348d1cc40a4fa6849ea04fd49a" category="image-alt">Etichetta di avvertenza del peso di sollevamento</block>
+  <block id="3f4027780297605ef158a649078063e9" category="image-alt">Collegare i bracci di gestione dei cavi</block>
+  <block id="e84bd7a7cafaabc7b1743876dcc73c70" category="image-alt">Schema di cablaggio composito cluster senza switch a due nodi</block>
+  <block id="0372c9caab5ee11faf1ffac3ef3c46fa" category="inline-image-macro">Schema di cablaggio composito del cluster commutato</block>
+  <block id="009e65f17aa2f40deb1c718bea3bf98b" category="paragraph"><block ref="009e65f17aa2f40deb1c718bea3bf98b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
