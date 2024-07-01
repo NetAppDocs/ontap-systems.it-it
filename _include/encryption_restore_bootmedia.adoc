@@ -262,5 +262,5 @@ Utilizzare la query della chiave di gestione delle chiavi di protezione per veri
 . Collegare il cavo della console al controller partner.
 . Restituire il controller utilizzando `storage failover giveback -fromnode local` comando.
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
-. Ripristinare AutoSupport se è stato disattivato utilizzando `system node autosupport invoke -node * -type all -message MAINT=END`
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi utilizzando `system node autosupport invoke -node * -type all -message MAINT=END`
 

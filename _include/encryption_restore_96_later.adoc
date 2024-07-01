@@ -64,7 +64,6 @@ Esempio di dati di backup:
 +
 Il sistema si avvia in attesa di giveback... prompt.
 
-. Spostare il cavo della console sul controller partner e accedere come "admin".
 . Verificare che il controller di destinazione sia pronto per il giveback con `storage failover show` comando.
 . Giveback solo il CFO si aggrega con `storage failover giveback -fromnode local -only-cfo-aggregates true` comando.
 +

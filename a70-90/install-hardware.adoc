@@ -1,0 +1,44 @@
+---
+permalink: a70-90/install-hardware.html 
+sidebar: sidebar 
+keywords: aff a70, a90, install hardware, telco rack 
+summary: Installare il sistema di archiviazione in un cabinet o in un rack per telecomunicazioni. 
+---
+= Installare la bulloneria - AFF A70, AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le seguenti istruzioni descrivono come installare l'hardware in un cabinet vuoto o in un rack per telecomunicazioni. Saltare questo passaggio se il cabinet è pre-compilato.
+
+.Prima di iniziare
+* È necessario consultare il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"] documento e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Le istruzioni devono essere imballate con il kit guida.
+* È necessario essere consapevoli dei problemi di sicurezza associati al peso della piattaforma e del ripiano.
+
+
+.Fasi
+. Montare i kit guide per la piattaforma e i ripiani, secondo necessità, seguendo le istruzioni incluse nei kit.
+. Installare e fissare la piattaforma nell'armadietto o nel rack per telecomunicazioni:
++
+.. Posizionare la piattaforma sulle guide al centro del cabinet o del rack per telecomunicazioni, quindi sostenere la piattaforma dal basso e farla scorrere in posizione.
+.. Fissare la piattaforma all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio incluse.
+
+
+. Installazione dello shelf o degli shelf:
++
+.. Posizionare la parte posteriore del ripiano sulle guide, quindi sostenere il ripiano dal basso e farlo scorrere nell'armadietto o nel rack per telecomunicazioni.
++
+Se si installano più shelf, posizionare il primo shelf direttamente sopra i controller. Posizionare il secondo ripiano direttamente sotto i controller. Ripetere questo modello per tutti gli shelf di dischi aggiuntivi.
+
+.. Fissare il ripiano all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio incluse.
+
+
+. Collegare i due dispositivi di gestione dei cavi al retro dei controller.
++
+image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[Installare il dispositivo di gestione dei cavi]
+
+. Fissare il frontalino alla parte anteriore della piattaforma.
+

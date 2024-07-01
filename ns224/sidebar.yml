@@ -6,7 +6,27 @@ entries:
   pdf-filename: Installazione shelf NS224 e cavo
   entries:
   - title: Shelf hot-add
-    url: "/ns224/hot-add-shelf.html"
+    entries:
+    - title: Workflow con aggiunta a caldo
+      url: "/ns224/hot-add-shelf-overview.html"
+    - title: Requisiti e Best practice
+      url: "/ns224/requirements-hot-add-shelf.html"
+    - title: Preparare l'aggiunta a caldo
+      url: "/ns224/prepare-hot-add-shelf.html"
+    - title: Installare lo shelf per l'aggiunta a caldo
+      url: "/ns224/install-hot-add-shelf.html"
+    - title: Ripiano per cavi per aggiunta a caldo
+      entries:
+      - title: Panoramica dei cavi
+        url: "/ns224/cable-overview-hot-add-shelf.html"
+      - title: Sistemi AFF
+        url: "/ns224/cable-aff-systems-hot-add-shelf.html"
+      - title: Sistemi ASA
+        url: "/ns224/cable-asa-systems-hot-add-shelf.html"
+      - title: Sistemi di fine disponibilità
+        url: "/ns224/cable-eoa-systems-hot-add-shelf.html"
+    - title: Aggiunta a caldo completa
+      url: "/ns224/complete-hot-add-shelf.html"
   - title: Modificare l'ID dello shelf
     url: "/ns224/change-shelf-id.html"
   - title: Shelf di cavi come storage collegato allo switch

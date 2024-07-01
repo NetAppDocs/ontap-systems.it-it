@@ -1,0 +1,37 @@
+= 
+:allow-uri-read: 
+
+
+Per aggiungere storage, è possibile aggiungere a caldo un massimo di uno shelf da NS224 a una coppia ha AFF A250 o AFF C250.
+
+.Prima di iniziare
+* È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
+* È necessario aver completato le procedure applicabili in link:prepare-hot-add-shelf.html["Preparare l'aggiunta a caldo di uno shelf"].
+* È necessario aver installato gli scaffali, acceso e impostato gli ID degli scaffali come descritto in link:prepare-hot-add-shelf.html["Installare uno shelf per un'aggiunta a caldo"].
+
+
+.A proposito di questa attività
+Vista dal retro dello chassis della piattaforma, la porta della scheda compatibile con RoCE a sinistra è la porta "a" (e1a) e la porta a destra è la porta "b" (e1b).
+
+.Fasi
+. Cablare i collegamenti dello shelf:
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a (e1a).
+.. Porta NSM A del ripiano per cavi e0b allo slot controller B 1 porta b (e1b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B 1 porta a (e1a).
+.. Porta NSM B del ripiano per cavi e0b allo slot a del controller 1 porta b (e1b). + la seguente illustrazione mostra il cablaggio dello shelf una volta completato.
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cablaggio per AFF A250]
+
+
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+.Quali sono le prossime novità?
+Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco. Andare a link:complete-hot-add-shelf.html["Completare l'aggiunta a caldo"].
+
+In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

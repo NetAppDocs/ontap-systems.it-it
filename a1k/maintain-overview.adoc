@@ -1,0 +1,74 @@
+---
+permalink: a1k/maintain-overview.html 
+sidebar: sidebar 
+keywords: aff a1k maintenance, maintenance, repairing a1k, repairing aff a1k, replace aff a1k components, replace aff a1k components 
+summary: 'Manutenzione dell"hardware del AFF A1K' 
+---
+= Gestire l'hardware AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il sistema di archiviazione AFF A1K, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
+
+
+
+== Supporto di boot
+
+Il supporto di avvio memorizza una serie primaria e secondaria di file di immagine ONTAP che il sistema utilizza all'avvio.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla le unità ed esegue il software del sistema operativo ONTAP.
+
+
+
+== DIMM
+
+Un modulo DIMM (Dual in-line Memory Module) è un tipo di memoria per computer. Vengono installati per aggiungere memoria di sistema a una scheda madre del controller.
+
+
+
+== Ventola
+
+Una ventola raffredda la centralina.
+
+
+
+== NVRAM
+
+La NVRAM (non-volatile Random Access Memory) è un modulo che consente al controller di proteggere e salvare i dati in-flight in caso di interruzione dell'alimentazione del sistema. L'ID di sistema risiede nel modulo NVRAM. Una volta sostituito, il controller presuppone il nuovo ID di sistema dal modulo NVRAM sostitutivo.
+
+
+
+== Batteria NV
+
+La batteria NVRAM alimenta il modulo NVRAM mentre i dati in-flight vengono trasferiti nella memoria flash in seguito a un'interruzione dell'alimentazione.
+
+
+
+== Modulo i/O.
+
+Il modulo i/o (modulo Input/Output) è un componente hardware che funge da intermediario tra il controller e vari dispositivi o sistemi che devono scambiare dati con il controller.
+
+
+
+== Alimentatore
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in un controller.
+
+
+
+== Batteria con orologio in tempo reale
+
+Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.
+
+
+
+== Modulo di gestione del sistema
+
+Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un laptop per scopi di manutenzione del controller o del sistema. Il modulo di gestione del sistema contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).

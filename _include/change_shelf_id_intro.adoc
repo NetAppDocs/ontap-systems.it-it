@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+.Prima di iniziare
+* Se ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire i dati), è necessario verificare che tutti i dischi nello shelf siano privi di proprietà, parti di ricambio o parte di aggregati non allineati.
++
+È possibile verificare lo stato dei dischi utilizzando `storage disk show -shelf _shelf_number_` comando. Output in `Container Type` viene visualizzata la colonna `spare` oppure `broken` se si tratta di un disco guasto. Inoltre, il `Container Name` e. `Owner` le colonne devono avere un trattino.
+
+* È necessaria una graffetta con un lato raddrizzato o una penna a sfera con punta stretta.
++
+Utilizzare la graffetta o la penna a sfera per accedere al pulsante ID dello shelf attraverso il piccolo foro, a destra dei LED, nel pannello ODP (Operator Display Panel).
+
+
+
+.A proposito di questa attività
+* Un ID shelf valido va da 00 a 99.
+* Gli shelf ID devono essere univoci all'interno di una coppia ha.
+* Per rendere effettivo l'ID dello shelf, è necessario spegnere e riaccendere uno shelf (scollegare entrambi i cavi di alimentazione, attendere il tempo appropriato e ricollegarli).
++
+Il tempo di attesa prima di ricollegare i cavi di alimentazione dipende dallo stato di ONTAP, come descritto più avanti in questa procedura.
+
++
+
+NOTE: Gli shelf NS224 non dispongono di interruttori di alimentazione sugli alimentatori.
+
+

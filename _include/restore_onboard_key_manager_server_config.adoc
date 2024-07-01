@@ -1,0 +1,165 @@
+= 
+:allow-uri-read: 
+
+
+Ripristinare la configurazione del gestore delle chiavi integrato dal menu di avvio ONATP.
+
+.Prima di iniziare
+Durante il ripristino della configurazione OKM sono necessarie le seguenti informazioni:
+
+* Passphrase a livello di cluster immessa https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nse-task.html["consentendo la gestione delle chiavi integrata"].
+* https://docs.netapp.com/us-en/ontap/encryption-at-rest/backup-key-management-information-manual-task.html["Informazioni di backup per il Key Manager integrato"].
+* Eseguire la https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_verify_onboard_key_management_backup_and_cluster-wide_passphrase["Come verificare il backup della gestione delle chiavi integrata e la passphrase a livello del cluster"] procedura prima di procedere.
+
+
+.Fasi
+. Dal menu di avvio di ONTAP, selezionare l'opzione 10:
++
+[listing]
+----
+
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? _10_
+
+----
+. Confermare la continuazione del processo.
+`This option must be used only in disaster recovery procedures. Are you sure? (y or n):` _y_
+. Inserire due volte la passphrase a livello di cluster.
++
+
+NOTE: Quando si inserisce la passphrase, la console non visualizza alcun input.
+
++
+`Enter the passphrase for onboard key management:`
+
++
+`Enter the passphrase again to confirm:`
+
+. Immettere le informazioni di backup. Incollare l'intero contenuto dalla riga DI BACKUP BEGIN attraverso la riga di BACKUP FINALE.
++
+Premere due volte il tasto invio alla fine dell'immissione.
+
++
+[listing]
+----
+
+
+Enter the backup data:
+
+--------------------------BEGIN BACKUP--------------------------
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+3456789012345678901234567890123456789012345678901234567890123456
+4567890123456789012345678901234567890123456789012345678901234567
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+---------------------------END BACKUP---------------------------
+
+----
+. Il processo di ripristino verrà completato.
++
+[listing]
+----
+
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete recovery process.
+*
+* Run the "security key-manager onboard sync" command to synchronize the key database after the node reboots.
+***********************************************************************************
+
+----
++
+
+WARNING: Non procedere se l'output visualizzato è diverso da `Successfully recovered keymanager secrets`. Eseguire la risoluzione dei problemi per correggere l'errore.
+
+. Selezionare l'opzione 1 dal menu di avvio per continuare l'avvio in ONTAP.
++
+[listing]
+----
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete the recovery process.
+*
+***********************************************************************************
+
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 1
+
+----
+. Verificare che la console del controller venga visualizzata `Waiting for giveback...(Press Ctrl-C to abort wait)`
+. Dal nodo partner, eseguire il giveback per il controller partner: _Storage failover giveback -fromnode local -only-cfo-Aggregates true_
+. Una volta avviato solo con l'aggregato CFO, eseguire il comando _Security key-manager onboard sync​​​​​​​_:
+. Inserisci la passphrase a livello di cluster per Onboard Key Manager:
++
+[listing]
+----
+
+Enter the cluster-wide passphrase for the Onboard Key Manager:
+
+All offline encrypted volumes will be brought online and the corresponding volume encryption keys (VEKs) will be restored automatically within 10 minutes. If any offline encrypted volumes are not brought online automatically, they can be brought online manually using the "volume online -vserver <vserver> -volume <volume_name>" command.
+
+----
+. Assicurarsi che tutte le chiavi siano sincronizzate: _Query chiave gestore chiavi di sicurezza -ripristinato false_
++
+`There are no entries matching your query.`
+
++
+
+NOTE: Nessun risultato dovrebbe comparire quando si filtra per false nel parametro ripristinato.
+
+. Giveback del nodo dal partner: _Storage failover giveback -fromnode local_
+

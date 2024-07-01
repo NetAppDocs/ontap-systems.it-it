@@ -1,0 +1,35 @@
+---
+permalink: ns224/complete-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, complete, drive, hot-add an ns224 drive shelf 
+summary: 'Se l"assegnazione automatica dei dischi è stata disattivata durante la preparazione dell"aggiunta a caldo dello shelf di dischi NS224, è necessario assegnare manualmente la proprietà dei dischi e, se necessario, riabilitare l"assegnazione automatica dei dischi.' 
+---
+= Completa l'aggiunta a caldo - NS224 ripiani
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se hai disattivato l'assegnazione automatica dei dischi come parte della preparazione per l'aggiunta a caldo dello shelf NS224, devi assegnare manualmente la proprietà dei dischi e riattivare l'assegnazione automatica dei dischi, se necessario.
+
+.Prima di iniziare
+È necessario aver già collegato lo shelf come indicato per la coppia ha. Vedere link:cable-overview-hot-add-shelf.html["Panoramica del cablaggio per un hot-add"].
+
+.Fasi
+. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
++
+È possibile immettere il comando su uno dei controller.
+
+. Assegnare ciascun disco: `storage disk assign -disk _disk_name_ -owner _owner_name_`
++
+È possibile immettere il comando su uno dei controller.
+
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node _node_name_ -autoassign on`
++
+È necessario riattivare l'assegnazione automatica della guida su entrambi i controller.
+
+

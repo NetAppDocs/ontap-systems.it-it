@@ -1,0 +1,34 @@
+---
+permalink: a1k/install-overview.html 
+sidebar: sidebar 
+keywords: Installation, deployment, Install, deploy, Installing, deploying, a1k 
+summary: Segui questi passaggi ad alto livello per installare e configurare il tuo sistema storage AFF A1K e implementarlo come nodo nel tuo sistema ONTAP. 
+---
+= Flusso di lavoro di installazione - AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Segui queste istruzioni per installare, configurare e implementare il tuo sistema di storage AFF A1K.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:install-prepare.html["Preparazione per l'installazione"]
+[role="quick-margin-para"]
+Per prepararsi all'installazione, è necessario preparare il sito, controllare i requisiti ambientali ed elettrici e verificare che vi sia spazio sufficiente nel rack. Quindi, disimballare l'apparecchiatura, confrontarne il contenuto con la distinta di imballaggio e registrare l'hardware per accedere ai vantaggi del supporto.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:install-hardware.html["Installare l'hardware"]
+[role="quick-margin-para"]
+Per installare l'hardware, installare i kit guide per la piattaforma e gli scaffali, quindi installare e fissare la piattaforma nell'armadietto o nel rack per telecomunicazioni. Quindi, far scorrere i ripiani sulle guide. Infine, collegare i dispositivi di gestione dei cavi alla parte posteriore della piattaforma per l'instradamento organizzato dei cavi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:install-cable.html["Bulloneria dei cavi"]
+[role="quick-margin-para"]
+Per collegare l'hardware, collegare prima i controller alla rete e poi i controller agli scaffali.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:install-power-hardware.html["Accendere il sistema di archiviazione"]
+[role="quick-margin-para"]
+Per accendere il sistema, accendere ciascun shelf NS224 e assegnare un ID shelf univoco per assicurarsi che ogni shelf sia separato all'interno del setup. Quindi, accendere i controller. Infine, utilizzare il dispositivo di fissaggio in dotazione per fissare i cavi di alimentazione su ciascun alimentatore.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:install-complete.html["Completare la configurazione del sistema storage"]
+[role="quick-margin-para"]
+Per completare la configurazione del sistema, accedere all'interfaccia basata sul Web, System Manager, puntando un browser all'indirizzo IP del controller. Una procedura guidata di installazione consente di iniziare a utilizzare la configurazione del cluster. In alternativa, è possibile utilizzare anche l'interfaccia della riga di comando (CLI).

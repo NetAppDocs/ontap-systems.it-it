@@ -1,0 +1,299 @@
+---
+permalink: ns224/prepare-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement, preparation, applicable, complete, drive, hot-add an ns224 drive shelf 
+summary: È possibile aggiungere a caldo uno shelf di dischi NS224 dopo che la coppia ha soddisfa determinati requisiti e dopo che le attività di preparazione applicabili alla coppia ha sono state completate. 
+---
+= Preparazione per un hot-add - NS224 ripiani
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Completa le attività di preparazione applicabili alla tua coppia ha prima di aggiungere a caldo uno shelf NS224.
+
+Una volta completate le attività di preparazione applicabili, passare a link:prepare-hot-add-shelf.html["Installare uno shelf per un'aggiunta a caldo"].
+
+
+
+== Installare schede PCIe o moduli i/o compatibili con RoCE
+
+Se il tuo modello di piattaforma supporta l'utilizzo di schede o moduli i/o PCIe compatibili con RoCE, la coppia ha deve disporre di un numero sufficiente di porte Ethernet compatibili con RoCE per supportare il numero di shelf che stai aggiungendo a caldo.
+
+.Fasi
+. Per ogni shelf che stai aggiungendo a caldo, verifica che esistano due porte compatibili con RoCE su ogni controller.
++
+Queste porte possono essere integrate nei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi, o su moduli i/o compatibili con RoCE, come supportato dal modello di piattaforma.
+
+. Se la coppia ha non dispone di porte RoCE sufficienti, installare le schede PCIe aggiuntive o i moduli i/o negli slot del controller corretti, come supportato dal modello di piattaforma in uso.
++
+.. Identificare gli slot del controller corretti per il modello di piattaforma in uso. Vedere https://hwu.netapp.com["NetApp Hardware Universe"^].
+.. Consultare la documentazione del modello di piattaforma per le istruzioni di installazione della scheda PCIe o del modulo i/O.
+
+
+
+
+
+
+== Configurare le porte compatibili con RoCE per l'utilizzo dello storage
+
+Se la coppia ha dispone di porte Ethernet RoCE non dedicate utilizzate per l'aggiunta a caldo di uno shelf NS224, è necessario configurare le porte per l'utilizzo dello storage (non per l'utilizzo di networking).
+
+.Prima di iniziare
+* Accertarsi di aver installato in ogni controller eventuali schede PCIe o moduli i/o aggiuntivi compatibili con RoCE.
+
+
+.A proposito di questa attività
+* Per alcuni modelli di piattaforma, quando una scheda PCIe o un modulo i/o compatibile RoCE viene installato in uno slot supportato su un controller, le porte vengono automaticamente impostate per impostazione predefinita sull'utilizzo dello storage (invece che del networking); tuttavia, si consiglia di completare la seguente procedura per verificare che le porte compatibili con RoCE siano configurate per l'utilizzo dello storage.
+* Se si stabilisce che le porte non dedicate compatibili con RoCE nella coppia ha non sono configurate per l'utilizzo dello storage, la configurazione delle porte non comporta interruzioni.
++
+A seconda della versione di ONTAP in esecuzione nella coppia ha, potrebbe essere necessario riavviare i controller:
+
++
+** Se la coppia ha esegue una versione di ONTAP 9.6, è necessario riavviare i controller, uno alla volta.
+** Se la coppia ha esegue ONTAP 9.7 o versione successiva, non è necessario riavviare i controller, a meno che uno o entrambi i controller non siano in modalità di manutenzione. Questa procedura presuppone che nessuno dei controller sia in modalità di manutenzione.
+
+
+* Se in futuro sarà necessario modificare le porte dall'utilizzo dello storage all'utilizzo della rete, immettere il comando , `storage port modify -node _node_name_ -port _port_name_ -mode network`.
+
+
+.Fasi
+. Accedere al cluster utilizzando SSH o la porta seriale della console.
+. Inserisci il seguente comando per verificare se le porte non dedicate nella coppia ha sono configurate per l'utilizzo dello storage:
++
+`storage port show`
+
++
+** Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `storage` in `Mode` colonna.
+** Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?` viene anche visualizzato `enabled` in `State` colonna.
++
+[NOTE]
+====
+Quando le porte non dedicate non sono configurate per l'utilizzo dello storage, l'output del comando visualizza quanto segue:
+
+*** Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `network` in `Mode` colonna.
+*** Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?`` viene anche visualizzato `disabled` in `State` colonna.
+
+
+====
+
+
+. Se le porte non dedicate sono configurate per l'utilizzo dello storage, la procedura è terminata.
++
+In caso contrario, è necessario configurare le porte completando i passaggi da 4 a 7.
+
+. Configurare le porte non dedicate per l'utilizzo dello storage su uno dei controller:
++
+È necessario ripetere il comando applicabile per ciascuna porta che si sta configurando.
+
++
+[cols="1,3"]
+|===
+| Se la coppia ha è in esecuzione... | Utilizzare questo comando... 
+
+
+ a| 
+ONTAP 9.8 o versione successiva
+ a| 
+`storage port modify -node _node_name_ -port _port_name_ -mode storage`
+
+
+
+ a| 
+ONTAP 9.7 o 9.6
+ a| 
+`storage port enable -node _node_name_ -port _port_name_`
+
+|===
+. Se la coppia ha esegue ONTAP 9,6, riavviare il controller in modo che le modifiche alle porte diventino effettive: `system node reboot -node _node_name_ -reason _reason_for_the_reboot_`.
++
+In caso contrario, passare alla fase successiva.
+
++
+
+NOTE: Il riavvio può richiedere fino a 15 minuti.
+
+. Ripetere i passaggi per il secondo controller:
++
+[cols="1,3"]
+|===
+| Se la coppia ha è in esecuzione... | Quindi... 
+
+
+ a| 
+ONTAP 9.7 o versione successiva
+ a| 
+.. Ripetere il punto 4.
+.. Passare alla fase 7.
+
+
+
+
+ a| 
+ONTAP 9.6
+ a| 
+.. Ripetere i passaggi 4 e 5.
++
+
+NOTE: Il primo controller deve aver già completato il riavvio.
+
+.. Passare alla fase 7.
+
+
+|===
+. Verificare che le porte non dedicate su entrambi i controller siano configurate per l'utilizzo dello storage: `storage port show`
++
+** Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `storage` in `Mode` colonna.
+** Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?` viene anche visualizzato `enabled` in `State` colonna.
+
+
+
+
+
+
+== Possibilità di recuperare gli scaffali esistenti
+
+Prima di aggiungere a caldo altri shelf, a seconda del modello di piattaforma in uso, potrebbe essere necessario ricollocare uno shelf esistente (dopo aver installato le schede PCIe o i moduli i/o aggiuntivi compatibili RoCE) su due set di porte in slot diversi, per garantire la resilienza in caso di guasto a uno slot.
+
+.Prima di iniziare
+* Accertarsi di aver installato in ogni controller eventuali schede PCIe o moduli i/o aggiuntivi compatibili con RoCE.
+* Assicurarsi che le porte non dedicate sulle schede PCIe RoCE o sui moduli i/o installati siano configurate per l'utilizzo dello storage.
+
+
+.A proposito di questa attività
+* La ricablaggio delle connessioni delle porte è una procedura senza interruzioni quando lo shelf dispone di connettività multipath-ha.
+* Spostare un cavo alla volta per mantenere sempre la connettività al ripiano durante questa procedura.
++
+
+NOTE: Lo spostamento di un cavo non richiede alcun tempo di attesa tra lo scollegamento del cavo da una porta e il collegamento a un'altra porta.
+
+* Se necessario, fare riferimento alle illustrazioni del cablaggio del ripiano per il modello di piattaforma in uso nella link:cable-overview-hot-add-shelf.html["Panoramica del cablaggio per un hot-add"].
+
+
+.Fasi
+. Possibilità di recuperare i collegamenti dello shelf esistente su due set di porte compatibili RoCE in slot diversi, in base al modello di piattaforma utilizzato.
+
+
+[role="tabbed-block"]
+====
+.AFF A1K
+--
+Fai una delle seguenti operazioni se stai aggiungendo a caldo un secondo ripiano o un quarto ripiano.
+
+
+NOTE: Se disponi di una coppia ha AFF A1K e stai aggiungendo a caldo un terzo shelf e installando un terzo o quarto modulo i/o compatibile RoCE in ciascun controller, il terzo shelf è cablato solo al terzo o al quarto modulo i/O. Non è necessario recuperare gli scaffali esistenti.
+
+* Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 10 di ciascun controller.
++
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
+
++
+.. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e10b) dello slot 10.
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+* Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 9 e nello slot 8 di ciascun controller.
++
+Le fasi secondarie presuppongono che il terzo ripiano sia cablato a un modulo i/o compatibile con RoCE nello slot 9 su ciascun controller.
+
++
+.. Sul controller A, spostare il cavo dalla porta b (e9b) dello slot 9 alla porta b (e8b) dello slot 8.
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+--
+.AFF A70 o AFF A90
+--
+Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 8 di ciascun controller.
+
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
+
+. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e8b) dello slot 8.
+. Ripetere lo stesso cavo per spostare il controller B.
+
+
+--
+.AFF A800 o AFF C800
+--
+Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i due set di porte compatibili RoCE nello slot 5 e nello slot 3 di ciascun controller.
+
+I passaggi secondari presuppongono che lo shelf esistente sia collegato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.
+
+. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
+. Ripetere lo stesso cavo per spostare il controller B.
+
+
+--
+.AFF A700
+--
+Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i due set di porte compatibili RoCE nello slot 3 e nello slot 7 di ciascun controller.
+
+I passaggi secondari presuppongono che lo shelf esistente sia collegato ai moduli i/o compatibili con RoCE nello slot 3 di ciascun controller.
+
+. Sul controller A, spostare il cavo dallo slot 3, porta b (e3b) allo slot 7, porta b (e7b).
+. Ripetere lo stesso cavo per spostare il controller B.
+
+
+--
+.AFF A400 o AFF C400
+--
+Se si sta aggiungendo a caldo un secondo ripiano, a seconda del modello di piattaforma, eseguire una delle seguenti operazioni:
+
+* Su AFF A400:
++
+È possibile recuperare il primo shelf attraverso i due set di porte compatibili RoCE, integrate e0c/e0d e nello slot 5, su ciascun controller.
+
++
+Questa procedura secondaria presuppone che lo shelf esistente sia collegato via cavo a porte integrate e0c/e0d compatibili con RoCE su ciascun controller.
+
++
+.. Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+* Su AFF C400:
++
+Possibilità di recuperare il primo shelf sui due set di porte compatibili con RoCE negli slot 4 e 5, su ciascun controller.
+
++
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a porte compatibili con RoCE nello slot 4 su ciascun controller.
+
++
+.. Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+--
+====
+. Verificare che il ripiano cablato sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+
+
+== Disattivare l'assegnazione automatica della guida
+
+Se stai assegnando manualmente la proprietà dei dischi per lo shelf NS224 che stai aggiungendo a caldo, devi disabilitare l'assegnazione automatica dei dischi, se è attivata.
+
+Se non si è certi della necessità di assegnare manualmente la proprietà delle unità o se si desidera comprendere l'assegnazione automatica dei criteri di proprietà delle unità per il sistema di storage in uso, visitare il sito Web all'indirizzo https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Informazioni sull'assegnazione automatica della proprietà del disco"^].
+
+.Fasi
+. Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
++
+È possibile immettere il comando su uno dei nodi.
+
++
+Se l'assegnazione automatica dell'unità è attivata, l'uscita viene visualizzata `on` nella `Auto Assign` colonna (per ogni nodo).
+
+. Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node _node_name_ -autoassign off`
++
+È necessario disattivare l'assegnazione automatica delle unità su entrambi i nodi.
+
+

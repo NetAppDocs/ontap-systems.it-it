@@ -34,9 +34,9 @@ La modalità di sostituzione del disco dipende dal modo in cui viene utilizzato 
 
 
 .A proposito di questa attività
-Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
+Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non aggiornate.
 
-Quando si sostituiscono più dischi, è necessario attendere un minuto tra la rimozione di ciascun disco guasto e l'inserimento dell'unità disco sostitutiva per consentire al sistema di storage di riconoscere l'esistenza di ciascun nuovo disco.
+Quando si sostituiscono più unità disco, è necessario attendere 70 secondi tra la rimozione di ciascuna unità disco guasta e l'inserimento dell'unità disco sostitutiva per consentire al sistema di archiviazione di riconoscere l'esistenza di ogni nuovo disco.
 
 .Fasi
 . Se si desidera assegnare manualmente la proprietà del disco per il disco sostitutivo, è necessario disattivare l'assegnazione automatica del disco sostitutivo, se abilitato
@@ -81,7 +81,7 @@ Questo consente al sistema di riconoscere che un disco è stato rimosso.
 +
 .. Con la maniglia della camma in posizione aperta, inserire l'unità sostitutiva con entrambe le mani.
 .. Premere fino all'arresto del disco.
-.. Chiudere la maniglia della camma in modo che l'unità sia completamente inserita nel piano intermedio e la maniglia scatti in posizione.
+.. Chiudere la maniglia della camma in modo che l'unità sia completamente alloggiata nel piano interno e che la maniglia scatti in posizione.
 +
 Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
 
@@ -98,7 +98,7 @@ Quando il LED di attività del disco è acceso, significa che il disco è alimen
 +
 È possibile immettere il comando su entrambi i moduli controller.
 
-.. Assegnare ciascun disco: `storage disk assign -disk disk_name -owner owner_name`
+.. Assegnare ciascuna unità: `storage disk assign -disk disk_name -owner node_name`
 +
 È possibile immettere il comando su entrambi i moduli controller.
 

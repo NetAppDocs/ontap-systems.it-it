@@ -27,24 +27,32 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 +
 https://hwu.netapp.com["NetApp Hardware Universe"^]
 
-* La coppia ha deve disporre di un numero sufficiente di porte compatibili con RoCE per supportare il numero di shelf che si stanno aggiungendo a caldo.
+* La coppia ha deve disporre di porte Ethernet compatibili RoCE sufficienti per supportare il numero di shelf che si sta aggiungendo a caldo.
 +
-Per ogni shelf che si sta aggiungendo a caldo, sono necessarie almeno due porte compatibili con RoCE su ciascun controller. Queste porte possono essere integrate nei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi, o su moduli i/o compatibili con RoCE, come supportato dal modello di piattaforma.
+Per ogni shelf che stai aggiungendo a caldo, hai bisogno di due porte compatibili con RoCE su ogni controller. Queste porte possono essere integrate nei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi, o su moduli i/o compatibili con RoCE, come supportato dal modello di piattaforma.
 
 +
 Se la coppia ha non dispone di un numero sufficiente di porte compatibili con RoCE e il modello di piattaforma supporta l'utilizzo di schede PCIe o moduli i/o compatibili con RoCE, è necessario installare le schede o i moduli i/o aggiuntivi negli slot controller corretti, come supportato dal modello di piattaforma.
 
 +
+** Identificare gli slot del controller corretti per il modello di piattaforma in uso.
++
 https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+** Consultare la documentazione del modello di piattaforma per le istruzioni di installazione della scheda PCIe o del modulo i/O.
++
+https://docs.netapp.com/us-en/ontap-systems/index.html["Documentazione dei sistemi hardware ONTAP"]
 
 +
 [NOTE]
 ====
 Le porte non dedicate compatibili con RoCE devono essere configurate per l'utilizzo dello storage (non per l'utilizzo in rete).
 
-<<Preparare porte non dedicate compatibili con RoCE per un hot-add>>
+<<Prepare non-dedicated RoCE-capable ports for a hot-add>>
 
 ====
+
+
 * Se si dispone di una coppia ha AFF A700 e si sta aggiungendo a caldo lo shelf di dischi NS224 iniziale (non esiste uno shelf di dischi NS224 nella coppia ha), è necessario installare un modulo di dump core (X9170A, SSD NVMe da 1 TB) in ciascun controller per supportare i core dump (memorizzare i file core).
 +
 link:../fas9000/caching-module-and-core-dump-module-replace.html["Sostituire il modulo di caching o aggiungere/sostituire un modulo core dump -- AFF A700 e FAS9000"^]
@@ -121,12 +129,12 @@ NOTE: Gli aggiornamenti del firmware possono richiedere fino a 30 minuti.
 
 
 
-=== Preparare porte non dedicate compatibili con RoCE per un hot-add
+=== Preparare porte Ethernet non dedicate con funzionalità RoCE per un'aggiunta a caldo
 
-Se la coppia ha dispone di porte non dedicate compatibili con RoCE che si stanno utilizzando per aggiungere a caldo uno shelf di dischi NS224, è necessario assicurarsi che le porte siano configurate per l'utilizzo dello storage (non per l'utilizzo in rete). A seconda del modello di piattaforma, le porte compatibili con RoCE sono integrate nei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambe o su moduli i/o compatibili con RoCE.
+Se la coppia ha dispone di porte Ethernet RoCE non dedicate utilizzate per l'aggiunta a caldo di uno shelf di dischi da NS224, devi verificare che le porte siano configurate per l'utilizzo dello storage (non per l'utilizzo di networking).
 
 .Prima di iniziare
-È necessario aver soddisfatto i requisiti di sistema.
+È necessario soddisfare i requisiti di sistema di storage, inclusa l'installazione di eventuali schede PCIe RoCE aggiuntive di moduli di i/o in ogni controller.
 
 <<Requisiti per un hot-add>>
 
@@ -141,13 +149,15 @@ NOTE: Se la coppia ha esegue una versione di ONTAP 9.6, è necessario riavviare 
 
 NOTE: Se la coppia ha esegue ONTAP 9.7 o versione successiva, non è necessario riavviare i controller, a meno che uno o entrambi i controller non siano in modalità di manutenzione. Questa procedura presuppone che nessuno dei controller sia in modalità di manutenzione.
 
++
+
+NOTE: Per modificare le porte dall'utilizzo dello storage all'uso della rete, immettere il comando , `storage port modify -node _node_name_ -port _port_name_ -mode network`.
+
 
 
 .Fasi
+. Effettuare l'accesso al cluster utilizzando SSH o la porta seriale della console.
 . Verificare se le porte non dedicate della coppia ha sono configurate per l'utilizzo dello storage: `storage port show`
-+
-È possibile immettere il comando su entrambi i moduli controller.
-
 +
 Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `storage` in `Mode` colonna.
 
@@ -156,7 +166,7 @@ Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedi
 
 . Se le porte non dedicate sono configurate per l'utilizzo dello storage, la procedura è terminata.
 +
-In caso contrario, è necessario configurare le porte completando i passaggi da 3 a 6.
+In caso contrario, è necessario configurare le porte completando i passaggi da 4 a 7.
 
 +
 [NOTE]
@@ -181,17 +191,17 @@ Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedi
  a| 
 ONTAP 9.8 o versione successiva
  a| 
-`storage port modify -node node name -port port name -mode storage`
+`storage port modify -node _node_name_ -port _port_name_ -mode storage`
 
 
 
  a| 
 ONTAP 9.7 o 9.6
  a| 
-`storage port enable -node node name -port port name`
+`storage port enable -node _node_name_ -port _port_name_`
 
 |===
-. Se la coppia ha esegue ONTAP 9.6, riavviare il modulo controller in modo che le modifiche alla porta abbiano effetto: `system node reboot -node node name -reason reason for the reboot`
+. Se la coppia ha esegue ONTAP 9,6, riavviare il modulo controller in modo che le modifiche alle porte diventino effettive: `system node reboot -node _node_name_ -reason _reason_for_the_reboot_`.
 +
 In caso contrario, passare alla fase successiva.
 
@@ -209,8 +219,8 @@ NOTE: Il riavvio può richiedere fino a 15 minuti.
  a| 
 ONTAP 9.7 o versione successiva
  a| 
-.. Ripetere il punto 3.
-.. Passare alla fase 6.
+.. Ripetere il punto 4.
+.. Passare alla fase 7.
 
 
 
@@ -218,12 +228,12 @@ ONTAP 9.7 o versione successiva
  a| 
 ONTAP 9.6
  a| 
-.. Ripetere i passaggi 3 e 4.
+.. Ripetere i passaggi 4 e 5.
 +
 
 NOTE: Il primo controller deve aver già completato il riavvio.
 
-.. Passare alla fase 6.
+.. Passare alla fase 7.
 
 
 |===
@@ -241,35 +251,33 @@ Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedi
 
 
 
-=== Preparare una coppia AFF A700, AFF A800, AFF C800, AFF A400 o AFF C400 ha per aggiungere a caldo un secondo shelf
+=== Preparare la connettività degli shelf esistente prima di aggiungere a caldo altri shelf
 
-Se si dispone di una coppia AFF A700, AFF A800, AFF C800, AFF A400 o AFF C400 ha con uno shelf di dischi NS224 collegato a un set di porte compatibili con RoCE su ciascun controller, è necessario rieseguire lo shelf (Dopo aver installato le schede PCIe o i moduli i/o RoCE aggiuntivi) su entrambi i set di porte di ciascun controller, prima di aggiungere a caldo il secondo shelf.
+Prima di aggiungere a caldo altri shelf, a seconda del modello di piattaforma in uso, potrebbe essere necessario ricollocare uno shelf esistente (dopo aver installato le schede PCIe o i moduli i/o aggiuntivi compatibili RoCE) su due set di porte in slot diversi, per garantire la resilienza in caso di guasto a uno slot.
 
 .Prima di iniziare
-* È necessario aver soddisfatto i requisiti di sistema.
+* È necessario soddisfare i requisiti di sistema, inclusa l'installazione di eventuali schede PCIe RoCE aggiuntive o moduli di i/o in ogni controller.
 +
 <<Requisiti per un hot-add>>
 
-* È necessario aver attivato le porte delle schede PCIe compatibili con RoCE o dei moduli i/o installati.
+* È necessario aver verificato che le porte non dedicate sulle schede PCIe compatibili RoCE o sui moduli i/o installati siano configurate per l'utilizzo dello storage.
 +
-<<Preparare porte non dedicate compatibili con RoCE per un hot-add>>
+<<Prepare non-dedicated RoCE-capable ports for a hot-add>>
 
 
 
 .A proposito di questa attività
 * La ricablaggio delle connessioni delle porte è una procedura senza interruzioni quando lo shelf dispone di connettività multipath-ha.
-+
-È possibile recuperare il primo shelf su entrambi i set di porte di ciascun controller in modo che, quando si aggiunge a caldo il secondo shelf, entrambi gli shelf abbiano una connettività più resiliente.
-
-* Spostare un cavo alla volta per mantenere sempre la connettività allo shelf durante questa procedura.
-
-
-.Fasi
-. Possibilità di collegare le connessioni dello shelf esistente a entrambi i set di porte su ciascun controller, in base al modello di piattaforma in uso.
+* Spostare un cavo alla volta per mantenere sempre la connettività al ripiano durante questa procedura.
 +
 
 NOTE: Lo spostamento di un cavo non richiede alcun tempo di attesa tra lo scollegamento del cavo da una porta e il collegamento a un'altra porta.
 
+* Se disponi di una coppia ha AFF A1K e stai aggiungendo un terzo shelf e installando un terzo o quarto modulo i/o compatibile RoCE in ciascun controller, il terzo shelf è cablato solo al terzo o al terzo e quarto modulo i/O. Non è necessario recuperare gli scaffali esistenti.
+
+
+.Fasi
+. Possibilità di recuperare i collegamenti dello shelf esistente su due set di porte compatibili RoCE in slot diversi, in base al modello di piattaforma utilizzato.
 +
 [cols="1,3"]
 |===
@@ -277,62 +285,76 @@ NOTE: Lo spostamento di un cavo non richiede alcun tempo di attesa tra lo scolle
 
 
  a| 
-Coppia AFF A700 ha
+AFF A70 o AFF A90 ha Pair, con l'aggiunta a caldo di un secondo shelf
  a| 
+Possibilità di recuperare il primo shelf su entrambi i moduli i/o RoCE:
 
-NOTE: I passaggi secondari presuppongono che lo shelf esistente sia collegato ai moduli i/o compatibili con RoCE nello slot 3 di ciascun controller.
 
+NOTE: Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
+
+.. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e8b) dello slot 8.
+.. Ripetere lo stesso cavo per spostare il controller B.
++
 [NOTE]
 ====
-Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
+Se necessario, è possibile fare riferimento alle illustrazioni del cablaggio che mostrano uno shelf singolo esistente e lo shelf cablato, in una configurazione a due ripiani.
 
-<<Collegare uno shelf hot-add per una coppia AFF A700 ha>>
+<<Cablare uno shelf hot-add per una coppia ha AFF A70 o AFF A90>>
 
 ====
-.. Sul controller A, spostare il cavo dallo slot 3, porta b (e3b) allo slot 7, porta b (e7b).
+
+
+
+
+ a| 
+Coppia ha di AFF A1K e stiamo aggiungendo a caldo un secondo shelf
+ a| 
+Possibilità di recuperare il primo shelf su entrambi i moduli i/o RoCE:
+
+
+NOTE: Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
+
+.. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e10b) dello slot 10.
 .. Ripetere lo stesso cavo per spostare il controller B.
-
-
-
-
- a| 
-Coppia ha AFF A800 o AFF C800
- a| 
-
-NOTE: I passaggi secondari presuppongono che lo shelf esistente sia collegato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.
-
++
 [NOTE]
 ====
-Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
+Se necessario, è possibile fare riferimento alle illustrazioni del cablaggio che mostrano uno shelf singolo esistente e lo shelf cablato, in una configurazione a due ripiani.
 
-<<Cablare uno shelf hot-add per una coppia ha AFF A800 o AFF C800>>
+<<Cavo uno shelf hot-add per una coppia AFF A1K ha>>
 
 ====
-.. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
+
+
+
+
+ a| 
+Coppia ha di AFF A1K e stai aggiungendo un quarto shelf a caldo
+ a| 
+Possibilità di recuperare il terzo shelf attraverso i moduli i/o compatibili con R0CE nello slot 9 di ciascun controller:
+
+.. Sul controller A, spostare il cavo dalla porta b (e9b) dello slot 9 alla porta b (e8b) dello slot 8.
 .. Ripetere lo stesso cavo per spostare il controller B.
-
-
-
-
- a| 
-Coppia AFF A400 ha
- a| 
++
 [NOTE]
 ====
-Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
+Se necessario, è possibile fare riferimento alle illustrazioni del cablaggio che mostrano uno shelf singolo esistente e lo shelf cablato, in una configurazione a due ripiani.
 
-<<Collegare uno shelf hot-add per una coppia AFF A400 ha>>
+<<Cavo uno shelf hot-add per una coppia AFF A1K ha>>
 
 ====
-.. Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
+
+
+
+
+ a| 
+AFF C400 ha Pair e stai aggiungendo a caldo un secondo shelf
+ a| 
+È possibile riutilizzare il primo shelf in entrambi i set di porte compatibili RoCE su ciascun controller:
+
+.. Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
 .. Ripetere lo stesso cavo per spostare il controller B.
-
-
-
-
- a| 
-Coppia AFF C400 ha
- a| 
++
 [NOTE]
 ====
 Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
@@ -340,8 +362,69 @@ Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mos
 <<Collegare uno shelf hot-add per una coppia AFF C400 ha>>
 
 ====
-.. Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
+
+
+
+
+ a| 
+AFF A800 o AFF C800 ha Pair, con l'aggiunta a caldo di un secondo shelf
+ a| 
+È possibile riutilizzare il primo shelf in entrambi i set di porte compatibili RoCE su ciascun controller:
+
+
+NOTE: I passaggi secondari presuppongono che lo shelf esistente sia collegato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.
+
+.. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
 .. Ripetere lo stesso cavo per spostare il controller B.
++
+[NOTE]
+====
+Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
+
+<<Cablare uno shelf hot-add per una coppia ha AFF A800 o AFF C800>>
+
+====
+
+
+
+
+ a| 
+AFF A400 ha Pair e stai aggiungendo a caldo un secondo shelf
+ a| 
+È possibile riutilizzare il primo shelf in entrambi i set di porte compatibili RoCE su ciascun controller:
+
+.. Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
+.. Ripetere lo stesso cavo per spostare il controller B.
++
+[NOTE]
+====
+Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
+
+<<Collegare uno shelf hot-add per una coppia AFF A400 ha>>
+
+====
+
+
+
+
+ a| 
+AFF A700 ha Pair e stai aggiungendo a caldo un secondo shelf
+ a| 
+È possibile riutilizzare il primo shelf in entrambi i set di porte compatibili RoCE su ciascun controller:
+
+
+NOTE: I passaggi secondari presuppongono che lo shelf esistente sia collegato ai moduli i/o compatibili con RoCE nello slot 3 di ciascun controller.
+
+.. Sul controller A, spostare il cavo dallo slot 3, porta b (e3b) allo slot 7, porta b (e7b).
+.. Ripetere lo stesso cavo per spostare il controller B.
++
+[NOTE]
+====
+Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.
+
+<<Collegare uno shelf hot-add per una coppia AFF A700 ha>>
+
+====
 
 
 |===
@@ -366,36 +449,32 @@ Se si assegna manualmente la proprietà del disco per lo shelf di dischi NS224 c
 <<Requisiti per un hot-add>>
 
 .A proposito di questa attività
-È necessario assegnare manualmente la proprietà del disco se i dischi nello shelf sono di proprietà di entrambi i moduli controller della coppia ha.
+In caso di dubbi sull'assegnazione manuale della proprietà dei dischi o per informazioni sull'assegnazione automatica delle policy di proprietà dei dischi del sistema storage, consulta https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Informazioni sull'assegnazione automatica della proprietà del disco"^]
 
 .Fasi
 . Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
 +
-È possibile immettere il comando su entrambi i moduli controller.
+È possibile immettere il comando su uno dei nodi.
 
 +
-Se l'assegnazione automatica dei dischi è attivata, viene visualizzato l'output `on` in `Auto Assign` (per ciascun modulo controller).
+Se l'assegnazione automatica dell'unità è attivata, l'uscita viene visualizzata `on` nella `Auto Assign` colonna (per ogni nodo).
 
-. Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node node_name -autoassign off`
+. Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node _node_name_ -autoassign off`
 +
-È necessario disattivare l'assegnazione automatica dei dischi su entrambi i moduli controller.
+È necessario disattivare l'assegnazione automatica delle unità su entrambi i nodi.
 
 
 
 
 
-== Installare uno shelf di dischi per un'aggiunta a caldo
+== Installare uno shelf per un'aggiunta a caldo
 
-L'installazione di un nuovo shelf NS224 comporta l'installazione dello shelf in un rack o cabinet, il collegamento dei cavi di alimentazione (che si accende automaticamente sullo shelf) e l'impostazione dell'ID dello shelf.
+L'installazione di un nuovo shelf NS224 comporta l'installazione dello shelf in un rack o cabinet, il collegamento dei cavi di alimentazione (che si accendono automaticamente sullo shelf) e l'impostazione dell'ID dello shelf.
 
 .Prima di iniziare
-* È necessario aver soddisfatto i requisiti di sistema.
+* Assicurarsi di disporre di una graffetta con un lato raddrizzato o di una penna a sfera con punta stretta.
 +
-<<Requisiti per un hot-add>>
-
-* È necessario aver completato le procedure di preparazione applicabili.
-+
-<<Preparatevi per un'aggiunta a caldo>>
+Utilizzare la graffetta o la penna a sfera per accedere al pulsante ID ripiano dietro il pannello ODP (Operator Display Panel) durante la fase di modifica dell'ID ripiano.
 
 
 
@@ -451,15 +530,15 @@ Quando l'alimentazione viene ripristinata, i LED bicolore si illuminano di verde
 
 
 
-== Collegare uno shelf di dischi per un componente aggiuntivo a caldo
+== Cablare uno shelf per un'aggiunta a caldo
 
-È possibile collegare ogni shelf di dischi NS224 che si sta aggiungendo a caldo in modo che ogni shelf abbia due connessioni a ciascun modulo controller della coppia ha. A seconda del numero di shelf che si stanno aggiungendo a caldo e del modello di piattaforma, si utilizzano porte compatibili con RoCE sui controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi o su moduli i/o compatibili con RoCE.
+Ciascun shelf NS224 viene collegato via cavo a caldo in modo che ogni shelf disponga di due connessioni a ciascun controller nella coppia ha.
 
 
 
 === Considerazioni sul cablaggio di un componente aggiuntivo a caldo
 
-Prima di collegare lo shelf a caldo, è utile acquisire familiarità con l'orientamento corretto del connettore del cavo e con la posizione e l'etichettatura delle porte sui moduli dello shelf NS224 NSM.
+Acquisire familiarità con il corretto orientamento del connettore del cavo e con la posizione e l'etichettatura delle porte sui moduli a scaffale NSM NS224 può essere utile prima di collegare il ripiano aggiunto a caldo.
 
 * I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto.
 +
@@ -471,9 +550,238 @@ Dopo aver collegato entrambe le estremità del cavo, i LED LNK (verde) dello she
 +
 image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
 
-* È possibile utilizzare la seguente illustrazione per identificare fisicamente le porte NSM dello shelf, e0a e e0b:
+* È possibile utilizzare l'illustrazione seguente per identificare fisicamente le porte NSM100 dello shelf, e0a e e0b.
 +
-image::../media/drw_ns224_back_ports.png[porte posteriori drw ns224]
+Uno shelf NS224 contiene due moduli NSM100. Il modulo superiore va nello slot A (NSM A) e il modulo inferiore va nello slot B (NSM B).
+
++
+Ogni modulo NSM100 include 2 porte 100GbE QSFP28 GbE: e0a e e0b.
+
++
+image::../media/drw_ns224_back_ports.png[NS224 NSM100 porte per moduli e0a e e0b]
+
+
+
+
+
+=== Cablare uno shelf hot-add per una coppia ha AFF A70 o AFF A90
+
+Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha AFF A70 o AFF A90 quando è necessario ulteriore storage (nello shelf interno).
+
+.Prima di iniziare
+* È necessario aver soddisfatto i requisiti del sistema di storage.
+
+
+<<Requisiti per un hot-add>>
+
+* È necessario aver completato le procedure di preparazione applicabili.
+
+
+<<Preparatevi per un'aggiunta a caldo>>
+
+* È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
+
+
+<<Installare uno shelf per un'aggiunta a caldo>>
+
+.A proposito di questa attività
+* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che si aggiungano a caldo fino a due shelf aggiuntivi e due moduli i/o RoCE in ciascun controller.
+* Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
++
+** Aggiunta a caldo del primo shelf a una coppia ha con un modulo i/o compatibile RoCE in ciascun controller.
+** Aggiunta a caldo del primo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller.
+** Aggiunta a caldo del secondo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller.
+
+
+
+
+.Fasi
+. Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (un modulo i/o compatibile RoCE) in ogni modulo controller, e questo è l'unico shelf NS224 nella coppia ha, completa i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+
+NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 11.
+
++
+.. Shelf di cavi NSM Porta A e0a per il controller Uno slot 11 porta a (e11a).
+.. Shelf per cavi, porta NSM A e0b allo slot B del controller, porta b 11 (e11b).
+.. Porta NSM B del ripiano per cavi e0a dello slot B del controller 11 porta a (e11a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller porta b 11 (e11b).
++
+La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un modulo i/o compatibile con RoCE in ciascun modulo controller:
+
++
+image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cablaggio per AFF A70 o A90 con uno shelf e un modulo io]
+
+
+
+. Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (due moduli i/o compatibili con RoCE) in ciascun modulo controller, completare i passaggi secondari applicabili.
++
+
+NOTE: Questa fase presuppone che siano stati installati i moduli i/o compatibili con RoCE negli slot 11 e 8.
+
++
+[cols="1,3"]
+|===
+| Shelf | Cablaggio 
+
+
+ a| 
+Ripiano 1
+ a| 
+.. Cavo NSM Porta A e0a per controller slot A porta a 11 (e11a).
+.. Cavo dalla porta NSM A e0b allo slot controller B 8 porta b (e8b).
+.. Cavo dalla porta NSM B e0a allo slot controller B 11 porta a (e11a).
+.. Cavo NSM B port e0b al controller A slot 8 port b (e8b).
+.. Se si sta aggiungendo a caldo un secondo shelf, completare i passaggi secondari "`Shelf 2`"; in caso contrario, passare al punto 3.
+
+
+L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
+
+image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cablaggio per AFF A70 o A90 con uno shelf e due moduli io]
+
+
+
+ a| 
+Shelf 2
+ a| 
+.. Cavo NSM Porta A e0a per controller slot A porta a 8 (e8a).
+.. Cavo dalla porta NSM A e0b allo slot controller B 11 porta b (e11b).
+.. Cavo dalla porta NSM B e0a allo slot controller B 8 porta a (e8a).
+.. Cavo NSM B port e0b al controller A slot 11 port b (e11b).
+.. Passare alla fase 3.
+
+
+L'illustrazione seguente mostra il cablaggio per due shelf a caldo che utilizzano due moduli i/o compatibili RoCE in ciascun modulo controller:
+
+image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cablaggio per AFF A70 o A90 con due shelf e due moduli io]
+
+|===
+. Verificare che lo shelf aggiunto a caldo sia collegato correttamente.
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
+
+. Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco.
++
+In caso contrario, la procedura viene completata.
+
++
+<<Completare l'aggiunta a caldo>>
+
+
+
+
+
+=== Cavo uno shelf hot-add per una coppia AFF A1K ha
+
+È possibile aggiungere fino a tre shelf aggiuntivi da NS224 (per un totale di quattro shelf) a una coppia ha di AFF A1K.
+
+.Prima di iniziare
+* È necessario aver soddisfatto i requisiti del sistema di storage.
+
+
+<<Requisiti per un hot-add>>
+
+* È necessario aver completato le procedure di preparazione applicabili.
+
+
+<<Preparatevi per un'aggiunta a caldo>>
+
+* È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
+
+
+<<Installare uno shelf per un'aggiunta a caldo>>
+
+.A proposito di questa attività
+* Questa procedura presuppone che la coppia ha disponga di almeno uno shelf NS224 esistente.
+* Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
++
+** Aggiunta a caldo di un secondo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller. (È stato installato un secondo modulo i/o e il primo shelf è stato collegato a entrambi i moduli i/o oppure il primo shelf è già collegato a due moduli i/O. Collegare il secondo shelf a entrambi i moduli di i/O.
+** Aggiunta a caldo di un terzo shelf a una coppia ha con tre moduli i/o RoCE in ciascun controller. (È stato installato un terzo modulo i/o e il terzo ripiano verrà collegato solo al terzo modulo i/o).
+** Aggiunta a caldo di un terzo shelf a una coppia ha con quattro moduli i/o RoCE in ciascun controller. (È stato installato un terzo e quarto modulo i/o e il terzo ripiano verrà collegato al terzo e quarto modulo i/o).
+** Aggiunta a caldo di un quarto shelf a una coppia ha con quattro moduli i/o RoCE in ciascun controller. (Hai installato un quarto modulo i/o e collegato il terzo shelf al terzo e quarto modulo i/o o già avevi il terzo shelf collegato al terzo e quarto modulo i/o). Collegare il quarto ripiano al terzo e al quarto modulo i/o).
+
+
+
+
+.Fasi
+. Se lo shelf NS224 che si sta aggiungendo a caldo sarà il secondo shelf NS224 della coppia ha, completare i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+.. Ripiano per cavi NSM Porta A e0a per controller Slot A porta a 10 (e10a).
+.. Shelf per cavi, porta NSM A e0b allo slot B del controller, porta b 11 (e11b).
+.. Porta NSM B del ripiano per cavi e0a dello slot B del controller 10 porta a (e10a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller porta b 11 (e11b).
++
+L'illustrazione seguente evidenzia il cablaggio del secondo shelf nella coppia ha con due moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cablaggio per AFF A1K con due shelf e due moduli io]
+
+
+
+. Se lo shelf NS224 che stai aggiungendo a caldo sarà il terzo shelf NS224 nella coppia ha con tre moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari. In caso contrario, passare alla fase successiva.
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 9 (e9a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 9 porte b (e9b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 9 (e9a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 9 porta b (e9b).
++
+La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con tre moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cablaggio per AFF A1K con tre shelf e tre moduli io]
+
+
+
+. Se lo shelf NS224 che stai aggiungendo a caldo sarà il terzo shelf NS224 nella coppia ha con quattro moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari. In caso contrario, passare alla fase successiva.
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 9 (e9a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 8 porte b (e8b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 9 (e9a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 8 porta b (e8b).
++
+La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cablaggio per AFF A1K con tre ripiani e quattro moduli io]
+
+
+
+. Se lo shelf NS224 che stai aggiungendo a caldo sarà il quarto shelf NS224 nella coppia ha con quattro moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari.
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 8 (e8a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 9 porte b (e9b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 8 (e8a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 9 porta b (e9b).
++
+La seguente illustrazione evidenzia il cablaggio per il quarto shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cablaggio per AFF A1K con quattro ripiani e quattro moduli io]
+
+
+
+. Verificare che lo shelf aggiunto a caldo sia collegato correttamente.
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
+
+. Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco.
++
+In caso contrario, la procedura viene completata.
+
++
+<<Completare l'aggiunta a caldo>>
 
 
 
@@ -494,7 +802,7 @@ Quando è necessario uno storage aggiuntivo, è possibile aggiungere a caldo fin
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -588,7 +896,7 @@ Quando è necessario uno storage aggiuntivo, è possibile aggiungere a caldo uno
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -640,7 +948,7 @@ Il modo in cui collegare uno shelf di dischi NS224 in una coppia ha AFF A700 dip
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -741,7 +1049,7 @@ Il modo in cui si collega uno shelf di dischi NS224 in una coppia AFF A800 o AFF
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -846,7 +1154,7 @@ Il modo in cui collegare uno shelf di dischi NS224 in una coppia ha AFF A400 dip
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -937,7 +1245,7 @@ Il modo in cui collegare uno shelf di dischi NS224 in una coppia ha AFF C400 dip
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -1028,7 +1336,7 @@ In caso contrario, la procedura viene completata.
 
 * È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.
 +
-<<Installare uno shelf di dischi per un'aggiunta a caldo>>
+<<Install a drive shelf for a hot-add>>
 
 
 
@@ -1072,7 +1380,7 @@ Se l'assegnazione automatica dei dischi è stata disattivata durante la preparaz
 .Prima di iniziare
 È necessario aver già collegato lo shelf come indicato per la coppia ha.
 
-<<Collegare uno shelf di dischi per un componente aggiuntivo a caldo>>
+<<Cable a drive shelf for a hot-add>>
 
 .Fasi
 . Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`

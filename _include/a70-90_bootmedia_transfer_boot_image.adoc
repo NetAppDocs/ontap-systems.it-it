@@ -1,0 +1,125 @@
+= 
+:allow-uri-read: 
+
+
+Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.
+
+* È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
++
+** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+
+
+* Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
+* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
++
+.. Scaricare e copiare l'immagine del servizio appropriata dal sito del supporto NetApp sull'unità flash USB.
++
+... Scarica l'immagine del servizio nel tuo spazio di lavoro sul laptop.
+... Decomprimere l'immagine del servizio.
++
+
+NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
+
++
+Il file di immagine del servizio decompresso contiene due cartelle:
+
++
+**** `boot`
+**** `efi`
+
+
+... Copiare il `efi` Nella directory principale dell'unità flash USB.
++
+L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
+
+... Rimuovere l'unità flash USB dal computer portatile.
+
+
+.. In caso contrario, chiudere il condotto dell'aria:
++
+... Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
+... Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
+... Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
++
+image::../media/drw_a800_close_air_duct.png[Chiusura della figura del condotto dell'aria del modulo centralina AFF A1K]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["Numero didascalia 1,larghezza=30px"]
+
+
+
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["Numero didascalia 2,larghezza=30px"]
+
+
+
+ a| 
+Riser
+
+|===
+
+
+.. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+.. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
++
+Quando si esegue la modifica, ricordarsi di reinstallare i convertitori multimediali (SFP o QSFP) se sono stati rimossi.
+
+.. Collegare il cavo di alimentazione all'alimentatore e reinstallare il fermo del cavo di alimentazione.
+.. Inserire l'unità flash USB nello slot USB del modulo controller.
++
+Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
+
+.. Spingere delicatamente il modulo controller completamente nel sistema fino a quando i ganci di bloccaggio del modulo controller non iniziano a sollevarsi, spingere con decisione i ganci di bloccaggio per terminare l'alloggiamento del modulo controller, quindi ruotare i ganci di bloccaggio in posizione di blocco sui piedini del modulo controller.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
+.. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi `halt` Il controller per avviare IL CARICATORE.
+
+.. Sebbene le variabili d'ambiente e i bootargs siano conservati, è necessario verificare che tutte le variabili d'ambiente di boot e i bootargs necessari siano impostati correttamente per il tipo di sistema e per la configurazione utilizzando il `printenv bootarg name` e correggere eventuali errori utilizzando `setenv variable-name <value>` comando.
++
+... Controllare le variabili di ambiente di boot:
++
+**** `bootarg.init.boot_clustered`
+**** `partner-sysid`
+**** `bootarg.init.flash_optimized` Per AFF C190/AFF A220 (All Flash FAS)
+**** `bootarg.init.san_optimized` Per gli array AFF A220 e All SAN
+**** `bootarg.init.switchless_cluster.enable`
+
+
+... Se External Key Manager (Gestore chiavi esterne) è attivato, controllare i valori di boot, elencati in `kenv` Output ASUP:
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `kmip.init.interface <value>`
+**** `kmip.init.ipaddr <value>`
+**** `kmip.init.netmask <value>`
+**** `kmip.init.gateway <value>`
+
+
+... Se Onboard Key Manager è attivato, controllare i valori di boot, elencati nella `kenv` Output ASUP:
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `bootarg.onboard_keymanager <value>`
+
+
+... Salvare le variabili di ambiente modificate con `savenv` comando
+... Confermare le modifiche utilizzando `printenv _variable-name_` comando.
+
+
+
+
+

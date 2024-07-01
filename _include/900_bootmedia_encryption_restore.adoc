@@ -14,6 +14,7 @@ Determinare la sezione da utilizzare per ripristinare le configurazioni OKM, NSE
 
 == Restore NVE or NSE (Ripristina NVE o NSE) quando Onboard Key Manager è attivato
 
+.Fasi
 . Collegare il cavo della console al controller di destinazione.
 . Utilizzare il comando boot_ontap al prompt DEL CARICATORE per avviare il controller.
 . Controllare l'output della console:
@@ -101,7 +102,7 @@ Se il giveback non viene completato dopo 20 minuti, contattare l'assistenza clie
 
 . Al prompt di clustershell, immettere il comando net int show -is-home false per elencare le interfacce logiche che non si trovano sul proprio controller principale e sulla porta.
 +
-Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando il comando net int revert.
+Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert -vserver Cluster -lif _nodename_` comando.
 
 . Spostare il cavo della console sul controller di destinazione ed eseguire `version -v` Per controllare le versioni di ONTAP.
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
@@ -111,6 +112,7 @@ Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla p
 
 == Ripristinare NSE/NVE nei sistemi che eseguono ONTAP 9.6 e versioni successive
 
+.Fasi
 . Collegare il cavo della console al controller di destinazione.
 . Utilizzare il comando boot_ontap al prompt DEL CARICATORE per avviare il controller.
 . Controllare l'output della console:
@@ -150,7 +152,7 @@ NOTE: La chiusura di CIFS può causare la perdita di dati.
 . Attendere 3 minuti e controllare lo stato di failover con il comando show di failover dello storage.
 . Al prompt di clustershell, immettere `net int show -is-home false` comando per elencare le interfacce logiche che non si trovano sul proprio controller principale e sulla relativa porta.
 +
-Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert` comando.
+Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla porta home utilizzando `net int revert -vserver Cluster -lif _nodename_` comando.
 
 . Spostare il cavo della console sul controller di destinazione ed eseguire `version -v` Per controllare le versioni di ONTAP.
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
@@ -158,12 +160,12 @@ Se le interfacce sono elencate come `false`, ripristinare tali interfacce alla p
 . Utilizzare `security key-manager key-query` per visualizzare le chiavi di crittografia e autenticazione memorizzate nei server di gestione delle chiavi.
 +
 ** Se il `Restored` colonna = `yes/true`, è possibile completare il processo di sostituzione.
-** Se il `Key Manager type` = `external` e a. `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, Utilizzare il comando di ripristino esterno del gestore delle chiavi di protezione per ripristinare gli ID delle chiavi di autenticazione.
+** Se il `Key Manager type` = `external` e a. `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, utilizzare `security key-manager external restore` Comando per ripristinare gli ID delle chiavi di autenticazione.
 +
 
 NOTE: Se il comando non riesce, contattare l'assistenza clienti.
 
-** Se il `Key Manager type` = `onboard` e a. `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, Utilizzare il comando di sincronizzazione integrato del gestore delle chiavi di protezione per risynchronare il tipo di Gestore chiavi.
+** Se il `Key Manager type` = `onboard` e a. `Restored` column (colonna) = qualsiasi altro elemento diverso da `yes/true`, utilizzare `security key-manager onboard sync` Comando per risync il tipo di Key Manager.
 +
 Utilizzare `security key-manager key-query` per verificare che il `Restored` colonna = `yes/true` per tutte le chiavi di autenticazione.
 

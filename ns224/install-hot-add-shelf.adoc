@@ -1,0 +1,86 @@
+---
+permalink: ns224/install-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, install, hot-add an ns224 drive shelf 
+summary: È possibile aggiungere a caldo uno shelf di dischi NS224 dopo che la coppia ha soddisfa determinati requisiti e dopo che le attività di preparazione applicabili alla coppia ha sono state completate. 
+---
+= Installare uno shelf per un hot-add - NS224 ripiani
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario installare uno shelf NS224 in un cabinet o un rack per telecomunicazioni, collegare i cavi di alimentazione (che si accendono automaticamente sullo shelf) e impostare l'ID dello shelf.
+
+.Prima di iniziare
+* Assicurarsi di disporre di una graffetta con un lato raddrizzato o di una penna a sfera con punta stretta.
++
+Per modificare l'ID dello scaffale, utilizzare la graffetta o la penna a sfera per accedere al pulsante ID dello scaffale dietro il pannello ODP (Operator Display Panel) per il passo di modifica dell'ID dello scaffale.
+
+* Comprendere che un ripiano NS224 completamente carico può pesare fino a 30,29 kg (66,78 lb) e richiede due persone per sollevare o utilizzare un sollevatore idraulico. Evitare di rimuovere i componenti dello scaffale (dalla parte anteriore o posteriore dello scaffale) per ridurre il peso dello scaffale, in quanto il peso dello scaffale diventa sbilanciato.
+
+
+.Fasi
+. Installare il kit guide per il ripiano, secondo necessità, seguendo le istruzioni fornite con il kit.
++
+
+NOTE: Non montare il ripiano con flangia.
+
+. Installare il ripiano:
++
+.. Posizionare la parte posteriore del ripiano sulle guide, quindi sostenere il ripiano dal basso e farlo scorrere nell'armadietto o nel rack per telecomunicazioni.
++
+Se si installano più shelf, posizionare il primo shelf direttamente sopra i controller. Posizionare il secondo ripiano direttamente sotto i controller. Ripetere questo modello per tutti i ripiani aggiuntivi.
+
+.. Fissare il ripiano all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio incluse nel kit.
+
+
+. Collegare l'alimentazione:
++
+.. Collegare i cavi di alimentazione allo shelf e fissarli in posizione.
++
+Se si tratta di alimentatori CA, fissarli in posizione con il fermo del cavo di alimentazione.
+
++
+Se si tratta di alimentatori CC, fissarli in posizione con le due viti ad alette.
+
+.. Collegare i cavi di alimentazione a diverse fonti di alimentazione per una maggiore resilienza.
++
+Uno shelf si accende quando viene collegato a una fonte di alimentazione; non dispone di interruttori di alimentazione. Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.
+
+
+
+. Impostare l'ID dello shelf su un numero univoco all'interno della coppia ha:
++
+Per istruzioni più dettagliate, vedere link:change-shelf-id.html["Modifica dell'ID di uno shelf - shelf NS224"^].
+
++
+.. Rimuovere il cappuccio terminale sinistro e individuare il piccolo foro a destra dei LED.
+.. Inserire l'estremità di una graffetta o di uno strumento simile nel piccolo foro per raggiungere il pulsante ID dello scaffale.
+.. Tenere premuto il pulsante (fino a 15 secondi) fino a quando il primo numero sul display digitale non lampeggia, quindi rilasciare il pulsante.
++
+Se l'ID impiega più di 15 secondi per lampeggiare, tenere premuto di nuovo il pulsante, assicurandosi di premerlo completamente.
+
+.. Premere e rilasciare il pulsante per avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
+.. Ripetere i passaggi secondari 4c e 4d per impostare il secondo numero dell'ID dello shelf.
++
+Il lampeggiamento del numero può richiedere fino a tre secondi (invece di 15 secondi).
+
+.. Tenere premuto il pulsante fino a quando il secondo numero non smette di lampeggiare.
++
+Dopo circa cinque secondi, entrambi i numeri iniziano a lampeggiare e il LED ambra sull'ODP si illumina.
+
+.. Spegnere e riaccendere lo shelf per rendere effettivo l'ID dello shelf.
++
+Scollegare entrambi i cavi di alimentazione dallo shelf, attendere 10 secondi, quindi ricollegarli.
+
++
+Quando l'alimentazione viene ripristinata, i LED bicolore si illuminano di verde.
+
+
+
+
+
+.Quali sono le prossime novità?
+Collega lo shelf ad aggiunta a caldo. Andare a link:cable-overview-hot-add-shelf.html["Panoramica del cablaggio per un hot-add"].

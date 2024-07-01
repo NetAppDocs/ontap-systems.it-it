@@ -1,0 +1,300 @@
+---
+permalink: a1k/system-management-replace.html 
+sidebar: sidebar 
+keywords: aff a1k, replace the system manager module 
+summary: È necessario sostituire . 
+---
+= Sostituire il modulo di gestione del sistema - AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il modulo System Management, situato nella parte posteriore del controller nello slot 8, contiene i componenti integrati per la gestione del sistema e le porte per la gestione esterna. Il controller di destinazione deve essere spento per sostituire un modulo di gestione del sistema danneggiato o il supporto di avvio.
+
+Il modulo di gestione del sistema è dotato dei seguenti componenti integrati:
+
+* Supporti di avvio, che consentono la sostituzione dei supporti di avvio senza rimuovere il modulo controller.
+* BMC
+* Switch di gestione
+
+
+Il modulo System Management contiene inoltre le seguenti porte per la gestione esterna:
+
+* RJ45 seriale
+* USB seriale (tipo C)
+* USB Type-A (Ripristino all'avvio)
+* Ethernet a e0M RJ45 GB
+
+
+Per sostituire il modulo di gestione del sistema o o il supporto di avvio, è necessario arrestare il controller danneggiato.
+
+.Prima di iniziare
+* Questa procedura utilizza la seguente terminologia:
++
+** Il controller compromesso è il controller su cui si esegue la manutenzione.
+** Il controller integro è il partner ha del controller compromesso.
+
+
+* Tutti gli altri componenti del sistema devono funzionare correttamente.
+* Il partner controller deve essere in grado di assumere il controllo dei controller danneggiati.
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
+
+[role="tabbed-block"]
+====
+.Opzione 1: La maggior parte dei sistemi
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+--
+.Opzione 2: Controller in un MetroCluster
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+* Se si dispone di una configurazione MetroCluster, è necessario confermare che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+--
+====
+
+
+== Fase 2: Sostituire il modulo di gestione del sistema danneggiato
+
+Sostituire il modulo di gestione del sistema danneggiato.
+
+. Rimuovere il modulo di gestione del sistema:
++
+
+NOTE: Prima di procedere, verificare che la NVRAM sia stata completata.
+
++
+image::../media/drw_a1k_sys-mgmt_remove_ieops-1384.svg[Sostituire il modulo di gestione del sistema]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[Numero di didascalia 1]
+ a| 
+Dispositivo di chiusura della camma del modulo di gestione del sistema
+
+|===
++
+.. Se non si è già collegati a terra, mettere a terra l'utente.
++
+
+NOTE: Prima di procedere, verificare che la NVRAM sia stata completata.
+
+.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi che l'etichetta in cui sono stati collegati i cavi sia visibile per poterli collegare alle porte corrette quando si reinstalla il modulo.
+.. Scollegare i cavi di alimentazione dall'alimentatore per il controller danneggiato.
+.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
+.. Premere il pulsante CAM sul modulo di gestione del sistema.
+.. Ruotare la leva della camma verso il basso fino in fondo.
+.. Avvolgere il dito nel foro sulla leva della camma ed estrarre il modulo dal sistema.
+.. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile.
+
+
+. Spostare il supporto di avvio nel modulo di gestione del sistema sostitutivo:
++
+image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[Sostituzione dei supporti di avvio]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[Numero di didascalia 1]
+ a| 
+Dispositivo di chiusura della camma del modulo di gestione del sistema
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[Numero di didascalia 2]
+ a| 
+Pulsante di blocco dei supporti di avvio
+
+
+
+ a| 
+image::../media/legend_icon_03.svg[Numero di didascalia 3]
+ a| 
+Supporto di boot
+
+|===
++
+.. Premere il pulsante blu di blocco dei supporti di avvio nel modulo Gestione sistema non funzionante.
+.. Ruotare il supporto di avvio verso l'alto ed estrarlo dallo zoccolo.
+
+
+. Installare il supporto di avvio nel modulo di gestione del sistema sostitutivo:
++
+.. Allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente a squadra nello zoccolo.
+.. Ruotare il supporto di avvio verso il basso finché non tocca il pulsante di blocco.
+.. Premere il blocco blu e ruotare il supporto di avvio completamente verso il basso e rilasciare il pulsante di blocco blu.
+
+
+. Installare il modulo di gestione del sistema sostitutivo nel contenitore:
++
+.. Allineare i bordi del modulo di gestione del sistema sostitutivo con l'apertura del sistema e spingerlo delicatamente nel modulo controller.
+.. Far scorrere delicatamente il modulo nello slot fino a quando il dispositivo di chiusura della camma non inizia a innestarsi con il perno della camma di i/o, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Ruotare il ARM di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Eseguire il richiamo del modulo Gestione del sistema.
+
+
+
+
+== Passo 3: Riavviare il modulo controller
+
+Riavviare il modulo controller.
+
+. Ricollegare i cavi di alimentazione all'alimentatore.
++
+Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.
+
+. Immettere _bye_ al prompt del CARICATORE.
+. Ripristinare il normale funzionamento del controller restituendo lo storage _storage failover giveback -ofnode _compromesse_node_name__
+. Ripristinare il giveback automatico utilizzando `storage failover modify -node local -auto-giveback true` comando.
+. Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+
+
+
+
+== Passaggio 4: Installare le licenze e registrare il numero seriale
+
+È necessario installare nuove licenze per il nodo se il nodo danneggiato stava utilizzando le funzioni ONTAP che richiedono una licenza standard (con blocco dei nodi). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
+
+.A proposito di questa attività
+Fino a quando non vengono installate le chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo. Tuttavia, se il nodo era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzioni senza licenza sul nodo potrebbe mettere fuori conformità con il contratto di licenza, pertanto è necessario installare la chiave di licenza sostitutiva sul nodo il prima possibile.
+
+.Prima di iniziare
+Le chiavi di licenza devono essere in formato a 28 caratteri.
+
+Si dispone di un periodo di prova di 90 giorni per l'installazione delle chiavi di licenza. Dopo il periodo di tolleranza, tutte le vecchie licenze vengono invalidate. Dopo aver installato una chiave di licenza valida, si hanno a disposizione 24 ore per installare tutte le chiavi prima della fine del periodo di tolleranza.
+
+.Fasi
+. Se sono necessarie nuove chiavi di licenza, procurarsi le chiavi di licenza sostitutive sul https://mysupport.netapp.com/site/global/dashboard["Sito di supporto NetApp"] Nella sezione My Support (supporto personale) sotto Software licensed (licenze software).
++
+
+NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e inviate all'indirizzo e-mail in archivio. Se non si riceve l'e-mail contenente le chiavi di licenza entro 30 giorni, contattare il supporto tecnico.
+
+. Installare ogni chiave di licenza: `+system license add -license-code license-key, license-key...+`
+. Rimuovere le vecchie licenze, se necessario:
++
+.. Verificare la presenza di licenze inutilizzate: `license clean-up -unused -simulate`
+.. Se l'elenco appare corretto, rimuovere le licenze inutilizzate: `license clean-up -unused`
+
+
+. Registrare il numero di serie del sistema presso il supporto NetApp.
++
+** Se AutoSupport è attivato, inviare un messaggio AutoSupport per registrare il numero di serie.
+** Se AutoSupport non è attivato, chiamare https://mysupport.netapp.com["Supporto NetApp"] per registrare il numero di serie.
+
+
+
+
+
+
+== Fase 5: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma["Parti restituita  sostituzioni"] per ulteriori informazioni.
