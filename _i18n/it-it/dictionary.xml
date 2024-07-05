@@ -120,12 +120,10 @@
   <block id="1ec9fa42251d8d9889cd15b2ab11e819" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.</block>
   <block id="d50b249d8e309dd400e0180a12ceae23" category="list-text">Utilizzare l'animazione o l'illustrazione per completare il cablaggio tra i controller e gli switch:</block>
   <block id="ce43cf0f3fdd398cbca499ba447d6df2" category="video-title">Animazione - cablaggio del cluster senza switch a due nodi</block>
-  <block id="89022c411a82a2fd505bed4d053014b2" category="image-alt">Cablaggio di rete TNSC drw A400</block>
   <block id="cdb5f9fd7bdb37f00fbde22fc433f594" category="list-text">Passare a. <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block> per istruzioni sul cablaggio dello shelf di dischi.</block>
   <block id="6c0e530aa28d8009701169ec145c45b2" category="section-title">Opzione 2: Cavo a del cluster con switch</block>
   <block id="1e156599489dd8cc844095b452c708a0" category="paragraph">Le porte dati opzionali, le schede NIC opzionali, le schede mezzanine e le porte di gestione dei moduli controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate al cluster/switch ha.</block>
   <block id="0815daeb3f5819b5b26f2d852a3480ed" category="video-title">Animazione - cablaggio del cluster con switch</block>
-  <block id="1183b63959875b4b1d4b622707e3bdb2" category="image-alt">cablaggio di rete con switch drw a400</block>
   <block id="3791be63815c8fbe248b161feeb8b6cd" category="section-title">Fase 4: Collegare i controller dei cavi agli shelf di dischi</block>
   <block id="23b4387b0bd437fdde9fbf6ab72eb30b" category="paragraph">È possibile collegare gli shelf NSS224 o SAS al sistema.</block>
   <block id="44545bc0051cf1d567b013be4fbb64b8" category="section-title">Opzione 1: Collegare i controller a un singolo shelf di dischi</block>
@@ -137,13 +135,11 @@
   <block id="e47141e6c8fccf9bfe115e4e18090b8e" category="section-title">Opzione 2: Collegare i controller a due shelf di dischi</block>
   <block id="a496c0eee37cdb410fb5999f04b37d60" category="paragraph">È necessario collegare ciascun controller ai moduli NSM su entrambi gli shelf di dischi NS224.</block>
   <block id="0d41b873813de2203d2c7cc22322899d" category="list-text">Utilizzare la seguente animazione o illustrazione per collegare i controller a due shelf di dischi.</block>
-  <block id="28a5b6c12bed824c9983c41c17b4e08c" category="image-alt">drw a400 due shelf ns224</block>
   <block id="2d30f0e7d0bd139e4aadac367a22367c" category="section-title">Opzione 3: Collegare i controller agli shelf di dischi SAS</block>
   <block id="3368a061a42c179bf8e803509b06906f" category="paragraph">È necessario collegare ciascun controller ai moduli IOM su entrambi gli shelf di dischi SAS.</block>
   <block id="22b99956f40dddc5bacbbde3d6214bfb" category="paragraph">Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione del cavo per DS224-C è abbassata.</block>
   <block id="f7a5a513bed985929212bb6fb12674e1" category="list-text">Utilizzare la seguente illustrazione per collegare i controller a due shelf di dischi.</block>
   <block id="f4cfda2155a75558a7db40919b9eb818" category="video-title">Animazione - collegare i controller agli shelf di dischi SAS</block>
-  <block id="f2a5deba6280f91d25f9842359122210" category="image-alt">drw a400 tre shelf ds224c</block>
   <block id="591a460534c5cea6a44feabf56c126fc" category="section-title">Fase 5: Completare l'installazione e la configurazione del sistema</block>
   <block id="f5db8a467b7fb8d7cf073d921c784267" category="paragraph">È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.</block>
   <block id="1001f289121bc2aaf60e874b29a86ac9" category="section-title">Opzione 1: Completamento della configurazione e della configurazione del sistema se è attivato il rilevamento della rete</block>
@@ -3106,7 +3102,6 @@
   <block id="de2a859c590dc7d6eabe3126531d15fe" category="section-title">Fase 2: Aprire il modulo controller</block>
   <block id="6ffcd61574f4970c28c0b71a5611ad7c" category="section-title">Fase 3: Sostituire la batteria RTC</block>
   <block id="12567249cf52e7754ded20b52b9cb150" category="paragraph">Per sostituire la batteria RTC, individuarla all'interno del controller e seguire la sequenza specifica dei passaggi.</block>
-  <block id="b7d5be6336dc1e791cd4f528bc0ef57a" category="image-alt">batteria rtc drw rxl</block>
   <block id="48c0f8a69112897bb929b89def26d839" category="paragraph">Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.</block>
   <block id="a23c69960d3b280b58087226f261d0e1" category="doc">Avviare l'immagine di ripristino - AFF A300</block>
   <block id="825f13ad9fc8dc2bdd837adbced6f40f" category="paragraph">La procedura per avviare il controller compromesso dall'immagine di ripristino dipende dalla configurazione MetroCluster a due controller del sistema.</block>
@@ -6220,7 +6215,6 @@
   <block id="9acce39f034b56b5a36d798f9b54c493" category="paragraph">X66200-2 (112-00326), 2 m</block>
   <block id="36789c9401bff1c7c561e68fd452d624" category="paragraph">X66250-5 (112-00328), 5 m.</block>
   <block id="638d6c29f972d003a7c9bce0be1075c0" category="paragraph">X66250-30 (112-00331), 30 m.</block>
-  <block id="ee2a005a5fff47af39846bc52215856a" category="paragraph"><block ref="ee2a005a5fff47af39846bc52215856a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6d03b2201d103d5ae1263174b93ad00d" category="paragraph">Cavo Ethernet (in base all'ordine)</block>
   <block id="a0e077807aa1ab474e20633b71f65adc" category="paragraph">SR:</block>
   <block id="b035e4657fbd3c974d6c165b266864f8" category="paragraph">X6554-R6 (112-00189), 15 m.</block>
@@ -6231,39 +6225,24 @@
   <block id="3716ec01119458ed21a566c68a371d3e" category="paragraph">X66260-30 (112-00354), 30 m.</block>
   <block id="c90da43ea678ffdb52edc15af33e2c8e" category="paragraph">Configurazioni FC (in base all'ordine)</block>
   <block id="923a86c9f908f09f61d33d7831905371" category="section-title">Installare l'hardware</block>
-  <block id="36038ef1dbb81cac29095e7ec102e15e" category="image-alt">etichetta del peso drw a320</block>
   <block id="6c9822a6a6265e0e6627098c357cfe2d" category="section-title">Collegare i controller alla rete</block>
   <block id="a766258e1cfb1ce4e72917121f65a74d" category="paragraph">Le porte dati opzionali, le schede NIC opzionali e le porte di gestione dei moduli controller sono collegate agli switch. Le porte di interconnessione cluster/ha sono cablate su entrambi i moduli controller.</block>
   <block id="5e71f7cd3736dc18c619e22ab69496b8" category="list-text">È possibile utilizzare l'illustrazione o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:</block>
-  <block id="013322a8027b639585538fe290718386" category="image-alt">gif animata composita di cablaggio di rete drw a320 tnsc</block>
   <block id="e5cd602ca5c03c391e8dfac3c307e06c" category="paragraph">Collegare tra loro le porte cluster/ha con il cavo da 100 GbE (QSFP28):</block>
-  <block id="4f8f8380e5597e92380de812b879c5d1" category="list-text">da e0d a e0d<block ref="5ea5295965a00406899d4b7460801661" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ec377d11568067a729ee6f50dee77c8" category="paragraph">Se si utilizzano le porte integrate per una connessione di rete dati, collegare i cavi 100GbE o 40GbE agli switch di rete dati appropriati:</block>
-  <block id="3c04babfe00a81e06f8982d93dd90179" category="list-text">e0g e e0h<block ref="6fafbcd677ceba87d8c48de1a29a3bf5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cc74cb2d1e5f9750b5812faaf036676e" category="paragraph">Se si utilizzano schede NIC per connessioni Ethernet o FC, collegare le schede NIC agli switch appropriati:</block>
-  <block id="becd6fe246f05c450f5f6f1ff59f10ab" category="image-alt">connessioni niche drw a320, punto 3</block>
-  <block id="5d86a652667b386e0b98042631990c02" category="paragraph"><block ref="5d86a652667b386e0b98042631990c02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4a9a79dbcdff2c804e887801277bb57c" category="list-text">Cablare lo storage: <block ref="64b4bebcc285271f3157ecc735b0c062" category="inline-xref-macro-rx"></block></block>
   <block id="eb9634f2ea796139d7f0aeca3f6ce2d4" category="section-title">Opzione 2: Cablaggio di un cluster con switch</block>
   <block id="5b2974409018c6d4642074b9be18209d" category="paragraph">Le porte dati opzionali, le schede NIC opzionali e le porte di gestione dei moduli controller sono collegate agli switch. Le porte di interconnessione cluster/ha sono cablate al cluster/switch ha.</block>
-  <block id="75a0d3caeb66a7c3aca3b7bc0f0c5985" category="image-alt">GIF animato composito con cablaggio di rete con switch drw a320</block>
   <block id="f5412d7277a9aad4f1e320bf63f0582b" category="paragraph">Collegare le porte cluster/ha allo switch cluster/ha con il cavo 100 GbE (QSFP28):</block>
   <block id="840e60c4749a688bca9fc657aaff1710" category="list-text">E0a su entrambi i controller allo switch cluster/ha</block>
-  <block id="c59f62b950bdb48bdd4229f438a8c8a8" category="list-text">E0d su entrambi i controller allo switch cluster/ha<block ref="15e7674fee3b32b30f565083329e5ce8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="60e821d2b0d80835cf4d935eb3557760" category="section-title">Cavi controller per gli shelf di dischi</block>
   <block id="ea4a0ef865c900d0ce0d6485667ba790" category="paragraph">È necessario collegare i controller agli shelf utilizzando le porte di storage integrate.</block>
   <block id="23d2444a35f8c3c8957c78070a834d0c" category="list-text">È possibile utilizzare l'illustrazione o le istruzioni dettagliate per collegare i controller a un singolo shelf.</block>
-  <block id="d49bb9b3f4ea10bb2faedd5805957881" category="image-alt">gif animata con collegamenti a shelf singolo drw a320</block>
-  <block id="fcc21d6aa5ce2f3d80b7b15b3efd7622" category="paragraph">Collegare il controller a allo shelf <block ref="97ef6a28616ee1b44c8e319d2e09ad63" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cf09fa2cd4cedb36165538f6f6133b7f" category="paragraph">Collegare il controller del cavo B allo shelf: <block ref="adad54de70c837652052dc8fbe20179a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e90d1c109a9cd8d68a357882d5cf925c" category="list-text">Per completare la configurazione del sistema, vedere <block ref="84c1e7f35fa076545c5f4c4417de33e1" category="inline-xref-macro-rx"></block></block>
   <block id="6bd176ab7852b1804bc6113808615ff6" category="list-text">È possibile utilizzare la seguente illustrazione o la procedura scritta per collegare i controller a due shelf di dischi.</block>
-  <block id="e49f4a89e69b410e9fd76acc797854aa" category="image-alt">i 2 cavi del drw a320 sono animati gif</block>
-  <block id="1fd24d2bc89f56e2b5b986eb7d944870" category="paragraph">Collegare il controller dei cavi A agli shelf: <block ref="dc30c6795d4eccef24ec9e4cbd9f34a9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="64cd25defcb831725e6dbd4eeb07cec0" category="paragraph">Collegare il controller dei cavi B agli shelf: <block ref="fcd3de865e51763ca7c18796d9eecca6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="29507e337f4599b17e78b1e81c219e26" category="section-title">Completare la configurazione e l'installazione del sistema</block>
   <block id="cc96661e257df64a25ec11990688e801" category="paragraph">Il sistema inizia l'avvio. L'avvio iniziale può richiedere fino a otto minuti</block>
-  <block id="80b38fbcbc6122c93f20a23f0edcacc5" category="image-alt">computer portatile drw a320 per switch e controller</block>
   <block id="6a6726deff56a3d5459d4e11d247e22a" category="doc">Sostituire l'hardware - AFF A320</block>
   <block id="88dd2b76e22f517fcc43991c9f49fc1c" category="list-text">Rimuovere il modulo controller dal telaio:</block>
   <block id="8a309974bafd50317ccd72aa26c07abb" category="list-text">Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller.</block>
@@ -6285,11 +6264,9 @@
   <block id="22d17da6d44d1c72d2415ed45b62cc6e" category="list-text"><block ref="22d17da6d44d1c72d2415ed45b62cc6e" category="inline-link-macro-rx"></block></block>
   <block id="770d6678fb5416b05c67128a9e4fed01" category="doc">Completare il processo di ripristino e sostituzione - AFF A320</block>
   <block id="19700f9c729dfc1036b3ebeb2a20006a" category="doc">Modulo ventola hot-swap - AFF A320</block>
-  <block id="18537f27e3c57fa7095de2a3bbea83b2" category="image-alt">Drw A320 sostituire la ventola</block>
   <block id="acd5b7a742e22209bb792b093caff068" category="doc">Sostituire il supporto di avvio - AFF A320</block>
   <block id="952c945c9a5a59d3bdaefb09fa3c158c" category="list-text">Scollegare l'alimentazione del modulo controller dalla fonte di alimentazione.</block>
   <block id="11eb9c8c2de064eb9f7977a655de2097" category="list-text">Aprire il condotto dell'aria e individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo del controller:</block>
-  <block id="e6b7941c3f8bfc56083e6d96c76bea05" category="image-alt">i supporti di boot drw a320 sostituiscono i gif animati</block>
   <block id="e7ee072a3e06310afcc412655144e84b" category="section-title">Fase 3: Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB</block>
   <block id="43db3fd517d9b5ef38374083f6a4a3bd" category="admonition">Non spingere verso il basso il meccanismo di chiusura sulla parte superiore dei bracci del dispositivo di chiusura. Per farlo, sollevare il meccanismo di blocco e impedire lo scorrimento del modulo controller nel telaio.</block>
   <block id="7a54ae6940bd4a5aefddc547d71ee379" category="list-text">Registrare l'indirizzo IP del nodo con problemi visualizzato sullo schermo.</block>
@@ -6307,7 +6284,6 @@
   <block id="5d670c53861caee9002db54ba657302f" category="doc">Completare il processo di sostituzione della ventola - AFF A320</block>
   <block id="8041c469e6d9bb1d2588be103ea09ab6" category="doc">Sostituire la batteria NVDIMM - AFF A320</block>
   <block id="653275a6740924b891457d92a9cbc8ef" category="section-title">Fase 1: Spegnere il controller</block>
-  <block id="7a7bd9d285c26c52e7363905c161c15e" category="image-alt">gif animate drw a320 nvbat move</block>
   <block id="ddd5abc1f11eb7170e1eeacbd5acc236" category="list-text">Aprire il condotto dell'aria e individuare la batteria NVDIMM.</block>
   <block id="b5625ff9a6be11130311547598e19f4d" category="list-text">Se non è già stato fatto, chiudere il condotto dell'aria sul retro del modulo controller e reinstallare il coperchio sulle schede PCIe.</block>
   <block id="655693b8856b3ddd0aca0944005d67f9" category="doc">Sostituire l'hardware del modulo controller - AFF A320</block>
@@ -6317,16 +6293,12 @@
   <block id="1f80cfc7ce17ecb96321179e76fe8285" category="list-text">Ruotare la maniglia della camma in modo che possa essere utilizzata per estrarre l'alimentatore dal modulo controller premendo la linguetta di bloccaggio blu.</block>
   <block id="3b609a79f7b20263526b5366c8880592" category="paragraph">Per spostare la batteria NVDIMM dal modulo controller guasto al modulo controller sostitutivo, utilizzare la seguente illustrazione o la procedura scritta.</block>
   <block id="af959703d2cf03d6f0ec54feb06a483a" category="paragraph">È possibile utilizzare la seguente illustrazione o la procedura scritta per spostare il supporto di avvio dal modulo controller compromesso al modulo controller sostitutivo.</block>
-  <block id="688801a2df2e8d7d87f1b2c5de917ce1" category="image-alt">file gif animati di spostamento del supporto di avvio drw a320</block>
   <block id="8704a1a5bea5c63a077fa4f8a91fa4a6" category="paragraph">È possibile utilizzare le seguenti illustrazioni o i passaggi scritti per spostare i DIMM dal modulo controller guasto al modulo controller sostitutivo.</block>
-  <block id="2f486cec6da5b4ab5646e87394d2a4a2" category="image-alt">gif animato spostamento dimm drw a320</block>
-  <block id="05e409ce8812fcbb841a7e4fffcaacac" category="image-alt">mappa dimm drw a320</block>
   <block id="81991fce0a133e64dc7f5bd7f590afbd" category="list-text">Slot DIMM di sistema: 2,4, 7, 9, 13, 15, 18 e 20</block>
   <block id="42fedd56824cc1ddf6aa00c30e53255e" category="list-text">Slot NVDIMM: 11</block>
   <block id="f7201b424e63db1eb201784a41831c5b" category="section-title">Fase 6: Spostare i riser PCIe</block>
   <block id="09a031229040acdcc93835464607987d" category="paragraph">È necessario spostare i riser PCIe, con le schede PCIe installate, dal modulo controller compromesso al modulo controller sostitutivo.</block>
   <block id="7b54866b2a0d6e6e75dbd1588a1d2832" category="paragraph">È possibile utilizzare la seguente illustrazione o la procedura scritta per spostare i riser PCIe dal modulo controller guasto al modulo controller sostitutivo.</block>
-  <block id="eb05cd11b7228336d5c9c6b4b1189e9b" category="image-alt">gif animata drw a320 pci riser move</block>
   <block id="e3c377eeac98c2c7c22ab039e765483b" category="list-text">Rimuovere il coperchio sui riser PCIe svitando la vite blu sul coperchio, far scorrere il coperchio verso di sé, ruotare il coperchio verso l'alto, sollevarlo dal modulo controller e riporlo da parte.</block>
   <block id="64e10ab629fdd5f98070e4ba4cbc9431" category="list-text">Rimuovere i riser vuoti dal modulo controller sostitutivo.</block>
   <block id="fb2259bf7b24733032c36ee5d7b47fc1" category="list-text">Posizionare l'indice nel foro sul lato sinistro del modulo riser e afferrare il riser con il pollice.</block>
@@ -6357,16 +6329,13 @@
   <block id="0d1483a76a1f71437aa9197bfa562122" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene visualizzato il messaggio confirm backup procedure was successful (conferma procedura di backup riuscita), quindi premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di riavviare il controller.</block>
   <block id="611cf47f3569074932e1d1554c9dcfdd" category="doc">Restituire il componente guasto a NetApp - AFF A320</block>
   <block id="e944774dbb716679ef719542153680f0" category="doc">Sostituire un alimentatore - AFF A320</block>
-  <block id="4cc9071129241d95215f35c3a4e731ef" category="image-alt">il psu drw a320 sostituisce il gif animato</block>
   <block id="72e762fb9ea8e85f3b69ae72fd4dc171" category="doc">Sostituire un modulo NVDIMM - AFF A320</block>
-  <block id="a28d1d59ce7973c59f7c8fb5eb3f42b3" category="image-alt">drw a320 nvdimm sostituire gif animato</block>
   <block id="e9ca370a0e8565dd4c2f659637e04cda" category="doc">Spegnere i controller - AFF A320</block>
   <block id="b6b9806df3f9a4e627587365674eb890" category="doc">Spegnere il nodo - AFF A320</block>
   <block id="dc034442a42b074e0609ba09ebc77d0e" category="paragraph">Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.</block>
   <block id="7b346c654ccdab10fc593c01f0c7232e" category="doc">Spegnere il controller non utilizzato - AFF A320</block>
   <block id="f1483589a16ee2a87f4946990ed1464b" category="doc">Sostituire una scheda PCIe - AFF A320</block>
   <block id="c6835c4571228046430ed6bbb1f8c06a" category="paragraph">Rimuovere dal modulo controller il riser PCIe contenente la scheda PCIe guasta, rimuovere la scheda PCIe guasta dal riser, installare la scheda PCIe sostitutiva nel riser, quindi reinstallare il riser nel modulo controller.</block>
-  <block id="d53dfbdb1355f3674e5de636f87c5be0" category="image-alt">scheda pci drw a320 sostituire gif animato</block>
   <block id="618712f4c03b5acbe994f7deb8579ad4" category="list-text">Rimuovere il riser con la scheda PCIe guasta:</block>
   <block id="8da48c6dbfa1b11e1b02a674f7016444" category="list-text">Estrarre il riser dalla presa e metterlo da parte.</block>
   <block id="5169071c932e7f4d8cc43bbb05704441" category="list-text">Sostituire la scheda nel riser:</block>
@@ -6387,7 +6356,6 @@
   <block id="bff69c64ca9124fefc1120a9526e1c86" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A320</block>
   <block id="99028e2ad3b8cc332ccf01555ed73338" category="section-title">Fase 2: Sostituire la batteria RTC</block>
   <block id="85197942c26926cbc965c61326a19f17" category="paragraph">È necessario individuare la batteria RTC all'interno del modulo del controller, quindi seguire la sequenza specifica di passaggi.</block>
-  <block id="ca57ca907ae8206b83c7ddff6d0710d5" category="image-alt">drw a320 rtc batt sostituire gif animato</block>
   <block id="f443567234fee382feed95c62b71f4ac" category="list-text">Rimuovere il coperchio PCIe.</block>
   <block id="098c84ebcbcf1abdb1b6be280f983f02" category="list-text">Svitare la vite a testa zigrinata blu situata sopra le porte integrate sul retro del modulo controller.</block>
   <block id="c7705a8f2e7cd22c3c497bc8bdc6a22e" category="list-text">Far scorrere il coperchio verso di sé e ruotarlo verso l'alto.</block>
@@ -8711,7 +8679,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="0fc16b203bddbfc834dc54c640fc1fd2" category="image-alt">Rimuovere un modulo USB LED</block>
   <block id="e5247af1b25811b19243276e67aa7b9b" category="image-alt">Rimuovere il modulo NVRAM</block>
   <block id="11d45af041bcae71c4e4d631ead36642" category="image-alt">Rimuovere il contenuto del modulo NVRAM</block>
-  <block id="99a4fad8e3a9e518a4c8e3984c45a020" category="image-alt">Rimuovere o installare un modulo PSU</block>
   <block id="38d3a35ba6c4b54bcaa647b5f49f15bf" category="image-alt">Rimuovere e installare la batteria RTC</block>
   <block id="c591c62ae89f72b00936f85341489306" category="image-alt">Apertura della maniglia della camma dell'alimentatore</block>
   <block id="0709513deb20f95d7151fe2b5265dec7" category="image-alt">Display operatore con tappo terminale</block>
@@ -8808,7 +8775,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f4247136ba1a68a91a49f4e715963146" category="paragraph">Prima di arrestare il controller danneggiato, è necessario verificare se il sistema ha attivato il gestore delle chiavi di sicurezza o dischi crittografati.</block>
   <block id="ee3b489243bdd4fdcc48ef1ad422f531" category="section-title">Verificare la configurazione del gestore delle chiavi di protezione</block>
   <block id="19033065ab73d137563560b1fc6895b0" category="inline-link">Security key-manager keystore mostra pagina MAN</block>
-  <block id="a816d953401f2846877f62bed4fdd27b" category="list-text">Determe se Key Manager è attivo con il comando _Security key-manager keystore show_. Per ulteriori informazioni, consultare la<block ref="4b8f2aeacb1514195535ef615c2cae4a" category="inline-link-rx"></block></block>
   <block id="71f479ec4da1fa9d5c9be25ad13a546d" category="admonition">È possibile che si disponga di altri tipi di gestore delle chiavi. I tipi sono<block ref="5a2c55bb167f4f0fcfe52384fe7a4f0b" prefix=" " category="inline-code"></block>, ,<block ref="15460966dfd5d819470e51c2381536a3" prefix=" " category="inline-code"></block>e<block ref="c731f72e1d22a7c5e01a7cb789a8885e" prefix=" " category="inline-code"></block>. Il processo di conferma di questi tipi è lo stesso dei tipi di gestore delle chiavi o di conferma<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block><block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> .</block>
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">spegnere il controller danneggiato</block>
   <block id="367826db12be5d0f5fa3825090445002" category="list-text">Se non viene visualizzata alcuna uscita, andare a <block ref="eee94cfaa2087b0a7525f83880646105" category="inline-link-macro-rx"></block> per arrestare il nodo danneggiato.</block>
@@ -9029,7 +8995,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8c7bd045108e1c5b78c97e914b17c504" category="list-text">Per avviare ONTAP dal prompt del CARICATORE, immettere _bye_.</block>
   <block id="92c80dd5462d9ebbe458a4d5574a0bcd" category="paragraph">È necessario confermare la modifica dell'ID di sistema all'avvio del controller e verificare che la modifica sia stata implementata.</block>
   <block id="4809a5131531611e176d418579ff2bce" category="list-text">Se la centralina è in modalità di manutenzione (viene visualizzato il<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block> messaggio), uscire dalla modalità di manutenzione e andare al prompt del CARICATORE: _Halt_</block>
-  <block id="98848d6f640c1b9d9ad1cab89e0b0a13" category="list-text">Dal prompt del CARICATORE sul controller, avviare il controller e immettere _y_ quando viene richiesto di ignorare l'ID del sistema a causa di una mancata corrispondenza dell'ID del sistema.</block>
   <block id="4e5f4ae21b25e767c4cce37a6162f267" category="list-text">Attendere fino all'attesa dello sconto... Viene visualizzato un messaggio sulla console del controller con il modulo sostitutivo, quindi, dal controller integro, verificare che il nuovo ID di sistema partner sia stato assegnato automaticamente: _Storage failover show_</block>
   <block id="7fea4b03ba1069ae857e3bf99659e212" category="list-text">Dal controller integro, restituisci lo storage del controller sostituito: _Storage failover giveback -node replacement_node_name_</block>
   <block id="67a849a4d7dbba4f1483601cbb852e97" category="paragraph">Il controller recupera lo storage e completa l'avvio.</block>
@@ -9376,7 +9341,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="dc67dd4e83bd586a50c17ea2c94c00d5" category="list-text"><block ref="3b8595d627306d8980fff3bd262d05b2" prefix="" category="inline-code"></block></block>
   <block id="536aadfad0128887672b66e929f02fcb" category="list-text"><block ref="a6dd61fa165deef585a79e05f8de73b0" prefix="" category="inline-code"></block></block>
   <block id="a242b56bad1d07089dce8ccb795966f2" category="list-text">Il processo di ripristino verrà completato:</block>
-  <block id="4730255e1152aa0891d10726285854f6" category="paragraph">Completare il processo di sostituzione dei supporti di avvio dopo il normale avvio completando i controlli finali e restituendo spazio di archiviazione.</block>
   <block id="3bac3ae452491bc05a59b99b3d2476d6" category="paragraph">Passare alla fase 6.</block>
   <block id="070dd7606e33a466d7a8bb82a9a64b17" category="list-text">Verifica che il controller di destinazione sia pronto per il giveback con il comando _storage failover show_.</block>
   <block id="378fa36f6e90b3bf6ddbb070e35b0388" category="list-text">Spostare il cavo della console sul controller partner e restituire lo storage del controller di destinazione utilizzando il comando _storage failover giveback -fromnode local -only-cfo-Aggregates true_.</block>
@@ -9438,7 +9402,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="04c6391623d6bd5d0ac0d7df563f74dc" category="image-alt">Esempio di orientamento della linguetta di estrazione del cavo</block>
   <block id="35bd3e31ed449ec51ffdc43a42bdcd8f" category="list-text">Se si collega un'unità ottica a uno switch, inserire l'unità SFP nella porta del controller prima di collegare il cavo alla porta.</block>
   <block id="e8dcbbdb0b0cc30021cdb1772e14a12d" category="section-title">Fase 1: Collegare i controller alla rete</block>
-  <block id="6df54967c5941126ef71ad521ce71f57" category="paragraph">Queste procedure mostrano le configurazioni comuni. Tenete presente che il cablaggio specifico dipende dai componenti ordinati per il vostro sistema di storage. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
   <block id="774fc771cbe0562cf589e2e5571e543c" category="open-title">Opzione 1: Cluster senza switch via cavo</block>
   <block id="ab3e6f854653e79b55b1aef74734d66a" category="paragraph">Collegamento via cavo delle connessioni del cluster senza switch.</block>
   <block id="0ce6d01af755d7d63a1db543cd42ef01" category="list-text">Collegare le porte di interconnessione Cluster/ha da E1a a E1a e da e7a a e7a con il cavo di interconnessione Cluster/ha.</block>
@@ -9460,7 +9423,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1107155d6b0c900a6485f06681854862" category="image-alt">Cavi RJ-45</block>
   <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*CAVI RJ-45 1000BASE-T.</block>
   <block id="a8536d671676b42d7c49328e04123a96" category="image-alt">Connettersi alla rete di gestione</block>
-  <block id="c67ade60c9405661826821f009653f29" category="admonition">NON collegare ancora i cavi di alimentazione.</block>
   <block id="09e9d41a74e65e2200df2359e0c54806" category="open-title">Opzione 2: Cluster con switch via cavo</block>
   <block id="0b7f474dc87a04642d4a17b892a87553" category="paragraph">Collegare via cavo le connessioni del cluster con switch.</block>
   <block id="fe1ed4b5e6a760085b2af448921f0d53" category="list-text">Effettuare i seguenti collegamenti:</block>
@@ -9523,7 +9485,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2ce1349fe67fa0e027bf3526a78ebb93" category="admonition">Dopo l'inizializzazione del cluster, scaricare ed eseguire <block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block> per confermare la configurazione.</block>
   <block id="ed198c6c65dda3bfcee47cc329346a10" category="summary">Installare il sistema di archiviazione in un cabinet o in un rack per telecomunicazioni.</block>
   <block id="94ebd1127cf45d2e2e1f6f1b0cd35269" category="doc">Installare la bulloneria - AFF A1K</block>
-  <block id="7acdb30933a12f95dfea26017bada1f5" category="paragraph">Le seguenti istruzioni descrivono come installare l'hardware in un cabinet vuoto o in un rack per telecomunicazioni. Saltare questo passaggio se il cabinet è pre-compilato.</block>
   <block id="dfdc73d42700a9c3fdaeacd939a51a4f" category="inline-link">Avvisi di sicurezza</block>
   <block id="ab68982517ac3ad46c0076188c40b44c" category="list-text">È necessario consultare il<block ref="cf650561cfd1ad2dfbe54c8781566683" category="inline-link-rx"></block> documento e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.</block>
   <block id="ba4a0871133faabe4aa77db489cdd95f" category="list-text">Le istruzioni devono essere imballate con il kit guida.</block>
@@ -9591,7 +9552,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="5e90eef3467966790ef48f7bc66eaea8" category="list-text">Le ventole potrebbero essere molto rumorose al primo avvio. Il rumore della ventola durante l'avviamento è normale.</block>
   <block id="671754b07475807f952083aca6f98a97" category="list-text">Fissare i cavi di alimentazione utilizzando il dispositivo di fissaggio su ciascun alimentatore.</block>
   <block id="b20f6daaff695ed207299929a85ec2f0" category="summary">Preparare l'installazione della piattaforma AFF A1K.</block>
-  <block id="7322abed84a9319ae754d84788be0a04" category="doc">Preparazione per l'installazione - AFF A1K</block>
   <block id="b08289f100b75f4c534e1d2f7b065d98" category="inline-link-macro">configurare il cluster</block>
   <block id="4df010254bccca3ca04b1ea2f27bc98d" category="list-text">Utilizzare<block ref="21429355d1404c86c4038169e7df91bc" category="inline-link-rx"></block> per registrare i valori necessari quando si è <block ref="5fecf2f883e4e59df3d0a6a1bcd5e808" category="inline-link-macro-rx"></block>. Se viene fornito un valore predefinito, è possibile utilizzare tale valore oppure immettere il proprio.</block>
   <block id="4157e2eb4dd8641bf3242a14b2dfed09" category="list-text">Verificare di disporre di tutte le attrezzature e degli strumenti aggiuntivi necessari per completare l'installazione dell'hardware.</block>
@@ -9640,14 +9600,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="501009762675d8b94f6d05080102eaa1" category="paragraph">Il numero è riportato sul documento di trasporto, nell'e-mail di conferma o sul modulo Gestione sistema del controller dopo averlo disimballato.</block>
   <block id="8a7ac8ffae90ca0a1caaddb0f33069c2" category="list-text">Visitare il sito dell'assistenza NetApp all'indirizzo<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>.</block>
   <block id="d1cc88bda5b2251b480ce496987d8474" category="list-text">Registrare l'hardware:</block>
-  <block id="8f45a9f1fcb944bee42c078bdeacd8ac" category="cell">Se sei un...</block>
-  <block id="e3df4624e4d36502b5d044730eab97cc" category="cell">Attenersi alla procedura descritta di seguito...</block>
-  <block id="d3f2dc7623074c370346f082b621f2db" category="paragraph">Cliente NetApp esistente</block>
   <block id="8a55a5b89690f6046e6de8dd649ff837" category="list-text">Accedi con il tuo nome utente e la password.</block>
   <block id="5c83cedabfd78baf337988a092bcf317" category="list-text">Selezionare *sistemi* &gt; *i miei sistemi*.</block>
   <block id="1f122c4c30234dec74d765075fd1f45f" category="list-text">Verificare che il nuovo numero di serie del sistema sia elencato.</block>
-  <block id="d193a53b34315bee1bed499f665686ce" category="list-text">In caso contrario, seguire le istruzioni per i nuovi clienti NetApp.</block>
-  <block id="daee797d0bf63a91fe069e1df88d7923" category="paragraph">Nuovo cliente NetApp</block>
   <block id="12dc2a66a130388ec482398caa6ce95b" category="list-text">Fare clic su *Registrati ora* e creare un account.</block>
   <block id="89cc8de091278e0fb0686833ac6a7982" category="list-text">Selezionare *sistemi* &gt; *Registra sistemi*.</block>
   <block id="c04746c1c8deb45f0567d25441428d64" category="list-text">Immettere il numero di serie del sistema del prodotto e i dettagli richiesti.</block>
@@ -9735,7 +9690,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8f176870ac6c4361a1f6d7201cca260f" category="paragraph">Nei sistemi storage ONTAP, ogni shelf NS224 si distingue per un ID shelf univoco. Grazie a questo ID, lo shelf si distingue all'interno della configurazione del sistema storage. Per impostazione predefinita, gli ID shelf vengono in genere assegnati come "00" e "01", tuttavia potrebbe essere necessario modificare tali ID per mantenere l'unicità nel sistema di storage.</block>
   <block id="4de17b4fab9ee69108776ab9c4aaa0c6" category="admonition">L'ID dello shelf del controller è codificato come '00'. Non utilizzare l'ID ripiano '00' per i ripiani NS224 collegati alla piattaforma.</block>
   <block id="8e6cf8027b121504bad8e5f00fe274bd" category="summary">Preparare l'installazione della piattaforma AFF A70 e AFF A90.</block>
-  <block id="6ac7ef3cf74f3edcc05e92fb62092d4a" category="doc">Preparazione per l'installazione - AFF A70, AFF A90</block>
   <block id="45fa7acb63053c31c5ae0a83dd4b3618" category="paragraph">Prepararsi per l'installazione della piattaforma.</block>
   <block id="62ca0ae61a6f061f90175c671563df84" category="list-text">Accesso a un browser Web per configurare il sistema di archiviazione</block>
   <block id="bcaac0b69edbeb6d6ebf55df173a989d" category="paragraph">Una piattaforma A70-90 a pieno carico può pesare fino a 68,8 kg (151,68 lb) e richiede quattro persone per sollevare o utilizzare un sollevatore idraulico.</block>
@@ -9747,7 +9701,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="6e6faa41850da2cbf2fba1981d46dbf5" category="list-text">Due dispositivi di gestione dei cavi</block>
   <block id="a960b1448ee5bc8431d64797103ff6f9" category="paragraph">Registra la tua piattaforma per ottenere i vantaggi del supporto.</block>
   <block id="9ddae9a7519b413c3e002aaa6578c11b" category="paragraph">È possibile trovare il numero sul documento di trasporto, nell'e-mail di conferma o sul controller dopo averlo disimballato.</block>
-  <block id="321d330a3500c9aa223bf5d134d0886b" category="list-text">Immettere il numero di serie del sistema e i dettagli richiesti.</block>
   <block id="9693b6a52f0ee9092f8116f36e38a969" category="summary">Per sostituire un modulo i/o, è necessario scollegare i cavi dal modulo, rimuovere i moduli SFP e QSFP dal modulo, rimuovere il modulo, installare il modulo sostitutivo, reinstallare i moduli SFP e QSFP, quindi collegare il modulo i/O.</block>
   <block id="2224bc58afd68539e0dea6bf9e50c3d6" category="doc">Modulo i/o aggiuntivo - AFF A70, AFF A90</block>
   <block id="24ca01289b896c334109ba7e14ec004f" category="doc">Panoramica del modulo i/o aggiuntivo e sostituito - AFF A70-90K</block>
@@ -9999,4 +9952,67 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f3585daa539c5917b4fedd0eb7efb3f2" category="sidebar">Sistemi AFF</block>
   <block id="6476573ba5b973ad8ea01c57f5b30267" category="sidebar">Sistemi ASA</block>
   <block id="9aaba65702056e024efc0836758c1538" category="sidebar">Aggiunta a caldo completa</block>
+  <block id="b1cd69e899e8ab2e8b0c559899a3f2d7" category="admonition">La figura seguente mostra la rimozione di un modulo i/o orizzontale e verticale. In genere, si rimuoverà un solo modulo i/O.</block>
+  <block id="ed8012a83cd9088ec111d26e82a75971" category="list-text">Determinare se Key Manager è attivo con il comando _Security key-manager keystore show_. Per ulteriori informazioni, consultare la<block ref="4b8f2aeacb1514195535ef615c2cae4a" category="inline-link-rx"></block></block>
+  <block id="3e6277588162255770fd3384bad09d6d" category="list-text">Dal prompt del CARICATORE sul controller, avviare il controller e immettere _y_ quando viene richiesto di ignorare l'ID del sistema a causa di una mancata corrispondenza dell'ID del sistema.</block>
+  <block id="9daabece8db7521a7882f63ebd76a891" category="image-alt">Rimuovere un'unità con il pulsante di rilascio sulla parte superiore</block>
+  <block id="e0bc24820711c466532ba2cb67ababd9" category="image-alt">Rimuovere un'unità con il pulsante di rilascio al centro</block>
+  <block id="5be3be4e3c78f5ba4233a70fab6255f9" category="paragraph">Completare il processo di sostituzione dei supporti di avvio dopo il normale avvio completando i controlli finali e restituendo spazio di archiviazione.</block>
+  <block id="0ae7701d2ef507a0fceb7c75d4891e75" category="list-text">Porta del cavo E1a sul controller A alla porta E1a sul controller B.</block>
+  <block id="8bf237b60bd4b2db806d6610ad52ec49" category="list-text">Porta del cavo e7a sul controller A alla porta E1a sul controller B.</block>
+  <block id="1de71be9c54175327aecef768179d1bd" category="paragraph">+ immagine:../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[diagramma di cablaggio cluster senza switch a due nodi, larghezza=500px]</block>
+  <block id="89135cd683c3d107d2c82b9a703f04cb" category="paragraph">+ . Collegare le porte del modulo Ethernet alla rete host.</block>
+  <block id="4e44798e075d2d881a9fb7543667af95" category="paragraph">+ di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> .</block>
+  <block id="38821947dff053760f4c97b648ca454a" category="admonition">Non collegare ancora i cavi di alimentazione.</block>
+  <block id="b0dc4e3ef222885899ea12125b17e5eb" category="list-text">Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.</block>
+  <block id="1d0b4b2ae4d50e55a4247f5c6ede72f1" category="paragraph">Installare l'hardware in un cabinet vuoto o in un rack per telecomunicazioni. Saltare questo passaggio se il cabinet è pre-compilato.</block>
+  <block id="cd5e55734c933dafcff53ae3865a89d5" category="doc">Preparazione per l'installazione - AFF A1K</block>
+  <block id="5a5cce6679503c381a637f466b048193" category="open-title">Opzione 1: Cliente NetApp esistente</block>
+  <block id="253e5915076081eaf8bcc8dd74c1d42e" category="admonition">Se il nuovo numero di serie del sistema non è elencato, seguire le istruzioni per i nuovi clienti NetApp.</block>
+  <block id="7e2ca0c1daf9aaf521d6b306d11f7c79" category="open-title">Opzione 2: Nuovo cliente NetApp</block>
+  <block id="a620e4025016adf1d0a58233ca0fabf5" category="image-alt">Rimuovere o sostituire la batteria RTC</block>
+  <block id="49c0e8738689c7137641d0b6eed8b74c" category="image-alt">Spostare il supporto di avvio</block>
+  <block id="e9178489530d4c60949007e8abe6cd95" category="image-alt">Spostare un'animazione DIMM</block>
+  <block id="3cebb0bf3f808b01f8380666a63cc376" category="image-alt">Spostare il riser PCI</block>
+  <block id="1079efe662e16cf433206d49d63eeaa6" category="paragraph"><block ref="1079efe662e16cf433206d49d63eeaa6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8dca5ac38ffa0e9613281a20a0ace994" category="image-alt">Attenzione al peso di sollevamento del sistema</block>
+  <block id="9971c7f02208e39ad6368e57eb2f82f3" category="image-alt">Rimuovere o installare i bracci di gestione dei cavi</block>
+  <block id="2b6ebc45199173506b9b4592d62affa0" category="image-alt">Cablaggio cluster composito senza switch a due nodi</block>
+  <block id="3988cb152ae91c53f380027a4232d536" category="inline-image-macro">Il cluster senza switch a due nodi connette le connessioni cluster-ha</block>
+  <block id="372a8dd97d0e0a73dd341e38652ff673" category="list-text">da e0d a e0d <block ref="df4a6e6703f97285d4be98ac6b32bb9f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="896029f9803d769d6b4c354df0fa1440" category="inline-image-macro">Collegare le connessioni della rete dati integrata</block>
+  <block id="5fc0a7eeb4f9f66fd26242880a45cfa4" category="list-text">e0g e e0h <block ref="ba2134526422f5f21eaaa9ef2e2f11c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="722ecbce3343f3dc23dee2d53d88f2ed" category="image-alt">Il cluster senza switch a due nodi connette le schede di rete (NIC)</block>
+  <block id="5a77698302494ef91ee95c3f9ded308f" category="inline-image-macro">Collegare la porta di gestione</block>
+  <block id="1c0c9fe4df36ecf54b797e69eff0360e" category="paragraph"><block ref="1c0c9fe4df36ecf54b797e69eff0360e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aecf4c890506699d5134914982e97718" category="image-alt">Cablaggio composito cluster commutato</block>
+  <block id="79135b297c57329d2d977b75149a086c" category="inline-image-macro">Connessioni cluster-ha con switch</block>
+  <block id="2a41afda28faa24bd5359e120005398d" category="list-text">e0d su entrambi i controller fino allo switch cluster/ha <block ref="b92a1fef09a96ed6d9089504fec643ee" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b6bade89e0d586d34572548f1418dff" category="inline-image-macro">Connessioni di rete integrate del cluster commutate</block>
+  <block id="e734ac5b706a3982e94ed4bcf5783d35" category="list-text">e0g e e0h <block ref="d655351f2183e938c691c0566f625116" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2b5e3a94d4de532d196fa8367775092" category="image-alt">Connessioni di rete del cluster commutate</block>
+  <block id="aeb83c4121e1220b0a8efc82136a809d" category="inline-image-macro">Connessioni di rete per la gestione dei cluster con switch</block>
+  <block id="df81ef45089583d9cf254a5e823c88ab" category="paragraph"><block ref="df81ef45089583d9cf254a5e823c88ab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f44e898d80cbbf4a33440188c038a5d3" category="image-alt">Cablaggio composito per shelf a disco singolo</block>
+  <block id="7619a75fe3181346925af214b3805907" category="inline-image-macro">Collegare il controller a allo shelf</block>
+  <block id="ed6605849a8f419088845bc48c2b4374" category="paragraph">Collegare il controller A al ripiano <block ref="8f69dbb1a9676f77b4e45659e89350f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9228396d4ae4e82ba4cd05b1f94961bf" category="inline-image-macro">Collegare il controller B a un singolo shelf</block>
+  <block id="4e324a0bffb1eb75afb38454acf8e1ea" category="paragraph">Collegare il controller B al ripiano: <block ref="eae43961c4d76c017c2440362d53b1c7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b7d0a8670d6614b389c8403bdb0f5690" category="image-alt">Animazione dei due ripiani del cavo</block>
+  <block id="694cbf19b59e9646ed9b4e00c40a2d5e" category="inline-image-macro">Collegare due ripiani al controller A.</block>
+  <block id="eeadc1e47c5ada05336cc4a2430aff44" category="paragraph">Collegare il controller A ai ripiani: <block ref="d1f96be8e1b1f281d39fbb850bfff8ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f7272edef7a7fba4085ccfab3dcab29" category="inline-image-macro">Il cavo di collegamento al controller b</block>
+  <block id="5068cb73707de732551109a3000233a5" category="paragraph">Collegare il controller B ai ripiani: <block ref="a2de9db71ec552fd6bcd09e536f53289" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3efca07728c425a2d570687f9c5ee055" category="list-text">Aprire Esplora file .</block>
+  <block id="060661d6632055dffb9c643daef86e4f" category="image-alt">Collegare il computer portatile allo switch della subnet di gestione</block>
+  <block id="cf3f3f0fc4be4a45a82eb23742f77b44" category="image-alt">Sostituire la batteria NV</block>
+  <block id="8dd9b5acff09c1cf11545aba64dc805d" category="image-alt">Sostituire l'NVDIMM</block>
+  <block id="d8ee7164de4500239f84b98bce6a6cba" category="image-alt">Rimuovere il dispositivo di gestione dei cavi</block>
+  <block id="0607668bcd83e971ac318001952a55ae" category="image-alt">Sostituire una scheda PCI</block>
+  <block id="abb9a3f7b40da322ff2c9d6b0f555396" category="image-alt">Cablaggio di rete cluster commutato</block>
+  <block id="11e10f0140c4a2adc649196a587b4fb5" category="image-alt">Collegare due ripiani ai controller</block>
+  <block id="91ffcf18fe68ab362696af94371c45a6" category="image-alt">Collegare tre ripiani ai controller</block>
+  <block id="5d40c2e94b9e6a2b23697795499fe265" category="paragraph">+ immagine:../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[diagramma di cablaggio cluster senza switch a due nodi, larghezza=500px]</block>
+  <block id="46ef92fe9e0acb49a708c33291f9e608" category="doc">Preparazione per l'installazione - AFF A70, AFF A90</block>
+  <block id="0f8a8f2efc51dcb48a6d357e4ed1476e" category="sidebar">Preparazione per l'installazione</block>
 </blocks>

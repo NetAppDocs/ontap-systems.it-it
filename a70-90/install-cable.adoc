@@ -47,20 +47,24 @@ Collegamento via cavo delle connessioni del cluster senza switch.
 NOTE: Il traffico di cluster Interconnect e quello di ha condividono le stesse porte fisiche.
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo ha del cluster]
-
+.. Porta del cavo E1a sul controller A alla porta E1a sul controller B.
+.. Porta del cavo e7a sul controller A alla porta E1a sul controller B.
 +
 *Cavi di interconnessione cluster/ha*
 
-+
-image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Schema di cablaggio del cluster senza switch a due nodi]
 
-. Collegare le porte del modulo Ethernet alla rete host.
-+
-Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
 
-+
-.. Collegare le porte via cavo e9a e e9b allo switch di rete dati Ethernet, come illustrato.
+
+
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo ha del cluster]
+
++ immagine:../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[diagramma di cablaggio cluster senza switch a due nodi, larghezza=500px]
+
++ . Collegare le porte del modulo Ethernet alla rete host.
+
++ di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
+
+. Collegare le porte via cavo e9a e e9b allo switch di rete dati Ethernet, come illustrato.
 +
 
 NOTE: Per ottenere le massime performance di sistema per il traffico cluster e ha, si consiglia di non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.
@@ -74,7 +78,7 @@ image::../media/oie_cable_sfp_gbe_copper.svg[100GB cavo Ethernet]
 +
 image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cavo alla rete Ethernet da 100 GB]
 
-.. Collegare gli switch di rete host 10/25 GbE.
+. Collegare gli switch di rete host 10/25 GbE.
 +
 *4 porte, 10/25 GbE host*
 
@@ -84,9 +88,8 @@ image::../media/oie_cable_sfp_gbe_copper.svg[Cavo da 10/25 GB]
 +
 image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cavo alla rete Ethernet 100GB]
 
-
-
-. Collegare le porte di gestione del controller (chiave inglese) agli switch di rete di gestione con cavi RJ-45 1000BASE-T.
++
+.. Collegare le porte di gestione del controller (chiave inglese) agli switch di rete di gestione con cavi RJ-45 1000BASE-T.
 +
 image::../media/oie_cable_rj45.svg[RJ45 cavi]
 
@@ -99,7 +102,9 @@ image::../media/drw_70-90_management_connection_ieops-1656.svg[Connettersi alla 
 
 
 
-IMPORTANT: NON collegare ancora i cavi di alimentazione.
+
+
+IMPORTANT: Non collegare ancora i cavi di alimentazione.
 
 --
 .Opzione 2: Cluster con switch via cavo
@@ -170,7 +175,7 @@ image::../media/drw_70-90_management_connection_ieops-1656.svg[Connettersi alla 
 
 
 
-IMPORTANT: NON collegare ancora i cavi di alimentazione.
+IMPORTANT: Non collegare ancora i cavi di alimentazione.
 
 --
 ====

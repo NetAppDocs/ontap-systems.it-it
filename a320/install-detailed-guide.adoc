@@ -100,7 +100,7 @@ X66250-5 (112-00328), 5 m.
 
 X66250-30 (112-00331), 30 m.
  a| 
-image:../media/oie_cable_etherned_mpo.png[""]
+image:../media/oie_cable_etherned_mpo.png["Cavo Ethernet - MPO"]
  a| 
 Cavo Ethernet (in base all'ordine)
 
@@ -186,11 +186,11 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Foglio di lavoro 
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_a320_weight_label.png[etichetta del peso drw a320]
+image::../media/drw_a320_weight_label.png[Attenzione al peso di sollevamento del sistema]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_a320_cable_management_arms.png[Rimozione o installazione dei bracci di gestione dei cavi]
+image::../media/drw_a320_cable_management_arms.png[Rimuovere o installare i bracci di gestione dei cavi]
 
 . Posizionare il pannello anteriore del sistema.
 
@@ -218,7 +218,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . È possibile utilizzare l'illustrazione o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:
 +
-image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[gif animata composita di cablaggio di rete drw a320 tnsc]
+image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[Cablaggio cluster composito senza switch a due nodi]
 
 +
 [cols="1,2"]
@@ -232,7 +232,7 @@ image:../media/oie_legend_icon_1_lg.png["Fase 1"]
 Collegare tra loro le porte cluster/ha con il cavo da 100 GbE (QSFP28):
 
 ** da e0a e0a
-** da e0d a e0dimage:../media/drw_a320_tnsc_cluster_ha_connection_step1a.png[""]
+** da e0d a e0d image:../media/drw_a320_tnsc_cluster_ha_connection_step1a.png["Il cluster senza switch a due nodi connette le connessioni cluster-ha"]
 
 
 
@@ -242,7 +242,7 @@ image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
  a| 
 Se si utilizzano le porte integrate per una connessione di rete dati, collegare i cavi 100GbE o 40GbE agli switch di rete dati appropriati:
 
-** e0g e e0himage:../media/drw_a320_onboard_data_connection_step2.png[""]
+** e0g e e0h image:../media/drw_a320_onboard_data_connection_step2.png["Collegare le connessioni della rete dati integrata"]
 
 
 
@@ -252,7 +252,7 @@ image:../media/oie_legend_icon_3_dr.png["Passaggio 3"]
  a| 
 Se si utilizzano schede NIC per connessioni Ethernet o FC, collegare le schede NIC agli switch appropriati:
 
-image::../media/drw_a320_nic_connections_step3.png[connessioni niche drw a320, punto 3]
+image::../media/drw_a320_nic_connections_step3.png[Il cluster senza switch a due nodi connette le schede di rete (NIC)]
 
 
 
@@ -261,7 +261,7 @@ image:../media/oie_legend_icon_4_lp.png["Passaggio 4"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
 
-image:../media/drw_a320_management_port_connection_step4.png[""]
+image:../media/drw_a320_management_port_connection_step4.png["Collegare la porta di gestione"]
 
 
 
@@ -291,7 +291,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . È possibile utilizzare l'illustrazione o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:
 +
-image::../media/drw_a320_switched_network_cabling_composite_animated_GIF.png[GIF animato composito con cablaggio di rete con switch drw a320]
+image::../media/drw_a320_switched_network_cabling_composite_animated_GIF.png[Cablaggio composito cluster commutato]
 
 +
 [cols="1,3"]
@@ -305,7 +305,7 @@ image:../media/oie_legend_icon_1_lg.png["Fase 1"]
 Collegare le porte cluster/ha allo switch cluster/ha con il cavo 100 GbE (QSFP28):
 
 ** E0a su entrambi i controller allo switch cluster/ha
-** E0d su entrambi i controller allo switch cluster/haimage:../media/drw_a320_switched_cluster_ha_connection_step1b.png[""]
+** e0d su entrambi i controller fino allo switch cluster/ha image:../media/drw_a320_switched_cluster_ha_connection_step1b.png["Connessioni cluster-ha con switch"]
 
 
 
@@ -315,7 +315,7 @@ image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
  a| 
 Se si utilizzano le porte integrate per una connessione di rete dati, collegare i cavi 100GbE o 40GbE agli switch di rete dati appropriati:
 
-** e0g e e0himage:../media/drw_a320_onboard_data_connection_step2.png[""]
+** e0g e e0h image:../media/drw_a320_onboard_data_connection_step2.png["Connessioni di rete integrate del cluster commutate"]
 
 
 
@@ -325,7 +325,7 @@ image:../media/oie_legend_icon_3_dr.png["Passaggio 3"]
  a| 
 Se si utilizzano schede NIC per connessioni Ethernet o FC, collegare le schede NIC agli switch appropriati:
 
-image::../media/drw_a320_nic_connections_step3.png[connessioni niche drw a320, punto 3]
+image::../media/drw_a320_nic_connections_step3.png[Connessioni di rete del cluster commutate]
 
 
 
@@ -334,7 +334,7 @@ image:../media/oie_legend_icon_4_lp.png["Passaggio 4"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
 
-image:../media/drw_a320_management_port_connection_step4.png[""]
+image:../media/drw_a320_management_port_connection_step4.png["Connessioni di rete per la gestione dei cluster con switch"]
 
 
 
@@ -368,7 +368,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . È possibile utilizzare l'illustrazione o le istruzioni dettagliate per collegare i controller a un singolo shelf.
 +
-image::../media/drw_a320_single_shelf_connections_animated_gif.png[gif animata con collegamenti a shelf singolo drw a320]
+image::../media/drw_a320_single_shelf_connections_animated_gif.png[Cablaggio composito per shelf a disco singolo]
 
 +
 [cols="1,3"]
@@ -379,14 +379,14 @@ image::../media/drw_a320_single_shelf_connections_animated_gif.png[gif animata c
  a| 
 image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
  a| 
-Collegare il controller a allo shelf image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png[""]
+Collegare il controller A al ripiano image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png["Collegare il controller a allo shelf"]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
  a| 
-Collegare il controller del cavo B allo shelf: image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png[""]
+Collegare il controller B al ripiano: image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png["Collegare il controller B a un singolo shelf"]
 
 |===
 . Per completare la configurazione del sistema, vedere <<Completare la configurazione e l'installazione del sistema>>
@@ -407,7 +407,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . È possibile utilizzare la seguente illustrazione o la procedura scritta per collegare i controller a due shelf di dischi.
 +
-image::../media/drw_a320_2_shevles_cabling_animated_gif.png[i 2 cavi del drw a320 sono animati gif]
+image::../media/drw_a320_2_shevles_cabling_animated_gif.png[Animazione dei due ripiani del cavo]
 
 +
 [cols="1-3"]
@@ -418,14 +418,14 @@ image::../media/drw_a320_2_shevles_cabling_animated_gif.png[i 2 cavi del drw a32
  a| 
 image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
  a| 
-Collegare il controller dei cavi A agli shelf: image:../media/drw_a320_2_shelves_cabling_controller_a.png[""]
+Collegare il controller A ai ripiani: image:../media/drw_a320_2_shelves_cabling_controller_a.png["Collegare due ripiani al controller A."]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
  a| 
-Collegare il controller dei cavi B agli shelf: image:../media/drw_a320_2_shelves_cabling_controller_b.png[""]
+Collegare il controller B ai ripiani: image:../media/drw_a320_2_shelves_cabling_controller_b.png["Il cavo di collegamento al controller b"]
 
 |===
 . Per completare la configurazione del sistema, vedere <<Completare la configurazione e l'installazione del sistema>>
@@ -460,7 +460,7 @@ video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
 
 +
-.. Aprire file Explorer.
+.. Aprire Esplora file .
 .. Fare clic su Network (rete) nel riquadro sinistro.
 .. Fare clic con il pulsante destro del mouse e selezionare Aggiorna.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
@@ -496,7 +496,7 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al laptop o alla console utilizzando il cavo della console fornito con il sistema, quindi collegare il laptop allo switch di gestione sulla subnet di gestione.
 +
-image::../media/drw_a320_laptop_to_switch_and_controller.png[computer portatile drw a320 per switch e controller]
+image::../media/drw_a320_laptop_to_switch_and_controller.png[Collegare il computer portatile allo switch della subnet di gestione]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 

@@ -17,7 +17,7 @@ Prima di arrestare il controller danneggiato, è necessario verificare se il sis
 == Verificare la configurazione del gestore delle chiavi di protezione
 
 .Fasi
-. Determe se Key Manager è attivo con il comando _Security key-manager keystore show_. Per ulteriori informazioni, consultare la https://docs.netapp.com/us-en/ontap-cli/security-key-manager-keystore-show.html["Security key-manager keystore mostra pagina MAN"^]
+. Determinare se Key Manager è attivo con il comando _Security key-manager keystore show_. Per ulteriori informazioni, consultare la https://docs.netapp.com/us-en/ontap-cli/security-key-manager-keystore-show.html["Security key-manager keystore mostra pagina MAN"^]
 +
 
 NOTE: È possibile che si disponga di altri tipi di gestore delle chiavi. I tipi sono `KMIP`, , `AKV`e `GCP`. Il processo di conferma di questi tipi è lo stesso dei tipi di gestore delle chiavi o di conferma `external` `onboard` .
