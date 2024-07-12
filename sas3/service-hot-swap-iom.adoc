@@ -27,13 +27,13 @@ NOTE: Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf sim
 I moduli IOM12 si distinguono per l'etichetta "IOM12":
 
 +
-image::../media/drw_iom12.gif[drw iom12]
+image::../media/drw_iom12.gif[Parte anteriore di IOM12]
 
 +
 I moduli IOM12B sono caratterizzati da una striscia blu e da un'etichetta "IOM12B":
 
 +
-image::../media/iom12b.png[iom12b]
+image::../media/iom12b.png[Parte anteriore di IOM12B]
 
 * Per le configurazioni multipath (ha multipath o multipath), ha trio-path e quad-path (ha quad-path o quad-path), è possibile sostituire a caldo un IOM shelf (senza interruzioni, sostituire un IOM shelf in un sistema acceso e che serve dati - i/o è in corso).
 * Per le configurazioni ha a percorso singolo della serie FAS2600 e FAS2700, è necessario eseguire un'operazione di takeover e giveback per sostituire un IOM shelf in un sistema acceso e in grado di fornire dati. I/o in corso.
@@ -110,10 +110,10 @@ Prendere nota delle porte IOM dello shelf a cui ciascun cavo è collegato.
 
 . Premere il dispositivo di chiusura arancione sulla maniglia della IOM Cam dello scaffale fino a rilasciarla, quindi aprire completamente la maniglia della CAM per rilasciare lo shelf IOM dal piano intermedio.
 +
-image::../media/drw_iom_latch.png[fermo iom drw]
+image::../media/drw_iom_latch.png[Rilasciare il fermo per la maniglia della camma]
 
 +
-image::../media/drw_iom_open.png[drw iom aperto]
+image::../media/drw_iom_open.png[Maniglia della camma in posizione aperta]
 
 . Utilizzare la maniglia della camma per far scorrere l'IOM dello shelf fuori dallo shelf del disco.
 +

@@ -20,13 +20,15 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A70 e AFF A90
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/a70-90/maintain-overview.html"
   - title: Supporto di boot
     pdf-filename: AFF A70, supporti di avvio AFF A90
     entries:
-    - title: Panoramica sulla sostituzione dei supporti di avvio
-      url: "/a70-90/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/a70-90/bootmedia-replace-workflow.html"
+    - title: Requisiti e considerazioni
+      url: "/a70-90/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia integrate
       url: "/a70-90/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso
@@ -35,15 +37,17 @@ entries:
       url: "/a70-90/bootmedia-replace.html"
     - title: Immagine di recovery all'avvio
       url: "/a70-90/bootmedia-recovery-image-boot.html"
-    - title: Ripristino crittografia
+    - title: Ripristino della crittografia
       url: "/a70-90/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp
       url: "/a70-90/bootmedia-complete-rma.html"
   - title: Chassis
     pdf-filename: Chassis AFF A70, AFF A90
     entries:
-    - title: Panoramica sulla sostituzione del telaio
-      url: "/a70-90/chassis-replace-overview.html"
+    - title: Flusso di lavoro di sostituzione del telaio
+      url: "/a70-90/chassis-replace-workflow.html"
+    - title: Requisiti e considerazioni
+      url: "/a70-90/chassis-replace-requirements.html"
     - title: Spegnere il controller compromesso
       url: "/a70-90/chassis-replace-shutdown.html"
     - title: Sostituire il telaio
@@ -53,8 +57,10 @@ entries:
   - title: Controller
     pdf-filename: AFF A70, modulo controller AFF A90
     entries:
-    - title: Panoramica sulla sostituzione del modulo controller
-      url: "/a70-90/controller-replace-overview.html"
+    - title: Flusso di lavoro di sostituzione del controller
+      url: "/a70-90/controller-replace-workflow.html"
+    - title: Requisiti e considerazioni
+      url: "/a70-90/controller-replace-requirements.html"
     - title: Spegnere il controller compromesso
       url: "/a70-90/controller-replace-shutdown.html"
     - title: Sostituire il controller
@@ -77,11 +83,11 @@ entries:
     url: "/a70-90/nvdimm-battery-replace.html"
   - title: Modulo i/O.
     entries:
-    - title: Panoramica aggiunta o sostituzione modulo i/O.
+    - title: Panoramica del modulo di i/O.
       url: "/a70-90/io-module-overview.html"
-    - title: Aggiungere un modulo i/O.
+    - title: Aggiungere il modulo i/O.
       url: "/a70-90/io-module-add.html"
-    - title: Sostituire un modulo i/O.
+    - title: Sostituire il modulo i/O.
       url: "/a70-90/io-module-replace.html"
   - title: Alimentatore
     url: "/a70-90/power-supply-replace.html"

@@ -20,13 +20,15 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A1K
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/a1k/maintain-overview.html"
   - title: Supporto di boot
     pdf-filename: Supporti di avvio di AFF A1K
     entries:
-    - title: Panoramica sulla sostituzione dei supporti di avvio
-      url: "/a1k/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/a1k/bootmedia-replace-workflow.html"
+    - title: Requisiti e considerazioni
+      url: "/a1k/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia integrate
       url: "/a1k/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso
@@ -35,15 +37,17 @@ entries:
       url: "/a1k/bootmedia-replace.html"
     - title: Immagine di recovery all'avvio
       url: "/a1k/bootmedia-recovery-image-boot.html"
-    - title: Ripristino crittografia
+    - title: Ripristino della crittografia
       url: "/a1k/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp
       url: "/a1k/bootmedia-complete-rma.html"
   - title: Controller
     pdf-filename: Modulo controller AFF A1K
     entries:
-    - title: Panoramica sulla sostituzione del modulo controller
-      url: "/a1k/controller-replace-overview.html"
+    - title: Flusso di lavoro di sostituzione del controller
+      url: "/a1k/controller-replace-workflow.html"
+    - title: Requisiti e considerazioni
+      url: "/a1k/controller-replace-requirements.html"
     - title: Spegnere il controller compromesso
       url: "/a1k/controller-replace-shutdown.html"
     - title: Sostituire il controller
@@ -64,11 +68,11 @@ entries:
     url: "/a1k/nvdimm-battery-replace.html"
   - title: Modulo i/O.
     entries:
-    - title: Panoramica aggiunta o sostituzione modulo i/O.
+    - title: Panoramica del modulo di i/O.
       url: "/a1k/io-module-overview.html"
-    - title: Aggiungere un modulo i/O.
+    - title: Aggiungere il modulo i/O.
       url: "/a1k/io-module-add.html"
-    - title: Sostituire un modulo i/O.
+    - title: Sostituire il modulo i/O.
       url: "/a1k/io-module-replace.html"
   - title: Alimentatore
     url: "/a1k/power-supply-replace.html"

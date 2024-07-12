@@ -17,18 +17,18 @@ summary: 'È possibile utilizzare il foglio di lavoro completo di cablaggio cont
 * Se necessario, fare riferimento a. link:install-cabling-worksheets-how-to-read-quadpath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività quad-path"].
 * L'esempio di cablaggio mostra i cavi controller-to-stack come pieni o tratteggiati per distinguere le connessioni delle porte controller A e C dalle connessioni delle porte controller B e D.
 +
-image::../media/drw_controller_to_stack_cable_type_key.gif[controller drw per collegare la chiave del tipo di cavo]
+image::../media/drw_controller_to_stack_cable_type_key.gif[Chiave del tipo di cavo per il cablaggio da controller a stack]
 
 * I cavi degli esempi di cablaggio e le relative coppie di porte nelle schede di lavoro sono codificati a colori per distinguere la connettività con ogni stack nella coppia ha.
 +
-image::../media/drw_controller_to_stack_cable_color_key_non2600.gif[controller drw per stack cavo colore chiave non 2600]
+image::../media/drw_controller_to_stack_cable_color_key_non2600.gif[Chiave a colori per il cablaggio dei fogli di lavoro]
 
 * L'esempio di cablaggio distingue visivamente i due set di cavi multipath necessari per ottenere una connettività quad-path per ciascun controller a ogni stack in una configurazione a coppia ha o a singolo controller.
 +
 Il primo set di cavi multipath viene definito "`multipath`". Il secondo gruppo di cavi multipath viene definito "`quad-path`". Il secondo gruppo di cavi viene definito "`quad-path`" perché il completamento di questo gruppo di cavi offre la connettività quad-path.
 
 +
-image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[controller drw per lo stack della chiave di connettività con percorso quadruplo]
+image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[Tasto a colori per la connettività quad-pathed]
 
 * L'esempio del foglio di lavoro mostra le coppie di porte designate per il cablaggio a più percorsi o il cablaggio a quattro percorsi verso lo stack applicabile.
 +
@@ -44,4 +44,4 @@ Il seguente esempio di foglio di lavoro e cablaggio utilizza coppie di porte 1a/
 
 image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Foglio di lavoro di cablaggio per ha quad-path]
 
-image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[drw qpha slot 1 e 2 due 4porthbas due stack nau]
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Quuad-path ha con due HBA SAS a quattro porte e due stack multi-shelf]
