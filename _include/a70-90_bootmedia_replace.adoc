@@ -41,15 +41,11 @@ Supporto di boot
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Disco drw a800 installato IEOPS 960]
 
 . Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare l'alimentazione estraendo il modulo controller di circa tre pollici:
+. Scollegare l'alimentazione al modulo controller estraendo il modulo controller di circa tre pollici:
 +
-
-NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dagli alimentatori.
-
-+
-.. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
+.. Premere verso il basso entrambi i fermi di bloccaggio del modulo controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.
 .. Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.
-.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi che l'etichetta in cui sono stati collegati i cavi sia visibile per poterli collegare alle porte corrette quando si reinstalla il modulo.
+.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.
 .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
 .. Premere il pulsante della camma di gestione del sistema. La leva della camma si allontana dal telaio.
 .. Ruotare la leva della camma completamente verso il basso e rimuovere il modulo di gestione del sistema dal modulo controller.
@@ -69,7 +65,7 @@ NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocc
 .. Premere il pulsante di bloccaggio, ruotare completamente il supporto di avvio e rilasciare il pulsante di bloccaggio.
 
 
-. Reinstallare il modulo di gestione del sistema:.
+. Reinstallare il modulo di gestione del sistema:
 +
 .. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 .. Eseguire il richiamo del modulo Gestione del sistema.
@@ -112,13 +108,21 @@ L'unità flash USB dovrebbe avere l'immagine ONTAP appropriata di ciò che il co
 .. Rimuovere l'unità flash USB dal computer portatile.
 
 
-. Inserire l'unità flash USB nello slot USB del modulo di gestione del sistema.
+. Inserire l'unità flash USB nella porta USB-A del modulo di gestione del sistema.
 +
 Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
 
-. Collegare i cavi di alimentazione agli alimentatori e reinstallare il fermo del cavo di alimentazione.
+. Ricollegare l'alimentazione al modulo controller:
++
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
+.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
 +
 Il controller inizia ad avviarsi non appena l'alimentazione viene ricollegata al sistema.
+
+
 
 . Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
 +

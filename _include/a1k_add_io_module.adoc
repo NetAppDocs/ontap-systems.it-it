@@ -121,11 +121,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 === Fase 2: Aggiunta di moduli i/O.
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare i cavi delle unità di alimentazione (PSU) dalle PSU dal controller.
-+
-
-NOTE: Se il sistema di storage in uso dispone di alimentatori CC, scollegare il blocco cavi di alimentazione dall'alimentatore.
-
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere il modulo di chiusura dello slot di destinazione dal supporto:
 +
@@ -323,11 +318,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 === Fase 2: Sostituire un modulo i/O.
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare i cavi dell'alimentatore dalle PSU dal controller.
-+
-
-NOTE: Se il sistema di storage in uso dispone di alimentatori CC, scollegare il blocco cavi di alimentazione dall'alimentatore.
-
 . Scollegare eventuali cavi dal modulo i/o di destinazione.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere il modulo i/o di destinazione dallo chassis:
@@ -367,7 +357,6 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 
 . Collegare il modulo i/O.
 . Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per la centralina.
-. Ricollegare le PSU.
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 . Riavviare il controller dal prompt del CARICATORE:_bye_
 +

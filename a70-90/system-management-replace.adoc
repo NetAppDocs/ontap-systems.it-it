@@ -166,13 +166,9 @@ NOTE: Prima di procedere, verificare che la NVRAM sia stata completata.
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Disco drw a800 installato IEOPS 960]
 
 . Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare l'alimentazione estraendo il modulo controller di circa tre pollici:
+. Scollegare l'alimentazione al modulo controller estraendo il modulo controller di circa tre pollici:
 +
-
-NOTE: Se il sistema è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dall'alimentatore.
-
-+
-.. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
+.. Premere verso il basso entrambi i fermi di bloccaggio del modulo controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.
 .. Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.
 
 
@@ -251,11 +247,15 @@ Supporto di boot
 
 
 . Eseguire il richiamo del modulo Gestione del sistema.
+. Ricollegare l'alimentazione al modulo controller:
 +
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
 
-NOTE: Se il sistema è dotato di alimentatori CC, ricollegare il blocco cavi di alimentazione all'alimentatore.
+.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
 
-. Reinstallare il modulo controller nel telaio.
+
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 
 

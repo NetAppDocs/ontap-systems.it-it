@@ -1164,93 +1164,54 @@
   <block id="8859ec72efaf5908f3122d580e8ef635" category="list-text">Verificare che i LED di attenzione (ambra) sul modulo NSM contenente la ventola guasta e il pannello del display operatore dello scaffale non siano più accesi.</block>
   <block id="02b19aaeb195afc74902cfd83d1875a3" category="paragraph">I LED attenzione del modulo NSM si spengono dopo il riavvio del modulo NSM e non rilevano più un problema relativo alla ventola. Questa operazione può richiedere da tre a cinque minuti.</block>
   <block id="d8109bc1e72c67d266f35804a93c0a8d" category="summary">È possibile aggiungere a caldo uno shelf di dischi NS224 dopo che la coppia ha soddisfa determinati requisiti e dopo che le attività di preparazione applicabili alla coppia ha sono state completate.</block>
-  <block id="305fade7b83ae4e7549b33a3ae1b1fd0" category="doc">Hot-add a shelf - Shelf NS224</block>
   <block id="eca821c6b2673e81fce80d61c03099a4" category="section-title">Requisiti per un hot-add</block>
-  <block id="eeb59433d501968b152fd713cddd2e47" category="paragraph">La coppia ha deve soddisfare determinati requisiti prima di aggiungere a caldo uno shelf di dischi NS224.</block>
-  <block id="9e3a02c5b7d1bbea0a425314be87f94c" category="list-text">Il modello di piattaforma e la versione di ONTAP devono supportare lo shelf NS224 e i dischi che si stanno aggiungendo a caldo.</block>
-  <block id="b3f61222fb51c826335ea05f957189ce" category="list-text">Per collegare lo shelf, è necessario disporre del numero e del tipo di cavi corretti.</block>
-  <block id="149bd884ff7361ec4900f148e94264c1" category="paragraph">Se la coppia ha non dispone di un numero sufficiente di porte compatibili con RoCE e il modello di piattaforma supporta l'utilizzo di schede PCIe o moduli i/o compatibili con RoCE, è necessario installare le schede o i moduli i/o aggiuntivi negli slot controller corretti, come supportato dal modello di piattaforma.</block>
-  <block id="bf9e404e3724ecf929670f95275b884e" category="paragraph">Le porte non dedicate compatibili con RoCE devono essere configurate per l'utilizzo dello storage (non per l'utilizzo in rete).</block>
-  <block id="3a0537bc074963c8c7b8afdfa7851872" category="paragraph"><block ref="cd0ec4d1059266e2eb6b1658ce353e50" category="inline-xref-macro-rx"></block></block>
-  <block id="c86ca2ad8b18f1b66eec5105c703ce0a" category="list-text">Se si dispone di una coppia ha AFF A700 e si sta aggiungendo a caldo lo shelf di dischi NS224 iniziale (non esiste uno shelf di dischi NS224 nella coppia ha), è necessario installare un modulo di dump core (X9170A, SSD NVMe da 1 TB) in ciascun controller per supportare i core dump (memorizzare i file core).</block>
   <block id="2a8cd3ca573de9451e94751347275dc3" category="inline-link-macro">Sostituire il modulo di caching o aggiungere/sostituire un modulo core dump -- AFF A700 e FAS9000</block>
-  <block id="475cacc4c4d3f4ca67cc021d7e76f4ce" category="paragraph"><block ref="475cacc4c4d3f4ca67cc021d7e76f4ce" category="inline-link-macro-rx"></block></block>
-  <block id="40b9aa2a1398aaa422dac35a64ae5873" category="list-text">La tua coppia ha deve avere un numero inferiore al numero massimo di shelf supportati, almeno del numero di shelf che intendi aggiungere a caldo.</block>
-  <block id="ad77a3083357fd77bd7e8fdbdf159740" category="paragraph">Non è possibile superare il numero massimo di shelf supportati dalla coppia ha dopo l'aggiunta a caldo degli shelf.</block>
   <block id="0cba540a6f27fb2ed5b8694332213f9d" category="list-text">Se si aggiunge a caldo uno shelf a una coppia ha che dispone già di uno shelf NS224, la coppia ha non può visualizzare messaggi di errore relativi al cablaggio dello storage e deve essere cablata come ha multipath.</block>
-  <block id="6bdb195c7a34745d79922274f1a7c2c3" category="paragraph">È possibile eseguire Active IQ Config Advisor per visualizzare eventuali messaggi di errore relativi al cablaggio dello storage e le azioni correttive da intraprendere.</block>
   <block id="839439b189cfb3960dee96d5900594f7" category="list-text">È necessaria una graffetta con un lato raddrizzato o una penna a sfera con punta stretta.</block>
-  <block id="6f1c8168a791947d3031cd2fdabd1192" category="paragraph">Per modificare l'ID dello shelf, utilizzare la graffetta o la penna a sfera per accedere al pulsante dell'ID dello shelf dietro il pannello ODP (Operator Display Panel).</block>
   <block id="a88a83b0bfb523c178bf4c0cfdf68574" category="section-title">Considerazioni per un hot-add</block>
-  <block id="7c1fc39297ae1348c713726df64dc610" category="paragraph">Prima di aggiungere a caldo uno shelf di dischi NS224, è necessario acquisire familiarità con le Best practice e gli aspetti di questa procedura.</block>
-  <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">Se si dispone di una coppia ASA ha che supporta gli shelf NS224, è possibile utilizzare questa procedura.</block>
   <block id="544c0e56afe20cab7c081a167f90b40d" category="list-text">*Best practice:* la Best practice consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di aggiungere a caldo uno shelf.</block>
   <block id="49499bb4b11cb28cd05725cd5cafadd0" category="paragraph">L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati. In questo modo si evitano messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi e alla prevenzione della partizione dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.</block>
   <block id="27ad121f85fccbb2fbae4c00d3c38810" category="inline-link">Download NetApp: Pacchetto di qualificazione dei dischi</block>
   <block id="6f0e65a313ceda26ae3094641da52d2e" category="paragraph"><block ref="6f0e65a313ceda26ae3094641da52d2e" category="inline-link-rx"></block></block>
   <block id="e47dc1184d0b4a889dc672df315a5a19" category="list-text">*Best practice:* la Best practice consiste nell'eseguire Active IQ Config Advisor prima e dopo l'aggiunta a caldo di uno shelf.</block>
-  <block id="505979d325219f19e3b1590170f752f3" category="paragraph">L'esecuzione di Active IQ Config Advisor prima dell'aggiunta a caldo di uno shelf fornisce un'istantanea della connettività Ethernet esistente dello shelf (ENET), verifica le versioni del firmware del modulo shelf (NSM) NVMe consente di verificare un ID shelf già in uso nella coppia ha. L'esecuzione di Active IQ Config Advisor dopo l'aggiunta a caldo di uno shelf consente di verificare che gli shelf siano cablati correttamente e che gli shelf ID siano univoci all'interno della coppia ha.</block>
-  <block id="78c392199c08bab6bc34c660f80f7f24" category="list-text">*Best practice:* la Best practice consiste nel disporre delle versioni correnti del firmware NVMe shelf module (NSM) e del firmware del disco sul sistema prima di aggiungere un nuovo shelf.</block>
   <block id="eb8f45b1db6775caf49b1a0ff7b38f44" category="list-text">Dopo aver cablato uno shelf aggiunto a caldo, ONTAP riconosce lo shelf:</block>
   <block id="583e7dd0a618fcea3c1f37593c2e7202" category="list-text">La proprietà del disco viene assegnata se è attivata l'assegnazione automatica del disco.</block>
   <block id="97f2d61fca24e47abce33d66ce5427b7" category="list-text">Il firmware dello shelf NSM e del disco devono essere aggiornati automaticamente, se necessario.</block>
   <block id="3de1e52644cd0e31c01bd38eb7e3cd32" category="admonition">Gli aggiornamenti del firmware possono richiedere fino a 30 minuti.</block>
-  <block id="4cf3f390446c26252aab038e17c0643f" category="section-title">Preparatevi per un'aggiunta a caldo</block>
-  <block id="c0f11900de778c0c7dbc4dcc23284ed9" category="paragraph">È necessario completare le attività di preparazione applicabili alla coppia ha prima di aggiungere a caldo uno shelf di dischi NS224.</block>
   <block id="1292d9da9c097d598fa72a64d548e359" category="paragraph">È necessario aver soddisfatto i requisiti di sistema.</block>
   <block id="17d14abf2103752e4149b92b2294370e" category="paragraph"><block ref="1a0d84af954c02706175aa571a3829ff" category="inline-xref-macro-rx"></block></block>
-  <block id="204c25542c5d660c031ae735415785bc" category="list-text">Per alcuni modelli di piattaforma, quando una scheda PCIe o un modulo i/o compatibile con RoCE viene installata in uno slot supportato su un controller, le porte utilizzano automaticamente lo storage (invece di essere in rete); tuttavia, si consiglia di completare questa procedura per verificare che le porte compatibili con RoCE siano configurate per l'utilizzo dello storage.</block>
   <block id="2cd678bb1387e05d5c4dd3461278cff2" category="list-text">Se si stabilisce che le porte non dedicate compatibili con RoCE nella coppia ha non sono configurate per l'utilizzo dello storage, la configurazione delle porte non comporta interruzioni.</block>
   <block id="f13cb5d2becdef8b8ebea94e8b537d9f" category="admonition">Se la coppia ha esegue una versione di ONTAP 9.6, è necessario riavviare i controller, uno alla volta.</block>
   <block id="f02a3810a88faed2075af7fdeef6cc0d" category="admonition">Se la coppia ha esegue ONTAP 9.7 o versione successiva, non è necessario riavviare i controller, a meno che uno o entrambi i controller non siano in modalità di manutenzione. Questa procedura presuppone che nessuno dei controller sia in modalità di manutenzione.</block>
-  <block id="622e2c1e48cbf4234cb8c28434a52588" category="list-text">Verificare se le porte non dedicate della coppia ha sono configurate per l'utilizzo dello storage:<block ref="90e0991b70398b08e4e3eb0ae46c4163" prefix=" " category="inline-code"></block></block>
   <block id="9c421700c0f93ff32ed586c9cde9ac20" category="paragraph">Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate<block ref="ddecebdea58b5f264d27f1f7909bab74" prefix=" " category="inline-code"></block> in<block ref="650be61892bf690026089544abbd9d26" prefix=" " category="inline-code"></block> colonna.</block>
   <block id="1a0894ce06ca64ffb7715de304b85900" category="paragraph">Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> in<block ref="c7b4666e1f46b9d8409deace1de37977" prefix=" " category="inline-code"></block> viene anche visualizzato<block ref="a10311459433adf322f2590a4987c423" prefix=" " category="inline-code"></block> in<block ref="46a2a41cc6e552044816a2d04634545d" prefix=" " category="inline-code"></block> colonna.</block>
   <block id="d0d1f0809de877f29fd0a846c8876708" category="list-text">Se le porte non dedicate sono configurate per l'utilizzo dello storage, la procedura è terminata.</block>
   <block id="07d80afbccd38f7712fa336226de0865" category="paragraph">Quando le porte non dedicate non sono configurate per l'utilizzo dello storage, l'output del comando visualizza quanto segue:</block>
   <block id="73124fcd33e14baccdc22e05ad18e381" category="paragraph">Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> in<block ref="7ed427253695f845f908985c78b9f390" prefix=" " category="inline-code"></block> viene anche visualizzato<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block> in<block ref="46a2a41cc6e552044816a2d04634545d" prefix=" " category="inline-code"></block> colonna.</block>
-  <block id="a71b3231969443f43b88fb3f3997c11b" category="list-text">Configurare le porte non dedicate per l'utilizzo dello storage su uno dei moduli controller:</block>
   <block id="1529765b6b367d0e6b6e265150953287" category="paragraph">È necessario ripetere il comando applicabile per ciascuna porta che si sta configurando.</block>
   <block id="5bf92b0f5dcba33ceffc7fde775fa3ac" category="paragraph">ONTAP 9.7 o 9.6</block>
   <block id="bb38aa03e396afd98be51523e1304b09" category="admonition">Il riavvio può richiedere fino a 15 minuti.</block>
-  <block id="2af8713b29d92440aed549d35fa1f9a3" category="list-text">Ripetere i passaggi per il secondo modulo controller:</block>
   <block id="fc4a6c2a954652ed60c43c56910ae75a" category="paragraph">ONTAP 9.7 o versione successiva</block>
   <block id="7dd2a92fd3f41a5334edf46f95d77e71" category="paragraph">ONTAP 9.6</block>
   <block id="97e5b69d6a085b09c71789a6b191bdbd" category="admonition">Il primo controller deve aver già completato il riavvio.</block>
-  <block id="b4c2dd2542e47ff1364abd95f6610ff8" category="list-text">Verificare che le porte non dedicate su entrambi i moduli controller siano configurate per l'utilizzo dello storage:<block ref="90e0991b70398b08e4e3eb0ae46c4163" prefix=" " category="inline-code"></block></block>
   <block id="5f73e21cfc57f9099894052fde4bfc56" category="list-text">La ricablaggio delle connessioni delle porte è una procedura senza interruzioni quando lo shelf dispone di connettività multipath-ha.</block>
   <block id="7e273a22e6f4b495323284cd54002213" category="admonition">Lo spostamento di un cavo non richiede alcun tempo di attesa tra lo scollegamento del cavo da una porta e il collegamento a un'altra porta.</block>
-  <block id="7e4c7e7366de7251794bd2cee31785b8" category="cell">Se si dispone di un...</block>
   <block id="2f37a5aa23cfb87abad4097db5d8b5ee" category="admonition">I passaggi secondari presuppongono che lo shelf esistente sia collegato ai moduli i/o compatibili con RoCE nello slot 3 di ciascun controller.</block>
-  <block id="ce2468b66455462f68b8eef51607d931" category="paragraph">Se necessario, è possibile fare riferimento alle illustrazioni dei cavi che mostrano uno shelf singolo esistente e uno shelf cablato, in una configurazione a due shelf.</block>
-  <block id="863ee9a0c8ca40928975158c8441cb3e" category="paragraph"><block ref="8b0dd5f6450b331119d433eade9d39d0" category="inline-xref-macro-rx"></block></block>
   <block id="336f4ce595af8dfded4dff3e6c2d2dbe" category="list-text">Sul controller A, spostare il cavo dallo slot 3, porta b (e3b) allo slot 7, porta b (e7b).</block>
   <block id="7fade3ed4792ef4e89e2ae6000199479" category="list-text">Ripetere lo stesso cavo per spostare il controller B.</block>
   <block id="97db9d4f6a8cf0456ad92952a384cb79" category="admonition">I passaggi secondari presuppongono che lo shelf esistente sia collegato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.</block>
-  <block id="39d970461581cdbd7cd52a0c942e09cc" category="paragraph"><block ref="4c1ac301fada9548f6ad2acaf0e467d2" category="inline-xref-macro-rx"></block></block>
   <block id="f6eccf676a12f3899de1b6cd792b9d6f" category="list-text">Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.</block>
-  <block id="35abee2b20175ae748c82f6ba4453ac1" category="paragraph"><block ref="2d20d554d868477c9c895109bac068ae" category="inline-xref-macro-rx"></block></block>
   <block id="077cb21f670cc68aea4bf00f1abd4745" category="list-text">Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).</block>
-  <block id="d83f6d97e759c5156f389e1bbaca2e46" category="paragraph"><block ref="b415fb6b993cf20b1b9d3f6c50f3ab17" category="inline-xref-macro-rx"></block></block>
   <block id="08755d45823cf538e7c3e95cdbf3232d" category="list-text">Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).</block>
-  <block id="d39331f2882996e7bd91bd33be8e8eda" category="list-text">Verificare che lo shelf cablato sia collegato correttamente.</block>
   <block id="f585cc2236674d2428b635421c54ecfc" category="section-title">Prepararsi ad assegnare manualmente la proprietà del disco per un'aggiunta a caldo</block>
-  <block id="b72b3c2205cb08a656771ba6697f52d1" category="paragraph">Se si assegna manualmente la proprietà del disco per lo shelf di dischi NS224 che si sta aggiungendo a caldo, è necessario disattivare l'assegnazione automatica del disco, se attivata.</block>
   <block id="5670543c21cc67177810154ace0b7c16" category="list-text">Verificare se l'assegnazione automatica dei dischi è abilitata:<block ref="95e8c3545da27ac609a73ab063932ef7" prefix=" " category="inline-code"></block></block>
   <block id="ba85497a31a9938c9ee8b64479f5eb73" category="paragraph">Se l'assegnazione automatica dei dischi è attivata, viene visualizzato l'output<block ref="ed2b5c0139cec8ad2873829dc1117d50" prefix=" " category="inline-code"></block> in<block ref="36dcdb9f764aaa4313fab85a6eb8d6a6" prefix=" " category="inline-code"></block> (per ciascun modulo controller).</block>
   <block id="684d6302ce95e7a1ebe6c08d07ba7788" category="list-text">Se l'assegnazione automatica dei dischi è attivata, disattivarla:<block ref="055c1c55952324a21bf58f91a7ebfa98" prefix=" " category="inline-code"></block></block>
   <block id="e1988923be6d17869153c7cb78c0c029" category="paragraph">È necessario disattivare l'assegnazione automatica dei dischi su entrambi i moduli controller.</block>
-  <block id="98a23f93a2146d0c96053cc9158120a2" category="list-text">È necessario aver completato le procedure di preparazione applicabili.</block>
-  <block id="4dc0b17b937c12129ebe893f11113096" category="paragraph"><block ref="b033791636e3890ff7903341ce0a7906" category="inline-xref-macro-rx"></block></block>
-  <block id="0d42cbc8b21edd5f33f740bf5b14d10d" category="list-text">Installare il kit per il montaggio su guida fornito con lo shelf utilizzando il volantino di installazione fornito nella confezione del kit.</block>
   <block id="738a7d32562c5557c170a7a1bacec3f1" category="admonition">Non montare il ripiano con flangia.</block>
-  <block id="70dc4293ceb1c0525c9a51737c5667b8" category="list-text">Installare e fissare lo shelf sulle staffe di supporto e sul rack o sull'armadietto utilizzando il volantino di installazione.</block>
-  <block id="2714efafc88a564eeaaee969d028a550" category="list-text">Collegare i cavi di alimentazione allo shelf, fissarli in posizione con il fermo del cavo di alimentazione, se si tratta di alimentatori CA, o con le due viti a testa zigrinata, se si tratta di alimentatori CC, quindi collegare i cavi di alimentazione a diverse fonti di alimentazione per una maggiore resilienza.</block>
   <block id="378b62d2964ec0a6c4ac6ec95662dee4" category="paragraph">Uno shelf si accende quando viene collegato a una fonte di alimentazione; non dispone di interruttori di alimentazione. Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.</block>
   <block id="7468ac9b50ce2792c160ba5ee26808fe" category="list-text">Impostare l'ID dello shelf su un numero univoco all'interno della coppia ha:</block>
-  <block id="34ed719c558f180e6a8425d176730344" category="paragraph">Sono disponibili istruzioni più dettagliate:</block>
   <block id="cc621d5c504973952f1b7498f7fbb7c5" category="inline-link-macro">Modifica dell'ID di uno shelf - shelf NS224</block>
-  <block id="c69a1009359358cbb1f3e5d6483736fb" category="paragraph"><block ref="c69a1009359358cbb1f3e5d6483736fb" category="inline-link-macro-rx"></block></block>
   <block id="43672219196a0275d0fe8b439ccd44f9" category="list-text">Rimuovere il cappuccio terminale sinistro e individuare il piccolo foro a destra dei LED.</block>
   <block id="e1f557b7e67a27c5135ebdc776739a0e" category="list-text">Inserire l'estremità di una graffetta o di uno strumento simile nel piccolo foro per raggiungere il pulsante ID dello scaffale.</block>
   <block id="82980b60b01c4e791ae1d8e73f193a85" category="list-text">Tenere premuto il pulsante (fino a 15 secondi) fino a quando il primo numero sul display digitale non lampeggia, quindi rilasciare il pulsante.</block>
@@ -1263,14 +1224,11 @@
   <block id="c114bc7a6acbc1b2c1f4739710699e0c" category="list-text">Spegnere e riaccendere lo shelf per rendere effettivo l'ID dello shelf.</block>
   <block id="7cd532a90215f8cff1bce2eea092415d" category="paragraph">Scollegare entrambi i cavi di alimentazione dallo shelf, attendere 10 secondi, quindi ricollegarli.</block>
   <block id="24e10780f209a577c697057f12f64f10" category="paragraph">Quando l'alimentazione viene ripristinata, i LED bicolore si illuminano di verde.</block>
-  <block id="d84d97bfca6c6a7d47f929c1b0ee1fb3" category="section-title">Considerazioni sul cablaggio di un componente aggiuntivo a caldo</block>
   <block id="52aad3ff52241a2e329ba14ca2b495ec" category="list-text">I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto.</block>
   <block id="546b03f9ca211c30f5975ab99dd93ce8" category="paragraph">Quando un cavo è inserito correttamente, scatta in posizione.</block>
   <block id="36dad54a495121233a847704d6bf5a6b" category="paragraph">Dopo aver collegato entrambe le estremità del cavo, i LED LNK (verde) dello shelf e della porta del controller si illuminano. Se il LED LNK della porta non si accende, ricollegare il cavo.</block>
-  <block id="02c2cc4184073e3a32ac2cad0adca3ad" category="section-title">Cavo uno shelf hot-add per una coppia AFF A900 ha</block>
   <block id="e859983e28521134b4429e2ad40d035f" category="paragraph">Quando è necessario uno storage aggiuntivo, è possibile aggiungere a caldo fino a tre shelf di dischi NS224 aggiuntivi (per un totale di quattro shelf) a una coppia AFF A900 ha.</block>
   <block id="6c4ae44d1114274bf4744f7a456ce07c" category="list-text">È necessario installare gli shelf, accenderli e impostare gli ID dello shelf.</block>
-  <block id="373a35978efc6b28d1b1d225b662f5db" category="paragraph"><block ref="4688946b74942e3697fd11a0bd3e0972" category="inline-xref-macro-rx"></block></block>
   <block id="e1f00a018e7f4f086a0bcbc7eccb98fb" category="list-text">Questa procedura presuppone che la coppia ha abbia almeno uno shelf NS224 esistente e che si stiano aggiungendo a caldo fino a tre shelf aggiuntivi.</block>
   <block id="6df1d9010eb2d59922ff15832ca8a435" category="list-text">Se la coppia ha dispone di un solo shelf NS224, questa procedura presuppone che lo shelf sia cablato su due moduli i/o 100GbE compatibili con RoCE su ciascun controller.</block>
   <block id="71c9cd1d9d6cb72f550738fcffdcb856" category="list-text">Se lo shelf NS224 che si sta aggiungendo a caldo sarà il secondo shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
@@ -1279,34 +1237,22 @@
   <block id="d9547d2852203d7c517230eb1c874611" category="list-text">Porta NSM B del ripiano per cavi e0a dello slot B del controller 10 porta a (e10a).</block>
   <block id="58848607da5220d46a743527d7c9fb0b" category="list-text">Porta NSM B del ripiano per cavi e0b per lo slot a del controller 2 porta b (e2b).</block>
   <block id="3be444e253b66e84c2a7ac44cc632d2f" category="paragraph">La figura seguente mostra il cablaggio del secondo shelf (e del primo shelf).</block>
-  <block id="c01b7e73b5184f9332f2b3847a1e8a46" category="image-alt">drw ns224 a900 2 shelf</block>
   <block id="63a52597f01feafa7bac4f564671ef46" category="list-text">Se lo shelf NS224 che si sta aggiungendo a caldo sarà il terzo shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
   <block id="7684dbbd76ade935a226af6dfe897289" category="list-text">Shelf di cavi NSM Porta A e0a per controller Slot A porta a (e1a).</block>
   <block id="2ee333f6f9a00c250ae9813502d4fb07" category="list-text">Shelf per cavi, porta NSM A e0b allo slot B del controller, porta b 11 (e11b).</block>
   <block id="175a349725f8b3af6b3ec0d82c0e2318" category="list-text">Porta NSM B dello shelf per cavi e0a allo slot controller B 1 porta a (e1a).</block>
   <block id="3eb8ce414e6e8d5e19024a3779a87e42" category="list-text">Porta NSM B dello shelf per cavi e0b allo slot a del controller porta b 11 (e11b).</block>
   <block id="e3c4294c5b88b3a64211de084bc7bd2b" category="paragraph">La figura seguente mostra il cablaggio del terzo shelf.</block>
-  <block id="1cc4d52d52b1d439dc272f9193de4eee" category="image-alt">drw ns224 a900 3 shelf</block>
   <block id="ab4ee3b5165983371f54b55e9efd77af" category="list-text">Se lo shelf NS224 che si sta aggiungendo a caldo sarà il quarto shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
   <block id="855fdf1352556d56634d839385addb1b" category="list-text">Shelf di cavi NSM Porta A e0a per il controller Uno slot 11 porta a (e11a).</block>
   <block id="dd76ecf50f41da091f6d857178f31123" category="list-text">Porta NSM A del ripiano per cavi e0b allo slot controller B 1 porta b (e1b).</block>
   <block id="ee0a734e2f0193a65c1da9b82e1749c4" category="list-text">Porta NSM B del ripiano per cavi e0a dello slot B del controller 11 porta a (e11a).</block>
   <block id="d49e45adf2352258d2679cda6d7594c5" category="list-text">Porta NSM B del ripiano per cavi e0b allo slot a del controller 1 porta b (e1b).</block>
   <block id="b434465fa52d0f783c7fd0f8d4ce72b7" category="paragraph">La figura seguente mostra il cablaggio del quarto shelf.</block>
-  <block id="123ecdcab7b962064d8bc5e084e22a78" category="image-alt">drw ns224 a900 4 shelf</block>
-  <block id="7383703619146a59a96c04d7ca7f4542" category="list-text">Verificare che lo shelf aggiunto a caldo sia collegato correttamente.</block>
-  <block id="0c9aa1b8a23b895dc34c3de2f2a905b7" category="list-text">Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco.</block>
   <block id="e408fe4a40b4e2b5b430bb1a2e4b56a1" category="paragraph"><block ref="054067282f59c2ea6008fdf8f0b78dea" category="inline-xref-macro-rx"></block></block>
-  <block id="ac729677e330b2bd79ba466237427cd0" category="section-title">Collegare uno shelf hot-add per una coppia ha AFF A250, AFF C250 o FAS500f</block>
-  <block id="f0fad2647eb722df1f95d7cea636dfac" category="paragraph">Quando è necessario uno storage aggiuntivo, è possibile aggiungere a caldo uno shelf di dischi NS224 a una coppia FAS500f o AFF A250 ha.</block>
   <block id="fa9763a154ca61da241ba542f9d894f7" category="paragraph">Vista dal retro dello chassis della piattaforma, la porta della scheda compatibile con RoCE a sinistra è la porta "a" (e1a) e la porta a destra è la porta "b" (e1b).</block>
   <block id="6636323e0aff4f454f3b81527e703c2b" category="list-text">Cablare i collegamenti dello shelf:</block>
   <block id="838163abcc84ed9f0cfee1181f77a021" category="list-text">Porta NSM B del ripiano per cavi e0b allo slot a del controller 1 porta b (e1b). + la seguente illustrazione mostra il cablaggio dello shelf una volta completato.</block>
-  <block id="f785dc6fbda4bf5cffbc5642d9f63fcc" category="image-alt">Drw ns224 a250 c250 f500f 1 shelf IEOPS 963</block>
-  <block id="075ac783ee242c66ec7ef26475fd212b" category="section-title">Collegare uno shelf hot-add per una coppia AFF A700 ha</block>
-  <block id="1f16f18b5edbb033abeecd941eede311" category="paragraph">Il modo in cui collegare uno shelf di dischi NS224 in una coppia ha AFF A700 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui moduli controller.</block>
-  <block id="544773fca9e8ae07d62dcf4db5a7cb78" category="list-text">Se si aggiunge a caldo uno shelf utilizzando un set di porte compatibili con RoCE (un modulo i/o compatibile con RoCE) su ciascun modulo controller, e questo è l'unico shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
-  <block id="fec7dbe822daa329031be7af970538e7" category="admonition">Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 3, invece dello slot 7, su ciascun modulo controller.</block>
   <block id="63efd7f12bfa615588bf813fbcf494a5" category="list-text">Shelf di cavi NSM Porta E0a per controller A slot 3 porta a.</block>
   <block id="20609b8391343d9357715cf71f95b8ef" category="list-text">Shelf per cavi porta NSM A e0b a slot controller B 3 porta b.</block>
   <block id="acd47cf4eb7a4076ffdc07861a0e849b" category="list-text">Porta NSM B del ripiano dei cavi e0a dello slot B del controller 3 porta a.</block>
@@ -1330,17 +1276,11 @@
   <block id="fc10913effb15f2e7e45af08900dd916" category="list-text">Cavo NSM B port e0b to controller A slot 3 port b.</block>
   <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">Passare alla fase 3.</block>
   <block id="44602264e094d019e88a336cd27d0156" category="paragraph">La seguente illustrazione mostra i cavi per il primo e il secondo shelf aggiunto a caldo:</block>
-  <block id="06d25e1ce74f6aaec655716b2dff74fa" category="section-title">Cablare uno shelf hot-add per una coppia ha AFF A800 o AFF C800</block>
-  <block id="e71af3f859a96a4597c3ee57f2465148" category="paragraph">Il modo in cui si collega uno shelf di dischi NS224 in una coppia AFF A800 o AFF C800 ha dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui moduli controller.</block>
-  <block id="100c5224303bd4ddbc570f323ec3b601" category="list-text">Se si aggiunge a caldo uno shelf utilizzando un set di porte compatibili con RoCE (una scheda PCIe compatibile con RoCE) su ciascun modulo controller, e questo è l'unico shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
   <block id="7f52c439783621a5d09c0e1eb50d4319" category="admonition">Questa fase presuppone l'installazione della scheda PCIe compatibile con RoCE nello slot 5.</block>
   <block id="4a64724d8e98b13ea57df6fa3ef82797" category="list-text">Shelf di cavi NSM Porta A e0a per controller Slot A porta a 5 (e5a).</block>
   <block id="645f1ad1e72000ad9dc8c3735828b28a" category="list-text">Shelf per cavi dalla porta NSM A e0b allo slot controller B, 5 porte b (e5b).</block>
   <block id="0b2da11bd8c712291a7f895f49e9e5e9" category="list-text">Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 5 (e5a).</block>
   <block id="7d87c1e0b37af31cc86321a5d5f8fad9" category="list-text">Porta NSM B dello shelf per cavi e0b allo slot a del controller 5 porta b (e5b).</block>
-  <block id="6f1539c78a094ce3c97746e4f05a0642" category="paragraph">La seguente illustrazione mostra il cablaggio per uno shelf aggiunto a caldo utilizzando una scheda PCIe compatibile con RoCE su ciascun modulo controller:</block>
-  <block id="77216f6b109bab92f8497e814fbcd4a5" category="image-alt">Drw ns224 a800 c800 1 shelf IEOPS 964</block>
-  <block id="e9aab26305dbeeca307e3f574bc6f620" category="list-text">Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (due schede PCIe compatibili con RoCE) su ciascun modulo controller, completare i passaggi secondari applicabili.</block>
   <block id="47f5ff4e183a793933d1f47d1d5d5b04" category="admonition">Questa fase presuppone l'installazione delle schede PCIe compatibili con RoCE negli slot 5 e 3.</block>
   <block id="928e9f3198873a99cc05c02ab5403b7b" category="admonition">Questi passaggi secondari presuppongono che si stia iniziando il cablaggio collegando la porta dello shelf e0a alla scheda PCIe compatibile con RoCE nello slot 5, invece dello slot 3.</block>
   <block id="67a1e7b2fb2710119ca2c369df46d177" category="list-text">Cavo NSM Porta A e0a per controller slot A porta a 5 (e5a).</block>
@@ -1354,16 +1294,10 @@
   <block id="62e633c0432fba605a22e8a2ab4b4bbe" category="list-text">Cavo NSM B port e0b al controller A slot 5 port b (e5b).</block>
   <block id="75a57e4a236226bc25c09e120aeab4c5" category="paragraph">La seguente illustrazione mostra il cablaggio per due shelf aggiunti a caldo:</block>
   <block id="e353caf6698cfea61d3a9c18256a7e59" category="image-alt">Drw ns224 a800 c800 2 shelf IEOPS 966</block>
-  <block id="873efd8427437501798d979ea439809c" category="section-title">Collegare uno shelf hot-add per una coppia AFF A400 ha</block>
-  <block id="bf357d9e6b8fc772b2e450e7c12e862a" category="paragraph">Il modo in cui collegare uno shelf di dischi NS224 in una coppia ha AFF A400 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui moduli controller.</block>
-  <block id="853f2f58eaae6f81846d73d68ec58fc7" category="list-text">Se si aggiunge a caldo uno shelf utilizzando un set di porte compatibili con RoCE (porte integrate compatibili con RoCE) su ciascun modulo controller, e questo è l'unico shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
   <block id="22f0e629287a1d1f90741ddf77caa944" category="list-text">Shelf di cavi NSM Porta A e0a per controller Porta A e0c.</block>
   <block id="8c937d6d94aae90362b1dc41da2b9988" category="list-text">Shelf per cavi dalla porta NSM A e0b alla porta controller B e0d.</block>
   <block id="1338474ed1400f2decaa8fd4832a842d" category="list-text">Porta NSM B del ripiano per cavi e0a alla porta controller B e0c.</block>
   <block id="0e756c90485de908977a44f0d58d0222" category="list-text">Porta NSM B del ripiano per cavi e0b alla porta a del controller e0d.</block>
-  <block id="46678aedb5de8e96e18124083a8925ee" category="paragraph">La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un set di porte compatibili con RoCE su ciascun modulo controller:</block>
-  <block id="c445ec69267514b825de2f1f527b6d69" category="image-alt">drw ns224 a400 1 shelf</block>
-  <block id="8391296c9ad39c787ad4300c47db3f73" category="list-text">Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (porte compatibili con RoCE su scheda e scheda PCIe) su ciascun modulo controller, completare i seguenti passaggi secondari.</block>
   <block id="c30f945bbdd11d29e0f5cde326554182" category="list-text">Cavo NSM Porta A e0a per controller Porta A e0c.</block>
   <block id="c8714c0d9fd482c82a6eb9a1f88a6c6a" category="list-text">Cavo NSM Porta A e0b allo slot controller B porta 5 2 (e5b).</block>
   <block id="dfaa68fc610c2b43abf32ee0c2eff4d7" category="list-text">Cavo NSM B porta e0a al controller B porta e0c.</block>
@@ -1372,35 +1306,20 @@
   <block id="9d77f869ed166aeb4c27e1b6054d86bb" category="list-text">Cavo NSM Porta A e0b alla porta controller B e0d.</block>
   <block id="2fe8fb2268f4a14629b04075d5feb39b" category="list-text">Cavo dalla porta NSM B e0a allo slot controller B 5 porta 1 (e5a).</block>
   <block id="f192386ba82b03da6277a09d4a2c63ac" category="list-text">Cavo NSM B port e0b to controller A port e0d.</block>
-  <block id="f083687f229e9087607fc97422e119c0" category="image-alt">Drw ns224 a400 2 shelf IEOPS 983</block>
-  <block id="f38b00317e342e10d9cf44073d00e94e" category="list-text">Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco, se necessario.</block>
-  <block id="3a6fe973f6f6e375a30d50e1b00bea51" category="section-title">Collegare uno shelf hot-add per una coppia AFF C400 ha</block>
-  <block id="0b6cfa43bebeb67d84b94f8437703149" category="paragraph">Il modo in cui collegare uno shelf di dischi NS224 in una coppia ha AFF C400 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui moduli controller.</block>
-  <block id="7bbb938b0cef224ffa8f6826122559e4" category="list-text">Se si sta aggiungendo a caldo uno shelf utilizzando un set di porte compatibili con RoCE su ciascun modulo controller e questo è l'unico shelf NS224 della coppia ha, completare i seguenti passaggi secondari.</block>
   <block id="d5453cac8ec10c5502b08b0ac5208b06" category="list-text">Shelf di cavi NSM Porta A e0a per controller slot A 4 porta 1 (e4a).</block>
   <block id="f74b21e9e00a4f232af4a83d6e91ea56" category="list-text">Ripiano per cavi dalla porta NSM A e0b allo slot controller B, 4 porte 2 (e4b).</block>
   <block id="dea9986ba87dcbe7e1e56edd0971ea75" category="list-text">Ripiano per cavi porta NSM B e0a a slot controller B 4 porta 1 (e4a).</block>
   <block id="f0f25c87c1779ef06057bd2f760dd44a" category="list-text">Porta NSM B per il ripiano dei cavi e0b per lo slot a del controller 4 porta 2 (e4b).</block>
-  <block id="3c77f8a010dc228fdfa09613c4594a7f" category="image-alt">Drw ns224 c400 1 shelf IEOPS 985</block>
-  <block id="b53dcc9edd6c4009c02a65c16082912f" category="list-text">Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE su ciascun modulo controller, completare i seguenti passaggi secondari.</block>
   <block id="a3a2d87cd45ac90b1a64a157d596387a" category="list-text">Cavo NSM Porta A e0a per controller slot A 4 porta 1 (e4a).</block>
   <block id="ec21ec9fcd2f64561315df3e90210f4e" category="list-text">Cavo NSM B port e0a controller B port slot 4 port 1 (e4a).</block>
   <block id="271862bfe83769232e835a8b7bc18b91" category="list-text">Cavo dalla porta NSM A e0b allo slot controller B 4 porta 2 (e4b).</block>
   <block id="15c080954c797a5f48e731fe0b0c039f" category="list-text">Cavo NSM B port e0b allo slot a del controller 4 port 2 (e4b).</block>
-  <block id="e33765db8a9f63ae6e0b091a821ba6e2" category="image-alt">Drw ns224 c400 2 shelf IEOPS 984</block>
-  <block id="b994ebf3b12ef21aee27b63036342d83" category="section-title">Cavo uno shelf hot-add per una coppia AFF A320 ha</block>
-  <block id="e708da297b918a1363bc58facb9105b4" category="paragraph">È possibile collegare un secondo shelf di dischi NS224 a una coppia ha esistente quando è necessario uno storage aggiuntivo.</block>
-  <block id="0d0422686a7d332d6a719d1fb6e38772" category="paragraph">Questa procedura presuppone che la coppia ha AFF A320 disponga di uno shelf NS224 esistente e che si stia aggiungendo a caldo un secondo shelf.</block>
-  <block id="41165b98d83f72cbb439ce5bdb9e71da" category="list-text">Collegare lo shelf ai moduli controller.</block>
   <block id="b4cef19f20771aa5828eb17c8503f9b4" category="list-text">Cavo NSM A porta e0a per controller A porta e0e.</block>
   <block id="e3602d852a9feaea5973c0c3f70de818" category="list-text">Cavo NSM Porta A e0b alla porta controller B e0b.</block>
   <block id="6893aba6204908a9ad4e8ef231b0937b" category="list-text">Cavo NSM B porta e0a al controller B porta e0e.</block>
   <block id="fd1b7820b9a22b62bca8acf5ddbaf7ed" category="list-text">Cavo NSM B porta e0b alla porta a del controller e0b. + la seguente illustrazione mostra i cavi per lo shelf aggiunto a caldo (shelf 2):</block>
-  <block id="6fc814869e5db879112ab1136b39096b" category="image-alt">drw ns224 a320 2 shelf direttamente collegato</block>
   <block id="63b43efd4d91098da87b471ae31f6a98" category="section-title">Completare l'aggiunta a caldo</block>
   <block id="c639108428188e5708bbbe72adfdde85" category="paragraph">Se l'assegnazione automatica dei dischi è stata disattivata durante la preparazione dell'aggiunta a caldo dello shelf di dischi NS224, è necessario assegnare manualmente la proprietà dei dischi e, se necessario, riabilitare l'assegnazione automatica dei dischi.</block>
-  <block id="c180b3ee265cd8852fc5bfedc37c02ae" category="paragraph">È necessario aver già collegato lo shelf come indicato per la coppia ha.</block>
-  <block id="95fef4a83236d5e3f2ecc10020bc8967" category="paragraph"><block ref="cd2a16cde64eed80b7a03f7f34240bcb" category="inline-xref-macro-rx"></block></block>
   <block id="fd5f28077fc18a4d39f9d405591062ff" category="list-text">Visualizzare tutti i dischi non posseduti:<block ref="4f81a5a37b761675f03e51a37f1ce7a5" prefix=" " category="inline-code"></block></block>
   <block id="64622072300a30ca93fc44d9b161979b" category="list-text">Assegnare ciascun disco:<block ref="bb8c465a0bbb45e5380a6f5420df2a57" prefix=" " category="inline-code"></block></block>
   <block id="52e2f58fc39d834074ac8badf66c9b06" category="paragraph">È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.</block>
@@ -2304,8 +2223,6 @@
   <block id="1fad4d8ec174b60255a8febb2707e048" category="paragraph"><block ref="1fad4d8ec174b60255a8febb2707e048" category="inline-link-rx"></block></block>
   <block id="2bed99b4660dcf909368c3a2ae62b513" category="doc">Sostituire l'unità SSD o HDD - AFF A800</block>
   <block id="5f807f08fe5525cbcd6708fd63eac203" category="paragraph">È possibile sostituire un disco guasto senza interruzioni mentre l'i/o è in corso. La procedura per la sostituzione di un SSD si intende per dischi non rotanti e la procedura per la sostituzione di un disco rigido si intende per dischi rotanti.</block>
-  <block id="8c4271e6faf2cea4cfc8e5b7108d8ee9" category="paragraph-title">Procedura</block>
-  <block id="dd48f304652176299be75f07f2b6523a" category="paragraph">Sostituire il disco guasto selezionando l'opzione appropriata per i dischi supportati dalla piattaforma.</block>
   <block id="30bc8715fab2eca793d47ebeb9b97131" category="list-text">Rimuovere delicatamente il pannello frontale dalla parte anteriore della piattaforma.</block>
   <block id="d71968c5c4f5afed90572170969deee8" category="list-text">Identificare il disco guasto dal messaggio di avviso della console di sistema e dal LED di guasto illuminato sul disco</block>
   <block id="559d6c27ed3408b0bae6821791181311" category="list-text">Premere il pulsante di rilascio sul lato anteriore dell'unità disco.</block>
@@ -2313,7 +2230,6 @@
   <block id="01c18660694535ca4b59c21e0e893461" category="paragraph">Ad esempio, la figura seguente mostra un disco con il pulsante di rilascio situato nella parte superiore della superficie del disco:</block>
   <block id="572908986c1b5c1fc8dc618c9ad316ad" category="paragraph">La maniglia della camma sul disco si apre parzialmente e il disco viene rilasciato dalla scheda intermedia.</block>
   <block id="0d8323eada848f2a4fe8cf79e773c078" category="list-text">Tirare la maniglia della camma in posizione completamente aperta per estrarre l'unità disco dalla scheda intermedia.</block>
-  <block id="7dc8175f2f2fc69f2fb815cbd3873bf3" category="image-alt">disco drw aperto</block>
   <block id="cc4019f56a1373976b3ef90709ca6709" category="list-text">Estrarre leggermente l'unità disco e lasciarla girare in modo sicuro, che può richiedere meno di un minuto, quindi, con entrambe le mani, rimuovere l'unità disco dallo shelf.</block>
   <block id="825b28c800f73d57ecb1e2ef500ff283" category="list-text">Con la maniglia della camma in posizione aperta, inserire l'unità disco sostitutiva nell'alloggiamento, spingendo con decisione fino all'arresto del disco.</block>
   <block id="6f80e13df4b5c2a4fc8fa945e1d512e0" category="admonition">Attendere almeno 10 secondi prima di inserire una nuova unità disco. Questo consente al sistema di riconoscere che un disco è stato rimosso.</block>
@@ -4442,11 +4358,6 @@
   <block id="4ccedf93160862bbf89c3f9a64941193" category="paragraph">Se si riceve l'armadio di sistema con l'apparecchiatura già installata, rimuovere le guide di ancoraggio sulla parte superiore dell'apparecchiatura che si trova direttamente sotto gli alloggiamenti vuoti, come mostrato nell'illustrazione seguente:</block>
   <block id="b4449fca9dbd74bd7d58f7cfdbad1d41" category="image-alt">drw syscab ozei tiedown rail rimuovere pannello vuoto</block>
   <block id="cc32f847114f40b46bd875dc4bc7b049" category="list-text">Reinstallare gli sportelli anteriore e posteriore dell'armadio di sistema.</block>
-  <block id="4dac35e9f6d4d6d9e1b5fb5abad708ed" category="summary">In caso di guasto di un disco, la piattaforma registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, sia il LED di guasto sul display operatore che il LED di guasto sul disco guasto si illuminano. È possibile sostituire un disco guasto senza interruzioni mentre l'i/o è in corso.</block>
-  <block id="7b23cfe522c0eb5be8b96e2257f5acbe" category="doc">Sostituire a caldo un disco</block>
-  <block id="9b8b69936ed16b21aad5e4c23a44b618" category="list-text">Il disco sostitutivo deve essere supportato dalla piattaforma.</block>
-  <block id="f6257d03456559fa38863d01fd3c105d" category="paragraph">La modalità di sostituzione a caldo del disco dipende dal modo in cui viene utilizzato il disco. Se l'autenticazione SED è attivata, è necessario utilizzare le istruzioni per la sostituzione SED nella documentazione di ONTAP. Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.</block>
-  <block id="dde8fb97f476e32cdda5c52804d55d36" category="admonition">Utilizzare sempre due mani per rimuovere, installare o trasportare un disco.</block>
   <block id="696dd736b666ee17e46c95a26790f5d2" category="summary">Quando si disimballa l'armadio di sistema, assicurarsi di avere spazio sufficiente per rimuovere l'armadio di sistema dal materiale di imballaggio. Assicurarsi inoltre che la posizione prevista per l'armadietto del sistema sia sufficientemente grande da consentire lo spostamento dell'armadietto in posizione.</block>
   <block id="595603bdc0003748af53e4c42b7507a5" category="doc">Requisiti di spazio e dimensioni del cabinet di sistema</block>
   <block id="a257ee96979da8c46a7e618b50a2de66" category="section-title">Spazio necessario per disimballare l'armadietto del sistema</block>
@@ -4590,16 +4501,8 @@
   <block id="d496b20bc480a8752b49e97fca9400c2" category="list-text">Ripetere questa procedura per il cardine inferiore.</block>
   <block id="45c0d75f9a5b23a971e2dc3ca0a0f6c2" category="list-text">Rimuovere le viti dal gancio di blocco, quindi spostare il fermo di blocco in verticale nell'armadio anteriore opposto del sistema.</block>
   <block id="6df4950fb076868b0e9a60e4ef9e05db" category="list-text">Ruotare il fermo di 180 gradi, quindi fissarlo all'armadietto del sistema in posizione verticale.</block>
-  <block id="1e0b37d2bee8e34c12fabdc96d1c7b25" category="summary">È possibile sostituire un disco guasto sulla piattaforma senza interruzioni scegliendo la procedura appropriata per i dischi supportati dalla piattaforma. La procedura per lo scambio a caldo di un SSD è destinata ai dischi non rotanti e la procedura per lo scambio a caldo di un disco rigido è destinata ai dischi rotanti.</block>
-  <block id="4f0051637a20ec6776e183298f86f2f5" category="doc">Quale procedura utilizzare</block>
   <block id="065e0cfc1a644921f8da7dcbc4e51ec2" category="summary">Prima di installare il cabinet di sistema, è necessario familiarizzare con le sue funzionalità. È inoltre necessario verificare che il sito supporti l'armadietto del sistema, spostarlo nella posizione desiderata e disimballarlo.</block>
   <block id="c3f0ef3ab0d6ba2b67aa70091a366e6d" category="doc">Preparare l'installazione dell'armadio di sistema</block>
-  <block id="acad25485f3484efab02626b832c8620" category="summary">Questo video mostra una panoramica della procedura di sostituzione del disco integrato.</block>
-  <block id="eeb5172e31e91152913f891a13300865" category="doc">Panoramica video</block>
-  <block id="5766d5bcf366efbcdf82489014732653" category="summary">Quando un disco si guasta, la piattaforma registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, sia il LED di guasto sul display operatore che il LED di guasto sul disco guasto si illuminano. È possibile sostituire un disco guasto senza interruzioni mentre l'i/o è in corso.</block>
-  <block id="19b0302f5ac7806ca8ce0cb36a698cf0" category="doc">Sostituire a caldo un disco</block>
-  <block id="43fc444d5187c6df1e74ba2ba7e24821" category="list-text">L'unità sostitutiva deve essere supportata dalla piattaforma.</block>
-  <block id="392c7c0293f99a94fa12865a900879c7" category="list-text">Verificare che l'unità che si sta rimuovendo non funzioni correttamente eseguendo<block ref="aadfe3f601179615e320615d73c89773" prefix=" " category="inline-code"></block> comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.</block>
   <block id="70150c1a82fd194a31cb4375a5daa21c" category="summary">SuperRail può essere installato su un rack standard a quattro montanti con fori quadrati o su un rack standard a quattro montanti con fori rotondi utilizzando le staffe adattatore con fori rotondi e quadrati.</block>
   <block id="966a4cc013cbf07d2dc9b6d14833b3e0" category="doc">Istruzioni per l'installazione del kit SuperRail</block>
   <block id="04abd72307682d4665fde1d35d82daaf" category="section-title">Installazione di SuperRail su rack a quattro montanti con foro quadrato</block>
@@ -8291,7 +8194,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="da98db34d10199077b14ab14b7e32c9f" category="sidebar">Sostituire il ripiano a freddo</block>
   <block id="674478ae995b81c552fa78ca38a62f55" category="sidebar">LED dello shelf del monitor</block>
   <block id="396b16fa397fdd85993f8aa5bef27ffc" category="paragraph">Utilizzare <block ref="d1042c47c9aff448d2e8f9ac980b805e" category="inline-link-macro-rx"></block>.</block>
-  <block id="3e7aa82d2d70031bc903abc14fcef228" category="paragraph">Utilizzare i collegamenti: <block ref="7c76049c7cc6b29a138ae1f21c8716c8" category="inline-link-macro-rx"></block>.</block>
   <block id="6febf85749247f2f22048a485869645e" category="paragraph">Questa guida fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare <block ref="85d66ca1788630be12ac9fc5ee2595a5" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
   <block id="5398e5f0481212fec157da30d21384f0" category="inline-link-macro">Sostituire a freddo un ripiano</block>
   <block id="13ce8c4588978587ac346becc2c018b0" category="list-text"><block ref="13ce8c4588978587ac346becc2c018b0" category="inline-link-macro-rx"></block></block>
@@ -8424,7 +8326,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="efd776be7a583ca294bb1a8ce2c4e66e" category="image-alt">Rilascio del modulo controller</block>
   <block id="cc278673be0ce007e60343587ca221b7" category="image-alt">Opoen il condotto dell'aria</block>
   <block id="3adccad6709367d60f0645e89c86a994" category="image-alt">Chiusura del condotto dell'aria</block>
-  <block id="025411d9958f9bc8ad2448f521a1ada6" category="image-alt">Rimozione di un'unità</block>
   <block id="d88c0d1de0c9fce014f21f630d9adb1a" category="image-alt">Apertura del meccanismo di chiusura</block>
   <block id="813ff1ce3d0de38d3d5b297e098fd16e" category="image-alt">Apertura del coperchio del modulo controller</block>
   <block id="5c201446503767cfb281ca73fa947b1a" category="image-alt">Rimozione della scheda mezzanine</block>
@@ -8721,8 +8622,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c4b17ef982ae644ec1d2b995fa1534a8" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione aggiungendo un nuovo modulo i/o in un sistema di archiviazione con slot vuoti oppure sostituendo un modulo i/o con uno nuovo in un sistema di archiviazione completamente popolato.</block>
   <block id="656450ae55843844fdfca7b44cbc5678" category="list-text">Controllare che<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.</block>
   <block id="9808a3e490e0cd81c2fab70cb489f958" category="paragraph">È possibile aggiungere un modulo i/o in uno slot vuoto del sistema di archiviazione.</block>
-  <block id="f9c9ac20332a969e865def6eb6464e99" category="list-text">Scollegare i cavi delle unità di alimentazione (PSU) dalle PSU dal controller.</block>
-  <block id="5f8429d099b5837b4b0f8245a6e25659" category="admonition">Se il sistema di storage in uso dispone di alimentatori CC, scollegare il blocco cavi di alimentazione dall'alimentatore.</block>
   <block id="78263f5226743bdd204519f0e9bd22d2" category="list-text">Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.</block>
   <block id="72e0b58a2d456f6ab89ca8d83859264d" category="list-text">Rimuovere il modulo di chiusura dello slot di destinazione dal supporto:</block>
   <block id="abca9f9a7ffb3d4afa15f947303b1c4c" category="admonition">La figura seguente mostra la rimozione di un modulo i/o orizzontale e verticale. In genere, si rimuoverà un solo modulo i/O.</block>
@@ -8745,13 +8644,11 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="a06ddc697cce62226c19e353e0f2eeba" category="paragraph">È possibile modificare un modulo i/o in uno slot i/o in un sistema completamente popolato rimuovendo un modulo i/o esistente e sostituirlo con un altro modulo i/O.</block>
   <block id="47ab52c1da07a0c00e2b876e54778a95" category="paragraph">Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per informazioni sull'utilizzo di System Manager per lo spostamento permanente delle LIF, consulta la sezione<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> .</block>
   <block id="8f6ea8b644b16793208bc55e27bc7669" category="section-title">Fase 2: Sostituire un modulo i/O.</block>
-  <block id="beb24afcb0e8b318a6d1dcdd39cadd0e" category="list-text">Scollegare i cavi dell'alimentatore dalle PSU dal controller.</block>
   <block id="900056c17f40fb1a034e134a72eca912" category="image-alt">Rimuovere il modulo i/o AFF A1K</block>
   <block id="8181d3a6b1640b5868632cfe5589a05d" category="list-text">Premere il pulsante del dispositivo di chiusura a camma.</block>
   <block id="0cfc07520b64c5be4e64fac899e6eaa9" category="list-text">Installare il modulo i/o nello slot di destinazione del contenitore:</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">Allineare il modulo con i bordi dell'apertura dello slot del contenitore.</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per la centralina.</block>
-  <block id="eae4ce64858efbf6f1946bcf1cacd2bc" category="list-text">Ricollegare le PSU.</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">Riavviare il controller dal prompt del CARICATORE:_bye_</block>
   <block id="270bbec39f8392e251637a1b86bbf5c3" category="list-text">Controllare la versione di BMC sul controller: _System service-processor show_</block>
   <block id="d6b96e8ac8bc341aa87626c9a7f76ffd" category="list-text">Se necessario, aggiornare il firmware BMC: _System service-processor image update_</block>
@@ -8869,7 +8766,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="537f891f06a3ecc3188c33c8f8c77e26" category="cell">Una camma di bloccaggio si blocca</block>
   <block id="1dc32853fd03864e0537b3ae1ad7ef3b" category="list-text">Estrarre il modulo controller dal contenitore e collocarlo su una superficie piana e stabile.</block>
   <block id="33fdb32302198e8a827003b4173b5eb0" category="paragraph">Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si estrae dal contenitore.</block>
-  <block id="ad2e93db0fd7faf8c4c39a6cd5326275" category="doc">Passo 1 rimuovere il modulo controller</block>
   <block id="75a5f080add11b67917840158e6bbd4b" category="paragraph">Per sostituire il controller, è necessario rimuovere il controller danneggiato, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel contenitore, quindi avviare il sistema in modalità manutenzione.</block>
   <block id="946c9f8702013d89a2409f6409b3b2c1" category="paragraph">È necessario rimuovere i cinque moduli ventola dal modulo controller danneggiato al modulo controller sostitutivo.</block>
   <block id="ba353b9db22f76b4888d654901cd45fb" category="list-text">Premere il pulsante di blocco grigio sul modulo della ventola ed estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera.</block>
@@ -8934,7 +8830,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e17459e86046e44229fbebc069407c9c" category="list-text">Puoi utilizzare questa procedura con tutte le versioni di ONTAP supportate dal tuo sistema storage.</block>
   <block id="8cc2ff9ddd81637d4ad2b7ee220a7774" category="section-title">Fase 2: Sostituire un modulo i/o guasto</block>
   <block id="2de111d6117fc7e01d3fbeb75aed3c88" category="paragraph">Per sostituire un modulo i/o, individuarlo all'interno del contenitore e seguire la sequenza specifica di passi.</block>
-  <block id="d65ea709db708c195e73f1f8f5f75781" category="list-text">Scollegare i cavi delle PSU dalle PSU dal controller.</block>
   <block id="0af6fe064800da7d11e3417d85012213" category="inline-image-macro">Rimuovere il modulo di i/O.</block>
   <block id="1ac0ca437900f8bc507ae669a832b4dd" category="paragraph"><block ref="1ac0ca437900f8bc507ae669a832b4dd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d09aea2ff4780e8e31df238e5b9f5161" category="paragraph">Blocco camma i/O.</block>
@@ -9047,19 +8942,16 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d498932449bd1680afbe5aad136fb7e3" category="paragraph">Fino a quando non vengono installate le chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo. Tuttavia, se il nodo era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzioni senza licenza sul nodo potrebbe mettere fuori conformità con il contratto di licenza, pertanto è necessario installare la chiave di licenza sostitutiva sul nodo il prima possibile.</block>
   <block id="3e508eeaedfdae09fad57a764b5e2b73" category="section-title">Fase 1: Arrestare il modulo controller danneggiato</block>
   <block id="6f13230d5681e1c88b50f5ecbce62637" category="paragraph">Arrestare o rilevare il modulo controller danneggiato utilizzando una delle seguenti opzioni.</block>
-  <block id="ac3e2454340641f4dc863ba7de892571" category="list-text">Scollegare l'alimentazione estraendo il modulo controller di circa tre pollici:</block>
   <block id="5d053cb0e109f37b3c9cfa31e957c2bc" category="list-text">Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.</block>
   <block id="d9d1de25706aa51c5367e4dafd60898e" category="list-text">Rimuovere il modulo di chiusura dello slot di destinazione dal telaio:</block>
   <block id="192d3ce6854b267e65d46222f8f3a24f" category="image-alt">Rimuovere un modulo i/O.</block>
   <block id="75fa26086844dfcbf14f35086518217a" category="list-text">Staccare il modulo di chiusura.</block>
   <block id="2b6adb50592127273fdb4bb2b68918d5" category="list-text">Allineare il modulo i/o con i bordi dell'apertura dello slot del modulo controller.</block>
   <block id="97366bfb1dcb5b97156c347c8ad89d9a" category="list-text">Far scorrere delicatamente il modulo fino in fondo nello slot, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
-  <block id="7e0cc13ccecee19c414070713bc932cd" category="admonition">Se si dispone di alimentatori CC, ricollegare i blocchi cavi alle PSU.</block>
   <block id="f0a953cf8667ec627e4c74a13844c3d6" category="inline-link">Aggiunta a caldo di uno shelf</block>
   <block id="2a6ebde871b7a14ea9937c0b77f288c1" category="list-text">Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in<block ref="b6d396abfa2f33a744444ad20ba7003c" category="inline-link-rx"></block>.</block>
   <block id="2f3095e4c2c969f1f9dca69963ff66c1" category="paragraph">Riassegnare in modo permanente i file LIF ASAected a una porta home diversa. Per informazioni sull'utilizzo di System Manager per lo spostamento permanente delle LIF, consulta la sezione<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> .</block>
   <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">Per sostituire un modulo i/o, individuarlo all'interno del modulo controller e seguire la sequenza specifica di passi.</block>
-  <block id="5cdf632bde34078b63091a6513a92902" category="admonition">Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dall'alimentatore.</block>
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">Premere il pulsante del dispositivo di chiusura a camma.</block>
   <block id="422e2aa4ec97de509f54db9d23618f37" category="list-text">Rimuovere il modulo dal telaio agganciando il dito nell'apertura della leva a camme ed estraendo il modulo dal telaio.</block>
   <block id="ce8b63d25565a610d1f9564150f85914" category="list-text">Far scorrere delicatamente il modulo nello slot fino in fondo al telaio, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
@@ -9072,7 +8964,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="50452a92c8429276ad6b40b6a483c0dc" category="paragraph">Per sostituire il supporto di avvio, è necessario rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato, installare il supporto di avvio sostitutivo nel modulo di gestione del sistema e trasferire l'immagine di avvio su un'unità flash USB.</block>
   <block id="43d656a7b2fb92dbbe5e13b8f00a00b8" category="list-text">Premere il pulsante della camma di gestione del sistema. La leva della camma si allontana dal telaio.</block>
   <block id="f0d27e50eb41ec006d18a96b5254063e" category="list-text">Ruotare la leva della camma completamente verso il basso e rimuovere il modulo di gestione del sistema dal modulo controller.</block>
-  <block id="d090349173c11be6a6275698aa2404cd" category="list-text">Reinstallare il modulo di gestione del sistema:.</block>
   <block id="54a53a09772d42f23357a9952d2d46a1" category="section-title">Fase 2: Trasferire l'immagine di avvio sul supporto di avvio</block>
   <block id="ba6a859a07959f14e93fa82e7da1233e" category="image-alt">Chiusura della figura del condotto dell'aria del modulo centralina AFF A1K</block>
   <block id="51f2f04b22eba49bd6c9066a5648bd67" category="list-text">Verificare che il LED di stato della NVRAM color ambra situato nello slot 4/5 sul retro del modulo controller danneggiato sia spento. Cercare l'icona NV.</block>
@@ -9149,25 +9040,19 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="a34f5d7448ca509b8fdfe99eb0258923" category="list-text">Far scorrere delicatamente il modulo nell'alloggiamento fino in fondo, quindi spingere il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
   <block id="3da6ea6cfd2a784b8a10d3a2f614c9f8" category="section-title">Fase 9: Installare il modulo controller</block>
   <block id="b7dcc5448a06ec706832cdeab132792c" category="list-text">Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi e rieseguire il controller.</block>
-  <block id="bb5b089c7f5c4d10ebe7f2948ffd4a76" category="paragraph">Continuare la procedura di sostituzione riattivando lo storage, le connessioni di rete e restituendo il controller.</block>
   <block id="eceb1e51c26ea3e966510ccb24feafbc" category="section-title">Fase 2: Restituire il controller</block>
   <block id="cd857ff122008e8c33281aac10c4a797" category="list-text">Individuare i moduli DIMM sul modulo controller e identificare il modulo DIMM di destinazione.</block>
   <block id="8a682c66646ec7954594a9800184dc7d" category="inline-link">NetApp Hardware Universe</block>
   <block id="bbd2b770350c6f52732f68cd939d17e5" category="admonition">Per informazioni sulle posizioni esatte dei moduli DIMM per AFF A70 o AFF A90, consultare la<block ref="4e43c3b83d98d9534ba258422aad47e3" category="inline-link-rx"></block> o la mappa FRU del modulo controller.</block>
   <block id="610add0822408300fa8ad516407472f4" category="section-title">Passo 3: Sostituire la ventola</block>
-  <block id="46d9d4074dd716b11379b5c6b5eecbdd" category="admonition">Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dalle PSU.</block>
   <block id="fc6665e9f1b6162e5d38bd8eb567b787" category="list-text">Rimuovere il modulo i/o dal modulo controller:</block>
   <block id="43bdfcb23a758397ea6517f635aacc1d" category="paragraph">Il dispositivo di chiusura della camma si allontana dal modulo di controllo.</block>
   <block id="e7a88b07d0fe11e52b015a7a07b1b7ee" category="list-text">Installare il modulo i/o sostitutivo nello slot di destinazione:</block>
   <block id="a3106006bcbd6b01107844abf97f1800" category="list-text">Far scorrere delicatamente il modulo nello slot fino in fondo nel modulo controller, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
-  <block id="6ba2e9eb4c2829dc2017284892829c45" category="admonition">Se si dispone di alimentatori CC, ricollegare i blocchi cavi alle PSU.</block>
   <block id="1089c3637780c1a22ad88c3e30e3eaa6" category="image-alt">Sostituire la batteria NV</block>
   <block id="f5844b9beff2dd81e52b9a5d98082467" category="paragraph">Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, è necessario rimuovere il modulo dallo chassis, spostare i moduli DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nello chassis.</block>
   <block id="f7de4e424b34170ef3a103ee0f882402" category="paragraph">Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del telaio e seguire la sequenza specifica di passi.</block>
-  <block id="25bc068a4c7f7f5d040abc107e9b53e7" category="admonition">Se il sistema è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dall'alimentatore.</block>
   <block id="b9c07f9700f6e60517bd8e8c52b698d0" category="list-text">Rimuovere il modulo NVRAM danneggiato dal telaio agganciando il dito nell'apertura della leva a camme ed estraendo il modulo dal telaio.</block>
-  <block id="380b4a9b7635aab20565f10313ad18ca" category="list-text">Recuperare l'alimentatore.</block>
-  <block id="6cc4600854ca82a2aad4bc0932afe89b" category="admonition">Se il sistema è dotato di alimentatori CC, ricollegare il blocco cavi di alimentazione all'alimentatore.</block>
   <block id="95202d1c51ddd04e5c7ee2a579109553" category="list-text">Premere il pulsante della camma.</block>
   <block id="eea43b1f9f4191af441ec7f1515ffd01" category="list-text">Rimuovere il modulo NVRAM dal telaio agganciando il dito nell'apertura della leva a camme ed estraendo il modulo dal telaio.</block>
   <block id="586cd1de26648f3c3aa70dbd61199e65" category="image-alt">Rimuovere un alimentatore CC</block>
@@ -9613,7 +9498,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="24adca74cd4521b9f4f4a8ab1033a6d8" category="doc">Controllare le chiavi di crittografia integrate - AFF A70, AFF A90</block>
   <block id="a79b7b4459526eba247c33a94309858e" category="doc">Avviare l'immagine di ripristino - AFF A70, AFF A90</block>
   <block id="b565c8083612023ff18332e3f18570fb" category="doc">Sostituire i supporti di avvio - AFF A70, AFF A90</block>
-  <block id="7a78f14a4a6a79a25fb9d91deac29f7f" category="doc">Spegnere il controller - AFF A70, AFF A90</block>
   <block id="3fd2ece46b2cae70b208d459839b7ea6" category="doc">Sostituire il telaio - AFF A70, AFF A90</block>
   <block id="47cc53453bdbc0a412f7d6260da64a94" category="doc">Spegnere le centraline - AFF A70, AFF A90</block>
   <block id="729f102b3131803a07803cd2f223d3c3" category="summary">È necessario eseguire nuovamente il riavvio dello storage del controller.</block>
@@ -9754,60 +9638,24 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b234edf4e69ffb2b833a8efb85ba5ee7" category="inline-link-macro">Completare l'aggiunta a caldo</block>
   <block id="a03ae9a3c924d10a64e97ade6d86ee2b" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="49e34f6a53fbd8084ac48e4e6738a264" category="inline-link-macro-rx"></block></block>
   <block id="6cfe7f4574d90cb894d56246a1414fa2" category="paragraph">Se è stata disattivata l'assegnazione automatica delle unità come parte della preparazione per l'aggiunta a caldo, è necessario assegnare manualmente la proprietà delle unità e riabilitare l'assegnazione automatica delle unità, se necessario.</block>
-  <block id="047de0ebf31d4be4fc5eb6722a69201e" category="list-text">La coppia ha deve disporre di porte Ethernet compatibili RoCE sufficienti per supportare il numero di shelf che si sta aggiungendo a caldo.</block>
-  <block id="2ab4e0b94726eca79e1aeeb2f1e8ceb5" category="paragraph">Per ogni shelf che stai aggiungendo a caldo, hai bisogno di due porte compatibili con RoCE su ogni controller. Queste porte possono essere integrate nei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi, o su moduli i/o compatibili con RoCE, come supportato dal modello di piattaforma.</block>
-  <block id="463315a2a8c1964ff9259e984ef43a7c" category="list-text">Identificare gli slot del controller corretti per il modello di piattaforma in uso.</block>
   <block id="132976e79206d2260fc5308469634e7a" category="list-text">Consultare la documentazione del modello di piattaforma per le istruzioni di installazione della scheda PCIe o del modulo i/O.</block>
-  <block id="088ddb10f92e4aec09d8bccaa095dbe7" category="paragraph"><block ref="088ddb10f92e4aec09d8bccaa095dbe7" category="inline-link-rx"></block></block>
-  <block id="bf06bfbbc1d29234d918a086f98a4c2c" category="section-title">Preparare porte Ethernet non dedicate con funzionalità RoCE per un'aggiunta a caldo</block>
-  <block id="c62d22065cef5eaab1771562c4464853" category="paragraph">Se la coppia ha dispone di porte Ethernet RoCE non dedicate utilizzate per l'aggiunta a caldo di uno shelf di dischi da NS224, devi verificare che le porte siano configurate per l'utilizzo dello storage (non per l'utilizzo di networking).</block>
-  <block id="2d957a99f7e946ae3806773ee52b1821" category="paragraph">È necessario soddisfare i requisiti di sistema di storage, inclusa l'installazione di eventuali schede PCIe RoCE aggiuntive di moduli di i/o in ogni controller.</block>
-  <block id="b3af01e20201c67551f5dc6511b19431" category="admonition">Per modificare le porte dall'utilizzo dello storage all'uso della rete, immettere il comando ,<block ref="9a677bf17da6cbfa9b6a63efbc67d3f2" prefix=" " category="inline-code"></block>.</block>
-  <block id="21e6d0e9cee07588109c3bca9e4f33a8" category="list-text">Effettuare l'accesso al cluster utilizzando SSH o la porta seriale della console.</block>
   <block id="5fc0fcdc83b05fb4f062a9fa1fe851d9" category="paragraph">In caso contrario, è necessario configurare le porte completando i passaggi da 4 a 7.</block>
   <block id="9db058e565a88604b6d87108ed139c51" category="paragraph"><block ref="6e972b196ebbc48e0575e24a92c8720d" prefix="" category="inline-code"></block></block>
   <block id="eb3110f9f105714e88d250d436520c1d" category="paragraph"><block ref="91bc4c8d50e9272a27ce62a39b4bf1a6" prefix="" category="inline-code"></block></block>
-  <block id="7c09109da9baa17bbe92aa7b509456d7" category="list-text">Se la coppia ha esegue ONTAP 9,6, riavviare il modulo controller in modo che le modifiche alle porte diventino effettive:<block ref="6751ed4c60ef0a0b22c8f041a5e5cf3d" prefix=" " category="inline-code"></block>.</block>
   <block id="6f5a1f5a085ff35b3e9c182f13e6c8a8" category="list-text">Ripetere il punto 4.</block>
   <block id="83d3292b963da6451d1d0d83b537c8e3" category="list-text">Ripetere i passaggi 4 e 5.</block>
-  <block id="7142ab39fb3d18d24163683bfd871b22" category="section-title">Preparare la connettività degli shelf esistente prima di aggiungere a caldo altri shelf</block>
   <block id="a61cf40b2e5406ed295d4e38c35656df" category="paragraph">Prima di aggiungere a caldo altri shelf, a seconda del modello di piattaforma in uso, potrebbe essere necessario ricollocare uno shelf esistente (dopo aver installato le schede PCIe o i moduli i/o aggiuntivi compatibili RoCE) su due set di porte in slot diversi, per garantire la resilienza in caso di guasto a uno slot.</block>
-  <block id="74b8df0719b21a5aee599f46d92e870d" category="list-text">È necessario soddisfare i requisiti di sistema, inclusa l'installazione di eventuali schede PCIe RoCE aggiuntive o moduli di i/o in ogni controller.</block>
-  <block id="b3aa8ef8d86d2e03895965e9958978a7" category="list-text">È necessario aver verificato che le porte non dedicate sulle schede PCIe compatibili RoCE o sui moduli i/o installati siano configurate per l'utilizzo dello storage.</block>
   <block id="bac6096d635a78bfc7662e151ab39559" category="list-text">Spostare un cavo alla volta per mantenere sempre la connettività al ripiano durante questa procedura.</block>
-  <block id="51b7d26dc4977295bdc15e4ceffe3a84" category="list-text">Se disponi di una coppia ha AFF A1K e stai aggiungendo un terzo shelf e installando un terzo o quarto modulo i/o compatibile RoCE in ciascun controller, il terzo shelf è cablato solo al terzo o al terzo e quarto modulo i/O. Non è necessario recuperare gli scaffali esistenti.</block>
   <block id="e87dec4c82a6131b352eff5116f7fab8" category="list-text">Possibilità di recuperare i collegamenti dello shelf esistente su due set di porte compatibili RoCE in slot diversi, in base al modello di piattaforma utilizzato.</block>
-  <block id="5c8e2a1729140c2319ea38bc38c671ba" category="paragraph">AFF A70 o AFF A90 ha Pair, con l'aggiunta a caldo di un secondo shelf</block>
-  <block id="815887f62fd8f7be15e3424efc32b20c" category="paragraph">Possibilità di recuperare il primo shelf su entrambi i moduli i/o RoCE:</block>
   <block id="3dbc71070033db4d4c05e736c6f4075a" category="admonition">Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.</block>
   <block id="b73b81430a005b6489a33cd21955e985" category="list-text">Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e8b) dello slot 8.</block>
-  <block id="5df57c3b9f444d48109943fb05d242b0" category="paragraph">Se necessario, è possibile fare riferimento alle illustrazioni del cablaggio che mostrano uno shelf singolo esistente e lo shelf cablato, in una configurazione a due ripiani.</block>
-  <block id="a935e388e4de5cd04b8314123fe7074d" category="paragraph"><block ref="a8947d9a1a575b89ffe8fcb06a161750" category="inline-xref-macro-rx"></block></block>
-  <block id="a36b1e64cc692b8ab8d3df36996375fb" category="paragraph">Coppia ha di AFF A1K e stiamo aggiungendo a caldo un secondo shelf</block>
   <block id="04c18e5cb17496cb3b9f53a5b07c76b4" category="list-text">Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e10b) dello slot 10.</block>
-  <block id="ceab97c7abf1d0009b8f39e726984b0e" category="paragraph"><block ref="6bc0eba2df9bed360cea4cf9b0a3cb3d" category="inline-xref-macro-rx"></block></block>
-  <block id="1392119f637fc041996b3a606abe7bdd" category="paragraph">Coppia ha di AFF A1K e stai aggiungendo un quarto shelf a caldo</block>
-  <block id="787c328c7045406142342c912caafa3c" category="paragraph">Possibilità di recuperare il terzo shelf attraverso i moduli i/o compatibili con R0CE nello slot 9 di ciascun controller:</block>
   <block id="59a884f424ff6cf6eadda8a43ad15c18" category="list-text">Sul controller A, spostare il cavo dalla porta b (e9b) dello slot 9 alla porta b (e8b) dello slot 8.</block>
-  <block id="f6f7bd955e18a236aa6bd00bbe5b99b4" category="paragraph">AFF C400 ha Pair e stai aggiungendo a caldo un secondo shelf</block>
-  <block id="97c77af9ebe44ea3e03f2f6517b0a3d3" category="paragraph">È possibile riutilizzare il primo shelf in entrambi i set di porte compatibili RoCE su ciascun controller:</block>
-  <block id="2ddae5c7aeab2acbf79374a7699a0e6b" category="paragraph">AFF A800 o AFF C800 ha Pair, con l'aggiunta a caldo di un secondo shelf</block>
-  <block id="82d1c3d2c1369a3c0cf17eefbe0771e3" category="paragraph">AFF A400 ha Pair e stai aggiungendo a caldo un secondo shelf</block>
-  <block id="b517525ed52282a89cb1f6c210c70b1a" category="paragraph">AFF A700 ha Pair e stai aggiungendo a caldo un secondo shelf</block>
   <block id="6ffd935255573ad4570c6a3b3450e0f9" category="inline-link">Informazioni sull'assegnazione automatica della proprietà del disco</block>
-  <block id="57c73fa2509bcf1d4b22913e1dd561cf" category="paragraph">In caso di dubbi sull'assegnazione manuale della proprietà dei dischi o per informazioni sull'assegnazione automatica delle policy di proprietà dei dischi del sistema storage, consulta<block ref="7cf2c47025b8136f811da5dc672735ee" category="inline-link-rx"></block></block>
   <block id="53c2f27803aec3d938e33bbae4de6b05" category="paragraph">È possibile immettere il comando su uno dei nodi.</block>
   <block id="5aa025a6412a09854e833ab5ef7bad16" category="paragraph">Se l'assegnazione automatica dell'unità è attivata, l'uscita viene visualizzata<block ref="ed2b5c0139cec8ad2873829dc1117d50" prefix=" " category="inline-code"></block> nella<block ref="36dcdb9f764aaa4313fab85a6eb8d6a6" prefix=" " category="inline-code"></block> colonna (per ogni nodo).</block>
   <block id="76252ddf99e749110059e04910646005" category="paragraph">È necessario disattivare l'assegnazione automatica delle unità su entrambi i nodi.</block>
-  <block id="dcd988efa9773d6784cd82af7e72fc28" category="paragraph">L'installazione di un nuovo shelf NS224 comporta l'installazione dello shelf in un rack o cabinet, il collegamento dei cavi di alimentazione (che si accendono automaticamente sullo shelf) e l'impostazione dell'ID dello shelf.</block>
   <block id="c44506a424da54e7a512c3fe58befda4" category="list-text">Assicurarsi di disporre di una graffetta con un lato raddrizzato o di una penna a sfera con punta stretta.</block>
-  <block id="d6f9c5ee662e9a54b98d8ab3c1fbbe0c" category="paragraph">Utilizzare la graffetta o la penna a sfera per accedere al pulsante ID ripiano dietro il pannello ODP (Operator Display Panel) durante la fase di modifica dell'ID ripiano.</block>
-  <block id="7834fa1dae5baa351b43df3825d7c51e" category="section-title">Cablare uno shelf per un'aggiunta a caldo</block>
-  <block id="0198adb183966b6a1cec77414f7184cf" category="paragraph">Acquisire familiarità con il corretto orientamento del connettore del cavo e con la posizione e l'etichettatura delle porte sui moduli a scaffale NSM NS224 può essere utile prima di collegare il ripiano aggiunto a caldo.</block>
-  <block id="403cdeaa74f4f7d57300e7cfb63e3508" category="section-title">Cablare uno shelf hot-add per una coppia ha AFF A70 o AFF A90</block>
-  <block id="4b2cba344589a212fe317976558dad4a" category="list-text">È necessario aver soddisfatto i requisiti del sistema di storage.</block>
-  <block id="feadc282c1b706313d9abaf2e604fa56" category="paragraph"><block ref="8c3173c57b196b7c4ca9e3e232f3a310" category="inline-xref-macro-rx"></block></block>
-  <block id="6e76b79ceb1c0834e1d6d42376d001b2" category="section-title">Cavo uno shelf hot-add per una coppia AFF A1K ha</block>
   <block id="96ef72d95f222f00433291a58b6b8744" category="doc">Installare uno shelf per un hot-add - NS224 ripiani</block>
   <block id="3e7bc606456977aca4460d0843a5999b" category="paragraph">È necessario installare uno shelf NS224 in un cabinet o un rack per telecomunicazioni, collegare i cavi di alimentazione (che si accendono automaticamente sullo shelf) e impostare l'ID dello shelf.</block>
   <block id="ed86a7d5c45c5290afeff3be20438da8" category="paragraph">Per modificare l'ID dello scaffale, utilizzare la graffetta o la penna a sfera per accedere al pulsante ID dello scaffale dietro il pannello ODP (Operator Display Panel) per il passo di modifica dell'ID dello scaffale.</block>
@@ -10054,7 +9902,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="64e923d27d8f20b1c39e996784b889e8" category="paragraph">Per sostituire lo chassis, attenersi alla procedura riportata di seguito.</block>
   <block id="ad5348d83b53533243eebb2be9ef1707" category="inline-link-macro">requisiti e considerazioni per la sostituzione del telaio</block>
   <block id="d00e4984e8012d79f3629015b50175c5" category="paragraph">Per sostituire il telaio, è necessario soddisfare determinati requisiti. Esaminare la <block ref="85b79c35aab56873c02d629d1d3908c3" category="inline-link-macro-rx"></block>.</block>
-  <block id="b9a16e18baf3e3435991b6d9c3ba01af" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="6b014aeda9f88c8732e6a64d143414df" category="inline-link-macro-rx"></block></block>
   <block id="d26fcd936ac92db8cf84389a3ab7bf47" category="inline-link-macro">Sostituire il telaio</block>
   <block id="d59de865276916bdd9f97d9473947ee3" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="50c430fbfd37e7720d34aff806c960b8" category="inline-link-macro-rx"></block></block>
   <block id="2c248a1a1b5e42590f3b77ae3ede043f" category="paragraph">La sostituzione dello chassis include lo spostamento degli alimentatori, dei dischi rigidi e del modulo controller dallo chassis danneggiato al nuovo chassis e lo scambio dello chassis danneggiato con il nuovo chassis dello stesso modello dello chassis danneggiato.</block>
@@ -10069,7 +9916,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b1e4b88723d63ea7009965cda7a3722c" category="doc">Panoramica del modulo i/o di aggiunta e sostituzione - AFF A70, AFF A90</block>
   <block id="137aeb15d685b764448324fcbbc40af6" category="paragraph">Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. Le procedure specifiche per la manutenzione dei componenti del sistema AFF A70 e AFF A90 sono descritte in questa sezione.</block>
   <block id="75775d88e26bd0ec1b5827bced4fb9dd" category="paragraph">Le procedure descritte in questa sezione presuppongono che i sistemi AFF A70 e AFF A90 siano già stati implementati come nodo di storage nell'ambiente ONTAP.</block>
-  <block id="cde82c9b04790b90c2679aca48bf0641" category="paragraph">Per i sistemi di storage ASA A70 e ASA A90, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="dc5fb977cb8c88d079092e9c6ec6160e" category="paragraph"><block ref="dc5fb977cb8c88d079092e9c6ec6160e" category="inline-link-macro-rx"></block></block>
   <block id="5d7bf1cac3020aecc9e419835da60990" category="paragraph"><block ref="5d7bf1cac3020aecc9e419835da60990" category="inline-link-macro-rx"></block></block>
   <block id="8c2694371a75dd052d8b2e0cd66496fc" category="paragraph">Un'unità è un dispositivo che fornisce l'archiviazione fisica necessaria per i dati.</block>
@@ -10093,4 +9939,32 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4f46fe04ed7debd30ef1d3c151e24935" category="sidebar">Flusso di lavoro di sostituzione del controller</block>
   <block id="1ca4e63b42d944e09b1132b7f6f56b66" category="sidebar">Panoramica del modulo di i/O.</block>
   <block id="926cbecf3e76b90a2bcdbc9c4519fc77" category="sidebar">Flusso di lavoro di sostituzione del telaio</block>
+  <block id="1d2bcd4906e89f4b93900e7a729cfa23" category="list-text">Scollegare l'alimentazione al modulo controller estraendo il modulo controller di circa tre pollici:</block>
+  <block id="190e6dffac1e1ea2cdf61c6d2e1aa03f" category="list-text">Premere verso il basso entrambi i fermi di bloccaggio del modulo controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.</block>
+  <block id="18db855640715fe2445fe253feaa5737" category="list-text">Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.</block>
+  <block id="fd0b5e2ec2a2cf25a20efb1e3056cd3e" category="list-text">Reinstallare il modulo di gestione del sistema:</block>
+  <block id="cad55b14298ba91aeb9818c5ded8ee54" category="list-text">Inserire l'unità flash USB nella porta USB-A del modulo di gestione del sistema.</block>
+  <block id="c81ac37e18f8d2fc1fa9a876a4ec31e6" category="list-text">Ricollegare l'alimentazione al modulo controller:</block>
+  <block id="81dfaa70d5a404c0e1608245cd5ffd7c" category="paragraph">Prima di sostituire il telaio, verificare i seguenti requisiti.</block>
+  <block id="6d5d746399cefcc613daba11aecdc51c" category="paragraph">Recuperare le connessioni di storage e di rete, quindi restituire il controller.</block>
+  <block id="0ed0be895e046a90f3a9bee311a3835e" category="paragraph">Verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="539ae767713043504856676d47fbdf4b" category="paragraph">Accertarsi di etichettare i cavi in modo da sapere da dove provengono.</block>
+  <block id="959e9a2f2cfb56163a0772785510252a" category="admonition">Il controller si riavvia non appena è completamente inserito nel telaio.</block>
+  <block id="efafbee0ffbc8d01f41e7d2a1428e535" category="section-title">Fase 4: Riassegnare i dischi</block>
+  <block id="d2b549392d50d0e5724cdaa8e0662e54" category="list-text">Identificare l'unità guasta eseguendo il<block ref="aadfe3f601179615e320615d73c89773" prefix=" " category="inline-code"></block> comando dalla console di sistema.</block>
+  <block id="9a3ce2ce3fa4d673c8baa3feb35a1d99" category="admonition">A seconda del tipo e della capacità, possono essere necessarie fino a diverse ore per visualizzare l'unità nell'elenco delle unità guaste.</block>
+  <block id="25a857f5f1a4649107ecc085c2020a12" category="paragraph">Il modo in cui si sostituisce l'unità dipende dal modo in cui viene utilizzata. Se l'autenticazione SED è attivata, è necessario utilizzare le istruzioni per la sostituzione SED contenute in<block ref="fc87e4868a863f484cb32d2391c4aa0d" category="inline-link-rx"></block>. Le presenti istruzioni descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.</block>
+  <block id="ecb3e4268bc39d477343c1e37a7a7507" category="list-text">Quando si sostituisce un'unità, è necessario attendere un minuto tra la rimozione dell'unità guasta e l'inserimento dell'unità sostitutiva per consentire al sistema di archiviazione di riconoscere l'esistenza della nuova unità.</block>
+  <block id="2355c0de89c03f36fe4d254465752ee9" category="paragraph">Utilizzare i collegamenti: <block ref="082e4336681466ac35683d076de2007e" category="inline-link-macro-rx"></block>.</block>
+  <block id="bfe3957a11dab27de6793691acba1b94" category="paragraph">*Cavi in rame 100 GbE QSFP28*</block>
+  <block id="59850ec6ce706547c89ff81eb99141db" category="image-alt">Cavo in rame da 100 GbE QSFP28</block>
+  <block id="98d708b05a190cb186f067bf90619d96" category="doc">Spegnimento del controller con problemi - AFF A70, AFF A90</block>
+  <block id="c69300475b70372bd3ae9414f284bd95" category="inline-link-macro">Spegnere i controller</block>
+  <block id="d184fea7e7fa9090950a80f61d31a011" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="7965ac6558ac93dfaf2504fcd8c045af" category="inline-link-macro-rx"></block></block>
+  <block id="2c72cc19c0bd942b8dafe7de49659cc1" category="paragraph">Spegnere i controller per eseguire la manutenzione dello chassis.</block>
+  <block id="df0a5e7efca0ed693d07e3026e615c4a" category="paragraph">Per i sistemi di storage AFF A70 e AFF A90, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="3a18b3bb3b5d96ad964da98cfdd729b8" category="paragraph"><block ref="3a18b3bb3b5d96ad964da98cfdd729b8" category="inline-link-macro-rx"></block></block>
+  <block id="1d7ebda4bed7079759a768f2499d31e6" category="inline-link">Come sostituire il dispositivo di avvio secondario di un AFF A700s</block>
+  <block id="9b7a185b60a0431ee8b8715c107b112e" category="paragraph">Se è necessario sostituire il supporto di avvio secondario mentre il supporto di avvio primario è installato e integro, contattare il supporto NetApp e citare l'<block ref="1f934b5b84ae8c28d2ccbd8c83b2dd26" category="inline-link-rx"></block> articolo della Knowledge base.</block>
+  <block id="0861a4c5524aee3e491db29774dd89a8" category="sidebar">Spegnere i controller</block>
 </blocks>

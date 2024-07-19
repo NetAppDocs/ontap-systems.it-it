@@ -11,7 +11,9 @@ summary: Si sostituisce un telaio danneggiato con il nuovo telaio dello stesso m
 
 
 [role="lead"]
-Per sostituire lo chassis, è necessario spostare il pannello, i moduli controller e le unità NVMe dallo chassis compromesso allo chassis sostitutivo, quindi rimuovere lo chassis compromesso dal rack dell'apparecchiatura o dall'armadietto del sistema e installare lo chassis sostitutivo al suo posto.
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+Prima di sostituire il telaio, verificare i seguenti requisiti.
 
 * Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il supporto tecnico.
 * È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.
