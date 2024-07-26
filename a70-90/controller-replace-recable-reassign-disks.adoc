@@ -15,7 +15,7 @@ Recuperare le connessioni di storage e di rete, quindi restituire il controller.
 
 
 
-== Fase 1: Ricable del sistema
+== Fase 1: Recuperare il controller
 
 Possibilità di ricable le connessioni di rete e di storage del modulo controller.
 
@@ -34,6 +34,8 @@ Possibilità di ricable le connessioni di rete e di storage del modulo controlle
 
 
 == Fase 2: Restituire il controller
+
+Trasferire nuovamente la proprietà delle risorse di storage al controller sostitutivo.
 
 . Se il sistema di archiviazione ha configurato la crittografia, è necessario ripristinare la funzionalità di archiviazione o crittografia dei volumi utilizzando la seguente procedura per riavviare il sistema:
 +
