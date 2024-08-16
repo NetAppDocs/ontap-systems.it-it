@@ -31,7 +31,7 @@ Per gli esempi dei fogli di lavoro viene utilizzata una configurazione con due H
 * Se necessario, dopo aver completato il foglio di lavoro, fare riferimento a. link:install-cabling-worksheets-how-to-read-multipath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività multipath"]
 
 
-image::../media/drw_worksheet_mpha_template.gif[modello mpha del foglio di lavoro drw]
+image::../media/drw_worksheet_mpha_template.gif[Modello di foglio di lavoro del controller MPHA per il cablaggio in stack]
 
 .Fasi
 . Nelle caselle sopra le caselle grigie, elencare tutte le porte SAS A del sistema, quindi tutte le porte SAS C del sistema in sequenza di slot (0, 1, 2, 3 e così via).
@@ -54,7 +54,7 @@ Quando tutte le coppie di porte vengono utilizzate per collegare gli stack nel s
 Ad esempio, in una configurazione ha multipercorso con otto porte SAS e quattro stack, la coppia di porte la/2b è cablata allo stack 1, la coppia di porte 2a/1d è cablata allo stack 2, la coppia di porte 1c/2d è cablata allo stack 3, e la coppia di porte 2c/1b è cablata allo stack 4.
 
 +
-image::../media/drw_worksheet_mpha_slots_1_and_2_two_4porthbas_two_stacks.gif[drw foglio di lavoro mpha slot 1 e 2 due 4porthbas due stack]
+image::../media/drw_worksheet_mpha_slots_1_and_2_two_4porthbas_two_stacks.gif[Foglio di lavoro sul cablaggio ha multipath compilato]
 
 +
 Quando non sono necessarie tutte le coppie di porte per collegare gli stack nel sistema, ignorare le coppie di porte (utilizzare ogni altra coppia di porte).
@@ -67,14 +67,14 @@ Ad esempio, in una configurazione ha multipath con otto porte SAS e due stack, l
 NOTE: Se si dispone di più coppie di porte di quelle necessarie per collegare gli stack nel sistema, la procedura migliore consiste nel saltare le coppie di porte per ottimizzare le porte SAS del sistema. Ottimizzando le porte SAS, si ottimizzano le prestazioni del sistema.
 
 +
-image::../media/drw_worksheet_mpha_skipped_template.gif[mpha del foglio di lavoro drw ignorato]
+image::../media/drw_worksheet_mpha_skipped_template.gif[Foglio di lavoro del cablaggio ha multipath che mostra le coppie di porte ignorate]
 
 +
 È possibile utilizzare il foglio di lavoro completo per collegare il sistema.
 
 . Se si dispone di una configurazione a controller singolo (multipath), barrare le informazioni per il controller 2.
 +
-image::../media/drw_worksheet_mp_template.gif[modello mp foglio di lavoro drw]
+image::../media/drw_worksheet_mp_template.gif[Foglio di lavoro del cablaggio multipercorso compilato]
 
 +
 È possibile utilizzare il foglio di lavoro completo per collegare il sistema.

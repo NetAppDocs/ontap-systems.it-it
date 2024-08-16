@@ -35,7 +35,7 @@ Ogni coppia di porte designata per il cablaggio multipath è circondata da un ov
 * Se necessario, dopo aver completato il foglio di lavoro, fare riferimento a. link:install-cabling-worksheets-how-to-read-quadpath.html["Come leggere un foglio di lavoro per collegare le connessioni controller-to-stack per la connettività quad-path"].
 
 
-image::../media/drw_worksheet_quad_pathed_template_nau.gif[foglio di lavoro drw modello a quattro percorsi nau]
+image::../media/drw_worksheet_quad_pathed_template_nau.gif[Modello di foglio di lavoro per il cablaggio a quattro percorsi]
 
 .Fasi
 . Nelle caselle sopra le caselle grigie, elencare tutte le porte SAS A del sistema, quindi tutte le porte SAS C del sistema in sequenza di slot (0, 1, 2, 3 e così via).
@@ -58,7 +58,7 @@ Entrambi i set di cavi sono necessari per ottenere una connettività quad-path d
 Nell'esempio seguente viene utilizzata la coppia di porte 1a/2b per il cablaggio multipercorso e la coppia di porte 2a/1d per il cablaggio a percorso quadruplo dello stack 1.
 
 +
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_circled_nau.gif[drw foglio di lavoro qpha slot 1 e 2 due 4porthbas due stack set1 cerchiato nau]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_circled_nau.gif[Foglio di lavoro di cablaggio ha quad path che mostra le coppie di porte collegate allo stack 1]
 
 . Identificare i due set di coppie di porte da collegare allo stack 2 disegnando un ovale attorno al primo set di coppie di porte e un rettangolo attorno al secondo set di coppie di porte.
 +
@@ -68,13 +68,13 @@ Entrambi i set di cavi sono necessari per ottenere una connettività quad-path d
 Nell'esempio seguente viene utilizzata la coppia di porte 1c/2d per il cablaggio multipath e la coppia di porte 2c/1b per il cablaggio quadruplo dello stack 2.
 
 +
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Foglio di lavoro di cablaggio per ha quad-path]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Foglio di lavoro di cablaggio ha quad path che mostra le coppie di porte collegate allo stack 2]
 
 . Se si dispone di una configurazione quad-path (controller singolo), barrare le informazioni per il controller 2; sono necessarie solo le informazioni del controller 1 per collegare le connessioni controller-to-stack.
 +
 L'esempio seguente mostra che le informazioni per il controller 2 sono barrate.
 
 +
-image::../media/drw_worksheet_qp_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[foglio di lavoro drw slot qp 1 e 2 due 4porthbas due stack nau]
+image::../media/drw_worksheet_qp_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Foglio di lavoro di cablaggio del controller singolo quad path che mostra le coppie di porte collegate allo stack 1 e 2]
 
 

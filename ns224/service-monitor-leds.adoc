@@ -38,7 +38,7 @@ I LED sul pannello ODP (Front Operator Display) del ripiano dei dischi indicano 
 
 L'illustrazione e la tabella seguenti descrivono i tre LED dell'ODP:
 
-image::../media/drw_ns224_odp_leds_IEOPS-1262.svg[LED odp drw ns224 IEOPS 1262]
+image::../media/drw_ns224_odp_leds_IEOPS-1262.svg[LED del pannello del display dell'operatore]
 
 [cols="1,2,1,5"]
 |===
@@ -46,7 +46,7 @@ image::../media/drw_ns224_odp_leds_IEOPS-1262.svg[LED odp drw ns224 IEOPS 1262]
 
 
  a| 
-image::../media/drw_sas_power_icon.svg[icona di alimentazione sas drw]
+image::../media/drw_sas_power_icon.svg[LED di alimentazione del pannello del display dell'operatore]
  a| 
 Alimentazione (verde)
  a| 
@@ -57,7 +57,7 @@ Uno o più alimentatori alimentano lo shelf di dischi.
 
 
  a| 
-image::../media/drw_sas_fault_icon.svg[icona di errore sas drw]
+image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
  a| 
 Attenzione (ambra)
  a| 
@@ -76,7 +76,7 @@ Spegnere e riaccendere lo shelf del disco per modificare l'ID dello shelf.
 
 
  a| 
-image::../media/drw_sas3_location_icon.svg[icona posizione drw sas3]
+image::../media/drw_sas3_location_icon.svg[LED di posizione del pannello del display dell'operatore]
  a| 
 Posizione (blu)
  a| 
@@ -93,7 +93,7 @@ I LED di un modulo NSM indicano se il modulo funziona correttamente, se è pront
 
 L'illustrazione e le tabelle seguenti descrivono i LED del modulo NSM associati alla funzione di un modulo e alla funzione di ciascuna porta NVMe di un modulo.
 
-image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[LED nsm drw ns224 IEOPS 1270]
+image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[NS224 NSM100 LED del modulo]
 
 [cols="1,1,2,4"]
 |===
@@ -103,7 +103,7 @@ image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[LED nsm drw ns224 IEOPS 1270]
  a| 
 image:../media/legend_icon_01.png["Numero di didascalia 1"]
  a| 
-image::../media/drw_sas3_location_icon.svg[icona posizione drw sas3]
+image::../media/drw_sas3_location_icon.svg[LED di posizione del pannello del display dell'operatore]
  a| 
 Blu
  a| 
@@ -114,7 +114,7 @@ Modulo NSM: Posizione
  a| 
 image:../media/legend_icon_02.png["Numero di didascalia 2"]
  a| 
-image::../media/drw_sas_fault_icon.svg[icona di errore sas drw]
+image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
  a| 
 Ambra
  a| 
@@ -136,7 +136,7 @@ NVMe port/link: Status (porta/collegamento NVMe)
  a| 
 image:../media/legend_icon_04.png["Numero di didascalia 4"]
  a| 
-image::../media/drw_sas_fault_icon.svg[icona di errore sas drw]
+image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
  a| 
 Ambra
  a| 
@@ -232,7 +232,7 @@ I LED di un alimentatore CA o CC (PSU) indicano se l'alimentatore funziona norma
 
 L'illustrazione e le tabelle seguenti descrivono il LED di un alimentatore. (L'illustrazione mostra un alimentatore CA; tuttavia, la posizione dei LED è la stessa sull'alimentatore CC):
 
-image::../media/drw_ns224_psu_leds_IEOPS-1261.svg[LED psu drw ns224 IEOPS 1261]
+image::../media/drw_ns224_psu_leds_IEOPS-1261.svg[LED di attività dell'alimentatore]
 
 [cols="1,4"]
 |===
@@ -320,7 +320,7 @@ I LED di un'unità NVMe indicano se funziona normalmente o se si verificano prob
 
 L'illustrazione e le tabelle seguenti descrivono i due LED di un'unità NVMe:
 
-image::../media/drw_ns224_drive_leds_IEOPS-1263.svg[LED del disco drw ns224 IEOPS 1263]
+image::../media/drw_ns224_drive_leds_IEOPS-1263.svg[LED di alimentazione e attenzione delle unità NVMe]
 
 [cols="1,2,2"]
 |===
