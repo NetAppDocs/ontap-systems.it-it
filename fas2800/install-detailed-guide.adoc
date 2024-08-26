@@ -48,7 +48,7 @@ IMPORTANT: I clienti con requisiti di alimentazione specifici devono verificare 
 .. Raccogliere informazioni sul proprio sistema di storage completando la https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Foglio di lavoro di installazione^ (è necessario l'URL del foglio di lavoro)"].
 .. Registrare il numero di serie del sistema storage dalle unità di controllo.
 +
-image::../media/drw_ssn_label.svg[etichetta drw sn]
+image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
 
 
 
@@ -401,7 +401,7 @@ Collegare i controller allo storage esterno.
 La tabella seguente identifica il tipo di cavo con il numero di didascalia e il colore del cavo nelle illustrazioni per il cablaggio degli shelf di dischi al sistema di storage.
 
 
-NOTE: L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installazione e shelf per l'installazione di un nuovo sistema - shelf con moduli IOM12/IOM12B"^] per ulteriori informazioni.
+NOTE: L'esempio utilizza DS224C. Il cablaggio è simile agli altri shelf di dischi supportati. Per ulteriori informazioni, vedere link:../sas3/install-new-system.html["Installazione e shelf per l'installazione di un nuovo sistema - shelf con moduli IOM12/IOM12B"] .
 
 [cols="20%,80%"]
 |===
@@ -436,7 +436,7 @@ image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie
 Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra i controller e i ripiani delle unità.
 
 
-IMPORTANT: Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] per ulteriori informazioni.
+IMPORTANT: Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Per ulteriori informazioni, vedere link:../sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] .
 
 .Animazione - cablaggio dello shelf del disco
 video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]

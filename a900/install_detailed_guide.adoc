@@ -35,7 +35,7 @@ Devi fornire quanto segue presso la tua sede:
 . Disimballare il contenuto di tutte le confezioni.
 . Annotare il numero di serie del sistema dai controller.
 +
-image::../media/drw_ssn_label.svg[etichetta drw sn]
+image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
 
 . Fare un inventario e prendere nota del numero e dei tipi di cavi ricevuti.
 +
@@ -181,18 +181,18 @@ Accensione del sistema
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_9500_lifting_icon.svg[drw 9500 icona di sollevamento]
+image::../media/drw_9500_lifting_icon.svg[Etichetta di avvertenza per il sollevamento del peso]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_9500_cable_management_arms.svg[drw 9500 bracci di gestione dei cavi]
+image::../media/drw_9500_cable_management_arms.svg[Installare il ARM di gestione dei cavi]
 
 . Posizionare il pannello anteriore del sistema.
 
 
 Il seguente diagramma mostra l'aspetto tipico di un sistema e la posizione dei componenti principali sul retro del sistema:
 
-image::../media/drw_a900_controller_in _chassis_ID_IEOPS-856.svg[Controller drw a900 con ID chassis IEOPS 856]
+image::../media/drw_a900_controller_in _chassis_ID_IEOPS-856.svg[Configurazione tipica del cluster]
 
 
 
@@ -211,7 +211,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -221,7 +221,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - collegare un cluster senza switch a due nodi
 video::37419c37-f56f-48e5-8e6c-afa600095444[panopto]
 +
-image::../media/drw_a900_tnsc_network_cabling_IEOPS-933.svg[Cablaggio di rete drw a900 tnsc IEOPS 933]
+image::../media/drw_a900_tnsc_network_cabling_IEOPS-933.svg[Cablaggio di rete senza switch a due nodi]
 
 +
 |===
@@ -300,7 +300,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
@@ -397,7 +397,7 @@ Collegare un singolo shelf di dischi NS224 o due shelf di dischi NS224 ai contro
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
 
@@ -452,7 +452,7 @@ Cavo da 100 GbE
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
 
@@ -521,13 +521,13 @@ Se sul laptop è attivata la funzione di rilevamento della rete, è possibile co
 
 . Utilizzare la seguente animazione o disegno per impostare uno o più ID shelf di dischi:
 +
-Gli shelf NS224 sono preimpostati su shelf ID 00 e 01. Se si desidera modificare gli ID dello shelf, è necessario creare uno strumento da inserire nel foro in cui si trova il pulsante. vedere https://docs.netapp.com/us-en/ontap-systems/ns224/change-shelf-id.html["Modifica dell'ID di uno shelf - shelf NS224"] per istruzioni dettagliate.
+Gli shelf NS224 sono preimpostati su shelf ID 00 e 01. Se si desidera modificare gli ID dei ripiani, è necessario creare uno strumento da inserire nel foro in cui si trova il pulsante. link:../ns224/change-shelf-id.html["Modifica dell'ID di uno shelf - shelf NS224"]Per istruzioni dettagliate, vedere.
 
 +
 .Animazione - impostare gli ID dello shelf del disco NVMe
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_a900_oie_change_ns224_shelf ID_IEOPS-836.svg[Drw a900 modifica oie ns224 shelf ID IEOPS 836]
+image::../media/drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg[Drw a900 modifica oie ns224 shelf ID IEOPS 836]
 
 +
 [cols="20%,80%"]
@@ -643,13 +643,13 @@ image::../media/drw_A900_cable_console_switch_controller_IEOPS-953.svg[Controlle
 
 . Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi:
 +
-Gli shelf NS224 sono preimpostati su shelf ID 00 e 01. Se si desidera modificare gli ID dello shelf, è necessario creare uno strumento da inserire nel foro in cui si trova il pulsante. vedere https://docs.netapp.com/us-en/ontap-systems/ns224/change-shelf-id.html["Modifica dell'ID di uno shelf - shelf NS224"] per istruzioni dettagliate.
+Gli shelf NS224 sono preimpostati su shelf ID 00 e 01. Se si desidera modificare gli ID dei ripiani, è necessario creare uno strumento da inserire nel foro in cui si trova il pulsante. link:../ns224/change-shelf-id.html["Modifica dell'ID di uno shelf - shelf NS224"]Per istruzioni dettagliate, vedere.
 
 +
 .Animazione - impostare gli ID dello shelf del disco NVMe
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_a900_oie_change_ns224_shelf ID_IEOPS-836.svg[Drw a900 modifica oie ns224 shelf ID IEOPS 836]
+image::../media/drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg[Drw a900 modifica oie ns224 shelf ID IEOPS 836]
 
 +
 [cols="20%,80%"]

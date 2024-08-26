@@ -19,8 +19,8 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 
 . Verificare la versione di ONTAP in esecuzione sul controller compromesso se attivato o sul controller partner se il controller non funzionante è attivo, utilizzando `version -v` comando:
 +
-** Se nell'output del comando viene visualizzato <lno-DARE> o <1Ono-DARE>, il sistema non supporta NVE, passare a. https://docs.netapp.com/us-en/ontap-systems/fas2800/bootmedia-impaired-controller-shutdown.html["Spegnere il controller compromesso"].
-** Se <lno-DARE> non viene visualizzato nell'output del comando e il sistema esegue ONTAP 9.6 o versione successiva, passare alla sezione successiva, <<Controllare NVE o NSE nei sistemi che eseguono ONTAP 9.6 e versioni successive>>.
+** Se nell'output del comando viene visualizzato <lno-DARE> o <1Ono-DARE>, il sistema non supporta NVE, passare a link:../fas2800/bootmedia-impaired-controller-shutdown.html["Spegnere il controller compromesso"].
+** Se <lno-DARE> non viene visualizzato nell'output del comando e il sistema esegue ONTAP 9.6 o versioni successive, passare alla sezione successiva, link:../fas2800/bootmedia-encryption-preshutdown-checks.html#check-nve-or-nse-on-systems-running-ontap-9-6-and-later["Controllare NVE o NSE nei sistemi che eseguono ONTAP 9.6 e versioni successive"].
 
 
 . Disattiva il giveback automatico dal controller integro:

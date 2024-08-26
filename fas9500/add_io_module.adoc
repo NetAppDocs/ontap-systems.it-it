@@ -162,7 +162,7 @@ NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializz
 . Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
 . Se si utilizzano gli slot 3 e/o 7 per il collegamento in rete, utilizzare `storage port modify -node __<node name>__ -port __<port name>__ -mode network` comando per convertire lo slot per l'utilizzo in rete.
 . Ripetere questi passi per il controller B.
-. Se è stato installato un modulo i/o storage, installare e cablare gli shelf SAS, come descritto in https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["Aggiunta a caldo di uno shelf SAS"^].
+. Se è stato installato un modulo i/o di storage, installare e collegare gli shelf SAS, come descritto in link:../sas3/install-hot-add-shelf.html["Aggiunta a caldo di uno shelf SAS"].
 
 
 
@@ -387,7 +387,7 @@ NOTE: Se si verifica un problema durante il riavvio, vedere https://mysupport.ne
 
 
  a| 
-Modulo NIC negli slot 3 o 7,
+Modulo NIC negli slot 3 o 7
  a| 
 Utilizzare `storage port modify -node *_<node name>__ -port *_<port name>__ -mode network` comando per ciascuna porta.
 
@@ -396,7 +396,7 @@ Utilizzare `storage port modify -node *_<node name>__ -port *_<port name>__ -mod
  a| 
 Modulo storage
  a| 
-Installare e cablare gli shelf SAS, come descritto inhttps://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["Aggiunta a caldo di uno shelf SAS"^].
+Installare e collegare gli shelf SAS, come descritto in link:../sas3/install-hot-add-shelf.html["Aggiunta a caldo di uno shelf SAS"].
 
 |===
 . Ripetere questi passi per il controller B.

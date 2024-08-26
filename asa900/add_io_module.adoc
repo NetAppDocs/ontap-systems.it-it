@@ -162,7 +162,7 @@ NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializz
 . Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
 . Se si utilizzano gli slot 3 e/o 7 per il collegamento in rete, utilizzare `storage port modify -node __<node name>__ -port __<port name>__ -mode network` comando per convertire lo slot per l'utilizzo in rete.
 . Ripetere questi passi per il controller B.
-. Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"^].
+. Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
 
 
 
@@ -392,7 +392,7 @@ Utilizzare `storage port modify -node *_<node name>__ -port *_<port name>__ -mod
  a| 
 Modulo storage
  a| 
-Installare e collegare i ripiani NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"^].
+Installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
 
 |===
 . Ripetere questi passi per il controller B.

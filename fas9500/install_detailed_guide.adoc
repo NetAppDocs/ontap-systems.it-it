@@ -35,7 +35,7 @@ Devi fornire quanto segue presso la tua sede:
 . Disimballare il contenuto di tutte le confezioni.
 . Annotare il numero di serie del sistema dai controller.
 +
-image::../media/drw_ssn_label.svg[etichetta drw sn]
+image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
 
 . Fare un inventario e prendere nota del numero e dei tipi di cavi ricevuti.
 +
@@ -223,7 +223,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
@@ -312,7 +312,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
@@ -400,14 +400,14 @@ image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[Drw a900fas9500
 Collegare gli shelf di dischi DS212C o DS224C ai controller.
 
 
-NOTE: Per ulteriori informazioni sul cablaggio SAS e per i fogli di lavoro, vedere https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12"^]
+NOTE: Per ulteriori informazioni sul cablaggio SAS e fogli di lavoro, vedere link:../sas3/overview-cabling-rules-examples.html["Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12"]
 
 .Prima di iniziare
-* Completare la scheda di lavoro relativa al cablaggio SAS del sistema. Vedere https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12"^].
+* Completare la scheda di lavoro relativa al cablaggio SAS del sistema. Vedere link:../sas3/overview-cabling-rules-examples.html["Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12"].
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image::../media/oie_cable_pull_tab_up.svg[linguetta di estrazione del cavo oie verso l'alto]
+image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
 
 image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
 
