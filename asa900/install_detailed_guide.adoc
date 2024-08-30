@@ -35,7 +35,7 @@ Devi fornire quanto segue presso la tua sede:
 . Disimballare il contenuto di tutte le confezioni.
 . Annotare il numero di serie del sistema dai controller.
 +
-image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
+image:drw_ssn_label.svg["Esempio del numero di serie del sistema che mostra la posizione del numero"]
 
 . Fare un inventario e prendere nota del numero e dei tipi di cavi ricevuti.
 +
@@ -59,7 +59,7 @@ X66240A-2 (112-00598), 2 m
 
 X66240A-5 (112-00600), 5 m.
  a| 
-image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+image:oie_cable_sfp_gbe_copper.svg["larghezza=85px"]
  a| 
 Cavo di rete
 
@@ -74,7 +74,7 @@ X66250-5 (112-00344), 5 m.
 
 X66250-15 (112-00346), 15 m.
  a| 
-image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+image:oie_cable_sfp_gbe_copper.svg["larghezza=85px"]
  a| 
 Cavo di rete ottico FC
 
@@ -89,7 +89,7 @@ X66100-3 (112-00543), 3 m.
 
 X66100-5 (112-00544), 5 m.
  a| 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=85px"]
  a| 
 Dati Ethernet, rete cluster
 
@@ -104,7 +104,7 @@ X66211B-2 (112-00574), 2 m
 
 X66211B-5 (112-00576), 5 m.
  a| 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=85px"]
  a| 
 Rete,
 
@@ -125,7 +125,7 @@ X66032A (112-00437), 2 m
 
 X66033A (112-00438), 3 m.
  a| 
-image::../media/oie_cable_fiber_lc_connector.svg[connettore lc in fibra ottica per cavo oie]
+image:oie_cable_fiber_lc_connector.svg["larghezza=85px"]
  a| 
 Rete ottica FC
 
@@ -138,7 +138,7 @@ Codici X6585-R6 (112-00291), 3 m.
 
 X6562-R6 (112-00196), 5 m.
  a| 
-image::../media/oie_cable_rj45.svg[cavo oie rj45]
+image:oie_cable_rj45.svg["larghezza=85px"]
  a| 
 Rete di gestione e dati Ethernet
 
@@ -149,7 +149,7 @@ Cavo per console micro-USB
  a| 
 Non applicabile
  a| 
-image::../media/oie_cable_micro_usb.svg[cavo oie micro usb]
+image:oie_cable_micro_usb.svg["larghezza=85px"]
  a| 
 Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac
 
@@ -160,7 +160,7 @@ Cavi di alimentazione
  a| 
 Non applicabile
  a| 
-image::../media/oie_cable_power.svg[cavo di alimentazione dell'oie]
+image:oie_cable_power.svg["larghezza=85px"]
  a| 
 Accensione del sistema
 
@@ -181,18 +181,18 @@ Accensione del sistema
 NOTE: È necessario essere consapevoli dei problemi di sicurezza associati al peso del sistema.
 
 +
-image::../media/drw_9500_lifting_icon.svg[drw 9500 icona di sollevamento]
+image:drw_9500_lifting_icon.svg[""]
 
 . Collegare i dispositivi di gestione dei cavi (come illustrato).
 +
-image::../media/drw_9500_cable_management_arms.svg[drw 9500 bracci di gestione dei cavi]
+image:drw_9500_cable_management_arms.svg[""]
 
 . Posizionare il pannello anteriore del sistema.
 
 
 Il seguente diagramma mostra l'aspetto tipico di un sistema e la posizione dei componenti principali sul retro del sistema:
 
-image::../media/drw_a900_controller_in _chassis_ID_IEOPS-856.svg[Configurazione tipica del cluster]
+image:drw_a900_controller_in _chassis_ID_IEOPS-856.svg["Configurazione tipica del cluster"]
 
 
 
@@ -211,7 +211,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
+image:oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -221,7 +221,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - collegare un cluster senza switch a due nodi
 video::37419c37-f56f-48e5-8e6c-afa600095444[panopto]
 +
-image::../media/drw_a900_tnsc_network_cabling_IEOPS-933.svg[Cablaggio di rete senza switch a due nodi]
+image:drw_a900_tnsc_network_cabling_IEOPS-933.svg["Cablaggio di rete senza switch a due nodi"]
 
 +
 |===
@@ -229,7 +229,7 @@ image::../media/drw_a900_tnsc_network_cabling_IEOPS-933.svg[Cablaggio di rete se
 
 
  a| 
-image::../media/oie_legend_icon_1_lg.svg[icona legenda oie 1 lg]
+image:oie_legend_icon_1_lg.svg["larghezza=30px"]
  a| 
 Porte di interconnessione del cluster di cavi:
 
@@ -237,44 +237,44 @@ Porte di interconnessione del cluster di cavi:
 ** Slot A8 e B8 (e8a)
 
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=85px"]
 
 
 
  a| 
-image::../media/oie_legend_icon_2_lp.svg[icona legenda oie 2 lp]
+image:oie_legend_icon_2_lp.svg["larghezza=30px"]
  a| 
 Porte per la gestione del controller dei cavi (chiave).
 
-image::../media/oie_cable_rj45.svg[cavo oie rj45]
+image:oie_cable_rj45.svg["larghezza=85px"]
 
 
 
  a| 
-image::../media/oie_legend_icon_3_o.svg[icona legenda oie 3 o]
+image:oie_legend_icon_3_o.svg["larghezza=30px"]
  a| 
 Switch di rete 25 GbE via cavo:
 
 Porte negli slot A3 e B3 (e3a e e3c) e negli slot A9 e B9 (e9a e e9c) verso gli switch di rete 25 GbE.
 
-image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+image:oie_cable_sfp_gbe_copper.svg["larghezza=85px"]
 
 Switch di rete host 40 GbE:
 
 Collegare le porte host‐lato b dello slot A4 e B4 (e4b) e gli slot A8 e B8 (e8b) allo switch host.
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=85px"]
 
 
 
  a| 
-image::../media/oie_legend_icon_4_dr.svg[icona legenda oie 4 dr]
+image:oie_legend_icon_4_dr.svg["larghezza=30px"]
  a| 
 Connessioni FC via cavo da 32 GB:
 
 Porta dei cavi negli slot A5 e B5 (5a, 5b, 5c e 5d) e negli slot A7 e B7 (7a, 7b, 7c e 7d) per gli switch di rete FC da 32 GB.
 
-image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+image:oie_cable_sfp_gbe_copper.svg["larghezza=85px"]
 
 
 
@@ -283,9 +283,9 @@ image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
 ** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
 
  a| 
-image::../media/oie_cable_power.svg[cavo di alimentazione dell'oie]
+image:oie_cable_power.svg["larghezza=85px"]
 
-image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[Drw a900fas9500 icona della fonte di alimentazione IEOPS 1142]
+image:drw_a900fas9500_power_source_icon_IEOPS-1142.svg["larghezza=200px"]
 
 |===
 
@@ -300,7 +300,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
+image:oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
@@ -310,7 +310,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - cavo a cluster con switch
 video::61ec11ec-aa30-474a-87a5-afa60008b52b[panopto]
 +
-image::../media/drw_a900_switched_network_cabling_IEOPS-934.svg[Cablaggio di rete switch drw a900 IEOPS 934]
+image:drw_a900_switched_network_cabling_IEOPS-934.svg["larghezza = 500 px"]
 
 +
 |===
@@ -318,7 +318,7 @@ image::../media/drw_a900_switched_network_cabling_IEOPS-934.svg[Cablaggio di ret
 
 
  a| 
-image::../media/oie_legend_icon_1_lg.svg[icona legenda oie 1 lg]
+image:oie_legend_icon_1_lg.svg["larghezza=30px"]
  a| 
 Porte a di interconnessione del cluster di cavi:
 
@@ -326,44 +326,44 @@ Porte a di interconnessione del cluster di cavi:
 ** Slot A8 e B8 (e8a) per lo switch di rete del cluster.
 
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=85px"]
 
 
 
  a| 
-image::../media/oie_legend_icon_2_lp.svg[icona legenda oie 2 lp]
+image:oie_legend_icon_2_lp.svg["larghezza=30px"]
  a| 
 Porte per la gestione del controller dei cavi (chiave).
 
-image::../media/oie_cable_rj45.svg[cavo oie rj45]
+image:oie_cable_rj45.svg["larghezza=85px"]
 
 
 
  a| 
-image::../media/oie_legend_icon_3_o.svg[icona legenda oie 3 o]
+image:oie_legend_icon_3_o.svg["larghezza=30px"]
  a| 
 Switch di rete da 25 GbE via cavo:
 
 Porte negli slot A3 e B3 (e3a e e3c) e negli slot A9 e B9 (e9a e e9c) verso gli switch di rete 25 GbE.
 
-image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+image:oie_cable_sfp_gbe_copper.svg["larghezza=85px"]
 
 Switch di rete host 40 GbE:
 
 Collegare le porte host‐lato b dello slot A4 e B4 (e4b) e gli slot A8 e B8 (e8b) allo switch host.
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=85px"]
 
 
 
  a| 
-image::../media/oie_legend_icon_4_dr.svg[icona legenda oie 4 dr]
+image:oie_legend_icon_4_dr.svg["larghezza=30px"]
  a| 
 Connessioni FC via cavo da 32 GB:
 
 Porta dei cavi negli slot A5 e B5 (5a, 5b, 5c e 5d) e negli slot A7 e B7 (7a, 7b, 7c e 7d) per gli switch di rete FC da 32 GB.
 
-image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
+image:oie_cable_sfp_gbe_copper.svg["larghezza=85px"]
 
 
 
@@ -372,9 +372,9 @@ image::../media/oie_cable_sfp_gbe_copper.svg[cavo oie sfp gbe rame]
 ** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
 
  a| 
-image::../media/oie_cable_power.svg[cavo di alimentazione dell'oie]
+image:oie_cable_power.svg["larghezza=85px"]
 
-image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[Drw a900fas9500 icona della fonte di alimentazione IEOPS 1142]
+image:drw_a900fas9500_power_source_icon_IEOPS-1142.svg["larghezza=200px"]
 
 |===
 
@@ -397,9 +397,9 @@ Collegare un singolo shelf di dischi NS224 o due shelf di dischi NS224 ai contro
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
+image:oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
 
-image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+image:oie_cable_pull_tab_down.svg["larghezza=200px"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -409,7 +409,7 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - collegare un singolo shelf NS224
 video::8d8b45cd-bd8f-4fab-a4fa-afa5017e7b72[panopto]
 +
-image::../media/drw_a900_NS224_one shelf_cabling_IEOPS-937.svg[Cablaggio a uno shelf drw a900 NS224 IEOPS 937]
+image:drw_a900_NS224_one shelf_cabling_IEOPS-937.svg["larghezza = 500 px"]
 
 +
 |===
@@ -417,26 +417,26 @@ image::../media/drw_a900_NS224_one shelf_cabling_IEOPS-937.svg[Cablaggio a uno s
 
 
  a| 
-image::../media/oie_legend_icon_1_mb.svg[icona legenda oie 1 mb]
+image:oie_legend_icon_1_mb.svg["larghezza=30px"]
  a| 
 ** Collegare la porta e2a del controller A alla porta e0a del NSM A sullo shelf.
 ** Collegare la porta e10b del controller A alla porta e0b dell'NSM B sullo shelf.
 
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=50px"]
 
 Cavo da 100 GbE
 
 
 
  a| 
-image::../media/oie_legend_icon_2_lo.svg[icona legenda oie 2 lo]
+image:oie_legend_icon_2_lo.svg["larghezza=30px"]
  a| 
 ** Collegare la porta e2a del controller B alla porta e0a del NSM B sullo shelf.
 ** Collegare la porta e10b del controller B alla porta e0b dell'NSM A sullo shelf.
 
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=50px"]
 
 Cavo da 100 GbE
 
@@ -452,9 +452,9 @@ Cavo da 100 GbE
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image::../media/oie_cable_pull_tab_up.svg[direzione della linguetta di estrazione del cavo]
+image:oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
 
-image::../media/oie_cable_pull_tab_down.svg[linguetta di estrazione del cavo oie verso il basso]
+image:oie_cable_pull_tab_down.svg["larghezza=200px"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -464,10 +464,10 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 .Animazione - collegare due shelf NS224
 video::ec143c32-9e4b-47e5-893e-afa5017da6b4[panopto]
 +
-image::../media/drw_a900_NS224_line_art_two shelf_cabling_IEOPS-1147.svg[Cablaggio a due shelf ARD a due shelf drw a900 NS224 IEOPS 1147]
+image:drw_a900_NS224_line_art_two shelf_cabling_IEOPS-1147.svg["larghezza = 500 px"]
 
 +
-image::../media/drw_a900_NS224_two_shelf_cabling_IEOPS-938.svg[Cablaggio a due shelf drw a900 NS224 IEOPS 938]
+image:drw_a900_NS224_two_shelf_cabling_IEOPS-938.svg["larghezza = 500 px"]
 
 +
 |===
@@ -475,7 +475,7 @@ image::../media/drw_a900_NS224_two_shelf_cabling_IEOPS-938.svg[Cablaggio a due s
 
 
  a| 
-image::../media/oie_legend_icon_1_mb.svg[icona legenda oie 1 mb]
+image:oie_legend_icon_1_mb.svg["larghezza=30px"]
  a| 
 ** Collegare la porta e2a del controller A a NSM A e0a sullo shelf 1.
 ** Collegare la porta e10b del controller A a NSM B e0b sullo shelf 1.
@@ -483,14 +483,14 @@ image::../media/oie_legend_icon_1_mb.svg[icona legenda oie 1 mb]
 ** Collegare la porta e10a del controller A a NSM A e0a sullo shelf 2.
 
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=50px"]
 
 Cavo da 100 GbE
 
 
 
  a| 
-image::../media/oie_legend_icon_2_lo.svg[icona legenda oie 2 lo]
+image:oie_legend_icon_2_lo.svg["larghezza=30px"]
  a| 
 ** Collegare la porta e2a del controller B a NSM B e0a sullo shelf 1.
 ** Collegare la porta e10b del controller B a NSM A e0b sullo shelf 1.
@@ -498,7 +498,7 @@ image::../media/oie_legend_icon_2_lo.svg[icona legenda oie 2 lo]
 ** Collegare la porta e10a del controller B a NSM B e0a sullo shelf 2.
 
 
-image::../media/oie_cable100_gbe_qsfp28.svg[oie cable100 gbe qsfp28]
+image:oie_cable100_gbe_qsfp28.svg["larghezza=50px"]
 
 Cavo da 100 GbE
 
@@ -527,7 +527,7 @@ Gli shelf NS224 sono preimpostati su shelf ID 00 e 01. Se si desidera modificare
 .Animazione - impostare gli ID dello shelf del disco NVMe
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg[Drw a900 modifica oie ns224 shelf ID IEOPS 836]
+image:drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg["larghezza = 500 px"]
 
 +
 [cols="20%,80%"]
@@ -535,28 +535,28 @@ image::../media/drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg[Drw a900 modifi
 
 
  a| 
-image::../media/legend_icon_01.svg[icona legenda 01]
+image:legend_icon_01.svg["larghezza=20"]
  a| 
 Tappo terminale dello scaffale
 
 
 
  a| 
-image::../media/legend_icon_02.svg[icona legenda 02]
+image:legend_icon_02.svg["larghezza=20"]
  a| 
 Mascherina dello scaffale
 
 
 
  a| 
-image::../media/legend_icon_03.svg[icona legenda 03]
+image:legend_icon_03.svg["larghezza=20"]
  a| 
 LED ID shelf
 
 
 
  a| 
-image::../media/legend_icon_04.svg[icona legenda 04]
+image:legend_icon_04.svg["larghezza=20"]
  a| 
 Pulsante di impostazione dell'ID dello shelf
 
@@ -566,7 +566,7 @@ Pulsante di impostazione dell'ID dello shelf
 .Animazione - consente di accendere i controller
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image::../media/drw_a900_power-on_IEOPS-941.svg[Drw a900: Accensione di IEOPS 941]
+image:drw_a900_power-on_IEOPS-941.svg["larghezza = 500 px"]
 
 +
 
@@ -581,11 +581,11 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 .Animazione - collegare il laptop allo switch di gestione
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 +
-image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
+image:dwr_laptop_to_switch_only.svg["larghezza = 500 px"]
 
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.svg[selezione del controllo di rilevamento automatico drw]
+image:drw_autodiscovery_controler_select.svg["larghezza = 500 px"]
 
 +
 .. Aprire file Explorer.
@@ -636,7 +636,7 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al laptop o alla console utilizzando il cavo della console fornito con il sistema, quindi collegare il laptop allo switch di gestione sulla subnet di gestione.
 +
-image::../media/drw_A900_cable_console_switch_controller_IEOPS-953.svg[Controller switch console via cavo drw A900 IEOPS 953]
+image:drw_A900_cable_console_switch_controller_IEOPS-953.svg["larghezza = 500 px"]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 
@@ -649,7 +649,7 @@ Gli shelf NS224 sono preimpostati su shelf ID 00 e 01. Se si desidera modificare
 .Animazione - impostare gli ID dello shelf del disco NVMe
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg[Drw a900 modifica oie ns224 shelf ID IEOPS 836]
+image:drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg["larghezza = 500 px"]
 
 +
 [cols="20%,80%"]
@@ -657,28 +657,28 @@ image::../media/drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg[Drw a900 modifi
 
 
  a| 
-image::../media/legend_icon_01.svg[icona legenda 01]
+image:legend_icon_01.svg["larghezza=20"]
  a| 
 Tappo terminale dello scaffale
 
 
 
  a| 
-image::../media/legend_icon_02.svg[icona legenda 02]
+image:legend_icon_02.svg["larghezza=20"]
  a| 
 Mascherina dello scaffale
 
 
 
  a| 
-image::../media/legend_icon_03.svg[icona legenda 03]
+image:legend_icon_03.svg["larghezza=20"]
  a| 
 LED ID shelf
 
 
 
  a| 
-image::../media/legend_icon_04.svg[icona legenda 04]
+image:legend_icon_04.svg["larghezza=20"]
  a| 
 Pulsante di impostazione dell'ID dello shelf
 
@@ -688,7 +688,7 @@ Pulsante di impostazione dell'ID dello shelf
 .Animazione - consente di accendere i controller
 video::bb04eb23-aa0c-4821-a87d-ab2300477f8b[panopto]
 +
-image::../media/drw_a900_power-on_IEOPS-941.svg[Drw a900: Accensione di IEOPS 941]
+image:drw_a900_power-on_IEOPS-941.svg["larghezza = 500 px"]
 
 +
 

@@ -3147,7 +3147,6 @@
   <block id="84252b20b7e0ac6281a9b368a8f95d01" category="open-title">Opzione 2: Cluster con switch</block>
   <block id="64f550ceb718fb87884d6c018d99b0d3" category="paragraph">La rete di gestione, la rete dati e le porte di gestione dei controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate al cluster/switch ha.</block>
   <block id="fd2cb99acafb4f0144bfb5e0e4c31373" category="admonition">Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.</block>
-  <block id="e1ed9dc03578bbf7dfdc44cf31220a86" category="image-alt">Cablaggio di rete switch drw a900 IEOPS 934</block>
   <block id="5f4965084173e3c414637c35200b73a8" category="paragraph">Porte a di interconnessione del cluster di cavi:</block>
   <block id="765c3c3f314b105120b116fa72fa83ec" category="list-text">Slot A4 e B4 (e4a) per lo switch di rete del cluster.</block>
   <block id="370ef18034bcd8124be9ef4b4b76a551" category="list-text">Slot A8 e B8 (e8a) per lo switch di rete del cluster.</block>
@@ -3158,19 +3157,15 @@
   <block id="581d8b893cc4a239df32042db4e658a7" category="list-text">Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.</block>
   <block id="5ec6942c74c6a8edac1d2288d383731d" category="list-text">Utilizzare l'animazione o i disegni seguenti per collegare i controller a un singolo shelf di dischi NS224.</block>
   <block id="a51b0e75591721e9a3d930569f70d056" category="video-title">Animazione - collegare un singolo shelf NS224</block>
-  <block id="f31eedcaeccdc6e2f0110a8d59512b5b" category="image-alt">Cablaggio a uno shelf drw a900 NS224 IEOPS 937</block>
   <block id="b16ca301b4f1b51a963f8ecd8de52638" category="image-alt">icona legenda oie 1 mb</block>
   <block id="3a58f6912b98caf7435fd9f6896ba4c6" category="list-text">Collegare la porta e2a del controller A alla porta e0a del NSM A sullo shelf.</block>
   <block id="e4e47b4780428e178a9b09390f2362b3" category="list-text">Collegare la porta e10b del controller A alla porta e0b dell'NSM B sullo shelf.</block>
-  <block id="197dee836fa91f0bc10674f0b47382e3" category="image-alt">icona legenda oie 2 lo</block>
   <block id="393f89fb63e48229ad961dd1e405b53e" category="list-text">Collegare la porta e2a del controller B alla porta e0a del NSM B sullo shelf.</block>
   <block id="db6b75fb665e0f2ab8be21099367b97a" category="list-text">Collegare la porta e10b del controller B alla porta e0b dell'NSM A sullo shelf.</block>
   <block id="ac4fc8e93ed87aaf0d607c7594b760df" category="open-title">Opzione 2: Collegare i controller a due shelf di dischi NS224</block>
   <block id="46c91124d100547c9507fea50ae0639b" category="paragraph">È necessario collegare ciascun controller ai moduli NSM sugli shelf di dischi NS224.</block>
   <block id="26fe6dbccc48fc5e3f27bb01af6740e6" category="list-text">Utilizzare la seguente animazione o diagramma per collegare i controller a due shelf di dischi NS224.</block>
   <block id="ee569a1cc4ce349b19061248e726f2c2" category="video-title">Animazione - collegare due shelf NS224</block>
-  <block id="eab02c161618f87134d04b274c9ed0a9" category="image-alt">Cablaggio a due shelf ARD a due shelf drw a900 NS224 IEOPS 1147</block>
-  <block id="de9724762d060c871892fe8183e35056" category="image-alt">Cablaggio a due shelf drw a900 NS224 IEOPS 938</block>
   <block id="1d4442969281e166b667219af7e7fe7b" category="list-text">Collegare la porta e2a del controller A a NSM A e0a sullo shelf 1.</block>
   <block id="952e197be70605a4933f1fa544e89cf3" category="list-text">Collegare la porta e10b del controller A a NSM B e0b sullo shelf 1.</block>
   <block id="92d9c39d99b3b14f8b5b4b785e697404" category="list-text">Collegare la porta e2b del controller A a NSM B e0b sullo shelf 2.</block>
@@ -3182,7 +3177,6 @@
   <block id="1a012ae90c41b7530ce0df40b8053d54" category="open-title">Opzione 1: Se la funzione di rilevamento della rete è attivata</block>
   <block id="5eadc00e7d9146c2fd474e7d8d5f5137" category="list-text">Utilizzare la seguente animazione o disegno per impostare uno o più ID shelf di dischi:</block>
   <block id="6f189db9f1b1dfc1be838de48c805168" category="video-title">Animazione - impostare gli ID dello shelf del disco NVMe</block>
-  <block id="312be20d26d0db2b40b706dc2f350028" category="image-alt">Drw a900 modifica oie ns224 shelf ID IEOPS 836</block>
   <block id="9e64f9f7a827c26fc2d5c89975330a4c" category="image-alt">icona legenda 01</block>
   <block id="48fb10beb7e1cd15b9bdbab40aac9532" category="paragraph">Tappo terminale dello scaffale</block>
   <block id="22f4a2aa68e94fdf29e1fc7d0f30d571" category="paragraph">Mascherina dello scaffale</block>
@@ -3191,7 +3185,6 @@
   <block id="700f4fc6f1e4c3e585e23be6378affa0" category="paragraph">Pulsante di impostazione dell'ID dello shelf</block>
   <block id="e5996620d0917580a63333b20b9454ef" category="list-text">Accendere gli interruttori di alimentazione su entrambi i nodi.</block>
   <block id="a308cbadd7ff9683558704008014a7a5" category="video-title">Animazione - consente di accendere i controller</block>
-  <block id="c81415a6ed927280dac360edb5000bc6" category="image-alt">Drw a900: Accensione di IEOPS 941</block>
   <block id="bd21e6ec29256eee4c7a9b34dd71c9ba" category="image-alt">solo da portatile a switch dwr</block>
   <block id="382f497663af8b0b026d3c66f6a2bfce" category="list-text">Utilizzare la configurazione guidata di System Manager per configurare il sistema utilizzando i dati raccolti in<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block>.</block>
   <block id="c866cf78ea22fe8b8a7122b28202ae22" category="paragraph"><block ref="c866cf78ea22fe8b8a7122b28202ae22" category="inline-link-rx"></block></block>
@@ -3200,7 +3193,6 @@
   <block id="208ee0864fe983f53622b3619eef5932" category="open-title">Opzione 2: Se il rilevamento di rete non è attivato</block>
   <block id="b3364f412d1466e4f6e340836fff9abb" category="paragraph">Se non si utilizza un laptop o una console Windows o Mac o se la funzione di rilevamento automatico non è attivata, è necessario completare la configurazione e la configurazione utilizzando questa attività.</block>
   <block id="7a2b8204791fefff118f35cda4159e64" category="list-text">Collegare il cavo della console al laptop o alla console utilizzando il cavo della console fornito con il sistema, quindi collegare il laptop allo switch di gestione sulla subnet di gestione.</block>
-  <block id="f5a5a95a5282486c3989ed932401b693" category="image-alt">Controller switch console via cavo drw A900 IEOPS 953</block>
   <block id="11991b3479fcd322fec352f130b7b364" category="admonition">Il formato dell'indirizzo è +https://x.x.x.x+.</block>
   <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configurare il sistema utilizzando i dati raccolti in<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
   <block id="3d583022c2a0e3f44141400e25a3113d" category="list-text"><block ref="3d583022c2a0e3f44141400e25a3113d" category="inline-link-macro-rx"></block></block>
@@ -9240,10 +9232,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="90b5c3b3e8b76a473c431858d638eccb" category="list-text">Accendere lo shelf collegando prima i cavi di alimentazione allo shelf, fissandoli in posizione con il fermo del cavo di alimentazione, quindi collegando i cavi di alimentazione a sorgenti di alimentazione su circuiti diversi.</block>
   <block id="aa4d119638bea60a8850d8c9e0b57b86" category="paragraph">Lo shelf si accende e si avvia automaticamente quando viene collegato alla fonte di alimentazione.</block>
   <block id="67cfcbdbfb87a54aadf338e218c38216" category="list-text">Rimuovere il cappuccio terminale sinistro per accedere al pulsante ID ripiano dietro la mascherina.</block>
-  <block id="f044e75ec5037aabefb204d1365ba96b" category="image-alt">Modificare l'ID dello shelf NS224</block>
-  <block id="d8147b4a0f272144c59f006b412b8290" category="image-alt">[Numero di didascalia 2</block>
-  <block id="8c5529e435c4992332c3afef54410f4e" category="image-alt">[Numero di didascalia 3</block>
-  <block id="1e7068fa54071c2235730ac32aea59df" category="image-alt">[Numero di didascalia 4</block>
   <block id="7d080ef2a38b64e6cac5c0ae019e1a04" category="list-text">Inserire l'estremità dritta di una graffetta o di una penna a sfera con punta stretta nel foro piccolo.</block>
   <block id="6344f7fd68670da7ea2e25f860ab47c7" category="list-text">Spegnere e riaccendere lo shelf per almeno 10 secondi per rendere effettivo l'ID dello shelf.</block>
   <block id="8dd5b39a083288c66f9b37e4b47571ed" category="list-text">Scollegare il cavo di alimentazione da entrambi gli alimentatori presenti sullo shelf.</block>
@@ -9966,4 +9954,68 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1a603190ae07bbceebb7036072831b8b" category="image-alt">Come installare SuperRail in un rack a quattro montanti con foro rotondo</block>
   <block id="7c89b00bc8ce7878c39671bd32585c2d" category="image-alt">Come installare il kit guida a due montanti ventrale</block>
   <block id="887f19a9ed16e42d506a7ee90031e54f" category="image-alt">Come installare il kit di guide per montaggio a filo a due montanti</block>
+  <block id="b86f1d6c96041a5555b0eeb0d961c958" category="inline-image-macro">larghezza=300px</block>
+  <block id="63c096f5d747b5901a4e4a36f3aa6339" category="paragraph"><block ref="63c096f5d747b5901a4e4a36f3aa6339" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="256e7b6221cc372d4c7438f290102613" category="paragraph"><block ref="256e7b6221cc372d4c7438f290102613" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="34b0592b90649145df285163256979f1" category="paragraph"><block ref="34b0592b90649145df285163256979f1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="68de0f1c0c0a3216e6ba51295424d756" category="paragraph"><block ref="68de0f1c0c0a3216e6ba51295424d756" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="edbe18d1d431ff5c580c40f87966b4f5" category="paragraph"><block ref="edbe18d1d431ff5c580c40f87966b4f5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fd9b917400ef9502d61c9c928592feeb" category="inline-image-macro">Modifica NS224 ID ripiano, larghezza=300px</block>
+  <block id="070a4dff1a7b1b64d034265c6caef2d0" category="paragraph"><block ref="070a4dff1a7b1b64d034265c6caef2d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cc0c582fd7777e5d2bea79674136ad70" category="inline-image-macro">Numero didascalia 1,larghezza=20</block>
+  <block id="aa032eab3a17bfa0062c6f09557e3323" category="paragraph"><block ref="aa032eab3a17bfa0062c6f09557e3323" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="216b2e6b0553773aac5eef243619cbc7" category="inline-image-macro">[Numero didascalia 2,larghezza=20</block>
+  <block id="11236c01ac6ea594214da845dddb9b2a" category="paragraph"><block ref="11236c01ac6ea594214da845dddb9b2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="644b161ed3089cd2770465be8f055f89" category="inline-image-macro">[Numero didascalia 3,larghezza=20</block>
+  <block id="a44f7cc336be8913f0d82f435c921f31" category="paragraph"><block ref="a44f7cc336be8913f0d82f435c921f31" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1de6e00aac59480183f5a40884ee2a6e" category="inline-image-macro">[Numero didascalia 4,larghezza=20</block>
+  <block id="3eaebe9b3c4bed3b1b0cecc2dd98b9e4" category="paragraph"><block ref="3eaebe9b3c4bed3b1b0cecc2dd98b9e4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7e4f2a8a442405d313b86bd561273488" category="paragraph"><block ref="7e4f2a8a442405d313b86bd561273488" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c0f134964723266dab47501a2329291f" category="paragraph"><block ref="c0f134964723266dab47501a2329291f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d33fba9af53b5439ecf23b3382edf2c" category="inline-image-macro">Numero didascalia 2,larghezza=20</block>
+  <block id="d810130c7c55101931e08470c7bb07fe" category="paragraph"><block ref="d810130c7c55101931e08470c7bb07fe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1db6a9786fedd43f93f01eba0c2b74bb" category="inline-image-macro">Numero didascalia 3,larghezza=20</block>
+  <block id="17af8c353ce2a37b41b7566738989371" category="paragraph"><block ref="17af8c353ce2a37b41b7566738989371" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="186aa7defdbbe050cd1a4a7400246e3a" category="inline-image-macro">Numero didascalia 4,larghezza=20</block>
+  <block id="c4c5b40e6b1e96c10d75a836204a368d" category="paragraph"><block ref="c4c5b40e6b1e96c10d75a836204a368d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6f0e7f42636386fbffaf36b54fbacbf2" category="paragraph"><block ref="6f0e7f42636386fbffaf36b54fbacbf2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="babff6765c503db416f9aad69aec82a2" category="inline-image-macro">larghezza=85px</block>
+  <block id="dc1d3c7f8b5174880f91aa6524f186eb" category="paragraph"><block ref="dc1d3c7f8b5174880f91aa6524f186eb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3db2800441aa6ca29fd1bd67f542d1bd" category="paragraph"><block ref="3db2800441aa6ca29fd1bd67f542d1bd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f94c4982d99cc7ba1168f178d5d52649" category="paragraph"><block ref="f94c4982d99cc7ba1168f178d5d52649" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4c8dbd18eefd428a2369abb267937a3d" category="paragraph"><block ref="4c8dbd18eefd428a2369abb267937a3d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6be69614f7f631ae41156c7262cbfa20" category="paragraph"><block ref="6be69614f7f631ae41156c7262cbfa20" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f1d30d02381fe3fd0fcf25a5394ca931" category="paragraph"><block ref="f1d30d02381fe3fd0fcf25a5394ca931" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ce4e5b97dc4eb5b063de87adcdd8d64" category="paragraph"><block ref="0ce4e5b97dc4eb5b063de87adcdd8d64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1890402c394bdc8f92e9b00832d96f6b" category="paragraph"><block ref="1890402c394bdc8f92e9b00832d96f6b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b3d5200ae441b0d20a4914cbdec727d4" category="paragraph"><block ref="b3d5200ae441b0d20a4914cbdec727d4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d94ad2eb413c586a67a90ad278538137" category="paragraph"><block ref="d94ad2eb413c586a67a90ad278538137" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbf85e66f1cb509bc0522dbbc1b48537" category="paragraph"><block ref="cbf85e66f1cb509bc0522dbbc1b48537" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23f4a6989d877a6848ae85e75cb4107e" category="inline-image-macro">larghezza=30px</block>
+  <block id="f9699d6d10a66e7dba1302dde0e673e6" category="paragraph"><block ref="f9699d6d10a66e7dba1302dde0e673e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a382efe39ca1c5af285eccf0c3d8c05c" category="paragraph"><block ref="a382efe39ca1c5af285eccf0c3d8c05c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f76d5540905d1cc6c8338428fd9d3811" category="paragraph"><block ref="f76d5540905d1cc6c8338428fd9d3811" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fdb524c81cefaf7db65d9ed7860fcb25" category="paragraph"><block ref="fdb524c81cefaf7db65d9ed7860fcb25" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="664a1b1220265a449d182e15fb02318f" category="inline-image-macro">larghezza=200px</block>
+  <block id="e2c11749d8ea9cc8051d3a7bd0cb0080" category="paragraph"><block ref="e2c11749d8ea9cc8051d3a7bd0cb0080" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="039c37b42c48bd7a9b86e7c17df52d69" category="paragraph"><block ref="039c37b42c48bd7a9b86e7c17df52d69" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="295668da1a72746b1e49ede1730d71a9" category="paragraph"><block ref="295668da1a72746b1e49ede1730d71a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="15b1cc1c6654646db65180e23bdc80db" category="paragraph"><block ref="15b1cc1c6654646db65180e23bdc80db" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f46fcba45ee604355020dcd7df29d159" category="paragraph"><block ref="f46fcba45ee604355020dcd7df29d159" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ba54bcf2001d79bb8625529fa7f35e9f" category="inline-image-macro">larghezza=50px</block>
+  <block id="b4990fed2df281f883d25b9ff4fc1532" category="paragraph"><block ref="b4990fed2df281f883d25b9ff4fc1532" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="34470acac68b3677d6a7380524d4bec1" category="paragraph"><block ref="34470acac68b3677d6a7380524d4bec1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="54de702be0b1e6a75b4ae600758440de" category="paragraph"><block ref="54de702be0b1e6a75b4ae600758440de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="650c0cbd6c737b406f1159925d524291" category="paragraph"><block ref="650c0cbd6c737b406f1159925d524291" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e320175742d036b41e5fb1a481d8d47f" category="paragraph"><block ref="e320175742d036b41e5fb1a481d8d47f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="28f823292921e13f5f1e716a34156335" category="paragraph"><block ref="28f823292921e13f5f1e716a34156335" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1eb01e42c3bc98cc6dc3939e3efbe66e" category="paragraph"><block ref="1eb01e42c3bc98cc6dc3939e3efbe66e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="577534c40b40575b9270f9eec17d10bb" category="paragraph"><block ref="577534c40b40575b9270f9eec17d10bb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="45a4f29af6323beb8354f98243d57637" category="paragraph"><block ref="45a4f29af6323beb8354f98243d57637" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b49587dccf0f5de061c677cc2cc91ade" category="paragraph"><block ref="b49587dccf0f5de061c677cc2cc91ade" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac7edd3cc7124f409cdf5dc436336252" category="paragraph"><block ref="ac7edd3cc7124f409cdf5dc436336252" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="53c210c2168561d49ec663ddcdb6d39e" category="sidebar">MODULO I/O A1K</block>
+  <block id="37e0009e8f9c1c6982a732432e86d180" category="sidebar">Modulo i/o AFF A70 e AFF A90</block>
+  <block id="c079075c23cce6316cdc21e35ca264ec" category="sidebar">Sostituzione dello shelf di dischi NS224</block>
+  <block id="2ebb7b9dab34661ab53f47e149c49c5c" category="sidebar">Sostituzione dello shelf di dischi SAS</block>
 </blocks>
