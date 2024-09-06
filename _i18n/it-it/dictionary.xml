@@ -1839,7 +1839,6 @@
   <block id="7040351b0fc4c5a538e3b99ec1ec804a" category="doc">Sostituire un modulo NVDIMM - AFF C800</block>
   <block id="ca7c99126c90b6d4e929e35a12f23c35" category="paragraph">Per sostituire il modulo NVDIMM, individuarlo nel modulo del controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi sostituirlo seguendo la sequenza specifica dei passaggi.</block>
   <block id="2c0856fef0927def0bd154513fb326fb" category="list-text">Se si rimuove o si sposta un NVDIMM, sbloccare il fermo di blocco sul riser, quindi rimuovere il riser applicabile.</block>
-  <block id="f8cdcc9997405437e79f5d57e18498f5" category="paragraph">Riser 2 e NVDIMM 11</block>
   <block id="09286498e9c19adb60810f2dcab43b11" category="summary">Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.</block>
   <block id="a3ab531d62779409698b7c4da393c7e6" category="doc">Trasferire l'immagine di boot sul supporto di boot - AFF C800</block>
   <block id="13d5b33c8f1d9280033879c8b0a8fb7c" category="list-text">È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.</block>
@@ -3121,8 +3120,6 @@
   <block id="47138f998237cc4fa9d1dde4218e6a79" category="image-alt">cavo oie micro usb</block>
   <block id="c08fd160f4570df01d3a40efa2524ce7" category="image-alt">cavo di alimentazione dell'oie</block>
   <block id="28746f946d763ce537494ffe0d6c6727" category="list-text">Esaminare<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> e raccogliere le informazioni richieste elencate nella guida.</block>
-  <block id="92688677e16c8790a606404e51b362d1" category="image-alt">drw 9500 icona di sollevamento</block>
-  <block id="0604808a9f6264877dad5ce927edb94f" category="image-alt">drw 9500 bracci di gestione dei cavi</block>
   <block id="94f6805f56a12322f9f69e911a22d9b8" category="paragraph">Il seguente diagramma mostra l'aspetto tipico di un sistema e la posizione dei componenti principali sul retro del sistema:</block>
   <block id="39ee497291056c5c7e4ecc487f5e822d" category="open-title">Opzione 1: Cluster senza switch a due nodi</block>
   <block id="9cc9aa6b319d537a98d9c9c820e6c4b3" category="paragraph">La rete di gestione, la rete dati e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.</block>
@@ -9988,7 +9985,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f1d30d02381fe3fd0fcf25a5394ca931" category="paragraph"><block ref="f1d30d02381fe3fd0fcf25a5394ca931" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0ce4e5b97dc4eb5b063de87adcdd8d64" category="paragraph"><block ref="0ce4e5b97dc4eb5b063de87adcdd8d64" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1890402c394bdc8f92e9b00832d96f6b" category="paragraph"><block ref="1890402c394bdc8f92e9b00832d96f6b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b3d5200ae441b0d20a4914cbdec727d4" category="paragraph"><block ref="b3d5200ae441b0d20a4914cbdec727d4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d94ad2eb413c586a67a90ad278538137" category="paragraph"><block ref="d94ad2eb413c586a67a90ad278538137" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cbf85e66f1cb509bc0522dbbc1b48537" category="paragraph"><block ref="cbf85e66f1cb509bc0522dbbc1b48537" category="inline-image-macro-rx" type="image"></block></block>
   <block id="23f4a6989d877a6848ae85e75cb4107e" category="inline-image-macro">larghezza=30px</block>
@@ -10012,10 +10008,13 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1eb01e42c3bc98cc6dc3939e3efbe66e" category="paragraph"><block ref="1eb01e42c3bc98cc6dc3939e3efbe66e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="577534c40b40575b9270f9eec17d10bb" category="paragraph"><block ref="577534c40b40575b9270f9eec17d10bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="45a4f29af6323beb8354f98243d57637" category="paragraph"><block ref="45a4f29af6323beb8354f98243d57637" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b49587dccf0f5de061c677cc2cc91ade" category="paragraph"><block ref="b49587dccf0f5de061c677cc2cc91ade" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ac7edd3cc7124f409cdf5dc436336252" category="paragraph"><block ref="ac7edd3cc7124f409cdf5dc436336252" category="inline-image-macro-rx" type="image"></block></block>
   <block id="53c210c2168561d49ec663ddcdb6d39e" category="sidebar">MODULO I/O A1K</block>
   <block id="37e0009e8f9c1c6982a732432e86d180" category="sidebar">Modulo i/o AFF A70 e AFF A90</block>
   <block id="c079075c23cce6316cdc21e35ca264ec" category="sidebar">Sostituzione dello shelf di dischi NS224</block>
   <block id="2ebb7b9dab34661ab53f47e149c49c5c" category="sidebar">Sostituzione dello shelf di dischi SAS</block>
+  <block id="fb6ec7c4253b066bf6babd3c0e080e2c" category="paragraph">Il modulo controller inizia ad avviarsi non appena viene collegato all'alimentazione. Prepararsi ad interrompere il processo di avvio.</block>
+  <block id="f7f4c867e693e550f28050ab9569b77b" category="paragraph">NVDIMM negli slot 11 e 23</block>
+  <block id="0ab01e08199504186fb2242508c77af5" category="paragraph">Spostare i dischi rigidi e il modulo controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato con il nuovo chassis dello stesso modello dello chassis danneggiato.</block>
+  <block id="32c1650c7fd910bcdea68420f25c9c98" category="summary">Spostare i dischi rigidi e i moduli del controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato dal rack o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis danneggiato.</block>
+  <block id="f5fb85d160e4ca0263ef1d466e1904de" category="image-alt">Maniglie di sollevamento e dispositivo di gestione dei cavi</block>
 </blocks>
