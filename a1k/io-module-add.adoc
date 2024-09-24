@@ -27,9 +27,9 @@ summary: Per sostituire una scheda PCIe, è necessario scollegare i cavi dalle s
 
 
 
-=== Fase 1: Spegnere il nodo compromesso
+=== Fase 1: Arrestare il modulo controller danneggiato
 
-Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
+Spegnere o sostituire il modulo controller danneggiato.
 
 [role="tabbed-block"]
 ====
@@ -80,6 +80,9 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 --
 .Opzione 2: Controller in un MetroCluster
 --
+
+NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
+
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 * Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
@@ -87,9 +90,9 @@ Per spegnere il controller compromesso, è necessario determinare lo stato del c
 
 
 .Fasi
-. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
 . Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
@@ -116,7 +119,7 @@ Premere Ctrl-C, quindi rispondere `y` quando richiesto.
  a| 
 Prompt di sistema o prompt della password (inserire la password di sistema)
  a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
 
 Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
 
@@ -150,7 +153,7 @@ image:../media/legend_icon_01.png["Numero di didascalia 1"]
 |===
 +
 .. Premere il dispositivo di chiusura della camma sul modulo di chiusura nello slot di destinazione.
-.. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo. Per i moduli orizzontali, ruotare la camma allontanandola dal modulo fino in fondo.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
 .. Rimuovere il modulo dal contenitore agganciando il dito nell'apertura della leva della camma ed estraendo il modulo dal contenitore.
 
 
@@ -221,9 +224,9 @@ Utilizzare System Manager per migrare in modo permanente i file LIF su diverse p
 
 
 
-=== Fase 1: Spegnere il nodo compromesso
+=== Fase 1: Arrestare il modulo controller danneggiato
 
-Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
+Spegnere o sostituire il modulo controller danneggiato.
 
 [role="tabbed-block"]
 ====
@@ -348,10 +351,7 @@ image:../media/legend_icon_01.png["Numero di didascalia 1"]
 |===
 +
 .. Premere il pulsante del dispositivo di chiusura a camma.
-+
-Il dispositivo di chiusura a camma si allontana dal telaio.
-
-.. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo. Per i moduli orizzontali, ruotare la camma allontanandola dal modulo fino in fondo.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
 .. Rimuovere il modulo dal contenitore agganciando il dito nell'apertura della leva della camma ed estraendo il modulo dal contenitore.
 +
 Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.

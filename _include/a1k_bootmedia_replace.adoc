@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Per sostituire il supporto di avvio, è necessario rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato, installare il supporto di avvio sostitutivo nel modulo di gestione del sistema e trasferire l'immagine ONTAP da un'unità flash USB al supporto di avvio sostitutivo.
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
 
 
 
@@ -45,7 +45,7 @@ NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocc
 +
 .. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.
 .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
-.. Premere il pulsante della camma di gestione del sistema. La leva della camma si allontana dal contenitore.
+.. Premere il pulsante della camma di gestione del sistema.
 .. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo.
 .. Rimuovere il modulo di gestione del sistema dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal contenitore.
 .. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile.
@@ -81,7 +81,7 @@ NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocc
 
 == Passo 2: Trasferire l'immagine ONTAP sul supporto di avvio
 
-Il supporto di avvio sostitutivo installato non dispone di un'immagine ONTAP, pertanto è necessario trasferire un'immagine ONTAP utilizzando un'unità flash USB.
+Il supporto di avvio sostitutivo installato è privo di un'immagine ONTAP. È possibile trasferire l'immagine ONTAP sul supporto di avvio sostitutivo scaricando l'immagine di servizio ONTAP appropriata da https://mysupport.netapp.com/["Sito di supporto NetApp"] a un'unità flash USB e quindi al supporto di avvio sostitutivo.
 
 .Prima di iniziare
 * È necessario disporre di un'unità flash USB vuota, formattata a FAT32, con una capacità di almeno 4GB GB.

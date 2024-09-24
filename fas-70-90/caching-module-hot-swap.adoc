@@ -1,0 +1,333 @@
+---
+permalink: fas-70-90/caching-module-hot-swap.html 
+sidebar: sidebar 
+keywords: fas70, fas90, hot swap, replace, FlashCache module carrier, caching module, FlashCache 
+summary: 'La portante del modulo NVMe SSD FlashCache contiene uno o due moduli FlashCache (moduli di caching) con un singolo disco SSD per il caching integrato in ogni modulo. È possibile sostituire a caldo i moduli di caching, ma il supporto del modulo FlashCache non è sostituibile a caldo.' 
+---
+= Sostituire il supporto del modulo FlashCache o un modulo di caching FAS70 e FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La portante del modulo NVMe SSD FlashCache contiene uno o due moduli FlashCache (moduli di caching) con un singolo disco SSD FlashCache integrato in ogni modulo.
+
+Il sistema FAS70 supporta moduli di caching 2TB mentre FAS90 supporta moduli di caching 4TB. Non è possibile combinare moduli di caching di capacità diverse nel supporto del modulo FlashCache.
+
+È possibile eseguire una delle seguenti procedure a seconda di ciò che deve essere sostituito: L'intero supporto del modulo Flashcache o un modulo di caching.
+
+* <<Sostituire il supporto del modulo FlashCache>>
+* <<Sostituire il modulo di caching>>
+
+
+
+
+== Sostituire il supporto del modulo FlashCache
+
+La portante del modulo FlashCache è situata nello slot 6 e ospita fino a due moduli FlashCache. Non è possibile sostituire a caldo il supporto del modulo FlashCache
+
+.Prima di iniziare
+* Assicurati che il tuo sistema storage disponga del sistema operativo appropriato per il supporto del modulo FlashCache sostitutivo.
+* Verificare che tutti gli altri componenti funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
+
+
+
+
+=== Fase 1: Spegnere il nodo compromesso
+
+Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
+
+.Opzione 1 sistemi MOST
+[%collapsible]
+====
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+.Fasi
+. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+`Waiting for giveback...`
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+====
+.Configurazione MetroCluster opzione 2
+[%collapsible]
+====
+
+NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+* Se si dispone di una configurazione MetroCluster, è necessario confermare che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
+
+
+.Fasi
+. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+====
+
+
+=== Fase 2: Sostituire il supporto del modulo FlashCache
+
+Per sostituire il supporto del modulo FlashCache, procedere come segue.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individuare il supporto del modulo FlashCache guasto, nello slot 6, accanto al LED di attenzione ambra illuminato sulla parte anteriore del supporto del modulo FlashCache.
++
+image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[Rimuovere il supporto del modulo FlashCache]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["Numero di didascalia 1, larghezza=30px"]
+ a| 
+Supporto modulo FlashCache
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["Numero di didascalia 2, larghezza=30px"]
+ a| 
+Memorizzazione nella cache dei numeri degli slot del modulo
+
+
+
+ a| 
+image:../media/legend_icon_03.svg["Numero di didascalia 3, larghezza=30px"]
+ a| 
+Maniglia della camma portante del modulo FlashCache
+
+
+
+ a| 
+image:../media/legend_icon_04.svg["Numero di didascalia 4, larghezza=30px"]
+ a| 
+LED di guasto del supporto del modulo FlashCache
+
+|===
+. Rimuovere il supporto del modulo FlashCache guasto:
++
+.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
+.. Pizzicare la linguetta blu nella parte inferiore del supporto del modulo FlashCache.
+.. Ruotare la linguetta allontanandola dal modulo.
+
+
+. Estrarre il supporto del modulo FlashCache dal modulo controller e posizionarlo su un tappetino antistatico.
+. Spostare i moduli di caching nel supporto sostitutivo per il modulo FlashCache:
++
+.. Premere la linguetta di color terracotta nella parte superiore del modulo di caching e ruotare la maniglia della camma allontanandola dal modulo di caching.
+.. Rimuovere il modulo dal contenitore agganciando il dito all'apertura della leva della camma ed estraendolo dal supporto del modulo FlashCache.
+.. Installare il modulo di caching nello stesso slot del supporto del modulo FlashCache sostitutivo e ruotare la maniglia della camma in posizione chiusa sul modulo di caching per bloccarlo in posizione.
+
+
+. Ripetere questi passaggi se è presente un secondo modulo di caching.
+. Installare il supporto del modulo FlashCache sostitutivo nel sistema:
++
+.. Allineare il modulo con i bordi dell'apertura dello slot del contenitore.
+.. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+.. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+
+
+
+
+
+
+=== Fase 3: Riavviare il controller
+
+Dopo aver sostituito il supporto del modulo FlashCache, è necessario riavviare il modulo controller.
+
+.Fasi
+. Dal prompt del CARICATORE, riavviare il nodo: _Bye_
++
+
+NOTE: In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.
+
+. Riportare il nodo al normale funzionamento: _Failover giveback dello storage -ofnode inedito_node_name_
+. Se il giveback automatico è stato disattivato, riabilitarlo: _Storage failover modify -node local -auto-giveback true_
+
+
+
+
+=== Fase 4: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.
+
+
+
+== Sostituire il modulo di caching
+
+.Prima di iniziare
+I moduli FlashCache (moduli di caching) si trovano nello slot 6-1, nello slot 6-2 o sia nello slot 6-1 che nello slot 6-2.
+
+È possibile sostituire a caldo i singoli moduli di caching con moduli di caching della stessa capacità dello stesso fornitore o di un altro fornitore supportato.
+
+.Prima di iniziare
+* Assicurarsi che il modulo di caching sostitutivo abbia la stessa capacità di quello guasto, dello stesso fornitore o di un altro fornitore supportato.
+* Verificare che tutti gli altri componenti funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
+* Le unità nei moduli di caching non sono FRU (Field Replaceable Unit). È necessario sostituire l'intero modulo di caching.
+
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individuare il modulo di caching guasto, nello slot 6, tramite il LED di attenzione acceso di colore ambra sulla parte anteriore del modulo di caching.
+. Preparare lo slot del modulo di caching per la sostituzione come segue:
++
+.. Registrare la capacità del modulo di caching, il numero di parte e il numero di serie sul nodo di destinazione: _Nodo di sistema eseguire sysconfig locale -AV 6_
+.. Nel livello di privilegi di amministratore, preparare lo slot del modulo di caching di destinazione per la rimozione, rispondendo `y` quando viene richiesto se continuare: _System controller slot module remove -node_name -slot_number_ il seguente comando prepara lo slot 6-1 su node1 per la rimozione, e visualizza un messaggio che è sicuro rimuovere:
++
+[listing]
+----
+::> system controller slot module remove -node node1 -slot 6-1
+
+Warning: SSD module in slot 6-1 of the node node1 will be powered off for removal.
+Do you want to continue? (y|n): _y_
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+.. Visualizzare lo stato dello slot con `system controller slot module show` comando.
++
+Lo stato dello slot `powered-off` del modulo di caching viene visualizzato nell'output dello schermo per il modulo di caching che deve essere sostituito.
+
+
+
++
+
+NOTE: Vedere https://docs.netapp.com/us-en/ontap-cli-9121/["Pagine man del comando"^] Per ulteriori informazioni sulla versione di ONTAP in uso.
+
+. Rimuovere il modulo di caching:
++
+image::../media/drw_fas70-90_caching_module_remove_ieops-1773.svg[Rimuovere il modulo di caching]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["Numero di didascalia 1, larghezza=30px"]
+ a| 
+Modulo cache handle della camma
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["Numero di didascalia 2, larghezza=30px"]
+ a| 
+LED di guasto del modulo di caching
+
+|===
++
+.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
+.. Premere il pulsante di rilascio della terracotta sulla parte anteriore del modulo di caching.
+.. Ruotare la maniglia della camma fino in fondo.
+.. Rimuovere il modulo di caching dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal supporto del modulo FlashCache.
++
+Assicurati di supportare il modulo di caching quando lo rimuovi dal supporto del modulo FlashCache.
+
+
+
+. Installare il modulo di caching sostitutivo:
++
+.. Allineare i bordi del modulo di caching con l'apertura nel modulo controller.
+.. Spingere delicatamente il modulo di caching nell'alloggiamento fino a quando la maniglia della camma non si aggancia.
+.. Ruotare la maniglia della camma fino a bloccarla in posizione.
+.. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+
+
+. Portare online il modulo di caching sostitutivo utilizzando `system controller slot module insert` eseguire il comando come segue:
++
+Il seguente comando prepara lo slot 6-1 sul nodo 1 per l'accensione e visualizza un messaggio che indica che è acceso:
+
++
+[listing]
+----
+::> system controller slot module insert -node node1 -slot 6-1
+
+Warning: NVMe module in slot 6-1 of the node localhost will be powered on and initialized.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. Verificare lo stato dello slot utilizzando `system controller slot module show` comando.
++
+Assicurarsi che l'output del comando segnali lo stato di AS `powered-on` e pronto per il funzionamento.
+
+. Verificare che il modulo di caching sostitutivo sia online e riconosciuto, quindi verificare visivamente che il LED di attenzione ambra non sia acceso: `sysconfig -av slot_number`
++
+
+NOTE: Se si sostituisce il modulo di caching con un modulo di caching di un altro vendor, il nuovo nome vendor viene visualizzato nell'output del comando.
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
+

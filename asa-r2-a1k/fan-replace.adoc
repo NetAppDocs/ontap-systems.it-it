@@ -1,0 +1,53 @@
+---
+permalink: asa-r2-a1k/fan-replace.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, replace a fan 
+summary: È necessario rimuovere il modulo controller dal telaio quando si sostituisce un modulo ventola guasto e sostituirlo con un nuovo modulo ventola. 
+---
+= Sostituire una ventola - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire un modulo della ventola senza interrompere la manutenzione, è necessario eseguire una sequenza specifica di attività.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
+. Identificare il modulo della ventola da sostituire controllando i messaggi di errore della console e il LED Attention (attenzione) su ciascun modulo della ventola.
++
+Di fronte al modulo controller, i moduli ventola sono numerati da 1 a 5, da sinistra a destra.
+
++
+
+NOTE: È presente un singolo LED per ciascuna ventola. È verde quando la ventola funziona correttamente e ambra quando non funziona.
+
+. Premere il pulsante nero sul modulo della ventola ed estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera.
++
+
+IMPORTANT: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
+
++
+image::../media/drw_a1k_fan_remove_replace_ieops-1376.svg[Sostituzione della ventola]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["Numero di didascalia 1, larghezza=30px"]
+ a| 
+Pulsante di rilascio nero
+
+|===
+. Mettere da parte il modulo della ventola.
+. Allineare i bordi del modulo della ventola di ricambio con l'apertura del telaio, quindi farlo scorrere nel telaio fino a farlo scattare in posizione.
++
+Una volta inserita in un sistema attivo, il LED di attenzione color ambra si spegne quando la ventola viene riconosciuta dal sistema.
+
+. Allineare il pannello con i perni a sfera, quindi spingere delicatamente il pannello sui perni a sfera.
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
+

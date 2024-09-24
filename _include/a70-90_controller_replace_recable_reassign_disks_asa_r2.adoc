@@ -1,0 +1,60 @@
+= Fase 1: Recuperare il controller
+:allow-uri-read: 
+
+
+Recuperare le connessioni di storage e di rete, quindi restituire il controller.
+
+
+
+== Fase 1: Recuperare il controller
+
+Possibilità di ricable le connessioni di rete e di storage del modulo controller.
+
+.Fasi
+. Possibilità di recuperare il modulo controller per le connessioni di storage e di rete.
+. Verificare che il cablaggio sia corretto utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
++
+.. Scaricare e installare Config Advisor.
+.. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
+.. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
+.. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
+
+
+
+
+
+
+== Fase 2: Restituire il controller
+
+Trasferire nuovamente la proprietà delle risorse di storage al controller sostitutivo.
+
+. Se il sistema di archiviazione ha configurato la crittografia, è necessario ripristinare la funzionalità di archiviazione o crittografia dei volumi utilizzando la seguente procedura per riavviare il sistema:
++
+.. Avviare il menu ed eseguire l'opzione 10
+.. Inserire la passphrase e eseguire il backup dei dati, quindi eseguire l'avvio normale vedere https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Restore_onboard_key_management_encryption_keys["Ripristinare le chiavi di crittografia integrate per la gestione delle chiavi"].
+.. Esegui uno sconto solo per CFO
+.. Eseguire Onboard Sync e verificare che SVM-KEK sia impostato su true vedere https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Onboard_keymanager_sync_fails_after_motherboard_replacement["Giveback dopo la sostituzione della MB fallisce - l'operazione è stata messa al veto dal keymanager"]
+.. OFS Giveback (senza forza)
+
+
+. Se nel sistema non è configurata la crittografia, completare la seguente procedura per riavviare il sistema:
++
+.. Avviare il menu ed eseguire l'opzione 1.
+.. Restituire il controller:
+.. Dal controller integro, restituire lo storage del controller sostituito: `storage failover giveback -ofnode _replacement_node_name_`
++
+Il controller _replacement_ riprende lo storage e completa l'avvio.
+
++
+
+NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Trova il contenuto della configurazione ad alta disponibilità per la tua versione di ONTAP 9"]
+
+.. Una volta completato il giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover: `storage failover show`
+
+
+. Verificare che i volumi previsti siano presenti per ciascun controller: `vol show -node node-name`
+. Se al riavvio è stato disattivato il Takeover automatico, attivarlo dal controller integro: `storage failover modify -node replacement-node-name -onreboot true`
+

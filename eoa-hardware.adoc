@@ -11,11 +11,11 @@ summary: 'Scopri l"hardware legacy non più supportato.'
 
 
 [role="lead"]
-I seguenti sistemi e switch non sono più supportati dalla versione specificata di ONTAP.
+I sistemi, gli shelf e gli switch indicati di seguito non sono più supportati con la versione specificata di ONTAP.
 
 
 
-== Sistemi AFF e FAS
+== Sistemi hardware ONTAP
 
 [cols="2*"]
 |===
@@ -49,6 +49,19 @@ ONTAP 9.12.1
  a| 
 ONTAP 9.9.1
 
+|===
+
+
+== Moduli a scaffale
+
+[cols="2*"]
+|===
+| Modulo ripiano | Supporto sospeso da... 
+
+
+ a| 
+Modulo IOM 6
+| ONTAP 9.16.1 
 |===
 
 

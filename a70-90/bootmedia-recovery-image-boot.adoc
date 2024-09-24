@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, boot the recovery image 
 summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
 ---
-= Avviare l'immagine di ripristino - AFF A70, AFF A90
+= Avviare l'immagine di ripristino - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,19 +23,18 @@ L'immagine viene scaricata dall'unità flash USB.
 +
 [cols="1,2"]
 |===
-| Se il sistema dispone di... | Quindi... 
+| Se il sistema è in esecuzione... | Quindi... 
 
 
  a| 
-Una connessione di rete
+ONTAP 9.16.0 o versioni precedenti
  a| 
 .. Sul controller danneggiato, premere _Y_ quando viene visualizzato `Do you want to restore the backup configuration now?`
 .. Sul controller danneggiato, premere _Y_ quando viene richiesto di sovrascrivere `/etc/ssh/ssh_host_ecdsa_key`.
 .. Sul controller partner integro, impostare il controller con problemi al livello di privilegi avanzato: _Set -Privilege Advanced_.
 .. Sul controller partner integro, eseguire il comando di ripristino del backup: _System node restore-backup -node local -target-address impainted_node_IP_address_.
 +
-
-NOTE: Se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
+*NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
 
 .. Sul controller partner sano, riportare il controller danneggiato al livello di amministratore: _Set -Privilege admin_.
 .. Sul controller danneggiato, premere _y_ quando viene visualizzato `Was the restore backup procedure successful?`.
@@ -44,26 +43,35 @@ NOTE: Se viene visualizzato un messaggio diverso da un ripristino riuscito, cont
 .. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristinare i gestori delle chiavi"].
 .. Collegare il cavo della console al controller partner.
 .. Restituire il controller utilizzando il comando _storage failover giveback -fromnode local_.
-+
-... Ripristinare il giveback automatico se è stato disattivato utilizzando il comando _storage failover modify -node local -auto-giveback true_.
-
-
+.. Ripristinare il giveback automatico se è stato disattivato utilizzando il comando _storage failover modify -node local -auto-giveback true_.
 .. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il comando _system node AutoSupport Invoke -node * -type all -message MAINT=END_.
++
+*NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
 
 
-
-
- a| 
-Nessuna connessione di rete
- a| 
-Contatto https://support.netapp.com["Supporto NetApp"].
 
 
 
  a| 
-Nessuna connessione di rete e si trova in una configurazione MetroCluster IP
+ONTAP 9.16.1 o versione successiva
  a| 
-Contatto https://support.netapp.com["Supporto NetApp"].
+.. Sul controller danneggiato, premere _y_ quando viene richiesto di ripristinare la configurazione di backup.
++
+Una volta completata la procedura di ripristino, questo messaggio viene visualizzato sulla console - `syncflash_partner: Restore from partner complete`.
+
+.. Sul controller danneggiato, premere _y_ quando richiesto per confermare se il backup di ripristino è stato eseguito correttamente.
+.. Sul controller danneggiato, premere _y_ quando viene richiesto di utilizzare la configurazione ripristinata.
+.. Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il nodo.
+.. Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il controller danneggiato e premere _ctrl-c_ per il menu di avvio.
+.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristinare i gestori delle chiavi"].
+.. Collegare il cavo della console al controller partner.
+.. Restituire il controller utilizzando il comando _storage failover giveback -fromnode local_.
+.. Ripristinare il giveback automatico se è stato disattivato utilizzando il comando _storage failover modify -node local -auto-giveback true_.
+.. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il comando _system node AutoSupport Invoke -node * -type all -message MAINT=END_.
++
+*NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
+
+
 
 |===
 

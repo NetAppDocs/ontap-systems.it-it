@@ -1,0 +1,86 @@
+---
+section: fas-70-90
+title: Sistemi FAS70 e FAS90
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di FAS70 e FAS90
+  entries:
+  - title: Installazione del flusso di lavoro
+    url: "/fas-70-90/install-overview.html"
+  - title: Verifica dei requisiti
+    url: "/fas-70-90/install-requirements.html"
+  - title: Preparazione all'installazione
+    url: "/fas-70-90/install-prepare.html"
+  - title: Installare l'hardware
+    url: "/fas-70-90/install-hardware.html"
+  - title: Bulloneria dei cavi
+    url: "/fas-70-90/install-cable.html"
+  - title: Accendere il sistema
+    url: "/fas-70-90/install-power-hardware.html"
+  - title: Completare la configurazione del sistema
+    url: "/fas-70-90/install-complete.html"
+- title: Mantenere
+  pdf-filename: FAS70 e FAS90 mantengono
+  entries:
+  - title: Panoramica della manutenzione
+    url: "/fas-70-90/maintain-overview.html"
+  - title: Supporto di boot
+    pdf-filename: Supporti di avvio FAS70 e FAS90
+    entries:
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/fas-70-90/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/fas-70-90/bootmedia-replace-requirements.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/fas-70-90/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/fas-70-90/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/fas-70-90/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/fas-70-90/bootmedia-recovery-image-boot.html"
+    - title: Ripristino della crittografia
+      url: "/fas-70-90/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/fas-70-90/bootmedia-complete-rma.html"
+  - title: Controller
+    pdf-filename: Modulo controller FAS70 e FAS90
+    entries:
+    - title: Flusso di lavoro di sostituzione del controller
+      url: "/fas-70-90/controller-replace-workflow.html"
+    - title: Requisiti e considerazioni
+      url: "/fas-70-90/controller-replace-requirements.html"
+    - title: Spegnere il controller compromesso
+      url: "/fas-70-90/controller-replace-shutdown.html"
+    - title: Sostituire il controller
+      url: "/fas-70-90/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/fas-70-90/controller-replace-system-config-restore-and-verify.html"
+    - title: Restituire il controller
+      url: "/fas-70-90/controller-replace-recable-reassign-disks.html"
+    - title: Sostituzione completa del controller
+      url: "/fas-70-90/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/fas-70-90/dimm-replace.html"
+  - title: Ventola
+    url: "/fas-70-90/fan-replace.html"
+  - title: Modulo FlashCache
+    url: "/fas-70-90/caching-module-hot-swap.html"
+  - title: NVRAM
+    url: "/fas-70-90/nvram-replace.html"
+  - title: Batteria NV
+    url: "/fas-70-90/nvdimm-battery-replace.html"
+  - title: Modulo i/O.
+    entries:
+    - title: Panoramica del modulo di i/O.
+      url: "/fas-70-90/io-module-overview.html"
+    - title: Aggiungere il modulo i/O.
+      url: "/fas-70-90/io-module-add.html"
+    - title: Sostituire il modulo i/O.
+      url: "/fas-70-90/io-module-replace.html"
+  - title: Alimentatore
+    url: "/fas-70-90/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/fas-70-90/rtc-battery-replace.html"
+  - title: Modulo di gestione del sistema
+    url: "/fas-70-90/system-management-replace.html"

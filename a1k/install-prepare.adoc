@@ -4,61 +4,35 @@ sidebar: sidebar
 keywords: aff a1k, prepare installation 
 summary: 'Preparare l"installazione della piattaforma AFF A1K.' 
 ---
-= Preparazione per l'installazione - AFF A1K
+= Preparazione all'installazione - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Preparare l'installazione della piattaforma AFF A1K.
-
-.Prima di iniziare
-* Utilizzare https://docs.netapp.com/us-en/ontap/software_setup/index.html["foglio di lavoro per la configurazione del cluster"] per registrare i valori necessari per la configurazione del cluster. Se viene fornito un valore predefinito, è possibile utilizzare tale valore o immettere un valore personalizzato.
-* Verificare di disporre di tutte le attrezzature e degli strumenti aggiuntivi necessari per completare l'installazione dell'hardware.
-+
-** Cacciavite Phillips n. 2
-** Torcia
-** Braccialetto ESD
-** Una graffetta o una penna a sfera con punta stretta per impostare NS224 ID ripiano
-** Computer portatile o console con connessione USB/seriale
-** Accesso a un browser Web per configurare il sistema di archiviazione
-
-
-* È necessario essere consapevoli dei problemi di sicurezza associati al peso della piattaforma.
-+
-Una piattaforma A1K a pieno carico può pesare fino a 28,5 kg (62,83 lb) e richiede due persone per sollevare o utilizzare un sollevatore idraulico.
-
-+
-image::../media/drw_a1k_weight_caution_ieops-1698.svg[Icona di avvertenza sollevamento AFF A1K]
-
-* È necessario essere consapevoli dei problemi di sicurezza associati al peso del ripiano.
-+
-Un ripiano completamente carico può pesare fino a 30,29 kg (66,78 lb) e richiede due persone per sollevare o utilizzare un sollevatore idraulico. Evitare di rimuovere i componenti dello scaffale (dalla parte anteriore o posteriore dello scaffale) per ridurre il peso dello scaffale, in quanto il peso dello scaffale diventa sbilanciato.
-
-+
-image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224 attenzione al sollevamento]
-
-* Il flusso d'aria attraverso il sistema di archiviazione entra dalla parte anteriore dove sono installati il pannello o i cappucci terminali e fuoriesce dalla parte posteriore dove si trovano le porte.
-
+Preparare l'installazione del sistema di storage AFF A1K preparando il sito, disimballando le confezioni e confrontando il contenuto delle confezioni con il documento di trasporto, quindi registrare il sistema per accedere ai vantaggi del supporto.
 
 
 
 == Fase 1: Preparare il sito
 
-Assicurarsi che il sito e l'armadietto o il rack da utilizzare soddisfino le specifiche del sistema di archiviazione.
+Per installare il sistema di archiviazione, verificare che il sito e il cabinet o il rack che si intende utilizzare soddisfino le specifiche per la configurazione.
 
 .Fasi
-. Verificare che il sito soddisfi i requisiti ambientali ed elettrici per la piattaforma, come illustrato nella https://hwu.netapp.com["NetApp Hardware Universe"^].
+. Utilizzare https://hwu.netapp.com["NetApp Hardware Universe"^] per verificare che il sito soddisfi i requisiti ambientali ed elettrici del sistema di archiviazione.
 . Assicurarsi di disporre di uno spazio rack adeguato:
 +
 ** 4U in una configurazione ha per la piattaforma
-** 2U per ogni shelf NS224
+** 2U TB per ogni shelf storage NS224
 
 
-. Installare eventuali switch di rete richiesti vicino alla piattaforma.
 +
-Per le istruzioni di installazione e per informazioni sulla compatibilità, consultare la https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentazione dello switch"] link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
+*NOTA:* vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] per i requisiti di spazio rack per altri shelf di archiviazione supportati.
+
+. Installare gli switch di rete necessari.
++
+Per le istruzioni di installazione e per informazioni sulla compatibilità, consultare la https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentazione dello switch"^] link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
 
 
 
@@ -66,8 +40,9 @@ Per le istruzioni di installazione e per informazioni sulla compatibilità, cons
 
 == Fase 2: Disimballare le scatole
 
-Disimballare tutte le confezioni e confrontare il contenuto con gli articoli presenti sul documento di trasporto.
+Dopo aver verificato che il sito e il cabinet o il rack che si intende utilizzare per il sistema di archiviazione soddisfino le specifiche richieste, disimballare tutte le confezioni e confrontare il contenuto con gli articoli presenti sul documento di trasporto.
 
+.Fasi
 . Aprire con attenzione tutte le scatole e disporre il contenuto in modo organizzato.
 . Confrontare il contenuto della confezione con l'elenco riportato sul documento di trasporto.
 +
@@ -89,18 +64,18 @@ Assicurarsi che tutto ciò che è contenuto nelle confezioni corrisponda all'ele
 
 
  a| 
-** Piattaforma
-** Shelf
-** Kit guide con istruzioni (opzionale)
-** Dispositivo di gestione dei cavi
 ** Pannello
+** Dispositivo di gestione dei cavi
+** Piattaforma
+** Kit guide con istruzioni (opzionale)
+** Shelf di storage
 
  a| 
-** Cavi di alimentazione
-** Cavi di rete
 ** Cavi Ethernet di gestione (cavi RJ-45)
+** Cavi di rete
+** Cavi di alimentazione
+** Cavi di stoccaggio (se è stato ordinato ulteriore spazio di archiviazione)
 ** Cavo della porta seriale USB-C.
-** Cavi di stoccaggio (se viene ordinato spazio di archiviazione aggiuntivo)
 
 |  
 |===
@@ -108,44 +83,49 @@ Assicurarsi che tutto ciò che è contenuto nelle confezioni corrisponda all'ele
 
 
 
-== Fase 3: Registrare l'hardware
+== Fase 3: Registrare il sistema di archiviazione
 
-La registrazione della piattaforma offre vantaggi di supporto.
+Dopo aver verificato che il sito soddisfi i requisiti per le specifiche del sistema di storage e aver verificato di disporre di tutte le parti ordinate, è necessario registrare il sistema.
 
 .Fasi
-. Individuare il numero di serie del sistema per la piattaforma in uso.
+. Individua il numero di serie del tuo sistema storage.
 +
 Il numero è riportato sul documento di trasporto, nell'e-mail di conferma o sul modulo Gestione sistema del controller dopo averlo disimballato.
 
 +
 image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
 
-. Visitare il sito dell'assistenza NetApp all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
-. Registrare l'hardware:
+. Andare a http://mysupport.netapp.com/["Sito di supporto NetApp"^].
+. Stabilire se è necessario registrare il sistema storage:
 +
-[role="tabbed-block"]
-====
-.Opzione 1: Cliente NetApp esistente
---
-.Fasi
+[cols="1a,2a"]
+|===
+| Se sei un... | Attenersi alla procedura descritta di seguito... 
+
+
+ a| 
+Cliente NetApp esistente
+ a| 
 .. Accedi con il tuo nome utente e la password.
 .. Selezionare *sistemi* > *i miei sistemi*.
-.. Verificare che il nuovo numero di serie del sistema sia elencato.
+.. Verificare che il nuovo numero di serie sia elencato.
+.. In caso contrario, seguire le istruzioni per i nuovi clienti NetApp.
 
 
 
-NOTE: Se il nuovo numero di serie del sistema non è elencato, seguire le istruzioni per i nuovi clienti NetApp.
 
---
-.Opzione 2: Nuovo cliente NetApp
---
+ a| 
+Nuovo cliente NetApp
+ a| 
 .. Fare clic su *Registrati ora* e creare un account.
 .. Selezionare *sistemi* > *Registra sistemi*.
-.. Immettere il numero di serie del sistema del prodotto e i dettagli richiesti.
+.. Inserisci il numero di serie del sistema storage e i dettagli richiesti.
 
 
 Una volta approvata la registrazione, è possibile scaricare il software richiesto. Il processo di approvazione potrebbe richiedere fino a 24 ore.
 
---
-====
+|===
 
+
+.Quali sono le prossime novità?
+Dopo aver completato l'installazione dell'hardware AFF A1K, eseguire le link:install-hardware.html["Installazione dell'hardware per il sistema di storage AFF A1K"]operazioni descritte di seguito.

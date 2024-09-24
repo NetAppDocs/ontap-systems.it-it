@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a70, a90, prepare installation 
 summary: Le porte di rete di gestione sui controller sono collegate agli switch. Le porte di interconnessione ha e di interconnessione cluster sono cablate su entrambi i controller. I moduli controller sono collegati a un dispositivo di archiviazione esterno, se ordinato. 
 ---
-= Collegare l'hardware - AFF A70, AFF A90
+= Collegare l'hardware - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Cablare controller e shelf in base alla configurazione specifica del sistema storage.
+Dopo aver installato l'hardware rack per il sistema di storage AFF A70 o AFF A90, installare i cavi di rete per i controller e collegare i cavi tra i controller e gli shelf di storage.
 
 .Prima di iniziare
 Per l'orientamento corretto della linguetta di estrazione del connettore del cavo, consultare la freccia degli schemi dei cavi.
@@ -19,14 +19,14 @@ Per l'orientamento corretto della linguetta di estrazione del connettore del cav
 image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[Esempio di orientamento della linguetta di estrazione del cavo]
 
 * Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere la testa del cavo e riprovare.
-* Se si effettua il collegamento a uno switch ottico, inserire il modulo SFP nella porta del controller prima di collegarlo alla porta.
+* Se si effettua il collegamento a uno switch ottico, inserire il ricetrasmettitore SFP (Small Form-factor pluggable) nella porta del controller prima di collegare il cavo alla porta.
 
 
 
 
-== Fase 1: Collegare i controller alla rete
+== Fase 1: Collegare i controller di archiviazione alla rete
 
-Collegare i controller alla rete come cluster senza switch a due nodi o come cluster con switch.
+Collegare gli storage controller alla rete host.
 
 .Prima di iniziare
 Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch.
@@ -36,19 +36,19 @@ Queste procedure mostrano le configurazioni comuni. Tenete presente che il cabla
 
 [role="tabbed-block"]
 ====
-.Opzione 1: Cluster senza switch via cavo
+.Opzione 1: Connettere i controller ad un cluster ONTAP senza switch
 --
-Collegamento via cavo delle connessioni del cluster senza switch.
+Connetti gli storage controller per creare connessioni cluster ONTAP e collegare le porte Ethernet di ciascun controller alla rete host.
 
 .Fasi
-. Collegare le porte di interconnessione Cluster/ha da E1a a E1a e da e7a a e7a con il cavo di interconnessione Cluster/ha.
+. Utilizzare il cavo di interconnessione Cluster/ha per collegare le porte da E1a a E1a e le porte da e7a a e7a.
 +
 
 NOTE: Il traffico di cluster Interconnect e quello di ha condividono le stesse porte fisiche.
 
 +
-.. Porta del cavo E1a sul controller A alla porta E1a sul controller B.
-.. Porta del cavo e7a sul controller A alla porta E1a sul controller B.
+.. Collegare la porta E1a del controller A alla porta E1a del controller B.
+.. Collegare la porta e7a del controller A alla porta e7a del controller B.
 +
 *Cavi di interconnessione cluster/ha*
 
@@ -65,10 +65,10 @@ image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Schema di cablaggi
 Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
 
 +
-.. Collegare le porte via cavo e9a e e9b allo switch di rete dati Ethernet, come illustrato.
+.. Collegare le porte e9a e e9b allo switch di rete dati Ethernet, come illustrato.
 +
 
-NOTE: Per ottenere le massime performance di sistema per il traffico cluster e ha, si consiglia di non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.
+NOTE: Per ottenere le massime performance di sistema per il traffico cluster e ha, non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.
 
 +
 *Cavo 100 GbE*
@@ -91,7 +91,7 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cavo alla rete Etherne
 
 
 
-. Collegare le porte di gestione del controller (chiave inglese) agli switch di rete di gestione con cavi RJ-45 1000BASE-T.
+. Utilizzare i cavi RJ-45 1000BASE-T per collegare le porte di gestione del controller (chiave inglese) agli switch della rete di gestione.
 +
 image::../media/oie_cable_rj45.svg[RJ45 cavi]
 
@@ -107,9 +107,9 @@ image::../media/drw_70-90_management_connection_ieops-1656.svg[Connettersi alla 
 IMPORTANT: Non collegare ancora i cavi di alimentazione.
 
 --
-.Opzione 2: Cluster con switch via cavo
+.Opzione 2: Collegare i controller a un cluster ONTAP con switch
 --
-Collegare via cavo le connessioni del cluster con switch.
+Collega gli storage controller agli switch di rete cluster per creare connessioni cluster ONTAP, quindi collega le porte Ethernet di ciascun controller alla rete host.
 
 .Fasi
 . Effettuare i seguenti collegamenti:
@@ -118,8 +118,8 @@ Collegare via cavo le connessioni del cluster con switch.
 NOTE: Il traffico di cluster Interconnect e quello di ha condividono le stesse porte fisiche.
 
 +
-.. Porta del cavo E1a sul controller A e porta E1a sul controller B allo switch di rete del cluster A.
-.. Porta del cavo e7a sul controller A e porta e7a sul controller B allo switch di rete del cluster B.
+.. Collegare la porta E1a sul controller A e la porta E1a sul controller B allo switch di rete del cluster A.
+.. Collegare la porta e7a sul controller A e la porta e7a sul controller B allo switch di rete del cluster B.
 +
 *Cavo 100 GbE*
 
@@ -136,10 +136,10 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Connessioni cl
 Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
 
 +
-.. Collegare le porte via cavo e9a e e9b allo switch di rete dati Ethernet, come illustrato.
+.. Collegare le porte e9a e e9b allo switch di rete dati Ethernet, come illustrato.
 +
 
-NOTE: Per ottenere le massime performance di sistema per il traffico cluster e ha, si consiglia di non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.
+NOTE: Per ottenere le massime performance di sistema per il traffico cluster e ha, non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.
 
 +
 *Cavo 100 GbE*
@@ -181,17 +181,15 @@ IMPORTANT: Non collegare ancora i cavi di alimentazione.
 ====
 
 
-== Passaggio 2: Collegare i controller agli shelf
+== Fase 2: Connettere gli storage controller agli shelf di storage
 
-Collega i controller allo shelf o agli shelf.
-
-Queste procedure mostrano come collegare i controller a uno scaffale e a due ripiani. Puoi connettere i tuoi controller a un massimo di quattro shelf.
+Le seguenti procedure di cablaggio mostrano come collegare i controller a uno shelf e a due shelf. Puoi connettere direttamente fino a quattro shelf ai tuoi controller.
 
 [role="tabbed-block"]
 ====
-.Opzione 1: Cavo a uno shelf NS224
+.Opzione 1: Connessione a uno shelf storage NS224
 --
-Collegare ciascun controller ai moduli NSM sullo shelf NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A in blu e il cablaggio del controller B in giallo.
+Collegare ciascun controller ai moduli NSM sullo shelf NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A è mostrato in blu e il cablaggio del controller B è mostrato in giallo.
 
 *Cavi in rame 100 GbE QSFP28*
 
@@ -211,16 +209,16 @@ image:../media/drw_a70-90_1shelf_cabling_b_ieops-1732.svg["Controller B e11a e e
 
 
 --
-.Opzione 2: Cavo a due ripiani NS224
+.Opzione 2: Collegamento a due shelf storage NS224
 --
-Collegare ciascun controller ai moduli NSM su entrambi i ripiani NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A in blu e il cablaggio del controller B in giallo.
+Collegare ciascun controller ai moduli NSM su entrambi gli shelf NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A è mostrato in blu e il cablaggio del controller B è mostrato in giallo.
 
 *Cavi in rame 100 GbE QSFP28*
 
 image::../media/oie_cable100_gbe_qsfp28.svg[Cavo in rame da 100 GbE QSFP28]
 
 .Fasi
-. Sul controller A, collegare i seguenti collegamenti:
+. Sul controller A, collegare le seguenti porte:
 +
 .. Collegare la porta e11a allo shelf 1, la porta NSM A e0a.
 .. Collegare la porta e11b allo shelf 2, la porta NSM B e0b.
@@ -231,7 +229,7 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Connessioni da contro
 
 
 
-. Sul controller B, collegare i seguenti collegamenti:
+. Sul controller B, collegare le seguenti porte:
 +
 .. Collegare la porta e11a allo shelf 1, la porta NSM B e0a.
 .. Collegare la porta e11b allo shelf 2, la porta NSM A e0b.
@@ -246,3 +244,5 @@ image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["Connessioni da contro
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver collegato l'hardware per il sistema AFF A70 o AFF A90, si link:install-power-hardware.html["Accendere il sistema di archiviazione AFF A70 o AFF A90"].

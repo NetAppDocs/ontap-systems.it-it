@@ -1,0 +1,98 @@
+---
+section: asa-r2-a70-90-maintain
+title: Sistemi ASA A70 e ASA A90
+pdf-filename: Manutenzione di ASA A70 e ASA A90
+entries:
+- title: Panoramica della manutenzione
+  url: "/asa-r2-70-90/maintain-overview.html"
+- title: Supporto di boot
+  pdf-filename: ASA A70, supporti di avvio ASA A90
+  entries:
+  - title: Panoramica dei supporti di avvio
+    url: "/asa-r2-70-90/bootmedia-overview.html"
+  - title: Metodo automatizzato
+    entries:
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/asa-r2-70-90/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/asa-r2-70-90/bootmedia-replace-requirements-bmr.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa-r2-70-90/bootmedia-shutdown-asa-r2.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa-r2-70-90/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/asa-r2-70-90/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa-r2-70-90/bootmedia-complete-rma.html"
+  - title: Metodo manuale
+    entries:
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/asa-r2-70-90/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa-r2-70-90/bootmedia-replace-requirements.html"
+    - title: Controllare le chiavi di crittografia integrate
+      url: "/asa-r2-70-90/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa-r2-70-90/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa-r2-70-90/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/asa-r2-70-90/bootmedia-recovery-image-boot.html"
+    - title: Ripristino della crittografia
+      url: "/asa-r2-70-90/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa-r2-70-90/bootmedia-complete-rma.html"
+- title: Chassis
+  pdf-filename: Chassis ASA A70, ASA A90
+  entries:
+  - title: Flusso di lavoro di sostituzione del telaio
+    url: "/asa-r2-70-90/chassis-replace-workflow.html"
+  - title: Verifica dei requisiti
+    url: "/asa-r2-70-90/chassis-replace-requirements.html"
+  - title: Spegnere i controller
+    url: "/asa-r2-70-90/chassis-replace-shutdown.html"
+  - title: Sostituire il telaio
+    url: "/asa-r2-70-90/chassis-replace-move-hardware.html"
+  - title: Sostituzione completa dello chassis
+    url: "/asa-r2-70-90/chassis-replace-complete-system-restore-rma.html"
+- title: Controller
+  pdf-filename: ASA A70, modulo controller ASA A90
+  entries:
+  - title: Flusso di lavoro di sostituzione del controller
+    url: "/asa-r2-70-90/controller-replace-workflow.html"
+  - title: Verifica dei requisiti
+    url: "/asa-r2-70-90/controller-replace-requirements.html"
+  - title: Spegnere il controller compromesso
+    url: "/asa-r2-70-90/controller-replace-shutdown-asa-r2.html"
+  - title: Sostituire il controller
+    url: "/asa-r2-70-90/controller-replace-move-hardware.html"
+  - title: Ripristinare la configurazione del sistema
+    url: "/asa-r2-70-90/controller-replace-system-config-restore-and-verify.html"
+  - title: Sistema ricable
+    url: "/asa-r2-70-90/controller-replace-recable-reassign-disks.html"
+  - title: Sostituzione completa del controller
+    url: "/asa-r2-70-90/controller-replace-restore-system-rma.html"
+- title: DIMM
+  url: "/asa-r2-70-90/dimm-replace.html"
+- title: Disco
+  url: "/asa-r2-70-90/drive-replace.html"
+- title: Ventola
+  url: "/asa-r2-70-90/fan-swap-out.html"
+- title: NVRAM
+  url: "/asa-r2-70-90/nvram-replace.html"
+- title: Batteria NV
+  url: "/asa-r2-70-90/nvdimm-battery-replace.html"
+- title: Modulo i/O.
+  entries:
+  - title: Panoramica del modulo di i/O.
+    url: "/asa-r2-70-90/io-module-overview.html"
+  - title: Aggiungere il modulo i/O.
+    url: "/asa-r2-70-90/io-module-add.html"
+  - title: Sostituire il modulo i/O.
+    url: "/asa-r2-70-90/io-module-replace.html"
+- title: Alimentatore
+  url: "/asa-r2-70-90/power-supply-replace.html"
+- title: Batteria con orologio in tempo reale
+  url: "/asa-r2-70-90/rtc-battery-replace.html"
+- title: Modulo di gestione del sistema
+  url: "/asa-r2-70-90/system-management-replace.html"

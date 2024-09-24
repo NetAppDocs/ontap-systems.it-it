@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: fas-70-90/install-requirements.html 
+keywords: fas70, fas90, install, setup, cautions 
+summary: 'Esaminare l"attrezzatura necessaria e le precauzioni di sollevamento per la piattaforma e i ripiani.' 
+---
+= Requisiti di installazione - FAS70 e FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esaminare l'attrezzatura necessaria e le precauzioni di sollevamento per il sistema di storage FAS70 o FAS90 e i ripiani di stoccaggio.
+
+
+
+== Attrezzatura necessaria per l'installazione
+
+Per installare un sistema di storage FAS70 o FAS90 sono necessari i seguenti strumenti e attrezzature.
+
+* Accesso a un browser Web per configurare il sistema di archiviazione
+* Cinturino da scariche elettrostatiche (ESD)
+* Torcia
+* Computer portatile o console con connessione USB/seriale
+* Graffetta o penna a sfera con punta stretta per l'impostazione di NS224 ID scaffali
+* Cacciavite Phillips n. 2
+
+
+
+
+== Precauzioni per il sollevamento
+
+I sistemi storage FAS70 e FAS90, NS224 shelf di storage e DS460C shelf di storage sono pesanti. Prestare attenzione durante il sollevamento e lo spostamento di questi elementi.
+
+
+
+=== Sistemi di storage FAS70 e FAS90
+
+Un sistema di stoccaggio FAS70 o FAS90 può pesare fino a 28,5 kg (62,83 lb). Per sollevare l'impianto, utilizzare due persone o un sollevatore idraulico.
+
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[Icona di avvertenza sollevamento FAS70 e FAS90]
+
+
+
+=== NS224 ripiano
+
+Un ripiano di stoccaggio NS224 può pesare fino a 30,29 kg (66,78 lb). Per sollevare il ripiano portaoggetti, utilizzare due persone o un sollevatore idraulico. Tenere tutti i componenti nel ripiano portaoggetti (anteriore e posteriore) per evitare di sbilanciare il peso del ripiano.
+
+image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224 attenzione al sollevamento]
+
+
+
+=== DS460C ripiano
+
+Un ripiano DS460C può pesare fino a 181,1 kg (360,4 lb). Per sollevare il ripiano, potrebbero essere necessarie fino a cinque persone o un sollevatore idraulico. Tenere tutti i componenti nel ripiano portaoggetti (anteriore e posteriore) per evitare di sbilanciare il peso del ripiano.
+
+image::../media/drw_ds460c_weight_warning_ieops-1932.svg[DS460C attenzione al sollevamento]
+
+.Informazioni correlate
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Informazioni sulla sicurezza e avvisi normativi"^]
+* https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti hardware, si link:install-prepare.html["Preparazione per l'installazione del sistema di storage FAS70 o FAS90"].

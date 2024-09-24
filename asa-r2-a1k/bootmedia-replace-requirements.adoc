@@ -1,0 +1,25 @@
+---
+permalink: asa-r2-a1k/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, replace the boot media 
+summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio. 
+---
+= Requisiti di sostituzione dei supporti di avvio - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
+
+* È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz`.
+* È necessario copiare il `image_xxx.tgz` file nell'unità flash USB per utilizzarlo successivamente in questa procedura.
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+

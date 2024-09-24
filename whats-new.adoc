@@ -1,27 +1,46 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: new, features,aff, asa,  fas, legacy, end-of-support 
-summary: 'Scopri le nuove funzionalità dei sistemi AFF, ASA e FAS e l"hardware legacy non più supportato.' 
+keywords: new, features, asa r2, aff, asa, fas, legacy, end-of-support 
+summary: Scopri le nuove funzionalità dei sistemi hardware ONTAP. 
 ---
-= Novità dei sistemi AFF, ASA e FAS
+= Novità dei sistemi hardware ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Scopri le nuove funzionalità dei sistemi AFF, ASA e FAS.
+Scopri le nuove funzionalità dei sistemi hardware ONTAP.
 
 Per informazioni dettagliate su problemi noti, limitazioni e avvisi di aggiornamento nelle versioni di ONTAP 9, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Note sulla versione di ONTAP 9"]. Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.
 
 
 
-== Supporto di una nuova piattaforma
+== Supporto della piattaforma
 
 [cols="2*"]
 |===
-| Piattaforme (con link alle schede tecniche) | Inizio disponibile 
+| Piattaforme | Inizio disponibile 
+
+
+ a| 
+https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Sistemi ASA r2"]
+
+* ASA A1K
+* ASA A70
+* ASA A90
+
+ a| 
+ONTAP 9.16.1
+
+
+
+ a| 
+https://www.netapp.com/data-storage/fas/["FAS70 e FAS90"]
+ a| 
+ONTAP 9.16.1
+
 
 
  a| 
@@ -212,7 +231,7 @@ ONTAP 9.6
 |===
 
 
-== Nuovo supporto switch
+== Supporto interruttore
 
 [cols="20,65,15"]
 |===
@@ -296,53 +315,7 @@ ONTAP 9.5P8
 |===
 
 
-== Nuovo supporto adattatore
-
-[cols="4*"]
-|===
-| Numero di parte dell'adattatore | Descrizione | Categoria | Inizio disponibile 
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X91148A"]
- a| 
-RoCE QSFP28 da 100 GbE a 2 porte
- a| 
-* Storage
-* Networking
-* HA/MetroCluster
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X91122A"]
- a| 
-RoCE QSFP28 a 2 porte da 25 GbE
- a| 
-* Networking
-* HA/MetroCluster
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X9170A"]
- a| 
-Modulo SSD NVMe (1 TB)
- a| 
-Dispositivo core dump
- a| 
-ONTAP 9.8
-
-|===
-
-
-== Nuovo supporto per gli shelf
+== Supporto ripiano
 
 [cols="2*"]
 |===
@@ -357,7 +330,7 @@ ONTAP 9.6
 |===
 
 
-== Nuovi aggiornamenti hardware
+== Aggiornamenti hardware
 
 [cols="25h,~,~"]
 |===

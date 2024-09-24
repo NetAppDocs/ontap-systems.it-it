@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, replace the drives 
 summary: È necessario sostituire un disco quando la piattaforma registra un messaggio di avviso alla console di sistema che indica che un disco è guasto. Inoltre, sia il LED di guasto sul display operatore che il LED di guasto sul disco guasto si illuminano. 
 ---
-= Sostituire l'unità SSD - AFF A70, AFF A90
+= Sostituire l'unità SSD - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -92,25 +92,6 @@ Chiudere lentamente la maniglia della camma in modo che sia allineata correttame
 Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
 
 . Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
-. Se l'assegnazione automatica del disco è stata disattivata nella fase 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco.
-+
-.. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
-+
-È possibile immettere il comando su entrambi i moduli controller.
-
-.. Assegnare ciascuna unità: `storage disk assign -disk disk_name -owner node_name`
-+
-È possibile immettere il comando su entrambi i moduli controller.
-
-+
-È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
-
-.. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node node_name -autoassign on`
-+
-È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i moduli controller.
-
-
-
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 +
 Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.

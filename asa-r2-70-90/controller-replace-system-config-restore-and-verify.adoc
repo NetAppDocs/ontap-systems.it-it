@@ -1,0 +1,70 @@
+---
+permalink: asa-r2-70-90/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: asa r2 a70, asa r2 a90, restore and verify the system configuration, verify and set the ha state of the controller module 
+summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
+---
+= Ripristinare e verificare la configurazione di sistema - ASA A70 e ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
+
+
+
+== Fase 1: Impostare e verificare l'ora del sistema
+
+È necessario controllare l'ora e la data sul modulo controller sostitutivo rispetto al modulo controller integro in una coppia ha o rispetto a un server di riferimento orario affidabile in una configurazione standalone. Se l'ora e la data non corrispondono, è necessario ripristinarli sul modulo controller sostitutivo per evitare possibili interruzioni dei client dovute a differenze di tempo.
+
+.A proposito di questa attività
+È importante applicare i comandi descritti nei passaggi sui sistemi corretti:
+
+* Il nodo _replacement_ è il nuovo nodo che ha sostituito il nodo compromesso come parte di questa procedura.
+* Il nodo _healthy_ è il partner ha del nodo _replacement_.
+
+
+.Fasi
+. Se il nodo _replacement_ non si trova al prompt DEL CARICATORE, arrestare il sistema al prompt DEL CARICATORE.
+. Sul nodo _healthy_, controllare l'ora di sistema: `cluster date show`
++
+La data e l'ora si basano sul fuso orario configurato.
+
+. Al prompt DEL CARICATORE, controllare la data e l'ora nel nodo _replacement_: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+. Se necessario, impostare la data in GMT sul nodo sostitutivo: `set date _mm/dd/yyyy_`
+. Se necessario, impostare l'ora in GMT sul nodo sostitutivo: `set time _hh:mm:ss_`
+. Al prompt DEL CARICATORE, confermare la data e l'ora nel nodo _replacement_: `show date`
++
+La data e l'ora sono indicate in GMT.
+
+
+
+
+
+== Fase 2: Verificare e impostare lo stato ha del telaio
+
+Verificare `HA` stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.
+
+. In modalità manutenzione dal nuovo modulo controller, verificare che tutti i componenti siano visualizzati allo stesso modo `HA` stato: `ha-config show`
++
+Lo stato ha deve essere lo stesso per tutti i componenti.
+
+. Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
++
+Il valore dello stato ha può essere uno dei seguenti:
+
++
+** `ha`
+** `mcc` (non supportato)
+** `mccip` (Non supportato nei sistemi ASA)
+** `non-ha` (non supportato)
+
+
+. Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
+. Verificare che l'impostazione sia stata modificata: `ha-config show`
+

@@ -11,6 +11,12 @@ summary: 'Una volta controllate le variabili di ambiente, è necessario completa
 
 
 [role="lead"]
+Ripristinare la crittografia sul supporto di avvio sostitutivo.
+
+
+
+== Fase 1: Ripristinare il gestore delle chiavi integrato
+
 È necessario completare i passaggi specifici per i sistemi con gestore delle chiavi integrato (OKM), crittografia storage NetApp (NSE) o crittografia del volume NetApp (NVE) abilitati utilizzando le impostazioni acquisite all'inizio di questa procedura.
 
 
@@ -18,6 +24,7 @@ NOTE: Se NSE o NVE sono abilitati insieme a Onboard o External Key Manager, devi
 
 .Fasi
 . Collegare il cavo della console al controller di destinazione.
+. Selezionare una delle seguenti opzioni per ripristinare la configurazione del gestore delle chiavi integrato dal menu di avvio ONATP.
 
 
 [role="tabbed-block"]
@@ -53,7 +60,7 @@ Please choose one of the following:
 (9)  Configure Advanced Drive Partitioning.
 (10) Set Onboard Key Manager recovery secrets.
 (11) Configure node for external key management.
-Selection (1-11)? _10_
+Selection (1-11)? 10
 
 ----
 . Confermare la continuazione del processo.
@@ -330,7 +337,7 @@ Selection (1-11)? 1
 ====
 
 
-== Completare la sostituzione del supporto di avvio
+== Passaggio 2: Completare la sostituzione del supporto di avvio
 
 Completare il processo di sostituzione dei supporti di avvio dopo il normale avvio completando i controlli finali e restituendo spazio di archiviazione.
 

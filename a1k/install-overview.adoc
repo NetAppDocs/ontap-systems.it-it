@@ -2,33 +2,37 @@
 permalink: a1k/install-overview.html 
 sidebar: sidebar 
 keywords: Installation, deployment, Install, deploy, Installing, deploying, a1k 
-summary: Segui questi passaggi ad alto livello per installare e configurare il tuo sistema storage AFF A1K e implementarlo come nodo nel tuo sistema ONTAP. 
+summary: Segui questi passaggi ad alto livello per installare e configurare il tuo sistema storage AFF A1K e implementarlo come coppia ha nel tuo sistema ONTAP. 
 ---
-= Flusso di lavoro di installazione - AFF A1K
+= Flusso di lavoro di installazione e configurazione - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Segui queste istruzioni per installare, configurare e implementare il tuo sistema di storage AFF A1K.
+Per installare e configurare il sistema AFF A1K, devi esaminare i requisiti hardware, preparare il sito, installare e cablare i componenti hardware, accendere il sistema e configurare il cluster ONTAP.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:install-prepare.html["Preparazione per l'installazione"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:install-requirements.html["Esaminare i requisiti di installazione"]
 [role="quick-margin-para"]
-Per prepararsi all'installazione, è necessario preparare il sito, controllare i requisiti ambientali ed elettrici e verificare che vi sia spazio sufficiente nel rack. Quindi, disimballare l'apparecchiatura, confrontarne il contenuto con la distinta di imballaggio e registrare l'hardware per accedere ai vantaggi del supporto.
+Esaminare le attrezzature e gli strumenti necessari per installare il sistema di stoccaggio e i ripiani di stoccaggio ed esaminare le precauzioni di sollevamento e sicurezza.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:install-hardware.html["Installare l'hardware"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:install-prepare.html["Preparazione dell'installazione del sistema di storage AFF A1K"]
 [role="quick-margin-para"]
-Per installare l'hardware, installare i kit guide per la piattaforma e gli scaffali, quindi installare e fissare la piattaforma nell'armadietto o nel rack per telecomunicazioni. Quindi, far scorrere i ripiani sulle guide. Infine, collegare i dispositivi di gestione dei cavi alla parte posteriore della piattaforma per l'instradamento organizzato dei cavi.
+Per prepararsi all'installazione del sistema, è necessario preparare il sito, controllare i requisiti ambientali ed elettrici e verificare che lo spazio rack sia sufficiente. Quindi, disimballare l'apparecchiatura, confrontarne il contenuto con la distinta di imballaggio e registrare l'hardware per accedere ai vantaggi del supporto.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:install-cable.html["Bulloneria dei cavi"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:install-hardware.html["Installazione dell'hardware per il sistema di storage AFF A1K"]
 [role="quick-margin-para"]
-Per collegare l'hardware, collegare prima i controller alla rete e poi i controller agli scaffali.
+Per installare l'hardware, installare i kit guide per il sistema di archiviazione e gli scaffali, quindi installare e fissare il sistema di archiviazione nell'armadietto o nel rack per telecomunicazioni. Quindi, far scorrere i ripiani sulle guide. Infine, collegare i dispositivi di gestione dei cavi al retro del sistema di archiviazione per l'instradamento organizzato dei cavi.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:install-power-hardware.html["Accendere il sistema di archiviazione"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:install-cable.html["Cablare i controller e gli shelf di storage per il sistema storage AFF A1K"]
 [role="quick-margin-para"]
-Per accendere il sistema, accendere ciascun shelf NS224 e assegnare un ID shelf univoco per assicurarsi che ogni shelf sia separato all'interno del setup. Quindi, accendere i controller. Infine, utilizzare il dispositivo di fissaggio in dotazione per fissare i cavi di alimentazione su ciascun alimentatore.
+Per collegare l'hardware, collegare prima gli storage controller alla rete e poi i controller agli shelf di storage.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:install-complete.html["Completare la configurazione del sistema storage"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:install-power-hardware.html["Accendere il sistema di archiviazione AFF A1K"]
 [role="quick-margin-para"]
-Per completare la configurazione del sistema, accedere all'interfaccia basata sul Web, System Manager, puntando un browser all'indirizzo IP del controller. Una procedura guidata di installazione consente di iniziare a utilizzare la configurazione del cluster. In alternativa, è possibile utilizzare anche l'interfaccia della riga di comando (CLI).
+Prima di accendere i controller, accendere ogni shelf NS224 e assegnare un ID shelf univoco per garantire che ogni shelf sia identificato in modo univoco all'interno del setup.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:install-complete.html["Completare la configurazione del sistema storage"]
+[role="quick-margin-para"]
+Per completare l'installazione del sistema, accedere a ONTAP System Manager puntando un browser all'indirizzo IP del controller. Una procedura guidata di installazione consente di completare la configurazione del cluster per il sistema di storage AFF A1K.

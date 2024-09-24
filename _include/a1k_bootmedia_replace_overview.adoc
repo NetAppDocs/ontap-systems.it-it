@@ -3,16 +3,3 @@
 
 
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.
-
-È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz`.
-
-È inoltre necessario copiare il `image_xxx.tgz` Sul disco flash USB per utilizzarlo successivamente in questa procedura.
-
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
-* È importante applicare i comandi descritti di seguito al controller corretto:
-+
-** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
-** Il controller _healthy_ è il partner ha del controller compromesso.
-
-
-

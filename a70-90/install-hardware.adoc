@@ -4,41 +4,46 @@ sidebar: sidebar
 keywords: aff a70, a90, install hardware, telco rack 
 summary: Installare il sistema di archiviazione in un cabinet o in un rack per telecomunicazioni. 
 ---
-= Installare la bulloneria - AFF A70, AFF A90
+= Installare l'hardware - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Installare l'hardware in un cabinet vuoto o in un rack per telecomunicazioni. Saltare questo passaggio se il cabinet è pre-compilato.
+Dopo aver preparato l'installazione del sistema di storage AFF A70 o AFF A90, installare l'hardware per il sistema. Per prima cosa, montare i kit guide. Quindi installare e fissare la piattaforma in un cabinet o in un rack per telecomunicazioni.
+
+Saltare questo passaggio se il cabinet è pre-compilato.
 
 .Prima di iniziare
-* È necessario consultare il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"] documento e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
-* Le istruzioni devono essere imballate con il kit guida.
-* È necessario essere consapevoli dei problemi di sicurezza associati al peso della piattaforma e del ripiano.
+* Assicurarsi di avere le istruzioni fornite con il kit guida.
+* Prestare attenzione ai problemi di sicurezza associati al peso del sistema di stoccaggio e del ripiano di stoccaggio.
+* Tenere presente che il flusso d'aria attraverso il sistema di storage entra dalla parte anteriore dove sono installati il pannello o i cappucci terminali e fuoriesce dalla parte posteriore dove si trovano le porte.
 
 
 .Fasi
-. Montare i kit guide per la piattaforma e i ripiani, secondo necessità, seguendo le istruzioni incluse nei kit.
-. Installare e fissare la piattaforma nell'armadietto o nel rack per telecomunicazioni:
+. Installare i kit guide per il sistema di archiviazione e gli scaffali, secondo necessità, seguendo le istruzioni fornite con i kit.
+. Installare e fissare il sistema di archiviazione nell'armadietto o nel rack per telecomunicazioni:
 +
-.. Posizionare la piattaforma sulle guide al centro del cabinet o del rack per telecomunicazioni, quindi sostenere la piattaforma dal basso e farla scorrere in posizione.
-.. Fissare la piattaforma all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio incluse.
+.. Posizionare il sistema di stoccaggio sulle guide al centro del cabinet o del rack per telecomunicazioni, quindi sostenere il sistema di archiviazione dal basso e farlo scorrere in posizione.
+.. Fissare il sistema di archiviazione all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio incluse.
 
 
-. Installazione dello shelf o degli shelf:
+. Installazione del ripiano:
 +
 .. Posizionare la parte posteriore del ripiano sulle guide, quindi sostenere il ripiano dal basso e farlo scorrere nell'armadietto o nel rack per telecomunicazioni.
 +
-Se si installano più shelf, posizionare il primo shelf direttamente sopra i controller. Posizionare il secondo ripiano direttamente sotto i controller. Ripetere questo modello per tutti gli shelf di dischi aggiuntivi.
+Se si installano più shelf, posizionare il primo shelf direttamente sopra i controller. Posizionare il secondo shelf direttamente sotto i controller. Ripetere questo modello per tutti gli shelf di storage aggiuntivi.
 
-.. Fissare il ripiano all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio incluse.
+.. Fissare il ripiano all'armadietto o al rack per telecomunicazioni utilizzando le viti di montaggio in dotazione.
 
 
-. Collegare i due dispositivi di gestione dei cavi al retro dei controller.
+. Collegare i dispositivi di gestione dei cavi al retro del sistema di archiviazione.
 +
 image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[Installare il dispositivo di gestione dei cavi]
 
-. Fissare il frontalino alla parte anteriore della piattaforma.
+. Fissare il frontalino alla parte anteriore del sistema di archiviazione.
 
+
+.Quali sono le prossime novità?
+Dopo aver installato l'hardware per il sistema AFF A70 o AFF A90, si link:install-cable.html["Collegare l'hardware per il sistema di storage AFF A70 o AFF A90"].

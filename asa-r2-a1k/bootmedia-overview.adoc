@@ -1,0 +1,24 @@
+---
+permalink: asa-r2-a1k/bootmedia-overview.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, overview, the boot media 
+summary: Informazioni sul metodo automatizzato e sul metodo manuale per la sostituzione dei supporti di avvio. 
+---
+= Panoramica sulla sostituzione del supporto di avvio - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire manualmente un supporto di avvio non riuscito utilizzando il modulo USB per l'immagine di avvio o tramite l'opzione BMR (sostituzione automatica dei supporti di avvio).
+
+* link:bootmedia-replace-requirements-bmr.html["Sostituzione automatica dei supporti di avvio"]
++
+Sostituzione automatica dei supporti di avvio utilizza l'immagine di avvio dal nodo parted ed ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.
+
+* link:bootmedia-replace-requirements.html["Sostituzione del supporto di avvio manuale"]
++
+La sostituzione manuale dei supporti di avvio utilizza il metodo tradizionale per scaricare l'immagine ONTAP dal sito di supporto NetApp, trasferire l'immagine su un'unità USB, scaricarla sul supporto di avvio sostitutivo di destinazione e scorrere manualmente le opzioni del menu di avvio per installare l'immagine ONTAP sul supporto di avvio sostitutivo.
+
+

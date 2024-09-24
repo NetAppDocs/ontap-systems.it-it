@@ -1,0 +1,24 @@
+---
+permalink: asa-r2-70-90/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: asa r2 a70, a90, replace the boot media 
+summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio. 
+---
+= Requisiti e considerazioni - ASA A70 e ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+* Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
+

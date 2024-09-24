@@ -1,0 +1,219 @@
+---
+permalink: asa-r2-a1k/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, move the controller module hardware 
+summary: Per sostituire un modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nello chassis, quindi avviare il sistema in modalità manutenzione. 
+---
+= Sostituire l'hardware del modulo controller - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per sostituire il controller, è necessario rimuovere il controller danneggiato, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel contenitore, quindi avviare il sistema in modalità manutenzione.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Controllare il LED di stato NVRAM situato nello slot 4/5 del sistema. Sul pannello anteriore del modulo controller è presente anche un LED NVRAM. Cercare l'icona NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["Numero di didascalia 1, larghezza=30px"]
+ a| 
+LED di stato NVRAM
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["Numero di didascalia 1, larghezza=30px"]
+ a| 
+LED di attenzione NVRAM
+
+|===
++
+
+NOTE: Se il LED di stato NVRAM lampeggia, il modulo controller potrebbe non essere stato rilevato o arrestato correttamente (dati non registrati). Se il modulo del controller associato non è stato rilevato correttamente, contattare prima di continuare con https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] questa procedura.
+
++
+Il comportamento generale del LED di stato NVRAM sul modulo controller danneggiato è il seguente:
+
++
+** Il LED di stato NVRAM lampeggia quando l'alimentazione viene interrotta dal modulo controller e il modulo controller si trova nello stato "in attesa di giveback" oppure il modulo controller non viene rilevato o arrestato correttamente (dati non impegnati).
+** Il LED di stato NVRAM lampeggia quando il modulo controller viene rimosso dal contenitore e potrebbe indicare che il modulo controller non è stato rilevato o arrestato correttamente (dati non registrati). Verificare che il modulo controller sia stato acquisito in modo corretto dal modulo controller partner o che il modulo controller danneggiato mostri `waiting for giveback`. Quindi, il LED lampeggiante può essere ignorato (e il controller può essere rimosso dal contenitore).
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Sulla parte anteriore dell'unità, agganciare le dita nei fori delle camme di bloccaggio, premere le linguette sulle leve a camma e ruotare delicatamente, ma con decisione, entrambi i fermi verso di sé contemporaneamente.
++
+Il modulo controller si sposta leggermente all'esterno del contenitore.
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Immagine di rimozione della centralina]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["Numero di didascalia 1, larghezza=30px"]
+| Una camma di bloccaggio si blocca 
+|===
+. Estrarre il modulo controller dal contenitore e collocarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si estrae dal contenitore.
+
+
+
+
+
+== Fase 2: Spostare le ventole
+
+È necessario rimuovere i cinque moduli ventola dal modulo controller danneggiato al modulo controller sostitutivo.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
+. Premere il pulsante di blocco grigio sul modulo della ventola ed estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera.
++
+
+NOTE: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
+
++
+image::../media/drw_a1k_fan_remove_replace_ieops-1376.svg[Ventola rimuovere AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[Numero di didascalia 1]
+ a| 
+Pulsante di bloccaggio nero
+
+|===
+. Montare la ventola nel modulo controller sostitutivo:
++
+.. Allineare i bordi dell'alloggiamento della ventola con l'apertura nella parte anteriore del modulo controller sostitutivo.
+.. Far scorrere delicatamente il modulo della ventola completamente nel modulo controller sostitutivo finché non si blocca in posizione.
+
+
+. Ripetere i passaggi precedenti per i restanti moduli della ventola.
+
+
+
+
+== Fase 3: Spostare la batteria NV
+
+Spostare la batteria NV sulla centralina di ricambio.
+
+. Aprire il coperchio del condotto dell'aria della batteria NV e individuare la batteria NV.
++
+image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[Rimuovere la batteria NV AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[Numero di didascalia 1]
+| Coperchio del condotto dell'aria della batteria NV 
+
+
+ a| 
+image::../media/legend_icon_02.svg[Numero di didascalia 2]
+ a| 
+Spina della batteria NV
+
+
+
+ a| 
+image::../media/legend_icon_03.svg[Numero di didascalia 3]
+ a| 
+Batteria NV
+
+|===
+. Sollevare la batteria per accedere alla spina della batteria.
+. Premere il fermaglio sulla parte anteriore della spina della batteria per sganciare la spina dalla presa, quindi scollegare il cavo della batteria dalla presa.
+. Estrarre la batteria dal condotto dell'aria e dal modulo della centralina.
+. Spostare il gruppo batterie sul modulo della centralina di ricambio e installarlo nel condotto dell'aria della batteria NV:
++
+.. Aprire il condotto dell'aria della batteria NV nel modulo centralina di ricambio.
+.. Inserire la spina della batteria nella presa e assicurarsi che la spina si blocchi in posizione.
+.. Inserire la batteria nello slot e premere con decisione verso il basso per assicurarsi che sia bloccata in posizione.
+.. Chiudere il coperchio del condotto dell'aria.
+
+
+
+
+
+
+== Fase 4: Spostare i DIMM di sistema
+
+Spostare i moduli DIMM nel modulo controller sostitutivo.
+
+. Aprire il condotto dell'aria della scheda madre e individuare i moduli DIMM.
++
+image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM rimuovere AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[Numero di didascalia 1]
+ a| 
+DIMM di sistema
+
+|===
+. Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
+. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
+. Individuare lo slot in cui si sta installando il modulo DIMM nel modulo controller sostitutivo.
+. Inserire il DIMM nello slot.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
+. Ripetere questa procedura per i DIMM rimanenti. Chiudere il condotto dell'aria della scheda madre.
+
+
+
+
+== Fase 5: Installare il modulo controller
+
+Reinstallare il modulo controller e avviarlo.
+
+. In caso contrario, chiudere il condotto dell'aria.
+. Allineare l'estremità del modulo controller con l'apertura nel contenitore, quindi far scorrere il modulo controller nel telaio con le leve ruotate lontano dalla parte anteriore del sistema.
+. Una volta che il modulo controller non riesce a farlo scorrere ulteriormente, ruotare le maniglie della camma verso l'interno fino a quando non si bloccano sotto le ventole
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel contenitore per evitare di danneggiare i connettori.
+
++
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nel contenitore.
+
+. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+

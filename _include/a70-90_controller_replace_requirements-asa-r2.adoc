@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+È necessario esaminare i requisiti per la procedura di sostituzione del controller e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.
+
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
+* Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
+* Poiché il dispositivo di avvio si trova nel modulo di gestione del sistema installato sul retro del sistema, non è necessario spostare il dispositivo di avvio quando si sostituisce un modulo controller.
+* È importante applicare i comandi descritti di seguito ai sistemi corretti:
++
+** Il controller _alterato_ è il controller che viene sostituito.
+** Il controller _replacement_ è il nuovo controller che sostituisce il controller compromesso.
+** Il controller _healthy_ è il controller sopravvissuto.
+
+
+* È sempre necessario acquisire l'output della console del controller in un file di registro di testo.
++
+In questo modo è possibile registrare la procedura per risolvere eventuali problemi riscontrati durante il processo di sostituzione.
+
+

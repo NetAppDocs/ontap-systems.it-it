@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
 ---
-= Ripristinare e verificare la configurazione di sistema - AFF A70, AFF A90
+= Ripristinare e verificare la configurazione di sistema - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -61,7 +61,7 @@ Il valore dello stato ha può essere uno dei seguenti:
 +
 ** `ha`
 ** `mcc` (non supportato)
-** `mccip`
+** `mccip` (Non supportato nei sistemi ASA)
 ** `non-ha` (non supportato)
 
 
