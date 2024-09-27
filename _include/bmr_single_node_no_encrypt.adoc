@@ -2,33 +2,7 @@
 :allow-uri-read: 
 
 
-È possibile ripristinare l'immagine ONTAP (boot media recovery) dal nodo partner utilizzando il `boot_recovery -partner` comando con le piattaforme ASA R2 che eseguono ONTAP 9.16,0 e versioni successive.
-
-.Prima di iniziare
-Quando si avvia un nodo e il supporto di avvio su quel nodo è danneggiato, al prompt di Loader vengono visualizzati i seguenti messaggi e il processo di avvio con stop:
-
-[listing]
-----
-
-Can't find primary boot device u0a.0
-Can't find backup boot device u0a.1
-ACPI RSDP Found at 0x777fe014
-
-
-Starting AUTOBOOT press Ctrl-C to abort...
-Could not load fat://boot0/X86_64/freebsd/image1/kernel:Device not found
-
-ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0,fat)
-
-
-ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0,fat)
-
-
-Autoboot of PRIMARY image failed. Device not found (-6)
-LOADER-A>
-
-----
-Se viene visualizzato questo messaggio, è necessario ripristinare l'immagine ONTAP
+Ripristinare l'immagine del supporto di avvio.
 
 .Fasi
 . Dal prompt DI Loader, immettere il comando _boot_recovery -partner_.

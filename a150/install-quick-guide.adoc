@@ -11,6 +11,8 @@ summary: 'Questa guida fornisce istruzioni grafiche per un"installazione tipica 
 
 
 [role="lead"]
+*Attenzione:* se il sistema viene installato con ONTAP 9.13.1P8 - 9.13.1P11, ONTAP 9.14.1P1 - 9.14.1P7 o ONTAP 9.15,1 - 9.15.1P2 e il sistema contiene 10 o più unità a stato solido interne, è necessario eseguire ulteriori operazioni per preparare il sistema all'installazione. Vedere il numero  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["CONTAP-285173 - ADP non lascia una partizione root di riserva su un AFF A150 con 10 o più dischi interni"^].
+
 Le istruzioni per l'installazione e la configurazione forniscono istruzioni grafiche per un'installazione tipica del sistema, dal montaggio su rack e il cablaggio, fino alla messa in funzione iniziale del sistema. Utilizzare questa guida se si ha familiarità con l'installazione dei sistemi NetApp.
 
 Utilizzare il collegamento: link:../media/PDF/Jan_2024_Rev2_AFFA150_ISI_IEOPS-1480.pdf["Istruzioni per l'installazione e la configurazione del sistema AFF A150"^]

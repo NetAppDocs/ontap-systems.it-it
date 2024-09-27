@@ -11,21 +11,12 @@ summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare i
 
 
 [role="lead"]
-È possibile ripristinare l'immagine sul supporto di avvio dal controller partner utilizzando il processo di ripristino di avvio automatico.
-
-Selezionare l'opzione di ripristino automatico a nodo singolo corrispondente alla configurazione in uso.
-
-[role="tabbed-block"]
-====
-.Opzione 1: Ripristino senza crittografia
---
-È possibile ripristinare l'immagine ONTAP (boot media recovery) dal nodo partner utilizzando il `boot_recovery -partner` comando con le piattaforme ASA R2 che eseguono ONTAP 9.16,0 e versioni successive.
+È possibile ripristinare l'immagine ONTAP (ripristino supporti di avvio) dal nodo partner utilizzando `boot_recovery -partner` con i sistemi ASA R2 che eseguono ONTAP 9.16,0 e versioni successive.
 
 .Prima di iniziare
 Quando si avvia un nodo e il supporto di avvio su quel nodo è danneggiato, al prompt di Loader vengono visualizzati i seguenti messaggi e il processo di avvio con stop:
 
-[listing]
-----
+....
 
 Can't find primary boot device u0a.0
 Can't find backup boot device u0a.1
@@ -44,8 +35,16 @@ ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kern
 Autoboot of PRIMARY image failed. Device not found (-6)
 LOADER-A>
 
-----
+....
 Se viene visualizzato questo messaggio, è necessario ripristinare l'immagine ONTAP
+
+Selezionare l'opzione di ripristino automatico a nodo singolo corrispondente alla configurazione in uso.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Ripristino senza crittografia
+--
+Ripristinare l'immagine del supporto di avvio.
 
 .Fasi
 . Dal prompt DI Loader, immettere il comando _boot_recovery -partner_.
@@ -103,32 +102,7 @@ varfs_backup_restore: bootarg.abandon_varfs is set! Skipping /var backup.
 --
 .Opzione 2: Recupero con Key Manager integrato presente
 --
-È possibile ripristinare l'immagine ONTAP (recupero supporti di avvio) dal nodo partner utilizzando `boot_recovery -partner` con le piattaforme ASA R2 che eseguono ONTAP 9.16,0 e versioni successive.
-
-.Prima di iniziare
-Quando si avvia un nodo e il supporto di avvio su quel nodo è danneggiato, al prompt di Loader vengono visualizzati i seguenti messaggi e il processo di avvio con stop:
-
-....
-
-Can't find primary boot device u0a.0
-Can't find backup boot device u0a.1
-ACPI RSDP Found at 0x777fe014
-
-
-Starting AUTOBOOT press Ctrl-C to abort...
-Could not load fat://boot0/X86_64/freebsd/image1/kernel:Device not found
-
-ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0,fat)
-
-
-ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0,fat)
-
-
-Autoboot of PRIMARY image failed. Device not found (-6)
-LOADER-A>
-
-....
-Se viene visualizzato questo messaggio, è necessario ripristinare l'immagine ONTAP
+Ripristinare l'immagine del supporto di avvio.
 
 .Fasi
 . Dal prompt DI Loader, immettere il comando _boot_recovery -partner_.
@@ -186,30 +160,7 @@ Al termine del ripristino, il nodo viene riavviato per completare il processo.
 --
 .Opzione 3: Ripristino con gestore chiavi esterno presente
 --
-È possibile ripristinare l'immagine ONTAP (recupero supporti di avvio) dal nodo partner utilizzando `boot_recovery -partner` con le piattaforme ASA R2 che eseguono ONTAP 9.16,0 e versioni successive.
-
-Quando si avvia un nodo e il supporto di avvio su quel nodo è danneggiato, al prompt di Loader vengono visualizzati i seguenti messaggi e il processo di avvio con stop:
-
-....
-
-Can't find primary boot device u0a.0
-Can't find backup boot device u0a.1
-ACPI RSDP Found at 0x777fe014
-
-
-Starting AUTOBOOT press Ctrl-C to abort...
-Could not load fat://boot0/X86_64/freebsd/image1/kernel:Device not found
-
-ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0,fat)
-
-
-ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0,fat)
-
-
-Autoboot of PRIMARY image failed. Device not found (-6)
-LOADER-A>
-....
-Se viene visualizzato questo messaggio, è necessario ripristinare l'immagine ONTAP.
+Ripristinare l'immagine del supporto di avvio.
 
 .Fasi
 . Dal prompt DI Loader, immettere il comando _boot_recovery -partner_.
@@ -248,58 +199,6 @@ L'opzione 11 del menu di avvio richiede all'utente tutte le informazioni di conf
 
 +
 Verificare `x-NETAPP-ClusterName: <cluster name>` `x-NETAPP-KeyUsage: "MROOT-AK"` che gli attributi UUID del cluster e UID del keystore siano corretti.
-
-
-
-. Monitorare il recupero e il ripristino di Mroot-AK nel nodo ONTAP.
-. Se il processo non riesce a ripristinare la chiave, verrà visualizzato il seguente messaggio e sarà necessario configurare e0M dalla shell del sistema di menu:
-+
-....
-ERROR: kmip_init: halting this system with encrypted mroot...
-WARNING: kmip_init: authentication keys might not be available.
-********************************************************
-*                 A T T E N T I O N                    *
-*                                                      *
-*       System cannot connect to key managers.         *
-*                                                      *
-********************************************************
-ERROR: kmip_init: halting this system with encrypted mroot...
-.
-Terminated
-
-Uptime: 11m32s
-System halting...
-
-LOADER-B>
-
-....
-+
-.. Eseguire il `boot_recovery -partner` comando sul nodo di recupero.
-.. Quando viene richiesto di eseguire (y o n) le opzioni per EKM, selezionare _n_ per tutti.
-+
-Dopo aver selezionato l'opzione _n_ per i prompt 8, il sistema si arresta al menu di avvio.
-
-.. Raccogliere le informazioni del file /cfcard/kmip/servers.cfg da un altro nodo del cluster. L'utente raccoglierà le seguenti informazioni:
-+
-*** L'indirizzo del server KMIP.
-*** Porta KMIP.
-*** UUID keystore.
-*** Una copia del certificato client dal file /cfcard/kmip/certs/client.crt.
-*** Una copia della chiave client dal file /cfcard/kmip/certs/client.key.
-*** Una copia delle CA del server KMIP dal file /cfcard/kmip/certs/CA.pem.
-
-
-.. Immettere systemshell dal menu di avvio digitando _systemshell_ al prompt.
-.. Configurare la rete dal menu della shell del sistema per e0M, netmask e gateway.
-.. Uscire dalla shell del menu con il comando _exit_.
-.. Viene visualizzato il menu di avvio. Selezionare l'opzione `11` per continuare il ripristino EKM.
-.. Rispondere `y` alle seguenti domande e inserire le informazioni richieste precedentemente raccolte quando richiesto:
-+
-*** Si dispone di una copia del file /cfcard/kmip/certs/client.crt? {y/n}
-*** Avete una copia del file /cfcard/kmip/certs/client.key? {y/n}
-*** Si dispone di una copia del file /cfcard/kmip/certs/CA.pem? {y/n}
-*** Si dispone di una copia del file /cfcard/kmip/servers.cfg? {y/n}
-
 
 
 

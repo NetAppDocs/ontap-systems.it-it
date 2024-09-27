@@ -50,28 +50,5 @@ ONTAP 9.16.0 o versioni precedenti
 
 
 
-
-
- a| 
-ONTAP 9.16.1 o versione successiva
- a| 
-.. Sul controller danneggiato, premere _y_ quando viene richiesto di ripristinare la configurazione di backup.
-+
-Una volta completata la procedura di ripristino, questo messaggio viene visualizzato sulla console - `syncflash_partner: Restore from partner complete`.
-
-.. Sul controller danneggiato, premere _y_ quando richiesto per confermare se il backup di ripristino è stato eseguito correttamente.
-.. Sul controller danneggiato, premere _y_ quando viene richiesto di utilizzare la configurazione ripristinata.
-.. Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il nodo.
-.. Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il controller danneggiato e premere _ctrl-c_ per il menu di avvio.
-.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristinare i gestori delle chiavi"].
-.. Collegare il cavo della console al controller partner.
-.. Restituire il controller utilizzando il comando _storage failover giveback -fromnode local_.
-.. Ripristinare il giveback automatico se è stato disattivato utilizzando il comando _storage failover modify -node local -auto-giveback true_.
-.. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il comando _system node AutoSupport Invoke -node * -type all -message MAINT=END_.
-+
-*NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
-
-
-
 |===
 
