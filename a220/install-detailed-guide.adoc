@@ -102,7 +102,7 @@ X6536-R6 (112-00090), 5 m.
 
 X6554-R6 (112-00189), 15 m.
  a| 
-image:../media/oie_cable_fiber_lc_connector.png["Immagine che mostra un connettore LC in fibra ottica"]
+image:../media/oie_cable_fiber_lc_connector.png["Connettore in fibra LC"]
  a| 
 Rete host FC
 
@@ -143,7 +143,7 @@ Cavo per console micro-USB
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_micro_usb.png["Immagine che mostra un connettore micro USB"]
+image:../media/oie_cable_micro_usb.png["Connettore micro USB"]
  a| 
 Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac
 
@@ -221,7 +221,7 @@ image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[Cablaggio
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["Fase 1"]
+image:../media/icon_square_1_green.png["Fase 1"]
  a| 
 Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster:
 
@@ -233,7 +233,7 @@ image:../media/drw_c190_u_tnsc_clust_cbling.png["Cablaggio di interconnessione i
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
+image:../media/icon_square_2_orange.png["Passaggio 2"]
  a| 
 Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati UTA2 alla rete host:
 
@@ -248,16 +248,16 @@ Un host FC
 
 NOTE: È possibile collegare una coppia di porte come CNA e una coppia di porte come FC oppure entrambe le coppie di porte come CNA o entrambe come FC.
 
-image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connessioni della porta dati come descritto nel testo circostante"]
+image:../media/drw_c190_u_fc_10gbe_cabling.png["Connessioni delle porte dati"]
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
+image:../media/icon_square_3_purple.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
-image:../media/drw_c190_u_mgmt_cbling.png["Cablaggio delle porte di gestione"]
+image:../media/drw_c190_u_mgmt_cabling.png["Cablaggio delle porte di gestione"]
 
 
 
@@ -297,7 +297,7 @@ image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[Cabla
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["Fase 1"]
+image:../media/icon_square_1_green.png["Fase 1"]
  a| 
 Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster:
 
@@ -306,7 +306,7 @@ image:../media/drw_c190_u_switched_clust_cbling.png["Cablaggio ClusterInterconne
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
+image:../media/icon_square_2_orange.png["Passaggio 2"]
  a| 
 Utilizzare uno dei seguenti tipi di cavo per collegare le porte dati UTA2 alla rete host:
 
@@ -325,16 +325,16 @@ A 10 GbE
 
 NOTE: È possibile collegare una coppia di porte come CNA e una coppia di porte come FC oppure entrambe le coppie di porte come CNA o entrambe come FC.
 
-image:../media/drw_c190_u_fc_10gbe_cbling.png["Immagine che mostra le connessioni della porta dati come descritto nel testo circostante"]
+image:../media/drw_c190_u_fc_10gbe_cabling.png["Connessioni delle porte dati"]
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
+image:../media/icon_square_3_purple.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
-image:../media/drw_c190_u_mgmt_cbling.png["Cablaggio delle porte di gestione"]
+image:../media/drw_c190_u_mgmt_cabling.png["Cablaggio delle porte di gestione"]
 
 
 
@@ -374,19 +374,18 @@ image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[Cablaggi
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["Fase 1"]
+image:../media/icon_square_1_green.png["Fase 1"]
  a| 
 Collegare le porte di interconnessione del cluster l'una all'altra con il cavo di interconnessione del cluster:
 
 ** da e0a e0a
-** da e0b a e0b
-image:../media/drw_c190_e_tnsc_clust_cbling.png["Immagine che mostra le interconnessioni del cluster tra le porte sul retro dei controller"]
+** da e0b a e0b image:../media/drw_c190_e_tnsc_clust_cbling.png["Interconnessioni cluster tra le porte sul retro dei controller"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
+image:../media/icon_square_2_yellow.png["Passaggio 2"]
  a| 
 Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host:
 
@@ -395,7 +394,7 @@ image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
+image:../media/icon_square_3_orange.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
@@ -439,7 +438,7 @@ image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[Cabl
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["Fase 1"]
+image:../media/icon_square_1_green.png["Fase 1"]
  a| 
 Cavo e0a e e0b agli switch di interconnessione del cluster con il cavo di interconnessione del cluster:
 
@@ -448,7 +447,7 @@ image:../media/drw_c190_e_switched_clust_cbling.png["Cablaggio di interconnessio
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
+image:../media/icon_square_2_orange.png["Passaggio 2"]
  a| 
 Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host:
 
@@ -457,7 +456,7 @@ image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png["Passaggio 3"]
+image:../media/icon_square_3_purple.png["Passaggio 3"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45:
 
@@ -506,7 +505,7 @@ image::../media/drw_2700_ha_storage_cabling_animated_gif.png[Cablaggio degli she
 
 
  a| 
-image:../media/oie_legend_icon_1_lo.png["Numero di didascalia 1"]
+image:../media/icon_square_1_blue.png["Numero di didascalia 1"]
  a| 
 Cablare le porte shelf-to-shelf.
 
@@ -520,7 +519,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS 
 
 
  a| 
-image:../media/oie_legend_icon_2_mb.png["Passaggio 2"]
+image:../media/icon_square_2_yellow.png["Passaggio 2"]
  a| 
 Collegare ciascun nodo a IOM A nello stack.
 
@@ -534,7 +533,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS 
 
 
  a| 
-image:../media/oie_legend_icon_3_t.png["Passaggio 3"]
+image:../media/icon_square_3_teal.png["Passaggio 3"]
  a| 
 Collegare ciascun nodo all'IOM B nello stack
 

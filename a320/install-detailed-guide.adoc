@@ -125,7 +125,7 @@ X66260-5 (112-00344), 5 m.
 
 X66260-30 (112-00354), 30 m.
  a| 
-image:../media/oie_cable_fiber_lc_connector.png["Immagine che mostra un connettore LC in fibra ottica"]
+image:../media/oie_cable_fiber_lc_connector.png["Connettore in fibra LC"]
  a| 
 Configurazioni FC (in base all'ordine)
 
@@ -149,7 +149,7 @@ Cavo per console micro-USB
  a| 
 Non applicabile
  a| 
-image:../media/oie_cable_micro_usb.png["Immagine che mostra un connettore micro USB"]
+image:../media/oie_cable_micro_usb.png["Connettore micro USB"]
  a| 
 Connessione alla console utilizzata durante l'installazione del software se il laptop o la console non supportano il rilevamento della rete.
 
@@ -227,7 +227,7 @@ image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[Cablagg
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["Fase 1"]
+image:../media/icon_square_1_green.png["Fase 1"]
  a| 
 Collegare tra loro le porte cluster/ha con il cavo da 100 GbE (QSFP28):
 
@@ -238,7 +238,7 @@ Collegare tra loro le porte cluster/ha con il cavo da 100 GbE (QSFP28):
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
+image:../media/icon_square_2_yellow.png["Passaggio 2"]
  a| 
 Se si utilizzano le porte integrate per una connessione di rete dati, collegare i cavi 100GbE o 40GbE agli switch di rete dati appropriati:
 
@@ -248,7 +248,7 @@ Se si utilizzano le porte integrate per una connessione di rete dati, collegare 
 
 
  a| 
-image:../media/oie_legend_icon_3_dr.png["Passaggio 3"]
+image:../media/icon_square_3_orange.png["Passaggio 3"]
  a| 
 Se si utilizzano schede NIC per connessioni Ethernet o FC, collegare le schede NIC agli switch appropriati:
 
@@ -257,7 +257,7 @@ image::../media/drw_a320_nic_connections_step3.png[Il cluster senza switch a due
 
 
  a| 
-image:../media/oie_legend_icon_4_lp.png["Passaggio 4"]
+image:../media/icon_square_4_red.png["Passaggio 4"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
 
@@ -300,7 +300,7 @@ image::../media/drw_a320_switched_network_cabling_composite_animated_GIF.png[Cab
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["Fase 1"]
+image:../media/icon_square_1_green.png["Fase 1"]
  a| 
 Collegare le porte cluster/ha allo switch cluster/ha con il cavo 100 GbE (QSFP28):
 
@@ -311,7 +311,7 @@ Collegare le porte cluster/ha allo switch cluster/ha con il cavo 100 GbE (QSFP28
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["Passaggio 2"]
+image:../media/icon_square_2_yellow.png["Passaggio 2"]
  a| 
 Se si utilizzano le porte integrate per una connessione di rete dati, collegare i cavi 100GbE o 40GbE agli switch di rete dati appropriati:
 
@@ -321,7 +321,7 @@ Se si utilizzano le porte integrate per una connessione di rete dati, collegare 
 
 
  a| 
-image:../media/oie_legend_icon_3_dr.png["Passaggio 3"]
+image:../media/icon_square_3_orange.png["Passaggio 3"]
  a| 
 Se si utilizzano schede NIC per connessioni Ethernet o FC, collegare le schede NIC agli switch appropriati:
 
@@ -330,7 +330,7 @@ image::../media/drw_a320_nic_connections_step3.png[Connessioni di rete del clust
 
 
  a| 
-image:../media/oie_legend_icon_4_lp.png["Passaggio 4"]
+image:../media/icon_square_4_red.png["Passaggio 4"]
  a| 
 Collegare le porte e0M agli switch della rete di gestione con i cavi RJ45.
 
@@ -377,14 +377,14 @@ image::../media/drw_a320_single_shelf_connections_animated_gif.png[Cablaggio com
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
+image:../media/icon_square_1_blue.png["Numero di didascalia 1"]
  a| 
 Collegare il controller A al ripiano image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png["Collegare il controller a allo shelf"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
+image:../media/icon_square_2_yellow.png["Numero di didascalia 2"]
  a| 
 Collegare il controller B al ripiano: image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png["Collegare il controller B a un singolo shelf"]
 
@@ -416,14 +416,14 @@ image::../media/drw_a320_2_shevles_cabling_animated_gif.png[Animazione dei due r
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png["Numero di didascalia 1"]
+image:../media/icon_square_1_blue.png["Numero di didascalia 1"]
  a| 
 Collegare il controller A ai ripiani: image:../media/drw_a320_2_shelves_cabling_controller_a.png["Collegare due ripiani al controller A."]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png["Numero di didascalia 2"]
+image:../media/icon_square_2_yellow.png["Numero di didascalia 2"]
  a| 
 Collegare il controller B ai ripiani: image:../media/drw_a320_2_shelves_cabling_controller_b.png["Il cavo di collegamento al controller b"]
 

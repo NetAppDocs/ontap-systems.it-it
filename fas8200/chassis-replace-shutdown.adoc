@@ -17,30 +17,28 @@ Per sostituire lo chassis, è necessario spegnere i controller.
 
 == Opzione 1: La maggior parte delle configurazioni
 
-Questa procedura è valida solo per configurazioni a 2 nodi non MetroCluster. Se si dispone di un sistema con più di due nodi, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Come eseguire uno spegnimento e l'accensione di una coppia ha in un cluster a 4 nodi"^].
+Spegnere i controller per eseguire la manutenzione dello chassis.
+
+Questa procedura si applica ai sistemi con configurazioni a due nodi. Se si dispone di un sistema con più di due nodi, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Come eseguire un arresto e un'accensione regolari di una coppia ha in un cluster a quattro nodi"^].
 
 .Prima di iniziare
-Hai bisogno di:
-
-* Credenziali dell'amministratore locale per ONTAP.
-* Passphrase per la gestione delle chiavi integrata di NetApp (OKM) a livello del cluster se si utilizza la crittografia storage o NVE/NAE.
-* Accessibilità BMC per ciascun controller.
 * Impedire a tutti i client/host di accedere ai dati sul sistema NetApp.
 * Sospendere i processi di backup esterni.
-* Strumenti e attrezzature necessari per la sostituzione.
+* Assicurarsi di disporre delle autorizzazioni e delle credenziali necessarie:
++
+** Credenziali dell'amministratore locale per ONTAP.
+** Passphrase per la gestione delle chiavi integrata di NetApp (OKM) a livello del cluster se si utilizza la crittografia storage o NVE/NAE.
+** Accessibilità BMC per ciascun controller.
 
 
+* Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
+* Come Best practice prima dello spegnimento, è necessario:
++
+** Eseguire ulteriori operazioni https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["controlli dello stato del sistema"].
+** Aggiornare ONTAP a una versione consigliata per il sistema.
+** Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"]. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.
 
-NOTE: Se il sistema è un NetApp StorageGRID o ONTAP S3 utilizzato come Tier cloud FabricPool, fare riferimento a. https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Arrestare e accendere correttamente il sistema storage Guida alla risoluzione dei problemi"] dopo aver eseguito questa procedura.
 
-
-NOTE: Se si utilizzano SSD, fare riferimento a. https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: (Impatto: Critico) Best Practice SSD: Evita il rischio di guasti al disco e perdita di dati se spento per più di due mesi"]
-
-Come Best practice prima dello spegnimento, è necessario:
-
-* Eseguire ulteriori operazioni https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["controlli dello stato del sistema"].
-* Aggiornare ONTAP a una versione consigliata per il sistema.
-* Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"]. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.
 
 
 .Fasi
@@ -62,7 +60,7 @@ Se si utilizza una console/laptop, accedere al controller utilizzando le stesse 
 
 NOTE: Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monitorare l'avanzamento.
 
-. Arrestare i 2 nodi situati nel telaio danneggiato:
+. Arrestare i due nodi situati nel telaio danneggiato:
 +
 `system node halt -node <node>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
 
@@ -73,6 +71,11 @@ NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalit
 . Immettere *y* per ogni controller nel cluster quando viene visualizzato `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
 {y|n}:_`
 . Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.
+
+
+.Quali sono le prossime novità?
+* Se il sistema è un NetApp StorageGRID o ONTAP S3 utilizzato come Tier cloud FabricPool, fare riferimento alla https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Arrestare e accendere correttamente il sistema storage Guida alla risoluzione dei problemi"] procedura dopo aver eseguito questa chiusura.
+* Se si utilizzano le unità SSD, fare riferimento a https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: (Impatto: Critico) Best Practice SSD: Evita il rischio di guasti al disco e perdita di dati se spento per più di due mesi"] dopo aver eseguito questa procedura di arresto.
 
 
 
