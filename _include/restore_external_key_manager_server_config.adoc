@@ -7,19 +7,21 @@ Ripristinare la configurazione del gestore delle chiavi esterno dal menu di avvi
 .Prima di iniziare
 Per ripristinare la configurazione del gestore chiavi esterno (EKM) sono necessarie le seguenti informazioni:
 
-* È necessaria una copia del file /cfcard/kmip/servers.cfg da un altro nodo del cluster, oppure le seguenti informazioni:
-* L'indirizzo del server KMIP.
-* Porta KMIP.
-* Una copia del file /cfcard/kmip/certs/client.crt da un altro nodo del cluster o, il certificato del client.
-* Una copia del file /cfcard/kmip/certs/client.key da un altro nodo del cluster o, la chiave del client.
-* Una copia del file /cfcard/kmip/certs/CA.pem da un altro nodo del cluster o, le CA del server KMIP.
+* Una copia del file /cfcard/kmip/servers.cfg da un altro nodo del cluster, o le seguenti informazioni:
++
+** L'indirizzo del server KMIP.
+** Porta KMIP.
+** Una copia del file /cfcard/kmip/certs/client.crt da un altro nodo del cluster o, il certificato del client.
+** Una copia del file /cfcard/kmip/certs/client.key da un altro nodo del cluster o, la chiave del client.
+** Una copia del file /cfcard/kmip/certs/CA.pem da un altro nodo del cluster o, le CA del server KMIP.
+
+
 
 
 .Fasi
 . Selezionare l'opzione 11 dal menu di avvio di ONTAP.
 +
-[listing]
-----
+....
 
 (1)  Normal Boot.
 (2)  Boot without /etc/rc.
@@ -34,7 +36,7 @@ Per ripristinare la configurazione del gestore chiavi esterno (EKM) sono necessa
 (11) Configure node for external key management.
 Selection (1-11)? 11
 
-----
+....
 . Quando richiesto, confermare di aver raccolto le informazioni richieste:
 +
 .. `Do you have a copy of the /cfcard/kmip/certs/client.crt file? {y/n}` _y_
@@ -54,13 +56,14 @@ In alternativa, è possibile anche visualizzare le seguenti istruzioni:
 
 . Fornire le informazioni relative a ciascuna di queste richieste:
 +
-.. `Enter the client certificate (client.crt) file contents:`
-.. `Enter the client key (client.key) file contents:`
-.. `Enter the KMIP server CA(s) (CA.pem) file contents:`
-.. `Enter the server configuration (servers.cfg) file contents:`
+.. _Immettere il contenuto del file del certificato client (client.crt):_
+.. _Immettere il contenuto del file della chiave client (client.key):_
+.. _Immettere il contenuto del file CA (CA.pem) del server KMIP:_
+.. _Immettere il contenuto del file di configurazione del server (servers.cfg):_
+
+
 +
-[listing]
-----
+....
 
 Example
 
@@ -97,13 +100,10 @@ Running command '/sbin/ifconfig e0M'
 ..
 kmip_init: cmd: ReleaseExtraBSDPort e0M
 ​​​​​​
-----
-
-
+....
 . Il processo di ripristino verrà completato:
 +
-[listing]
-----
+....
 
 
 System is ready to utilize external key manager(s).
@@ -111,11 +111,11 @@ Trying to recover keys from key servers....
 [Aug 29 21:06:28]: 0x808806100: 0: DEBUG: kmip2::main: [initOpenssl]:460: Performing initialization of OpenSSL
 Successfully recovered keymanager secrets.
 
-----
+....
 . Selezionare l'opzione 1 dal menu di avvio per continuare l'avvio in ONTAP.
-+
-[listing]
-----
+
+
+....
 
 ***********************************************************************************
 * Select option "(1) Normal Boot." to complete the recovery process.
@@ -136,5 +136,4 @@ Successfully recovered keymanager secrets.
 (11) Configure node for external key management.
 Selection (1-11)? 1
 
-----
-
+....

@@ -1,10 +1,10 @@
 ---
-permalink: asa-r2-70-90/controller-replace-shutdown-asa-r2.html 
+permalink: asa-r2-a1k/controller-replace-shutdown-nomcc.html 
 sidebar: sidebar 
-keywords: asa r2 a70, asa r2 a90, shut down the impaired controller 
+keywords: asa r2 a1k, shut down the impaired controller 
 summary: Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso. 
 ---
-= Spegnere il controller danneggiato - ASA A70 e ASA A90
+= Spegnere il controller danneggiato - ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ Spegnere o sostituire il controller compromesso.
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
-* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, lo stato del quorum di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["stato quorum"] di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
 +
 Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
 

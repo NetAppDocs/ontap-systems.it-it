@@ -4,76 +4,189 @@ sidebar: sidebar
 keywords: aff a70, aff a90, pre-shutdown checks for onboard encryption keys 
 summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
 ---
-= Controllare le chiavi di crittografia integrate - AFF A70 e AFF A90
+= Verificare il supporto e lo stato della chiave di crittografia - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione.
-
-Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+Prima di spegnere il controller danneggiato, verifica che la tua versione di ONTAP supporti la crittografia dei volumi NetApp (NVE) e che il tuo sistema di gestione delle chiavi sia configurato correttamente.
 
 
 
-== Controllare NVE o NSE sui sistemi
+== Passaggio 1: Verificare se la versione di ONTAP in uso supporta la crittografia
 
-Prima di arrestare il controller danneggiato, è necessario verificare se il sistema ha attivato il gestore delle chiavi di sicurezza o dischi crittografati.
+Verifica se la versione di ONTAP in uso supporta la crittografia dei volumi di NetApp (NVE). Queste informazioni sono fondamentali per scaricare l'immagine ONTAP corretta.
 
-
-
-== Verificare la configurazione del gestore delle chiavi di protezione
-
-.Fasi
-. Determinare se Key Manager è attivo con il comando _Security key-manager keystore show_. Per ulteriori informazioni, consultare la https://docs.netapp.com/us-en/ontap-cli/security-key-manager-keystore-show.html["Security key-manager keystore mostra pagina MAN"^]
+. Per determinare se la versione di ONTAP in uso supporta la crittografia, eseguire il seguente comando:
 +
-
-NOTE: È possibile che si disponga di altri tipi di gestore delle chiavi. I tipi sono `KMIP`, , `AKV`e `GCP`. Il processo di conferma di questi tipi è lo stesso dei tipi di gestore delle chiavi o di conferma `external` `onboard` .
+`version -v`
 
 +
-** Se non viene visualizzata alcuna uscita, andare a link:bootmedia-shutdown.html["spegnere il controller danneggiato"] per arrestare il nodo danneggiato.
-** Se il comando visualizza output, il sistema è `security key-manager` attivo ed è necessario visualizzare il tipo e lo `Key Manager` stato.
+Se l'output include `1Ono-DARE`, NVE non è supportato nella versione del cluster.
 
-
-. Visualizzare le informazioni per l'attivo `Key Manager` utilizzando il comando _Security key-manager key query_.
+. In base al supporto di NVE sul tuo sistema, esegui una delle seguenti azioni:
 +
-** Se `Key Manager` viene visualizzato il tipo `external` e la `Restored` colonna visualizza `true`, è possibile spegnere il controller danneggiato in tutta sicurezza.
-** Se viene visualizzato il `Key Manager` tipo `onboard` e la `Restored` colonna viene visualizzata `true`, è necessario completare alcuni passaggi aggiuntivi.
-** Se il `Key Manager` tipo viene visualizzato `external` e la `Restored` colonna visualizza qualcosa di diverso da `true`, è necessario completare alcuni passaggi aggiuntivi.
-** Se il `Key Manager` tipo viene visualizzato `onboard` e la `Restored` colonna visualizza qualcosa di diverso da `true`, è necessario completare alcuni passaggi aggiuntivi.
+** Se NVE è supportato, scarica l'immagine ONTAP con crittografia dei volumi di NetApp.
+** Se NVE non è supportato, scaricare l'immagine ONTAP *senza* crittografia del volume NetApp.
 
 
-. Se viene visualizzato il `Key Manager` tipo `onboard` e viene visualizzata la `Restored` colonna `true`, eseguire manualmente il backup delle informazioni OKM:
+
+
+
+
+== Fase 2: Determinare se è possibile arrestare il controller in modo sicuro
+
+Per arrestare in modo sicuro un controller, identificare prima se il gestore delle chiavi integrato (OKM) o il gestore delle chiavi esterno (EKM) è attivo. Quindi, verificare il gestore delle chiavi in uso, visualizzare le informazioni sulla chiave appropriate ed eseguire le azioni necessarie in base allo stato delle chiavi di autenticazione.
+
+. Determinare quale gestore delle chiavi è abilitato sul proprio sistema:
 +
-.. Immettere `y` quando viene richiesto di continuare: `set -priv advanced`
-.. Immettere il comando per visualizzare le informazioni sulla gestione delle chiavi: _Security key-manager onboard show-backup_
-.. Copiare il contenuto delle informazioni di backup in un file separato o nel file di log. Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
-.. È possibile arrestare il controller danneggiato in modo sicuro.
+[cols="1a,2a"]
+|===
+| Tipo di gestore delle chiavi | Attenersi alla procedura descritta di seguito... 
 
 
-. Se il `Key Manager` tipo viene visualizzato `onboard` e la `Restored` colonna visualizza qualcosa di diverso da `true`:
+ a| 
+Gestore chiavi esterno (EKM)
+ a| 
+Determinare se EKM è abilitato sul proprio sistema eseguendo il seguente comando:
+
+`security key-manager show key store`
+
+Se EKM è abilitato, `external` viene elencato nell'output.
+
+
+
+ a| 
+Onboard Key Manager (OKM)
+ a| 
+Determinare se OKM è abilitato nel sistema eseguendo uno dei seguenti comandi in base alla versione di ONTAP in esecuzione nel nodo.
+
+** Per ONTAP 9.14,1 o versione successiva, immettere il seguente comando:
 +
-.. Immettere il comando di sincronizzazione del gestore delle chiavi di sicurezza integrato: _Security key-manager onboard Sync_
+`security key-manager keystore show`
+
 +
+Se OKM è attivato, `OKM` viene elencato nell'output del comando.
 
-NOTE: Immettere la passphrase di gestione della chiave integrata alfanumerica di 32 caratteri al prompt. Se non è possibile fornire la passphrase, contattare l'assistenza NetApp. http://mysupport.netapp.com/["mysupport.netapp.com"^]
+** Per ONTAP 9.13,1 o versioni precedenti, immettere il seguente comando:
++
+`security key-manager show-key-store`
 
-.. Verificare che venga visualizzata la `Restored` colonna `true` per tutte le chiavi di autenticazione: `security key-manager key query`
++
+Se OKM è attivato, `onboard` viene elencato nell'output del comando.
+
+
+
+|===
+. Immettere il seguente comando di query per visualizzare lo stato delle chiavi di autenticazione nel gestore delle chiavi:
++
+`security key-manager key query`
+
+. Controllare l'output per il valore nella `Restored` colonna per il gestore delle chiavi.
++
+Questa colonna indica se le chiavi di autenticazione per il gestore delle chiavi (EKM o OKM) sono state ripristinate correttamente.
+
++
+** Se il valore nella colonna ripristinata è vero, i tasti vengono ripristinati correttamente ed è sicuro procedere con lo spegnimento del controller.
+** Se il valore è diverso da true, le chiavi non sono state ripristinate e sarà necessario eseguire ulteriori operazioni (ripristino o sincronizzazione delle chiavi) a seconda che si utilizzi EKM o OKM.
+
+
+. A seconda che si stia utilizzando EKM o OKM, selezionare una delle seguenti opzioni e seguire la procedura appropriata a seconda del valore di output visualizzato nella `Restored` colonna.
++
+[role="tabbed-block"]
+====
+.EKM
+--
+A seconda del valore di output visualizzato nella `Restored` colonna, seguire la procedura appropriata.
+
+[cols="1a,2a"]
+|===
+| Valore di output in `Restored` colonna | Attenersi alla procedura descritta di seguito... 
+
+
+ a| 
+`true`
+ a| 
+È possibile arrestare il controller danneggiato in modo sicuro. Andare a link:bootmedia-shutdown.html["spegnere il controller danneggiato"].
+
+
+
+ a| 
+Altro `true`
+ a| 
+.. Ripristinare le chiavi di autenticazione della gestione delle chiavi esterne in tutti i nodi del cluster utilizzando il seguente comando:
++
+`security key-manager external restore`
+
++
+Se il comando non riesce, contattare http://mysupport.netapp.com/["Supporto NetApp"^].
+
+.. Verificare che la `Restored` colonna visualizzata `true` per tutte le chiavi di autenticazione immettendo il  `_security key-manager key query_`comando.
++
+Se tutte le chiavi di autenticazione sono `true`, è possibile arrestare il controller danneggiato in modo sicuro. Andare a link:bootmedia-shutdown.html["spegnere il controller danneggiato"].
+
+
+
+|===
+--
+.OKM
+--
+A seconda del valore di output visualizzato nella `Restored` colonna, seguire la procedura appropriata.
+
+[cols="1a,2a"]
+|===
+| Valore di output in `Restored` colonna | Attenersi alla procedura descritta di seguito... 
+
+
+ a| 
+`true`
+ a| 
+Eseguire manualmente il backup delle informazioni OKM.
+
+.. Accedere alla modalità avanzata immettendo `set -priv advanced` e quindi immettere `Y` quando richiesto.
+.. Immettere il seguente comando per visualizzare le informazioni sulla gestione delle chiavi:
++
+`security key-manager onboard show-backup`
+
+.. Copiare il contenuto delle informazioni di backup in un file separato o nel file di log.
++
+Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
+
+.. È possibile arrestare il controller danneggiato in modo sicuro. Andare a link:bootmedia-shutdown.html["spegnere il controller danneggiato"].
+
+
+
+
+ a| 
+Altro `true`
+ a| 
+.. Immettere il comando di sincronizzazione del gestore delle chiavi di sicurezza integrato:
++
+`security key-manager onboard sync`
+
+.. Immettere la passphrase di gestione della chiave integrata alfanumerica di 32 caratteri quando richiesto.
++
+Se non è possibile fornire la passphrase, contattare http://mysupport.netapp.com/["Supporto NetApp"^].
+
+.. Verificare che venga visualizzata la `Restored` colonna `true` per tutte le chiavi di autenticazione:
++
+`security key-manager key query`
+
 .. Verificare che il `Key Manager` tipo sia visualizzato `onboard`, quindi eseguire manualmente il backup delle informazioni OKM.
-.. Immettere il comando per visualizzare le informazioni di backup della gestione delle chiavi: _Security key-manager onboard show-backup_
-.. Copiare il contenuto delle informazioni di backup in un file separato o nel file di log. Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
-.. È possibile spegnere il controller in modo sicuro.
-
-
-. Se il `Key Manager` tipo viene visualizzato `external` e la `Restored` colonna visualizza qualcosa di diverso da `true`:
+.. Immettere il comando per visualizzare le informazioni di backup per la gestione delle chiavi:
 +
-.. Ripristinare le chiavi di autenticazione per la gestione delle chiavi esterne in tutti i nodi del cluster: `security key-manager external restore`
+`security key-manager onboard show-backup`
+
+.. Copiare il contenuto delle informazioni di backup in un file separato o nel file di log.
 +
-Se il comando non riesce, contattare l'assistenza NetApp all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ripristinare manualmente OKM.
 
-.. Verificare che venga visualizzata la `Restored` colonna `true` per tutte le chiavi di autenticazione: _Security key-manager key query_
-.. È possibile arrestare il controller danneggiato in modo sicuro.
+.. È possibile arrestare il controller danneggiato in modo sicuro. Andare a link:bootmedia-shutdown.html["spegnere il controller danneggiato"].
 
 
+|===
+--
+====
 

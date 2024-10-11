@@ -13,104 +13,32 @@ L'immagine viene scaricata dall'unità flash USB.
 +
 [cols="1,2"]
 |===
-| Se il sistema dispone di... | Quindi... 
+| Se il sistema è in esecuzione... | Quindi... 
 
 
  a| 
-Una connessione di rete
+ONTAP 9.16.0 o versioni precedenti
  a| 
-.. Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
-.. Premere `y` quando viene richiesto di sovrascrivere `/etc/ssh/ssh_host_ecdsa_key`.
-.. Premere `y` quando viene richiesto di confermare se il backup di ripristino è stato eseguito correttamente.
-.. Premere `Y` quando viene richiesto di ripristinare la copia della configurazione.
-.. Impostare il controller compromesso sul livello di privilegio avanzato: `set -privilege advanced`
-.. Eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address`
-.. Riportare il controller compromesso al livello di amministrazione: `set -privilege admin`
-.. Premere `y` quando viene richiesto di utilizzare la configurazione ripristinata.
-.. Premere `y` quando viene richiesto di riavviare il controller compromesso.
-
-
-
-
- a| 
-Nessuna connessione di rete
- a| 
-.. Premere `n` quando viene richiesto di ripristinare la configurazione di backup.
-.. Riavviare il sistema quando richiesto dal sistema.
-.. Selezionare l'opzione *Update flash from backup config* (Sync flash) dal menu visualizzato.
+.. Sul controller danneggiato, premere _Y_ quando viene visualizzato `Do you want to restore the backup configuration now?`
+.. Sul controller danneggiato, premere _Y_ quando viene richiesto di sovrascrivere `/etc/ssh/ssh_host_ecdsa_key`.
+.. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege admin`.
+.. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address`.
 +
-Se viene richiesto di continuare con l'aggiornamento, premere `y`.
+*NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
 
-
-
-
-
- a| 
-Nessuna connessione di rete e si trova in una configurazione MetroCluster IP
- a| 
-.. Premere `n` quando viene richiesto di ripristinare la configurazione di backup.
-.. Riavviare il sistema quando richiesto dal sistema.
-.. Attendere che le connessioni dello storage iSCSI si connettano.
+.. Sul controller partner sano, riportare il controller danneggiato al livello di amministratore: `set -privilege admin`.
+.. Sul controller danneggiato, premere _y_ quando viene visualizzato `Was the restore backup procedure successful?`.
+.. Sul controller danneggiato, premere _y_ quando viene visualizzato `...would you like to use this restored copy now?`.
+.. Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il controller danneggiato e premere _ctrl-c_ per il menu di avvio.
+.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia_encryption_restore.html["Ripristinare i gestori delle chiavi"].
+.. Collegare il cavo della console al controller partner.
+.. Restituire il controller utilizzando il comando _storage failover giveback -fromnode local_.
+.. Ripristinare il giveback automatico se è stato disattivato utilizzando il comando _storage failover modify -node local -auto-giveback true_.
+.. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il comando _system node AutoSupport Invoke -node * -type all -message MAINT=END_.
 +
-È possibile procedere dopo aver visualizzato i seguenti messaggi:
-
-+
-[listing]
-----
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
-----
-.. Selezionare l'opzione *Update flash from backup config* (Sync flash) dal menu visualizzato.
-+
-Se viene richiesto di continuare con l'aggiornamento, premere `y`.
+*NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
 
 
 
 |===
-. Assicurarsi che le variabili ambientali siano impostate come previsto:
-+
-.. Portare la centralina danneggiata al prompt DEL CARICATORE.
-.. Controllare le impostazioni delle variabili di ambiente con il comando printenv.
-.. Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv _environment_variable_name_ _changed_value_` comando.
-.. Salvare le modifiche utilizzando il comando saveenv.
-
-
-. Il successivo dipende dalla configurazione del sistema:
-+
-** Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito xref:bootmedia_encryption_restore.adoc[Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE]
-** Se il sistema non dispone di onboard keymanager, NSE o NVE configurati, completare la procedura descritta in questa sezione.
-
-
-. Dal prompt DEL CARICATORE, immettere il comando boot_ontap.
-+
-[cols="1,2"]
-|===
-| Se viene visualizzato... | Quindi... 
-
-
- a| 
-Prompt di login
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-.. Accedere al controller partner.
-.. Verificare che il destinatario sia pronto per il giveback con `storage failover show` comando.
-
-
-|===
-. Collegare il cavo della console al controller partner.
-. Restituire il controller utilizzando il comando giveback -fromnode local di failover dello storage.
-. Al prompt del cluster, controllare le interfacce logiche con il comando net int -is-home false.
-+
-Se le interfacce sono elencate come "false", ripristinarle nella porta home utilizzando il comando net int revert.
-
-. Spostare il cavo della console sul dispositivo riparato spegnere o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione. Ed eseguire il comando version -v per controllare le versioni di ONTAP.
-. Ripristinare il giveback automatico se è stato disattivato utilizzando il comando storage failover modify -node local -auto-giveback true.
 

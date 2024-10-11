@@ -1,5 +1,6 @@
 ---
 permalink: a70-90/bootmedia-replace-requirements.html 
+sidebar: sidebar 
 keywords: aff a70, a90, replace the boot media 
 summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio. 
 ---
@@ -12,7 +13,7 @@ summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio.
 [role="lead"]
 Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
 
-* È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz`.
+* È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
 * È necessario copiare il `image_xxx.tgz` file nell'unità flash USB per utilizzarlo successivamente in questa procedura.
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 * È importante applicare i comandi descritti di seguito al controller corretto:

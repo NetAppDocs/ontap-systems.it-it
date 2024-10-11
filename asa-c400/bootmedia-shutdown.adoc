@@ -1,18 +1,21 @@
 ---
-permalink: fas8300/bootmedia-impaired-controller-shutdown.html 
+permalink: asa-c400/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
+keywords: asa c400, asa, c400, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller compromesso - AFF FAS8300 e FAS8700
+= Spegnere il controller danneggiato - ASA C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
+[role="lead"]
+Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
 
 
-== Opzione 1: La maggior parte dei sistemi
+
+== Opzione 1: La maggior parte delle configurazioni
 
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
@@ -55,9 +58,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 
 
 
-== Opzione 2: Controller in un MetroCluster
-
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+== Opzione 2: Il controller è in una configurazione MetroCluster
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
@@ -108,8 +109,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 == Opzione 3: Controller in un MetroCluster a due nodi
-
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

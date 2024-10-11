@@ -5,52 +5,52 @@ pdf-filename: Manutenzione di ASA A1K
 entries:
 - title: Panoramica della manutenzione
   url: "/asa-r2-a1k/maintain-overview.html"
-- title: Supporto di boot
+- title: Supporti di avvio - ripristino automatico
   pdf-filename: Supporti di avvio di ASA A1K
   entries:
   - title: Panoramica dei supporti di avvio
+    url: "/asa-r2-a1k/bootmedia-overview-bmr.html"
+  - title: Flusso di lavoro di sostituzione dei supporti di avvio
+    url: "/asa-r2-a1k/bootmedia-replace-workflow-bmr.html"
+  - title: Verifica dei requisiti
+    url: "/asa-r2-a1k/bootmedia-replace-requirements-bmr.html"
+  - title: Spegnere il controller compromesso
+    url: "/asa-r2-a1k/bootmedia-shutdown-bmr.html"
+  - title: Sostituire il supporto di avvio
+    url: "/asa-r2-a1k/bootmedia-replace-bmr.html"
+  - title: Ripristinare l'immagine sul supporto di avvio
+    url: "/asa-r2-a1k/bootmedia-recovery-image-boot-bmr.html"
+  - title: Restituire la parte guasta a NetApp
+    url: "/asa-r2-a1k/bootmedia-complete-rma-bmr.html"
+- title: Supporti di avvio - ripristino manuale
+  entries:
+  - title: Panoramica dei supporti di avvio
     url: "/asa-r2-a1k/bootmedia-overview.html"
-  - title: Metodo automatizzato
-    entries:
-    - title: Flusso di lavoro di sostituzione dei supporti di avvio
-      url: "/asa-r2-a1k/bootmedia-replace-workflow-bmr.html"
-    - title: Verifica dei requisiti
-      url: "/asa-r2-a1k/bootmedia-replace-requirements-bmr.html"
-    - title: Spegnere il controller compromesso
-      url: "/asa-r2-a1k/bootmedia-shutdown-bmr.html"
-    - title: Sostituire il supporto di avvio
-      url: "/asa-r2-a1k/bootmedia-replace-bmr.html"
-    - title: Ripristinare l'immagine sul supporto di avvio
-      url: "/asa-r2-a1k/bootmedia-recovery-image-boot-bmr.html"
-    - title: Restituire la parte guasta a NetApp
-      url: "/asa-r2-a1k/bootmedia-complete-rma-bmr.html"
-  - title: Metodo manuale
-    entries:
-    - title: Flusso di lavoro di sostituzione dei supporti di avvio
-      url: "/asa-r2-a1k/bootmedia-replace-workflow.html"
-    - title: Verifica dei requisiti
-      url: "/asa-r2-a1k/bootmedia-replace-requirements.html"
-    - title: Controllare le chiavi di crittografia integrate
-      url: "/asa-r2-a1k/bootmedia-encryption-preshutdown-checks.html"
-    - title: Spegnere il controller compromesso
-      url: "/asa-r2-a1k/bootmedia-shutdown.html"
-    - title: Sostituire il supporto di avvio
-      url: "/asa-r2-a1k/bootmedia-replace.html"
-    - title: Immagine di recovery all'avvio
-      url: "/asa-r2-a1k/bootmedia-recovery-image-boot.html"
-    - title: Ripristino della crittografia
-      url: "/asa-r2-a1k/bootmedia-encryption-restore.html"
-    - title: Restituire la parte guasta a NetApp
-      url: "/asa-r2-a1k/bootmedia-complete-rma.html"
+  - title: Flusso di lavoro di sostituzione dei supporti di avvio
+    url: "/asa-r2-a1k/bootmedia-replace-workflow.html"
+  - title: Verifica dei requisiti
+    url: "/asa-r2-a1k/bootmedia-replace-requirements.html"
+  - title: Controllare le chiavi di crittografia
+    url: "/asa-r2-a1k/bootmedia-encryption-preshutdown-checks.html"
+  - title: Spegnere il controller compromesso
+    url: "/asa-r2-a1k/bootmedia-shutdown.html"
+  - title: Sostituire il supporto di avvio
+    url: "/asa-r2-a1k/bootmedia-replace.html"
+  - title: Immagine di recovery all'avvio
+    url: "/asa-r2-a1k/bootmedia-recovery-image-boot.html"
+  - title: Ripristino della crittografia
+    url: "/asa-r2-a1k/bootmedia-encryption-restore.html"
+  - title: Restituire la parte guasta a NetApp
+    url: "/asa-r2-a1k/bootmedia-complete-rma.html"
 - title: Controller
-  pdf-filename: Modulo controller ASA A1K
+  pdf-filename: Controller A1K ASA
   entries:
   - title: Flusso di lavoro di sostituzione del controller
     url: "/asa-r2-a1k/controller-replace-workflow.html"
   - title: Verifica dei requisiti
     url: "/asa-r2-a1k/controller-replace-requirements.html"
   - title: Spegnere il controller compromesso
-    url: "/asa-r2-a1k/controller-replace-shutdown-asa-r2.html"
+    url: "/asa-r2-a1k/controller-replace-shutdown-nomcc.html"
   - title: Sostituire il controller
     url: "/asa-r2-a1k/controller-replace-move-hardware.html"
   - title: Ripristinare la configurazione del sistema
@@ -68,6 +68,7 @@ entries:
 - title: Batteria NV
   url: "/asa-r2-a1k/nvdimm-battery-replace.html"
 - title: Modulo i/O.
+  pdf-filename: Modulo i/o ASA A1K
   entries:
   - title: Panoramica del modulo di i/O.
     url: "/asa-r2-a1k/io-module-overview.html"

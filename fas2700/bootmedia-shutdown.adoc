@@ -1,10 +1,10 @@
 ---
-permalink: a700/bootmedia-impaired-controller-shutdown.html 
+permalink: fas2700/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, shut, down, impaired, controller, take, over 
+keywords: fas2700, aff a220, shut, down, impaired, controller, take, over 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller compromesso - AFF A700
+= Spegnere il controller compromesso - AFF A220 e FAS2700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ Arrestare o sostituire il controller con problemi utilizzando la procedura appro
 
 
 
-== Opzione 1: La maggior parte dei sistemi
+== Opzione 1: La maggior parte delle configurazioni
 
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
@@ -58,58 +58,9 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 
 
 
-=== Opzione 2: Controller in un MetroCluster
+== Opzione 2: Controller in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso. NOTA: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
-
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* Se si dispone di una configurazione MetroCluster, è necessario confermare che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
-
-
-.Fasi
-. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
-
-
-== Opzione 3: Controller in un MetroCluster a due nodi
-
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.
+Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

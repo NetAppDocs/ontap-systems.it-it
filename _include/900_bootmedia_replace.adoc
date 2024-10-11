@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-È necessario rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l'immagine sul supporto di avvio sostitutivo.
+È necessario scollegare il modulo controller, rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l'immagine sul supporto di avvio sostitutivo.
 
 
 
@@ -113,16 +113,29 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 .Prima di iniziare
 * È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
-* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
+* Scaricare una copia della stessa versione dell'immagine di ONTAP del controller danneggiato in esecuzione. Puoi scaricare l'immagine appropriata dalla sezione Downloads del sito di supporto NetApp. USA il `version -v` comando per visualizzare se la tua versione di ONTAP supporta NVE. Se viene visualizzato il comando output `<10no- DARE>` , la versione di ONTAP non supporta NVE.
 +
-** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
-** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
+** Se NVE è supportato dalla tua versione di ONTAP, scarica l'immagine con crittografia dei volumi di NetApp, come indicato nel pulsante di download.
+** Se NVE non è supportato, scaricare l'immagine senza crittografia dei volumi di NetApp, come indicato nel pulsante di download.
 
 
 * Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
 
 
 .Fasi
+. In caso contrario, scaricare e copiare l'immagine di assistenza appropriata dal https://mysupport.netapp.com/["Sito di supporto NetApp"] nell'unità flash USB.
++
+.. Scaricare l'immagine del servizio dal collegamento Download nella pagina, nello spazio di lavoro del computer portatile.
+.. Decomprimere l'immagine del servizio.
++
+
+NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
+
++
+L'unità flash USB dovrebbe avere l'immagine ONTAP appropriata di ciò che il controller danneggiato è in esecuzione.
+
+
+
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 . Se necessario, è possibile ricable il modulo controller.
 . Inserire l'unità flash USB nello slot USB del modulo controller.

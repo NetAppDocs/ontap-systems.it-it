@@ -211,7 +211,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image:../media/oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
+image:../media/oie_cable_pull_tab_up.png["Direzione della linguetta di estrazione del cavo"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -243,7 +243,7 @@ image:../media/oie_cable100_gbe_qsfp28.png["Cavo da 100 GB"]
 
 
  a| 
-image:../media/icon_square_2_yellow.png["Numero di didascalia 2"]
+image:../media/icon_square_2_purple.png["Numero di didascalia 2"]
  a| 
 Porte per la gestione del controller dei cavi (chiave).
 
@@ -280,7 +280,7 @@ image:../media/oie_cable_sfp_gbe_copper.png["GbE rame SFP"]
 
 
  a| 
-image:../media/icon_square_4_red.png["Icona cinque didascalie"]
+image:../media/icon_square_5_grey.png["Icona cinque didascalie"]
  a| 
 ** Fissare i cavi ai bracci di gestione dei cavi (non mostrati).
 ** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
@@ -299,7 +299,7 @@ Per informazioni sulla connessione del sistema agli switch, contattare l'amminis
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
-image:../media/oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
+image:../media/oie_cable_pull_tab_up.png["Direzione della linguetta di estrazione del cavo"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
@@ -318,7 +318,7 @@ image:../media/drw_a900_switched_network_cabling_IEOPS-934.svg["larghezza = 500 
 
 
  a| 
-immagine:../media/icon_square_1_green.png[
+image:../media/icon_square_1_green.png["Numero di didascalia 1"]
  a| 
 Porte a di interconnessione del cluster di cavi:
 
@@ -368,7 +368,7 @@ image:../media/oie_cable_sfp_gbe_copper.png["GbE rame SFP"]
 
 
  a| 
-image:../media/icon_square_4_red.png["Icona cinque didascalie"]
+image:../media/icon_square_5_grey.png["Icona cinque didascalie"]
  a| 
 ** Fissare i cavi ai bracci di gestione dei cavi (non mostrati).
 ** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
@@ -399,9 +399,9 @@ Collegare un singolo shelf di dischi NS224 o due shelf di dischi NS224 ai contro
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image:../media/oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
+image:../media/oie_cable_pull_tab_up.png["Direzione della linguetta di estrazione del cavo"]
 
-image:../media/oie_cable_pull_tab_down.svg["larghezza=200px"]
+image:../media/oie_cable_pull_tab_down.png["Direzione della linguetta di estrazione"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -455,9 +455,9 @@ Cavo da 100 GbE
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 
 
-image:../media/oie_cable_pull_tab_up.svg["direzione della linguetta di estrazione del cavo"]
+image:../media/oie_cable_pull_tab_up.png["Direzione della linguetta di estrazione del cavo"]
 
-image:../media/oie_cable_pull_tab_down.svg["larghezza=200px"]
+image:../media/oie_cable_pull_tab_down.png["Direzione della linguetta di estrazione"]
 
 
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, ruotarlo e riprovare.
@@ -487,14 +487,14 @@ image:../media/icon_square_1_blue.png["Numero di didascalia 1"]
 ** Collegare la porta e10a del controller A a NSM A e0a sullo shelf 2.
 
 
-image:../media/oie_cable100_gbe_qsfp28.png["larghezza=50px"]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore QSFP 100 GbE"]
 
 Cavo da 100 GbE
 
 
 
  a| 
-image:../media/icon_square_2_yellow.png["larghezza=30px"]
+image:../media/icon_square_2_yellow.png["Icona didascalia 2"]
  a| 
 ** Collegare la porta e2a del controller B a NSM B e0a sullo shelf 1.
 ** Collegare la porta e10b del controller B a NSM A e0b sullo shelf 1.
@@ -502,7 +502,7 @@ image:../media/icon_square_2_yellow.png["larghezza=30px"]
 ** Collegare la porta e10a del controller B a NSM B e0a sullo shelf 2.
 
 
-image:../media/oie_cable100_gbe_qsfp28.png["larghezza=50px"]
+image:../media/oie_cable100_gbe_qsfp28.png["Connettore QSFP 100 GbE"]
 
 Cavo da 100 GbE
 

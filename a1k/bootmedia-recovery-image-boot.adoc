@@ -32,11 +32,11 @@ ONTAP 9.16.0 o versioni precedenti
 .. Sul controller danneggiato, premere _Y_ quando viene visualizzato `Do you want to restore the backup configuration now?`
 .. Sul controller danneggiato, premere _Y_ quando viene richiesto di sovrascrivere `/etc/ssh/ssh_host_ecdsa_key`.
 .. Sul controller partner integro, impostare il controller con problemi al livello di privilegi avanzato: _Set -Privilege Advanced_.
-.. Sul controller partner integro, eseguire il comando di ripristino del backup: _System node restore-backup -node local -target-address impainted_node_IP_address_.
+.. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address` .
 +
 *NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
 
-.. Sul controller partner sano, riportare il controller danneggiato al livello di amministratore: _Set -Privilege admin_.
+.. Sul controller partner sano, riportare il controller danneggiato al livello di amministratore: `set -privilege admin`.
 .. Sul controller danneggiato, premere _y_ quando viene visualizzato `Was the restore backup procedure successful?`.
 .. Sul controller danneggiato, premere _y_ quando viene visualizzato `...would you like to use this restored copy now?`.
 .. Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il controller danneggiato e premere _ctrl-c_ per il menu di avvio.

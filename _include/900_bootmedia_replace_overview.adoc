@@ -4,7 +4,7 @@
 
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.
 
-È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz`.
+È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
 
 È inoltre necessario copiare il `image_xxx.tgz` Sul disco flash USB per utilizzarlo successivamente in questa procedura.
 
@@ -14,7 +14,7 @@ Il supporto di avvio memorizza un set primario e secondario di file di sistema (
 ** Per la sostituzione delle interruzioni, non è necessaria una connessione di rete per ripristinare `var` file system, ma il processo richiede due riavvii.
 
 
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto da NetApp.
 * È importante applicare i comandi descritti di seguito al controller corretto:
 +
 ** Il controller _alterato_ è il controller su cui si esegue la manutenzione.

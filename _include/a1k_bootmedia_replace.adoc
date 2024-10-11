@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Per sostituire il supporto di avvio, è necessario rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
+È necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
 
 
 
@@ -81,13 +81,13 @@ NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocc
 
 == Passo 2: Trasferire l'immagine ONTAP sul supporto di avvio
 
-Il supporto di avvio sostitutivo installato è privo di un'immagine ONTAP. È possibile trasferire l'immagine ONTAP sul supporto di avvio sostitutivo scaricando l'immagine di servizio ONTAP appropriata da https://mysupport.netapp.com/["Sito di supporto NetApp"] a un'unità flash USB e quindi al supporto di avvio sostitutivo.
+Il supporto di avvio sostitutivo installato non è dotato di un'immagine ONTAP. È possibile trasferire l'immagine ONTAP sul supporto di avvio sostitutivo scaricando l'immagine di servizio ONTAP appropriata da https://mysupport.netapp.com/["Sito di supporto NetApp"] a un'unità flash USB e quindi al supporto di avvio sostitutivo.
 
 .Prima di iniziare
 * È necessario disporre di un'unità flash USB vuota, formattata a FAT32, con una capacità di almeno 4GB GB.
-* È necessario disporre di una copia della stessa versione dell'immagine di ONTAP del controller danneggiato in esecuzione. È possibile scaricare l'immagine appropriata dalla https://support.netapp.com/downloads["Download"] sezione sul sito di assistenza NetApp
+* Scaricare una copia della stessa versione dell'immagine di ONTAP del controller danneggiato in esecuzione. Puoi scaricare l'immagine appropriata dalla sezione Downloads del sito di supporto NetApp. USA il `version -v` comando per visualizzare se la tua versione di ONTAP supporta NVE. Se viene visualizzato il comando output `<10no- DARE>` , la versione di ONTAP non supporta NVE.
 +
-** Se NVE è supportato, scaricare l'immagine con crittografia dei volumi di NetApp, come indicato nel pulsante di download.
+** Se NVE è supportato dalla tua versione di ONTAP, scarica l'immagine con crittografia dei volumi di NetApp, come indicato nel pulsante di download.
 ** Se NVE non è supportato, scaricare l'immagine senza crittografia dei volumi di NetApp, come indicato nel pulsante di download.
 
 
@@ -103,12 +103,9 @@ Il supporto di avvio sostitutivo installato è privo di un'immagine ONTAP. È po
 
 NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
 
-
-
 +
 L'unità flash USB dovrebbe avere l'immagine ONTAP appropriata di ciò che il controller danneggiato è in esecuzione.
 
-+
 .. Rimuovere l'unità flash USB dal computer portatile.
 
 

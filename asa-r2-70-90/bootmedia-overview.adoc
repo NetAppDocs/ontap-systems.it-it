@@ -2,23 +2,15 @@
 permalink: asa-r2-70-90/bootmedia-overview.html 
 sidebar: sidebar 
 keywords: asa r2 a70, a90, overview, the boot media 
-summary: Informazioni sul metodo automatizzato e sul metodo manuale per la sostituzione dei supporti di avvio. 
+summary: Informazioni sul metodo manuale per la sostituzione del supporto di avvio. 
 ---
-= Panoramica sulla sostituzione dei supporti di avvio - ASA A70 e ASA A90
+= Panoramica del ripristino manuale dei supporti di avvio - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile sostituire manualmente un supporto di avvio non riuscito utilizzando il modulo USB per l'immagine di avvio o tramite l'opzione BMR (Automatic Boot Media Recovery).
+È possibile sostituire manualmente un supporto di avvio non riuscito utilizzando il modulo USB per l'immagine di avvio.
 
-* link:bootmedia-replace-workflow-bmr.html["Ripristino automatizzato dei supporti di avvio"]
-+
-Il ripristino automatico dei supporti di avvio utilizza l'immagine di avvio dal nodo parted ed ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.
-
-* link:bootmedia-replace-workflow.html["Sostituzione del supporto di avvio manuale"]
-+
 La sostituzione manuale dei supporti di avvio utilizza il metodo tradizionale per scaricare l'immagine ONTAP dal sito di supporto NetApp, trasferire l'immagine su un'unità USB, scaricarla sul supporto di avvio sostitutivo di destinazione e scorrere manualmente le opzioni del menu di avvio per installare l'immagine ONTAP sul supporto di avvio sostitutivo.
-
-

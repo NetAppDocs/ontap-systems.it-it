@@ -1,17 +1,17 @@
 ---
-permalink: a300/bootmedia-impaired-controller-shutdown.html 
+permalink: c400/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a300, shut down the impaired controller 
+keywords: aff c400, aff, c400, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller non utilizzato - AFF A300
+= Spegnere il controller compromesso - AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
 
 
 
@@ -59,8 +59,6 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 
 
 == Opzione 2: Il controller è in una configurazione MetroCluster
-
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
@@ -111,8 +109,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 == Opzione 3: Controller in un MetroCluster a due nodi
-
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

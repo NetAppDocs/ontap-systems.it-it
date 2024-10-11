@@ -21,14 +21,18 @@ Le procedure descritte in questa sezione presuppongono che il sistema A1K sia gi
 
 Per il sistema di archiviazione ASA A1K, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
 
-[cols="25,65"]
+[cols="30,70"]
 |===
 
 
  a| 
-link:bootmedia-overview.html["Supporto di boot"]
+link:bootmedia-overview.html["Supporti di avvio - ripristino manuale"]
+
+link:bootmedia-overview-bmr.html["Supporti di avvio - ripristino automatico"]
  a| 
-Il supporto di avvio memorizza una serie primaria e secondaria di file di immagine ONTAP che il sistema utilizza all'avvio.
+È possibile sostituire manualmente un supporto di avvio non riuscito utilizzando il modulo USB per l'immagine di avvio.
+
+Sostituzione automatica dei supporti di avvio utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.
 
 
 
