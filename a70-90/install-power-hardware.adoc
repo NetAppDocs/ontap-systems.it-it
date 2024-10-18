@@ -17,10 +17,13 @@ Dopo aver installato l'hardware rack per il sistema di storage AFF A70 o AFF A90
 
 == Passaggio 1: Accendere lo shelf e assegnare l'ID dello shelf
 
-Ogni ripiano NS224 si distingue per un ID ripiano univoco. Grazie a questo ID, lo shelf si distingue all'interno della configurazione del sistema storage. Per impostazione predefinita, gli ID shelf sono assegnati come "00" e "01", tuttavia potrebbe essere necessario regolarli per mantenere l'unicità nel sistema di storage.
+Ogni ripiano si distingue per un ID di ripiano univoco. Grazie a questo ID, lo shelf si distingue all'interno della configurazione del sistema storage.
 
 .A proposito di questa attività
-* Un ID shelf valido va da 00 a 99.
+* Un ID ripiano esterno valido è compreso tra 01 e 99.
++
+Se si dispone di shelf interni (storage), integrati nei controller, viene assegnato un ID shelf fisso pari a 00.
+
 * Per rendere effettivo l'ID dello shelf, è necessario spegnere e riaccendere uno shelf (scollegare entrambi i cavi di alimentazione, attendere il tempo necessario e ricollegarlo).
 
 
@@ -98,7 +101,7 @@ Il lampeggiamento del numero può richiedere fino a tre secondi.
 +
 Il primo numero sul display digitale smette di lampeggiare.
 
-.. Premere e rilasciare il pulsante ID ripiano per far avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
+.. Premere e rilasciare il pulsante ID ripiano per far avanzare il numero fino a raggiungere il numero desiderato da 0 a 9, o da 1 a 9 se il sistema dispone di spazio di archiviazione integrato.
 +
 Il secondo numero continua a lampeggiare.
 

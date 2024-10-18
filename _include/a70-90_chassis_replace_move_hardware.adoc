@@ -162,9 +162,13 @@ Deve essere a filo con la lamiera del modulo controller.
 
 NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
 
-. Ricable il sistema, come necessario.
+. Possibilità di recuperare il sistema storage secondo necessità.
 +
 Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
++
+
+NOTE: Assicurarsi che il cavo della console sia collegato al modulo controller riparato in modo che riceva i messaggi della console al riavvio. Il controller riparato riceve l'alimentazione dal controller in buone condizioni e inizia a riavviarsi non appena viene inserito completamente nello chassis.
 
 . Completare la reinstallazione del modulo controller:
 +
@@ -172,23 +176,21 @@ Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstalla
 +
 I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
 
-
-
 +
 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
-+
 .. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
 
+
++
+
+NOTE: Se il controller viene avviato al prompt di Loader, riavviarlo con il `boot_ontap` comando.
 
 . Collegare i cavi di alimentazione agli alimentatori.
 +
 
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.
-
-+
-Il modulo controller si avvia quando viene ripristinata l'alimentazione. Se viene avviato al prompt del CARICATORE, riavviare il controller con il `boot_ontap` comando.
 
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
 . Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.

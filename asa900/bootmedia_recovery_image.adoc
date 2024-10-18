@@ -13,7 +13,7 @@ summary: 'La procedura per avviare il controller compromesso dall"immagine di ri
 [role="lead"]
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
-. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
+. Dal prompt di Loader, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery <image_name>`
 +
 L'immagine viene scaricata dall'unità flash USB.
 
@@ -30,7 +30,7 @@ ONTAP 9.16.0 o versioni precedenti
  a| 
 .. Sul controller danneggiato, premere _Y_ quando viene visualizzato `Do you want to restore the backup configuration now?`
 .. Sul controller danneggiato, premere _Y_ quando viene richiesto di sovrascrivere `/etc/ssh/ssh_host_ecdsa_key`.
-.. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege admin`.
+.. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege advanced`.
 .. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address`.
 +
 *NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
