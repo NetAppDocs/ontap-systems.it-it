@@ -186,6 +186,9 @@ I fermi di bloccaggio si sollevano quando il modulo controller è completamente 
 NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
 
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true` .
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
@@ -260,6 +263,9 @@ I fermi di bloccaggio si sollevano quando il modulo controller è completamente 
 NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
 
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
@@ -361,8 +367,9 @@ dr-group-id            cluster node           configuration-state
 ----
 . Verificare che i volumi previsti siano presenti per ciascun controller: `vol show -node node-name`
 . Se la crittografia dello storage è attivata, è necessario ripristinare la funzionalità.
-. Se il takeover automatico è stato disattivato al riavvio, abilitarlo dal controller integro: _Storage failover modify -node replacement-node-name -onreboot true_
-. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

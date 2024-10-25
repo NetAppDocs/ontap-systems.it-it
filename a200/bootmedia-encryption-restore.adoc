@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a200, post boot media replacement steps for okm, nse, and nve 
 summary: 'Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi che hanno attivato Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE).' 
 ---
-= Ripristinare OKM, NSE e NVE secondo necessità - AFF A200
+= Ripristinare la crittografia - AFF A200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Ripristinare la crittografia sul supporto di avvio sostitutivo.
+
 È necessario completare i passaggi specifici per i sistemi che hanno attivato Gestione chiavi integrato (OKM), crittografia storage NetApp (NSE) o crittografia del volume NetApp (NVE) utilizzando le impostazioni acquisite all'inizio della procedura di sostituzione dei supporti di avvio.
 
 A seconda di quale gestore di chiavi è configurato sul sistema, selezionare una delle seguenti opzioni per ripristinarlo dal menu di avvio.

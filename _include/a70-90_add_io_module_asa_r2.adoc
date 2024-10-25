@@ -122,7 +122,6 @@ NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializz
 . Ripetere questi passi per il controller B.
 . Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
 . Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
-. Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
 
 
 
@@ -148,7 +147,7 @@ I LIF migrano automaticamente quando il modulo controller viene spento.
  a| 
 Modulo i/o NIC con meno porte
  a| 
-Riassegnare in modo permanente i file LIF ASAected a una porta home diversa. Per informazioni sull'utilizzo di System Manager per lo spostamento permanente delle LIF, consulta la sezione https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
+Riassegnare in modo permanente i file LIF interessati a una porta home diversa. Vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] Per informazioni sull'utilizzo di System Manager per spostare in modo permanente i file LIF.
 
 
 

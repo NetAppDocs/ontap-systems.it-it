@@ -257,9 +257,9 @@ I fermi di bloccaggio si sollevano quando il modulo controller è completamente 
 Riavviare il modulo controller.
 
 . Immettere _bye_ al prompt del CARICATORE.
-. Ripristinare il normale funzionamento del controller restituendo lo storage _storage failover giveback -ofnode _compromesse_node_name__
-. Ripristinare il giveback automatico utilizzando `storage failover modify -node local -auto-giveback true` comando.
-. Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

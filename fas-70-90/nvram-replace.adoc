@@ -225,6 +225,9 @@ NOTE: Consultare l'etichetta della mappa FRU sul lato del modulo NVRAM per deter
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
 . Per avviare ONTAP dal prompt del CARICATORE, immettere _bye_.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `_storage failover giveback -ofnode _impaired_node_name_`.
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true` .
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
@@ -325,9 +328,9 @@ dr-group-id            cluster node           configuration-state
 4 entries were displayed.
 ----
 . Verificare che i volumi previsti siano presenti per ciascun controller: `vol show -node node-name`
-. Se la crittografia dello storage è attivata, è necessario ripristinare la funzionalità.
-. Se il takeover automatico è stato disattivato al riavvio, abilitarlo dal controller integro: _Storage failover modify -node replacement-node-name -onreboot true_
-. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
