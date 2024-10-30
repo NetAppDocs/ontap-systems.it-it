@@ -156,13 +156,7 @@ Pulsante di bloccaggio della camma
 .. Far scorrere delicatamente il modulo fino in fondo nello slot, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
 
 
-. Collegare il modulo i/O.
-+
-Se il modulo i/o è una scheda NIC, collegare il modulo agli switch dati.
-
-+
-Se il modulo i/o è un modulo di archiviazione, collegarlo al ripiano NS224.
-
+. Collegare il modulo i/o al dispositivo designato.
 +
 
 NOTE: Assicurarsi che tutti gli slot i/o inutilizzati siano dotati di spazi vuoti per evitare possibili problemi di temperatura.
@@ -175,7 +169,7 @@ NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializz
 
 . Restituire il controller dal partner controller: _Storage failover giveback -offnode target_node_name_
 . Ripetere questi passi per il controller B.
-. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+. Dal nodo integro, ripristinare il giveback automatico se è stato disattivato utilizzando il `storage failover modify -node local -auto-giveback true` comando.
 . Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 
 
@@ -361,7 +355,7 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 .. Far scorrere delicatamente il modulo nello slot fino in fondo al telaio, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
 
 
-. Collegare il modulo i/O.
+. Collegare il modulo i/o al dispositivo designato.
 . Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per il modulo controller.
 . Ruotare il vassoio di gestione dei cavi in posizione di blocco.
 . Riavviare il modulo controller dal prompt del CARICATORE:_bye_

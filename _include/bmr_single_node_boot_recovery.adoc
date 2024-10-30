@@ -198,4 +198,16 @@ LOADER-B>
 
 
 . Quando il nodo viene riavviato, verificare che il ripristino del supporto di avvio sia stato eseguito correttamente confermando che il sistema è nuovamente in linea e operativo.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
