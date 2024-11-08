@@ -37,15 +37,8 @@ LED di attenzione NVRAM
 
 |===
 +
-
-NOTE: Se il LED di stato NVRAM lampeggia, il modulo controller potrebbe non essere stato rilevato o arrestato correttamente (dati non registrati). Se il modulo del controller associato non è stato rilevato correttamente, contattare prima di continuare con https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] questa procedura.
-
-+
-Il comportamento generale del LED di stato NVRAM sul modulo controller danneggiato è il seguente:
-
-+
-** Il LED di stato NVRAM lampeggia quando l'alimentazione viene interrotta dal modulo controller e il sistema di storage si trova nello stato "in attesa di giveback", oppure il modulo controller non viene assunto o arrestato in modo corretto (dati non impegnati).
-** Il LED di stato NVRAM lampeggia quando il modulo controller viene rimosso dallo chassis e potrebbe indicare che il modulo controller non viene preso in consegna o arrestato correttamente (dati non impegnati). Verificare che il modulo controller sia stato acquisito in modo corretto dal modulo controller partner o che il modulo controller danneggiato mostri `waiting for giveback`. Quindi, il LED lampeggiante può essere ignorato (e il modulo controller può essere rimosso dal telaio).
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
 
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -73,7 +66,9 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Immagine di rimozio
 
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Un fermo di bloccaggio 
+ a| 
+Fermo di bloccaggio
+
 
 
  a| 
@@ -352,14 +347,18 @@ image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Rimuovere il mo
 |===
 
 
-| image:../media/icon_round_1.png["Numero di didascalia 1"]  a| 
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
 Pulsante di bloccaggio della camma
 
 
 
  a| 
 image:../media/icon_round_2.png["Numero di didascalia 2"]
-| Linguetta di blocco DIMM 
+ a| 
+Linguetta di blocco DIMM
+
 |===
 . Rimuovere il modulo NVRAM dal modulo controller danneggiato:
 +
@@ -394,14 +393,8 @@ Deve essere a filo con la lamiera del modulo controller.
 
 NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
 
-. Possibilità di recuperare il sistema storage secondo necessità.
-+
-Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
-
-+
-
-NOTE: Assicurarsi che il cavo della console sia collegato al modulo controller riparato in modo che riceva i messaggi della console al riavvio. Il controller riparato riceve l'alimentazione dal controller in buone condizioni e inizia a riavviarsi non appena viene inserito completamente nello chassis.
-
+. Reinstallare il ARM di gestione dei cavi, se rimosso, ma non ricollegare alcun cavo al controller sostitutivo.
+. Collegare il cavo console alla porta console del modulo controller sostitutivo e ricollegarlo al computer portatile in modo che riceva i messaggi della console al riavvio. Il controller sostitutivo riceve alimentazione dal controller integro e inizia a riavviarsi non appena viene inserito completamente nello chassis.
 . Completare la reinstallazione del modulo controller:
 +
 .. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
@@ -417,15 +410,21 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 
 +
 
-NOTE: Se il controller viene avviato al prompt di Loader, riavviarlo con il `boot_ontap` comando.
+NOTE: Il controller viene avviato al prompt Loader non appena è completamente inserito.
+
+. Dal prompt Loader, immettere `show date` per visualizzare la data e l'ora sulla centralina sostitutiva. Data e ora sono in GMT.
++
+
+NOTE: L'ora visualizzata è l'ora locale non sempre GMT e viene visualizzata in modalità 24hr.
+
+. Impostare l'ora corrente in GMT con il `set time hh:mm:ss` comando. Potete ottenere il GMT corrente dal nodo partner il comando `date -u`.
+. Possibilità di recuperare il sistema storage secondo necessità.
++
+Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
 
 . Collegare i cavi di alimentazione agli alimentatori.
 +
 
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.
 
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
-. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi e rieseguire il controller.
 

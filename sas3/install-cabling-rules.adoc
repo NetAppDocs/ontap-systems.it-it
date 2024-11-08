@@ -47,9 +47,9 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 * Le configurazioni di coppia HA devono essere cablate come configurazioni ha multipath o ha quad-path con le seguenti eccezioni:
 +
 ** Le piattaforme con storage interno non supportano la connettività ha quad-path.
-** Una coppia ha FAS2800 può essere cablata come ha a tre percorsi.
+** Una coppia ha FAS2820 può essere cablata come ha a tre percorsi.
 +
-Per informazioni sulla connettività FAS2800, consultare la <<Connettività ha tri-path>> sezione.
+Per informazioni sulla connettività FAS2820, consultare la <<Connettività ha tri-path>> sezione .
 
 ** Le piattaforme con storage interno possono essere cablate come configurazioni ha a percorso singolo (dalla porta 0b/0b1 agli shelf esterni) per supportare la connettività a un dispositivo di backup su nastro SAS esterno (dalla porta 0a).
 
@@ -58,7 +58,7 @@ Per informazioni sulla connettività FAS2800, consultare la <<Connettività ha t
 
 [NOTE]
 ====
-Per le coppie ha FAS2800, sebbene il cablaggio agli shelf esterni sia ha a percorso singolo, a causa della connessione interna di ciascun controller della porta 0b all'espansore locale (IOM12G) e della porta 0c all'espansore del partner, la configurazione della coppia ha è ha multipath.
+Per le coppie ha FAS2820, sebbene il cablaggio agli shelf esterni sia ha a percorso singolo, a causa della connessione interna di ciascun controller della porta 0b all'espansore locale (IOM12G) e della porta 0c all'espansore del partner, la configurazione della coppia ha è ha multipath.
 
 ====
 * Le configurazioni a controller singolo devono essere cablate come configurazioni multipath o quad-path, con le seguenti eccezioni:
@@ -296,7 +296,7 @@ image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[Connettività dom
 
 === Connettività ha tri-path
 
-La connettività ha Tri-path è disponibile sulle coppie ha FAS2800. La connettività ha Tri-path ha tre percorsi da ciascun controller agli shelf interni (IOM12G) ed esterni:
+La connettività ha Tri-path è disponibile sulle coppie ha FAS2820. La connettività ha Tri-path ha tre percorsi da ciascun controller agli shelf interni (IOM12G) ed esterni:
 
 * La connessione interna della porta 0b di ciascun controller al proprio IOM12G locale e la porta 0c al proprio IOM12G del partner fornisce una connettività ha multipath a coppia.
 * Il cablaggio delle porte di storage esterne di ciascun controller, 0a e 0b1, fornisce una connettività ha a tre percorsi.
@@ -309,16 +309,16 @@ Di seguito sono illustrati i collegamenti interni e i cavi esterni del controlle
 
 image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[Connettività ha tri path]
 
-Le porte SAS esterne di FAS2800:
+Le porte SAS esterne di FAS2820:
 
 * La porta 0a proviene dall'HBA interno (come altre piattaforme con shelf interno).
 * La porta 0b1 proviene dallo shelf interno (come le porte 0b su altre piattaforme con shelf interno).
 * La porta 0b2 non viene utilizzata. È disattivato. Se un cavo è collegato, viene generato un messaggio di errore.
 
 
-image::../media/drw_sas3_ports_on_fas2800_IEOPS-946.svg[FAS2800 porte sas esterne]
+image::../media/drw_sas3_ports_on_fas2800_IEOPS-946.svg[FAS2820 porte sas esterne]
 
-Gli esempi di cablaggio di coppia ha FAS2800 sono disponibili nella link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"] sezione.
+Gli esempi di cablaggio delle coppie ha di FAS2820 sono reperibili nella link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il cablaggio controller-to-stack ed esempi di cablaggio per piattaforme con storage interno"]sezione.
 
 
 

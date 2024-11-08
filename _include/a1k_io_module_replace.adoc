@@ -134,7 +134,9 @@ image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["Rimuovere il modulo di 
 
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Blocco camma i/O. 
+ a| 
+Blocco camma i/O.
+
 |===
 +
 Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
@@ -178,8 +180,7 @@ NOTE: Se il nuovo modulo i/o non è lo stesso modello del modulo guasto, è nece
 
 . Dal prompt del CARICATORE, riavviare il nodo: _Bye_
 +
-
-NOTE: In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.
+In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.
 
 . Riportare il nodo al normale funzionamento: _Failover giveback dello storage -ofnode inedito_node_name_
 . Se il giveback automatico è stato disattivato, riabilitarlo: _Storage failover modify -node local -auto-giveback true_

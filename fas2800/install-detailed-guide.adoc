@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
 summary: 'Questo procurement fornisce istruzioni dettagliate e dettagliate per l"installazione di un tipico sistema di storage NetApp.' 
 ---
-= Fasi dettagliate - FAS2800
+= Fasi dettagliate - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -436,7 +436,7 @@ image::../media/oie_cable_pull_tab_down.png[Direzione della linguetta di estrazi
 Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra i controller e i ripiani delle unità.
 
 
-IMPORTANT: Non utilizzare la porta 0b2 su FAS2800. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Per ulteriori informazioni, vedere link:../sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] .
+IMPORTANT: Non utilizzare la porta 0b2 su FAS2820. Questa porta SAS non viene utilizzata da ONTAP ed è sempre disattivata. Per ulteriori informazioni, vedere link:../sas3/install-new-system.html["Installare uno shelf in un nuovo sistema storage"^] .
 
 .Animazione - cablaggio dello shelf del disco
 video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]

@@ -48,7 +48,7 @@ Questa procedura si applica ai sistemi con configurazioni a due nodi. Se si disp
 . Uscire dalla shell del cluster: `exit`
 . Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno qualsiasi dei nodi elencati nell'output del passaggio precedente.
 +
-Se si utilizza una console/laptop, accedere al controller utilizzando le stesse credenziali di amministratore del cluster.
+Se stai utilizzando una console/laptop, accedi al controller usando le stesse credenziali di amministratore del cluster.
 
 +
 
@@ -65,9 +65,4 @@ NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalit
 . Immettere *y* per ogni controller nel cluster quando viene visualizzato `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
 {y|n}:_`
 . Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.
-
-
-.Quali sono le prossime novità?
-* Se il sistema è un NetApp StorageGRID o ONTAP S3 utilizzato come Tier cloud FabricPool, fare riferimento alla https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Arrestare e accendere correttamente il sistema storage Guida alla risoluzione dei problemi"] procedura dopo aver eseguito questa chiusura.
-* Se si utilizzano le unità SSD, fare riferimento a https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: (Impatto: Critico) Best Practice SSD: Evita il rischio di guasti al disco e perdita di dati se spento per più di due mesi"] dopo aver eseguito questa procedura di arresto.
 

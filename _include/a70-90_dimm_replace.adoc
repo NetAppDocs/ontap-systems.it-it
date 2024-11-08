@@ -151,15 +151,8 @@ LED di attenzione NVRAM
 
 |===
 +
-
-NOTE: Se il LED di stato NVRAM lampeggia, il modulo controller potrebbe non essere stato rilevato o arrestato correttamente (dati non registrati). Se il modulo del controller associato non è stato rilevato correttamente, contattare prima di continuare con https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] questa procedura.
-
-+
-Il comportamento generale del LED di stato NVRAM sul modulo controller danneggiato è il seguente:
-
-+
-** Il LED di stato NVRAM lampeggia quando l'alimentazione viene interrotta dal modulo controller e il sistema di storage si trova nello stato "in attesa di giveback", oppure il modulo controller non viene assunto o arrestato in modo corretto (dati non impegnati).
-** Il LED di stato NVRAM lampeggia quando il modulo controller viene rimosso dallo chassis e potrebbe indicare che il modulo controller non viene preso in consegna o arrestato correttamente (dati non impegnati). Verificare che il modulo controller sia stato acquisito in modo corretto dal modulo controller partner o che il modulo controller danneggiato mostri `waiting for giveback`. Quindi, il LED lampeggiante può essere ignorato (e il modulo controller può essere rimosso dal telaio).
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
 
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -187,7 +180,9 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Immagine di rimozio
 
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Un fermo di bloccaggio 
+ a| 
+Fermo di bloccaggio
+
 
 
  a| 

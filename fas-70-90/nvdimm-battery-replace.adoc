@@ -153,15 +153,8 @@ LED di attenzione NVRAM
 
 |===
 +
-
-NOTE: Se il LED di stato NVRAM lampeggia, il modulo controller potrebbe non essere stato rilevato o arrestato correttamente (dati non registrati). Se il modulo del controller associato non è stato rilevato correttamente, contattare prima di continuare con https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] questa procedura.
-
-+
-Il comportamento generale del LED di stato NVRAM sul modulo controller danneggiato è il seguente:
-
-+
-** Il LED di stato NVRAM lampeggia quando l'alimentazione viene interrotta dal modulo controller e il modulo controller si trova nello stato "in attesa di giveback" oppure il modulo controller non viene rilevato o arrestato correttamente (dati non impegnati).
-** Il LED di stato NVRAM lampeggia quando il modulo controller viene rimosso dal contenitore e potrebbe indicare che il modulo controller non è stato rilevato o arrestato correttamente (dati non registrati). Verificare che il modulo controller sia stato acquisito in modo corretto dal modulo controller partner o che il modulo controller danneggiato mostri `waiting for giveback`. Quindi, il LED lampeggiante può essere ignorato (e il controller può essere rimosso dal contenitore).
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
 
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -202,14 +195,16 @@ image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[Ricaricare la bat
 |===
 
 
-| image:../media/icon_round_1.png["Numero di didascalia 1"]  a| 
-Coperchio del condotto dell'aria della batteria NV
-
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+| Coperchio del condotto dell'aria della batteria NV 
 
 
  a| 
 image:../media/icon_round_2.png["Numero di didascalia 2"]
-| Spina della batteria NV 
+ a| 
+Spina della batteria NV
+
 |===
 . Sollevare la batteria per accedere alla spina della batteria.
 . Premere il fermaglio sulla parte anteriore della spina della batteria per sganciare la spina dalla presa, quindi scollegare il cavo della batteria dalla presa.
@@ -233,7 +228,10 @@ Assicurarsi che la spina si blocchi nella presa.
 
 Reinstallare il modulo controller e avviarlo.
 
-. In caso contrario, chiudere il condotto dell'aria.
+. Assicurarsi che il condotto dell'aria sia completamente chiuso ruotandolo verso il basso fino in fondo.
++
+Deve essere a filo con la lamiera del modulo controller.
+
 . Allineare l'estremità del modulo controller con l'apertura nel contenitore, quindi far scorrere il modulo controller nel telaio con le leve ruotate lontano dalla parte anteriore del sistema.
 . Una volta che il modulo controller non riesce a farlo scorrere ulteriormente, ruotare le maniglie della camma verso l'interno fino a quando non si bloccano sotto le ventole
 +
