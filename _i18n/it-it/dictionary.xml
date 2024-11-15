@@ -3180,13 +3180,10 @@
   <block id="a3d6b87a3696ea4158d81bf432d3724e" category="paragraph"><block ref="a3d6b87a3696ea4158d81bf432d3724e" category="inline-link-rx"></block></block>
   <block id="4e4fca0318eac6dc1315f4bad56eb1c6" category="summary">È possibile aggiungere un modulo i/o al sistema sostituendo un modulo i/o esistente con un nuovo modulo i/o in un sistema completamente popolato oppure aggiungendo un nuovo modulo i/o in uno slot vuoto nello chassis.</block>
   <block id="a164244a6913c60772e9b9fbbbc17a4a" category="doc">Aggiunta di un modulo i/o - AFF A900</block>
-  <block id="037baf09c7ddcc7c38f81e7dbe35fa87" category="paragraph">È possibile aggiungere un modulo i/o al sistema aggiungendo un nuovo nodulo i/o in un sistema con slot vuoti oppure sostituendo un modulo i/o con uno nuovo in un sistema completamente popolato.</block>
   <block id="55f1569cdcfb82612fcf293f23db4f6f" category="list-text">Controllare<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> Per assicurarsi che il nuovo modulo i/o sia compatibile con il sistema e la versione di ONTAP in uso.</block>
   <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">Se sono disponibili più slot, controllare le priorità degli slot in<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> E utilizza il miglior modulo di i/O.</block>
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">Per aggiungere senza interruzioni un modulo i/o, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione o rimuovere un modulo i/o esistente, aggiungere il modulo i/o nuovo o sostitutivo e restituire il controller di destinazione.</block>
   <block id="91b094c45d5351d209f688ccfd548bf7" category="list-text">Assicurarsi che tutti gli altri componenti funzionino correttamente.</block>
-  <block id="329fe7c89a525def535e03c6dbc6f98f" category="section-title">Opzione 1: Aggiungere il modulo i/o a un sistema con slot aperti</block>
-  <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">È possibile aggiungere un modulo i/o in uno slot vuoto nel sistema.</block>
   <block id="bc5719b37f755088b3bb793c36a74d06" category="section-title">Fase 1: Spegnere il nodo compromesso</block>
   <block id="741ade379895992f2a574e8e60de1571" category="section-title">Fase 2: Aggiunta di moduli i/O.</block>
   <block id="f95919e2465ed77382efeba17c614808" category="list-text">Rimuovere l'otturatore dello slot di destinazione:</block>
@@ -3205,8 +3202,6 @@
   <block id="646c0c0a2d342d0efa63a4e7c560611e" category="list-text">Abilitare il giveback automatico se è stato disattivato:<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block></block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">Se si utilizzano gli slot 3 e/o 7 per il collegamento in rete, utilizzare<block ref="476ed8a8b3d60ed59cf37fb920c49f89" prefix=" " category="inline-code"></block> comando per convertire lo slot per l'utilizzo in rete.</block>
   <block id="d6c7a664e3819be9a0869782e685c75b" category="list-text">Ripetere questi passi per il controller B.</block>
-  <block id="3e0887648c519f4a3c16a1c61b2e8ec3" category="section-title">Opzione 2: Aggiunta di un modulo i/o in un sistema senza slot aperti</block>
-  <block id="31ac56c0f673cbef254563f6a8a32626" category="paragraph">Se il sistema è completamente popolato, è possibile modificare un modulo i/o in uno slot i/o rimuovendo un modulo i/o esistente e sostituirlo con un modulo i/o diverso.</block>
   <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">Se:</block>
   <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">Sostituzione di un...</block>
   <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">Modulo i/o NIC con lo stesso numero di porte</block>
@@ -6509,11 +6504,6 @@ Installare la batteria sostitutiva:</block>
   <block id="fb7c806d17ac05daec934e824397154e" category="list-text">Ripetere i passi precedenti per il secondo modulo controller nel telaio sostitutivo.</block>
   <block id="5a78b16de65a946feda8c56392de99d0" category="paragraph">Dopo aver sostituito l'hardware e avviato il controller sostitutivo, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
   <block id="3fc70ee0f25a2808ad9e1ace34edd095" category="list-text">Se lo stato del sistema visualizzato per il controller non corrisponde alla configurazione del sistema, impostare lo stato ha per il modulo controller sostitutivo:<block ref="83ac5421ebdbb8b86762e96ecda44c4a" prefix=" " category="inline-code"></block></block>
-  <block id="c5ad83e174ba7727e76fc50c8366e589" category="list-text">Ripristinare il file system var:</block>
-  <block id="e51ecd8f185715278ef737fd290e62f5" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di ripristinare la copia di configurazione.</block>
-  <block id="1a037944aedbce3040a5314200246858" category="list-text">Al prompt del cluster, controllare le interfacce logiche con<block ref="55cf88a325a6e0574aef732566cc984c" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">Se le interfacce sono elencate come "false", ripristinarle alla porta home utilizzando<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">Se non si utilizza la crittografia dello storage, ripristinare il giveback automatico e AutoSupport:</block>
   <block id="82374f90663d7205d26c38028c93cb8d" category="inline-link">Note di rilascio per la versione di ONTAP 9 in uso</block>
   <block id="202c6b9676e6e0879f99a323aacdd76b" category="paragraph">La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> individuare il cavo e identificarne l'utilizzo.</block>
   <block id="21d9a13ac1bf780b5a88db05a215c05d" category="paragraph">10 GbE, cavo SFP28 (in base all'ordine)</block>
@@ -7196,8 +7186,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="678386553f74beb2b1838a6f503572a1" category="sidebar">Alimentatore ASA A150</block>
   <block id="3b407a01f87e8a92694c7e38e00bfea0" category="sidebar">Batteria con clock in tempo reale ASA A150</block>
   <block id="88caadba05eccaaf5df5206e6c67f90b" category="sidebar">Sistemi AFF serie C.</block>
-  <block id="0ebe6df8a3ac338e0512acc741823fdb" category="sidebar">Sostituire</block>
-  <block id="ec211f7c20af43e742bf2570c3cb84f9" category="sidebar">Aggiungi</block>
   <block id="880e70d8b15ad919e463072506581a9a" category="sidebar">Sistemi ASA A400</block>
   <block id="9d524e3b80cdb8b322945f9b3acd0611" category="sidebar">Installazione e configurazione di ASA A400</block>
   <block id="34dd7f09476a68e4a11cace464b55609" category="sidebar">Manutenzione di ASA A400</block>
@@ -8011,9 +7999,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">Allineare il modulo con i bordi dell'apertura dello slot del contenitore.</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per la centralina.</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">Riavviare il controller dal prompt del CARICATORE:_bye_</block>
-  <block id="270bbec39f8392e251637a1b86bbf5c3" category="list-text">Controllare la versione di BMC sul controller: _System service-processor show_</block>
-  <block id="d6b96e8ac8bc341aa87626c9a7f76ffd" category="list-text">Se necessario, aggiornare il firmware BMC: _System service-processor image update_</block>
-  <block id="3ff703e913550c7687a9cef2aa4f646d" category="list-text">Riavviare il nodo: _Bye_</block>
   <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">Abilitare il giveback automatico se è stato disattivato: _Storage failover modify -node local -auto-giveback true_</block>
   <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">Se il modulo i/o è a...</block>
   <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">Modulo NIC</block>
@@ -8148,8 +8133,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2f4150c3867bbf0ce9e1aa56330f576b" category="list-text">Premere il pulsante CAM sul modulo target.</block>
   <block id="53843c5eb3759758de138cf301af27c3" category="paragraph">Il pulsante della camma si allontana dal contenitore.</block>
   <block id="cb6d0d31a2a110b0d07c657262474a40" category="list-text">Installare il modulo i/o sostitutivo nel contenitore:</block>
-  <block id="1ac1a67458bf621b04e5e87511601b9c" category="list-text">Dal prompt del CARICATORE, passare alla modalità privilegi avanzata: _Set Privilege Advanced_</block>
-  <block id="10c3a425fded9589c238301aa82be35e" category="list-text">Riavviare BMC: _Sp reboot_</block>
   <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">Dal prompt del CARICATORE, riavviare il nodo: _Bye_</block>
   <block id="7abd890d238c51ed2801454d1144b6c2" category="admonition">In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.</block>
   <block id="f39bcef8471a9193d70395e440c5c30f" category="list-text">Riportare il nodo al normale funzionamento: _Failover giveback dello storage -ofnode inedito_node_name_</block>
@@ -10375,4 +10358,38 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2f9958347081d2ce185d76c702380979" category="sidebar">Scheda Mezzanine FAS2820</block>
   <block id="6283d5729bdaa96d13760bf62bbe62f2" category="sidebar">Alimentatore FAS2820</block>
   <block id="e8a44fb416b30e755ecaf489baacfd39" category="sidebar">Batteria con clock in tempo reale FAS2820</block>
+  <block id="227398eddfb6e692fd89b8302d75c666" category="paragraph">Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.</block>
+  <block id="a76aaa38baa5ae3b2ab41cc1b875078f" category="open-title">Aggiungere il modulo i/o a uno slot vuoto</block>
+  <block id="f2cc9125d85f992590d6b8f3fbd46de6" category="paragraph">È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con slot vuoti disponibili.</block>
+  <block id="c0f2e030aecd4084592ca2454ad9a524" category="open-title">Aggiungere un modulo di i/o a un sistema completamente popolato</block>
+  <block id="6408704f957fafc42e96a37aa68b10ce" category="paragraph">È possibile aggiungere un modulo i/o a un sistema completamente popolato rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto.</block>
+  <block id="d9c0fee19239cdba61031cde184c8d74" category="paragraph">Assicurarsi di comprendere i seguenti scenari per aggiungere un nuovo modulo di i/o a un sistema completamente popolato:</block>
+  <block id="54861efdd06fc309e1c9a420feff98eb" category="cell">Scenario</block>
+  <block id="3d6623b8d5249788a0d797d4bbc5e5a1" category="cell">Azione richiesta</block>
+  <block id="6be20647be40341586dcfb1dbbefcbcc" category="paragraph">Da NIC a NIC (stesso numero di porte)</block>
+  <block id="09109aaca603d8ac1da46aa588c46f63" category="paragraph">Da NIC a NIC (numero di porte diverso)</block>
+  <block id="4e7b2ae169cb37276347e7c88d211db4" category="paragraph">Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> .</block>
+  <block id="0c3f64052572f9d13d9b078656a055e4" category="paragraph">Da NIC a modulo i/o di storage</block>
+  <block id="deaf42dafc1e4522c0ccf86ad58f237e" category="list-text">Restituire il controller dal controller partner:`storage failover giveback -ofnode target_node_name'</block>
+  <block id="c1d0761e549ef1ce873a404f8d41a2d5" category="list-text">Riavviare il controller dal prompt di Loader:<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="5d831aef00c06eb087aebfb790f041b7" category="section-title">Fase 2: Aggiungere un nuovo modulo i/O.</block>
+  <block id="68c06f8f4688078ddfe1ceedef798cae" category="list-text">Restituire il controller dal partner controller:</block>
+  <block id="523f5a38bba8d64b2af1cdee174a06cc" category="paragraph"><block ref="49c908925c3b8a3554612823f81c8964" prefix="" category="inline-code"></block></block>
+  <block id="b98036ad0a9b610670da83fe762dadb5" category="list-text">Dal nodo integro, ripristinare lo giveback automatico se disattivato utilizzando il seguente comando:</block>
+  <block id="518d4ff09aabdcee7f75f2c44315aa32" category="list-text">Se AutoSupport è attivato, ripristinare la creazione automatica dei casi utilizzando il seguente comando:</block>
+  <block id="4bcd1563c4332086304e70dd3fb7e19a" category="list-text">Abilitare il giveback automatico se è stato disattivato:</block>
+  <block id="1e80f086f2d3ddea0cd02baa25f9c2f1" category="list-text">Se è stato rimosso un modulo i/o NIC e installato un nuovo modulo i/o NIC, utilizzare il seguente comando di rete per ciascuna porta:</block>
+  <block id="157602c08bdec493e8c79f5e41971ab6" category="paragraph"><block ref="9dedaa5871e5e9684cbae52f5e1b987d" prefix="" category="inline-code"></block></block>
+  <block id="ff7274e5c00dade3058bf32828127837" category="list-text">Se è stato rimosso un modulo i/o NIC e installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
+  <block id="fe7cc4281bcf5c347bdaa6bdb704b29b" category="list-text">Dal prompt DI Loader, riavviare il nodo:`bye'</block>
+  <block id="440f1f310315bec96a5e23d47024d880" category="list-text">Se si sta sostituendo un'altra unità, ripetere i passaggi da 2 a 6.</block>
+  <block id="91dfaaed30791a3d6d5402ba403f8f73" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione AFF A1K quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
+  <block id="8b6b47c9ffbf56147eb39245a0848071" category="open-title">Opzione 2: Configurazione di MetroCluster</block>
+  <block id="e1e5a630a2475cff2c5c9107cbfff228" category="section-title">Fase 2: Aggiungere il nuovo modulo i/O.</block>
+  <block id="aaa31e70b1e8d53e84fc317dfdcef1ed" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione AFF A70 e AFF A90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
+  <block id="fc201f3061cf0fb0ac92be830093fe44" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione AFF A900 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
+  <block id="5342cf7e14ace50bbfab26225b3e6f39" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione ASA A70 e ASA A90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
+  <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione ASA A1K quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
+  <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione FAS70 e FAS90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
+  <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">Fase 2: Aggiungere i nuovi moduli i/O.</block>
 </blocks>

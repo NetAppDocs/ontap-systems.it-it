@@ -360,18 +360,12 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 . Ruotare il vassoio di gestione dei cavi in posizione di blocco.
 . Riavviare il modulo controller dal prompt del CARICATORE:_bye_
 +
-.. Controllare la versione di BMC sul controller: _System service-processor show_
-.. Se necessario, aggiornare il firmware BMC: _System service-processor image update_
-.. Riavviare il nodo: _Bye_
-+
+In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
 
-NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
 
-+
+
 
 NOTE: Se si verifica un problema durante il riavvio, vedere https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - lo spegnimento dell'ambiente potrebbe essere attivato durante la sostituzione del modulo i/O."]
-
-
 
 . Restituire il modulo controller dal modulo controller partner. _storage failover giveback -nodo_target_node_name_
 . Abilitare il giveback automatico se è stato disattivato: _Storage failover modify -node local -auto-giveback true_

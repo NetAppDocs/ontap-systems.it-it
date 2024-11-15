@@ -11,7 +11,7 @@ summary: È possibile aggiungere un modulo i/o al sistema sostituendo un modulo 
 
 
 [role="lead"]
-È possibile aggiungere un modulo i/o al sistema aggiungendo un nuovo nodulo i/o in un sistema con slot vuoti oppure sostituendo un modulo i/o con uno nuovo in un sistema completamente popolato.
+Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
 
 .Prima di iniziare
 * Controllare https://hwu.netapp.com/["NetApp Hardware Universe"^] Per assicurarsi che il nuovo modulo i/o sia compatibile con il sistema e la versione di ONTAP in uso.
@@ -20,119 +20,13 @@ summary: È possibile aggiungere un modulo i/o al sistema sostituendo un modulo 
 * Assicurarsi che tutti gli altri componenti funzionino correttamente.
 
 
-
-
-== Opzione 1: Aggiungere il modulo i/o a un sistema con slot aperti
-
-È possibile aggiungere un modulo i/o in uno slot vuoto nel sistema.
-
-
-
-== Fase 1: Spegnere il nodo compromesso
-
-Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
-
 [role="tabbed-block"]
 ====
-.Opzione 1: La maggior parte dei sistemi
+.Aggiungere il modulo i/o a uno slot vuoto
 --
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-.A proposito di questa attività
-Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con slot vuoti disponibili.
 
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
---
-.Opzione 2: Controller in un MetroCluster
---
-
-NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
-
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* Se si dispone di una configurazione MetroCluster, è necessario confermare che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
-
-
-.Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
---
-====
-
-
-== Fase 2: Aggiunta di moduli i/O.
-
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rimuovere l'otturatore dello slot di destinazione:
 +
@@ -165,148 +59,40 @@ NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializz
 . Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
 
 
+--
+.Aggiungere un modulo di i/o a un sistema completamente popolato
+--
+È possibile aggiungere un modulo i/o a un sistema completamente popolato rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto.
 
+.A proposito di questa attività
+Assicurarsi di comprendere i seguenti scenari per aggiungere un nuovo modulo di i/o a un sistema completamente popolato:
 
-== Opzione 2: Aggiunta di un modulo i/o in un sistema senza slot aperti
-
-Se il sistema è completamente popolato, è possibile modificare un modulo i/o in uno slot i/o rimuovendo un modulo i/o esistente e sostituirlo con un modulo i/o diverso.
-
-. Se:
-+
 [cols="1,2"]
 |===
-| Sostituzione di un... | Quindi... 
+| Scenario | Azione richiesta 
 
 
  a| 
-Modulo i/o NIC con lo stesso numero di porte
+Da NIC a NIC (stesso numero di porte)
  a| 
 I LIF migrano automaticamente quando il modulo controller viene spento.
 
 
 
  a| 
-Modulo i/o NIC con meno porte
+Da NIC a NIC (numero di porte diverso)
  a| 
-Riassegnare in modo permanente i file LIF interessati a una porta home diversa. Vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] Per informazioni sull'utilizzo di System Manager per spostare in modo permanente i file LIF.
+Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
 
 
 
  a| 
-Modulo i/o NIC con modulo i/o storage
+Da NIC a modulo i/o di storage
  a| 
 Utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^].
 
 |===
-
-
-
-
-== Fase 1: Spegnere il nodo compromesso
-
-Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
-
-[role="tabbed-block"]
-====
-.Opzione 1: La maggior parte dei sistemi
---
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-.A proposito di questa attività
-Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
---
-.Opzione 2: Controller in un MetroCluster
---
-
-NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
-
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* Se si dispone di una configurazione MetroCluster, è necessario confermare che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
-
-
-.Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
---
-====
-
-
-== Fase 2: Sostituire i moduli i/O.
-
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare eventuali cavi dal modulo i/o di destinazione.
 . Rimuovere il modulo i/o di destinazione dallo chassis:
@@ -397,3 +183,6 @@ Installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-
 |===
 . Ripetere questi passi per il controller B.
 
+
+--
+====

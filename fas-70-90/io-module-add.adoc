@@ -11,23 +11,11 @@ summary: Per sostituire una scheda PCIe, è necessario scollegare i cavi dalle s
 
 
 [role="lead"]
-È possibile aggiungere un modulo i/o al sistema di archiviazione aggiungendo un nuovo modulo i/o in un sistema di archiviazione con slot vuoti oppure sostituendo un modulo i/o con uno nuovo in un sistema di archiviazione completamente popolato.
-
-.Prima di iniziare
-* Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
-* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
-* Assicurarsi che tutti gli altri componenti funzionino correttamente.
+È possibile aggiungere un modulo i/o al sistema di archiviazione FAS70 e FAS90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.
 
 
 
-
-== Opzione 1: Aggiunta di un modulo i/o a un sistema di archiviazione con slot vuoti
-
-È possibile aggiungere un modulo i/o in uno slot vuoto del sistema di archiviazione.
-
-
-
-=== Fase 1: Arrestare il modulo controller danneggiato
+== Fase 1: Arrestare il modulo controller danneggiato
 
 Spegnere o sostituire il modulo controller danneggiato.
 
@@ -78,7 +66,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 --
-.Opzione 2: Controller in un MetroCluster
+.Opzione 2: Configurazione di MetroCluster
 --
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
@@ -130,27 +118,26 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
-=== Fase 2: Aggiunta di moduli i/O.
+== Fase 2: Aggiungere il nuovo modulo i/O.
 
+Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
+
+.Prima di iniziare
+* Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
+* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
+* Assicurarsi che tutti gli altri componenti funzionino correttamente.
+
+
+[role="tabbed-block"]
+====
+.Aggiungere il modulo i/o a uno slot vuoto
+--
+È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con slot vuoti disponibili.
+
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere il modulo di chiusura dello slot di destinazione dal supporto:
-+
-
-NOTE: La figura seguente mostra la rimozione di un modulo i/o orizzontale e verticale. In genere, si rimuoverà un solo modulo i/O.
-
-+
-image::../media/drw_a1k_io_remove_replace_ieops-1382.svg[Rimuovere un modulo i/o AFF A1K]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Pulsante di bloccaggio della camma 
-|===
 +
 .. Premere il dispositivo di chiusura della camma sul modulo di chiusura nello slot di destinazione.
 .. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
@@ -174,175 +161,59 @@ NOTE: Assicurarsi che tutti gli slot i/o inutilizzati siano dotati di spazi vuot
 
 NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
 
-. Restituire il controller dal partner controller: _Storage failover giveback -offnode target_node_name_
-. Ripetere questi passi per il controller B.
-. Dal nodo integro, ripristinare il giveback automatico se è stato disattivato utilizzando il `storage failover modify -node local -auto-giveback true` comando.
-. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
-. Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
-
-
-
-
-== Opzione 2: Aggiungere un modulo i/o in un sistema di archiviazione senza slot vuoti
-
-È possibile modificare un modulo i/o in uno slot i/o in un sistema completamente popolato rimuovendo un modulo i/o esistente e sostituirlo con un altro modulo i/O.
-
-. Se:
+. Restituire il controller dal partner controller:
 +
+`storage failover giveback -ofnode target_node_name`
+
+. Ripetere questi passi per il controller B.
+. Dal nodo integro, ripristinare lo giveback automatico se disattivato utilizzando il seguente comando:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi utilizzando il seguente comando:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Aggiungere un modulo di i/o a un sistema completamente popolato
+--
+È possibile aggiungere un modulo i/o a un sistema completamente popolato rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto.
+
+.A proposito di questa attività
+Assicurarsi di comprendere i seguenti scenari per aggiungere un nuovo modulo di i/o a un sistema completamente popolato:
+
 [cols="1,2"]
 |===
-| Sostituzione di un... | Quindi... 
+| Scenario | Azione richiesta 
 
 
  a| 
-Modulo i/o NIC con lo stesso numero di porte
+Da NIC a NIC (stesso numero di porte)
  a| 
 I LIF migrano automaticamente quando il modulo controller viene spento.
 
 
 
  a| 
-Modulo i/o NIC con meno porte
+Da NIC a NIC (numero di porte diverso)
  a| 
-Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per informazioni sull'utilizzo di System Manager per lo spostamento permanente delle LIF, consulta la sezione https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
+Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
 
 
 
  a| 
-Modulo i/o NIC con modulo i/o storage
+Da NIC a modulo i/o di storage
  a| 
 Utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^].
 
 |===
-
-
-
-
-=== Fase 1: Arrestare il modulo controller danneggiato
-
-Spegnere o sostituire il modulo controller danneggiato.
-
-[role="tabbed-block"]
-====
-.Opzione 1: La maggior parte dei sistemi
---
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-.A proposito di questa attività
-Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
---
-.Opzione 2: Controller in un MetroCluster
---
-
-NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
-
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* Se si dispone di una configurazione MetroCluster, è necessario confermare che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
-
-
-.Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla fase successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
-
-|===
-
-
---
-====
-
-
-=== Fase 2: Sostituire un modulo i/O.
-
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare eventuali cavi dal modulo i/o di destinazione.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere il modulo i/o di destinazione dallo chassis:
-+
-
-NOTE: La figura seguente mostra la rimozione di un modulo i/o orizzontale e verticale. In genere, si rimuoverà un solo modulo i/O.
-
-+
-image::../media/drw_a1k_io_remove_replace_ieops-1382.svg[Rimuovere il modulo i/o AFF A1K]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Pulsante di bloccaggio della camma 
-|===
 +
 .. Premere il pulsante del dispositivo di chiusura a camma.
 .. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
@@ -363,40 +234,31 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 . Riavviare il controller dal prompt del CARICATORE:_bye_
 +
-.. Controllare la versione di BMC sul controller: _System service-processor show_
-.. Se necessario, aggiornare il firmware BMC: _System service-processor image update_
-.. Riavviare il nodo: _Bye_
-+
-
-NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
 
 +
 
 NOTE: Se si verifica un problema durante il riavvio, vedere https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - lo spegnimento dell'ambiente potrebbe essere attivato durante la sostituzione del modulo i/O."]
 
-
-
-. Restituire il controller dal partner controller: _Storage failover giveback -offnode target_node_name_
-. Abilitare il giveback automatico se è stato disattivato: _Storage failover modify -node local -auto-giveback true_
-. Se hai aggiunto:
+. Restituire il controller dal partner controller:
 +
-[cols="1,2"]
-|===
-| Se il modulo i/o è a... | Quindi... 
+`storage failover giveback -ofnode target_node_name`
+
+. Abilitare il giveback automatico se è stato disattivato:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Effettuare una delle seguenti operazioni:
++
+** Se è stato rimosso un modulo i/o NIC e installato un nuovo modulo i/o NIC, utilizzare il seguente comando di rete per ciascuna porta:
++
+`storage port modify -node *_<node name>__ -port *_<port name>__ -mode network`
+
+** Se è stato rimosso un modulo i/o NIC e installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
 
 
- a| 
-Modulo NIC
- a| 
-Utilizzare `storage port modify -node *_<node name>__ -port *_<port name>__ -mode network` comando per ciascuna porta.
-
-
-
- a| 
-Modulo storage
- a| 
-Installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
-
-|===
 . Ripetere questi passi per il controller B.
 
+
+--
+====

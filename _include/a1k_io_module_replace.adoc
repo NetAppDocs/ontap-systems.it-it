@@ -168,22 +168,13 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 
 Dopo aver sostituito un modulo i/o, è necessario riavviare il modulo controller.
 
-
-NOTE: Se il nuovo modulo i/o non è lo stesso modello del modulo guasto, è necessario prima riavviare il BMC.
-
 .Fasi
-. Riavviare il BMC se il modulo sostitutivo non è lo stesso modello del modulo precedente:
-+
-.. Dal prompt del CARICATORE, passare alla modalità privilegi avanzata: _Set Privilege Advanced_
-.. Riavviare BMC: _Sp reboot_
-
-
-. Dal prompt del CARICATORE, riavviare il nodo: _Bye_
+. Dal prompt DEL CARICATORE, riavviare il nodo: `bye`
 +
 In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.
 
-. Riportare il nodo al normale funzionamento: _Failover giveback dello storage -ofnode inedito_node_name_
-. Se il giveback automatico è stato disattivato, riabilitarlo: _Storage failover modify -node local -auto-giveback true_
+. Ripristinare il funzionamento normale del nodo: `storage failover giveback -ofnode impaired_node_name`
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
 
 
 
