@@ -3185,7 +3185,6 @@
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">Per aggiungere senza interruzioni un modulo i/o, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione o rimuovere un modulo i/o esistente, aggiungere il modulo i/o nuovo o sostitutivo e restituire il controller di destinazione.</block>
   <block id="91b094c45d5351d209f688ccfd548bf7" category="list-text">Assicurarsi che tutti gli altri componenti funzionino correttamente.</block>
   <block id="bc5719b37f755088b3bb793c36a74d06" category="section-title">Fase 1: Spegnere il nodo compromesso</block>
-  <block id="741ade379895992f2a574e8e60de1571" category="section-title">Fase 2: Aggiunta di moduli i/O.</block>
   <block id="f95919e2465ed77382efeba17c614808" category="list-text">Rimuovere l'otturatore dello slot di destinazione:</block>
   <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">Premere il dispositivo di chiusura a camma con lettere e numeri.</block>
   <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">Ruotare il fermo della camma verso il basso fino a portarlo in posizione aperta.</block>
@@ -3202,14 +3201,8 @@
   <block id="646c0c0a2d342d0efa63a4e7c560611e" category="list-text">Abilitare il giveback automatico se è stato disattivato:<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block></block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">Se si utilizzano gli slot 3 e/o 7 per il collegamento in rete, utilizzare<block ref="476ed8a8b3d60ed59cf37fb920c49f89" prefix=" " category="inline-code"></block> comando per convertire lo slot per l'utilizzo in rete.</block>
   <block id="d6c7a664e3819be9a0869782e685c75b" category="list-text">Ripetere questi passi per il controller B.</block>
-  <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">Se:</block>
-  <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">Sostituzione di un...</block>
-  <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">Modulo i/o NIC con lo stesso numero di porte</block>
   <block id="c5cb03fb8ac84e8ed0867902373368c5" category="paragraph">I LIF migrano automaticamente quando il modulo controller viene spento.</block>
-  <block id="5b4da5fe899903c4fb7ea38cdcd59059" category="paragraph">Modulo i/o NIC con meno porte</block>
   <block id="3dca69382eebe0e25d26be588bb3bb7c" category="inline-link">Migrazione di una LIF</block>
-  <block id="c964f542415e7614484e4edf970ab7a8" category="paragraph">Riassegnare in modo permanente i file LIF interessati a una porta home diversa. Vedere<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> Per informazioni sull'utilizzo di System Manager per spostare in modo permanente i file LIF.</block>
-  <block id="f83c48dd124994c4062d124a835da954" category="paragraph">Modulo i/o NIC con modulo i/o storage</block>
   <block id="6d351dbc4a7187d4512a1c505c200687" category="paragraph">Utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>.</block>
   <block id="e3ca62ecd59008690a4c01731db9497c" category="section-title">Fase 2: Sostituire i moduli i/O.</block>
   <block id="fd08cd08ec85105086c22d49a195dfd3" category="list-text">Scollegare eventuali cavi dal modulo i/o di destinazione.</block>
@@ -7969,14 +7962,10 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="61612a74be5170dd342eb619d607d9a0" category="paragraph">Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore:<block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix=" " category="inline-code"></block></block>
   <block id="ab859514fa976f71299cd0d5366c702d" category="paragraph">Arrestare o rilevare il controller danneggiato dal controller integro:<block ref="64d2ac6bbd59fb854ec2bed7b2dbe259" prefix=" " category="inline-code"></block></block>
   <block id="fd9366185c7040d2814e95fefcce2264" category="list-text">Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando AutoSupport:<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
-  <block id="9f496d341d66d79304a55547445c00a2" category="doc">Opzione 1: Aggiunta di un modulo i/o a un sistema di archiviazione con slot vuoti</block>
-  <block id="c4b17ef982ae644ec1d2b995fa1534a8" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione aggiungendo un nuovo modulo i/o in un sistema di archiviazione con slot vuoti oppure sostituendo un modulo i/o con uno nuovo in un sistema di archiviazione completamente popolato.</block>
   <block id="656450ae55843844fdfca7b44cbc5678" category="list-text">Controllare che<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.</block>
-  <block id="9808a3e490e0cd81c2fab70cb489f958" category="paragraph">È possibile aggiungere un modulo i/o in uno slot vuoto del sistema di archiviazione.</block>
   <block id="78263f5226743bdd204519f0e9bd22d2" category="list-text">Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.</block>
   <block id="72e0b58a2d456f6ab89ca8d83859264d" category="list-text">Rimuovere il modulo di chiusura dello slot di destinazione dal supporto:</block>
   <block id="abca9f9a7ffb3d4afa15f947303b1c4c" category="admonition">La figura seguente mostra la rimozione di un modulo i/o orizzontale e verticale. In genere, si rimuoverà un solo modulo i/O.</block>
-  <block id="b0fe3ad00c115ca25f49fb3d48769b0b" category="image-alt">Rimuovere un modulo i/o AFF A1K</block>
   <block id="243dd5ebf726e6d6a9762938953c1a6a" category="cell">Pulsante di bloccaggio della camma</block>
   <block id="3939b3c4c6e868d0268fd9a75f3b3805" category="list-text">Premere il dispositivo di chiusura della camma sul modulo di chiusura nello slot di destinazione.</block>
   <block id="c053808d9acb931bed74754155a6e86f" category="list-text">Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo. Per i moduli orizzontali, ruotare la camma allontanandola dal modulo fino in fondo.</block>
@@ -7984,24 +7973,13 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f47dbf934d7d51340a5c58741715b2d5" category="list-text">Allineare il modulo i/o con i bordi dell'apertura dello slot del contenitore.</block>
   <block id="b3fe1b3e8557371fcb101f90a1a32fd0" category="list-text">Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
   <block id="be9dc0332662b913cef88d5dcde78acd" category="list-text">Collegare il modulo i/O.</block>
-  <block id="040f840d8fdf859359eb680be25e8992" category="paragraph">Se il modulo i/o è una scheda NIC, collegare il modulo agli switch dati.</block>
-  <block id="3072040b83655039de255184380a9271" category="paragraph">Se il modulo i/o è un modulo di archiviazione, collegarlo al ripiano NS224.</block>
   <block id="9056e6b74b2e2b546abd76b6e7408f4d" category="list-text">Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.</block>
-  <block id="a0a7e707ad35c210d4582fab4069c223" category="list-text">Restituire il controller dal partner controller: _Storage failover giveback -offnode target_node_name_</block>
   <block id="6c91356d53993ce0d1f0c1af28c7a48b" category="list-text">Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="026bf593d893e27d6f090dc74e403a75" category="section-title">Opzione 2: Aggiungere un modulo i/o in un sistema di archiviazione senza slot vuoti</block>
-  <block id="a06ddc697cce62226c19e353e0f2eeba" category="paragraph">È possibile modificare un modulo i/o in uno slot i/o in un sistema completamente popolato rimuovendo un modulo i/o esistente e sostituirlo con un altro modulo i/O.</block>
-  <block id="47ab52c1da07a0c00e2b876e54778a95" category="paragraph">Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per informazioni sull'utilizzo di System Manager per lo spostamento permanente delle LIF, consulta la sezione<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> .</block>
-  <block id="8f6ea8b644b16793208bc55e27bc7669" category="section-title">Fase 2: Sostituire un modulo i/O.</block>
-  <block id="900056c17f40fb1a034e134a72eca912" category="image-alt">Rimuovere il modulo i/o AFF A1K</block>
   <block id="8181d3a6b1640b5868632cfe5589a05d" category="list-text">Premere il pulsante del dispositivo di chiusura a camma.</block>
   <block id="0cfc07520b64c5be4e64fac899e6eaa9" category="list-text">Installare il modulo i/o nello slot di destinazione del contenitore:</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">Allineare il modulo con i bordi dell'apertura dello slot del contenitore.</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per la centralina.</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">Riavviare il controller dal prompt del CARICATORE:_bye_</block>
-  <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">Abilitare il giveback automatico se è stato disattivato: _Storage failover modify -node local -auto-giveback true_</block>
-  <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">Se il modulo i/o è a...</block>
-  <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">Modulo NIC</block>
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">spegnere il controller danneggiato</block>
   <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">Verificare che il<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> tipo sia visualizzato<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>, quindi eseguire manualmente il backup delle informazioni OKM.</block>
   <block id="66e5f5f877412d7578e6bec4d8f933b5" category="list-text">Sul controller danneggiato, premere _Y_ quando viene visualizzato<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
@@ -8010,7 +7988,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e9636d3f8e24f08b43c5d1ed71e065ea" category="list-text">Sul controller danneggiato, premere _y_ quando viene visualizzato<block ref="396e369cf75815ba643925818d3ec37e" prefix=" " category="inline-code"></block>.</block>
   <block id="976af5aa217f6c1b1dbf16e0ed0a4bde" category="list-text">Sul controller danneggiato, premere _y_ quando viene richiesto di riavviare il controller danneggiato e premere _ctrl-c_ per il menu di avvio.</block>
   <block id="29d550bee6b8b18ca38f7642778d8dad" category="inline-link-macro">Ripristinare i gestori delle chiavi</block>
-  <block id="88045ffbfc0d9ef09cd470c545082621" category="list-text">Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a <block ref="f2abf47fd75193a34b6b143e08f5b248" category="inline-link-macro-rx"></block>.</block>
   <block id="55f7c3a98a49a2f2d96cb2d21b95d947" category="list-text">Restituire il controller utilizzando il comando _storage failover giveback -fromnode local_.</block>
   <block id="4c6b53c8ce9f5900a70a994f21a32c6b" category="list-text">Ripristinare il giveback automatico se è stato disattivato utilizzando il comando _storage failover modify -node local -auto-giveback true_.</block>
   <block id="85ef34c14131c3f446c3d96330659ce7" category="list-text">Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il comando _system node AutoSupport Invoke -node * -type all -message MAINT=END_.</block>
@@ -8233,23 +8210,10 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="05dceffd3c31a9d53e9b23ec48d1bf77" category="paragraph">È necessario installare nuove licenze per il nodo se il nodo danneggiato stava utilizzando le funzioni ONTAP che richiedono una licenza standard (con blocco dei nodi). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.</block>
   <block id="d498932449bd1680afbe5aad136fb7e3" category="paragraph">Fino a quando non vengono installate le chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo. Tuttavia, se il nodo era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzioni senza licenza sul nodo potrebbe mettere fuori conformità con il contratto di licenza, pertanto è necessario installare la chiave di licenza sostitutiva sul nodo il prima possibile.</block>
   <block id="3e508eeaedfdae09fad57a764b5e2b73" category="section-title">Fase 1: Arrestare il modulo controller danneggiato</block>
-  <block id="6f13230d5681e1c88b50f5ecbce62637" category="paragraph">Arrestare o rilevare il modulo controller danneggiato utilizzando una delle seguenti opzioni.</block>
   <block id="5d053cb0e109f37b3c9cfa31e957c2bc" category="list-text">Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.</block>
-  <block id="d9d1de25706aa51c5367e4dafd60898e" category="list-text">Rimuovere il modulo di chiusura dello slot di destinazione dal telaio:</block>
-  <block id="192d3ce6854b267e65d46222f8f3a24f" category="image-alt">Rimuovere un modulo i/O.</block>
-  <block id="75fa26086844dfcbf14f35086518217a" category="list-text">Staccare il modulo di chiusura.</block>
-  <block id="2b6adb50592127273fdb4bb2b68918d5" category="list-text">Allineare il modulo i/o con i bordi dell'apertura dello slot del modulo controller.</block>
-  <block id="97366bfb1dcb5b97156c347c8ad89d9a" category="list-text">Far scorrere delicatamente il modulo fino in fondo nello slot, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
   <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">Per sostituire un modulo i/o, individuarlo all'interno del modulo controller e seguire la sequenza specifica di passi.</block>
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">Premere il pulsante del dispositivo di chiusura a camma.</block>
-  <block id="422e2aa4ec97de509f54db9d23618f37" category="list-text">Rimuovere il modulo dal telaio agganciando il dito nell'apertura della leva a camme ed estraendo il modulo dal telaio.</block>
-  <block id="ce8b63d25565a610d1f9564150f85914" category="list-text">Far scorrere delicatamente il modulo nello slot fino in fondo al telaio, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
-  <block id="fb2068c184d4dbf1c0e520d9e9b173b2" category="list-text">Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per il modulo controller.</block>
   <block id="ed5714a7b9709284c56117bd6dc4e081" category="list-text">Ruotare il vassoio di gestione dei cavi in posizione di blocco.</block>
-  <block id="268bccb6c35b538d967467b5d2935b49" category="list-text">Riavviare il modulo controller dal prompt del CARICATORE:_bye_</block>
-  <block id="253b24d74d0517388c6e5b078713c86a" category="inline-link">BURT 1494308 - lo spegnimento dell'ambiente potrebbe essere attivato durante la sostituzione del modulo i/O.</block>
-  <block id="fc5ee1a4ca46ff0160eeada84fe673fc" category="admonition">Se si verifica un problema durante il riavvio, vedere<block ref="5f4b19e33781d4df6c59a005be26e607" category="inline-link-rx"></block></block>
-  <block id="cfedf0b233356261eb909e7add24bded" category="list-text">Restituire il modulo controller dal modulo controller partner. _storage failover giveback -nodo_target_node_name_</block>
   <block id="43d656a7b2fb92dbbe5e13b8f00a00b8" category="list-text">Premere il pulsante della camma di gestione del sistema. La leva della camma si allontana dal telaio.</block>
   <block id="f0d27e50eb41ec006d18a96b5254063e" category="list-text">Ruotare la leva della camma completamente verso il basso e rimuovere il modulo di gestione del sistema dal modulo controller.</block>
   <block id="54a53a09772d42f23357a9952d2d46a1" category="section-title">Fase 2: Trasferire l'immagine di avvio sul supporto di avvio</block>
@@ -8848,7 +8812,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f3585daa539c5917b4fedd0eb7efb3f2" category="sidebar">Sistemi AFF</block>
   <block id="6476573ba5b973ad8ea01c57f5b30267" category="sidebar">Sistemi ASA</block>
   <block id="9aaba65702056e024efc0836758c1538" category="sidebar">Aggiunta a caldo completa</block>
-  <block id="b1cd69e899e8ab2e8b0c559899a3f2d7" category="admonition">La figura seguente mostra la rimozione di un modulo i/o orizzontale e verticale. In genere, si rimuoverà un solo modulo i/O.</block>
   <block id="3e6277588162255770fd3384bad09d6d" category="list-text">Dal prompt del CARICATORE sul controller, avviare il controller e immettere _y_ quando viene richiesto di ignorare l'ID del sistema a causa di una mancata corrispondenza dell'ID del sistema.</block>
   <block id="9daabece8db7521a7882f63ebd76a891" category="image-alt">Rimuovere un'unità con il pulsante di rilascio sulla parte superiore</block>
   <block id="e0bc24820711c466532ba2cb67ababd9" category="image-alt">Rimuovere un'unità con il pulsante di rilascio al centro</block>
@@ -9088,7 +9051,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="0e6eb93881093798ffaf4eef324aae16" category="list-text">Installare e collegare i ripiani NS224, come descritto in <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
   <block id="f399facc82d214513205adcdfed1e55f" category="image-alt">Azionamenti dei dischi del sedile</block>
   <block id="f20a0219f10b0070c92efe4269486629" category="list-text">Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
-  <block id="86e8e2badf42560bb0b1ed3bac3933fa" category="paragraph">Installare e collegare i ripiani NS224, come descritto in <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
   <block id="b9c98500ab9d006e0d9fd3d1c95f7904" category="paragraph">Per ulteriori informazioni sul cablaggio, vedere <block ref="b8ff88c1a2e9444f28ec1504689e0040" category="inline-link-macro-rx"></block>.</block>
   <block id="ef83cb60cd5ea6118e6d106efa30f927" category="image-alt">Precauzioni relative al peso di sollevamento</block>
   <block id="f3badb2cde47b97db55936f633e8bbf1" category="image-alt">Cablaggio composito cluster senza switch a due nodi</block>
@@ -9833,7 +9795,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c285ffddf1786cd1a14a26bcf9b74c7d" category="paragraph"><block ref="061047859ec1e213bd771fe5350bda2c" prefix="" category="inline-code"></block></block>
   <block id="811ae15d713f8c846d0516e053f895b2" category="list-text">Monitorare il processo di boot media recovery quando Loader configura le porte del cluster locale ed esegue<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block> dal nodo partner.</block>
   <block id="8f616ca67798afd132662e15fc4caa28" category="paragraph">Quando netboot è in esecuzione, viene visualizzato il<block ref="f6715e6f2a651bfc51d27566b1be5385" prefix=" " category="inline-code"></block> messaggio.</block>
-  <block id="ab8b7433e2ad2aa82ba07b42b4cd465d" category="list-text">In base al metodo di crittografia, selezionare l'opzione corrispondente alla configurazione a nodo singolo:</block>
   <block id="39cb6e7651585d511fc148af8198837f" category="open-title">Nessuna crittografia</block>
   <block id="aada4d2dac8a2a5bd04bf211104ff2c5" category="paragraph">Se non viene rilevata alcuna crittografia, il processo di ripristino dei supporti di avvio continua senza richiedere la gestione delle chiavi.</block>
   <block id="69c50e084d31ca90079f6b8b4409607b" category="paragraph">Continuare a monitorare il processo di ripristino mentre ripristina la configurazione di backup, il file env, mdb e rdb dal nodo partner.</block>
@@ -10190,7 +10151,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="13e7cf07309f0d95eee5aa49b6842dc0" category="doc">Controllare il supporto e lo stato della chiave di crittografia - FAS9500</block>
   <block id="e4d9374bc79ce9095fb021e03551599f" category="doc">Ripristina crittografia - FAS9500</block>
   <block id="bd5c047c4a41e95a8a9424888875e56a" category="list-text">Collegare il modulo i/o al dispositivo designato.</block>
-  <block id="2d8241a8fe54414b6494b29d26d8b251" category="list-text">Dal nodo integro, ripristinare il giveback automatico se è stato disattivato utilizzando il<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> comando.</block>
   <block id="9d462bd05672844aeab0d3d5d323d66a" category="list-text">Reinstallare la centralina e ricollegare l'alimentazione al modulo controller:</block>
   <block id="4d872659b015ad414d5e68440a7ddfd6" category="paragraph">Il controller inizia ad avviarsi non appena viene inserito e l'alimentazione viene ripristinata.</block>
   <block id="6f3fa8086df2fa20b3e903512f693396" category="list-text">Riportare la centralina guasta al normale funzionamento restituendo la memoria:</block>
@@ -10370,9 +10330,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="09109aaca603d8ac1da46aa588c46f63" category="paragraph">Da NIC a NIC (numero di porte diverso)</block>
   <block id="4e7b2ae169cb37276347e7c88d211db4" category="paragraph">Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> .</block>
   <block id="0c3f64052572f9d13d9b078656a055e4" category="paragraph">Da NIC a modulo i/o di storage</block>
-  <block id="deaf42dafc1e4522c0ccf86ad58f237e" category="list-text">Restituire il controller dal controller partner:`storage failover giveback -ofnode target_node_name'</block>
-  <block id="c1d0761e549ef1ce873a404f8d41a2d5" category="list-text">Riavviare il controller dal prompt di Loader:<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
-  <block id="5d831aef00c06eb087aebfb790f041b7" category="section-title">Fase 2: Aggiungere un nuovo modulo i/O.</block>
   <block id="68c06f8f4688078ddfe1ceedef798cae" category="list-text">Restituire il controller dal partner controller:</block>
   <block id="523f5a38bba8d64b2af1cdee174a06cc" category="paragraph"><block ref="49c908925c3b8a3554612823f81c8964" prefix="" category="inline-code"></block></block>
   <block id="b98036ad0a9b610670da83fe762dadb5" category="list-text">Dal nodo integro, ripristinare lo giveback automatico se disattivato utilizzando il seguente comando:</block>
@@ -10392,4 +10349,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione ASA A1K quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
   <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione FAS70 e FAS90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.</block>
   <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">Fase 2: Aggiungere i nuovi moduli i/O.</block>
+  <block id="a6448c631c301c525a61c500fdf8e46a" category="list-text">In base al metodo di crittografia, selezionare l'opzione corrispondente alla configurazione del sistema:</block>
+  <block id="92ba658b9a66d0825f0f084b7da309b7" category="list-text">Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a <block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block>.</block>
 </blocks>
