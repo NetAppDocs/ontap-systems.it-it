@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Dopo aver sostituito un modulo i/o, è necessario riavviare il modulo controller.
+
+.Fasi
+. Dal prompt DEL CARICATORE, riavviare il nodo:
++
+`bye`
+
++
+
+NOTE: In questo modo, il modulo i/o e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
+. Restituire il controller dal partner controller:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Dal nodo integro, ripristinare lo giveback automatico se disabilitato:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

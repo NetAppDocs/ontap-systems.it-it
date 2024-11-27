@@ -65,7 +65,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 == Fase 2: Aggiungere il nuovo modulo i/O.
 
-Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
+Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
 
 .Prima di iniziare
 * Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
@@ -75,9 +75,9 @@ Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo
 
 [role="tabbed-block"]
 ====
-.Aggiungere il modulo i/o a uno slot vuoto
+.Aggiungere il modulo i/o a uno slot disponibile
 --
-È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con slot vuoti disponibili.
+È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con gli slot disponibili.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -101,21 +101,24 @@ Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo
 NOTE: Assicurarsi che tutti gli slot i/o inutilizzati siano dotati di spazi vuoti per evitare possibili problemi di temperatura.
 
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
-. Riavviare il controller dal prompt DEL CARICATORE: _Bye_
+. Dal prompt DEL CARICATORE, riavviare il nodo:
++
+`bye`
+
 +
 
-NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+NOTE: In questo modo, il modulo i/o e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
 
 . Restituire il controller dal partner controller:
 +
 `storage failover giveback -ofnode target_node_name`
 
 . Ripetere questi passi per il controller B.
-. Dal nodo integro, ripristinare lo giveback automatico se disattivato utilizzando il seguente comando:
+. Dal nodo integro, ripristinare lo giveback automatico se disabilitato:
 +
-`storage failover modify -node local -auto-giveback true`
+`storage failover modify -node local -auto-giveback _true_`
 
-. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi utilizzando il seguente comando:
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
 +
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
