@@ -39,6 +39,25 @@ Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui 
 Quando si sostituiscono più unità disco, è necessario attendere 70 secondi tra la rimozione di ciascuna unità disco guasta e l'inserimento dell'unità disco sostitutiva per consentire al sistema di archiviazione di riconoscere l'esistenza di ogni nuovo disco.
 
 .Fasi
+. Se si desidera assegnare manualmente la proprietà del disco per il disco sostitutivo, è necessario disattivare l'assegnazione automatica del disco sostitutivo, se abilitato
++
+
+NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
+
++
+.. Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
++
+Se l'assegnazione automatica dei dischi è attivata, viene visualizzato l'output `on` Nella colonna "`Auto Assign`" (assegnazione automatica) (per ciascun modulo controller).
+
+.. Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node node_name -autoassign off`
++
+È necessario disattivare l'assegnazione automatica dei dischi su entrambi i moduli controller.
+
+
+
 . Mettere a terra l'utente.
 . Identificare fisicamente il disco guasto.
 +
@@ -72,7 +91,26 @@ Chiudere lentamente la maniglia della camma in modo che sia allineata correttame
 +
 Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
 
-. Se si sta sostituendo un'altra unità, ripetere i passaggi da 2 a 6.
+. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
+. Se l'assegnazione automatica del disco è stata disattivata nella fase 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco.
++
+.. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
+.. Assegnare ciascuna unità: `storage disk assign -disk disk_name -owner node_name`
++
+È possibile immettere il comando su entrambi i moduli controller.
+
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+.. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node node_name -autoassign on`
++
+È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i moduli controller.
+
+
+
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 +
 Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
