@@ -1,0 +1,86 @@
+---
+permalink: a20-30-50/index.html 
+sidebar: sidebar 
+keywords: aff a70 aff a90 maintenance, maintenance, repairing a70 aff a90,  replace a70 aff a90 components 
+summary: 'Eseguire la manutenzione dell"hardware di AFF A20, AFF A30 e AFF A50' 
+---
+= Manutenzione dell'hardware AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per i sistemi di archiviazione AFF A20, AFF A30 o AFF A50, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
+
+
+
+== Supporto di boot
+
+Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+
+== Chassis
+
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
+
+
+
+== DIMM
+
+È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
+
+
+
+== Disco
+
+Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
+
+
+
+== Ventola
+
+La ventola raffredda il controller.
+
+
+
+== NVDIMM
+
+Il modulo NVDIMM (Dual in-line memory module non volatile) gestisce il trasferimento dei dati dalla memoria volatile allo storage non volatile e mantiene l'integrità dei dati in caso di interruzione dell'alimentazione o di spegnimento del sistema.
+
+
+
+== Batteria NVDIMM
+
+La batteria NVDIMM mantiene l'alimentazione del modulo NVDIMM.
+
+
+
+== Scheda PCIe
+
+Una scheda PCIe (Peripheral Component Interconnect Express) è una scheda di espansione che si inserisce nello slot PCIe della scheda madre.
+
+
+
+== Alimentatore
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
+
+
+
+== Batteria con orologio in tempo reale
+
+Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.
+
+
+
+== Modulo di gestione del sistema
+
+Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un laptop per scopi di manutenzione del controller o del sistema. Il modulo di gestione del sistema contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).

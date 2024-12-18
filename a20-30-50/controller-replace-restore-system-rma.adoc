@@ -1,0 +1,35 @@
+---
+permalink: a20-30-50/controller-replace-restore-system-rma.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: Per ripristinare il funzionamento completo del sistema, devi verificare le LIF, controllare lo stato di salute del cluster e restituire la parte guasta a NetApp. 
+---
+= Sostituzione completa del controller - AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per ripristinare il funzionamento completo del sistema storage, occorre verificare le LIF, controllare lo stato di salute del cluster e restituire il componente guasto a NetApp.
+
+
+
+== Fase 1: Verifica delle LIF e verifica dello stato del cluster
+
+Prima di riportare in servizio il nodo _replacement_, occorre verificare che le LIF si trovino nelle loro porte home, verificare lo stato del cluster e reimpostare il giveback automatico.
+
+.Fasi
+. Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
++
+Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert -vserver * -lif *`
+
+. Controllare lo stato di salute del cluster. Per ulteriori informazioni, consultare l' https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"^] articolo della KB.
+. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Fase 2: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -1,0 +1,182 @@
+---
+permalink: c80/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: c80, move hardware components, replace the chassis 
+summary: 'Spostare i dischi rigidi e i moduli del controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato dal rack o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis danneggiato.' 
+---
+= Sostituire il telaio - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spostare i dischi rigidi e il modulo controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato con il nuovo chassis dello stesso modello dello chassis danneggiato.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Nella parte anteriore dello chassis, premere con decisione ciascun disco fino a quando non si avverte un arresto positivo. In questo modo, i dischi sono posizionati saldamente sulla scheda intermedia dello chassis.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+
+. Verificare che il LED di stato della NVRAM color ambra situato nello slot 4/5 sul retro del modulo controller danneggiato sia spento. Cercare l'icona NV.
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+LED di stato NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+LED di attenzione NVRAM
+
+|===
++
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi di alimentazione del modulo controller dagli alimentatori del modulo controller (PSU).
++
+
+NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
+
+. Scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Immagine di rimozione della centralina]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermo di bloccaggio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio e collocarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Ripetere questa procedura per l'altro modulo controller nello chassis.
+
+
+
+
+== Fase 2: Spostare le unità nel nuovo chassis
+
+È necessario spostare le unità da ciascuna apertura del vecchio chassis allo stesso alloggiamento del nuovo chassis.
+
+. Rimuovere delicatamente il pannello frontale dal sistema.
+. Rimuovere i dischi:
++
+.. Premere il pulsante di rilascio nella parte superiore della superficie del supporto sotto i LED.
+.. Tirare la maniglia della camma in posizione completamente aperta per estrarre l'unità dalla scheda intermedia, quindi estrarre delicatamente l'unità dal telaio.
++
+L'unità deve disinnestarsi dallo chassis, in modo che possa scorrere liberamente dallo chassis.
+
++
+
+NOTE: Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
+
++
+
+NOTE: I dischi sono fragili. Maneggiarli il meno possibile per evitare di danneggiarli.
+
+
+
+. Tenere traccia dell'alloggiamento di ciascuna unità e mettere da parte le unità su un carrello o un tavolo privo di elettricità statica.
+
+
+
+
+== Fase 3: Sostituire lo chassis all'interno del rack dell'apparecchiatura o dell'armadio del sistema
+
+Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema.
+
+. Rimuovere le viti dai punti di montaggio del telaio.
+. Con due persone, far scorrere il vecchio chassis dalle guide del rack in un cabinet di sistema o in un rack dell'apparecchiatura, quindi metterlo da parte.
+. Con l'aiuto di due persone, installare lo chassis sostitutivo nel rack dell'apparecchiatura o nell'armadietto del sistema guidandolo sulle guide del rack in un cabinet del sistema o in un rack dell'apparecchiatura.
+. Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
+. Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dal vecchio chassis.
+. Installare le unità dal vecchio chassis nel telaio sostitutivo:
++
+.. Allineare l'unità dal vecchio chassis con la stessa apertura nel nuovo chassis.
+
+
+. Spingere delicatamente l'unità nel telaio fino in fondo.
++
+La maniglia della camma si innesta e inizia a ruotare verso l'alto.
+
++
+.. Spingere con decisione l'unità fino in fondo nel telaio, quindi bloccare la maniglia della camma spingendola verso l'alto e contro il supporto dell'unità.
++
+Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la parte anteriore del supporto dell'unità. Fa clic quando è sicuro.
+
+.. Ripetere la procedura per i dischi rimanenti nel sistema.
+
+
+. Se non è già stato fatto, installare il pannello.
+
+
+
+
+== Passo 4: Reinstallare i moduli controller
+
+Reinstallare i moduli controller nel telaio e riavviarli.
+
+. Se il condotto dell'aria è stato aperto, chiuderlo ruotandolo fino in fondo.
++
+Deve essere a filo con la lamiera del modulo controller.
+
+. Allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il controller completamente nel telaio.
++
+.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi e rieseguire il controller.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+
+
+. Ripetere i passi precedenti per installare il secondo controller nel nuovo chassis.
+. Collegare i cavi di alimentazione agli alimentatori.
++
+
+NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.
+
++
+Il modulo controller inizia ad avviarsi non appena viene installato e l'alimentazione viene ripristinata. Se viene avviato al prompt del CARICATORE, riavviare il controller con il `boot_ontap` comando.
+
+

@@ -23,14 +23,17 @@ NOTE: Se si tenta di eseguire questa procedura con gli aggregati sullo shelf che
 +
 È possibile utilizzare `storage aggregate offline -aggregate _aggregate_name_` e quindi `storage aggregate delete -aggregate _aggregate_name_` comando.
 
-* Se il sistema è stato spedito in un cabinet di sistema, è necessario un cacciavite Phillips per rimuovere le viti che fissano il ripiano ai montanti posteriori del cabinet.
++
+Per ulteriori informazioni su questo passaggio ed evitare potenziali problemi di i/o, consultare la https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"^].
+
+* Se il sistema viene fornito in un cabinet di sistema, è necessario un cacciavite Phillips per rimuovere le viti che fissano il ripiano alle guide del rack del cabinet.
 
 
 .A proposito di questa attività
 * Se si rimuovono a caldo più shelf, rimuovere uno shelf alla volta.
-* *Best practice:* la Best practice consiste nel rimuovere la proprietà del disco dopo aver rimosso gli aggregati dai dischi nello shelf che si sta rimuovendo.
+* *Best practice:* la Best practice consiste nell'eliminare la proprietà dei dischi dopo aver rimosso gli aggregati dai dischi nello shelf in questione.
 +
-La rimozione delle informazioni di proprietà da un disco spare consente di integrare correttamente il disco in un altro nodo (in base alle necessità).
+La cancellazione delle informazioni di proprietà da un'unità di riserva consente di integrare correttamente l'unità in un altro nodo (se necessario).
 
 +
 La procedura per la rimozione della proprietà dai dischi si trova nel contenuto dei dischi e degli aggregati:
@@ -48,12 +51,11 @@ NOTE: La procedura richiede la disattivazione dell'assegnazione automatica del d
 Se non si conosce `_shelf_name_` dello shelf interessato, eseguire `storage shelf show` comando.
 
 +
-Uno shelf ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+Uno scaffale ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
 
 * Dopo aver scollegato uno shelf da porte non dedicate compatibili con RoCE (a bordo dei controller, su schede PCIe compatibili con RoCE, una combinazione di entrambi o su moduli i/o), è possibile riconfigurare queste porte per l'utilizzo in rete.
 +
-
-NOTE: Se la coppia ha esegue una versione di ONTAP 9.6, è necessario riavviare i controller uno alla volta. Se la coppia ha esegue ONTAP 9.7 o versione successiva, non è necessario riavviare i controller, a meno che uno o entrambi i controller non siano in modalità di manutenzione. Questa procedura presuppone che nessuno dei controller sia in modalità di manutenzione.
+Se la coppia ha esegue ONTAP 9.7 o versione successiva, non è necessario riavviare i controller, a meno che uno o entrambi i controller non siano in modalità di manutenzione. Questa procedura presuppone che nessuno dei controller sia in modalità di manutenzione.
 
 
 
@@ -110,11 +112,11 @@ Gli alimentatori non dispongono di un interruttore di alimentazione.
 . Rimuovere fisicamente il ripiano dal rack o dall'armadietto.
 +
 
-NOTE: Un ripiano NS224 completamente carico può pesare fino a 30.29 kg (66.78 libbre) e richiede due persone per sollevare o utilizzare un sollevatore idraulico. Evitare di rimuovere i componenti dello scaffale (dalla parte anteriore o posteriore dello scaffale) per ridurre il peso dello scaffale, in quanto il peso dello scaffale diventa sbilanciato.
+NOTE: Un ripiano NS224 completamente carico può pesare fino a 30,29 kg (66,78 lb) con NSM100 moduli o una media di 25,8 kg (56,8 lb) con NSM100B moduli e richiede due persone per sollevare o utilizzare un sollevatore idraulico. Evitare di rimuovere i componenti dello scaffale (dalla parte anteriore o posteriore dello scaffale) per ridurre il peso dello scaffale, in quanto il peso dello scaffale diventa sbilanciato.
 
 +
 
-NOTE: Se il sistema è stato spedito in un cabinet, svitare prima le due viti Phillips che fissano il ripiano ai montanti posteriori. Le viti si trovano sulle pareti interne dello scaffale del modulo NSM inferiore. Rimuovere entrambi i moduli NSM per accedere alle viti.
+NOTE: Se il sistema è stato spedito in un armadietto, è necessario svitare le due viti Phillips che fissano il ripiano alle guide del rack. Le viti si trovano sulle pareti interne del ripiano del NSM inferiore. Rimuovere entrambi gli NSM per accedere alle viti.
 
 . Se si rimuovono più shelf, ripetere i punti da 2 a 5.
 +
@@ -124,10 +126,7 @@ In caso contrario, passare alla fase successiva.
 +
 Il comando viene eseguito su entrambi i moduli controller.
 
-. È possibile riconfigurare le porte non dedicate compatibili con RoCE per l'utilizzo in rete, completando i seguenti passaggi secondari.
-+
-In caso contrario, la procedura viene completata.
-
+. È possibile riconfigurare le porte non dedicate compatibili con RoCE per l'utilizzo in rete, completando i seguenti passaggi secondari. In caso contrario, la procedura viene completata.
 +
 .. Verificare i nomi delle porte non dedicate, attualmente configurate per l'utilizzo dello storage: `storage port show`
 +
@@ -135,7 +134,7 @@ In caso contrario, la procedura viene completata.
 
 +
 
-NOTE: Le porte non dedicate configurate per l'utilizzo dello storage vengono visualizzate nell'output come segue: Se la coppia ha esegue ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `storage` in `Mode` colonna. Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?` viene anche visualizzato `enabled` in `State` colonna.
+NOTE: Le porte non dedicate configurate per l'utilizzo dello storage vengono visualizzate nell'output come segue: Se la coppia ha esegue ONTAP 9,8 o versioni successive, nella `Mode` colonna vengono visualizzate le porte non dedicate `storage`. Se la coppia ha utilizza ONTAP 9,7, nella `State` colonna vengono visualizzate anche `enabled` le porte non dedicate visualizzate `false` nella `Is Dedicated?` colonna.
 
 .. Completare la serie di passaggi applicabili alla versione di ONTAP in esecuzione sulla coppia ha:
 +
@@ -168,28 +167,6 @@ Eseguire questo comando per ciascuna porta che si sta riconfigurando.
 ... Passare alla fase secondaria 8c per verificare tutte le modifiche delle porte.
 
 
-
-
- a| 
-Una versione di ONTAP 9.6
- a| 
-... Riconfigurare le porte compatibili con RoCE per l'utilizzo in rete, sul primo modulo controller: `storage port disable -node _node name_ -port _port name_`
-+
-Eseguire questo comando per ciascuna porta che si sta riconfigurando.
-
-... Riavviare il modulo controller per rendere effettive le modifiche alle porte:
-+
-`system node reboot -node _node name_ -reason _reason_ for the reboot`
-
-+
-
-NOTE: Il riavvio deve essere completato prima di passare alla fase successiva. Il riavvio può richiedere fino a 15 minuti.
-
-... Riconfigurare le porte sul secondo modulo controller, ripetendo il primo passo (a).
-... Riavviare il secondo controller per rendere effettive le modifiche alla porta, ripetendo il secondo passaggio (b).
-... Passare alla fase secondaria 8c per verificare tutte le modifiche delle porte.
-
-
 |===
 .. Verificare che le porte non dedicate di entrambi i moduli controller siano riconfigurate per l'utilizzo in rete: `storage port show`
 +
@@ -199,7 +176,7 @@ NOTE: Il riavvio deve essere completato prima di passare alla fase successiva. I
 Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `network` in `Mode` colonna.
 
 +
-Se la coppia ha utilizza ONTAP 9.7 o 9.6, vengono visualizzate le porte non dedicate `false` in `Is Dedicated?` viene anche visualizzato `disabled` in `State` colonna.
+Se la coppia ha utilizza ONTAP 9,7, nella `State` colonna vengono visualizzate anche `disabled` le porte non dedicate visualizzate `false` nella `Is Dedicated?` colonna.
 
 
 

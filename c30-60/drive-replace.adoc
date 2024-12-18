@@ -1,0 +1,192 @@
+---
+permalink: c30-60/drive-replace.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, replace the drives 
+summary: 'È possibile sostituire un disco SSD guasto senza interruzioni mentre è in corso l"i/O.' 
+---
+= Sostituire l'unità - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un disco guasto senza interruzioni mentre l'i/o è in corso.
+
+.Prima di iniziare
+* L'unità che si sta installando deve essere supportata dal sistema di archiviazione.
++
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+* Se l'autenticazione SED (self-Encrypting Drive) è attivata, è necessario utilizzare le istruzioni per la sostituzione SED contenute nella documentazione ONTAP.
++
+Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
+
++
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"^]
+
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+* Verificare che l'unità che si sta rimuovendo non sia funzionante.
++
+È possibile verificare che il disco non funzioni correttamente eseguendo `storage disk show -broken` comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.
+
++
+
+NOTE: A seconda del tipo e della capacità del disco, potrebbero essere necessarie diverse ore prima che il disco venga visualizzato nell'elenco dei dischi guasti.
+
+
+
+.A proposito di questa attività
+* Quando si sostituisce un'unità guasta, è necessario attendere 70 secondi tra la rimozione dell'unità e l'inserimento dell'unità sostitutiva per consentire al sistema di archiviazione di riconoscere che un'unità è stata rimossa.
+* Si consiglia di installare la versione corrente del Disk Qualification Package (DQP) prima di eseguire lo hot-swap di un'unità.
++
+L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati. In questo modo si evitano messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi e alla prevenzione della partizione dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
+
+* Prima di sostituire i componenti FRU, si consiglia di disporre delle versioni attuali del firmware del disco e del firmware del modulo shelf NVMe (NSM) sul sistema.
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
+
++
+[NOTE]
+====
+Non riportare il firmware a una versione che non supporta lo shelf e i relativi componenti.
+
+====
+* Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non aggiornate.
++
+
+NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
+
+* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+.Fasi
+. Se si desidera assegnare manualmente la proprietà del disco per l'unità sostitutiva, è necessario disattivare l'assegnazione automatica del disco, se attivata.
++
+
+NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
+
++
+.. Verificare se l'assegnazione automatica dei dischi è abilitata:
++
+`storage disk option show`
+
++
+È possibile immettere il comando su uno dei controller.
+
++
+Se l'assegnazione automatica dell'unità di comando è attivata, l'uscita viene visualizzata `on` nella `Auto Assign` colonna (per ogni unità di comando).
+
+.. Se l'assegnazione automatica dei dischi è attivata, disattivarla:
++
+`storage disk option modify -node node_name -autoassign off`
+
++
+È necessario disattivare l'assegnazione automatica della guida su entrambi i controller.
+
+
+
+. Mettere a terra l'utente.
+. Identificare fisicamente il disco guasto.
++
+In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED di attenzione (ambra) sul display operatore dello shelf di dischi e il disco guasto si illuminano.
+
++
+
+NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
+
+. Rimuovere il disco guasto:
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Rimuovere l'unità NVMe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Ruotare la maniglia della camma verso il basso per disinnestare la trasmissione dalla piastra intermedia.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Estrarre l'unità dall'alloggiamento utilizzando la maniglia della camma e sostenendo l'unità con l'altra mano.
+
+Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
+
+
+NOTE: Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
+
+|===
+. Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
+. Inserire l'unità sostitutiva:
++
+.. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire l'unità.
+.. Premere delicatamente fino a quando l'unità non si arresta.
+.. Chiudere la maniglia della camma in modo che l'unità sia completamente alloggiata nel piano interno e che la maniglia scatti in posizione.
++
+Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
+
+
+
+. Verificare che il LED di attività del disco (verde) sia acceso.
++
+Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
+
+. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
+. Se l'assegnazione automatica del disco è stata disattivata nel passaggio 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco:
++
+.. Visualizzare tutti i dischi non posseduti:
++
+`storage disk show -container-type unassigned`
+
++
+È possibile immettere il comando su uno dei controller.
+
+.. Assegnare ciascun disco:
++
+`storage disk assign -disk disk_name -owner owner_name`
+
++
+È possibile immettere il comando su uno dei controller.
+
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+.. Se necessario, riabilitare l'assegnazione automatica del disco:
++
+`storage disk option modify -node node_name -autoassign on`
+
++
+È necessario riattivare l'assegnazione automatica della guida su entrambi i controller.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
++
+Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+
+

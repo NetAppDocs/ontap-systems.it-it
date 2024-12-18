@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement 
 summary: Per aggiungere a caldo uno shelf di dischi da NS224 TB, la coppia ha deve soddisfare determinati requisiti. 
 ---
-= Requisiti e Best practice per l'aggiunta a caldo: NS224 shelf
+= Requisiti e Best practice per l'aggiunta a caldo di shelf NS224
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,7 +47,7 @@ L'installazione della versione corrente di DQP consente al sistema di riconoscer
 
 * *Best practice:* la procedura migliore è quella di eseguire https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] prima e dopo l'aggiunta a caldo di uno shelf.
 +
-L'esecuzione di Active IQ Config Advisor prima dell'aggiunta a caldo di uno shelf fornisce un'istantanea della connettività Ethernet esistente dello shelf (ENET), verifica le versioni del firmware del modulo shelf (NSM) NVMe consente di verificare un ID shelf già in uso nella coppia ha.
+L'esecuzione di Active IQ Config Advisor prima dell'aggiunta a caldo di uno shelf offre una panoramica della connettività Ethernet (ENET) esistente, verifica le versioni del firmware NSM (NVMe Shelf Module) e ti consente di verificare l'ID dello shelf già in uso nella coppia ha.
 
 +
 L'esecuzione di Active IQ Config Advisor dopo l'aggiunta a caldo di uno shelf consente di verificare che gli shelf siano cablati correttamente e che gli shelf ID siano univoci all'interno della coppia ha.

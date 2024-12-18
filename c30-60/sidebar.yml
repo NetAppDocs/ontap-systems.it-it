@@ -1,0 +1,94 @@
+---
+section: c30-60
+title: Sistemi AFF C30 e AFF C60
+entries:
+- title: Installazione e configurazione
+  pdf-filename: Installazione e configurazione di AFF C30 e AFF C60
+  entries:
+  - title: Installazione del flusso di lavoro
+    url: "/c30-60/install-overview.html"
+  - title: Verifica dei requisiti
+    url: "/c30-60/install-requirements.html"
+  - title: Preparazione all'installazione
+    url: "/c30-60/install-prepare.html"
+  - title: Installare l'hardware
+    url: "/c30-60/install-hardware.html"
+  - title: Bulloneria dei cavi
+    url: "/c30-60/install-cable.html"
+  - title: Accendere il sistema
+    url: "/c30-60/install-power-hardware.html"
+  - title: Completare la configurazione del sistema
+    url: "/c30-60/install-complete.html"
+- title: Mantenere
+  pdf-filename: AFF C30 e AFF C60 mantengono
+  entries:
+  - title: Panoramica della manutenzione
+    url: "/c30-60/maintain-overview.html"
+  - title: Supporto di boot
+    entries:
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/c30-60/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/c30-60/bootmedia-replace-requirements.html"
+    - title: Controllare le chiavi di crittografia
+      url: "/c30-60/bootmedia-encryption-preshutdown-checks.html"
+    - title: Spegnere il controller compromesso
+      url: "/c30-60/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
+      url: "/c30-60/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/c30-60/bootmedia-recovery-image-boot.html"
+    - title: Ripristino della crittografia
+      url: "/c30-60/bootmedia-encryption-restore.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/c30-60/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF C30 e AFF C60
+    entries:
+    - title: Flusso di lavoro di sostituzione del telaio
+      url: "/c30-60/chassis-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/c30-60/chassis-replace-requirements.html"
+    - title: Spegnere i controller
+      url: "/c30-60/chassis-replace-shutdown.html"
+    - title: Sostituire il telaio
+      url: "/c30-60/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa dello chassis
+      url: "/c30-60/chassis-replace-complete-system-restore-rma.html"
+  - title: Controller
+    pdf-filename: Modulo controller AFF C30 e AFF C60
+    entries:
+    - title: Flusso di lavoro di sostituzione del controller
+      url: "/c30-60/controller-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/c30-60/controller-replace-requirements.html"
+    - title: Spegnere il controller compromesso
+      url: "/c30-60/controller-replace-shutdown.html"
+    - title: Sostituire il controller
+      url: "/c30-60/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/c30-60/controller-replace-system-config-restore-and-verify.html"
+    - title: Controller Recable e give back
+      url: "/c30-60/controller-replace-recable-reassign-disks.html"
+    - title: Sostituzione completa del controller
+      url: "/c30-60/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/c30-60/dimm-replace.html"
+  - title: Disco
+    url: "/c30-60/drive-replace.html"
+  - title: Ventola
+    url: "/c30-60/fan-replace.html"
+  - title: Modulo i/O.
+    entries:
+    - title: Panoramica del modulo di i/O.
+      url: "/c30-60/io-module-overview.html"
+    - title: Aggiungere il modulo i/O.
+      url: "/c30-60/io-module-add.html"
+    - title: Sostituire il modulo i/O.
+      url: "/c30-60/io-module-replace.html"
+  - title: Batteria NV
+    url: "/c30-60/nvdimm-battery-replace.html"
+  - title: Alimentatore
+    url: "/c30-60/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/c30-60/rtc-battery-replace.html"

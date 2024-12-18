@@ -14,7 +14,7 @@ summary: 'È possibile sostituire senza interruzioni una batteria di un orologio
 È possibile sostituire una batteria RTC (Real-Time Clock) guasta senza interruzioni in uno shelf di dischi NS224 acceso e mentre l'i/o è in corso.
 
 .Prima di iniziare
-* Il modulo NSM del partner dello shelf deve essere attivo e funzionante ed essere cablato correttamente in modo che lo shelf mantenga la connettività quando si rimuove il modulo NSM con la FRU (modulo NSM di destinazione) guasta.
+* L'NSM partner dello shelf deve essere attivo e funzionante e deve essere collegato correttamente in modo che lo shelf mantenga la connettività quando si rimuove l'NSM con la FRU (NSM di destinazione) guasta.
 +
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
 
@@ -26,7 +26,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Downlo
 +
 Ciò consente a ONTAP di elaborare l'evento di rimozione NSM.
 
-* Dopo aver sostituito la batteria RTC, reinstallato il modulo NSM e avviato il modulo, l'ora dell'orologio in tempo reale viene aggiornata da ONTAP.
+* Dopo aver sostituito la batteria RTC, reinstallare l'NSM e il modulo si avvia, l'ora in tempo reale viene aggiornata da ONTAP.
 * *Best practice:* la Best practice consiste nel disporre delle versioni correnti del firmware NVMe shelf module (NSM) e del firmware del disco sul sistema prima di sostituire i componenti FRU.
 +
 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
@@ -45,52 +45,56 @@ Non riportare il firmware a una versione che non supporta lo shelf e i relativi 
 Se non si conosce `shelf_name` dello shelf interessato, eseguire `storage shelf show` comando.
 
 +
-Uno shelf ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando `off` opzione.
+Uno scaffale ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando l' `off`opzione .
 
 * Quando si disimballano le batterie RTC sostitutive, conservare tutto il materiale di imballaggio da utilizzare quando si restituisce la batteria RTC guasta.
 +
 Per ottenere il numero RMA o ulteriore assistenza per la procedura di sostituzione, contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico).
 
-* Per sostituire una batteria RTC, è possibile utilizzare la seguente animazione o i passaggi scritti.
-+
+
+
+[role="tabbed-block"]
+====
+.NSM100 moduli
+--
+Per i moduli NSM100, è possibile utilizzare la seguente animazione o la procedura scritta per sostituire una batteria RTC.
+
 .Sostituire una batteria RTC in un ripiano da NS224
 video::df7a12f4-8554-4448-a3df-aa86002f2de8[panopto]
-
-
 .Fasi
 . Mettere a terra l'utente.
-. Scollegare il cablaggio dal modulo NSM che contiene la FRU che si sta sostituendo:
+. Scollegare il cablaggio dall'NSM che contiene la FRU che si sta sostituendo:
 +
 .. Scollegare il cavo di alimentazione dall'alimentatore aprendo il fermo del cavo di alimentazione, se si tratta di un alimentatore CA, oppure svitando le due viti ad alette, se si tratta di un alimentatore CC, quindi scollegare il cavo di alimentazione dall'alimentatore.
 +
 Gli alimentatori non dispongono di un interruttore di alimentazione.
 
-.. Scollegare il cablaggio dello storage dalle porte del modulo NSM.
+.. Scollegare il cablaggio di archiviazione dalle porte NSM.
 +
-Prendere nota delle porte del modulo NSM a cui ciascun cavo è collegato. Ricollegare i cavi alle stesse porte quando si reinserisce il modulo NSM, più avanti in questa procedura.
+Prendere nota delle porte NSM a cui è collegato ciascun cavo. Quando si reinserisce l'NSM, ricollegare i cavi alle stesse porte, più avanti in questa procedura.
 
 
 
-. Rimuovere il modulo NSM dallo shelf:
+. Rimuovere l'NSM dallo scaffale:
 +
-.. Far passare le dita di indice attraverso i fori dei meccanismi di blocco su entrambi i lati del modulo NSM.
+.. Far passare le dita attraverso i fori delle dita dei meccanismi di chiusura su entrambi i lati dell'NSM.
 +
 
-NOTE: Se si rimuove il modulo NSM inferiore e la guida inferiore impedisce l'accesso ai meccanismi di blocco, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+NOTE: Se si sta rimuovendo il NSM inferiore e se la guida inferiore ostruisce l'accesso ai meccanismi di chiusura, posizionare le dita di indice attraverso i fori delle dita dall'interno (incrociando le braccia).
 
 .. Con i pollici, tenere premuti le linguette arancioni sulla parte superiore dei meccanismi di blocco.
 +
 I meccanismi di chiusura si sollevano, liberando i perni di chiusura sullo scaffale.
 
-.. Tirare delicatamente fino a quando il modulo NSM non si trova a circa un terzo del percorso di uscita dallo scaffale, afferrare i lati del modulo NSM con entrambe le mani per sostenerne il peso, quindi posizionarlo su una superficie piana e stabile.
+.. Tirare delicatamente fino a quando l'NSM non si trova a circa un terzo del percorso fuori dal ripiano, afferrare i lati dell'NSM con entrambe le mani per sostenere il suo peso, quindi collocarlo su una superficie piana e stabile.
 +
-Quando si inizia a tirare, i bracci del meccanismo di chiusura si estendono dal modulo NSM e si bloccano in posizione completamente estesa.
+Quando si inizia a tirare, i bracci del meccanismo di chiusura si estendono dall'NSM e si bloccano nella loro posizione completamente estesa.
 
 
 
-. Allentare la vite ad alette del coperchio del modulo NSM e aprire il coperchio.
+. Allentare la vite ad alette del coperchio NSM e aprire il coperchio.
 +
-L'etichetta FRU sul coperchio del modulo NSM indica la posizione della batteria RTC, vicino alla parte anteriore del modulo NSM e a destra dell'alimentatore.
+L'etichetta FRU sul coperchio NSM indica la posizione della batteria RTC, vicino alla parte anteriore dell'NSM e a destra dell'alimentatore.
 
 . Identificare fisicamente la batteria RTC guasta.
 . Sostituire la batteria RTC:
@@ -99,35 +103,31 @@ L'etichetta FRU sul coperchio del modulo NSM indica la posizione della batteria 
 .. Inserire la batteria di ricambio nel supporto inclinandola (in direzione opposta al supporto), spingerla in posizione verticale, quindi premere con decisione nel connettore fino a posizionarla completamente.
 +
 
-NOTE: Il lato positivo della batteria, contrassegnato con il segno più, è rivolto verso l'esterno (lontano dal supporto), corrispondente al segno più contrassegnato sulla scheda del modulo NSM.
+NOTE: Il lato positivo della batteria, contrassegnato con un segno più, è orientato verso l'esterno (lontano dal supporto), corrispondente al segno più contrassegnato sulla scheda NSM.
 
 
 
-. Chiudere il coperchio del modulo NSM, quindi serrare la vite ad alette.
-. Reinserire il modulo NSM nello shelf:
+. Chiudere il coperchio NSM, quindi serrare la vite ad alette.
+. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+. Con entrambe le mani, far scorrere delicatamente l'NSM nel ripiano fino a quando il peso dell'NSM non è completamente sostenuto dal ripiano.
+. Spingere l'NSM nel ripiano finché non si ferma (circa mezzo pollice dal retro del ripiano).
 +
-.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
-.. Con entrambe le mani, far scorrere delicatamente il modulo NSM nello shelf fino a quando il peso del modulo NSM non è completamente supportato dallo shelf.
-.. Spingere il modulo NSM nello shelf fino a quando non si ferma (circa mezzo pollice dal retro dello shelf).
-+
-È possibile posizionare i pollici sulle linguette arancioni sulla parte anteriore di ciascun gancio per le dita (dei bracci del meccanismo di chiusura) per inserire il modulo NSM.
+È possibile posizionare i pollici sulle linguette arancioni sulla parte anteriore di ciascun anello per le dita (dei bracci del meccanismo di chiusura) per spingere l'NSM.
 
-.. Far passare le dita di indice attraverso i fori dei meccanismi di blocco su entrambi i lati del modulo NSM.
+. Far passare le dita attraverso i fori delle dita dei meccanismi di chiusura su entrambi i lati dell'NSM.
 +
 
-NOTE: Se si inserisce il modulo NSM inferiore e la guida inferiore ostruisce l'accesso ai meccanismi di blocco, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+NOTE: Se si inserisce il NSM inferiore e se la guida inferiore ostruisce l'accesso ai meccanismi di chiusura, posizionare le dita di indice attraverso i fori delle dita dall'interno (incrociando le braccia).
 
-.. Con i pollici, tenere premuti le linguette arancioni sulla parte superiore dei meccanismi di blocco.
-.. Spingere delicatamente in avanti i fermi fino al punto di arresto.
-.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco, quindi continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
+. Con i pollici, tenere premuti le linguette arancioni sulla parte superiore dei meccanismi di blocco.
+. Spingere delicatamente in avanti i fermi fino al punto di arresto.
+. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco, quindi continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
 +
-Il modulo NSM deve essere inserito completamente nello shelf e a filo con i bordi dello shelf.
+L'NSM deve essere inserito completamente nel ripiano e a filo con i bordi del ripiano.
 
-
-
-. Ricollegare il cablaggio al modulo NSM:
+. Ricollegare il cablaggio all'NSM:
 +
-.. Ricollegare il cablaggio dello storage alle stesse due porte del modulo NSM.
+.. Ricollegare il cablaggio dello storage alle stesse due porte NSM.
 +
 I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto. Quando un cavo è inserito correttamente, scatta in posizione.
 
@@ -136,15 +136,15 @@ I cavi devono essere inseriti con la linguetta di estrazione del connettore rivo
 Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.
 
 +
-Inoltre, entrambi i LED LNK (verde) della porta del modulo NSM si illuminano. Se il LED LNK non si accende, ricollegare il cavo.
+Inoltre, entrambi i LED LNK (verde) della porta NSM si accendono. Se il LED LNK non si accende, ricollegare il cavo.
 
 
 
-. Verificare che i LED di attenzione (ambra) sul modulo NSM contenente la batteria RTC guasta e il pannello operatore dello shelf non siano più accesi
+. Verificare che i LED di attenzione (ambra) sull'NSM contenenti la batteria RTC guasta e il pannello del display operatore non siano più illuminati
 +
-I LED attenzione del modulo NSM si spengono dopo il riavvio del modulo NSM e non rilevano più un problema alla batteria RTC. Questa operazione può richiedere da tre a cinque minuti.
+I LED di attenzione NSM si spengono dopo il riavvio dell'NSM e non rilevano più un problema alla batteria RTC. Questa operazione può richiedere da tre a cinque minuti.
 
-. Verificare che il modulo NSM sia cablato correttamente eseguendo Active IQ Config Advisor.
+. Verificare che l'NSM sia collegato correttamente, eseguendo Active IQ Config Advisor.
 +
 Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 
@@ -152,3 +152,152 @@ Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
 
 
+
+--
+.NSM100B moduli
+--
+.Fasi
+. Mettere a terra l'utente.
+. Scollegare il cablaggio dall'NSM che contiene la FRU che si sta sostituendo:
++
+.. Scollegare il cavo di alimentazione dall'alimentatore aprendo il fermo del cavo di alimentazione, se si tratta di un alimentatore CA, oppure svitando le due viti ad alette, se si tratta di un alimentatore CC, quindi scollegare il cavo di alimentazione dall'alimentatore.
++
+Gli alimentatori non dispongono di un interruttore di alimentazione.
+
+.. Scollegare il cablaggio di archiviazione dalle porte NSM.
++
+Prendere nota delle porte NSM a cui è collegato ciascun cavo. Quando si reinserisce l'NSM, ricollegare i cavi alle stesse porte, più avanti in questa procedura.
+
+
+
+. Rimuovere l'NSM:
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Rimuovere l'NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Su entrambe le estremità dell'NSM, spingere le linguette di bloccaggio verticali verso l'esterno per rilasciare le maniglie.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+** Tirare le maniglie verso di sé per sganciare l'NSM dalla midplane.
++
+Mentre tirate, le maniglie si estendono fuori dal ripiano. Quando si avverte una certa resistenza, continuare a tirare.
+
+** Far scorrere l'NSM fuori dal ripiano e posizionarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore dell'NSM mentre la si fa scorrere fuori dallo scaffale.
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio.
+
+|===
+. Aprire il coperchio del modulo ruotando la vite a testa zigrinata in senso antiorario per allentarla, quindi aprire il coperchio.
+. Individuare la batteria RTC e sostituirla.
++
+.. Rimuovere la batteria guasta:
++
+image::../media/drw_t_rtc_battery_replace_ieops-1981.svg[Sostituire la batteria RTC]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Ruotare delicatamente la batteria RTC ad un angolo lontano dal relativo supporto.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Estrarre la batteria RTC dal relativo supporto.
+
+|===
+.. Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
+.. Prendere nota della polarità della batteria RTC, quindi inserirla nel supporto inclinandola e spingendola verso il basso.
++
+
+NOTE: Assicurarsi che il segno più sulla batteria corrisponda al segno più sulla scheda madre.
+
+.. Controllare visivamente che la batteria sia completamente installata nel supporto e che la polarità sia corretta.
+
+
+. Chiudere il coperchio NSM e ruotare la vite a testa zigrinata in senso orario fino a serrarla.
+. Inserire l'NSM nello scaffale:
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Sostituire l'NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Se le maniglie NSM sono state ruotate in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio durante la manutenzione dell'NSM, ruotarle in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Allineare la parte posteriore dell'NSM con l'apertura nel ripiano, quindi spingere delicatamente l'NSM utilizzando le maniglie fino a insediarlo completamente.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Ruotare le maniglie in posizione verticale e bloccarle in posizione con le linguette.
+
+|===
+. Recable il NSM.
++
+.. Ricollegare il cablaggio dello storage alle stesse due porte NSM.
++
+I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto. Quando un cavo è inserito correttamente, scatta in posizione.
+
+.. Ricollegare il cavo di alimentazione all'alimentatore, quindi fissare il cavo di alimentazione con il relativo fermo, se si tratta di un alimentatore CA, oppure serrare le due viti ad alette, se si tratta di un alimentatore CC, quindi scollegare il cavo di alimentazione dall'alimentatore.
++
+Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.
+
++
+Inoltre, entrambi i LED LNK (verde) della porta NSM si accendono. Se il LED LNK non si accende, ricollegare il cavo.
+
+
+
+. Verificare che i LED di attenzione (ambra) sull'NSM contenenti la batteria RTC guasta e il pannello del display operatore non siano più illuminati
++
+I LED di attenzione NSM si spengono dopo il riavvio dell'NSM e non rilevano più un problema alla batteria RTC. Questa operazione può richiedere da tre a cinque minuti.
+
+. Verificare che l'NSM sia collegato correttamente, eseguendo Active IQ Config Advisor.
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"^]
+
+
+
+--
+====

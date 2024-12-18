@@ -1,0 +1,68 @@
+---
+permalink: a20-30-50/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, shutdown the controllers 
+summary: Per sostituire lo chassis, è necessario spegnere i controller. 
+---
+= Spegnere le centraline - AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spegnere i controller per eseguire la manutenzione dello chassis.
+
+Questa procedura si applica ai sistemi con configurazioni a due nodi. Se si dispone di un sistema con più di due nodi, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Come eseguire un arresto e un'accensione regolari di una coppia ha in un cluster a quattro nodi"^].
+
+.Prima di iniziare
+* Impedire a tutti i client/host di accedere ai dati sul sistema NetApp.
+* Sospendere i processi di backup esterni.
+* Assicurarsi di disporre delle autorizzazioni e delle credenziali necessarie:
++
+** Credenziali dell'amministratore locale per ONTAP.
+** Passphrase per la gestione delle chiavi integrata di NetApp (OKM) a livello del cluster se si utilizza la crittografia storage o NVE/NAE.
+** Accessibilità BMC per ciascun controller.
+
+
+* Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
+* Come Best practice prima dello spegnimento, è necessario:
++
+** Eseguire ulteriori operazioni https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["controlli dello stato del sistema"].
+** Aggiornare ONTAP a una versione consigliata per il sistema.
+** Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"]. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.
+
+
+
+
+.Fasi
+. Accedere al cluster tramite SSH o da qualsiasi nodo del cluster utilizzando un cavo della console locale e un laptop/console.
+. Disattivare AutoSupport e indicare per quanto tempo si prevede che il sistema non sia in linea:
++
+`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
+
+. Identificare l'indirizzo SP/BMC di tutti i nodi:
++
+`system service-processor show -node * -fields address`
+
+. Uscire dalla shell del cluster: `exit`
+. Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno qualsiasi dei nodi elencati nell'output del passaggio precedente.
++
+Se stai utilizzando una console/laptop, accedi al controller usando le stesse credenziali di amministratore del cluster.
+
++
+
+NOTE: Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monitorare l'avanzamento.
+
+. Arrestare i due nodi situati nel telaio danneggiato:
++
+`system node halt -node <node1>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+
++
+
+NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalità StrictSync: `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. Immettere *y* per ogni controller nel cluster quando viene visualizzato `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
+{y|n}:_`
+. Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.
+

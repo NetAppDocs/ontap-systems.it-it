@@ -43,7 +43,7 @@ Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. E
 +
 Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
 +
 
 NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.

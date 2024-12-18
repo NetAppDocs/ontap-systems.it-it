@@ -67,43 +67,36 @@ NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
 Se non si conosce `_shelf_name_` dello shelf interessato, eseguire `storage shelf show` comando.
 
 +
-Uno shelf ha tre LED di posizione: Uno sul display operatore e uno su ciascun modulo NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando `off` opzione.
+Uno scaffale ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando l' `off`opzione .
 
 * Quando si disimballa l'unità sostitutiva, conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce l'unità guasta.
 +
 Per ottenere il numero RMA o ulteriore assistenza per la procedura di sostituzione, contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico).
 
-* La seguente animazione fornisce una panoramica delle parti fisiche di rimozione e inserimento della procedura di hot-swap del disco.
-+
-.Sostituzione a caldo di un disco in uno shelf NS224
-video::733011a7-e03a-41b0-8723-aa840133bf25[panopto]
-+
+
+
 .Fasi
-.. Se si desidera assegnare manualmente la proprietà del disco per l'unità sostitutiva, è necessario disattivare l'assegnazione automatica del disco, se attivata.
+. Se si desidera assegnare manualmente la proprietà del disco per l'unità sostitutiva, è necessario disattivare l'assegnazione automatica del disco, se attivata.
 +
 
-NOTE: È necessario assegnare manualmente la proprietà del disco se i dischi nello shelf sono di proprietà di entrambi i moduli controller della coppia ha.
+NOTE: È necessario assegnare manualmente la proprietà del disco se i dischi nello shelf sono di proprietà di entrambi i moduli controller della coppia ha. Completare questa attività più avanti in questa procedura.
 
 +
-
-NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
-
-+
-... Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
+.. Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
 +
 È possibile immettere il comando su entrambi i moduli controller.
 
 +
 Se l'assegnazione automatica dei dischi è attivata, viene visualizzato l'output `on` in `Auto Assign` (per ciascun modulo controller).
 
-... Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node node_name -autoassign off`
+.. Se l'assegnazione automatica dei dischi è attivata, disattivarla: `storage disk option modify -node node_name -autoassign off`
 +
 È necessario disattivare l'assegnazione automatica dei dischi su entrambi i moduli controller.
 
 
 
-.. Mettere a terra l'utente.
-.. Identificare fisicamente il disco guasto.
+. Mettere a terra l'utente.
+. Identificare fisicamente il disco guasto.
 +
 In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED di attenzione (ambra) sul display operatore dello shelf di dischi e il disco guasto si illuminano.
 
@@ -111,49 +104,70 @@ In caso di guasto di un disco, il sistema registra un messaggio di avviso alla c
 
 NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
 
-.. Rimuovere il disco guasto:
+. Rimuovere il disco guasto:
 +
-... Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
-... Estrarre l'unità dallo scaffale utilizzando la maniglia della camma e supportarla con l'altra mano.
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Rimuovere l'unità.]
+
++
+[cols="1,4"]
+|===
 
 
-.. Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Ruotare la maniglia della camma verso il basso per disinnestare la trasmissione dalla piastra intermedia.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Estrarre l'unità dallo scaffale utilizzando la maniglia della camma e supportarla con l'altra mano.
+
+|===
+. Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
 +
 Questo consente al sistema di riconoscere che un disco è stato rimosso.
 
-.. Inserire l'unità sostitutiva:
+. Inserire l'unità sostitutiva:
 +
-... Con la maniglia della camma in posizione aperta, inserire l'unità sostitutiva con entrambe le mani.
-... Premere fino all'arresto del disco.
-... Chiudere la maniglia della camma in modo che l'unità sia completamente inserita nel piano intermedio e la maniglia scatti in posizione.
+.. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire l'unità.
+.. Premere delicatamente fino a quando l'unità non si arresta.
+.. Chiudere la maniglia della camma in modo che l'unità sia completamente inserita nel piano intermedio e la maniglia scatti in posizione.
 +
 Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
 
 
 
-.. Verificare che il LED di attività del disco (verde) sia acceso.
+. Verificare che il LED di attività del disco (verde) sia acceso.
 +
 Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
 
-.. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
-.. Se l'assegnazione automatica del disco è stata disattivata nel passaggio 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco:
+. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
+. Se l'assegnazione automatica del disco è stata disattivata nel passaggio 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco:
 +
-... Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
+.. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
 +
 È possibile immettere il comando su entrambi i moduli controller.
 
-... Assegnare ciascun disco: `storage disk assign -disk disk_name -owner owner_name`
+.. Assegnare ciascun disco: `storage disk assign -disk disk_name -owner owner_name`
 +
 È possibile immettere il comando su entrambi i moduli controller.
 
 +
 È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
 
-... Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node node_name -autoassign on`
+.. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node node_name -autoassign on`
 +
 È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i moduli controller.
-
-
 
 
 

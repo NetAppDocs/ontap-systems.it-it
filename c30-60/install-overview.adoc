@@ -1,0 +1,38 @@
+---
+permalink: c30-60/install-overview.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, Installation, deployment, Install, deploy, Installing, deploying 
+summary: Segui questi passaggi ad alto livello per installare e configurare il sistema storage AFF A70 o A90 e implementarlo come coppia ha nel tuo sistema ONTAP. 
+---
+= Flusso di lavoro di installazione e configurazione - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per installare e configurare un sistema di storage AFF C30 o AFF C60, è necessario rivedere i requisiti e le considerazioni di installazione, preparare il sito, installare e cablare i componenti hardware, accendere il sistema di storage e configurare il cluster ONTAP.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:install-requirements.html["Esaminare i requisiti e le considerazioni di installazione"]
+[role="quick-margin-para"]
+Prima di installare il sistema di storage, questo deve soddisfare i requisiti di installazione ed è necessario fare riferimento alle considerazioni relative all'installazione.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Uno"]link:install-prepare.html["Preparazione per l'installazione"]
+[role="quick-margin-para"]
+Per prepararsi all'installazione, è necessario approntare il sito, verificare i requisiti ambientali ed elettrici e accertarsi che lo spazio rack sia sufficiente. Quindi, disimballare l'apparecchiatura, confrontarne il contenuto con la distinta di imballaggio e registrare l'hardware per accedere ai vantaggi del supporto.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Due"]link:install-hardware.html["Installare l'hardware"]
+[role="quick-margin-para"]
+Per installare l'hardware, installare i kit guide per il sistema di storage e gli scaffali, quindi installare e fissare il sistema di storage e gli scaffali nell'armadietto o nel rack per telecomunicazioni.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Tre"]link:install-cable.html["Collegare la bulloneria"]
+[role="quick-margin-para"]
+Per collegare l'hardware, collegare i controller alla rete e quindi agli scaffali.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Quattro"]link:install-power-hardware.html["Accendere il sistema di archiviazione"]
+[role="quick-margin-para"]
+Per accendere il sistema storage, accendere ogni shelf e assegnare un ID shelf univoco in base alle esigenze, quindi accendere i controller.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Cinque"]link:install-complete.html["Completare la configurazione del sistema storage"]
+[role="quick-margin-para"]
+Per completare la configurazione del sistema storage, accedi a ONTAP System Manager puntando un browser all'indirizzo IP del controller. Una procedura guidata di installazione consente di completare la configurazione del cluster per il sistema di storage.

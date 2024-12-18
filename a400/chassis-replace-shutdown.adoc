@@ -62,11 +62,11 @@ NOTE: Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monit
 
 . Arrestare i due nodi situati nel telaio danneggiato:
 +
-`system node halt -node <node>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+`system node halt -node <node1>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
 
 +
 
-NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalità StrictSync: `system node halt -node <node>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalità StrictSync: `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
 
 . Immettere *y* per ogni controller nel cluster quando viene visualizzato `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
 {y|n}:_`

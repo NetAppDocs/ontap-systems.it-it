@@ -24,6 +24,7 @@ Questa sezione del cablaggio descrive come collegare lo shelf NS224 ai seguenti 
 
 == A proposito di questa attività
 
+* Questa procedura si applica solo allo storage collegato direttamente. Per visualizzare le istruzioni per lo spazio di archiviazione collegato allo switch, vedere la nostra link:cable-as-switch-attached.html["guida del cablaggio collegata allo switch"].
 * Acquisire familiarità con il corretto orientamento del connettore del cavo e con l'ubicazione e l'etichettatura delle porte sui moduli a scaffale NS224 NSM100.
 +
 ** I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto.
@@ -38,14 +39,29 @@ image::../media/oie_cable_pull_tab_up.png[I cavi vengono inseriti con la linguet
 
 ** È possibile utilizzare l'illustrazione seguente per identificare fisicamente le porte NSM100 dello shelf, e0a e e0b.
 +
-Uno shelf NS224 contiene due moduli NSM100. Il modulo superiore va nello slot A (NSM A) e il modulo inferiore va nello slot B (NSM B).
-
-+
-Ogni modulo NSM100 include 2 porte 100GbE QSFP28 GbE: e0a e e0b.
-
+[role="tabbed-block"]
+====
+.NSM100 moduli
+--
+*** Uno shelf NS224 contiene due moduli NSM100. Il modulo superiore va nello slot A (NSM A) e il modulo inferiore va nello slot B (NSM B).
+*** Ogni modulo NSM100 include 2 porte 100GbE QSFP28 GbE: e0a e e0b.
 +
 image::../media/drw_ns224_back_ports.png[Posizione delle NS224 NSM100 porte del modulo e0a e e0b]
 
+
+
+--
+.NSM100B moduli
+--
+*** Uno shelf NS224 contiene due moduli NSM100B. Il modulo superiore va nello slot A (NSM A) e il modulo inferiore va nello slot B (NSM B).
+*** Ogni modulo NSM100B include 2 porte 100GbE CX6/DX: E1a GbE e e1b GbE.
++
+image::../media/drw_ns224_nsmb_back_ports_ieops-2006.svg[Posizione delle NS224 NSM100B porte del modulo e0a e e0b]
+
+
+
+--
+====
 
 
 * Dopo aver cablato uno shelf aggiunto a caldo, ONTAP riconosce lo shelf:

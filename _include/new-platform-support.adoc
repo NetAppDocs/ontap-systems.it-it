@@ -2,213 +2,74 @@
 :allow-uri-read: 
 
 
-[cols="2*"]
-|===
-| Piattaforme | Inizio disponibile 
-
-
- a| 
-https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Sistemi ASA r2"]
-
-* ASA A1K
-* ASA A70
-* ASA A90
-
- a| 
-ONTAP 9.16.0
-
-
-
- a| 
-https://www.netapp.com/data-storage/fas/["FAS70 e FAS90"]
- a| 
-ONTAP 9.15.1
-
-
-
- a| 
-* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A1K"]
-* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A70"]
-* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A90"]
-
- a| 
-ONTAP 9.15.1
-
-
-
- a| 
-https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C250"]
- a| 
-ONTAP 9.13.1P1
-
-
-
- a| 
-https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C400"]
- a| 
-ONTAP 9.13.1P1
-
-
-
- a| 
-https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C800"]
- a| 
-ONTAP 9.13.1P1
-
-
-
- a| 
-https://hwu.netapp.com/ProductSpecs/Index["FAS2820"]
- a| 
-ONTAP 9.13.1
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A150"]
- a| 
-ONTAP 9.13.1
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A250"]
- a| 
-ONTAP 9.13.1
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A400"]
- a| 
-ONTAP 9.13.1
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A900"]
- a| 
-ONTAP 9.13.1
-
-
-
- a| 
-* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C250"]
-* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C400"]
-* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C800"]
-
- a| 
-ONTAP 9.12.1P1
-
-ONTAP 9.13.1 GA e versioni successive di ONTAP
-
-[NOTE]
+[role="tabbed-block"]
 ====
-Queste piattaforme non sono supportate con ONTAP 9.13.1 RC1.
+.Sistemi AFF
+--
+I modelli AFF A-Series e C-Series sono una solida piattaforma scale-out costruita per ambienti virtualizzati ed è implementabile come un sistema indipendente o un Tier dalle performance elevate in una configurazione NetApp ONTAP. link:https:://www.netapp.com/data-storage/all-flash-san-storage-array["Ulteriori informazioni sui sistemi AFF"].
 
+.AFF A20, AFF A30, AFF A50
+Disponibile a partire da ONTAP 9.16.1
+
+.AFF C30, AFF C60
+Disponibile a partire da ONTAP 9.16.1
+
+.AFF A1K, AFF A70 e AFF A90
+Disponibile a partire da ONTAP 9.15.1
+
+.AFF A150
+Disponibile a partire da ONTAP 9.13.1, ONTAP 9.12.1P1, ONTAP 9.11.1P8, ONTAP 9.10.1P12
+
+.AFF A900
+Disponibile a partire da ONTAP 9.10.1
+
+.AFF A250 e AFF A800
+Disponibile a partire da ONTAP 9,8
+
+.AFF A400
+Disponibile a partire da ONTAP 9,7
+
+.AFF C250, AFF C400, AFF C800
+Disponibile a partire da ONTAP 9.12.1P1, ONTAP 9.13.1 GA
+
+--
+.Sistemi ASA r2
+--
+I sistemi ASA R2 forniscono una soluzione hardware e software unificata che crea un'esperienza semplificata specifica delle esigenze dei clienti SAN. link:https:://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Ulteriori informazioni sui sistemi ASA R2"].
+
+.ASA A1K, ASA A70, ASA A90
+Disponibile a partire da ONTAP 9.16.0
+
+--
+.Sistemi ASA
+--
+I modelli ASA A-Series e C-Series offrono un'esperienza SAN semplificata e dedicata che fornisce una disponibilità continua dei dati per database Enterprise mission-critical e altri carichi di lavoro SAN utilizzando il protocollo FCP o iSCSI. link:https:://www.netapp.com/data-storage/all-flash-san-storage-array["Ulteriori informazioni sui sistemi ASA"].
+
+.ASA A150, ASA A250, ASA A400, ASA A900
+Disponibile a partire da ONTAP 9.13.1
+
+.ASA C250, C400, C800
+Disponibile a partire da ONTAP 9.13.1P1
+
+--
+.Sistemi FAS
+--
+I sistemi FAS offrono uno storage secondario efficiente e sicuro, la soluzione definitiva per tiering, backup e disaster recovery. link:https:://www.netapp.com/data-storage/fas/["Scopri di più sui sistemi FAS"].
+
+.FAS70 e FAS90
+Disponibile a partire da ONTAP 9.15.1
+
+.FAS9500
+Disponibile a partire da ONTAP 9.11.1, ONTAP 9.10.1P3
+
+.FAS8300 e FAS700
+Disponibile a partire da ONTAP 9,7
+
+.FAS2820
+Disponibile a partire da ONTAP 9.13.1
+
+.FAS2700
+Disponibile a partire da ONTAP 9.13.1
+
+--
 ====
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A150"]
-
-[NOTE]
-====
-Non tentare di installare o avviare il sistema di archiviazione AFF A150 con una versione non supportata di ONTAP. Se si tenta di installare o avviare il sistema con una versione non supportata di ONTAP, ONTAP lo consentirà (ONTAP non bloccherà il tentativo). Di conseguenza, il sistema di storage AFF A150 diventerà un sistema di storage FAS2750.
-
-==== a| 
-ONTAP 9.13.1 e versioni successive di ONTAP
-
-ONTAP 9.12.1P1
-
-ONTAP 9.11.1P8
-
-ONTAP 9.10.1P12
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS9500"]
- a| 
-ONTAP 9.11.1
-
-ONTAP 9.10.1P3
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A900"]
- a| 
-ONTAP 9.10.1
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A250/AFF ASA A250"]
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS500f"]
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A800"]
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8300"]
- a| 
-ONTAP 9.7
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8700"]
- a| 
-ONTAP 9.7
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A400"]
- a| 
-ONTAP 9.7
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF ASA A220"]
- a| 
-ONTAP 9.7
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A700"]
- a| 
-ONTAP 9.7
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/7623-ds-3989.pdf["AFF C190"^]
- a| 
-ONTAP 9.6
-
-
-
- a| 
-https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF A320"]
- a| 
-ONTAP 9.6
-
-|===

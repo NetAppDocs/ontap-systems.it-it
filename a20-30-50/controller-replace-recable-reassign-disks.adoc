@@ -1,0 +1,128 @@
+---
+permalink: a20-30-50/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, how to reboot the system 
+summary: È necessario riavviare il controller. 
+---
+= Restituire il controller: AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Restituire il controller.
+
+
+
+== Restituire il controller
+
+Reimpostare la crittografia se abilitata e riportare il controller al normale funzionamento.
+
+[role="tabbed-block"]
+====
+.Nessuna crittografia
+--
+. Dal prompt DI Loader, immettere `boot_ontap`.
+. Premere <enter> quando i messaggi della console si interrompono.
++
+** Se viene visualizzato il prompt _login_, andare al passo successivo alla fine di questa sezione.
+** Se viene visualizzato _Waiting for giveback_, premere il tasto <enter>, accedere al nodo partner, quindi passare alla fase successiva alla fine di questa sezione.
+
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+--
+.Crittografia integrata (OKM)
+--
+. Dal prompt DI Loader, immettere `boot_ontap maint`.
+. Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
+. Immettere la passphrase OKM.
++
+
+NOTE: La passphrase viene richiesta due volte.
+
+. Immettere i dati della chiave di backup quando richiesto.
+. Nel menu di avvio, inserire l'opzione `1` per l'avvio normale.
+. Premere <enter> quando viene visualizzato _Waiting for giveback_.
+. Spostare il cavo della console sul nodo partner e accedere come `admin`.
+. Fornire solo gli aggregati CFO (l'aggregato root): `storage failover giveback -fromnode local -only-cfo-aggregates _true_`
++
+** In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+
+. Attendere 5 minuti dopo il completamento del report di sconto e controllare lo stato di failover e di sconto: `storage failover show` E `storage failover show-giveback`.
+. Sincronizzare e verificare lo stato dei tasti:
++
+.. Riportare il cavo della console nella centralina sostitutiva.
+.. Sincronizza chiavi mancanti: `security key-manager onboard sync`
++
+
+NOTE: Viene richiesta la passphrase a livello di cluster di OKM per il cluster.
+
+.. Verificare lo stato dei tasti: `security key-manager key query -restored _false_`
++
+Quando la sincronizzazione è corretta, l'output non dovrebbe mostrare alcun risultato.
+
++
+Se l'output mostra i risultati (gli ID chiave delle chiavi che non sono presenti nella tabella delle chiavi interna del sistema), contattare https://support.netapp.com["Supporto NetApp"].
+
+
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+--
+.Gestore chiavi esterno (EKM)
+--
+. Se il volume root è crittografato con External Key Manager e il cavo console è collegato al nodo sostitutivo, immettere `boot_ontap menu` e selezionare opzione `11`.
+. Rispondere `y` o `n` alle seguenti domande:
++
+Si dispone di una copia del file /cfcard/kmip/certs/client.crt? {y/n}
+
++
+Avete una copia del file /cfcard/kmip/certs/client.key? {y/n}
+
++
+Si dispone di una copia del file /cfcard/kmip/certs/CA.pem? {y/n}
+
++
+OPPURE
+
++
+Si dispone di una copia del file /cfcard/kmip/servers.cfg? {y/n}
+
++
+Conosci l'indirizzo del server KMIP? {y/n}
+
++
+Conosci la porta KMIP? {y/n}
+
++
+
+NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di problemi.
+
+. Fornire le informazioni relative a:
++
+** Il contenuto del file del certificato client (client.crt)
+** Il contenuto del file della chiave client (client.key)
+** Contenuto del file CA (CA.pem) del server KMIP
+** L'indirizzo IP del server KMIP
+** Porta per il server KMIP
+
+
+. Una volta che il sistema è stato elaborato, viene visualizzato il Boot Menu (Menu di avvio). Selezionare '1' per l'avvio normale.
+. Controllare lo stato del takeover: `storage failover show`
+. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata e quindi `run local partner nosavecore` a `set -privilege advanced` .
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
+. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+--
+====

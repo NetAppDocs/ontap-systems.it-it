@@ -30,12 +30,6 @@ Reimpostare la crittografia se abilitata e riportare il controller al normale fu
 .Crittografia integrata (OKM)
 --
 . Dal prompt DI Loader, immettere `boot_ontap maint`.
-. Controllare la versione del firmware TMP con il `sysconfig -v` comando.
-+
-** Se la versione è inferiore a 5,63, contattare https://support.netapp.com["Supporto NetApp"].
-** Se la versione è superiore a 5,63, uscire al prompt di Loader: `halt`.
-
-
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
 . Immettere la passphrase OKM. È possibile ottenere questa passphrase dal cliente oppure contattare https://support.netapp.com["Supporto NetApp"].
 +

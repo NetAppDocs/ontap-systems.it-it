@@ -1,0 +1,24 @@
+---
+permalink: c80/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: c80, replace the boot media 
+summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio. 
+---
+= Requisiti e considerazioni - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto da NetApp.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+* Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
+

@@ -48,7 +48,6 @@ Il valore dello stato ha può essere uno dei seguenti:
 ** `non-ha` (non supportato)
 
 
-. Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
 . Verificare che l'impostazione sia stata modificata: `ha-config show`
 
 

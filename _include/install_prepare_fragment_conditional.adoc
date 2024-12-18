@@ -1,0 +1,113 @@
+= Fase 1: Preparare il sito
+:allow-uri-read: 
+
+
+
+
+== Fase 1: Preparare il sito
+
+Per installare il sistema di archiviazione, verificare che il sito e il cabinet o il rack che si intende utilizzare soddisfino le specifiche per la configurazione.
+
+.Fasi
+. Utilizzare https://hwu.netapp.com["NetApp Hardware Universe"^] per verificare che il sito soddisfi i requisiti ambientali ed elettrici del sistema di archiviazione.
+. Assicurarsi di disporre di un armadio o di uno spazio rack adeguato per il sistema di archiviazione, gli scaffali e gli switch:
+
+
+. Installare gli switch di rete necessari.
++
+Per le istruzioni di installazione e per informazioni sulla compatibilità, consultare la https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentazione dello switch"^] link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
+
+
+
+
+
+== Fase 2: Disimballare le scatole
+
+Dopo aver verificato che il sito e il cabinet o il rack che si intende utilizzare per il sistema di archiviazione soddisfino le specifiche richieste, disimballare tutte le confezioni e confrontare il contenuto con gli articoli presenti sul documento di trasporto.
+
+.Fasi
+. Aprire con attenzione tutte le scatole e disporre il contenuto in modo organizzato.
+. Confrontare il contenuto della confezione con l'elenco riportato sul documento di trasporto.
++
+
+NOTE: È possibile ottenere la distinta di imballaggio eseguendo la scansione del codice QR sul lato del cartone di spedizione.
+
++
+I seguenti elementi sono alcuni dei contenuti che potrebbero essere visualizzati nelle caselle.
+
++
+Assicurarsi che tutto ciò che è contenuto nelle confezioni corrisponda all'elenco riportato sul documento di trasporto. In caso di discrepanze, annotarle per ulteriori azioni.
+
++
+[cols="12,9,4"]
+|===
+
+
+| *Hardware* | *Cavi* |  
+
+
+ a| 
+** Pannello
+** Sistema storage
+** Kit guide con istruzioni (opzionale)
+** Scaffale (se è stato ordinato storage aggiuntivo)
+
+ a| 
+** Cavi Ethernet di gestione (cavi RJ-45)
+** Cavi di rete
+** Cavi di alimentazione
+** Cavi di stoccaggio (se è stato ordinato ulteriore spazio di archiviazione)
+** Cavo della console seriale USB-C.
+
+|  
+|===
+
+
+
+
+== Fase 3: Registrare il sistema di archiviazione
+
+Dopo aver verificato che la tua sede soddisfi i requisiti delle specifiche del sistema storage e aver verificato di disporre di tutte le parti ordinate, devi registrare il sistema storage.
+
+.Fasi
+. Individuare i numeri di serie del sistema (SSN) per ogni controller installato. I numeri di serie si trovano nelle seguenti posizioni:
+. I numeri di serie si trovano nelle seguenti posizioni:
++
+** Sul documento di trasporto
+** Nell'e-mail di conferma
+
+
++
+image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
+
+. Andare a http://mysupport.netapp.com/["Sito di supporto NetApp"^].
+. Stabilire se è necessario registrare il sistema storage:
++
+[cols="1a,2a"]
+|===
+| Se sei un... | Attenersi alla procedura descritta di seguito... 
+
+
+ a| 
+Cliente NetApp esistente
+ a| 
+.. Accedi con il tuo nome utente e la password.
+.. Selezionare *sistemi* > *i miei sistemi*.
+.. Verificare che i nuovi numeri di serie siano elencati.
+.. In caso contrario, seguire le istruzioni per i nuovi clienti NetApp.
+
+
+
+
+ a| 
+Nuovo cliente NetApp
+ a| 
+.. Fare clic su *Registrati ora* e creare un account.
+.. Selezionare *sistemi* > *Registra sistemi*.
+.. Inserisci i numeri di serie e i dettagli richiesti del sistema storage.
+
+
+Una volta approvata la registrazione, è possibile scaricare il software richiesto. Il processo di approvazione potrebbe richiedere fino a 24 ore.
+
+|===
+

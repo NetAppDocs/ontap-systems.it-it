@@ -1,0 +1,96 @@
+---
+permalink: a20-30-50/maintain-overview.html 
+sidebar: sidebar 
+keywords: aff a20 aff a30 aff a50 maintenance, maintenance, repairing a20 aff a30 aff a50, replace a20 aff a30 aff a50 components 
+summary: 'Eseguire la manutenzione dell"hardware di AFF A20, AFF A30 e AFF A50' 
+---
+= Panoramica della manutenzione hardware - AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. Le procedure specifiche per la manutenzione dei componenti del sistema AFF A20, AFF A30 e AFF A50 sono descritte in questa sezione.
+
+Le procedure descritte in questa sezione presuppongono che i sistemi di storage AFF A20, AFF A30 o AFF A50 siano già stati implementati come nodi di storage nell'ambiente ONTAP.
+
+
+
+== Componenti del sistema
+
+Per i sistemi di archiviazione AFF A20, AFF A30 e AFF A50, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Supporto di boot"]
+ a| 
+Il supporto di avvio memorizza una serie primaria e secondaria di file di immagine ONTAP e le informazioni di configurazione del sistema utilizzate dal sistema all'avvio.
+
+
+
+ a| 
+link:chassis-replace-workflow.html["Chassis"]
+ a| 
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+
+
+ a| 
+link:controller-replace-workflow.html["Controller"]
+ a| 
+Un controller è costituito da una scheda, firmware e software. Controlla le unità ed esegue il software del sistema operativo ONTAP.
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+Un modulo DIMM (Dual in-line Memory Module) è un tipo di memoria per computer. Vengono installati per aggiungere memoria di sistema a una scheda madre del controller.
+
+
+
+ a| 
+link:drive-replace.html["Disco"]
+ a| 
+Un'unità è un dispositivo che fornisce l'archiviazione fisica necessaria per i dati.
+
+
+
+ a| 
+link:fan-replace.html["Ventola"]
+ a| 
+Una ventola raffredda il controller e le unità.
+
+
+
+ a| 
+link:io-module-overview.html["Modulo i/O."]
+ a| 
+Il modulo i/o (modulo Input/Output) è un componente hardware che funge da intermediario tra il controller e vari dispositivi o sistemi che devono scambiare dati con il controller.
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["Batteria NV"]
+ a| 
+La batteria della memoria non volatile (NV) è responsabile della fornitura di alimentazione ai componenti NVMEM mentre i dati in volo vengono trasferiti nella memoria flash dopo un'interruzione dell'alimentazione.
+
+
+
+ a| 
+link:power-supply-replace.html["Alimentatore"]
+ a| 
+Un alimentatore fornisce una fonte di alimentazione ridondante in un controller.
+
+
+
+ a| 
+link:rtc-battery-replace.html["Batteria con orologio in tempo reale"]
+ a| 
+Una batteria dell'orologio in tempo reale conserva le informazioni relative alla data e all'ora del sistema se l'alimentazione è spenta.
+
+|===

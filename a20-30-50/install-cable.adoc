@@ -1,0 +1,420 @@
+---
+permalink: a20-30-50/install-cable.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, prepare installation 
+summary: Le porte di rete di gestione sui controller sono collegate agli switch. Le porte di interconnessione ha e di interconnessione cluster sono cablate su entrambi i controller. I moduli controller sono collegati a un dispositivo di archiviazione esterno, se ordinato. 
+---
+= Collegare l'hardware - AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato l'hardware del sistema di storage AFF A20, AFF A30 o AFF A50, collegare i controller alla rete e agli shelf.
+
+.Prima di iniziare
+Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch di rete.
+
+.A proposito di questa attività
+* Le procedure di cablaggio cluster/ha e rete host mostrano le configurazioni comuni. Tenete presente che il cablaggio specifico dipende dai componenti ordinati per il vostro sistema di storage. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Le immagini dei cavi hanno icone a freccia che mostrano l'orientamento corretto (verso l'alto o verso il basso) della linguetta di estrazione del connettore del cavo quando si inserisce un connettore in una porta.
++
+Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
+
++
+image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direzione della linguetta di estrazione del cavo"]
+
+* Se si effettua il cablaggio a uno switch ottico, inserire il ricetrasmettitore ottico nella porta del controller prima di collegare il cavo alla porta dello switch.
+
+
+
+
+== Fase 1: Collegare i collegamenti cluster/ha
+
+Collegare i controller al cluster ONTAP. Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.
+
+[role="tabbed-block"]
+====
+.Cablaggio cluster senza switch
+--
+.AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
+[%collapsible]
+=====
+Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
+
+.Fasi
+. Collegare le connessioni di interconnessione cluster/ha:
++
+
+NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sui moduli i/o negli slot 2 e 4). Le porte sono 40/100 GbE.
+
++
+.. Porta E2A Del controller del cavo A alla porta E2A del controller B.
+.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
++
+
+NOTE: Le porte dei moduli i/o E2B e e4b non sono utilizzate e sono disponibili per la connettività di rete host.
+
++
+*100 cavi di interconnessione cluster/ha GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cavo ha 100 GbE cluster]
+
++
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[schema di cablaggio del cluster senza switch a30 e a50 utilizzando due moduli io 100gbe]
+
+
+
+
+
+=====
+.AFF A30 o AFF A50 con un modulo i/o GbE a 2 porte da 40/100 GB
+[%collapsible]
+=====
+Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
+
+.Fasi
+. Collegare le connessioni di interconnessione cluster/ha:
++
+
+NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 40/100 GbE.
+
++
+.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
+.. Porta e4b Del controller del cavo A alla porta e4b del controller B.
++
+*100 cavi di interconnessione cluster/ha GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cavo ha 100 GbE cluster]
+
++
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[schema di cablaggio del cluster senza switch a30 e a50 utilizzando un modulo io 100gbe]
+
+
+
+
+
+=====
+.AFF A20 con un modulo i/o GbE a 2 porte da 10/25 GB
+[%collapsible]
+=====
+Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
+
+.Fasi
+. Collegare le connessioni di interconnessione cluster/ha:
++
+
+NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 10/25 GbE.
+
++
+.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
+.. Porta e4b Del controller del cavo A alla porta e4b del controller B.
++
+*25 cavi di interconnessione cluster/ha GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100px"]
+
++
+image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagramma di cablaggio del cluster senza switch a20 utilizzando un modulo io 25 gbe]
+
+
+
+
+
+=====
+--
+.Cablaggio del cluster con switch
+--
+.AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
+[%collapsible]
+=====
+Collegare i controller agli switch di rete cluster per creare connessioni cluster ONTAP.
+
+.Fasi
+. Collegare le connessioni di interconnessione cluster/ha:
++
+
+NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sui moduli i/o negli slot 2 e 4). Le porte sono 40/100 GbE.
+
++
+.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+.. Collegare la porta E2A del controller A allo switch di rete del cluster B.
+.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+.. Collegare la porta E2A del controller B allo switch di rete del cluster B.
++
+
+NOTE: Le porte dei moduli i/o E2B e e4b non sono utilizzate e sono disponibili per la connettività di rete host.
+
++
+*40/100 cavi di interconnessione cluster/ha GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cavo ha 40/100 GbE cluster]
+
++
+image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[schema di cablaggio del cluster commutato a30 e a50 utilizzando due moduli io 100gbe]
+
+
+
+
+
+=====
+.AFF A30 o AFF A50 con un modulo i/o GbE a 2 porte da 40/100 GB
+[%collapsible]
+=====
+Collegare i controller agli switch di rete cluster per creare connessioni cluster ONTAP.
+
+.Fasi
+. Collegare i controller agli switch di rete cluster:
++
+
+NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 40/100 GbE.
+
++
+.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+.. Collegare la porta e4b del controller A allo switch di rete del cluster B.
+.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+.. Collegare la porta e4b del controller B allo switch di rete del cluster B.
++
+*40/100 cavi di interconnessione cluster/ha GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cavo ha 40/100 GbE cluster]
+
++
+image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[Connessioni cluster via cavo alla rete cluster]
+
+
+
+
+
+=====
+.AFF A20 con un modulo i/o GbE a 2 porte da 10/25 GB
+[%collapsible]
+=====
+Collegare i controller agli switch di rete cluster per creare connessioni cluster ONTAP.
+
+. Collegare i controller agli switch di rete cluster:
++
+
+NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 10/25 GbE.
+
++
+.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+.. Collegare la porta e4b del controller A allo switch di rete del cluster B.
+.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+.. Collegare la porta e4b del controller B allo switch di rete del cluster B.
++
+*10/25 cavi di interconnessione cluster/ha GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100px"]
+
++
+image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["diagramma di cablaggio del cluster con a20 switch utilizzando un modulo io 25gbe"]
+
+
+
+
+
+=====
+--
+====
+
+
+== Fase 2: Collegare i cavi delle connessioni di rete host
+
+Collegare i controller alla rete host.
+
+Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.
+
+.AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
+[%collapsible]
+====
+.Fasi
+. Collegare via cavo le connessioni di rete host.
++
+I seguenti passaggi secondari sono esempi di cablaggio di rete host opzionale. Se necessario, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema di storage.
+
++
+.. Opzionale: Collegare i controller dei cavi agli switch della rete host.
++
+Su ciascun controller, collegare le porte E2B e e4b agli switch di rete host Ethernet.
+
++
+
+NOTE: Le porte sui moduli i/o negli slot 2 e 4 sono 40/100 GbE (la connettività host è 40/100 GbE).
+
++
+*Cavi 40/100 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cavo da 40/100 GB]
+
++
+image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Collegare gli switch di rete host ethernet 40/100GbE]
+
+.. Opzionale: Controller via cavo per switch di rete host FC.
++
+Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
+
++
+*Cavi FC da 64 GB/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB, larghezza=100px"]
+
++
+image::../media/drw_isi_a30-50_4p_64gb_fc_2card_cabling_ieops-2023.svg[Collegare gli switch di rete host da A30 o A50 a 64GB fc utilizzando due moduli io]
+
+
+
+
+
+====
+.AFF A30 o AFF A50 con un modulo i/o GbE a 2 porte da 10/25 GB
+[%collapsible]
+====
+.Fasi
+. Collegare via cavo le connessioni di rete host.
++
+I seguenti passaggi secondari sono esempi di cablaggio di rete host opzionale. Se necessario, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema di storage.
+
++
+.. Opzionale: Collegare i controller dei cavi agli switch della rete host.
++
+Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
+
++
+*Cavi 10/25 GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100px"]
+
++
+image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Collegare gli switch di rete host ethernet 40/100GbE]
+
+.. Opzionale: Controller via cavo per switch di rete host FC.
++
+Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
+
++
+*Cavi FC da 64 GB/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB, larghezza=100px"]
+
++
+image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cavo per 64GB switch di rete host fc]
+
+
+
+
+
+====
+.AFF A20 con un modulo 10/25 GbE a 2 porte
+[%collapsible]
+====
+.Fasi
+. Collegare via cavo le connessioni di rete host.
++
+I seguenti passaggi secondari sono esempi di cablaggio di rete host opzionale. Se necessario, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema di storage.
+
++
+.. Opzionale: Controller via cavo per switch di rete host.
++
+Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
+
++
+*Cavi 10/25 GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100pxx"]
+
++
+image::../media/drw_isi_a20_host_4p_25gbe_cabling_ieops-2017.svg[Collegare A20 a switch di rete host ethernet 40/100GbE]
+
+.. Opzionale: Controller via cavo per switch di rete host FC.
++
+Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
+
++
+*Cavi FC da 64 GB/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB, larghezza=100pxx"]
+
++
+image::../media/drw_isi_a20_4p_64gb_fc_cabling_ieops-2016.svg[Collegare gli switch di rete host da A20 a 64GB fc]
+
+
+
+
+
+====
+
+
+== Fase 3: Collegare i collegamenti della rete di gestione
+
+Collegare i controller alla rete di gestione.
+
+. Collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
++
+*CAVI RJ-45 1000BASE-T.
+
++
+image::../media/oie_cable_rj45.png[Cavi RJ-45]
+
++
+image::../media/drw_isi_g_wrench_cabling_ieops-1928.svg[Connettersi alla rete di gestione]
+
+
+
+
+IMPORTANT: Non collegare ancora i cavi di alimentazione.
+
+
+
+== Fase 4: Collegare i collegamenti dei ripiani
+
+Questa procedura mostra come collegare i controller a uno shelf NS224.
+
+.A proposito di questa attività
+* Per conoscere il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, ad esempio ottico e switch-attached, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* È possibile collegare ciascun controller a ciascun modulo NSM100B sullo shelf NS224 utilizzando i cavi di archiviazione forniti con il sistema di archiviazione, che possono essere del tipo di cavo seguente:
++
+*Cavi in rame 100 GbE QSFP28*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
+
+* La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.
+
+
+.Fasi
+. Collegare il controller del cavo A allo shelf:
++
+.. Porta e3a Del controller del cavo A alla porta NSM A E1a.
+.. Porta del controller del cavo A E3B alla porta NSM B e1b.
++
+image:../media/drw_isi_g_1_ns224_controller_a_cabling_ieops-1945.svg["Porte e3a e E3B del controller A cablate su uno shelf NS224"]
+
+
+
+. Collegare il controller del cavo B allo shelf:
++
+.. Dalla porta e3a del controller del cavo B alla porta E1a NSM B.
+.. Porta E3B del controller del cavo B alla porta NSM A e1b.
++
+image:../media/drw_isi_g_1_ns224_controller_b_cabling_ieops-1946.svg["Porte e3a e E3B del controller B collegate a uno shelf NS224"]
+
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver collegato l'hardware al sistema di storage, si link:install-power-hardware.html["accendere il sistema di archiviazione"].

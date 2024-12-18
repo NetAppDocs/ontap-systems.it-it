@@ -1,0 +1,158 @@
+---
+permalink: c80/io-module-add.html 
+sidebar: sidebar 
+keywords: c80, add I/O module 
+summary: Per sostituire un modulo i/o, è necessario scollegare i cavi dal modulo, rimuovere i moduli SFP e QSFP dal modulo, rimuovere il modulo, installare il modulo sostitutivo, reinstallare i moduli SFP e QSFP, quindi collegare il modulo i/O. 
+---
+= Modulo i/o aggiuntivo - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
+
+.Prima di iniziare
+* Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
+* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
+* Assicurarsi che tutti gli altri componenti funzionino correttamente.
+
+
+[role="tabbed-block"]
+====
+.Aggiungere il modulo i/o a uno slot disponibile
+--
+È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con gli slot disponibili.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
+. Rimuovere il modulo di chiusura dello slot di destinazione dal supporto:
++
+.. Premere il dispositivo di chiusura della camma sul modulo di chiusura nello slot di destinazione.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
+.. Rimuovere il modulo dal contenitore agganciando il dito nell'apertura della leva della camma ed estraendo il modulo dal contenitore.
+
+
+. Installare il modulo i/o:
++
+.. Allineare il modulo i/o con i bordi dell'apertura dello slot del contenitore.
+.. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Collegare il modulo i/o al dispositivo designato.
++
+
+NOTE: Assicurarsi che tutti gli slot i/o inutilizzati siano dotati di spazi vuoti per evitare possibili problemi di temperatura.
+
+. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Dal prompt DEL CARICATORE, riavviare il nodo:
++
+`bye`
+
++
+
+NOTE: In questo modo, il modulo i/o e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
+. Restituire il controller dal partner controller:
++
+`storage failover giveback -ofnode target_node_name`
+
+. Ripetere questi passi per il controller B.
+. Dal nodo integro, ripristinare lo giveback automatico se disabilitato:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Aggiungere un modulo di i/o a un sistema completamente popolato
+--
+È possibile aggiungere un modulo i/o a un sistema completamente popolato rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto.
+
+.A proposito di questa attività
+Assicurarsi di comprendere i seguenti scenari per aggiungere un nuovo modulo di i/o a un sistema completamente popolato:
+
+[cols="1,2"]
+|===
+| Scenario | Azione richiesta 
+
+
+ a| 
+Da NIC a NIC (stesso numero di porte)
+ a| 
+I LIF migrano automaticamente quando il modulo controller viene spento.
+
+
+
+ a| 
+Da NIC a NIC (numero di porte diverso)
+ a| 
+Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
+
+
+
+ a| 
+Da NIC a modulo i/o di storage
+ a| 
+Utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^].
+
+|===
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare eventuali cavi dal modulo i/o di destinazione.
+. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
+. Rimuovere il modulo i/o di destinazione dallo chassis:
++
+.. Premere il pulsante del dispositivo di chiusura a camma.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
+.. Rimuovere il modulo dal contenitore agganciando il dito nell'apertura della leva della camma ed estraendo il modulo dal contenitore.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
+
+
+. Installare il modulo i/o nello slot di destinazione del contenitore:
++
+.. Allineare il modulo con i bordi dell'apertura dello slot del contenitore.
+.. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Collegare il modulo i/o al dispositivo designato.
+. Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per la centralina.
+. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Riavviare il controller dal prompt del CARICATORE:_bye_
++
+In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
++
+
+NOTE: Se si verifica un problema durante il riavvio, vedere https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - lo spegnimento dell'ambiente potrebbe essere attivato durante la sostituzione del modulo i/O."]
+
+. Restituire il controller dal partner controller:
++
+`storage failover giveback -ofnode target_node_name`
+
+. Abilitare il giveback automatico se è stato disattivato:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Effettuare una delle seguenti operazioni:
++
+** Se è stato rimosso un modulo i/o NIC e installato un nuovo modulo i/o NIC, utilizzare il seguente comando di rete per ciascuna porta:
++
+`storage port modify -node *_<node name>__ -port *_<port name>__ -mode network`
+
+** Se è stato rimosso un modulo i/o NIC e installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in link:../ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"].
+
+
+. Ripetere questi passi per il controller B.
+
+
+--
+====
