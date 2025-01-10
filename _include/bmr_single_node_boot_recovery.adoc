@@ -38,7 +38,7 @@ Sullo schermo viene visualizzato il seguente messaggio:
 +
 `Starting boot media recovery (BMR) process. Press Ctrl-C to abort…`
 
-. Monitorare il processo di boot media recovery quando Loader configura le porte del cluster locale ed esegue `netboot` dal nodo partner.
+. Monitorare il processo di ripristino dei supporti di avvio quando Loader configura le porte locali ed esegue `netboot` dal nodo partner.
 +
 Quando netboot è in esecuzione, viene visualizzato il `Starting BMR` messaggio.
 
@@ -120,9 +120,9 @@ Successfully recovered keymanager secrets.
 .. Quando il nodo viene riavviato, verificare che il ripristino del supporto di avvio sia stato eseguito correttamente confermando che il sistema è nuovamente in linea e operativo.
 .. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
 +
-`storage failover giveback -ofnode _impaired_node_name_`.
+`storage failover giveback -ofnode _impaired_node_name_`
 
-.. Dopo l'avvio con solo l'aggregato CFO, eseguire il comando seguente.
+.. Una volta che il nodo partner è completamente attivo e fornisce i dati, sincronizzare le chiavi OKM nel cluster.
 +
 `security key-manager onboard sync`
 

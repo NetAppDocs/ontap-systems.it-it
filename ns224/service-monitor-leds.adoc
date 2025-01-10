@@ -147,72 +147,6 @@ Ambra
 Porta/collegamento NVMe: Attenzione
 
 |===
---
-.NSM100B moduli
---
-image::../media/drw_ns224_nsmb_leds_ieops-2004.svg[NS224 NSM100B LED del modulo]
-
-[cols="1,1,2,4"]
-|===
-| Chiama | Icona LED | Colore | Descrizione 
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
- a| 
-LNK
- a| 
-Verde
- a| 
-NVMe port/link: Status (porta/collegamento NVMe)
-
-
-
- a| 
-image:../media/icon_round_2.png["Numero di didascalia 2"]
- a| 
-image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
- a| 
-Ambra
- a| 
-Porta/collegamento NVMe: Attenzione
-
-
-
- a| 
-image:../media/icon_round_3.png["Numero di didascalia 3"]
- a| 
-image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
- a| 
-Ambra
- a| 
-Modulo i/o: Stato
-
-
-
- a| 
-image:../media/icon_round_4.png["Numero di didascalia 4"]
- a| 
-image::../media/drw_sas3_location_icon.svg[LED di posizione del pannello del display dell'operatore]
- a| 
-Blu
- a| 
-NSM: Posizione
-
-
-
- a| 
-image:../media/icon_round_5.png["Numero di didascalia 5"]
- a| 
-image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
- a| 
-Ambra
- a| 
-NSM: Attenzione
-
-|===
---
-====
 [cols="2,1,1,1"]
 |===
 | Stato | Attenzione NSM (ambra) | Porta LNK (verde) | Attenzione porta (ambra) 
@@ -294,6 +228,180 @@ Qualsiasi stato
 Qualsiasi stato
 
 |===
+--
+.NSM100B moduli
+--
+image::../media/drw_ns224_nsmb_leds_ieops-2004.svg[NS224 NSM100B LED del modulo]
+
+[cols="1,1,2,4"]
+|===
+| Chiama | Icona LED | Colore | Descrizione 
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+LNK
+ a| 
+Verde
+ a| 
+NVMe port/link: Status (porta/collegamento NVMe)
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
+ a| 
+Ambra
+ a| 
+Porta/collegamento NVMe: Attenzione
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
+ a| 
+Ambra
+ a| 
+Modulo i/o: Attenzione
+
+
+
+ a| 
+image:../media/icon_round_4.png["Numero di didascalia 4"]
+ a| 
+image::../media/drw_sas3_location_icon.svg[LED di posizione del pannello del display dell'operatore]
+ a| 
+Blu
+ a| 
+NSM: Posizione
+
+
+
+ a| 
+image:../media/icon_round_5.png["Numero di didascalia 5"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[LED di attenzione del pannello del display dell'operatore]
+ a| 
+Ambra
+ a| 
+NSM: Attenzione
+
+|===
+[cols="2,1,1,1,1"]
+|===
+| Stato | Attenzione NSM (ambra) | Porta LNK (verde) | Attenzione porta (ambra) | Attenzione al modulo i/O. 
+
+
+ a| 
+NSM normale
+ a| 
+Spento
+ a| 
+Qualsiasi stato
+ a| 
+Spento
+ a| 
+Spento
+
+
+
+ a| 
+Guasto NSM
+ a| 
+Acceso
+ a| 
+Qualsiasi stato
+ a| 
+Qualsiasi stato
+ a| 
+Spento
+
+
+
+ a| 
+Errore NSM VPD
+ a| 
+Acceso
+ a| 
+Qualsiasi stato
+ a| 
+Qualsiasi stato
+ a| 
+Spento
+
+
+
+ a| 
+Nessuna connessione alla porta host
+ a| 
+Qualsiasi stato
+ a| 
+Spento
+ a| 
+Spento
+ a| 
+Spento
+
+
+
+ a| 
+Collegamento alla porta host attivo
+ a| 
+Qualsiasi stato
+ a| 
+Acceso/lampeggiante con attività
+ a| 
+Qualsiasi stato
+ a| 
+Spento
+
+
+
+ a| 
+Connessione porta host con guasto
+ a| 
+Acceso
+ a| 
+On/Off se tutte le corsie sono guainate
+ a| 
+Acceso
+ a| 
+Spento
+
+
+
+ a| 
+Eseguire l'avvio del BIOS dall'immagine del BIOS dopo l'accensione
+ a| 
+Lampeggia
+ a| 
+Qualsiasi stato
+ a| 
+Qualsiasi stato
+ a| 
+Spento
+
+
+
+ a| 
+Modulo i/o mancante
+ a| 
+Acceso
+ a| 
+N/A.
+ a| 
+N/A.
+ a| 
+Acceso
+
+|===
+--
+====
 
 
 == LED dell'alimentatore

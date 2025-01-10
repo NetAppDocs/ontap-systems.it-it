@@ -40,8 +40,6 @@ NOTE: La passphrase verrà richiesta due volte.
 . Nel menu di avvio, inserire l'opzione `1` per l'avvio normale.
 . Premere <enter> quando viene visualizzato _Waiting for giveback_.
 . Spostare il cavo della console sul nodo partner e accedere come `admin`.
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata" `set -privilege advanced` e quindi `run local partner savecore`.
-. Tornare alla leva di amministrazione: `set privilege admin`.
 . Fornire solo gli aggregati CFO (l'aggregato root): `storage failover giveback -fromnode local -only-cfo-aggregates true`
 +
 ** In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
