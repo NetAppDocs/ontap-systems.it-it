@@ -21,14 +21,13 @@ Per installare il sistema di archiviazione, verificare che il sito e il cabinet 
 
 .Fasi
 . Utilizzare https://hwu.netapp.com["NetApp Hardware Universe"^] per verificare che il sito soddisfi i requisiti ambientali ed elettrici del sistema di archiviazione.
-. Assicurarsi di disporre di uno spazio rack adeguato:
+. Assicurarsi di disporre di un armadio o di uno spazio rack adeguato per il sistema di archiviazione, gli scaffali e gli switch:
 +
-** 4U in una configurazione ha per il sistema storage
+** 4U in una configurazione ha
 ** 2U TB per ogni shelf storage NS224
 
 
-+
-*NOTA:* vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] per i requisiti di spazio rack per altri shelf di archiviazione supportati.
+
 
 . Installare gli switch di rete necessari.
 +
@@ -68,14 +67,14 @@ Assicurarsi che tutto ciò che è contenuto nelle confezioni corrisponda all'ele
 ** Dispositivo di gestione dei cavi
 ** Sistema storage
 ** Kit guide con istruzioni (opzionale)
-** Shelf di storage
+** Scaffale (se è stato ordinato storage aggiuntivo)
 
  a| 
 ** Cavi Ethernet di gestione (cavi RJ-45)
 ** Cavi di rete
 ** Cavi di alimentazione
 ** Cavi di stoccaggio (se è stato ordinato ulteriore spazio di archiviazione)
-** Cavo della porta seriale USB-C.
+** Cavo della console seriale USB-C.
 
 |  
 |===
@@ -85,15 +84,19 @@ Assicurarsi che tutto ciò che è contenuto nelle confezioni corrisponda all'ele
 
 == Fase 3: Registrare il sistema di archiviazione
 
-Dopo aver verificato che il sito soddisfi i requisiti per le specifiche del sistema di storage e aver verificato di disporre di tutte le parti ordinate, è necessario registrare il sistema.
+Dopo aver verificato che la tua sede soddisfi i requisiti delle specifiche del sistema storage e aver verificato di disporre di tutte le parti ordinate, devi registrare il sistema storage.
 
 .Fasi
-. Individua il numero di serie del tuo sistema storage.
+. Individuare i numeri di serie del sistema (SSN) per ogni controller installato. I numeri di serie si trovano nelle seguenti posizioni:
+. I numeri di serie si trovano nelle seguenti posizioni:
 +
-Il numero è riportato sul documento di trasporto, nell'e-mail di conferma o sul modulo Gestione sistema del controller dopo averlo disimballato.
+** Sul documento di trasporto
+** Nell'e-mail di conferma
+** Sul modulo di gestione del sistema di ciascun controller
+
 
 +
-image::../media/drw_ssn_label.svg[Esempio di numero di serie del sistema]
+image::../media/drw_ssn_label.svg[Esempio del numero di serie del sistema che mostra la posizione del numero]
 
 . Andare a http://mysupport.netapp.com/["Sito di supporto NetApp"^].
 . Stabilire se è necessario registrare il sistema storage:
@@ -108,7 +111,7 @@ Cliente NetApp esistente
  a| 
 .. Accedi con il tuo nome utente e la password.
 .. Selezionare *sistemi* > *i miei sistemi*.
-.. Verificare che il nuovo numero di serie sia elencato.
+.. Verificare che i nuovi numeri di serie siano elencati.
 .. In caso contrario, seguire le istruzioni per i nuovi clienti NetApp.
 
 
@@ -119,7 +122,7 @@ Nuovo cliente NetApp
  a| 
 .. Fare clic su *Registrati ora* e creare un account.
 .. Selezionare *sistemi* > *Registra sistemi*.
-.. Inserisci il numero di serie del sistema storage e i dettagli richiesti.
+.. Inserisci i numeri di serie e i dettagli richiesti del sistema storage.
 
 
 Una volta approvata la registrazione, è possibile scaricare il software richiesto. Il processo di approvazione potrebbe richiedere fino a 24 ore.

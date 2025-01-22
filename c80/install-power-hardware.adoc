@@ -20,7 +20,7 @@ Dopo aver installato l'hardware rack per il sistema di storage AFF C80 e aver in
 Ogni ripiano si distingue per un ID di ripiano univoco. Grazie a questo ID, lo shelf si distingue all'interno della configurazione del sistema storage.
 
 .A proposito di questa attività
-* Un ID ripiano esterno valido è compreso tra 01 e 99.
+* Un ID ripiano valido è compreso tra 01 e 99.
 +
 Se si dispone di shelf interni (storage), integrati nei controller, viene assegnato un ID shelf fisso pari a 00.
 
@@ -71,10 +71,6 @@ Pulsante ID ripiano
 . Modificare il primo numero dell'ID dello shelf:
 +
 .. Inserire l'estremità dritta di una graffetta o una penna a sfera con punta stretta nel foro piccolo per premere il pulsante ID ripiano.
-+
-
-NOTE: Sugli scaffali della serie DS, il pulsante ID ripiano è accessibile direttamente nella parte inferiore dell'orecchio dello scaffale.
-
 .. Tenere premuto il pulsante ID ripiano finché il primo numero sul display digitale non lampeggia, quindi rilasciare il pulsante.
 +
 Il lampeggiamento del numero può richiedere fino a 15 secondi. In questo modo viene attivata la modalità di programmazione degli ID dello shelf.
@@ -101,7 +97,7 @@ Il lampeggiamento del numero può richiedere fino a tre secondi.
 +
 Il primo numero sul display digitale smette di lampeggiare.
 
-.. Premere e rilasciare il pulsante ID ripiano per far avanzare il numero fino a raggiungere il numero desiderato da 0 a 9, o da 1 a 9 se il sistema dispone di spazio di archiviazione integrato.
+.. Premere e rilasciare il pulsante ID ripiano per far avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
 +
 Il secondo numero continua a lampeggiare.
 
@@ -131,7 +127,7 @@ L'alimentatore viene acceso non appena il cavo di alimentazione viene collegato.
 
 == Fase 2: Accendere i controller
 
-Dopo aver acceso i ripiani di archiviazione e assegnato loro ID univoci, attivare l'alimentazione ai controller di archiviazione.
+Dopo aver acceso gli scaffali e assegnato loro ID univoci, accendere i controller di storage.
 
 .Fasi
 . Collegare il computer portatile alla porta seriale della console. Ciò consente di monitorare la sequenza di avvio quando i controller sono accesi.
@@ -141,20 +137,20 @@ Dopo aver acceso i ripiani di archiviazione e assegnato loro ID univoci, attivar
 
 NOTE: Per istruzioni su come configurare la porta seriale della console, consultare la guida in linea del laptop.
 
-.. Collegare il cavo della console al computer portatile e la porta seriale della console sul controller utilizzando il cavo della console fornito con il sistema di archiviazione.
+.. Utilizzando il cavo della console fornito con il sistema di archiviazione, collegare un'estremità del cavo della console al computer portatile e l'altra estremità alla porta seriale della console sul controller A.
 .. Collegare il computer portatile allo switch sulla subnet di gestione.
 +
 image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Collegamenti della console]
 
-.. Assegnare un indirizzo TCP/IP al computer portatile, utilizzando un indirizzo presente nella subnet di gestione.
 
 
+. Assegnare un indirizzo TCP/IP al computer portatile, utilizzando un indirizzo presente nella subnet di gestione.
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 +
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Schema di collegamento dell'alimentazione generica]
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Schema di collegamento del sistema di archiviazione A1K e dell'alimentazione A70 o A90]
 
 +
-** Il sistema di storage inizia l'avvio. L'avvio iniziale può richiedere fino a otto minuti.
+** Il sistema inizia l'avvio. L'avvio iniziale può richiedere fino a otto minuti.
 ** I LED lampeggiano e le ventole si avviano, a indicare che i controller si stanno accendendo.
 ** Le ventole potrebbero essere molto rumorose al primo avvio. Il rumore della ventola all'avviamento è normale.
 
