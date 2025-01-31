@@ -14,14 +14,11 @@ summary: Per sostituire un modulo i/o, è necessario scollegare i cavi dal modul
 È possibile aggiungere un modulo i/o ai sistemi di storage AFF A20, AFF A30 e AFF A50 quando sono disponibili slot o quando tutti gli slot sono completamente popolati.
 
 .A proposito di questa attività
-* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
-+
+Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
+
 Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
 
-+
 È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
-
-
 
 
 

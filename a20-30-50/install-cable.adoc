@@ -1,7 +1,7 @@
 ---
 permalink: a20-30-50/install-cable.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, prepare installation 
+keywords: aff a20, aff a30, aff a50, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
 summary: Le porte di rete di gestione sui controller sono collegate agli switch. Le porte di interconnessione ha e di interconnessione cluster sono cablate su entrambi i controller. I moduli controller sono collegati a un dispositivo di archiviazione esterno, se ordinato. 
 ---
 = Collegare l'hardware - AFF A20, AFF A30 e AFF A50
@@ -38,11 +38,11 @@ Collegare i controller al cluster ONTAP. Questa procedura varia in base al model
 ====
 .Cablaggio cluster senza switch
 --
+Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
+
 .AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
 =====
-Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
-
 .Fasi
 . Collegare le connessioni di interconnessione cluster/ha:
 +
@@ -127,11 +127,10 @@ image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagramma
 
 =====
 --
-====
-[role="tabbed-block"]
-====
 .Cablaggio del cluster con switch
 --
+Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
+
 .AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
 =====
