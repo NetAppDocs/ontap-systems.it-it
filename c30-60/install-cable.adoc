@@ -32,7 +32,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direzione della ling
 
 == Fase 1: Collegare i collegamenti cluster/ha
 
-Collegare i controller al cluster ONTAP. Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.
+Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
 
 [role="tabbed-block"]
 ====
@@ -41,8 +41,6 @@ Collegare i controller al cluster ONTAP. Questa procedura varia in base al model
 .AFF C30 o AFF C60 con due moduli i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
 =====
-Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
-
 .Fasi
 . Collegare le connessioni di interconnessione cluster/ha:
 +
@@ -73,8 +71,6 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg
 .AFF C30 o AFF C60 con un modulo i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
 =====
-Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
-
 .Fasi
 . Collegare le connessioni di interconnessione cluster/ha:
 +
@@ -98,42 +94,12 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg
 
 
 =====
-.AFF C30 con un modulo i/o GbE a 2 porte da 10/25 GB
-[%collapsible]
-=====
-Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
-
-.Fasi
-. Collegare le connessioni di interconnessione cluster/ha:
-+
-
-NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 10/25 GbE.
-
-+
-.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
-.. Porta e4b Del controller del cavo A alla porta e4b del controller B.
-+
-*25 cavi di interconnessione cluster/ha GbE*
-
-+
-image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100px"]
-
-+
-image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagramma di cablaggio del cluster senza switch a20 utilizzando un modulo io 25 gbe]
-
-
-
-
-
-=====
 --
 .Cablaggio del cluster con switch
 --
 .AFF C30 o AFF C60 con due moduli i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
 =====
-Collegare i controller agli switch di rete cluster per creare connessioni cluster ONTAP.
-
 .Fasi
 . Collegare le connessioni di interconnessione cluster/ha:
 +
@@ -166,8 +132,6 @@ image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[s
 .AFF C30 o AFF C60 con un modulo i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
 =====
-Collegare i controller agli switch di rete cluster per creare connessioni cluster ONTAP.
-
 .Fasi
 . Collegare i controller agli switch di rete cluster:
 +
@@ -193,58 +157,23 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 
 
 =====
-.AFF C30 con un modulo i/o GbE a 2 porte da 10/25 GB
-[%collapsible]
-=====
-Collegare i controller agli switch di rete cluster per creare connessioni cluster ONTAP.
-
-. Collegare i controller agli switch di rete cluster:
-+
-
-NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 10/25 GbE.
-
-+
-.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
-.. Collegare la porta e4b del controller A allo switch di rete del cluster B.
-.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
-.. Collegare la porta e4b del controller B allo switch di rete del cluster B.
-+
-*10/25 cavi di interconnessione cluster/ha GbE*
-
-+
-image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100px"]
-
-+
-image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["diagramma di cablaggio del cluster con a20 switch utilizzando un modulo io 25gbe"]
-
-
-
-
-
-=====
 --
 ====
 
 
 == Fase 2: Collegare i cavi delle connessioni di rete host
 
-Collegare i controller alla rete host.
+Collegare i controller alla rete host Ethernet o FC.
 
-Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.
-
+[role="tabbed-block"]
+====
+.Cablaggio host Ethernet
+--
 .AFF C30 o AFF C60 con due moduli i/o GbE a 2 porte da 40/100 GB
 [%collapsible]
-====
+=====
 .Fasi
-. Collegare via cavo le connessioni di rete host.
-+
-I seguenti passaggi secondari sono esempi di cablaggio di rete host opzionale. Se necessario, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema di storage.
-
-+
-.. Opzionale: Collegare i controller dei cavi agli switch della rete host.
-+
-Su ciascun controller, collegare le porte E2B e e4b agli switch di rete host Ethernet.
-
+. Su ciascun controller, collegare le porte E2B e e4b agli switch di rete host Ethernet.
 +
 
 NOTE: Le porte sui moduli i/o negli slot 2 e 4 sono 40/100 GbE (la connettività host è 40/100 GbE).
@@ -258,37 +187,14 @@ image::../media/oie_cable_sfp_gbe_copper.png[Cavo da 40/100 GB]
 +
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Collegare gli switch di rete host ethernet 40/100GbE]
 
-.. Opzionale: Controller via cavo per switch di rete host FC.
-+
-Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
-
-+
-*Cavi FC da 64 GB/s*
-
-+
-image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB, larghezza=100px"]
-
-+
-image::../media/drw_isi_a30-50_4p_64gb_fc_2card_cabling_ieops-2023.svg[Collegare gli switch di rete host da A30 o A50 a 64GB fc utilizzando due moduli io]
 
 
-
-
-
-====
-.AFF C30 o AFF C60 con un modulo i/o GbE a 2 porte da 10/25 GB
+=====
+.AFF C30 o AFF C60 con un modulo i/o GbE a 4 porte da 10/25 GB
 [%collapsible]
-====
+=====
 .Fasi
-. Collegare via cavo le connessioni di rete host.
-+
-I seguenti passaggi secondari sono esempi di cablaggio di rete host opzionale. Se necessario, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema di storage.
-
-+
-.. Opzionale: Collegare i controller dei cavi agli switch della rete host.
-+
-Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
-
+. Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
 +
 *Cavi 10/25 GbE*
 
@@ -298,10 +204,17 @@ image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghez
 +
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Collegare gli switch di rete host ethernet 40/100GbE]
 
-.. Opzionale: Controller via cavo per switch di rete host FC.
-+
-Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
 
+
+=====
+--
+.Cablaggio host FC
+--
+.AFF C30 o AFF C60 con un modulo i/o FC a 4 porte da 64 GB/s.
+[%collapsible]
+=====
+.Fasi
+. Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
 +
 *Cavi FC da 64 GB/s*
 
@@ -313,48 +226,8 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cavo per 
 
 
 
-
-
-====
-.AFF C30 con un modulo 10/25 GbE a 2 porte
-[%collapsible]
-====
-.Fasi
-. Collegare via cavo le connessioni di rete host.
-+
-I seguenti passaggi secondari sono esempi di cablaggio di rete host opzionale. Se necessario, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema di storage.
-
-+
-.. Opzionale: Controller via cavo per switch di rete host.
-+
-Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
-
-+
-*Cavi 10/25 GbE*
-
-+
-image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100pxx"]
-
-+
-image::../media/drw_isi_a20_host_4p_25gbe_cabling_ieops-2017.svg[Collegare A20 a switch di rete host ethernet 40/100GbE]
-
-.. Opzionale: Controller via cavo per switch di rete host FC.
-+
-Su ciascun controller, collegare le porte 1a, 1b, 1c e 1d agli switch di rete host FC.
-
-+
-*Cavi FC da 64 GB/s*
-
-+
-image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB, larghezza=100pxx"]
-
-+
-image::../media/drw_isi_a20_4p_64gb_fc_cabling_ieops-2016.svg[Collegare gli switch di rete host da A20 a 64GB fc]
-
-
-
-
-
+=====
+--
 ====
 
 
