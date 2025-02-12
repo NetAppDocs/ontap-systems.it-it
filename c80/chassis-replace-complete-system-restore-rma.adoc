@@ -10,38 +10,38 @@ summary: Verificare lo stato ha del telaio e restituire il componente guasto a N
 :imagesdir: ../media/
 
 
-[role="lead"]
-Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 
 
+== Fase 1: Avviare i controller e restituirli
 
-== Fase 1: Verificare e impostare lo stato ha del telaio
+Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
 
-È necessario verificare lo stato ha dello chassis e, se necessario, aggiornarlo in modo che corrisponda alla configurazione del sistema.
-
-. In modalità Maintenance (manutenzione), da uno dei moduli controller, visualizzare lo stato ha del modulo controller locale e dello chassis: `ha-config show`
+. Controllare l'output della console:
 +
-Lo stato ha deve essere lo stesso per tutti i componenti.
+.. Se il controller viene avviato al prompt Loader, riavviarlo con il `boot_ontap` comando.
+.. Se la console viene visualizzata `waiting for giveback` dopo il riavvio, accedere al controller partner e verificare che il controller sostituito sia pronto per il giveback con il `storage failover show` comando.
 
-. Se lo stato del sistema visualizzato per lo chassis non corrisponde alla configurazione del sistema:
+
+. Eseguire lo sconto:
 +
-.. Impostare lo stato ha per lo chassis: `ha-config modify chassis _HA-state_`
-+
-Il valore dello stato ha può essere uno dei seguenti:
-
-+
-*** `ha`
-*** `mcc` (Non supportato in ASA)
-
-
-.. Verificare che l'impostazione sia stata modificata: `ha-config show`
-
-
-. Se non lo si è già fatto, recuperare il resto del sistema.
+.. Collegare il cavo della console al controller partner.
+.. Restituire il controller con il `storage failover giveback -fromnode local` comando.
 
 
 
 
-== Fase 2: Restituire il componente guasto a NetApp
+
+
+== Fase 2: Verifica dello stato del sistema di archiviazione
+
+Dopo che il controller ha restituito lo spazio di archiviazione, è necessario controllare lo stato generale con https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
+
+. Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.
+. Correggere eventuali problemi riscontrati.
+
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -13,17 +13,12 @@ summary: Per sostituire lo chassis, è necessario spegnere i controller.
 == Spegnere i controller - AFF A900
 
 [role="lead"]
-Spegnere i controller per eseguire la manutenzione dello chassis.
-
-Questa procedura si applica ai sistemi con configurazioni a due nodi. Se si dispone di un sistema con più di due nodi, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Come eseguire un arresto e un'accensione regolari di una coppia ha in un cluster a quattro nodi"^].
+Questa procedura si applica ai sistemi con configurazioni a due nodi. Per ulteriori informazioni sull'arresto regolare durante la manutenzione di un cluster, vedere https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Shutdown anomalo e accendere il sistema storage System Resolution Guide - NetApp Knowledge base"].
 
 .Prima di iniziare
-* Impedire a tutti i client/host di accedere ai dati sul sistema NetApp.
-* Sospendere i processi di backup esterni.
 * Assicurarsi di disporre delle autorizzazioni e delle credenziali necessarie:
 +
 ** Credenziali dell'amministratore locale per ONTAP.
-** Passphrase per la gestione delle chiavi integrata di NetApp (OKM) a livello del cluster se si utilizza la crittografia storage o NVE/NAE.
 ** Accessibilità BMC per ciascun controller.
 
 
@@ -39,22 +34,23 @@ Questa procedura si applica ai sistemi con configurazioni a due nodi. Se si disp
 
 .Fasi
 . Accedere al cluster tramite SSH o da qualsiasi nodo del cluster utilizzando un cavo della console locale e un laptop/console.
-. Disattivare AutoSupport e indicare per quanto tempo si prevede che il sistema non sia in linea:
+. Impedire a tutti i client/host di accedere ai dati sul sistema NetApp.
+. Sospendere i processi di backup esterni.
+. Se AutoSupport è abilitato, sospendere la creazione di casi e indicare per quanto tempo si prevede che il sistema sia offline:
 +
-`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
+`system node autosupport invoke -node * -type all -message "MAINT=2h Replace chassis"`
 
-. Identificare l'indirizzo SP/BMC di tutti i nodi:
+. Identificare l'indirizzo SP/BMC di tutti i nodi del cluster:
 +
 `system service-processor show -node * -fields address`
 
-. Uscire dalla shell del cluster: `exit`
-. Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno qualsiasi dei nodi elencati nell'output del passaggio precedente.
+. Uscire dalla shell del cluster:
++
+`exit`
+
+. Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno dei nodi elencati nell'output del passaggio precedente per monitorare l'avanzamento.
 +
 Se stai utilizzando una console/laptop, accedi al controller usando le stesse credenziali di amministratore del cluster.
-
-+
-
-NOTE: Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monitorare l'avanzamento.
 
 . Arrestare i due nodi situati nel telaio danneggiato:
 +
@@ -64,7 +60,9 @@ NOTE: Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monit
 
 NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalità StrictSync: `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
 
-. Immettere *y* per ogni controller nel cluster quando viene visualizzato `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
-{y|n}:_`
+. Immettere *y* per ciascun controller nel cluster quando viene visualizzato:
++
+`Warning: Are you sure you want to halt node _<node_name>_? {y|n}:`
+
 . Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.
 

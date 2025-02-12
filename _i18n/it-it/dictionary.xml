@@ -240,11 +240,7 @@
   <block id="9f4d2068e7b3d206efc0252b3da597a5" category="inline-link">Avvisi e rischi relativi al benessere Active IQ</block>
   <block id="c5df4dcae9a001142a36959487445ff6" category="list-text">Risolvere qualsiasi<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block>. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.</block>
   <block id="3923b7d5100131c85be2160c8b680704" category="list-text">Accedere al cluster tramite SSH o da qualsiasi nodo del cluster utilizzando un cavo della console locale e un laptop/console.</block>
-  <block id="ac2a6618449930e8abeb32fd078d7716" category="list-text">Identificare l'indirizzo SP/BMC di tutti i nodi:</block>
   <block id="0d16db60da2c01b63ef84ee8d616c2fb" category="paragraph"><block ref="b206d268f79aeaa7c4f1e44684d2f080" prefix="" category="inline-code"></block></block>
-  <block id="a0fd5b31be719aeb26e2fc9c6991da9f" category="list-text">Uscire dalla shell del cluster:<block ref="f24f62eeb789199b9b2e467df3b1876b" prefix=" " category="inline-code"></block></block>
-  <block id="cf814f480a03329076e1d0cf2f71d7e3" category="list-text">Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno qualsiasi dei nodi elencati nell'output del passaggio precedente.</block>
-  <block id="a3dcd96fdc725fa51c4161c8a03146ab" category="admonition">Aprire una sessione SSH per ogni connessione SP/BMC in modo da poter monitorare l'avanzamento.</block>
   <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.</block>
   <block id="c41b3a61f99c2acfc4df4b56cbc1ea35" category="section-title">Opzione 2: Spegnere un controller in una configurazione MetroCluster a due nodi</block>
   <block id="0c2cb7a10e04116783dbfedc59540a50" category="paragraph">Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.</block>
@@ -1837,19 +1833,16 @@
   <block id="1a4af28a3bbd2601782d5a7f4300eace" category="paragraph">Se il sistema è in una configurazione MetroCluster, passare a.<block ref="7a41c0ceac7b7f46cc98ba334d076153" category="inline-link-rx"></block> E seguire le istruzioni di installazione applicabili al tipo di configurazione MetroCluster in uso.</block>
   <block id="71e3f3adc231b164f4f0837d133f2bc6" category="paragraph">Utilizzare il seguente flusso di lavoro per implementare il sistema storage quando non è configurato in una configurazione MetroCluster.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Uno</block>
-  <block id="7877fbd25ecba999ab0a739fe29df547" category="paragraph">**Sistemi AFF Serie A**</block>
   <block id="8fd3ca5f66dff5be16e79560dd28171e" category="inline-link">AFF A220</block>
   <block id="68b23d3f7da36f1f08be0727f515bcb1" category="inline-link">AFF A250</block>
   <block id="540dacfeb5577ce4282c41e9c7518680" category="inline-link">AFF A400</block>
   <block id="56c7968a1d140906ab8313162854322d" category="inline-link">AFF A700</block>
   <block id="53270fbfda62583949b287e08ae3d063" category="inline-link">AFF A800</block>
   <block id="ec5e81cea4c5ee83d635778e86350e80" category="inline-link">AFF A900</block>
-  <block id="999865050c05a9851fa1100ea708f735" category="paragraph">**Sistemi AFF C-Series**</block>
   <block id="b6000f9eed7f8ea9ee4632bd2f77961a" category="inline-link">AFF C190</block>
   <block id="5c4d47ba596f06f53b9aa793345127dd" category="inline-link">AFF C250</block>
   <block id="c9996a1b1fe92047dfbcfbef9989c233" category="inline-link">AFF C400</block>
   <block id="e0d8a184e851ebead0da8ef2d160d077" category="inline-link">AFF C800</block>
-  <block id="fb4b827f429720ceefe590267f9978cf" category="paragraph">**Sistemi FAS**</block>
   <block id="9cce52969ddef317310e7d9d1c259895" category="inline-link">FAS500f</block>
   <block id="1752b126dd5e4219fbf53c09ee63d51e" category="inline-link">FAS8300</block>
   <block id="0588c4f1b58eac9f5062dc1da6e8435a" category="inline-link">FAS8700</block>
@@ -7091,7 +7084,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="6e511e082f09f049a4c7c1e36e35c9c3" category="inline-image-macro">Immagine che mostra la posizione delle porte di gestione sul retro del sistema</block>
   <block id="d439da4c3831de2165d4e3edbb6ad2de" category="paragraph">Collegare le porte di gestione agli switch della rete di gestione    <block ref="5f7dc0c41e4463eda3eca8496148edc4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10fbfa6320d8e7c72e731fbd9a6e6c69" category="admonition">La riassegnazione del disco è necessaria solo quando si sostituisce il modulo NVRAM e non si applica alla sostituzione del DIMM NVRAM.</block>
-  <block id="f44ae95a820a7e92672103acdefa1387" category="paragraph"><block ref="5e48dfc079c01fd7f817337abb01a320" prefix="" category="inline-code"></block></block>
   <block id="4d2ddfe3e3c29216d5f6b430195c79ea" category="paragraph">Linguette di bloccaggio DIMM</block>
   <block id="61442583e1c58477c0407d6793d8994b" category="paragraph">Socket DIMM</block>
   <block id="d29d6bf2e5a715077adb0e295955fc92" category="paragraph">Dispositivi di bloccaggio della centralina</block>
@@ -7366,8 +7358,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b93d997895dde5ccf0b4ce2c7ea76b38" category="doc">Sistemi array SAN all-flash (ASA) A-Series</block>
   <block id="ca42e40f781122cb5a2d8f08cb50d450" category="summary">La documentazione del sistema di storage ti consente di installare, configurare ed eseguire la manutenzione del tuo sistema ASA C-Series.</block>
   <block id="d6db6f02fef14cb7ca1df4e0aecf3992" category="doc">Sistemi C-Series con array SAN all-flash (ASA)</block>
-  <block id="1e328579e066bd52d81db5813109e763" category="paragraph">**Sistemi ASA serie A**</block>
-  <block id="41bfcd2f6014398965bef92c57ac1de1" category="paragraph">**Sistemi ASA serie C**</block>
   <block id="6be417bc5c1ffdb0f8da869305e5d269" category="list-text">Collegare i dispositivi di gestione dei cavi al retro dei controller (come illustrato).</block>
   <block id="d042cd94231d5a9490b5a46cb7fcfa64" category="image-alt">Vassoio per cavi drw C400 IEOPS 1208</block>
   <block id="9e9d13bc60316acb706283fdc88fb378" category="image-alt">Drw C400 TNSC cablaggio di rete IEOPS 1189</block>
@@ -8028,11 +8018,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="afba20d4eb44e94103854196f1d30cbf" category="list-text">Scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.</block>
   <block id="a5fd25bf69ec23e5f23fbe3cc38a7e54" category="list-text">Rimuovere il dispositivo di gestione dei cavi dal modulo controller.</block>
   <block id="32dde6c192b854cc5ef8fbf9965197f3" category="list-text">Estrarre il modulo controller dal telaio e collocarlo su una superficie piana e stabile.</block>
-  <block id="3a35b79f6cdc064e1fd8bae199bb7cc1" category="list-text">Tenere traccia dell'alloggiamento di ciascuna unità e mettere da parte le unità su un carrello o un tavolo privo di elettricità statica.</block>
-  <block id="bbad437d407ac0dc494f22cf01d36f95" category="section-title">Fase 3: Sostituire lo chassis all'interno del rack dell'apparecchiatura o dell'armadio del sistema</block>
-  <block id="f5a29541ab8c131d31027f615587c55c" category="list-text">Installare le unità dal vecchio chassis nel telaio sostitutivo:</block>
-  <block id="d19c9b117b9744b2968c6a7a29cf682c" category="list-text">Spingere con decisione l'unità fino in fondo nel telaio, quindi bloccare la maniglia della camma spingendola verso l'alto e contro il supporto dell'unità.</block>
-  <block id="f3b97d340b8389ddeabbcf54ce084292" category="section-title">Passo 4: Reinstallare i moduli controller</block>
   <block id="48f5f398094b93996cc2a11416b14ee9" category="paragraph">Reinstallare il modulo controller e riavviarlo.</block>
   <block id="efcc254ceb718ef7e8b881f466009928" category="list-text">Assicurarsi che il condotto dell'aria sia completamente chiuso ruotandolo verso il basso fino in fondo.</block>
   <block id="0ccceedf0ba73e89727474e882e1b520" category="paragraph">Deve essere a filo con la lamiera del modulo controller.</block>
@@ -8223,10 +8208,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="0be7ecaeb710959e64858a36fa1f8783" category="inline-link">AFF A1K</block>
   <block id="c61e96543ff55077f64d8dd03940c2c6" category="inline-link">AFF A70</block>
   <block id="8cd7d5cbedf290a9b729cc263d9b289c" category="paragraph">ONTAP 9.15.1</block>
-  <block id="749d1dbcf19baa47625663e5476ad9f4" category="list-text">Passphrase per la gestione delle chiavi integrata di NetApp (OKM) a livello del cluster se si utilizza la crittografia storage o NVE/NAE.</block>
   <block id="3fa7c0866aba2253b800fb8f1b9d08dc" category="list-text">Accessibilità BMC per ciascun controller.</block>
-  <block id="8dc1996b26821772c990ddda1d27158c" category="list-text">Disattivare AutoSupport e indicare per quanto tempo si prevede che il sistema non sia in linea:</block>
-  <block id="2990a44118615c0a3bf6cce4a7382d56" category="list-text">Immettere *y* per ogni controller nel cluster quando viene visualizzato<block ref="e50c9785a9a600201730c59602a210ab" prefix=" " category="inline-code"></block></block>
   <block id="889f830bf501de78eaa854a4c956e927" category="doc">Restituire il componente guasto a NetApp - AFF A1K</block>
   <block id="1ab064b6602aa76e09ccae7297651215" category="doc">Avviare l'immagine di ripristino - AFF A1K</block>
   <block id="59b85bf8d1d726d67312a9425f7cabac" category="doc">Sostituire il supporto di avvio - AFF A1K</block>
@@ -8245,9 +8227,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f424eb06e28282360201a36ab719f6c7" category="paragraph">Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un laptop per scopi di manutenzione del controller o del sistema. Il modulo di gestione del sistema contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).</block>
   <block id="3fb7b4296088420fb4e0b9343835ec5f" category="summary">Le porte di rete di gestione sui controller sono collegate agli switch. Le porte di interconnessione ha e di interconnessione cluster sono cablate su entrambi i controller. I moduli controller sono collegati a un dispositivo di archiviazione esterno, se ordinato.</block>
   <block id="b1e60e9c8e3b79ce7200aaa962a901d0" category="doc">Collegare l'hardware - AFF A1K</block>
-  <block id="403075fa89afdf5689d3f155524d9e1b" category="paragraph">Per l'orientamento corretto della linguetta di estrazione del connettore del cavo, consultare la freccia degli schemi dei cavi.</block>
-  <block id="04c6391623d6bd5d0ac0d7df563f74dc" category="image-alt">Esempio di orientamento della linguetta di estrazione del cavo</block>
-  <block id="35bd3e31ed449ec51ffdc43a42bdcd8f" category="list-text">Se si collega un'unità ottica a uno switch, inserire l'unità SFP nella porta del controller prima di collegare il cavo alla porta.</block>
   <block id="883f8ccaa3b7bb186f5d85df551292e7" category="admonition">Il traffico di cluster Interconnect e quello di ha condividono le stesse porte fisiche.</block>
   <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">Cavo ha del cluster</block>
   <block id="8c1f3262727530ad8d4652a5b107e167" category="paragraph">*Cavi di interconnessione cluster/ha*</block>
@@ -8261,13 +8240,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1107155d6b0c900a6485f06681854862" category="image-alt">Cavi RJ-45</block>
   <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*CAVI RJ-45 1000BASE-T.</block>
   <block id="a8536d671676b42d7c49328e04123a96" category="image-alt">Connettersi alla rete di gestione</block>
-  <block id="fe1ed4b5e6a760085b2af448921f0d53" category="list-text">Effettuare i seguenti collegamenti:</block>
   <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">Cavo da 100 GB</block>
   <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">Connessioni cluster via cavo alla rete cluster</block>
   <block id="5a8b74659281e9e3495bfc29767b645c" category="paragraph">*4 porte, 10/25 GbE host*</block>
-  <block id="ff54d299af9abd1be5b8082a790261aa" category="section-title">Passaggio 2: Collegare i controller agli shelf</block>
-  <block id="071bf81b7a0d7e66c24dfdb5f3604a4c" category="paragraph">Collega i controller allo shelf o agli shelf.</block>
-  <block id="ffa3c6d2c04b126c7ca74f9a656eb36e" category="paragraph">Collegare ciascun controller ai moduli NSM sullo shelf NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
   <block id="56af31a9320e84a6619ac8ae861b165a" category="list-text">Sul controller A, collegare i seguenti collegamenti:</block>
   <block id="f316f1854f33785f42807636a3284714" category="list-text">Collegare la porta e11a alla porta NSM A e0a.</block>
   <block id="7fd21be5068998e5aac33f1cffcff76c" category="list-text">Collegare la porta e11b alla porta NSM B e0b.</block>
@@ -8278,7 +8253,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3a95f3cf99705bbbd01d1dd74336e9fd" category="list-text">Collegare la porta e11b alla porta NSM A e0b.</block>
   <block id="182824a7bd82a321df1a100637995a19" category="inline-image-macro">Collegare le porte B del controller e11a e e11b a un singolo shelf NS224</block>
   <block id="86ab7b5fab8b30fc8e3619226fb66002" category="paragraph"><block ref="86ab7b5fab8b30fc8e3619226fb66002" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2aec08b694d0f04216b731c2d38eff0a" category="paragraph">Collegare ciascun controller ai moduli NSM su entrambi i ripiani NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
   <block id="4b079ba797f88f932136bdbd1aa314a0" category="list-text">Collegare la porta e11a alla porta e0a NSM A dello shelf 1.</block>
   <block id="486d7e107c3f396974308ba4cc20a5f9" category="list-text">Collegare la porta e11b alla porta NSM B e0b dello shelf 2.</block>
   <block id="2eaa4fb60d669ed2bf97809a07457f81" category="list-text">Collegare la porta E10A alla porta e0a NSM A dello shelf 2.</block>
@@ -8383,7 +8357,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">Fase 1: Verifica delle LIF e verifica dello stato del cluster</block>
   <block id="6f088e5455bf9d5415570fed055240bc" category="paragraph">Per i sistemi di archiviazione AFF A70 e A90, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="1fba4a247f94ae0adebcaa57fd54e768" category="image-alt">Esempio di orientamento della linguetta di estrazione del cavo</block>
-  <block id="261ca3ab85aacb02f4f06f9776818d57" category="paragraph">Queste procedure mostrano le configurazioni comuni. Tenete presente che il cablaggio specifico dipende dai componenti ordinati per il vostro sistema di storage. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
   <block id="d4f534f2d370cb0f29178f31331b3536" category="image-alt">Cavo alla rete Ethernet da 100 GB</block>
   <block id="06d20f31fccdd7b31221a7b1e1ed37d1" category="image-alt">Cavo da 10/25 GB</block>
   <block id="95b007a39e5ec5c4d9b8e17f2ec0424d" category="image-alt">RJ45 cavi</block>
@@ -8643,7 +8616,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="01df70585b251d67c7e85dbced3f0bae" category="paragraph">Trasferire nuovamente la proprietà delle risorse di storage al controller sostitutivo.</block>
   <block id="5685250d28f7395e8ea2fbd5656061c6" category="paragraph">Esaminare i requisiti per la procedura di sostituzione del controller e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.</block>
   <block id="b7325683a2337dcdab8a07d398701bbe" category="list-text">Se il sistema è in una configurazione MetroCluster, è necessario rivedere la sezione<block ref="dbcae02c495cc3db61b37ce85396171e" category="inline-link-rx"></block> per determinare se utilizzare questa procedura di sostituzione del controller.</block>
-  <block id="8505696d0e3fbe2fd170739bbdf0fd07" category="list-text">Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il supporto tecnico.</block>
   <block id="9b3a68cd89d10f3b0ccc10f24e3f6012" category="list-text">È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.</block>
   <block id="fd6ec360446d31e3ab9c3f69a39b148a" category="list-text">La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, i dischi NVMe e i moduli controller vengano spostati nel nuovo chassis e che lo chassis di ricambio sia un nuovo componente di NetApp.</block>
   <block id="f39018b3c08ed8bfa54e407c9e13c6b4" category="list-text">*La procedura di sostituzione del telaio non funziona.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.</block>
@@ -8849,30 +8821,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="482ef01703219125ccae426ff4615b76" category="paragraph">Installare e collegare gli shelf SAS, come descritto in <block ref="4a30b7191a311b85a3f2f50c86b1c925" category="inline-link-macro-rx"></block>.</block>
   <block id="b50fb23aa9dcb8c4fb1207d42be2b9ef" category="admonition">Per ulteriori informazioni sul cablaggio SAS e fogli di lavoro, vedere <block ref="7a9ea3663e1b04ab8d8799fec120c13c" category="inline-link-macro-rx"></block></block>
   <block id="59a6e33abad0374c68f887cd3fe3416f" category="list-text">Completare la scheda di lavoro relativa al cablaggio SAS del sistema. Vedere <block ref="7a9ea3663e1b04ab8d8799fec120c13c" category="inline-link-macro-rx"></block>.</block>
-  <block id="b6799ec4c4ae20ab730ee39bdc6f022e" category="list-text"><block ref="b6799ec4c4ae20ab730ee39bdc6f022e" category="inline-link-macro-rx"></block></block>
-  <block id="51db8835b6a4662bdd282d562dce9ce4" category="list-text"><block ref="51db8835b6a4662bdd282d562dce9ce4" category="inline-link-macro-rx"></block></block>
-  <block id="9050a46bb2de8c6cc18f67e24b6f5bf6" category="list-text"><block ref="9050a46bb2de8c6cc18f67e24b6f5bf6" category="inline-link-macro-rx"></block></block>
-  <block id="314f50463955587e2037d8d2e40ae3af" category="list-text"><block ref="314f50463955587e2037d8d2e40ae3af" category="inline-link-macro-rx"></block></block>
-  <block id="45f5be1c6c4a88aeaa428800b6f3aee9" category="list-text"><block ref="45f5be1c6c4a88aeaa428800b6f3aee9" category="inline-link-macro-rx"></block></block>
-  <block id="8de3ebdb51afcc0413ac087089da1ef2" category="list-text"><block ref="8de3ebdb51afcc0413ac087089da1ef2" category="inline-link-macro-rx"></block></block>
-  <block id="67a1276a1283538eae5934ff4eb4a757" category="list-text"><block ref="67a1276a1283538eae5934ff4eb4a757" category="inline-link-macro-rx"></block></block>
-  <block id="126e4c17980262c3c430f022f5f56c3f" category="list-text"><block ref="126e4c17980262c3c430f022f5f56c3f" category="inline-link-macro-rx"></block></block>
-  <block id="ba2155c54eab4d26f52d9b663764d321" category="list-text"><block ref="ba2155c54eab4d26f52d9b663764d321" category="inline-link-macro-rx"></block></block>
-  <block id="c47800ce43f6bd4b5933465b941ca5e9" category="list-text"><block ref="c47800ce43f6bd4b5933465b941ca5e9" category="inline-link-macro-rx"></block></block>
-  <block id="e5aad213d0a77808fe82b572eeb5888c" category="list-text"><block ref="e5aad213d0a77808fe82b572eeb5888c" category="inline-link-macro-rx"></block></block>
-  <block id="c53d8396f56e01349bd6179f83e6a9a7" category="list-text"><block ref="c53d8396f56e01349bd6179f83e6a9a7" category="inline-link-macro-rx"></block></block>
-  <block id="694ebeeb15a60c82d17ed627858519ec" category="list-text"><block ref="694ebeeb15a60c82d17ed627858519ec" category="inline-link-macro-rx"></block></block>
-  <block id="c86567a0c3671bea1c02bd3e7294ad5b" category="list-text"><block ref="c86567a0c3671bea1c02bd3e7294ad5b" category="inline-link-macro-rx"></block></block>
-  <block id="fa92edc45af4eed5d7a491dc76f20edd" category="list-text"><block ref="fa92edc45af4eed5d7a491dc76f20edd" category="inline-link-macro-rx"></block></block>
-  <block id="c95480199cbbef020e68f17335af44d8" category="list-text"><block ref="c95480199cbbef020e68f17335af44d8" category="inline-link-macro-rx"></block></block>
-  <block id="ffb9da3894ac287e5ae93e12ca8cfbf5" category="list-text"><block ref="ffb9da3894ac287e5ae93e12ca8cfbf5" category="inline-link-macro-rx"></block></block>
-  <block id="33ec0e26cea0cf48884f5417b5271b20" category="list-text"><block ref="33ec0e26cea0cf48884f5417b5271b20" category="inline-link-macro-rx"></block></block>
-  <block id="76e66c3eaa0efaed0d080a74942cc900" category="list-text"><block ref="76e66c3eaa0efaed0d080a74942cc900" category="inline-link-macro-rx"></block></block>
-  <block id="b1b7d90b95e84c2c2f4f36df9e38550c" category="list-text"><block ref="b1b7d90b95e84c2c2f4f36df9e38550c" category="inline-link-macro-rx"></block></block>
-  <block id="8e4e1285f49cb2de8e4ad6f96de7a955" category="list-text"><block ref="8e4e1285f49cb2de8e4ad6f96de7a955" category="inline-link-macro-rx"></block></block>
-  <block id="f9e104181ae9f5f7cb047ada1d31db67" category="list-text"><block ref="f9e104181ae9f5f7cb047ada1d31db67" category="inline-link-macro-rx"></block></block>
-  <block id="7e888c9e662025943d61a7b6ab33fa3f" category="list-text"><block ref="7e888c9e662025943d61a7b6ab33fa3f" category="inline-link-macro-rx"></block></block>
-  <block id="0b91391244828b90a1ed6303288f165b" category="list-text"><block ref="0b91391244828b90a1ed6303288f165b" category="inline-link-macro-rx"></block></block>
   <block id="57a2933dce60e141524865c41e2635ce" category="image-alt">Come installare le guide di supporto</block>
   <block id="6fb023b413c1f113940c64b778b1ea19" category="image-alt">Come installare i dadi della gabbia</block>
   <block id="71d0706f6b47786d0dedd60322ca91a7" category="image-alt">Posizione delle staffe di fissaggio dei bulloni anteriori e posteriori e del punto di ancoraggio del pianale sulla staffa</block>
@@ -8905,7 +8853,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2ebb7b9dab34661ab53f47e149c49c5c" category="sidebar">Sostituzione dello shelf di dischi SAS</block>
   <block id="fb6ec7c4253b066bf6babd3c0e080e2c" category="paragraph">Il modulo controller inizia ad avviarsi non appena viene collegato all'alimentazione. Prepararsi ad interrompere il processo di avvio.</block>
   <block id="f7f4c867e693e550f28050ab9569b77b" category="paragraph">NVDIMM negli slot 11 e 23</block>
-  <block id="0ab01e08199504186fb2242508c77af5" category="paragraph">Spostare i dischi rigidi e il modulo controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato con il nuovo chassis dello stesso modello dello chassis danneggiato.</block>
   <block id="32c1650c7fd910bcdea68420f25c9c98" category="summary">Spostare i dischi rigidi e i moduli del controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato dal rack o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis danneggiato.</block>
   <block id="f5fb85d160e4ca0263ef1d466e1904de" category="image-alt">Maniglie di sollevamento e dispositivo di gestione dei cavi</block>
   <block id="a51606326fdc4dd84336979274179876" category="inline-link">Restituzione e sostituzione delle parti</block>
@@ -8929,26 +8876,18 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c23f2b6754e0bfe310956814b83c20c2" category="list-text">Verificare che i dischi presenti nei pool di dischi siano quelli previsti:<block ref="a9fae81f0c924f3a581cf23a9c8b11b1" prefix=" " category="inline-code"></block></block>
   <block id="56bce10b49b12be932b0ca38009e1da1" category="paragraph">Per sostituire il supporto di avvio, è necessario rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.</block>
   <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">Disco drw a800 installato IEOPS 960</block>
-  <block id="322279d0aaf25c776901bdae1ee30ea2" category="list-text"><block ref="f46f944e351f8b92e40c3308318738a3" prefix="" category="inline-code"></block> (Non supportato in ASA)</block>
   <block id="db4669e53766b1110dbd428a22b6f5cc" category="list-text">Premere il pulsante della camma di gestione del sistema.</block>
   <block id="cf91b43675e7187d6e724e7c312e336a" category="list-text">Ruotare il dispositivo di chiusura della camma allontanandolo completamente dal modulo.</block>
   <block id="f5c1d99a4f032f30d087e32fbbbdb994" category="paragraph">Spegnere o sostituire il controller compromesso. - Per arrestare il controller danneggiato, è necessario determinare lo stato del controller e, se necessario, rilevare il controller in modo che il controller integro continui a fornire i dati dalla memoria del controller danneggiato.</block>
   <block id="5050dae1093a80a257a1d121ca5f3b0f" category="section-title">Fase 4: Verifica dello stato del controller</block>
   <block id="6d194eccb9cd88bfbcde1df65103cbb4" category="list-text">Immettere i valori per UUID keystore e UUID cluster quando richiesto.</block>
   <block id="417968dd9c410e2ebdf82236e2a6f1d8" category="doc">Fase 1: Collegare i controller di archiviazione alla rete</block>
-  <block id="c0b05ac617b77a5c10f26756e6ef04f2" category="list-text">Se si effettua il collegamento a uno switch ottico, inserire il ricetrasmettitore SFP (Small Form-factor pluggable) nella porta del controller prima di collegare il cavo alla porta.</block>
-  <block id="10ddcbe568df11daf470f9b11ab92b62" category="paragraph">Connetti gli storage controller per creare connessioni cluster ONTAP e collegare le porte Ethernet di ciascun controller alla rete host.</block>
   <block id="ee6c90ad735c4fc892e900202d6ff034" category="list-text">Utilizzare il cavo di interconnessione Cluster/ha per collegare le porte da E1a a E1a e le porte da e7a a e7a.</block>
   <block id="8637ca13eb3c1a10bb4383130268c950" category="list-text">Collegare le porte del modulo Ethernet alla rete host.</block>
-  <block id="a6992cc3b8eb7adfbce0724b4ed8e4a4" category="list-text">Collegare le porte e9a e e9b allo switch di rete dati Ethernet, come illustrato.</block>
   <block id="1cddeaef0a0b08b7178f9023a157d0fc" category="list-text">Collegare gli switch di rete host 10/25 GbE.</block>
-  <block id="9d62d1718b5465944796c5fb854d0f5d" category="list-text">Utilizzare i cavi RJ-45 1000BASE-T per collegare le porte di gestione del controller (chiave inglese) agli switch della rete di gestione.</block>
   <block id="bd078f69cc3533ea9bc3100deef482d0" category="list-text">Utilizzare il cavo di interconnessione Cluster/ha per collegare le porte da E1a a E1a e le porte da e7a a e7a.</block>
-  <block id="581d5dbeb2b657af56ca70f32099c9d4" category="paragraph">Le seguenti procedure di cablaggio mostrano come collegare i controller a uno shelf e a due shelf. Puoi connettere direttamente fino a quattro shelf ai tuoi controller.</block>
-  <block id="46d73bd828c75397e5f3cca81c4236e1" category="paragraph">Collegare ciascun controller ai moduli NSM sullo shelf NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A è mostrato in blu e il cablaggio del controller B è mostrato in giallo.</block>
   <block id="cdc609c675d24b2fff8b5acc2e37e89e" category="list-text">Sul controller A, collegare le seguenti porte:</block>
   <block id="ab7ef1e990b02e4f310f950e86665f24" category="list-text">Sul controller B, collegare le seguenti porte:</block>
-  <block id="348bd528033e13e79fcfb366a5cd5af4" category="paragraph">Collegare ciascun controller ai moduli NSM su entrambi gli shelf NS224. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A è mostrato in blu e il cablaggio del controller B è mostrato in giallo.</block>
   <block id="9567b57fbc256ab6a2a904d9e65e90fc" category="paragraph">Utilizzare<block ref="2b7eb894c1625ebcb138cf06e4e24423" category="inline-link-rx"></block> per registrare i valori necessari durante il processo di configurazione del cluster. Se viene fornito un valore predefinito, è possibile utilizzare tale valore oppure immettere il proprio.</block>
   <block id="2b613a5cfe94ed4e246fd0b8d8e788d7" category="inline-link-macro">accendere il sistema di archiviazione</block>
   <block id="62b1b8fecbe53d21e29b3193b917d52b" category="paragraph">Assicurarsi che il computer portatile sia collegato alla porta seriale della console e che i controller siano accesi. Vedere <block ref="7c573676638f479dced3a24193374cdc" category="inline-link-macro-rx"></block> per istruzioni.</block>
@@ -9022,18 +8961,11 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2cfd26a8651887864fc31e672a6b0387" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="0314c54fb87f2f2b01af763f24ebf5ef" category="inline-link-macro-rx"></block></block>
   <block id="0d23a7eb39db3e785d2c87bde3e7d302" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="94dc13e126f429eefb3c1f2ca69200fa" category="inline-link-macro-rx"></block></block>
   <block id="a353ad5d28eb41a61c5aaf6e3cdd653a" category="paragraph">Dopo aver installato l'hardware rack per il sistema di storage AFF A1K, installare i cavi di rete per i controller e collegare i cavi tra i controller e gli shelf di storage.</block>
-  <block id="85ca4f61e95c7ff9505b58b2263d7c5f" category="paragraph">Collegare gli storage controller alla rete host.</block>
-  <block id="0847a9a714302b71df1445a81d7aa6a8" category="paragraph">Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch.</block>
-  <block id="b1f3b66a8c145c97d922ed0e9d17eef1" category="open-title">Opzione 1: Connettere i controller ad un cluster ONTAP senza switch</block>
   <block id="c4cbbd77402de8c27a0e7a305bcd7a83" category="list-text">Collegare la porta E1a del controller A alla porta E1a del controller B.</block>
   <block id="e2e054e25b28fb3d74a683482ef337a6" category="list-text">Collegare la porta e7a del controller A alla porta e7a del controller B.</block>
   <block id="b1a78b15892ed366f203ff3009cb08d9" category="admonition">Per ottenere le massime performance di sistema per il traffico cluster e ha, non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.</block>
-  <block id="1e2c2dffacd95873bc67d8d7545fc14d" category="open-title">Opzione 2: Collegare i controller a un cluster ONTAP con switch</block>
-  <block id="7d2da5b086f85cd3dc85b163367bc06a" category="paragraph">Collega gli storage controller agli switch di rete cluster per creare connessioni cluster ONTAP, quindi collega le porte Ethernet di ciascun controller alla rete host.</block>
   <block id="bf419afe8104f0626b8c6f35d7546f54" category="list-text">Collegare la porta E1a sul controller A e la porta E1a sul controller B allo switch di rete del cluster A.</block>
   <block id="cf5e5d4912cff0cbaa590fc1ae9ce6d7" category="list-text">Collegare la porta e7a sul controller A e la porta e7a sul controller B allo switch di rete del cluster B.</block>
-  <block id="3c9f58e10af9f9956f48a0b66192a1fe" category="list-text">Collegare le porte di gestione del controller (chiave inglese) agli switch di rete di gestione con cavi RJ-45 1000BASE-T.</block>
-  <block id="4bdc8275aa2933fa877bfc4f40f6c3a2" category="section-title">Fase 2: Connettere gli storage controller agli shelf di storage</block>
   <block id="8bff2f2dabc32a6a40817e91a3008934" category="open-title">Opzione 1: Connessione a uno shelf storage NS224</block>
   <block id="585305b30e013fddf0d6343d4ee20ddd" category="open-title">Opzione 2: Collegamento a due shelf storage NS224</block>
   <block id="6ed30500ab710bf43940cb83592bdbfa" category="inline-link-macro">Accendere il sistema di archiviazione AFF A1K</block>
@@ -9082,7 +9014,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f03f5749cb3ab7b7e16074ecbba8e300" category="doc">Flusso di lavoro per la sostituzione dei supporti di avvio - AFF A70 e AFF A90</block>
   <block id="08d73f01628a5943295e92f24c02e02b" category="doc">Sostituire i supporti di avvio - AFF A70 e AFF A90</block>
   <block id="ecf04557e2cacfb271d9b67c7f2b3a72" category="doc">Spegnere il controller con problemi - AFF A70 e AFF A90</block>
-  <block id="2b7235fbef1deecc7fbd91bed02be1e7" category="doc">Sostituzione completa del telaio - AFF A70 e AFF A90</block>
   <block id="a91e5640776c0744ff211f74a193dc57" category="doc">Sostituire il telaio - AFF A70 e AFF A90</block>
   <block id="85d8564bfb7225b8979b99bf295a46f1" category="doc">Requisiti di sostituzione del telaio - AFF A70 e AFF A90</block>
   <block id="2f7658a94038d064a8c1d014e3362aa8" category="doc">Spegnere le centraline - AFF A70 e AFF A90</block>
@@ -9181,9 +9112,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="03980c8a0e89406d8626708be0593619" category="doc">Requisiti per la sostituzione del telaio - ASA A70 e ASA A90</block>
   <block id="13a9f3efccfcf5c719f702d9208343d3" category="doc">Spegnere le centraline - ASA A70 e ASA A90</block>
   <block id="442aff9d882f282af3f3d4634f0b094f" category="doc">Flusso di lavoro per la sostituzione dello chassis - ASA A70 e ASA A90</block>
-  <block id="bb4ee587dee40e9bdda1394b4c11a88d" category="inline-link-macro">Esaminare i requisiti di sostituzione del telaio</block>
-  <block id="778ed0ff73bab9d38df4ab676b375d7d" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="7295d6b475ca2cf21124bd198447f219" category="inline-link-macro-rx"></block></block>
-  <block id="3459049c9ccd0e45188ec917dc7dca94" category="paragraph">Per sostituire il modulo telaio, è necessario soddisfare determinati requisiti.</block>
   <block id="8c82ee3a5a33a059aae4ab30bedbd5a5" category="doc">Sostituire l'hardware del modulo controller - ASA A70 e ASA A90</block>
   <block id="f6c6b6a5348d487bef542c09ec0a4b75" category="doc">Requisiti per la sostituzione della centralina - ASA A70 e ASA A90</block>
   <block id="63c1e704a685a7abd832fefd52c52ac5" category="doc">Ripristino completo del sistema - ASA A70 e ASA A90</block>
@@ -9310,13 +9238,10 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8abd22d3bded128a109fa097e39e3393" category="paragraph">Per i sistemi di archiviazione FAS70 e FAS90, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="afdecf6e01d418088d8efe8ec740e124" category="doc">Collegare la bulloneria - FAS70 e FAS90</block>
   <block id="d4521b1f762680060767a2b3b4536538" category="paragraph">Dopo aver installato l'hardware rack per il sistema di storage FAS70 o FAS90, installare i cavi di rete per i controller e collegare i cavi tra i controller e gli shelf di storage.</block>
-  <block id="ae7c727e223a1d2deec760bd5f18ce6c" category="paragraph">Queste procedure mostrano come collegare i controller a uno shelf o due ripiani NS224 o due o quattro ripiani DS460C. Puoi connettere direttamente fino a quattro shelf NS224 ai tuoi controller.</block>
   <block id="569dac545e40be673c584de70f4235a1" category="inline-image-macro">Collegare le porte e11a e11b E10A e e10b del controller A a due shelf NS224</block>
   <block id="697b5deffc4baf7cf1e414340d1affc7" category="paragraph"><block ref="697b5deffc4baf7cf1e414340d1affc7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5bea2e91cbb8ca7d6fd0557744fb2f55" category="inline-image-macro">Collegare le porte e11a e11b E10A e e10b del controller B a due ripiani NS224</block>
   <block id="fe891893c56d609d92e9a98afec594f8" category="paragraph"><block ref="fe891893c56d609d92e9a98afec594f8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f085245083fa4d2d0cb2565b8e3e1d12" category="open-title">Opzione 3: Cavo a due ripiani DS460C</block>
-  <block id="279918ca34aa6db648a2dbee46ff3ab9" category="paragraph">Collegare ciascun controller ai moduli IOM su entrambi i ripiani DS460C. La grafica mostra il cablaggio di ciascuno dei controller: Il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
   <block id="5e8bd9e3dbab26401b61204dc74109f0" category="paragraph">*Cavo mini-SAS HD*</block>
   <block id="0da5c300bf112189987b87a7f94a807d" category="image-alt">Cavo mini-SAS HD</block>
   <block id="a6b51f7309f8a96381954d2fb08c3a4f" category="list-text">Collegare la porta E10A alla porta 1 IOM A dello shelf 1.</block>
@@ -9387,9 +9312,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c0eb5985b209bb421162c4d51fd35a0a" category="list-text"><block ref="a2fed96771de6267f038dd37162b39dd" category="inline-link-macro-rx"></block>^</block>
   <block id="b11226c776ec1b74f6a42f871e3194c9" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Installazione del sistema di storage e dei shelf di storage</block>
   <block id="130792cb3edc8d0afffb557e50b218c3" category="paragraph">Installare il sistema di archiviazione e gli scaffali nel cabinet o nel rack. Accedere alle istruzioni di installazione e configurazione per il modello di piattaforma in uso.</block>
-  <block id="068ae8c131ffb072979dc366a738f61d" category="paragraph">**Sistemi ASA R2**</block>
   <block id="7bf4e86b8c2f5ff036932a932f9dc604" category="list-text"><block ref="7bf4e86b8c2f5ff036932a932f9dc604" category="inline-link-rx"></block></block>
-  <block id="6a5e44bab29f77a10ee8291f7122dcd0" category="list-text"><block ref="6a5e44bab29f77a10ee8291f7122dcd0" category="inline-link-macro-rx"></block></block>
   <block id="d512abd366eb57b9be4a31cb2c1bc065" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Configurazione del cluster ONTAP</block>
   <block id="3ab6aa369c3f9b8276a331929da6f82c" category="example-title">Ripiano per cavi a ASA A1K</block>
   <block id="5085ff6c350861af4448d82a2c958fe8" category="paragraph">È possibile aggiungere fino a tre shelf aggiuntivi da NS224 (per un totale di quattro shelf) a una coppia ha di ASA A1K.</block>
@@ -9537,8 +9460,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c50195249b8a024dc002dc38a94d2ecb" category="paragraph"><block ref="c50195249b8a024dc002dc38a94d2ecb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="acf2489b6d5840c54d7a8c088f971892" category="paragraph"><block ref="acf2489b6d5840c54d7a8c088f971892" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7d2f2abc71d3af8d926d01257d34b282" category="paragraph"><block ref="7d2f2abc71d3af8d926d01257d34b282" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="78d10460dc6066cd47d6c03039951493" category="inline-link">Come eseguire un arresto e un'accensione regolari di una coppia ha in un cluster a quattro nodi</block>
-  <block id="83e88c1140501159779aa83fa1d28df5" category="paragraph">Questa procedura si applica ai sistemi con configurazioni a due nodi. Se si dispone di un sistema con più di due nodi, vedere<block ref="cd04b8cb36db479a834c68d4c915e7f3" category="inline-link-rx"></block>.</block>
   <block id="d8b00338b050b9e3674ca7cb93db3005" category="list-text">Assicurarsi di disporre delle autorizzazioni e delle credenziali necessarie:</block>
   <block id="cffb1f7ec4551961dfb3f4305396ba7a" category="list-text">Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.</block>
   <block id="435d3b4c3155a5707da928ecab161564" category="list-text">Arrestare i due nodi situati nel telaio danneggiato:</block>
@@ -9801,11 +9722,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1092e7972468642cadebab10dd64d57e" category="list-text">Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block>.</block>
   <block id="5d76f009f7cd6e682bfd4e7b7100bf50" category="list-text">Riportare la centralina guasta al normale funzionamento restituendo la memoria:<block ref="942475a8b85026371f0df2238e2242a7" prefix=" " category="inline-code"></block>.</block>
   <block id="6cc1bea98a5917bd99040659271eee84" category="list-text">Se lo sconto automatico è stato disattivato, riattivarlo:<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> .</block>
-  <block id="a503a72dbd766bd5c26b4a8607a4883a" category="paragraph">Reinstallare i moduli controller nel telaio e riavviarli.</block>
-  <block id="179799acf0ae457231cd3985051c6ae8" category="list-text">Se il condotto dell'aria è stato aperto, chiuderlo ruotandolo fino in fondo.</block>
-  <block id="52b8f282be8abda5f74f6d660d929735" category="paragraph">Deve essere a filo con la lamiera del modulo controller.</block>
   <block id="e929e5cc1e429d4acd62e249388409a8" category="list-text">Allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il controller completamente nel telaio.</block>
-  <block id="73e9cf7fa448804b249c0a2b4c72d5db" category="paragraph">Il modulo controller inizia ad avviarsi non appena viene installato e l'alimentazione viene ripristinata. Se viene avviato al prompt del CARICATORE, riavviare il controller con il<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block> comando.</block>
   <block id="9279c5976d0efa7962d255d2c0bdf1f7" category="doc">Ripristinare la crittografia - AFF A150</block>
   <block id="039688df1117abc37830485d9cfc19a2" category="doc">Ripristinare la crittografia - AFF A200</block>
   <block id="9c582befdd75b28e94852b8d29c862c2" category="doc">Ripristinare la crittografia - AFF A220</block>
@@ -9984,7 +9901,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="5b80efc4608755948d23b9b83213414b" category="doc">Sostituire una scheda mezzanine - FAS2820</block>
   <block id="e4e0243ba4648dfa72a7dd5868dc075e" category="doc">Sostituire un alimentatore - FAS2820</block>
   <block id="46ef9696d36a8067561c1d44d830adff" category="doc">Sostituire la batteria dell'orologio in tempo reale - FAS2820</block>
-  <block id="7d99df27d52ae9f3b0e4a535a7dd9657" category="list-text"><block ref="7d99df27d52ae9f3b0e4a535a7dd9657" category="inline-link-macro-rx"></block></block>
   <block id="83c2710c5245e8b15cbca4fbf6b6b0a5" category="list-text">Una coppia ha FAS2820 può essere cablata come ha a tre percorsi.</block>
   <block id="e08be6d156a9bd6c7ea1068dd72146ce" category="paragraph">Per informazioni sulla connettività FAS2820, consultare la <block ref="44cb6d44583fef757ae54be5d72211f9" category="inline-xref-macro-rx"></block> sezione .</block>
   <block id="add37990c28070a718afe0d9c04a615c" category="paragraph">Per le coppie ha FAS2820, sebbene il cablaggio agli shelf esterni sia ha a percorso singolo, a causa della connessione interna di ciascun controller della porta 0b all'espansore locale (IOM12G) e della porta 0c all'espansore del partner, la configurazione della coppia ha è ha multipath.</block>
@@ -10821,8 +10737,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c870180171f106d4b7bba6176c6716f6" category="paragraph">Per il sistema di archiviazione C80, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="973bc55d9efcb6e6bff718401c39c708" category="doc">Collegare l'hardware - AFF C80</block>
   <block id="4218f8d2412136bfb32601e026baa923" category="paragraph">Dopo aver installato l'hardware rack per il sistema di storage AFF C80, installare i cavi di rete per i controller e collegare i cavi tra i controller e gli shelf di storage.</block>
-  <block id="3907b8a6bdd18f207ff26702edef32ec" category="open-title">Opzione 1: Cluster ONTAP senza switch</block>
-  <block id="b9fd20998e63574bbb1cb2fb3d233dfc" category="open-title">Opzione 2: Cluster ONTAP con switch</block>
   <block id="692eb202bcfcdd5ff15ac88e850a8958" category="inline-link-macro">Accendere il sistema di archiviazione AFF C80</block>
   <block id="7d21a7c62df428d46d7ff82091e62589" category="paragraph">Dopo aver collegato l'hardware per il sistema AFF C80, si <block ref="763dfc53859a04a5c267821436720409" category="inline-link-macro-rx"></block>.</block>
   <block id="63d7026bd2a296696d20207af94b856c" category="summary">Completare il setup e la configurazione del sistema storage utilizzando il rilevamento del cluster solo in connessione con switch e laptop, oppure collegando direttamente a un controller del sistema storage e poi lo switch di gestione.</block>
@@ -11161,4 +11075,134 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="82f66f7658dd53410415bd1c67e9ccad" category="paragraph">Per prepararsi all'installazione, preparare il sito, verificare i requisiti ambientali ed elettrici e accertarsi che lo spazio rack sia sufficiente. Quindi, disimballare l'apparecchiatura, confrontare il contenuto con la distinta di imballaggio e registrare l'hardware per accedere ai vantaggi del supporto.</block>
   <block id="c273a3f4ab5c9add6857208b8a70d10e" category="example-title">AFF C30 o AFF C60 con un modulo i/o GbE a 4 porte da 10/25 GB</block>
   <block id="46a9bbd60b5adf699bea6b74307aac99" category="example-title">AFF C30 o AFF C60 con un modulo i/o FC a 4 porte da 64 GB/s.</block>
+  <block id="a81e5932e1bddd19b14f2b8dd00b7e08" category="doc">Fase 1: Avviare i controller e restituirli</block>
+  <block id="46c353f44b1a8589e9ffeb602155c93a" category="paragraph">Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.</block>
+  <block id="9031c37a40e72ae548a2065bf45f23a8" category="list-text">Controllare l'output della console:</block>
+  <block id="ae4047b78b9a58e01067add66f44834c" category="list-text">Se il controller viene avviato al prompt Loader, riavviarlo con il<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="a299f46f3c383893b37f40f51d9d2605" category="list-text">Se la console viene visualizzata<block ref="cbd30655d53ec6ae9cc96680b3199b33" prefix=" " category="inline-code"></block> dopo il riavvio, accedere al controller partner e verificare che il controller sostituito sia pronto per il giveback con il<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="b7cef7ce19708461d960559a0cbdd6d3" category="list-text">Eseguire lo sconto:</block>
+  <block id="3c0a55487da93612aec510dd85c1372b" category="list-text">Restituire il controller con il<block ref="e23a9f1c6189f372292c98d844a0895f" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="d5238f5c66dc80239f3f53b86f9798e6" category="section-title">Fase 2: Verifica dello stato del sistema di archiviazione</block>
+  <block id="b11012435cb6e40fb39a0e60c6d66e9b" category="paragraph">Dopo che il controller ha restituito lo spazio di archiviazione, è necessario controllare lo stato generale con<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>.</block>
+  <block id="16bf95726719dba1c85dbc4afd8aef7d" category="list-text">Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.</block>
+  <block id="9261e4155dc9d7050346e41f387abed0" category="list-text">Correggere eventuali problemi riscontrati.</block>
+  <block id="2bee0b3d3c02eb9f92cef32437d8d2c2" category="doc">Fase 1: Rimuovere le PSU e i cavi</block>
+  <block id="3829b54eab6bf4fb29b13ec76272e234" category="paragraph">Prima di rimuovere il controller, è necessario rimuovere tutte e quattro le unità di alimentazione (PSU), due per controller. La loro rimozione alleggerisce il peso complessivo di ogni controller.</block>
+  <block id="096ce2c542524b393176969289f7ffc9" category="list-text">Rimuovere le quattro PSU:</block>
+  <block id="93029622a409595932c8326224f7ccbf" category="list-text">Scollegare i cavi di alimentazione dall'alimentatore del modulo controller.</block>
+  <block id="bb66711aadb9c088f2091a47907bade5" category="list-text">Rimuovere l'alimentatore dal controller ruotando la maniglia dell'alimentatore verso l'alto in modo da estrarre l'alimentatore, premere la linguetta di blocco dell'alimentatore, quindi estrarre l'alimentatore dal modulo controller.</block>
+  <block id="3e04472d6cad25199a5cfc1eb4fe140d" category="list-text">Ripetere questi passaggi per le altre PSU.</block>
+  <block id="a86bf7ced05e915d2e08135febfd4097" category="list-text">Rimuovere i cavi:</block>
+  <block id="7a1dae1154d579ab6c87dfe202f741aa" category="list-text">Scollegare i cavi di sistema e gli eventuali moduli SFP e QSFP (se necessario) dal modulo controller, ma lasciarli nel dispositivo di gestione dei cavi per mantenerli organizzati.</block>
+  <block id="3ea8673858722c169bf0af3c990acbf6" category="admonition">I cavi devono essere stati etichettati all'inizio di questa procedura.</block>
+  <block id="01fdf63cc3d1c5a5cd9473d8b1498aee" category="list-text">Rimuovere il dispositivo di gestione dei cavi dai moduli del controller e metterli da parte.</block>
+  <block id="5600ff574b78638d92a351821debed9f" category="section-title">Passo 2: Rimuovere i moduli e le unità del controller</block>
+  <block id="4cd9342b61053babc9a9a45188fc63ea" category="paragraph">Rimuovere i controller dal telaio, quindi rimuovere le unità dal telaio.</block>
+  <block id="e7e2d94f545a305278640b8b81ff6387" category="list-text">Verificare che il LED di stato NVRAM color ambra situato nello slot 4/5 sul retro di ciascun modulo controller sia spento. Cercare l'icona NV.</block>
+  <block id="54f09c5e7081c6d7a2da6178db51c9ac" category="list-text">Se il LED NVRAM è spento, passare alla fase successiva.</block>
+  <block id="394b00682fa805677b3aeca7ce8423a8" category="list-text">Se il LED NVRAM lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block> per assistenza.</block>
+  <block id="c227fbc3179395f395cdd9b6ae8f8cfb" category="list-text">Rimuovere i moduli controller:</block>
+  <block id="556199d43f72d7edcc614672d84ea4cb" category="list-text">Premere verso il basso entrambi i fermi di bloccaggio sul controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.</block>
+  <block id="256d1f8a6c945e1b75703c3e4e0782e5" category="list-text">Estrarre il modulo controller dal telaio con i dispositivi di bloccaggio e collocarlo su una superficie piana e stabile.</block>
+  <block id="50487d0a032eeeade36f9bde832cf64c" category="list-text">Ripetere questi passi per il secondo modulo controller.</block>
+  <block id="dc0455d2704ea2915da203290d2bc277" category="list-text">Premere il pulsante di rilascio nella parte superiore del supporto dell'unità, sotto i LED.</block>
+  <block id="dbde8d5193a15f49bb4ca93245713dbd" category="admonition">I dischi sono fragili. Utilizzare sempre due mani per sostenere il peso della trasmissione durante la rimozione di un'unità per evitare di danneggiarli.</block>
+  <block id="a41593910ca5cd5e29a37f66cc945f5a" category="list-text">Tenere traccia dell'alloggiamento in cui si trovava ciascuna unità e mettere da parte l'unità su un carrello o un tavolo privo di elettricità statica.</block>
+  <block id="67669a37061be72ba7c16dc56425a305" category="list-text">Ripetere questa operazione per le unità rimanenti nello chassis.</block>
+  <block id="ac4868572d4bea69913a77cfb54b08ad" category="section-title">Fase 3: Sostituire il telaio danneggiato</block>
+  <block id="03c9fd2726b09b3a899dc59bb5c75182" category="paragraph">Rimuovere il telaio danneggiato e installare il telaio sostitutivo.</block>
+  <block id="f4ac101e31a524123efbadec7bd91eae" category="list-text">Rimuovere il telaio danneggiato:</block>
+  <block id="733e4bd99bba77c8c714b8d3ca464453" category="list-text">Con l'ausilio di due persone o di un sollevatore, far scorrere il telaio danneggiato dalle guide del rack in un cabinet di sistema o in un rack per apparecchiature, quindi metterlo da parte.</block>
+  <block id="df1e51256150b209588942af3aa39c86" category="list-text">Installare il telaio di ricambio:</block>
+  <block id="88713b0102b6702a4390c31e0218a5d0" category="list-text">Con l'aiuto di due persone o di un sollevatore, installare il telaio di ricambio nel rack dell'apparecchiatura o nell'armadio di sistema guidando il telaio sulle guide del rack in un armadietto del sistema o nel rack dell'apparecchiatura.</block>
+  <block id="c2ca3f0f2cd46c993c472fe2b2ead2a1" category="section-title">Fase 4: Installare i componenti del telaio</block>
+  <block id="8e7b85e50ba49f7e438e34fd94f17067" category="paragraph">Una volta installato lo chassis sostitutivo, è necessario installare i moduli controller, correggerli, quindi reinstallare le unità e gli alimentatori.</block>
+  <block id="c35dbeca6a0894e924dd0f22bc74b7b6" category="list-text">A partire dal modulo controller inferiore, installare i moduli controller nel telaio di ricambio:</block>
+  <block id="462e0b4244f7f81086d8ed4914a4091d" category="paragraph">Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli.</block>
+  <block id="30c13d1d724de7528c0d72d4e7555203" category="paragraph">Assicurarsi che i cavi siano collegati facendo riferimento alle etichette dei cavi.</block>
+  <block id="3c4de6b643f23f2b06411d92b09f2db7" category="list-text">Reinstallare le unità nei corrispondenti alloggiamenti nella parte anteriore dello chassis.</block>
+  <block id="ebe9851634608cdaec3bc032f0aac89c" category="list-text">Installare tutte e quattro le unità PSU:</block>
+  <block id="3af83db7024a86329156a3f0ea145165" category="list-text">Ricollegare i cavi di alimentazione dell'alimentatore a tutti e quattro gli alimentatori.</block>
+  <block id="f0db4562c2eae985bf11a09aadc6070d" category="paragraph">Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio e fissare il cavo di alimentazione all'alimentatore con le viti a testa zigrinata.</block>
+  <block id="6ba7c840e651190e5c5f357b0b73f0cd" category="paragraph">I moduli controller iniziano ad avviarsi non appena l'alimentatore viene installato e l'alimentazione viene ripristinata.</block>
+  <block id="9067e76b547e2231a42f8d620160018a" category="doc">Fase 1: Individuare e monitorare il sistema</block>
+  <block id="82df644ae7a2110723ddb7195905f696" category="paragraph">È necessario aprire una sessione della console e salvare i registri delle sessioni per riferimenti futuri, nonché attivare il LED di posizione del sistema per individuare il telaio danneggiato.</block>
+  <block id="a1ac689e4af9aa962fba65999d62d044" category="list-text">Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.</block>
+  <block id="73a26e3a9da1aeee1db49561264e4668" category="list-text">Individuare e accendere il LED di posizione del controller:</block>
+  <block id="6a0f83a8396f29844196c2f0bd7d8e31" category="list-text">Utilizzare il<block ref="aa852b86500356dcfaa83e25c0e37adf" prefix=" " category="inline-code"></block> comando per visualizzare lo stato corrente del LED di posizione.</block>
+  <block id="b8bc41dd2913f89cb9b031a495e0d9df" category="list-text">Modificare lo stato del LED di posizione su "ON":</block>
+  <block id="431caf600106fae7e500e10220d13e61" category="paragraph"><block ref="73d25173d7c27d69b9fef91a1e6d8f78" prefix="" category="inline-code"></block>.</block>
+  <block id="88ee4f31896fe22b05df85dce4329229" category="paragraph">Il LED posizione rimane acceso per 30 minuti.</block>
+  <block id="fe43e0f6f1ce9191e03498065b99712c" category="section-title">Fase 2: Verifica dei componenti sostitutivi</block>
+  <block id="58ea042c50e0d241ae4f3ef030055ab2" category="paragraph">È necessario verificare di aver ricevuto i componenti necessari, rimuoverli dalla confezione e conservarli.</block>
+  <block id="418d171883c4eb374cdc8342691d6d1d" category="list-text">Prima di aprire la confezione, controllare l'etichetta della confezione e verificare:</block>
+  <block id="4041d35e15be3158d50bedb0df757631" category="list-text">Numero di parte del componente.</block>
+  <block id="378ec75aa1d255c16ad9c85e0cb3c38d" category="list-text">Descrizione della parte.</block>
+  <block id="a28e205929838e9983677a0a5740982f" category="list-text">Quantità nella scatola.</block>
+  <block id="aa540bb7b6b5d4e1ae19ef870d81aeed" category="list-text">Rimuovere il contenuto dalla confezione e utilizzare la confezione per restituire il componente guasto a NetApp.</block>
+  <block id="e64dc7a7ef4e501b9e8f23daf322a905" category="section-title">Fase 3: Etichettare i cavi e i moduli del controller e mettere a terra l'utente</block>
+  <block id="6f91c65dd15df5f61f60c1e3aabb4318" category="paragraph">È necessario etichettare i cavi e i controller prima di rimuoverli dai moduli del controller o dallo chassis.</block>
+  <block id="79de133f35ffda00b1cc87bd3df0f0a1" category="list-text">Etichettare tutti i cavi associati al sistema di archiviazione. Ciò aiuta a riabilitarlo più avanti in questa procedura.</block>
+  <block id="61f54831afd31c3c4bb5fa569858091d" category="list-text">Etichettare i moduli controller.</block>
+  <block id="02a322185bda81e4fb6f85f159dc2ba9" category="list-text">Se non siete già correttamente collegati a terra, mettetevi a terra.</block>
+  <block id="1bba716aed05b4a9e7fb6d3bf06774a4" category="list-text">Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare per assistenza.<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block></block>
+  <block id="ca5d1f6a9f282b2406a564dd3a9481d0" category="list-text">Ottenere le credenziali di amministratore locale per ONTAP se non si dispone di tali credenziali.</block>
+  <block id="c2cb7195ee129e2594a56587113c65bc" category="list-text">Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.</block>
+  <block id="8d2fe72884758f3d1fef45998d91a468" category="inline-link">Shutdown anomalo e accendere il sistema storage System Resolution Guide - NetApp Knowledge base</block>
+  <block id="b53eeb36c881954b63c10f174c823459" category="paragraph">Questa procedura si applica ai sistemi con configurazioni a due nodi. Per ulteriori informazioni sull'arresto regolare durante la manutenzione di un cluster, vedere<block ref="8c4c61992a5996839934491a05c0355e" category="inline-link-rx"></block>.</block>
+  <block id="2ed242ad6f35b353cebb539333be1723" category="list-text">Se AutoSupport è abilitato, sospendere la creazione di casi e indicare per quanto tempo si prevede che il sistema sia offline:</block>
+  <block id="d8bfd1abcc8f866387fd8d353161695c" category="paragraph"><block ref="3d32647e6acc47ad995cd3528d23d17a" prefix="" category="inline-code"></block></block>
+  <block id="4288b2b72921e4670bb8b42ba6a5248d" category="list-text">Identificare l'indirizzo SP/BMC di tutti i nodi del cluster:</block>
+  <block id="bb000e8434af9c71358c26cf3aa76ce3" category="list-text">Uscire dalla shell del cluster:</block>
+  <block id="d9f6eac526670fe9182f1a63d251a180" category="paragraph"><block ref="f24f62eeb789199b9b2e467df3b1876b" prefix="" category="inline-code"></block></block>
+  <block id="29b1aa97ab42c7253b7c5769a711e501" category="list-text">Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno dei nodi elencati nell'output del passaggio precedente per monitorare l'avanzamento.</block>
+  <block id="4e66424513d5ccef0e91ad9aa7c87642" category="list-text">Immettere *y* per ciascun controller nel cluster quando viene visualizzato:</block>
+  <block id="38ae227cf94e3775806bccfd95814d4b" category="paragraph"><block ref="035b082bfaf23bf2d7b95c3ef597d380" prefix="" category="inline-code"></block></block>
+  <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="list-text">Queste procedure mostrano le configurazioni comuni. Il cablaggio specifico dipende dai componenti ordinati per il sistema di storage in uso. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="e5f780ef73bd41c1dd64af7a1a1a31ac" category="paragraph">Collegare i controller al cluster ONTAP. Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.</block>
+  <block id="0990249c3bba6596b74be9af46837266" category="list-text">Collegare la porta e7a del controller A alla porta E1a del controller B.</block>
+  <block id="18695b824b22d82a916970e4903bf31d" category="paragraph">Utilizzare il cavo 100 GbE per collegare le porte da E1a a E1a e le porte da e7a a e7a.</block>
+  <block id="3b29102e499249644dff327644d96081" category="list-text">Collegare le porte e9a e e9b allo switch di rete dati Ethernet.</block>
+  <block id="c7900e3ee1f4eb935f449465b57ad5c1" category="paragraph">Utilizzare i cavi 1000BASE-T RJ-45 per collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.</block>
+  <block id="b932f995196606a28c001b761f3203ea" category="paragraph">Le seguenti procedure di cablaggio mostrano come collegare i controller a uno shelf di archiviazione. Scegliere una delle seguenti opzioni di cablaggio che corrisponda alla propria configurazione.</block>
+  <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">Per il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="79138a6cb5003084e8165f13ec497dbc" category="paragraph">Collegare ciascun controller ai moduli NSM sullo shelf NS224. La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
+  <block id="a43aeceacebed9b091efbcca7240378d" category="paragraph">Collegare ciascun controller ai moduli NSM su entrambi gli shelf NS224. La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
+  <block id="9a720e4e76be699dfb02bbc1262d3cb7" category="doc">Completare la sostituzione del telaio - AFF A70 e AFF A90</block>
+  <block id="b70879bd1721efa4787c4b23342efe9e" category="paragraph">Per completare il processo di sostituzione dello chassis, è necessario eseguire il boot da ONTAP, restituire lo storage, verificare lo stato di salute del sistema storage e restituire lo chassis guasto a NetApp.</block>
+  <block id="36d7c2ea7561a15acd27e07a5693d816" category="paragraph">È necessario rimuovere componenti specifici dai moduli controller prima di rimuovere il telaio danneggiato, sostituire il telaio, reinstallare i componenti nei moduli controller corretti, quindi riportare le centraline al normale funzionamento.</block>
+  <block id="d15e3734e85341b27e4da1641e1f59e1" category="inline-link-macro">completare la sostituzione del telaio</block>
+  <block id="8814a36d70b251b1442c439b51299ee4" category="paragraph">Dopo aver sostituito il telaio AFF A70 o AFF A90 danneggiato e aver reinstallato i componenti al suo interno, è necessario <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>.</block>
+  <block id="a1d3bcf20c089dbf9082bd95e68d717d" category="doc">Prepararsi alla sostituzione del telaio - AFF A70 e AFF A90</block>
+  <block id="5e7a6f515db040f875580c780295035b" category="paragraph">Prepararsi a sostituire il telaio danneggiato con il nuovo telaio dello stesso modello del telaio danneggiato.</block>
+  <block id="fb34a84a11047c5449582cfc3e832942" category="inline-link-macro">spegnere i controller</block>
+  <block id="d3a08051606463fa6af8ba4af97a9c04" category="paragraph">Dopo aver preparato la sostituzione dell'hardware dello chassis AFF A70 o AFF A90, è necessario <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="11e980ab44ebd379750fafda5a247d2c" category="paragraph">Rivedere i requisiti per la sostituzione di un telaio danneggiato.</block>
+  <block id="026fb5a788ed1dd66790400c2f4099e7" category="inline-link-macro">preparare la sostituzione del telaio</block>
+  <block id="e228ff2a660e4cebe2066a5840c3b300" category="paragraph">Dopo aver esaminato i requisiti di sostituzione dello chassis, è necessario <block ref="af017f73f8b24b023ee615b1ec4887a6" category="inline-link-macro-rx"></block>.</block>
+  <block id="8c8e8261718e28e5cfc48151f5e75ac4" category="paragraph">È necessario spegnere i controller nel telaio danneggiato prima di rimuoverli.</block>
+  <block id="8f5a50ad9bf783f785b5b596a25d5896" category="inline-link-macro">sostituire il telaio</block>
+  <block id="926211b8c90e6b361336abd4a1e465bd" category="paragraph">Una volta arrestati i controller, è necessario <block ref="36e3e0df655e652fc33a5dfc009000ae" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d5363bbdbfe18ac43fbd33d126fa9db" category="paragraph">Esaminare i requisiti di sostituzione del telaio.</block>
+  <block id="d0497c9a83fcc710e7646606efe0af8e" category="inline-link-macro">Preparare la sostituzione del telaio</block>
+  <block id="375015509a5165d7dc821469963fcce2" category="paragraph-title"><block ref="ccf9965eddaaff76b152812c8e0015f1" category="inline-image-macro-rx" type="image"></block><block ref="624e92fbcf1c424fff61b405157e3796" category="inline-link-macro-rx"></block></block>
+  <block id="6f1e4a74491c48d15177f3c2acf56c11" category="paragraph">Preparare la sostituzione del telaio individuando il sistema, raccogliendo le credenziali di sistema e gli strumenti necessari, verificando che il telaio di ricambio sia stato ricevuto ed etichettando i cavi del sistema.</block>
+  <block id="35d6d33467aae9a2e3dccb4b6b027878" category="inline-image-macro">tre</block>
+  <block id="052bb8d6cd7c3bafc06c8456040057e0" category="paragraph-title"><block ref="6b77e2260873b4d678c3f337dd767e02" category="inline-image-macro-rx" type="image"></block><block ref="7965ac6558ac93dfaf2504fcd8c045af" category="inline-link-macro-rx"></block></block>
+  <block id="706583438b0533926cbdca790ff7a1ff" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="50c430fbfd37e7720d34aff806c960b8" category="inline-link-macro-rx"></block></block>
+  <block id="fa14a5b629dea1c371a7052fe4a3da33" category="paragraph">Sostituire il telaio spostando i componenti dal telaio danneggiato al telaio sostitutivo.</block>
+  <block id="bf5f18c90002b6633a071a5a3cc0114b" category="inline-link-macro">Completare la sostituzione del telaio</block>
+  <block id="27715a4d2867a47fb027e5808760a851" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="ccb4edb95b58f7050d5462ae0acd0b1b" category="inline-link-macro-rx"></block></block>
+  <block id="4e82b04f61455363e2f4cb923f7fbbde" category="paragraph">Completa la sostituzione dello chassis sollevando i controller, restituendo i controller e restituendo lo chassis guasto a NetApp.</block>
+  <block id="11f69ba457c92cc85e478b022d6fe27d" category="open-title">Opzione 1: Uno shelf storage NS224</block>
+  <block id="dbc80d316683c8c8fbd51c4f53c57169" category="open-title">Opzione 2: Due shelf storage NS224</block>
+  <block id="5b64e8df8fa3f4298ca879bbc49b353c" category="doc">Preparazione alla sostituzione del telaio - ASA A70 e ASA A90</block>
+  <block id="24577d2fbefca70a58413bdd26876f6e" category="paragraph">Dopo aver preparato la sostituzione dell'hardware dello chassis ASA A70 o ASA A90, è necessario <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="8019bdcaff5849ab8015533c8674f305" category="paragraph">Collegare ciascun controller ai moduli NSM su entrambi i ripiani NS224. La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
+  <block id="546125971d4fce23d0f562118f0ce95f" category="open-title">Opzione 3: Due shelf DS460C</block>
+  <block id="8994222dc8e3118b755e00531cef6a1c" category="paragraph">Collegare ciascun controller ai moduli IOM su entrambi i ripiani DS460C. La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
+  <block id="d42c87e93d80bf28fffc01d7bb494eb2" category="list-text"><block ref="d42c87e93d80bf28fffc01d7bb494eb2" category="inline-link-macro-rx"></block></block>
+  <block id="98aab8017242eea1d6e23ba928b20ae5" category="list-text"><block ref="98aab8017242eea1d6e23ba928b20ae5" category="inline-link-macro-rx"></block></block>
+  <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
+  <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepararsi alla sostituzione</block>
 </blocks>

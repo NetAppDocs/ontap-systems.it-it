@@ -11,12 +11,19 @@ summary: Si sostituisce un telaio danneggiato con il nuovo telaio dello stesso m
 
 
 [role="lead"]
+Rivedere i requisiti per la sostituzione di un telaio danneggiato.
+
 Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
 
 Prima di sostituire il telaio, verificare i seguenti requisiti.
 
-* Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il supporto tecnico.
+* Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare per assistenza. http://mysupport.netapp.com/["Sito di supporto NetApp"^]
+* Ottenere le credenziali di amministratore locale per ONTAP se non si dispone di tali credenziali.
+* Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
 * È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.
 * La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, i dischi NVMe e i moduli controller vengano spostati nel nuovo chassis e che lo chassis di ricambio sia un nuovo componente di NetApp.
 * *La procedura di sostituzione del telaio non funziona.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
 
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti di sostituzione dello chassis, è necessario link:chassis-replace-prepare.html["preparare la sostituzione del telaio"].

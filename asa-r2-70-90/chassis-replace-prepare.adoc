@@ -1,0 +1,65 @@
+---
+permalink: asa-r2-70-90/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: asa r2 a70, asa r2 a90, prepare to replace the chassis 
+summary: Si sostituisce un telaio danneggiato con il nuovo telaio dello stesso modello del telaio danneggiato. 
+---
+= Preparazione alla sostituzione del telaio - ASA A70 e ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepararsi a sostituire il telaio danneggiato con il nuovo telaio dello stesso modello del telaio danneggiato.
+
+
+
+== Fase 1: Individuare e monitorare il sistema
+
+È necessario aprire una sessione della console e salvare i registri delle sessioni per riferimenti futuri, nonché attivare il LED di posizione del sistema per individuare il telaio danneggiato.
+
+. Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.
+. Individuare e accendere il LED di posizione del controller:
++
+.. Utilizzare il `system controller location-led show` comando per visualizzare lo stato corrente del LED di posizione.
+.. Modificare lo stato del LED di posizione su "ON":
++
+`system controller location-led modify -node _node1_ -state on`.
+
++
+Il LED posizione rimane acceso per 30 minuti.
+
+
+
+
+
+
+
+== Fase 2: Verifica dei componenti sostitutivi
+
+È necessario verificare di aver ricevuto i componenti necessari, rimuoverli dalla confezione e conservarli.
+
+. Prima di aprire la confezione, controllare l'etichetta della confezione e verificare:
++
+** Numero di parte del componente.
+** Descrizione della parte.
+** Quantità nella scatola.
+
+
+. Rimuovere il contenuto dalla confezione e utilizzare la confezione per restituire il componente guasto a NetApp.
+
+
+
+
+== Fase 3: Etichettare i cavi e i moduli del controller e mettere a terra l'utente
+
+È necessario etichettare i cavi e i controller prima di rimuoverli dai moduli del controller o dallo chassis.
+
+. Etichettare tutti i cavi associati al sistema di archiviazione. Ciò aiuta a riabilitarlo più avanti in questa procedura.
+. Etichettare i moduli controller.
+. Se non siete già correttamente collegati a terra, mettetevi a terra.
+
+
+.Quali sono le prossime novità?
+Dopo aver preparato la sostituzione dell'hardware dello chassis ASA A70 o ASA A90, è necessario link:chassis-replace-shutdown.html["spegnere i controller"].
