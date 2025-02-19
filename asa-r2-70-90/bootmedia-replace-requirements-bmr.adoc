@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, a90, replace the boot media 
 summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio. 
 ---
-= Requisiti e considerazioni - ASA A70 e ASA A90
+= Requisiti di sostituzione dei supporti di avvio - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,25 @@ summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio.
 [role="lead"]
 Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
 
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto da NetApp.
-* È importante applicare i comandi descritti di seguito al controller corretto:
-+
-** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
-** Il controller _healthy_ è il partner ha del controller compromesso.
-
-
+* È necessario sostituire il supporto di avvio guasto con un supporto di avvio sostitutivo ricevuto da NetApp.
 * Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
+* Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
++
+** È possibile chiedere all'amministratore di sistema se OKM o EKM sono abilitati.
+** Per verificare se OKM è abilitato, è possibile utilizzare `security key-manager onboard show` .
+** Per verificare se EKM è abilitato, è possibile utilizzare `security key-manager external show` .
 
+
+* Per OKM, è necessario il contenuto del file della passphrase OKM.
+* Per EKM, è necessario copiare i seguenti file dal nodo partner:
++
+** file /cfcard/kmip/servers.cfg.
+** file /cfcard/kmip/certs/client.crt.
+** file /cfcard/kmip/certs/client.key.
+** File /cfcard/kmip/certs/CA.pem.
+
+
+
+
+.Cosa succederà
+Dopo aver esaminato i requisiti dei supporti di avvio, si link:bootmedia-shutdown-bmr.html["spegnere il controller danneggiato"].

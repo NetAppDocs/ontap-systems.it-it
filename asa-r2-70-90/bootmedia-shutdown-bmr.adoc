@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, shut down the controller 
 summary: 'È necessario completare l"arresto del controller danneggiato.' 
 ---
-= Spegnere il controller - ASA A70 e ASA A90
+= Spegnere il controller danneggiato - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario completare l'arresto del controller danneggiato. Spegnere o sostituire il controller compromesso.
+Spegnere o sostituire il controller danneggiato in modo da poter eseguire la manutenzione sul supporto di avvio.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -63,3 +63,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 |===
 
+
+.Cosa succederà
+Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].

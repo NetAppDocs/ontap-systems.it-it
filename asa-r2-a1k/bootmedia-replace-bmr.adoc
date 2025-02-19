@@ -11,13 +11,31 @@ summary: Individuare il supporto di avvio guasto nel modulo controller rimuovend
 
 
 [role="lead"]
-Per sostituire il supporto di avvio, è necessario rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
+Sostituire il supporto di avvio rimuovendo il modulo di gestione del sistema dal retro del sistema, rimuovendo il supporto di avvio danneggiato, installando il supporto di avvio sostitutivo nel modulo di gestione del sistema, quindi reinstallando il modulo di gestione del sistema.
 
 .Fasi
 Il supporto di avvio si trova all'interno del modulo di gestione del sistema ed è accessibile rimuovendo il modulo dal sistema.
 
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi di alimentazione dalle PSU dal controller.
++
+
+NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dagli alimentatori.
+
++
+.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.
+.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
+.. Premere il pulsante della camma di gestione del sistema.
+.. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo.
+.. Rimuovere il modulo di gestione del sistema dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal contenitore.
+.. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile.
+
+
+. Rimuovere il supporto di avvio dal modulo di gestione:
++
 image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[I supporti di avvio sostituiscono l'immagine]
 
++
 [cols="1,4"]
 |===
 
@@ -42,22 +60,6 @@ image::../media/icon_round_3.png[Numero di didascalia 3]
 Supporto di boot
 
 |===
-. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare i cavi di alimentazione dalle PSU dal controller.
-+
-
-NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dagli alimentatori.
-
-+
-.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.
-.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
-.. Premere il pulsante della camma di gestione del sistema.
-.. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo.
-.. Rimuovere il modulo di gestione del sistema dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal contenitore.
-.. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile.
-
-
-. Rimuovere il supporto di avvio dal modulo di gestione:
 +
 .. Premere il pulsante di bloccaggio blu.
 .. Ruotare il supporto di avvio verso l'alto, farlo scorrere fuori dallo zoccolo e metterlo da parte.
@@ -70,7 +72,7 @@ NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocc
 .. Premere il pulsante di bloccaggio, ruotare completamente il supporto di avvio e rilasciare il pulsante di bloccaggio.
 
 
-. Reinstallare il modulo di gestione del sistema.
+. Reinstallare il modulo di gestione del sistema:
 +
 .. Allineare il modulo con i bordi dell'apertura dello slot del contenitore.
 .. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
@@ -82,3 +84,6 @@ NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocc
 
 
 
+
+.Cosa succederà
+Dopo aver sostituito fisicamente i supporti di avvio danneggiati, link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine ONTAP dal nodo partner"].

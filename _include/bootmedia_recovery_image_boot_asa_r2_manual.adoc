@@ -1,16 +1,7 @@
----
-permalink: asa-r2-a1k/bootmedia-recovery-image-boot.html 
-sidebar: sidebar 
-keywords: asa r2 a1k, boot the recovery image 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
----
-= Avviare l'immagine di ripristino - ASA A1K
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
 .Fasi
@@ -42,15 +33,30 @@ L'immagine viene scaricata dall'unità flash USB.
 --
 .Opzione 2: ONTAP 9.16,1 o versione successiva
 --
-.. Sul controller danneggiato, premere `Y` quando viene richiesto di ripristinare la configurazione di backup.
+.. Al prompt Loader sul controller danneggiato, configurare l'indirizzo IP del modulo controller danneggiato:
 +
-Una volta completata la procedura di ripristino, questo messaggio viene visualizzato sulla console - `syncflash_partner: Restore from partner complete`.
+`ifconfig e0M - auto`
 
+.. Al prompt di Loader, netboot del nodo danneggiato:
++
+`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<ontap_version>_image.tgz`
+
+.. Dal menu di avvio, selezionare opzione `7`.
+.. Immettere `n` quando viene richiesto di ripristinare la configurazione di backup.
+.. Immettere `y` quando viene richiesto di riavviare il nodo.
+.. Premere `ctrl-c` per tornare al menu di avvio.
++
+Se la crittografia è attivata, è necessario ripristinarla prima di continuare a ripristinare l'immagine di avvio. Andare a link:bootmedia-encryption-restore.html["Ripristino della crittografia"].
+
+.. Sul controller danneggiato, premere `Y` quando richiesto per riavviare il controller danneggiato e premere `ctrl-c` per il menu di avvio.
+.. Selezionare opzione `6`.
 .. Sul controller danneggiato, premere `Y` quando richiesto per confermare se il backup di ripristino è stato eseguito correttamente.
 .. Sul controller danneggiato, premere `Y` quando viene richiesto di utilizzare la configurazione ripristinata.
 .. Sul controller danneggiato, premere `Y` quando viene richiesto di riavviare il nodo.
-.. Sul controller danneggiato, premere `Y` quando richiesto per riavviare il controller danneggiato e premere `ctrl-c` per il menu di avvio.
-.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristino della crittografia"].
+.. Premere `Y` quando viene richiesto di ripristinare la configurazione di backup.
++
+Una volta completata la procedura di ripristino, questo messaggio viene visualizzato sulla console - `syncflash_partner: Restore from partner complete`.
+
 
 
 --

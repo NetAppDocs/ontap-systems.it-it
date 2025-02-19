@@ -11,7 +11,7 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
-È necessario completare l'arresto del controller danneggiato. Spegnere o sostituire il controller compromesso.
+Spegnere o sostituire il controller danneggiato in modo da poter eseguire la manutenzione sul supporto di avvio.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -63,3 +63,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 |===
 
+
+.Cosa succederà
+Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].
