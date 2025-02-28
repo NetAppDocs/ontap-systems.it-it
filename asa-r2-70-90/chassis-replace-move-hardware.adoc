@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, move hardware components, replace the chassis 
-summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.' 
+summary: 'Sostituire lo chassis del sistema ASA A70 o ASA A90 quando è necessario un errore hardware o un aggiornamento. Questo processo prevede lo spegnimento del sistema, la rimozione del telaio esistente, l"installazione del nuovo e la riconfigurazione dei componenti per garantire il corretto funzionamento del sistema.' 
 ---
 = Spostare e sostituire l'hardware - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo
 
 
 [role="lead"]
-È necessario rimuovere componenti specifici dai moduli controller prima di rimuovere il telaio danneggiato, sostituire il telaio, reinstallare i componenti nei moduli controller corretti, quindi riportare le centraline al normale funzionamento.
+Sostituire lo chassis del sistema ASA A70 o ASA A90 quando è necessario un errore hardware o un aggiornamento. Questo processo prevede lo spegnimento del sistema, la rimozione del telaio esistente, l'installazione del nuovo e la riconfigurazione dei componenti per garantire il corretto funzionamento del sistema.
 
 
 
@@ -213,4 +213,4 @@ I moduli controller iniziano ad avviarsi non appena l'alimentatore viene install
 
 
 .Quali sono le prossime novità?
-Dopo aver sostituito il telaio AFF A70 o AFF A90 danneggiato e aver reinstallato i componenti al suo interno, è necessario link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"].
+Dopo aver sostituito il telaio ASA A70 o ASA A90 danneggiato e aver reinstallato i componenti al suo interno, è necessario link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"].

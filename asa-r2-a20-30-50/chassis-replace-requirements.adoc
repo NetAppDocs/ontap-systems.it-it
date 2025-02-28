@@ -1,0 +1,38 @@
+---
+permalink: asa-r2-a20-30-50/chassis-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa a20, asa a30, asa a50, replace the chassis 
+summary: Si sostituisce un telaio danneggiato con il nuovo telaio dello stesso modello del telaio danneggiato. 
+---
+= Requisiti per la sostituzione dello chassis - ASA A20, ASA A30 e ASA A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il telaio, verificare i seguenti requisiti e considerazioni.
+
+
+
+== Requisiti
+
+* Il telaio di ricambio deve essere dello stesso modello del telaio danneggiato. Questa procedura si riferisce a una sostituzione simile a quella di un prodotto, non a un aggiornamento.
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+
+
+
+== Considerazioni
+
+* *La procedura di sostituzione del telaio non funziona.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* Puoi utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal tuo sistema storage.
+* La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, le unità, gli eventuali alloggiamenti e i controller vengano spostati nel nuovo chassis.
+* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+

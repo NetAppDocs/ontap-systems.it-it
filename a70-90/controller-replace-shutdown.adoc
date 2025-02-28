@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shut down the impaired controller 
-summary: Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso. 
+summary: Arresta il controller nel sistema storage AFF A70 o AFF A90 in caso di compromissione. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema. 
 ---
 = Spegnere la centralina guasta - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Per spegnere il controller compromesso, è necessario determinare lo st
 
 
 [role="lead"]
-Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+Arresta il controller nel sistema storage AFF A70 o AFF A90 in caso di compromissione. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
+
+Arrestare il modulo controller utilizzando una delle seguenti opzioni.
 
 [role="tabbed-block"]
 ====

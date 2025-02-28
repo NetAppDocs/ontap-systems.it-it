@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, pre-shutdown checks for onboard encryption keys 
-summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+summary: 'Per garantire la sicurezza dei dati sul sistema storage AFF A70 e AFF A90, è necessario verificare il supporto e lo stato della chiave di crittografia. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.' 
 ---
 = Verificare il supporto e lo stato della chiave di crittografia - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Prima di spegnere il controller compromesso e controllare lo stato dell
 
 
 [role="lead"]
+Per garantire la sicurezza dei dati sul sistema storage AFF A70 e AFF A90, è necessario verificare il supporto e lo stato della chiave di crittografia. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+
 Prima di spegnere il controller danneggiato, verifica che la tua versione di ONTAP supporti la crittografia dei volumi NetApp (NVE) e che il tuo sistema di gestione delle chiavi sia configurato correttamente.
 
 

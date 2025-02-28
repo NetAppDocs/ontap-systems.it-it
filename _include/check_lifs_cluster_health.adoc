@@ -2,12 +2,12 @@
 :allow-uri-read: 
 
 
-Prima di riportare in servizio il nodo _replacement_, occorre verificare che le LIF si trovino nelle loro porte home, verificare lo stato del cluster e reimpostare il giveback automatico.
+Prima di riportare in servizio il nodo sostitutivo, verifica che le interfacce logiche siano sulle porte home, verifica lo stato del cluster e ripristina il giveback automatico.
 
 .Fasi
 . Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
 +
-Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert -vserver * -lif *`
+Se alcune interfacce logiche sono elencate come false, riportarle alle porte principali: `network interface revert -vserver * -lif *`
 
 . Controllare lo stato di salute del cluster. Per ulteriori informazioni, consultare l' https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"^] articolo della KB.
 . Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`

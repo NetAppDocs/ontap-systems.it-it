@@ -1,0 +1,193 @@
+---
+permalink: asa-r2-a20-30-50/power-supply-replace.html 
+sidebar: sidebar 
+keywords: asa a20, asa a30, asa a50, replace a power supply 
+summary: 'La sostituzione di un alimentatore comporta lo scollegamento dell"alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione del vecchio alimentatore e l"installazione dell"alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.' 
+---
+= Sostituire un alimentatore - ASA A20, ASA A30 e ASA A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sostituzione di un alimentatore (PSU) implica lo scollegamento dell'alimentatore difettoso dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione dell'alimentatore difettoso e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.
+
+.A proposito di questa attività
+* Questa procedura è stata scritta per la sostituzione di una PSU alla volta.
++
+Le PSU sono ridondanti e sostituibili a caldo.
+
+* IMPORTANTE: Non combinare alimentatori con diverse classificazioni di efficienza o diversi tipi di input. Sostituire sempre come per come.
+* Utilizzare la procedura appropriata per il tipo di alimentatore in uso: CA o CC.
+* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+[role="tabbed-block"]
+====
+.Opzione 1: Sostituire un alimentatore CA
+--
+Per sostituire un alimentatore CA, attenersi alla seguente procedura.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Identificare l'alimentatore guasto in base ai messaggi di errore della console o tramite il LED di attenzione rosso sull'alimentatore.
+. Scollegare il cavo di alimentazione dalla PSU aprendo il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dalla PSU.
++
+
+NOTE: Gli alimentatori non sono dotati di interruttore di alimentazione.
+
+. Rimuovere l'alimentatore:
++
+image::../media/drw_g_t_psu_replace_ieops-1899.svg[Sostituire l'alimentatore CA]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Ruotare la maniglia dell'alimentatore verso l'alto, portandola in posizione orizzontale, quindi afferrarla.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Con il pollice, premere la linguetta blu per rilasciare l'alimentatore dal controller.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Estrarre l'alimentatore dal controller mentre si utilizza l'altra mano per sostenere il suo peso.
+
+
+CAUTION: L'alimentatore è in corto. Utilizzare sempre due mani per sostenerlo quando lo si rimuove dal controller in modo che non si sposti improvvisamente dal controller e possa causare lesioni.
+
+|===
+. Installare l'alimentatore sostitutivo:
++
+.. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nel controller.
+.. Spingere delicatamente l'alimentatore nel controller finché la linguetta di bloccaggio non scatta in posizione.
++
+Una PSU si innesta correttamente solo con il connettore interno e si blocca in posizione in un modo.
+
++
+
+NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si fa scorrere l'alimentatore nel controller.
+
+.. Ruotare la maniglia verso il basso, in modo che non sia di intralcio alle normali operazioni.
+
+
+. Ricollegare il cavo di alimentazione all'alimentatore e fissarlo con il fermo del cavo di alimentazione.
++
+Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato deve essere verde.
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
+
+
+--
+.Opzione 2: Sostituire un alimentatore CC
+--
+Per sostituire un alimentatore CC, attenersi alla seguente procedura.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Identificare l'alimentatore guasto in base ai messaggi di errore della console o tramite il LED di attenzione rosso sull'alimentatore.
+. Scollegare l'alimentatore:
++
+
+NOTE: Gli alimentatori non sono dotati di interruttore di alimentazione.
+
++
+.. Svitare le due viti ad alette sul connettore del cavo di alimentazione CC D-SUB.
++
+L'illustrazione e la tabella al passo 4 mostrano le due viti ad alette (n. 1) e il connettore del cavo di alimentazione CC D-SUB (n. 2).
+
+.. Scollegare il cavo dall'alimentatore e metterlo da parte.
+
+
+. Rimuovere l'alimentatore:
++
+.. Ruotare la maniglia verso l'alto, in posizione orizzontale, quindi afferrarla.
+.. Con il pollice, premere la linguetta in terracotta per rilasciare il meccanismo di bloccaggio.
+.. Estrarre l'alimentatore dal controller mentre si utilizza l'altra mano per sostenere il suo peso.
++
+
+CAUTION: L'alimentatore è in corto. Utilizzare sempre due mani per sostenerlo durante la rimozione dal controller in modo che non ruoti liberamente dal controller e possa causare lesioni.
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[Rimuovere un alimentatore CC]
+
+
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Viti ad alette
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Connettore del cavo di alimentazione CC D-SUB PSU
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Maniglia dell'alimentatore
+
+
+
+ a| 
+image::../media/icon_round_4.png[Numero di didascalia 4]
+ a| 
+Linguetta di bloccaggio PSU in terracotta
+
+|===
+. Inserire l'alimentatore di ricambio:
++
+.. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nel controller.
+.. Far scorrere delicatamente l'alimentatore nel controller finché la linguetta di bloccaggio non scatta in posizione.
++
+Un alimentatore deve essere correttamente collegato al connettore interno e al meccanismo di bloccaggio. Ripetere questa procedura se si ritiene che l'alimentatore non sia inserito correttamente.
+
++
+
+NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si fa scorrere l'alimentatore nel controller.
+
+.. Ruotare la maniglia verso il basso, in modo che non sia di intralcio alle normali operazioni.
+
+
+. Ricollegare il cavo di alimentazione CC D-SUB:
++
+Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato deve essere verde.
+
++
+.. Collegare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+.. Serrare le due viti ad alette per fissare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
+
+
+--
+====

@@ -1,10 +1,10 @@
 ---
-permalink: c80/bootmedia-replace-workflow-bmr.html 
+permalink: asa-r2-a20-30-50/bootmedia-replace-workflow-bmr.html 
 sidebar: sidebar 
-keywords: c80, replace the boot media 
+keywords: aff a20, aff a30, aff a50, replace the boot media 
 summary: È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider. 
 ---
-= Flusso di lavoro per la sostituzione dei supporti di avvio - AFF C80
+= Flusso di lavoro per la sostituzione dei supporti di avvio - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ Per sostituire i supporti di avvio, attenersi alla procedura riportata di seguit
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:bootmedia-replace-requirements-bmr.html["Esaminare i requisiti dei supporti di avvio"]
 [role="quick-margin-para"]
-Per sostituire i supporti di avvio, è necessario soddisfare determinati requisiti.
+Esaminare i requisiti per la sostituzione dei supporti di avvio.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:bootmedia-shutdown-bmr.html["Spegnere il controller compromesso"]
 [role="quick-margin-para"]
@@ -23,11 +23,11 @@ Spegnere o sostituire il controller danneggiato in modo che il controller integr
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:bootmedia-replace-bmr.html["Sostituire il supporto di avvio"]
 [role="quick-margin-para"]
-Rimuovere il supporto di avvio guasto dal modulo di gestione del sistema e installare il supporto di avvio sostitutivo.
+Rimuovere il supporto di avvio guasto dal controller danneggiato e installare il supporto di avvio sostitutivo.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:bootmedia-recovery-image-boot-bmr.html["Ripristino dell'immagine sul supporto di avvio (ripristino di avvio automatico)"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine sul supporto di avvio"]
 [role="quick-margin-para"]
-Ripristinare l'immagine ONTAP dal controller partner.
+Ripristinare l'immagine ONTAP dal controller integro.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:bootmedia-complete-rma-bmr.html["Restituire la parte guasta a NetApp"]
 [role="quick-margin-para"]

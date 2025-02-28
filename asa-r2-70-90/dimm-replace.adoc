@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/dimm-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace a dimm 
-summary: 'È necessario sostituire un modulo DIMM nel modulo controller quando il sistema registra un numero crescente di codici di correzione degli errori correggibili (ECC); in caso contrario, si verifica un errore di sistema.' 
+summary: Sostituire un modulo DIMM nel sistema AFF C80 quando vengono rilevati errori correggibili o non correggibili eccessivi. Questi problemi, spesso causati da un errore di un singolo DIMM, possono impedire al sistema di storage di avviare ONTAP. 
 ---
 = Sostituire un modulo DIMM - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: 'È necessario sostituire un modulo DIMM nel modulo controller quando i
 
 
 [role="lead"]
-È necessario sostituire un modulo DIMM nel controller quando il sistema di archiviazione rileva errori quali la presenza di un numero eccessivo di codici di correzione degli errori CECC (Correctable Error Correction Codes) basati su avvisi di Health Monitor o errori ECC non correggibili, in genere causati da un singolo errore del modulo DIMM che impedisce al sistema di archiviazione di avviare ONTAP.
+Sostituire un modulo DIMM nel sistema AFF C80 quando vengono rilevati errori correggibili o non correggibili eccessivi. Questi problemi, spesso causati da un errore di un singolo DIMM, possono impedire al sistema di storage di avviare ONTAP.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
 
 

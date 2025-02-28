@@ -2,7 +2,7 @@
 permalink: c80/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: c80, how to recable the system, teboot the system 
-summary: È necessario eseguire nuovamente il riavvio dello storage del controller. 
+summary: Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF C80 possa riprendere il normale funzionamento. 
 ---
 = Possibilità di recuperare e restituire il controller - AFF C80
 :allow-uri-read: 
@@ -11,18 +11,15 @@ summary: È necessario eseguire nuovamente il riavvio dello storage del controll
 
 
 [role="lead"]
-Verificare le connessioni di storage e di rete, quindi restituire il controller.
-
-
-
-== Restituire il controller
-
-Reimpostare la crittografia se abilitata e riportare il controller al normale funzionamento.
+Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF C80 possa riprendere il normale funzionamento.
 
 [role="tabbed-block"]
 ====
 .Nessuna crittografia
 --
+Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione
+
+.Fasi
 . Dal prompt DI Loader, immettere `boot_ontap`.
 . Premere <enter> quando i messaggi della console si interrompono.
 +
@@ -30,15 +27,30 @@ Reimpostare la crittografia se abilitata e riportare il controller al normale fu
 ** Se viene visualizzato _Waiting for giveback_, premere il tasto <enter>, accedere al nodo partner, quindi passare alla fase successiva alla fine di questa sezione.
 
 
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 --
 .Crittografia integrata (OKM)
 --
-. Dal prompt DI Loader, immettere `boot_ontap maint`.
+Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
+
+.Fasi
+. Dal prompt DEL CARICATORE, immettere:
++
+`boot_ontap maint`.
+
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
 . Immettere la passphrase OKM. È possibile ottenere questa passphrase dal cliente oppure contattare https://support.netapp.com["Supporto NetApp"].
 +
@@ -49,29 +61,52 @@ NOTE: La passphrase verrà richiesta due volte.
 . Nel menu di avvio, inserire l'opzione `1` per l'avvio normale.
 . Premere <enter> quando viene visualizzato _Waiting for giveback_.
 . Spostare il cavo della console sul nodo partner e accedere come `admin`.
-. Fornire solo gli aggregati CFO (l'aggregato root): `storage failover giveback -fromnode local -only-cfo-aggregates true`
+. Fornire solo gli aggregati CFO (l'aggregato root):
 +
-** In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+`storage failover giveback -fromnode local -only-cfo-aggregates true`
 
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
 
-. Attendere 5 minuti dopo il completamento del report di sconto e controllare lo stato di failover e di sconto: `storage failover show` E `storage failover show-giveback`.
-. Spostare il cavo della console sul nodo sostitutivo e immettere `security key-manager onboard sync`
+. Attendere 5 minuti dopo il completamento del report di sconto e verificare lo stato di failover e dello stato dello sconto:
++
+`storage failover show` e `storage failover show-giveback`.
+
+. Spostare il cavo della console sul nodo sostitutivo e immettere:
++
+`security key-manager onboard sync`
+
 +
 
 NOTE: Verrà richiesta la passphrase a livello di cluster di OKM per il cluster.
 
-. Verificare lo stato delle chiavi con il seguente comando: `security key-manager key query -key-type svm-KEK`.
+. Verificare lo stato delle chiavi con il seguente comando:
++
+`security key-manager key query -key-type svm-KEK`.
+
 +
 Se la colonna _restarted_ mostra qualcosa tranne _true_, contattare https://support.netapp.com["Supporto NetApp"].
 
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 --
 .Gestore chiavi esterno (EKM)
 --
+Reimpostare la crittografia e riportare il controller al normale funzionamento.
+
+.Fasi
 . Se il volume root è crittografato con External Key Manager e il cavo console è collegato al nodo sostitutivo, immettere `boot_ontap menu` e selezionare opzione `11`.
 . Rispondere `y` o `n` alle seguenti domande:
 +
@@ -109,11 +144,26 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 
 
 . Una volta che il sistema è stato elaborato, viene visualizzato il menu di avvio. Selezionare '1' per l'avvio normale.
-. Controllare lo stato dell'acquisizione: `storage failover show`.
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata" `set -privilege advanced` e quindi `run local partner savecore`.
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Controllare lo stato del takeover:
++
+`storage failover show`.
+
+. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata:
++
+`set -privilege advanced` e poi `run local partner savecore`.
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 --

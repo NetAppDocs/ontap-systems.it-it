@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, post boot media replacement steps for okm, nse, and nve 
-summary: 'Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi che hanno attivato Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE).' 
+summary: 'Ripristinare la crittografia sul supporto di avvio sostitutivo nel sistema AFF A70 o AFF A90 per garantire una protezione continua dei dati. Questo processo prevede la verifica della disponibilità delle chiavi, la riapplicazione delle impostazioni di crittografia e la conferma dell"accesso sicuro ai dati.' 
 ---
 = Ripristina crittografia - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Una volta controllate le variabili di ambiente, è necessario completa
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Ripristinare la crittografia sul supporto di avvio sostitutivo nel sistema AFF A70 o AFF A90 per garantire una protezione continua dei dati. Questo processo prevede la verifica della disponibilità delle chiavi, la riapplicazione delle impostazioni di crittografia e la conferma dell'accesso sicuro ai dati.
 
 È necessario completare i passaggi specifici per i sistemi che hanno attivato Gestione chiavi integrato (OKM), crittografia storage NetApp (NSE) o crittografia del volume NetApp (NVE) utilizzando le impostazioni acquisite all'inizio della procedura di sostituzione dei supporti di avvio.
 

@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-complete-system-restore-rma.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, verify and set HA state, complete the replacement process 
-summary: Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. 
+summary: Riavviare i controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare la fase finale del flusso di lavoro di sostituzione dello chassis ASA A70 e ASA A90. 
 ---
 = Completare la sostituzione del telaio - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Verificare lo stato ha del telaio e restituire il componente guasto a N
 
 
 [role="lead"]
-Per completare il processo di sostituzione dello chassis, è necessario eseguire il boot da ONTAP, restituire lo storage, verificare lo stato di salute del sistema storage e restituire lo chassis guasto a NetApp.
+Riavviare i controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare la fase finale del flusso di lavoro di sostituzione dello chassis ASA A70 e ASA A90.
 
 
 
