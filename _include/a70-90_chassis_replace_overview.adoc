@@ -7,6 +7,7 @@ Per sostituire lo chassis, è necessario spostare il pannello, i moduli controll
 Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Non utilizzare questa procedura per gli aggiornamenti del sistema; fare riferimento alla https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Scegliere la procedura di aggiornamento dell'hardware del controller"] per le istruzioni.
 * Questa procedura si basa sul presupposto che si stiano spostando il pannello, i dischi NVMe e i moduli controller nel nuovo chassis e che lo chassis sostitutivo sia un nuovo componente di NetApp.
 * *Questa procedura è dirompente.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
 

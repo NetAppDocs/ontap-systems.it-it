@@ -20,7 +20,7 @@ Si consiglia di cancellare il contenuto del modulo di caching prima di sostituir
 ** Cancellare i dati sul modulo di caching: `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
 +
 
-NOTE: Eseguire `system controller flash-cache show` Comando se non si conosce l'ID del dispositivo flashcache.
+NOTE: Esegui il `system controller flash-cache show` comando se non conosci l'ID del dispositivo Flash cache.
 
 ** Verificare che i dati siano stati cancellati dal modulo di caching: `system controller flash-cache secure-erase show`
 

@@ -5,7 +5,7 @@
 Durante il processo di aggiornamento mediante lo spostamento dello storage, si accende node3 e node4, si avvia l'immagine software e si configurano i nodi. Il layout fisico delle porte tra i nodi originale e nuovo può essere diverso. È necessario eseguire il mapping delle porte tra i nodi originali e quelli sostitutivi per identificare il layout corretto di porte e connessioni.
 
 .A proposito di questa attività
-Se la versione di ONTAP in esecuzione sui nuovi nodi è diversa dalla versione sui nodi originali, è necessario aver scaricato il file <ontap_version>_image.tgz corretto dal sito di supporto NetApp in una directory accessibile dal Web (vedere il passaggio 4). Per eseguire un netboot del sistema, è necessario il file <ontap_version>_image.tgz.
+Se la versione di ONTAP in esecuzione sui nuovi nodi è diversa da quella dei nodi originali, è necessario scaricare il file <xxx_image.tgz> corretto dal sito di supporto NetApp in una directory accessibile tramite Web (vedere il passaggio 4). È necessario il file <xxx_image.tgz> per eseguire un netboot del sistema.
 
 .Fasi
 . Accendere il terminale di node3, quindi premere immediatamente Ctrl-C sul terminale della console per accedere al prompt DEL CARICATORE.
@@ -63,11 +63,11 @@ DHCP
  a| 
 *Tutti gli altri sistemi*
  a| 
-`+netboot http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`
+`+netboot http://web_server_ip/path_to_web-accessible_directory/<xxx_image.tgz>+`
 
 |===
 +
-Il percorso_alla_directory_accessibile-web è la posizione del file <ontap_version>_image.tgz scaricato.
+Il percorso_alla_directory_accessibile_web è la posizione del file <xxx_image.tgz> scaricato.
 
 +
 
@@ -77,7 +77,7 @@ NOTE: Se non si riesce ad eseguire l'avvio da rete dei nuovi controller, contatt
 +
 Ignorare il seguente messaggio: "Questa procedura non è supportata per l'aggiornamento non disruptivo su una coppia ha". Si applica agli aggiornamenti software senza interruzioni e non agli aggiornamenti dei controller.
 
-. Se viene richiesto di continuare la procedura, immettere `y`E quando viene richiesto il pacchetto, inserire l'URL del file immagine: `+http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`.
+. Se viene richiesto di continuare la procedura, immettere `y`, e quando viene richiesto il pacchetto, immettere l'URL del file immagine: `+http://web_server_ip/path_to_web-accessible_directory/<xxx_image.tgz>+`.
 +
 Immettere nome utente/password, se applicabile, oppure premere Invio per continuare.
 

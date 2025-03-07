@@ -2,16 +2,16 @@
 permalink: a70-90/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace the chassis 
-summary: Prima di sostituire lo chassis del sistema AFF A70 o AFF A90, verificare che tutti gli altri componenti del sistema funzionino correttamente, assicurarsi di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di sostituzione corretto e degli strumenti necessari. 
+summary: Prima di sostituire lo chassis del sistema AFF A70 o AFF A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò comprende la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della disponibilità delle credenziali di amministratore locale per ONTAP, dello chassis di sostituzione corretto e degli strumenti necessari. 
 ---
-= Requisiti di sostituzione del telaio - AFF A70 e AFF A90
+= Requisiti per la sostituzione del telaio - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di sostituire lo chassis del sistema AFF A70 o AFF A90, verificare che tutti gli altri componenti del sistema funzionino correttamente, assicurarsi di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di sostituzione corretto e degli strumenti necessari.
+Prima di sostituire lo chassis del sistema AFF A70 o AFF A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò comprende la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della disponibilità delle credenziali di amministratore locale per ONTAP, dello chassis di sostituzione corretto e degli strumenti necessari.
 
 Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
 
@@ -22,8 +22,8 @@ Prima di sostituire il telaio, verificare i seguenti requisiti.
 * Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
 * È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.
 * La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, i dischi NVMe e i moduli controller vengano spostati nel nuovo chassis e che lo chassis di ricambio sia un nuovo componente di NetApp.
-* *La procedura di sostituzione del telaio non funziona.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* La procedura di sostituzione dello chassis provoca interruzioni. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
 
 
 .Quali sono le prossime novità?
-Dopo aver esaminato i requisiti di sostituzione dello chassis, è necessario link:chassis-replace-prepare.html["preparare la sostituzione del telaio"].
+Dopo aver esaminato i requisiti per sostituire il telaio, è necessario link:chassis-replace-prepare.html["prepararsi a sostituire il telaio"].

@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, boot the recovery image 
-summary: 'Se il supporto di avvio nel sistema AFF A70 o AFF A90 è danneggiato, è possibile avviare l"immagine di ripristino da un"unità USB, ripristinare la configurazione dal nodo partner e verificare le variabili di ambiente.' 
+summary: 'Se il supporto di avvio nel sistema AFF A70 o AFF A90 è danneggiato, è possibile avviare l"immagine di ripristino da un"unità USB e ripristinare la configurazione dal nodo partner.' 
 ---
 = Avviare l'immagine di ripristino - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Se il supporto di avvio nel sistema AFF A70 o AFF A90 è danneggiato, 
 
 
 [role="lead"]
-Se il supporto di avvio nel sistema AFF A70 o AFF A90 è danneggiato, è possibile avviare l'immagine di ripristino da un'unità USB, ripristinare la configurazione dal nodo partner e verificare le variabili di ambiente.
+Se il supporto di avvio nel sistema AFF A70 o AFF A90 è danneggiato, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
 
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
@@ -67,3 +67,6 @@ Una volta completata la procedura di ripristino, questo messaggio viene visualiz
 *NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
 
 
+
+.Quali sono le prossime novità?
+Dopo aver avviato l'immagine di ripristino, è necessario link:bootmedia-encryption-restore.html["ripristinare la crittografia sul supporto di avvio"].

@@ -14,7 +14,7 @@ summary: È necessario eseguire nuovamente il riavvio dello storage del controll
 ====
 .Nessuna crittografia
 --
-Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione
+Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione.
 
 .Fasi
 . Dal prompt DI Loader, immettere `boot_ontap`.
@@ -39,14 +39,14 @@ Riportare il controller danneggiato al normale funzionamento restituendo il rela
 
 
 --
-.Crittografia integrata (OKM)
+.Crittografia OKM
 --
 Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
 
 .Fasi
 . Dal prompt DEL CARICATORE, immettere:
 +
-`boot_ontap maint`.
+`boot_ontap maint`
 
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
 . Immettere la passphrase OKM. È possibile ottenere questa passphrase dal cliente oppure contattare https://support.netapp.com["Supporto NetApp"].
@@ -99,7 +99,7 @@ Se la colonna _restarted_ mostra qualcosa tranne _true_, contattare https://supp
 
 
 --
-.Gestore chiavi esterno (EKM)
+.Crittografia EKM
 --
 Reimpostare la crittografia e riportare il controller al normale funzionamento.
 
@@ -145,14 +145,7 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 +
 `storage failover show`.
 
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata:
-+
-`set -privilege advanced` e poi `run local partner savecore`.
-
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
-+
-`storage failover giveback -ofnode _impaired_node_name_`.
-
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
 . Se il giveback automatico è stato disattivato, riabilitarlo:
 +
 `storage failover modify -node local -auto-giveback true`.

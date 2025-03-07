@@ -29,7 +29,10 @@ Reimpostare la crittografia se abilitata e riportare il controller al normale fu
 --
 .Crittografia integrata (OKM)
 --
-. Dal prompt DI Loader, immettere `boot_ontap maint`.
+. Dal prompt DEL CARICATORE, immettere:
++
+`boot_ontap maint`
+
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
 . Immettere la passphrase OKM. È possibile ottenere questa passphrase dal cliente oppure contattare https://support.netapp.com["Supporto NetApp"].
 +
@@ -101,7 +104,6 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 
 . Una volta che il sistema è stato elaborato, viene visualizzato il menu di avvio. Selezionare '1' per l'avvio normale.
 . Controllare lo stato dell'acquisizione: `storage failover show`.
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata" `set -privilege advanced` e quindi `run local partner savecore`.
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
 . Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
 . Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.

@@ -1,21 +1,24 @@
 ---
 permalink: a70-90/nvram-replace.html 
 sidebar: sidebar 
-keywords: aff a70, aff a90, replace an nvdimm 
-summary: 'Il modulo NVRAM è composto da NVRAM12 e DIMM e fino a due moduli NVMe SSD Flash cache (FlashCache o moduli di caching) per modulo NVRAM.' 
+keywords: aff a70, aff a90, replace an nvram 
+summary: Sostituire il NVRAM nel sistema AFF A70 o AFF A90 quando la memoria non volatile si guasta o richiede un aggiornamento. 
 ---
-= Sostituire NVRAM - AFF A70 e AFF A90
+= Sostituire il modulo NVRAM - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, è necessario rimuovere il modulo dallo chassis, spostare i moduli DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nello chassis.
+Sostituire il NVRAM nel sistema AFF A70 o AFF A90 quando la memoria non volatile si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sostituzione del modulo NVRAM o del modulo DIMM NVRAM, la riassegnazione dei dischi e la restituzione del componente guasto a NetApp.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://support.netapp.com["Supporto NetApp"].
+Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+.Prima di iniziare
+* Assicurarsi di avere a disposizione il pezzo di ricambio. È necessario sostituire il componente guasto con un componente sostitutivo ricevuto dal provider.
+* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare https://support.netapp.com["Supporto NetApp"].
+
 
 
 
@@ -204,9 +207,9 @@ NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
 
 
 
-== Fase 3: Sostituire un DIMM NVRAM
+== Fase 3: Sostituire i DIMM NVRAM
 
-Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
+Per sostituire i moduli DIMM NVRAM nel modulo NVRAM, è necessario rimuovere prima il modulo NVRAM e poi sostituire il modulo DIMM di destinazione.
 
 . Nella parte anteriore dello chassis, premere con decisione ciascun disco fino a quando non si avverte un arresto positivo. In questo modo, i dischi sono posizionati saldamente sulla scheda intermedia dello chassis.
 +

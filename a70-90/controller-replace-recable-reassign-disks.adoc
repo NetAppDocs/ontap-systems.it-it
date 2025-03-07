@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, how to recable the system, reboot the system 
-summary: Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF A70 o AFF A90 possa riprendere il normale funzionamento. 
+summary: RRestituisci il controllo delle risorse storage al controller sostitutivo per riprendere il normale funzionamento del sistema AFF A70 o AFF A90. 
 ---
 = Restituire il controller - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Ripristina il controllo delle risorse di storage sul controller sostitu
 
 
 [role="lead"]
-Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF A70 o AFF A90 possa riprendere il normale funzionamento.
+Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF A70 o AFF A90 possa riprendere il normale funzionamento. La procedura di give back varia in base al tipo di crittografia utilizzato dal sistema: Nessuna crittografia, crittografia OKM (Onboard Key Manager) o EKM (External Key Manager).
 
 [role="tabbed-block"]
 ====
 .Nessuna crittografia
 --
-Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione
+Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione.
 
 .Fasi
 . Dal prompt DI Loader, immettere `boot_ontap`.
@@ -42,14 +42,14 @@ Riportare il controller danneggiato al normale funzionamento restituendo il rela
 
 
 --
-.Crittografia integrata (OKM)
+.Crittografia OKM
 --
 Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
 
 .Fasi
 . Dal prompt DEL CARICATORE, immettere:
 +
-`boot_ontap maint`.
+`boot_ontap maint`
 
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
 . Immettere la passphrase OKM. È possibile ottenere questa passphrase dal cliente oppure contattare https://support.netapp.com["Supporto NetApp"].
@@ -102,7 +102,7 @@ Se la colonna _restarted_ mostra qualcosa tranne _true_, contattare https://supp
 
 
 --
-.Gestore chiavi esterno (EKM)
+.Crittografia EKM
 --
 Reimpostare la crittografia e riportare il controller al normale funzionamento.
 
@@ -148,14 +148,7 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 +
 `storage failover show`.
 
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata:
-+
-`set -privilege advanced` e poi `run local partner savecore`.
-
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
-+
-`storage failover giveback -ofnode _impaired_node_name_`.
-
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
 . Se il giveback automatico è stato disattivato, riabilitarlo:
 +
 `storage failover modify -node local -auto-giveback true`.
@@ -168,3 +161,5 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver ritrasferito la proprietà delle risorse di storage al controller sostitutivo, occorre seguire link:controller-replace-restore-system-rma.html["completare la sostituzione della centralina"] la procedura.

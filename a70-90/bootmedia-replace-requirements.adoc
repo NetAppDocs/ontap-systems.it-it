@@ -2,16 +2,16 @@
 permalink: a70-90/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, a90, replace the boot media 
-summary: Prima di sostituire il supporto di avvio nel sistema AFF A70 o AFF A90, assicurarsi di disporre del dispositivo di avvio sostitutivo corretto, di accedere al firmware di sistema e al software ONTAP e di un backup dei dati di configurazione essenziali. 
+summary: 'Prima di sostituire il supporto di avvio nel sistema AFF A70 o AFF A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò comprende la verifica della corretta periferica di avvio sostitutiva, l"accesso al firmware di sistema e al software ONTAP e un backup dei dati di configurazione essenziali.' 
 ---
-= Requisiti di sostituzione dei supporti di avvio - AFF A70 e AFF A90
+= Requisiti per sostituire i supporti di avvio: AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di sostituire il supporto di avvio nel sistema AFF A70 o AFF A90, assicurarsi di disporre del dispositivo di avvio sostitutivo corretto, di accedere al firmware di sistema e al software ONTAP e di un backup dei dati di configurazione essenziali.
+Prima di sostituire il supporto di avvio nel sistema AFF A70 o AFF A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò comprende la verifica della corretta periferica di avvio sostitutiva, l'accesso al firmware di sistema e al software ONTAP e un backup dei dati di configurazione essenziali.
 
 Esaminare i seguenti requisiti.
 
@@ -25,3 +25,6 @@ Esaminare i seguenti requisiti.
 
 
 
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessario link:bootmedia-encryption-preshutdown-checks.html["controllare il supporto e lo stato della chiave di crittografia sul supporto di avvio"].

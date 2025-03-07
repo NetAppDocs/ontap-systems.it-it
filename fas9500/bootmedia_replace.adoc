@@ -175,31 +175,6 @@ Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzion
 .. Confermare le modifiche utilizzando `printenv variable-name` comando.
 
 
-. Impostare il tipo di connessione di rete al prompt DEL CARICATORE:
-+
-** Se si sta configurando DHCP: `ifconfig e0a -auto`
-+
-
-NOTE: La porta di destinazione configurata è la porta di destinazione utilizzata per comunicare con il nodo compromesso dal nodo integro durante il ripristino del file system var con una connessione di rete. È anche possibile utilizzare la porta e0M in questo comando.
-
-** Se si configurano connessioni manuali: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
-+
-*** Filer_addr è l'indirizzo IP del sistema di storage.
-*** Netmask è la maschera di rete della rete di gestione connessa al partner ha.
-*** gateway è il gateway per la rete.
-*** dns_addr è l'indirizzo IP di un name server sulla rete.
-*** dns_domain è il nome di dominio DNS (Domain Name System).
-+
-Se si utilizza questo parametro opzionale, non è necessario un nome di dominio completo nell'URL del server netboot. È necessario solo il nome host del server.
-
-
-
-
-
-+
-
-NOTE: Potrebbero essere necessari altri parametri per l'interfaccia. Per ulteriori informazioni, immettere help ifconfig al prompt del firmware.
-
 . Se il controller si trova in un MetroCluster esteso o collegato al fabric, è necessario ripristinare la configurazione dell'adattatore FC:
 +
 .. Avvio in modalità di manutenzione: `boot_ontap maint`

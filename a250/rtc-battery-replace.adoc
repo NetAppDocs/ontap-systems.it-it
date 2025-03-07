@@ -219,22 +219,19 @@ Non inserire completamente il modulo controller nel telaio fino a quando non vie
 +
 Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
 
-. Se gli alimentatori sono stati scollegati, ricollegarli e reinstallare i fermi dei cavi di alimentazione.
 . Inserire il modulo controller nel telaio:
 +
 .. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
 .. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
 .. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
 .. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
-.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione. + il modulo controller deve essere completamente inserito e allineato con i bordi del telaio.
+.. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
 +
-Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
+Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimentazione. Prepararsi ad interrompere il processo di avvio.
 
 .. Arrestare il controller al prompt DEL CARICATORE.
 
-
-+
-Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
 
 . Ripristinare l'ora e la data sul controller:
 +

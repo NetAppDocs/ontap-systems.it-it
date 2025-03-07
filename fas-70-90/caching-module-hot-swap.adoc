@@ -1,34 +1,34 @@
 ---
 permalink: fas-70-90/caching-module-hot-swap.html 
 sidebar: sidebar 
-keywords: fas70, fas90, hot swap, replace, FlashCache module carrier, caching module, FlashCache 
-summary: 'La portante del modulo NVMe SSD FlashCache contiene uno o due moduli FlashCache (moduli di caching) con un singolo disco SSD per il caching integrato in ogni modulo. È possibile sostituire a caldo i moduli di caching, ma il supporto del modulo FlashCache non è sostituibile a caldo.' 
+keywords: fas70, fas90, hot swap, replace, Flash Cache module carrier, caching module, Flash Cache 
+summary: 'La portante del modulo SSD Flash cache NVMe contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco di caching SSD integrato in ciascun modulo di caching. È possibile sostituire a caldo i moduli di caching, ma il supporto del modulo Flash cache non è sostituibile a caldo.' 
 ---
-= Sostituire il supporto del modulo FlashCache o un modulo di caching FAS70 e FAS90
+= Sostituire il supporto del modulo Flash cache o un modulo di caching - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La portante del modulo NVMe SSD FlashCache contiene uno o due moduli FlashCache (moduli di caching) con un singolo disco SSD FlashCache integrato in ogni modulo.
+La portante del modulo SSD Flash cache NVMe contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco Flash cache SSD integrato in ciascun modulo di caching.
 
-Il sistema FAS70 supporta moduli di caching 2TB mentre FAS90 supporta moduli di caching 4TB. Non è possibile combinare moduli di caching di capacità diverse nel supporto del modulo FlashCache.
+Il sistema FAS70 supporta moduli di caching 2TB mentre FAS90 supporta moduli di caching 4TB. Non è possibile combinare moduli di caching di capacità diversa nel portante del modulo Flash cache.
 
-È possibile eseguire una delle seguenti procedure a seconda di ciò che deve essere sostituito: L'intero supporto del modulo Flashcache o un modulo di caching.
+A seconda di ciò che occorre sostituire, è possibile eseguire una delle seguenti procedure: L'intero supporto del modulo Flash cache o un modulo di caching.
 
-* <<Sostituire il supporto del modulo FlashCache>>
+* <<Sostituire il supporto del modulo Flash cache>>
 * <<Sostituire il modulo di caching>>
 
 
 
 
-== Sostituire il supporto del modulo FlashCache
+== Sostituire il supporto del modulo Flash cache
 
-La portante del modulo FlashCache è situata nello slot 6 e ospita fino a due moduli FlashCache. Non è possibile sostituire a caldo il supporto del modulo FlashCache
+La portante del modulo Flash cache è situata nello slot 6 e ospita fino a due moduli Flash cache. Non è possibile sostituire a caldo il supporto del modulo Flash cache
 
 .Prima di iniziare
-* Assicurati che il tuo sistema storage disponga del sistema operativo appropriato per il supporto del modulo FlashCache sostitutivo.
+* Assicurati che il tuo sistema storage disponga del sistema operativo appropriato per il supporto del modulo Flash cache sostitutivo.
 * Verificare che tutti gli altri componenti funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
 
 
@@ -136,15 +136,15 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
-=== Fase 2: Sostituire il supporto del modulo FlashCache
+=== Fase 2: Sostituire il supporto del modulo Flash cache
 
-Per sostituire il supporto del modulo FlashCache, procedere come segue.
+Per sostituire il supporto del modulo Flash cache, procedere come segue.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Individuare il supporto del modulo FlashCache guasto, nello slot 6, accanto al LED di attenzione ambra illuminato sulla parte anteriore del supporto del modulo FlashCache.
+. Individuare il supporto del modulo Flash cache guasto, nello slot 6, accanto al LED ambra illuminato di attenzione sulla parte anteriore del supporto del modulo Flash cache.
 +
-image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[Rimuovere il supporto del modulo FlashCache]
+image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[Rimuovere il supporto del modulo Flash cache]
 
 +
 [cols="1,4"]
@@ -154,7 +154,7 @@ image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[Rimuov
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
  a| 
-Supporto modulo FlashCache
+Portante del modulo Flash cache
 
 
 
@@ -168,33 +168,33 @@ Memorizzazione nella cache dei numeri degli slot del modulo
  a| 
 image:../media/icon_round_3.png["Numero di didascalia 3"]
  a| 
-Maniglia della camma portante del modulo FlashCache
+Maniglia della camma portante del modulo Flash cache
 
 
 
  a| 
 image:../media/icon_round_4.png["Numero di didascalia 4"]
  a| 
-LED di guasto del supporto del modulo FlashCache
+LED guasto portante modulo Flash cache
 
 |===
-. Rimuovere il supporto del modulo FlashCache guasto:
+. Rimuovere il supporto del modulo Flash cache guasto:
 +
 .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
-.. Pizzicare la linguetta blu nella parte inferiore del supporto del modulo FlashCache.
+.. Pizzica la linguetta blu nella parte inferiore del supporto del modulo Flash cache.
 .. Ruotare la linguetta allontanandola dal modulo.
 
 
-. Estrarre il supporto del modulo FlashCache dal modulo controller e posizionarlo su un tappetino antistatico.
-. Spostare i moduli di caching nel supporto sostitutivo per il modulo FlashCache:
+. Estrarre il supporto del modulo Flash cache dal modulo controller e appoggiarlo su un tappetino antistatico.
+. Spostare i moduli di caching nel supporto sostitutivo per il modulo Flash cache:
 +
 .. Premere la linguetta di color terracotta nella parte superiore del modulo di caching e ruotare la maniglia della camma allontanandola dal modulo di caching.
-.. Rimuovere il modulo dal contenitore agganciando il dito all'apertura della leva della camma ed estraendolo dal supporto del modulo FlashCache.
-.. Installare il modulo di caching nello stesso slot del supporto del modulo FlashCache sostitutivo e ruotare la maniglia della camma in posizione chiusa sul modulo di caching per bloccarlo in posizione.
+.. Rimuovere il modulo dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal supporto del modulo Flash cache.
+.. Installare il modulo di caching nello stesso slot del supporto del modulo Flash cache sostitutivo e ruotare la maniglia della camma in posizione chiusa sul modulo di caching per bloccarlo in posizione.
 
 
 . Ripetere questi passaggi se è presente un secondo modulo di caching.
-. Installare il supporto del modulo FlashCache sostitutivo nel sistema:
+. Installare il supporto del modulo Flash cache sostitutivo nel sistema:
 +
 .. Allineare il modulo con i bordi dell'apertura dello slot del contenitore.
 .. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
@@ -207,7 +207,7 @@ LED di guasto del supporto del modulo FlashCache
 
 === Fase 3: Riavviare il controller
 
-Dopo aver sostituito il supporto del modulo FlashCache, è necessario riavviare il modulo controller.
+Dopo aver sostituito il supporto del modulo Flash cache, è necessario riavviare il modulo controller.
 
 .Fasi
 . Dal prompt del CARICATORE, riavviare il nodo: _Bye_
@@ -230,7 +230,7 @@ Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite
 == Sostituire il modulo di caching
 
 .Prima di iniziare
-I moduli FlashCache (moduli di caching) si trovano nello slot 6-1, nello slot 6-2 o sia nello slot 6-1 che nello slot 6-2.
+I moduli Flash cache (moduli di caching) sono collocati nello slot 6-1 o nello slot 6-2 o sia nello slot 6-1 che nello slot 6-2.
 
 È possibile sostituire a caldo i singoli moduli di caching con moduli di caching della stessa capacità dello stesso fornitore o di un altro fornitore supportato.
 
@@ -292,9 +292,9 @@ LED di guasto del modulo di caching
 .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
 .. Premere il pulsante di rilascio della terracotta sulla parte anteriore del modulo di caching.
 .. Ruotare la maniglia della camma fino in fondo.
-.. Rimuovere il modulo di caching dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal supporto del modulo FlashCache.
+.. Rimuovere il modulo di caching dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal supporto del modulo Flash cache.
 +
-Assicurati di supportare il modulo di caching quando lo rimuovi dal supporto del modulo FlashCache.
+Assicurati di supportare il modulo caching quando lo rimuovi dal supporto del modulo Flash cache.
 
 
 

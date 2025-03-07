@@ -13,16 +13,7 @@ summary: 'Se si dispone di un sistema in cui gli shelf di dischi NS224 devono es
 [role="lead"]
 Se si dispone di un sistema in cui gli shelf di dischi NS224 devono essere cablati come storage collegato allo switch (non come storage collegato direttamente), utilizzare le informazioni fornite.
 
-* Cablare gli shelf di dischi NS224 attraverso gli switch di storage:
-+
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2876580["NS224 NVMe Drive Shelf Cabining Guide"^]
-
-* Installare gli switch storage:
-+
-https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentazione switch AFF e FAS"^]
-
-* Verificare l'hardware supportato, ad esempio switch e cavi storage, per il modello di piattaforma in uso:
-+
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
+* Per collegare gli shelf di dischi NS224 attraverso switch di storage, fare riferimento alla https://hwu.netapp.com["NetApp Hardware Universe"^] per ulteriori informazioni. Per i modelli hardware meno recenti, le informazioni sul cablaggio degli interruttori sono disponibili anche nella https://library.netapp.com/ecm/ecm_download_file/ECMLP2876580["NS224 NVMe Drive Shelf Cabining Guide"^] .
+* Per installare gli switch di archiviazione, fare riferimento alla https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentazione switch AFF e FAS"^].
+* Per verificare l'hardware supportato per il modello di piattaforma in uso, ad esempio switch di archiviazione e cavi, fare riferimento alla https://hwu.netapp.com["NetApp Hardware Universe"^] .
 

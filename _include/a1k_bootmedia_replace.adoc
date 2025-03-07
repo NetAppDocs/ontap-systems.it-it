@@ -121,24 +121,4 @@ Il controller inizia ad avviarsi non appena l'alimentazione viene ricollegata al
 +
 Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
 
-. Impostare il tipo di connessione di rete al prompt DEL CARICATORE:
-+
-** Se si sta configurando DHCP: `ifconfig e0M -auto`
-+
-
-NOTE: La porta di destinazione configurata è la porta di destinazione utilizzata per comunicare con il controller compromesso dal controller integro durante il ripristino del file system var con una connessione di rete. È anche possibile utilizzare la porta e0M in questo comando.
-
-** Se si configurano connessioni manuali: `ifconfig e0M -addr=filer_addr -mask=netmask -gw=gateway`
-+
-*** Filer_addr è l'indirizzo IP del sistema di storage.
-*** Netmask è la maschera di rete della rete di gestione connessa al partner ha.
-*** gateway è il gateway per la rete.
-
-
-
-
-+
-
-NOTE: Potrebbero essere necessari altri parametri per l'interfaccia. Per ulteriori informazioni, immettere help ifconfig al prompt del firmware.
-
 

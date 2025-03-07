@@ -2,7 +2,7 @@
 permalink: c80/nvram-replace.html 
 sidebar: sidebar 
 keywords: c80, replace an nvdimm 
-summary: 'Il modulo NVRAM è composto da NVRAM12 e DIMM e fino a due moduli NVMe SSD Flash cache (FlashCache o moduli di caching) per modulo NVRAM.' 
+summary: 'Il modulo NVRAM è costituito da NVRAM12 GB e DIMM e fino a due moduli Flash cache SSD NVMe (moduli Flash cache o di caching) per modulo NVRAM.' 
 ---
 = Sostituire il modulo NVRAM - AFF C80
 :allow-uri-read: 
@@ -11,11 +11,12 @@ summary: 'Il modulo NVRAM è composto da NVRAM12 e DIMM e fino a due moduli NVMe
 
 
 [role="lead"]
-Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, è necessario rimuovere il modulo dallo chassis, spostare i moduli DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nello chassis.
+Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://support.netapp.com["Supporto NetApp"].
+.Prima di iniziare
+* Assicurarsi di avere a disposizione il pezzo di ricambio. È necessario sostituire il componente guasto con un componente sostitutivo ricevuto dal provider.
+* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare https://support.netapp.com["Supporto NetApp"].
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
 
 
@@ -204,9 +205,9 @@ NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
 
 
 
-== Fase 3: Sostituire un DIMM NVRAM
+== Fase 3: Sostituire i DIMM NVRAM
 
-Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
+Per sostituire i moduli DIMM NVRAM nel modulo NVRAM, è necessario rimuovere prima il modulo NVRAM e poi sostituire il modulo DIMM di destinazione.
 
 . Nella parte anteriore dello chassis, premere con decisione ciascun disco fino a quando non si avverte un arresto positivo. In questo modo, i dischi sono posizionati saldamente sulla scheda intermedia dello chassis.
 +

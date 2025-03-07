@@ -6,8 +6,9 @@ Esaminare i requisiti per la sostituzione del modulo controller.
 
 * Tutti gli shelf di dischi devono funzionare correttamente.
 * Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
-* Se il sistema si trova in una configurazione MetroCluster, consultare la sezione https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Scelta della procedura di ripristino corretta"] per determinare se utilizzare questa procedura.
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* Non utilizzare questa procedura per gli upgrade dei controller, ma fare riferimento a https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Scegliere la procedura di aggiornamento dell'hardware del controller"] per le relative indicazioni.
+* Se il sistema è in una configurazione MetroCluster, è necessario verificare se è https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Scelta della procedura di ripristino corretta"] necessario utilizzare questa procedura.
+* È necessario sostituire il componente guasto con l'unità FRU (Field-Replaceable Unit) ricevuta da NetApp.
 * È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
 * Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
 * Poiché il dispositivo di avvio si trova nel modulo di gestione del sistema installato sul retro del sistema, non è necessario spostare il dispositivo di avvio quando si sostituisce un modulo controller.

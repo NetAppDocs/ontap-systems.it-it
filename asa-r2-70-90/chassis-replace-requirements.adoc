@@ -22,7 +22,7 @@ Prima di sostituire il telaio, verificare i seguenti requisiti.
 * Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
 * È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.
 * La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, i dischi NVMe e i moduli controller vengano spostati nel nuovo chassis e che lo chassis di ricambio sia un nuovo componente di NetApp.
-* *La procedura di sostituzione del telaio non funziona.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* La procedura di sostituzione dello chassis provoca interruzioni. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
 
 
 .Quali sono le prossime novità?
