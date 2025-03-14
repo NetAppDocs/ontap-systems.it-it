@@ -2,16 +2,16 @@
 permalink: asa-r2-a1k/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+summary: Arrestare il controller del sistema di storage ASA A1K quando è necessario sostituire il supporto di avvio. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema. 
 ---
-= Spegnere il controller danneggiato - ASA A1K
+= Spegnere il controller per sostituire il supporto di avvio - ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Spegnere o sostituire il controller danneggiato in modo da poter eseguire la manutenzione sul supporto di avvio.
+Arrestare il controller del sistema di storage ASA A1K quando è necessario sostituire il supporto di avvio. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

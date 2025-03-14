@@ -11,9 +11,7 @@ summary: 'Se il supporto di avvio nel sistema AFF C80 è danneggiato, è possibi
 
 
 [role="lead"]
-Se il supporto di avvio nel sistema AFF C80 è danneggiato, è possibile avviare l'immagine di ripristino da un'unità USB, ripristinare la configurazione dal nodo partner e verificare le variabili di ambiente.
-
-È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
+Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema AFF C80, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
 
 .Fasi
 . Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
@@ -67,3 +65,6 @@ Una volta completata la procedura di ripristino, questo messaggio viene visualiz
 *NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
 
 
+
+.Quali sono le prossime novità?
+Dopo aver avviato l'immagine di ripristino, è necessario link:bootmedia-encryption-restore.html["ripristinare la crittografia sul supporto di avvio"].

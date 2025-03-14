@@ -2,23 +2,31 @@
 permalink: asa-r2-a1k/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, boot the recovery image 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+summary: 'Ripristinare l"immagine ONTAP sul supporto di avvio sostitutivo del sistema ASA A1K. Il processo prevede l"avvio del processo di ripristino dal prompt di Loader e il monitoraggio del processo di ripristino fino al completamento e al riavvio del nodo.' 
 ---
-= Ripristino automatico dell'avvio - ASA A1K
+= Ripristinare l'immagine sul supporto di avvio - ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Dopo aver sostituito fisicamente il supporto di avvio danneggiato, ripristinare l'immagine ONTAP dal nodo partner.
+Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A1K, è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.
+
+Durante il processo di ripristino, il sistema controlla se la crittografia è attivata e determina il tipo di crittografia della chiave in uso. Se la crittografia della chiave è attivata, il sistema guida l'utente attraverso le procedure appropriate per ripristinarla.
 
 .Prima di iniziare
 * Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
 +
 ** È possibile chiedere al cliente o all'amministratore di sistema se OKM o EKM sono abilitati.
-** Per verificare se OKM è abilitato, è possibile utilizzare `security key-manager onboard show` .
-** Per verificare se EKM è abilitato, è possibile utilizzare `security key-manager external show` .
+** Per verificare se OKM è abilitato, utilizzare il seguente comando:
++
+`security key-manager onboard show`
+
+** Per verificare se EKM è abilitato, utilizzare il seguente comando:
++
+`security key-manager external show`
+
 
 
 * Per OKM, è necessario il contenuto del file della passphrase OKM.

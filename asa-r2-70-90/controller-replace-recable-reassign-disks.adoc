@@ -2,13 +2,16 @@
 permalink: asa-r2-70-90/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, how to recable the system, boot the system 
-summary: È necessario eseguire nuovamente il riavvio dello storage del controller. 
+summary: Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema ASA A70 o ASA A90 possa riprendere il normale funzionamento. 
 ---
 = Restituire il controller - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema ASA A70 o ASA A90 possa riprendere il normale funzionamento. La procedura di give back varia in base al tipo di crittografia utilizzato dal sistema: Nessuna crittografia, crittografia OKM (Onboard Key Manager) o EKM (External Key Manager).
 
 [role="tabbed-block"]
 ====

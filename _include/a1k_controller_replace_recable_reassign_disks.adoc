@@ -1,19 +1,14 @@
-= Restituire il controller
+= 
 :allow-uri-read: 
 
-
-Verificare le connessioni di storage e di rete, quindi restituire il controller.
-
-
-
-== Restituire il controller
-
-Reimpostare la crittografia se abilitata e riportare il controller al normale funzionamento.
 
 [role="tabbed-block"]
 ====
 .Nessuna crittografia
 --
+Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione.
+
+.Fasi
 . Dal prompt DI Loader, immettere `boot_ontap`.
 . Premere <enter> quando i messaggi della console si interrompono.
 +
@@ -27,8 +22,11 @@ Reimpostare la crittografia se abilitata e riportare il controller al normale fu
 
 
 --
-.Crittografia integrata (OKM)
+.Crittografia OKM
 --
+Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
+
+.Fasi
 . Dal prompt DEL CARICATORE, immettere:
 +
 `boot_ontap maint`
@@ -64,8 +62,11 @@ Se la colonna _restarted_ mostra qualcosa tranne _true_, contattare https://supp
 
 
 --
-.Gestore chiavi esterno (EKM)
+.Crittografia EKM
 --
+Reimpostare la crittografia e riportare il controller al normale funzionamento.
+
+.Fasi
 . Se il volume root è crittografato con External Key Manager e il cavo console è collegato al nodo sostitutivo, immettere `boot_ontap menu` e selezionare opzione `11`.
 . Rispondere `y` o `n` alle seguenti domande:
 +

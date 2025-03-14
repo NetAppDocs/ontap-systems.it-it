@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the boot media 
-summary: Il supporto di avvio del sistema AFF C80 memorizza i dati di configurazione e il firmware essenziali. Se il supporto di avvio non funziona, è necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema, rimuovere il supporto di avvio danneggiato e sostituire il supporto di avvio nel modulo di gestione del sistema. 
+summary: Il supporto di avvio del sistema AFF C80 memorizza i dati di configurazione e il firmware essenziali. Se il supporto di avvio non funziona, è necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema. 
 ---
 = Sostituire il supporto di avvio - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Il supporto di avvio del sistema AFF C80 memorizza i dati di configuraz
 
 
 [role="lead"]
-Il supporto di avvio del sistema AFF C80 memorizza i dati di configurazione e il firmware essenziali. Se il supporto di avvio non funziona, è necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema, rimuovere il supporto di avvio danneggiato e sostituire il supporto di avvio nel modulo di gestione del sistema.
+Il supporto di avvio del sistema AFF C80 memorizza i dati di configurazione e il firmware essenziali. Se il supporto di avvio non funziona, è necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
 
 
 
@@ -137,3 +137,6 @@ Il controller inizia ad avviarsi non appena l'alimentazione viene ricollegata al
 Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il supporto di avvio, è necessario link:bootmedia-recovery-image-boot.html["avviare l'immagine di ripristino"].

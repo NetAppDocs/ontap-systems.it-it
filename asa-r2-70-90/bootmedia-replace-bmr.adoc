@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace the boot media 
-summary: È possibile individuare il supporto di avvio non riuscito rimuovendo il modulo di gestione del sistema prima di sostituire il supporto di avvio. 
+summary: 'Il supporto di avvio del sistema ASA A70 o ASA A90 memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l"installazione dei supporti di avvio sostitutivi nel modulo di gestione del sistema, quindi la reinstallazione del modulo di gestione del sistema.' 
 ---
 = Sostituire i supporti di avvio - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: È possibile individuare il supporto di avvio non riuscito rimuovendo i
 
 
 [role="lead"]
-Sostituire il supporto di avvio rimuovendo il modulo di gestione del sistema dal retro del sistema, rimuovendo il supporto di avvio danneggiato, installando il supporto di avvio sostitutivo nel modulo di gestione del sistema, quindi reinstallando il modulo di gestione del sistema.
+Il supporto di avvio del sistema ASA A70 o ASA A90 memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi nel modulo di gestione del sistema, quindi la reinstallazione del modulo di gestione del sistema.
 
-.Fasi
 Il supporto di avvio si trova all'interno del modulo di gestione del sistema ed è accessibile rimuovendo il modulo dal sistema.
 
+.Fasi
 . Nella parte anteriore dello chassis, premere con decisione ciascun disco fino a quando non si avverte un arresto positivo. In questo modo, i dischi sono posizionati saldamente sulla scheda intermedia dello chassis.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Disco drw a800 installato IEOPS 960]

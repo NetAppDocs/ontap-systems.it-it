@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, boot the recovery image 
 summary: 'È possibile ripristinare l"immagine sul supporto di avvio dal controller partner tramite il processo di ripristino dell"avvio automatico.' 
 ---
-= Ripristinare l'immagine ONTAP: AFF A20, AFF A30 e AFF A50
+= Ripristinare l'immagine ONTAP: ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,8 +15,14 @@ summary: 'È possibile ripristinare l"immagine sul supporto di avvio dal control
 * Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
 +
 ** È possibile chiedere al cliente o all'amministratore di sistema se OKM o EKM sono abilitati.
-** Per verificare se OKM è abilitato, è possibile utilizzare `security key-manager onboard show` .
-** Per verificare se EKM è abilitato, è possibile utilizzare `security key-manager external show` .
+** Per verificare se OKM è abilitato, utilizzare il seguente comando:
++
+`security key-manager onboard show`
+
+** Per verificare se EKM è abilitato, utilizzare il seguente comando:
++
+`security key-manager external show`
+
 
 
 * Per OKM, è necessario il contenuto del file della passphrase OKM.

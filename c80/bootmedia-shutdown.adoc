@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: c80, shut down the controller 
 summary: Arresta il controller nel sistema storage AFF C80 quando non funziona correttamente. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema. 
 ---
-= Spegnimento del controller con problemi - AFF C80
+= Spegnere il controller per sostituire il supporto di avvio - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Arresta il controller nel sistema storage AFF C80 quando non funziona correttamente. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
+Arrestare il controller del sistema di storage AFF C80 quando è necessario sostituire il supporto di avvio. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
 
 [role="tabbed-block"]
 ====
@@ -116,3 +116,5 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:bootmedia-replace.html["sostituire il supporto di avvio"].

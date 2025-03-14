@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, how to recable the system, how to reassign disks 
-summary: Riavviare il sistema. 
+summary: Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema ASA A1K possa riprendere il normale funzionamento. 
 ---
 = Restituire il controller - ASA A1K
 :allow-uri-read: 
@@ -11,18 +11,15 @@ summary: Riavviare il sistema.
 
 
 [role="lead"]
-Verificare le connessioni di storage e di rete, quindi restituire il controller.
-
-
-
-== Restituire il controller
-
-Reimpostare la crittografia se abilitata e riportare il controller al normale funzionamento.
+Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema ASA A1K possa riprendere il normale funzionamento. La procedura di give back varia in base al tipo di crittografia utilizzato dal sistema: Nessuna crittografia, crittografia OKM (Onboard Key Manager) o EKM (External Key Manager).
 
 [role="tabbed-block"]
 ====
 .Nessuna crittografia
 --
+Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione.
+
+.Fasi
 . Dal prompt DI Loader, immettere `boot_ontap`.
 . Premere <enter> quando i messaggi della console si interrompono.
 +
@@ -36,8 +33,11 @@ Reimpostare la crittografia se abilitata e riportare il controller al normale fu
 
 
 --
-.Crittografia integrata (OKM)
+.Crittografia OKM
 --
+Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
+
+.Fasi
 . Dal prompt DEL CARICATORE, immettere:
 +
 `boot_ontap maint`
@@ -73,8 +73,11 @@ Se la colonna _restarted_ mostra qualcosa tranne _true_, contattare https://supp
 
 
 --
-.Gestore chiavi esterno (EKM)
+.Crittografia EKM
 --
+Reimpostare la crittografia e riportare il controller al normale funzionamento.
+
+.Fasi
 . Se il volume root è crittografato con External Key Manager e il cavo console è collegato al nodo sostitutivo, immettere `boot_ontap menu` e selezionare opzione `11`.
 . Rispondere `y` o `n` alle seguenti domande:
 +
@@ -120,3 +123,5 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver ritrasferito la proprietà delle risorse di storage al controller sostitutivo, occorre seguire link:controller-replace-restore-system-rma.html["completare la sostituzione della centralina"] la procedura.

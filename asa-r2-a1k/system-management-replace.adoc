@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/system-management-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace the system manager module 
-summary: È necessario sostituire . 
+summary: 'Sostituire il modulo di gestione del sistema nel sistema ASA A1K se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l"arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l"aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.' 
 ---
 = Sostituire il modulo di gestione del sistema - ASA A1K
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: È necessario sostituire .
 
 
 [role="lead"]
+Sostituire il modulo di gestione del sistema nel sistema ASA A1K se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.
+
 Il modulo System Management, situato nella parte posteriore del controller nello slot 8, contiene i componenti integrati per la gestione del sistema e le porte per la gestione esterna. Il controller di destinazione deve essere spento per sostituire un modulo di gestione del sistema danneggiato o il supporto di avvio.
 
 Il modulo di gestione del sistema è dotato dei seguenti componenti integrati:
@@ -28,18 +30,17 @@ Il modulo System Management contiene inoltre le seguenti porte per la gestione e
 * Ethernet a e0M RJ45 GB
 
 
-Per sostituire il modulo di gestione del sistema o o il supporto di avvio, è necessario arrestare il controller danneggiato.
-
 .Prima di iniziare
-* Questa procedura utilizza la seguente terminologia:
-+
-** Il controller compromesso è il controller su cui si esegue la manutenzione.
-** Il controller integro è il partner ha del controller compromesso.
-
-
 * Tutti gli altri componenti del sistema devono funzionare correttamente.
 * Il partner controller deve essere in grado di assumere il controllo dei controller danneggiati.
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+
+
+.A proposito di questa attività
+Questa procedura utilizza la seguente terminologia:
+
+* Il controller compromesso è il controller su cui si esegue la manutenzione.
+* Il controller integro è il partner ha del controller compromesso.
 
 
 

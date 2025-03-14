@@ -2,7 +2,7 @@
 permalink: a1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Per ripristinare il funzionamento completo del sistema, devi verificare le LIF, controllare lo stato di salute del cluster e restituire la parte guasta a NetApp. Contattare il supporto tecnico al https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"]numero , 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.' 
+summary: 'Verifica che le interfacce logiche (LIF) riportino la porta home, esegui un controllo dello stato di salute del cluster e restituisci il componente guasto a NetApp per completare l"ultimo passaggio della procedura di sostituzione del controller AFF A1K.' 
 ---
 = Sostituzione completa della centralina - AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Per ripristinare il funzionamento completo del sistema, devi verificar
 
 
 [role="lead"]
-Per ripristinare il funzionamento completo del sistema, devi verificare le LIF, controllare lo stato di salute del cluster e restituire la parte guasta a NetApp.
+Verifica che le interfacce logiche (LIF) riportino la porta home, esegui un controllo dello stato di salute del cluster e restituisci il componente guasto a NetApp per completare l'ultimo passaggio della procedura di sostituzione del controller AFF A1K.
 
 
 

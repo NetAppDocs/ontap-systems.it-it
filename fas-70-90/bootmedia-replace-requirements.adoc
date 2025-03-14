@@ -2,20 +2,22 @@
 permalink: fas-70-90/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the boot media 
-summary: Informazioni sui requisiti per la sostituzione dei supporti di avvio. 
+summary: 'Prima di sostituire il supporto di avvio nel sistema FAS70 o FAS90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un"unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.' 
 ---
-= Requisiti di sostituzione dei supporti di avvio - FAS70 e FAS90
+= Requisiti per sostituire i supporti di avvio - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
+Prima di sostituire il supporto di avvio nel sistema FAS70 o FAS90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un'unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.
+
+Esaminare i seguenti requisiti.
 
 * È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
 * È necessario copiare il `image_xxx.tgz` file nell'unità flash USB per utilizzarlo successivamente in questa procedura.
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto da NetApp.
+* È necessario sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
 * È importante applicare i comandi descritti di seguito al controller corretto:
 +
 ** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
@@ -23,3 +25,6 @@ Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
 
 
 
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessario link:bootmedia-encryption-preshutdown-checks.html["controllare il supporto e lo stato della chiave di crittografia sul supporto di avvio"].

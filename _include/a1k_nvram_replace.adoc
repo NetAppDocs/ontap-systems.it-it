@@ -2,11 +2,12 @@
 :allow-uri-read: 
 
 
-Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, è necessario rimuovere il modulo dal contenitore, spostare i moduli DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nel contenitore.
+Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://support.netapp.com["Supporto NetApp"].
+.Prima di iniziare
+* Assicurarsi di avere a disposizione il pezzo di ricambio. È necessario sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
+* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare https://support.netapp.com["Supporto NetApp"].
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
 
 
@@ -169,7 +170,7 @@ Linguette di bloccaggio DIMM
 
 
 
-== Fase 3: Sostituire un DIMM NVRAM
+== Passo 3: Sostituire il modulo DIMM NVRAM
 
 Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
 

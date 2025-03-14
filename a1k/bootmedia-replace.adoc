@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff a1k, replace the boot media 
-summary: Individuare il supporto di avvio guasto nel modulo controller rimuovendo il riser 3 sul modulo controller prima di sostituire il supporto di avvio. 
+summary: Il supporto di avvio del sistema AFF A1K memorizza i dati di configurazione e il firmware essenziali. Se il supporto di avvio non funziona, è necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema. 
 ---
 = Sostituire il supporto di avvio - AFF A1K
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Individuare il supporto di avvio guasto nel modulo controller rimuovend
 
 
 [role="lead"]
+Il supporto di avvio del sistema AFF A1K memorizza i dati di configurazione e il firmware essenziali. Se il supporto di avvio non funziona, è necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
+
 È necessario scollegare il modulo controller, rimuovere il modulo di gestione del sistema dal retro del sistema, rimuovere il supporto di avvio danneggiato e installare il supporto di avvio sostitutivo nel modulo di gestione del sistema.
 
 
@@ -131,3 +133,6 @@ Il controller inizia ad avviarsi non appena l'alimentazione viene ricollegata al
 Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il supporto di avvio, è necessario link:bootmedia-recovery-image-boot.html["avviare l'immagine di ripristino"].

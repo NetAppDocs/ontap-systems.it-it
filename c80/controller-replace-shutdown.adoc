@@ -13,6 +13,8 @@ summary: Arresta il controller nel sistema storage AFF C80 quando non funziona c
 [role="lead"]
 Arresta il controller nel sistema storage AFF C80 quando non funziona correttamente. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
 
+Arrestare il modulo controller utilizzando una delle seguenti opzioni.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: La maggior parte dei sistemi
@@ -116,3 +118,5 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:controller-replace-move-hardware.html["sostituire la centralina"].

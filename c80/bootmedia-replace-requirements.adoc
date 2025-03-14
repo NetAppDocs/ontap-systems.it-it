@@ -2,16 +2,16 @@
 permalink: c80/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff c80, replace the boot media 
-summary: 'Prima di sostituire il supporto di avvio nel sistema AFF C80, accertarsi di disporre del dispositivo di avvio sostitutivo corretto, dell"accesso al firmware di sistema e al software ONTAP e di un backup dei dati di configurazione essenziali.' 
+summary: 'Prima di sostituire il supporto di avvio nel sistema AFF C80, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un"unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.' 
 ---
-= Requisiti di sostituzione dei supporti di avvio - AFF C80
+= Requisiti per sostituire i supporti di avvio - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di sostituire il supporto di avvio nel sistema AFF C80, accertarsi di disporre del dispositivo di avvio sostitutivo corretto, dell'accesso al firmware di sistema e al software ONTAP e di un backup dei dati di configurazione essenziali.
+Prima di sostituire il supporto di avvio nel sistema AFF C80, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un'unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.
 
 Esaminare i seguenti requisiti.
 
@@ -25,3 +25,6 @@ Esaminare i seguenti requisiti.
 
 
 
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessario link:bootmedia-encryption-preshutdown-checks.html["controllare il supporto e lo stato della chiave di crittografia sul supporto di avvio"].

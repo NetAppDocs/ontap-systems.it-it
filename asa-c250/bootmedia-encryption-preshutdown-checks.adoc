@@ -11,7 +11,7 @@ summary: Prima di spegnere il controller compromesso e controllare lo stato dell
 
 
 [role="lead"]
-Prima di spegnere il controller danneggiato, verifica che la tua versione di ONTAP supporti la crittografia dei volumi NetApp (NVE) e che il tuo sistema di gestione delle chiavi sia configurato correttamente.
+Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
 
 
 

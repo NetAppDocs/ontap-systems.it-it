@@ -2,7 +2,7 @@
 permalink: a1k/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff a1k, replace a pcie card 
-summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuovere i moduli SFP e QSFP dalle schede prima di rimuovere il riser, reinstallare il riser, quindi reinstallare i moduli SFP e QSFP prima di collegare le schede. 
+summary: Sostituire un modulo i/o nel sistema AFF A1K quando il modulo si guasta o richiede un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp. 
 ---
 = Sostituire il modulo i/o - AFF A1K
 :allow-uri-read: 
@@ -11,10 +11,13 @@ summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuove
 
 
 [role="lead"]
-Utilizzare questa procedura per sostituire un modulo i/o guasto.
+Sostituire un modulo i/o nel sistema AFF A1K quando il modulo si guasta o richiede un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp.
 
-* Puoi utilizzare questa procedura con tutte le versioni di ONTAP supportate dal tuo sistema storage.
-* Tutti gli altri componenti del sistema di storage devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Puoi utilizzare questa procedura con tutte le versioni di ONTAP supportate dal tuo sistema storage.
+
+.Prima di iniziare
+* È necessario avere a disposizione il pezzo di ricambio.
+* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
 
 
 

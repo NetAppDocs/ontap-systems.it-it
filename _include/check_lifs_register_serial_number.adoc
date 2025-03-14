@@ -15,6 +15,7 @@ Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network 
 ** Se AutoSupport non è attivato, chiamare https://mysupport.netapp.com["Supporto NetApp"] per registrare il numero di serie.
 
 
+. Controllare lo stato di salute del cluster. Per ulteriori informazioni, consultare l' https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"^] articolo della KB.
 . Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 . Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
 

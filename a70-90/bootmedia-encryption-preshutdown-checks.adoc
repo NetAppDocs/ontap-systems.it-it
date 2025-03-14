@@ -13,8 +13,6 @@ summary: 'Per garantire la sicurezza dei dati sul sistema di storage AFF A70 e A
 [role="lead"]
 Per garantire la sicurezza dei dati sul sistema di storage AFF A70 o AFF A90, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
 
-Prima di spegnere il controller danneggiato, verifica che la tua versione di ONTAP supporti la crittografia dei volumi NetApp (NVE) e che il tuo sistema di gestione delle chiavi sia configurato correttamente.
-
 
 
 == Passaggio 1: Verificare che la versione di ONTAP in uso supporti la crittografia dei volumi NetApp

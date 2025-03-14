@@ -2,7 +2,7 @@
 permalink: c80/system-management-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the system management module 
-summary: È necessario sostituire . 
+summary: 'Sostituire il modulo di gestione del sistema nel sistema AFF C80 se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l"arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l"aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.' 
 ---
 = Sostituire il modulo di gestione del sistema - AFF C80
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: È necessario sostituire .
 
 
 [role="lead"]
+Sostituire il modulo di gestione del sistema nel sistema AFF C80 se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.
+
 Il modulo System Management, situato nella parte posteriore del controller nello slot 8, contiene i componenti integrati per la gestione del sistema e le porte per la gestione esterna. Il controller di destinazione deve essere spento per sostituire un modulo di gestione del sistema danneggiato o per sostituire il supporto di avvio.
 
 Il modulo di gestione del sistema è dotato dei seguenti componenti integrati:

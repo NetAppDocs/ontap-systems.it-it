@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace the boot media 
-summary: Individuare il supporto di avvio guasto nel modulo controller rimuovendo il riser 3 sul modulo controller prima di sostituire il supporto di avvio. 
+summary: 'Il supporto di avvio del sistema ASA A1K memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l"installazione dei supporti di avvio sostitutivi nel modulo di gestione del sistema, quindi la reinstallazione del modulo di gestione del sistema.' 
 ---
 = Sostituire il supporto di avvio - ASA A1K
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: Individuare il supporto di avvio guasto nel modulo controller rimuovend
 
 
 [role="lead"]
-Sostituire il supporto di avvio rimuovendo il modulo di gestione del sistema dal retro del sistema, rimuovendo il supporto di avvio danneggiato, installando il supporto di avvio sostitutivo nel modulo di gestione del sistema, quindi reinstallando il modulo di gestione del sistema.
+Il supporto di avvio del sistema ASA A1K memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi nel modulo di gestione del sistema, quindi la reinstallazione del modulo di gestione del sistema.
 
-.Fasi
 Il supporto di avvio si trova all'interno del modulo di gestione del sistema ed è accessibile rimuovendo il modulo dal sistema.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare i cavi di alimentazione dalle PSU dal controller.
 +

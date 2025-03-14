@@ -2,16 +2,16 @@
 permalink: a1k/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a1k, move the controller module hardware 
-summary: Per sostituire un modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nello chassis, quindi avviare il sistema in modalità manutenzione. 
+summary: 'Sostituire il controller nel sistema AFF A1K quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti nel controller sostitutivo, l"installazione del controller sostitutivo e il riavvio.' 
 ---
-= Sostituire il modulo controller - AFF A1K
+= Sostituire il controller - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire il controller, è necessario rimuovere il controller danneggiato, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel contenitore, quindi avviare il sistema in modalità manutenzione.
+Sostituire il controller nel sistema AFF A1K quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti nel controller sostitutivo, l'installazione del controller sostitutivo e il riavvio.
 
 
 
@@ -222,3 +222,6 @@ NOTE: L'ora visualizzata è l'ora locale non sempre GMT e viene visualizzata in 
 Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il controller AFF A1K danneggiato, è necessario link:controller-replace-system-config-restore-and-verify.html["ripristinare la configurazione del sistema"].

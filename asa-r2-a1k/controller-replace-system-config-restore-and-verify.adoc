@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
+summary: Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage ASA A1K e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi. 
 ---
 = Ripristinare e verificare la configurazione di sistema - ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione
 
 
 [role="lead"]
-Dopo aver completato la sostituzione dell'hardware, verificare la configurazione di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
+Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage ASA A1K e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi.
 
 
 
@@ -61,3 +61,6 @@ In caso di problemi, controllare il cablaggio e riposizionare i cavi.
 
 . Uscire dalla modalità di manutenzione: `halt`.
 
+
+.Quali sono le prossime novità?
+Dopo aver ripristinato e verificato la configurazione di sistema per il sistema ASA A1K, è necessario link:controller-replace-recable-reassign-disks.html["restituire il controller"].

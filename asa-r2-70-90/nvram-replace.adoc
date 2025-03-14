@@ -11,11 +11,13 @@ summary: 'Il modulo NVRAM è costituito da NVRAM12 GB e DIMM e fino a due moduli
 
 
 [role="lead"]
-Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, è necessario rimuovere il modulo dallo chassis, spostare i moduli DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nello chassis.
+Sostituire il NVRAM nel sistema ASA A70 o ASA A90 quando la memoria non volatile si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sostituzione del modulo NVRAM o del modulo DIMM NVRAM, la riassegnazione dei dischi e la restituzione del componente guasto a NetApp.
+
+Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
 Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://support.netapp.com["Supporto NetApp"].
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+Assicurarsi di sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
 
 
 

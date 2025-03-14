@@ -11,7 +11,7 @@ summary: Ripristina il controllo delle risorse di storage sul controller sostitu
 
 
 [role="lead"]
-Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF C80 possa riprendere il normale funzionamento.
+Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF C80 possa riprendere il normale funzionamento. La procedura di give back varia in base al tipo di crittografia utilizzato dal sistema: Nessuna crittografia, crittografia OKM (Onboard Key Manager) o EKM (External Key Manager).
 
 [role="tabbed-block"]
 ====
@@ -161,3 +161,5 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver ritrasferito la proprietà delle risorse di storage al controller sostitutivo, occorre seguire link:controller-replace-restore-system-rma.html["completare la sostituzione della centralina"] la procedura.

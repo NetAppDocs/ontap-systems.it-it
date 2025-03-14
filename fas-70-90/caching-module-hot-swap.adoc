@@ -2,7 +2,7 @@
 permalink: fas-70-90/caching-module-hot-swap.html 
 sidebar: sidebar 
 keywords: fas70, fas90, hot swap, replace, Flash Cache module carrier, caching module, Flash Cache 
-summary: 'La portante del modulo SSD Flash cache NVMe contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco di caching SSD integrato in ciascun modulo di caching. È possibile sostituire a caldo i moduli di caching, ma il supporto del modulo Flash cache non è sostituibile a caldo.' 
+summary: 'La portante del modulo SSD Flash cache NVMe nei sistemi FAS70 o FAS90 contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco Flash cache SSD integrato in ciascun modulo di caching.' 
 ---
 = Sostituire il supporto del modulo Flash cache o un modulo di caching - FAS70 e FAS90
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'La portante del modulo SSD Flash cache NVMe contiene uno o due moduli 
 
 
 [role="lead"]
-La portante del modulo SSD Flash cache NVMe contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco Flash cache SSD integrato in ciascun modulo di caching.
+La portante del modulo SSD Flash cache NVMe nei sistemi FAS70 o FAS90 contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco Flash cache SSD integrato in ciascun modulo di caching.
 
 Il sistema FAS70 supporta moduli di caching 2TB mentre FAS90 supporta moduli di caching 4TB. Non è possibile combinare moduli di caching di capacità diversa nel portante del modulo Flash cache.
 
-A seconda di ciò che occorre sostituire, è possibile eseguire una delle seguenti procedure: L'intero supporto del modulo Flash cache o un modulo di caching.
+A seconda del componente da sostituire, è possibile eseguire una delle seguenti procedure: L'intero supporto del modulo Flash cache o un modulo di caching.
 
 * <<Sostituire il supporto del modulo Flash cache>>
 * <<Sostituire il modulo di caching>>
@@ -229,7 +229,6 @@ Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite
 
 == Sostituire il modulo di caching
 
-.Prima di iniziare
 I moduli Flash cache (moduli di caching) sono collocati nello slot 6-1 o nello slot 6-2 o sia nello slot 6-1 che nello slot 6-2.
 
 È possibile sostituire a caldo i singoli moduli di caching con moduli di caching della stessa capacità dello stesso fornitore o di un altro fornitore supportato.

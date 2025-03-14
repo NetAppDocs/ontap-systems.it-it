@@ -2,11 +2,12 @@
 :allow-uri-read: 
 
 
-Esaminare i requisiti per la procedura di sostituzione del controller e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.
+Esaminare i requisiti.
 
 * Tutti gli shelf di dischi devono funzionare correttamente.
 * Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È necessario sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
+* Non utilizzare questa procedura per gli upgrade dei controller, ma fare riferimento a https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Scegliere la procedura di aggiornamento dell'hardware del controller"] per le relative indicazioni.
 * È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
 * Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
 * Poiché il dispositivo di avvio si trova nel modulo di gestione del sistema installato sul retro del sistema, non è necessario spostare il dispositivo di avvio quando si sostituisce un modulo controller.

@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a1k, boot the recovery image 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+summary: 'Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema AFF A1K, è possibile avviare l"immagine di ripristino da un"unità USB e ripristinare la configurazione dal nodo partner.' 
 ---
 = Avviare l'immagine di ripristino - AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare i
 
 
 [role="lead"]
-È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
+Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema AFF A1K, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
 
 .Fasi
 . Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
@@ -65,3 +65,6 @@ Una volta completata la procedura di ripristino, questo messaggio viene visualiz
 *NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
 
 
+
+.Quali sono le prossime novità?
+Dopo aver avviato l'immagine di ripristino, è necessario link:bootmedia-encryption-restore.html["ripristinare la crittografia sul supporto di avvio"].

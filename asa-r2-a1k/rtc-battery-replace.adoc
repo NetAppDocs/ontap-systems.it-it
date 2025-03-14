@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace the real-time clock battery 
-summary: 'Si sostituisce la batteria dell"orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell"ora accurata continuino a funzionare.' 
+summary: 'Sostituire la batteria dell"orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel sistema ASA A1K per garantire che i servizi e le applicazioni che si affidano alla sincronizzazione accurata dell"ora rimangano operativi.' 
 ---
 = Sostituire la batteria dell'orologio in tempo reale - ASA A1K
 :allow-uri-read: 
@@ -11,10 +11,11 @@ summary: 'Si sostituisce la batteria dell"orologio in tempo reale (RTC) nel modu
 
 
 [role="lead"]
-Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
+Sostituire la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel sistema ASA A1K per garantire che i servizi e le applicazioni che si affidano alla sincronizzazione accurata dell'ora rimangano operativi.
 
-* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+.Prima di iniziare
+* Comprendere che è possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
+* Accertarsi che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il https://support.netapp.com["Supporto NetApp"] .
 
 
 

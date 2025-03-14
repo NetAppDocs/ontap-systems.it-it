@@ -2,24 +2,24 @@
 permalink: asa-r2-70-90/bootmedia-replace-workflow-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, a90, replace the boot media 
-summary: È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider. 
+summary: 'Come iniziare a sostituire i supporti di avvio nel sistema di storage ASA A70 e ASA A90, rivedere i requisiti di sostituzione, arrestare il controller, sostituire i supporti di avvio, ripristinare l"immagine sui supporti di avvio e verificare la funzionalità del sistema.' 
 ---
-= Flusso di lavoro per la sostituzione dei supporti di avvio - ASA A70 e ASA A90
+= Avvio rapido per la sostituzione dei supporti di avvio - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire i supporti di avvio, attenersi alla procedura riportata di seguito.
+Come iniziare a sostituire i supporti di avvio nel sistema di storage ASA A70 e ASA A90, rivedere i requisiti di sostituzione, arrestare il controller, sostituire i supporti di avvio, ripristinare l'immagine sui supporti di avvio e verificare la funzionalità del sistema.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:bootmedia-replace-requirements-bmr.html["Esaminare i requisiti dei supporti di avvio"]
 [role="quick-margin-para"]
 Esaminare i requisiti per la sostituzione dei supporti di avvio.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:bootmedia-shutdown-bmr.html["Spegnere il controller compromesso"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:bootmedia-shutdown-bmr.html["Spegnere il controller"]
 [role="quick-margin-para"]
-Spegnere o sostituire il controller danneggiato in modo che il controller integro continui a erogare dati dallo storage del controller danneggiato.
+Arrestare il controller nel sistema di storage quando è necessario sostituire i supporti di avvio.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:bootmedia-replace-bmr.html["Sostituire il supporto di avvio"]
 [role="quick-margin-para"]

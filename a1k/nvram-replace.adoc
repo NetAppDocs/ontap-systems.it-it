@@ -1,8 +1,8 @@
 ---
 permalink: a1k/nvram-replace.html 
 sidebar: sidebar 
-keywords: aff a1k, replace an nvdimm 
-summary: 'Il modulo NVRAM è costituito da NVRAM12 GB e DIMM e fino a due moduli Flash cache SSD NVMe (moduli Flash cache o di caching) per modulo NVRAM.' 
+keywords: aff a1k, replace nvram 
+summary: Sostituire il NVRAM nel sistema AFF A1K quando la memoria non volatile si guasta o richiede un aggiornamento. 
 ---
 = Sostituire il modulo NVRAM - AFF A1K
 :allow-uri-read: 
@@ -11,11 +11,14 @@ summary: 'Il modulo NVRAM è costituito da NVRAM12 GB e DIMM e fino a due moduli
 
 
 [role="lead"]
-Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, è necessario rimuovere il modulo dal contenitore, spostare i moduli DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nel contenitore.
+Sostituire il NVRAM nel sistema AFF A1K quando la memoria non volatile si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sostituzione del modulo NVRAM o del modulo DIMM NVRAM, la riassegnazione dei dischi e la restituzione del componente guasto a NetApp.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://support.netapp.com["Supporto NetApp"].
+Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+.Prima di iniziare
+* Assicurarsi di avere a disposizione il pezzo di ricambio. È necessario sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
+* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare https://support.netapp.com["Supporto NetApp"].
+
 
 
 
@@ -178,7 +181,7 @@ Linguette di bloccaggio DIMM
 
 
 
-== Fase 3: Sostituire un DIMM NVRAM
+== Passo 3: Sostituire il modulo DIMM NVRAM
 
 Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
 

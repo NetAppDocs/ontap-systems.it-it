@@ -2,7 +2,7 @@
 permalink: c80/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: c80, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: Verifica che le interfacce logiche stiano eseguendo il reporting sulla porta home, esegui un controllo dello stato di salute del cluster e restituisci il componente guasto a NetApp per completare la fase finale del workflow di sostituzione del controller AFF C80. 
+summary: Verifica che le interfacce logiche stiano segnalando alla porta home, esegui un controllo dello stato di salute del cluster e restituisci il componente guasto a NetApp per completare la fase finale della procedura di sostituzione del controller AFF C80. 
 ---
 = Sostituzione completa della centralina - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Verifica che le interfacce logiche stiano eseguendo il reporting sulla 
 
 
 [role="lead"]
-Verifica che le interfacce logiche stiano eseguendo il reporting sulla porta home, esegui un controllo dello stato di salute del cluster e restituisci il componente guasto a NetApp per completare la fase finale del workflow di sostituzione del controller AFF C80.
+Verifica che le interfacce logiche (LIF) riportino la porta home, esegui un controllo dello stato di salute del cluster e invia il componente guasto a NetApp per completare l'ultimo passaggio della procedura di sostituzione del controller AFF C80.
 
 
 

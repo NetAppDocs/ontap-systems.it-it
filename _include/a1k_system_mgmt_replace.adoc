@@ -19,18 +19,19 @@ Il modulo System Management contiene inoltre le seguenti porte per la gestione e
 * Ethernet a e0M RJ45 GB
 
 
-Per sostituire il modulo di gestione del sistema o o il supporto di avvio, è necessario arrestare il controller danneggiato.
+Per sostituire il modulo di gestione del sistema o il supporto di avvio, è necessario arrestare il controller danneggiato.
 
 .Prima di iniziare
-* Questa procedura utilizza la seguente terminologia:
-+
-** Il controller compromesso è il controller su cui si esegue la manutenzione.
-** Il controller integro è il partner ha del controller compromesso.
+* Assicurarsi che tutti gli altri componenti del sistema funzionino correttamente.
+* Assicurarsi che il controller partner sia in grado di assumere il controllo dei controller danneggiati.
+* Assicurarsi di sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
 
 
-* Tutti gli altri componenti del sistema devono funzionare correttamente.
-* Il partner controller deve essere in grado di assumere il controllo dei controller danneggiati.
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+.A proposito di questa attività
+Questa procedura utilizza la seguente terminologia:
+
+* Il controller compromesso è il controller su cui si esegue la manutenzione.
+* Il controller integro è il partner ha del controller compromesso.
 
 
 
