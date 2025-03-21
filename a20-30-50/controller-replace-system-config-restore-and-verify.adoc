@@ -2,7 +2,7 @@
 permalink: a20-30-50/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
+summary: Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema storage AFF A20, AFF A30 o AFF A50 e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi. 
 ---
 = Ripristinare e verificare la configurazione di sistema - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione
 
 
 [role="lead"]
+Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema storage AFF A20, AFF A30 o AFF A50 e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi.
+
 Verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
 
 
@@ -77,3 +79,6 @@ In caso di problemi, controllare il cablaggio e riposizionare i cavi.
 `halt`
 
 
+
+.Quali sono le prossime novità?
+Dopo aver ripristinato e verificato la configurazione di sistema per il sistema AFF A20, AFF A30 o AFF A50, è necessario link:controller-replace-recable-reassign-disks.html["restituire il controller"].

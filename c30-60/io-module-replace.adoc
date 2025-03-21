@@ -2,7 +2,7 @@
 permalink: c30-60/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace a pcie card 
-summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuovere i moduli SFP e QSFP dalle schede prima di rimuovere il riser, reinstallare il riser, quindi reinstallare i moduli SFP e QSFP prima di collegare le schede. 
+summary: Sostituire un modulo i/o nel sistema AFF C30 o AFF C60 in caso di guasto del modulo o se è necessario un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp. 
 ---
 = Sostituire il modulo i/o - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuove
 
 
 [role="lead"]
+Sostituire un modulo i/o nel sistema AFF C30 o AFF C60 in caso di guasto del modulo o se è necessario un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp.
+
 Utilizzare questa procedura per sostituire un modulo i/o guasto.
 
 .Prima di iniziare

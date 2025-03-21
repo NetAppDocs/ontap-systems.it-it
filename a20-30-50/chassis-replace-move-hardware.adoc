@@ -2,7 +2,7 @@
 permalink: a20-30-50/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, move hardware components, replace the chassis 
-summary: 'Spostare il frontalino, le unità e i moduli controller dallo chassis danneggiato al nuovo chassis e sostituire lo chassis danneggiato dal rack o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis danneggiato.' 
+summary: 'Sostituire lo chassis del sistema AFF A20, AFF A30 o AFF A50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione del controller e delle unità di alimentazione (PSU), la rimozione delle unità dallo chassis danneggiato, l"installazione dello chassis sostitutivo e la reinstallazione dei componenti dello chassis.' 
 ---
 = Sostituire il telaio - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 'Spostare il frontalino, le unità e i moduli controller dallo chassis 
 
 
 [role="lead"]
+Sostituire lo chassis del sistema AFF A20, AFF A30 o AFF A50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione del controller e delle unità di alimentazione (PSU), la rimozione delle unità dallo chassis danneggiato, l'installazione dello chassis sostitutivo e la reinstallazione dei componenti dello chassis.
+
 Spostare le unità, gli eventuali alloggiamenti delle unità, i controller e il frontalino dallo chassis danneggiato allo chassis sostitutivo (dello stesso modello), quindi sostituire lo chassis danneggiato all'interno del rack dell'apparecchiatura o dell'armadio del sistema.
 
 
@@ -293,3 +295,6 @@ ALIMENTATORE CC
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito lo chassis AFF A20, AFF A30 o AFF A50 danneggiato e aver reinstallato i componenti al suo interno, è necessario link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"].

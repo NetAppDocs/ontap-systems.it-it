@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, shut down the controller 
+keywords: asa a20, asa a30, asa a50, shut down the controller 
 summary: 'È necessario completare l"arresto del controller danneggiato.' 
 ---
 = Spegnere il controller - ASA A20, ASA A30 e ASA A50
@@ -11,7 +11,7 @@ summary: 'È necessario completare l"arresto del controller danneggiato.'
 
 
 [role="lead"]
-È necessario completare l'arresto del controller danneggiato. Spegnere o sostituire il controller compromesso.
+Quando è necessario sostituire il supporto di avvio, arrestare il controller del sistema di storage ASA A20, ASA A30 o ASA A50. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -65,4 +65,4 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 .Cosa succederà
-Dopo aver spento il controller danneggiato, link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].
+Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].

@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-shutdown-nomcc.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, shut down the impaired controller 
-summary: Arresta il controller nel sistema storage ASA A1K quando non funziona correttamente. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema. 
+summary: Arrestare il controller nel sistema di storage ASA A1K per evitare perdite di dati e garantire la stabilità del sistema durante la sostituzione del controller. 
 ---
 = Spegnere il controller danneggiato - ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Arresta il controller nel sistema storage ASA A1K quando non funziona c
 
 
 [role="lead"]
-Arresta il controller nel sistema storage ASA A1K quando non funziona correttamente. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
+Arrestare il controller nel sistema di storage ASA A1K per evitare perdite di dati e garantire la stabilità del sistema durante la sostituzione del controller.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

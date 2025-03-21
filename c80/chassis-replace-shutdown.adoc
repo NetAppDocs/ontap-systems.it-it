@@ -2,16 +2,16 @@
 permalink: c80/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: c80, shutdown the controllers 
-summary: Arrestare i controller del sistema storage AFF C80 quando è necessario sostituire lo chassis. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema. 
+summary: Arrestare il controller nel sistema di storage AFF C80 per evitare perdite di dati e garantire la stabilità del sistema durante la sostituzione dello chassis. 
 ---
-= Spegnere le centraline - AFF C80
+= Spegnere il controller per sostituire il telaio - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Arrestare i controller del sistema storage AFF C80 quando è necessario sostituire lo chassis. Prima di eseguire la manutenzione o la sostituzione dei componenti, è fondamentale spegnere il controller in modo sicuro per evitare perdite di dati e garantire la stabilità del sistema.
+Arrestare il controller nel sistema di storage AFF C80 per evitare perdite di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.
 
 Questa procedura si applica ai sistemi con configurazioni a due nodi. Per ulteriori informazioni sull'arresto regolare durante la manutenzione di un cluster, vedere https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Shutdown anomalo e accendere il sistema storage System Resolution Guide - NetApp Knowledge base"].
 
@@ -68,4 +68,4 @@ NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalit
 
 
 .Quali sono le prossime novità?
-Dopo aver spento i controller, è necessario link:chassis-replace-move-hardware.html["sostituire il telaio"].
+Dopo aver spento il controller, è necessario link:chassis-replace-move-hardware.html["sostituire il telaio"].

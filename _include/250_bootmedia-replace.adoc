@@ -143,13 +143,16 @@ Il file di immagine del servizio decompresso contiene due cartelle:
 
 
 .. Copiare la cartella efi nella directory principale dell'unità flash USB.
+
+
 +
 
 NOTE: Se l'immagine di servizio non dispone di una cartella efi, vedere link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["Cartella EFI mancante dal file di download dell'immagine di servizio utilizzato per il ripristino del dispositivo di avvio per i modelli FAS e AFF^"].
 
 +
-L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
++ l'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
 
++
 .. Rimuovere l'unità flash USB dal computer portatile.
 .. Se non è già stato fatto, installare il condotto dell'aria.
 +
@@ -186,12 +189,9 @@ Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dis
 .. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
 .. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
 .. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
-
-
 +
 Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
 
-+
 .. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
 +
 Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimentazione. Prepararsi ad interrompere il processo di avvio.

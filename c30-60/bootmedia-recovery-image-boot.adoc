@@ -2,7 +2,7 @@
 permalink: c30-60/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, boot the recovery image 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+summary: 'Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema AFF C80, è possibile avviare l"immagine di ripristino da un"unità USB e ripristinare la configurazione dal nodo partner.' 
 ---
 = Avviare l'immagine di ripristino - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -65,3 +65,6 @@ Una volta completata la procedura di ripristino, questo messaggio viene visualiz
 *NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
 
 
+
+.Quali sono le prossime novità?
+Dopo aver avviato l'immagine di ripristino, è necessario link:bootmedia-encryption-restore.html["ripristinare la crittografia sul supporto di avvio"].

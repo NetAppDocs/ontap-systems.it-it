@@ -2,16 +2,16 @@
 permalink: a20-30-50/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+summary: Spegnere il controller danneggiato nel sistema di storage AFF A20, AFF A30 o AFF A50 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio. 
 ---
-= Spegnere il controller con problemi - AFF A20, AFF A30 e AFF A50
+= Spegnere il controller per sostituire i supporti di avvio - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Spegnere o sostituire il controller compromesso.
+Spegnere il controller danneggiato nel sistema di storage AFF A20, AFF A30 o AFF A50 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -63,3 +63,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 |===
 
+
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:bootmedia-replace.html["sostituire il supporto di avvio"].

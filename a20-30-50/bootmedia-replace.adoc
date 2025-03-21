@@ -2,7 +2,7 @@
 permalink: a20-30-50/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: Individuare il supporto di avvio guasto nel modulo controller rimuovendo il riser 3 sul modulo controller prima di sostituire il supporto di avvio. 
+summary: 'Il supporto di avvio del sistema AFF A20, AFF A30 o AFF A50 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione dei supporti di avvio danneggiati, l"installazione dei supporti di avvio sostitutivi e il trasferimento dell"immagine ONTAP sui supporti di avvio sostitutivi.' 
 ---
 = Sostituire i supporti di avvio - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Individuare il supporto di avvio guasto nel modulo controller rimuovend
 
 
 [role="lead"]
+Il supporto di avvio del sistema AFF A20, AFF A30 o AFF A50 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi e il trasferimento dell'immagine ONTAP sui supporti di avvio sostitutivi.
+
 Per sostituire il supporto di avvio, è necessario rimuovere il controller danneggiato, rimuovere il supporto di avvio, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
 
 
@@ -309,3 +311,6 @@ ALIMENTATORE CC
 
 |===
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il supporto di avvio, è necessario link:bootmedia-recovery-image-boot.html["avviare l'immagine di ripristino"].

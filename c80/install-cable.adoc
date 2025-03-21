@@ -18,6 +18,10 @@ Contattare l'amministratore di rete per informazioni sulla connessione del siste
 
 .A proposito di questa attività
 * Queste procedure mostrano le configurazioni comuni. Il cablaggio specifico dipende dai componenti ordinati per il sistema di storage in uso. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Gli slot i/o di un controller AFF C80 sono numerati da 1 a 11.
++
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numerazione degli slot su un controller AFF C80]
+
 * Le immagini dei cavi hanno icone a freccia che mostrano l'orientamento corretto (verso l'alto o verso il basso) della linguetta di estrazione del connettore del cavo quando si inserisce un connettore in una porta.
 +
 Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.

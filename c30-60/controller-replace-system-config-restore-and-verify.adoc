@@ -2,7 +2,7 @@
 permalink: c30-60/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.' 
+summary: Verificare che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage AFF C30 o AFF C60 e verificare che gli adattatori del sistema elencino tutti i percorsi dei dischi. 
 ---
 = Ripristinare e verificare la configurazione di sistema - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione
 
 
 [role="lead"]
+Verificare che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage AFF C30 o AFF C60 e verificare che gli adattatori del sistema elencino tutti i percorsi dei dischi.
+
 Verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
 
 
@@ -77,3 +79,6 @@ In caso di problemi, controllare il cablaggio e riposizionare i cavi.
 `halt`
 
 
+
+.Quali sono le prossime novità?
+Dopo aver ripristinato e verificato la configurazione di sistema per il sistema AFF C30 o AFF C60, è necessario link:controller-replace-recable-reassign-disks.html["restituire il controller"].

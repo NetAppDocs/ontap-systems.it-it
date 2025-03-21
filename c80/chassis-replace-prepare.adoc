@@ -1,0 +1,65 @@
+---
+permalink: c80/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: aff c80, replace the chassis 
+summary: Prepararsi a sostituire lo chassis danneggiato del sistema C80 identificando lo chassis danneggiato, verificando i componenti di ricambio ed etichettando i cavi e i moduli del controller. 
+---
+= Preparare la sostituzione del telaio - C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepararsi a sostituire lo chassis danneggiato nel sistema AFF A70 o AFF A90 identificando lo chassis danneggiato, verificando i componenti di ricambio ed etichettando i cavi e i moduli del controller.
+
+
+
+== Fase 1: Individuare e monitorare il sistema
+
+È necessario aprire una sessione della console e salvare i registri delle sessioni per riferimenti futuri, nonché attivare il LED di posizione del sistema per individuare il telaio danneggiato.
+
+. Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.
+. Individuare e accendere il LED di posizione del controller:
++
+.. Utilizzare il `system controller location-led show` comando per visualizzare lo stato corrente del LED di posizione.
+.. Modificare lo stato del LED di posizione su "ON":
++
+`system controller location-led modify -node _node1_ -state on`.
+
++
+Il LED posizione rimane acceso per 30 minuti.
+
+
+
+
+
+
+
+== Fase 2: Verifica dei componenti sostitutivi
+
+È necessario verificare di aver ricevuto i componenti necessari, rimuoverli dalla confezione e conservarli.
+
+. Prima di aprire la confezione, controllare l'etichetta della confezione e verificare:
++
+** Numero di parte del componente.
+** Descrizione della parte.
+** Quantità nella scatola.
+
+
+. Rimuovere il contenuto dalla confezione e utilizzare la confezione per restituire il componente guasto a NetApp.
+
+
+
+
+== Fase 3: Etichettare i cavi e i moduli del controller
+
+È necessario etichettare i cavi e i moduli controller prima di rimuoverli dai moduli controller o dallo chassis.
+
+. Etichettare tutti i cavi associati al sistema di archiviazione. Ciò aiuta a riabilitarlo più avanti in questa procedura.
+. Etichettare i moduli controller.
+. Se non siete già correttamente collegati a terra, mettetevi a terra.
+
+
+.Quali sono le prossime novità?
+Dopo aver preparato la sostituzione dell'hardware dello chassis C80, è necessario link:chassis-replace-shutdown.html["spegnere i controller"].

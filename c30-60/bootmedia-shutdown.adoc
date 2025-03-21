@@ -2,7 +2,7 @@
 permalink: c30-60/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+summary: Arrestare il controller danneggiato nel sistema di storage AFF C30 o AFF C60 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio. 
 ---
 = Spegnere il controller con problemi - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
-Spegnere o sostituire il controller compromesso.
+Arrestare il controller danneggiato nel sistema di storage AFF C30 o AFF C60 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -63,3 +63,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 |===
 
+
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:bootmedia-replace.html["sostituire il supporto di avvio"].

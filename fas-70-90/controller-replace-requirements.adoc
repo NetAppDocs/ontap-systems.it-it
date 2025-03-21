@@ -2,7 +2,7 @@
 permalink: fas-70-90/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas70, fas90, prerequisite, replace the controller module 
-summary: 'Prima di sostituire il controller nel sistema FAS70 o FAS90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ad esempio disporre del controller sostitutivo corretto, di un backup della configurazione del sistema e dell"accesso agli strumenti e al firmware necessari.' 
+summary: 'Prima di sostituire il controller nel sistema FAS70 o FAS90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell"output della console del controller in un file di registro di testo.' 
 ---
 = Requisiti per sostituire la centralina - FAS70 e FAS90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Prima di sostituire il controller nel sistema FAS70 o FAS90, assicurar
 
 
 [role="lead"]
-Prima di sostituire il controller nel sistema FAS70 o FAS90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ad esempio disporre del controller sostitutivo corretto, di un backup della configurazione del sistema e dell'accesso agli strumenti e al firmware necessari.
+Prima di sostituire il controller nel sistema FAS70 o FAS90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell'output della console del controller in un file di registro di testo.
 
 Esaminare i requisiti per la sostituzione del controller.
 
@@ -37,4 +37,4 @@ In questo modo è possibile registrare la procedura per risolvere eventuali prob
 
 
 .Quali sono le prossime novità?
-Dopo aver esaminato i requisiti per sostituire il controller FAS70 o FAS90, è necessario link:controller-replace-shutdown.html["spegnere i controller"].
+Dopo aver esaminato i requisiti per sostituire il controller FAS70 o FAS90, è necessario link:controller-replace-shutdown.html["spegnere il controller danneggiato"].

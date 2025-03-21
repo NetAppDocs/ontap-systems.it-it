@@ -11,7 +11,7 @@ summary: Per ripristinare il funzionamento completo del sistema, devi verificare
 
 
 [role="lead"]
-Ripristinare la configurazione della crittografia dello storage NetApp (se necessario), installare le licenze per il controller sostitutivo, verificare che le interfacce logiche (LIF) riportino alla porta home, eseguire un controllo dello stato del cluster, registrare il numero di serie del controller sostitutivo e restituire il componente guasto a NetApp per completare l'ultima fase della procedura di sostituzione del controller AFF C30 e C60.
+Per completare la sostituzione del controller per il sistema AFF C30 o AFF C60, ripristinare prima la configurazione crittografia storage NetApp (se necessario) e installare le licenze richieste sul nuovo controller. Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registrare il numero di serie della nuova centralina e restituire la parte guasta a NetApp.
 
 
 

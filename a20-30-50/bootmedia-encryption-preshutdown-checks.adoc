@@ -2,9 +2,9 @@
 permalink: a20-30-50/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, pre-shutdown checks for onboard encryption keys 
-summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+summary: Per garantire la sicurezza dei dati sul sistema di storage A20, AFF A30 o AFF A50, è necessario verificare il supporto della chiave di crittografia e lo stato del supporto di avvio. Controllare se la versione di ONTAP in uso supporta la crittografia dei volumi NetApp e prima di arrestare il controller verificare se il gestore delle chiavi è attivo. 
 ---
-= Controllare le chiavi di crittografia integrate: AFF A20, AFF A30 e AFF A50
+= Verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -192,3 +192,6 @@ Sarà necessario in situazioni di emergenza in cui potrebbe essere necessario ri
 --
 ====
 
+
+.Quali sono le prossime novità?
+Dopo aver verificato il supporto e lo stato della chiave di crittografia sul supporto di avvio, è necessario link:bootmedia-shutdown.html["spegnere il controller"].

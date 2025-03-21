@@ -2,15 +2,17 @@
 permalink: a20-30-50/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the chassis 
-summary: Si sostituisce un telaio danneggiato con il nuovo telaio dello stesso modello del telaio danneggiato. 
+summary: Prima di sostituire lo chassis del sistema AFF A20, AFF A30 o AFF A50, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò comprende la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della correttezza del telaio di ricambio e degli strumenti necessari. 
 ---
-= Requisiti per la sostituzione dello chassis - AFF A20, AFF A30 e AFF A50
+= Requisiti per la sostituzione del telaio: AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Prima di sostituire lo chassis del sistema AFF A20, AFF A30 o AFF A50, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò comprende la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della correttezza del telaio di ricambio e degli strumenti necessari.
+
 Prima di sostituire il telaio, verificare i seguenti requisiti e considerazioni.
 
 
@@ -36,3 +38,6 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per la sostituzione del telaio, è necessario link:chassis-replace-shutdown.html["spegnere i controller"]

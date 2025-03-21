@@ -20,7 +20,9 @@ Per ripristinare il funzionamento completo del sistema, è necessario ripristina
 È necessario installare nuove licenze per il nodo _replacement_ se il nodo compromesso utilizzava funzioni ONTAP che richiedono una licenza standard (bloccata da nodo). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
 
 .A proposito di questa attività
-Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzionalità senza licenza sul nodo potrebbe non essere conforme al contratto di licenza, pertanto è necessario installare la chiave o le chiavi di licenza sostitutive sul nodo _replacement_ il prima possibile.
+Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione.
+
+Inoltre, l'utilizzo di funzionalità senza licenza sul nodo potrebbe non essere conforme al contratto di licenza, pertanto è necessario installare la chiave o le chiavi di licenza sostitutive sul nodo _replacement_ il prima possibile.
 
 .Prima di iniziare
 Le chiavi di licenza devono essere in formato a 28 caratteri.
