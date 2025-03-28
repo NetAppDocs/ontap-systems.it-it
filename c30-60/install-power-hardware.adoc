@@ -19,6 +19,9 @@ Dopo aver collegato i controller alla rete e gli shelf del sistema storage AFF C
 
 Ogni ripiano si distingue per un ID di ripiano univoco. Grazie a questo ID, lo shelf si distingue all'interno della configurazione del sistema storage.
 
+.Prima di iniziare
+Assicurati di avere una graffetta o una penna a sfera con punta stretta per impostare NS224 ID ripiano di archiviazione.
+
 .A proposito di questa attività
 * Un ID ripiano valido è compreso tra 01 e 99.
 +
@@ -153,6 +156,7 @@ image::../media/drw_psu_layout_1_ieops-1886.svg[Schema di collegamento dell'alim
 ** Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
 ** I LED lampeggiano e le ventole si avviano, a indicare che i controller si stanno accendendo.
 ** Le ventole potrebbero essere molto rumorose al primo avvio. Il rumore della ventola all'avviamento è normale.
+** Il display dell'ID dello shelf sulla parte anteriore dello chassis del sistema non si illumina. L'ID dello shelf interno del sistema è fissato a 00.
 
 
 . Fissare i cavi di alimentazione utilizzando il dispositivo di fissaggio su ciascun alimentatore.

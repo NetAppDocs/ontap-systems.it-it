@@ -13,8 +13,6 @@ summary: 'Sostituire un modulo della ventola nel sistema AFF A20, AFF A30 o AFF 
 [role="lead"]
 Sostituire un modulo della ventola nel sistema AFF A20, AFF A30 o AFF A50 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
-Per sostituire una ventola, è necessario rimuovere la centralina, rimuovere la ventola difettosa, installare la ventola di ricambio, quindi reinstallare la centralina.
-
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
 

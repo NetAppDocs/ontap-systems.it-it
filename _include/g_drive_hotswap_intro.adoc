@@ -1,17 +1,6 @@
----
-permalink: asa-r2-a20-30-50/drive-replace.html 
-sidebar: sidebar 
-keywords: asa a20, asa a30, asa a50, replace the drives 
-summary: 'Sostituire un"unità nel sistema ASA A20, ASA A30 o ASA A50 quando un"unità si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l"identificazione dell"unità guasta, la rimozione sicura e l"installazione di una nuova unità per garantire l"accesso continuo ai dati e le prestazioni del sistema.' 
----
-= Sostituire un'unità - ASA A20, ASA A30 e ASA A50
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Sostituire un'unità nel sistema ASA A20, ASA A30 o ASA A50 quando un'unità si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'identificazione dell'unità guasta, la rimozione sicura e l'installazione di una nuova unità per garantire l'accesso continuo ai dati e le prestazioni del sistema.
 
 È possibile sostituire un disco guasto senza interruzioni mentre l'i/o è in corso.
 
@@ -71,74 +60,5 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 +
 È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
-
-
-
-.Fasi
-. Mettere a terra l'utente.
-. Identificare fisicamente il disco guasto.
-+
-In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED attenzione (ambra) sul pannello del display dell'operatore dello scaffale e l'unità guasta si accendono.
-
-+
-
-NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
-
-. Rimuovere il disco guasto:
-+
-image::../media/drw_nvme_drive_replace_ieops-1904.svg[Rimuovere l'unità NVMe]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image::../media/icon_round_1.png[Numero di didascalia 1]
- a| 
-Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
-
-
-
- a| 
-image::../media/icon_round_2.png[Numero di didascalia 2]
- a| 
-Ruotare la maniglia della camma verso il basso per disinnestare la trasmissione dalla piastra intermedia.
-
-
-
- a| 
-image::../media/icon_round_3.png[Numero di didascalia 3]
- a| 
-Estrarre l'unità dall'alloggiamento utilizzando la maniglia della camma e sostenendo l'unità con l'altra mano.
-
-Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
-
-
-NOTE: Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
-
-|===
-. Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
-+
-Questo consente al sistema di riconoscere che un disco è stato rimosso.
-
-. Inserire l'unità sostitutiva:
-+
-.. Con la maniglia della camma in posizione aperta, inserire l'unità sostitutiva con entrambe le mani.
-.. Premere delicatamente fino a quando l'unità non si arresta.
-.. Chiudere la maniglia della camma in modo che l'unità sia completamente alloggiata nel piano interno e che la maniglia scatti in posizione.
-+
-Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
-
-
-
-. Verificare che il LED di attività del disco (verde) sia acceso.
-+
-Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
-
-. Se si sta sostituendo un'altra unità, ripetere i passaggi da 2 a 6.
-. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
-+
-Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
 
 

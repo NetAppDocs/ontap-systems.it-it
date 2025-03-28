@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, replace a pcie card 
 summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuovere i moduli SFP e QSFP dalle schede prima di rimuovere il riser, reinstallare il riser, quindi reinstallare i moduli SFP e QSFP prima di collegare le schede. 
 ---
-= Sostituire il modulo i/o - ASA A20, ASA A30 e ASA A50
+= Sostituire un modulo i/o - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Utilizzare questa procedura per sostituire un modulo i/o guasto.
+Sostituire un modulo i/o nel sistema ASA A20, ASA A30 o ASA A50 quando il modulo non funziona o richiede un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp.
 
 .Prima di iniziare
 Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.

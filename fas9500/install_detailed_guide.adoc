@@ -123,7 +123,7 @@ X66032A (112-00437), 2 m
 
 X66033A (112-00438), 3 m.
  a| 
-image::../media/oie_cable_fiber_lc_connector.png[connettore lc in fibra ottica per cavo oie]
+image::../media/oie_cable_fiber_lc_connector.png[Connettore ottico LC]
  a| 
 Rete ottica FC
 
@@ -151,7 +151,7 @@ X66032A (112-00437), 2 m
 
 X66033A (112-00438), 3 m.
  a| 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Connettore mini SAS]
  a| 
 Storage
 
@@ -162,7 +162,7 @@ Cavo per console micro-USB
  a| 
 Non applicabile
  a| 
-Immagine:../media/oie_Cable_micro_usb.pngMicro usb Connector]
+image::../media/oie_cable_micro_usb.png[Connettore micro USB]
  a| 
 Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac
 
@@ -242,7 +242,7 @@ image::../media/drw_9500_tnsc_network_cabling.svg[cablaggio di rete tnsc drw 950
 
 
  a| 
-immagine:../media/icon_square_1_green.png
+image::../media/icon_square_1_green.png[Icona didascalia 1]
  a| 
 Porte di interconnessione del cluster di cavi:
 
@@ -255,11 +255,11 @@ image::../media/oie_cable100_gbe_qsfp28.png[Connettore QSFP 100 GbE]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[Icona didascalia 2]
+image::../media/icon_square_2_purple.png[Icona didascalia 2]
  a| 
 Porte per la gestione del controller dei cavi (chiave).
 
-immagine:../media/oie_cable_rj45.png
+image::../media/oie_cable_rj45.png[Connettore RJ-45]
 
 
 
@@ -281,7 +281,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Connettore QSFP 100 GbE]
 
 
  a| 
-immagine:../media/icon_square_4_red.png
+image::../media/icon_square_4_red.png[Icona didascalia 4]
  a| 
 Connessioni via cavo da 25 GbE:
 
@@ -292,10 +292,12 @@ image::../media/oie_cable_sfp_gbe_copper.png[Connettore GbE SFP in rame]
 
 
  a| 
+image::../media/icon_square_5_grey.png[Icona didascalia 4]
+ a| 
 ** Fissare i cavi ai bracci di gestione dei cavi (non mostrati).
 ** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
 
- a| 
+
 image::../media/oie_cable_power.png[Cavi di alimentazione]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Fonti di alimentazione]
@@ -345,7 +347,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Connettore QSFP 100 GbE]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[Icona didascalia 2]
+image::../media/icon_square_2_purple.png[Icona didascalia 2]
  a| 
 Porte per la gestione del controller dei cavi (chiave).
 
@@ -377,15 +379,17 @@ Connessioni via cavo da 25 GbE:
 
 Porta dei cavi negli slot A5 e B5 (5a, 5b, 5c e 5d) e A7 e B7 (7a, 7b, 7c e 7d) per gli switch di rete 25 GbE.
 
-immagine:../media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[Connettore 100 GbE in rame]
 
 
 
+ a| 
+image::../media/icon_square_4_red.png[Icona didascalia 4]
  a| 
 ** Fissare i cavi ai bracci di gestione dei cavi (non mostrati).
 ** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
 
- a| 
+
 image::../media/oie_cable_power.png[Cavi di alimentazione]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Fonti di alimentazione]
@@ -434,20 +438,31 @@ image::../media/icon_square_1_blue.png[icona quadrata 1 blu]
  a| 
 Collegare lo stack di shelf di dischi uno ai controller, utilizzando la figura come riferimento.
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+*Cavo Mini-SAS*
 
-Cavo mini-SAS
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
 
 
 
  a| 
 image::../media/icon_square_2_yellow.png[Icona didascalia 2]
  a| 
-Collegare lo stack di shelf due ai controller, utilizzando la figura come riferimento.
+Collega gli shelf dei dischi nello stack due l'uno all'altro, utilizzando il grafico come riferimento.
+
+*Cavo Mini-SAS*
 
 image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
 
-Cavo mini-SAS
+
+
+ a| 
+image::../media/icon_square_3_tourquoise.png[Icona didascalia 3]
+ a| 
+Collegare lo stack di shelf due ai controller, utilizzando la figura come riferimento.
+
+*Cavo Mini-SAS*
+
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
 
 |===
 
@@ -540,12 +555,11 @@ image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
 
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.svg[selezione del controllo di rilevamento automatico drw]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[drw autodiscovery controler selezionare ieops 1849]
 
 +
 .. Aprire file Explorer.
-.. Fare clic su Network (rete) nel riquadro sinistro.
-.. Fare clic con il pulsante destro del mouse e selezionare Aggiorna.
+.. Fare clic su rete nel riquadro sinistro, quindi fare clic con il pulsante destro del mouse e selezionare Aggiorna.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 

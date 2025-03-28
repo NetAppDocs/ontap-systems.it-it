@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Dopo aver acceso gli scaffali e assegnato loro ID univoci, accendere i controller di storage.
+
+.Fasi
+. Collegare il computer portatile alla porta seriale della console. Ciò consente di monitorare la sequenza di avvio quando i controller sono accesi.
++
+.. Impostare la porta seriale della console del computer portatile a 115.200 baud con N-8-1.
++
+
+NOTE: Per istruzioni su come configurare la porta seriale della console, consultare la guida in linea del laptop.
+
+.. Utilizzando il cavo della console fornito con il sistema di archiviazione, collegare un'estremità del cavo della console al computer portatile e l'altra estremità alla porta seriale della console sul controller A.
+.. Collegare il computer portatile allo switch sulla subnet di gestione.
+
+
+. Assegnare un indirizzo TCP/IP al computer portatile, utilizzando un indirizzo presente nella subnet di gestione.
+. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
++
+** Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
+** I LED lampeggiano e le ventole si avviano, a indicare che i controller si stanno accendendo.
+** Le ventole potrebbero essere molto rumorose al primo avvio. Il rumore della ventola all'avviamento è normale.
+
+
+. Fissare i cavi di alimentazione utilizzando il dispositivo di fissaggio su ciascun alimentatore.
+

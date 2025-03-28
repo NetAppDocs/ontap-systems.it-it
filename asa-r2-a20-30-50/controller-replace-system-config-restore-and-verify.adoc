@@ -11,7 +11,7 @@ summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione
 
 
 [role="lead"]
-Verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
+Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema storage ASA A20, ASA A30 o ASA A50 e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi.
 
 
 
@@ -77,3 +77,6 @@ In caso di problemi, controllare il cablaggio e riposizionare i cavi.
 `halt`
 
 
+
+.Quali sono le prossime novità?
+Dopo aver ripristinato e verificato la configurazione di sistema per il sistema ASA A20, ASA A30 o ASA A50, è necessario link:controller-replace-recable-reassign-disks.html["restituire il controller"].

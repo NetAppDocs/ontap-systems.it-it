@@ -2,16 +2,18 @@
 permalink: asa-r2-a20-30-50/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, prerequisite, replace the controller module 
-summary: È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso. 
+summary: 'Prima di sostituire il controller nel sistema ASA A20, ASA A30 o ASA A50, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell"output della console del controller in un file di registro di testo.' 
 ---
-= Requisiti per la sostituzione del controller - ASA A20, ASA A30 e ASA A50
+= Requisiti per sostituire la centralina - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario rivedere i requisiti e le considerazioni per la procedura di sostituzione della centralina.
+Prima di sostituire il controller nel sistema ASA A20, ASA A30 o ASA A50, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell'output della console del controller in un file di registro di testo.
+
+Esaminare i requisiti e le considerazioni per la procedura di sostituzione della centralina.
 
 
 
@@ -46,3 +48,6 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il controller ASA A20, ASA A30 o ASA A50, è necessario link:controller-replace-shutdown.html["spegnere il controller danneggiato"].
