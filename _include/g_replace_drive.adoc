@@ -16,7 +16,7 @@ Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggi
 +
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"^]
 
-* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 * Verificare che l'unità che si sta rimuovendo non sia funzionante.
 +
 È possibile verificare che il disco non funzioni correttamente eseguendo `storage disk show -broken` comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.

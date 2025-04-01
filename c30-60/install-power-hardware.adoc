@@ -142,21 +142,14 @@ NOTE: Per istruzioni su come configurare la porta seriale della console, consult
 
 .. Utilizzando il cavo della console fornito con il sistema di archiviazione, collegare un'estremità del cavo della console al computer portatile e l'altra estremità alla porta seriale della console sul controller A.
 .. Collegare il computer portatile allo switch sulla subnet di gestione.
-+
-image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Collegamenti della console]
-
 
 
 . Assegnare un indirizzo TCP/IP al computer portatile, utilizzando un indirizzo presente nella subnet di gestione.
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 +
-image::../media/drw_psu_layout_1_ieops-1886.svg[Schema di collegamento dell'alimentazione del sistema di archiviazione A20 o A30 o A50]
-
-+
 ** Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
 ** I LED lampeggiano e le ventole si avviano, a indicare che i controller si stanno accendendo.
 ** Le ventole potrebbero essere molto rumorose al primo avvio. Il rumore della ventola all'avviamento è normale.
-** Il display dell'ID dello shelf sulla parte anteriore dello chassis del sistema non si illumina. L'ID dello shelf interno del sistema è fissato a 00.
 
 
 . Fissare i cavi di alimentazione utilizzando il dispositivo di fissaggio su ciascun alimentatore.

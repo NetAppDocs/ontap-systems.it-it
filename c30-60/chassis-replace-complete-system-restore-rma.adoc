@@ -33,7 +33,7 @@ Lo stato ha deve essere lo stesso per tutti i componenti.
 `ha-config modify chassis _HA-state_`
 
 +
-Il valore per ha-state deve essere _ha_.
+Il valore per ha-state deve essere _ha_. Il valore per ha-state può essere uno dei seguenti: _Ha_ _mcc_ (non supportato in ASA)
 
 .. Verificare che l'impostazione sia stata modificata:
 +

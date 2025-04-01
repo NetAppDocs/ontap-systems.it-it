@@ -14,7 +14,7 @@ summary: 'Sostituire la batteria NV nel sistema AFF A20, AFF A30 o AFF A50 quand
 Sostituire la batteria NV nel sistema AFF A20, AFF A30 o AFF A50 quando la batteria inizia a perdere la carica o si guasta, poiché è responsabile della conservazione dei dati critici del sistema durante le interruzioni di alimentazione. Il processo di sostituzione prevede l'arresto del controller danneggiato, la rimozione del modulo controller, la sostituzione della batteria NV, la reinstallazione del modulo controller e la restituzione del componente guasto a NetApp.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -27,8 +27,12 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 == Fase 1: Spegnere il controller compromesso
 
-Spegnere o sostituire il controller compromesso.
+Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
 
+[role="tabbed-block"]
+====
+.Opzione 1: La maggior parte dei sistemi
+--
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -80,6 +84,54 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 |===
 
 
+--
+.Opzione 2: Controller in un MetroCluster
+--
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+* È necessario aver confermato che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla sezione successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+--
+====
 
 
 == Fase 2: Rimuovere il controller
@@ -87,7 +139,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Assicurarsi che tutti gli altri componenti del sistema di stoccaggio funzionino correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .Fasi
 . Sul controller danneggiato, assicurarsi che il LED NV sia spento.

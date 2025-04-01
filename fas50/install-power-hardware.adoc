@@ -1,0 +1,162 @@
+---
+permalink: fas50/install-power-hardware.html 
+sidebar: sidebar 
+keywords: fas50, power controllers 
+summary: Collegare i cavi di alimentazione e alimentare gli shelf e i controller. 
+---
+= Accendere il sistema di archiviazione - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver collegato i controller alla rete e agli shelf del sistema storage FAS50, si accenderanno shelf e controller.
+
+
+
+== Passaggio 1: Accendere lo shelf e assegnare l'ID dello shelf
+
+Ogni ripiano si distingue per un ID di ripiano univoco. Grazie a questo ID, lo shelf si distingue all'interno della configurazione del sistema storage.
+
+.A proposito di questa attività
+* Un ID ripiano valido è compreso tra 01 e 99.
++
+Se si dispone di shelf interni (storage), integrati nei controller, viene assegnato un ID shelf fisso pari a 00.
+
+* È necessario spegnere e riaccendere uno shelf (spegnere e riaccendere l'interruttore di alimentazione di ciascuno degli alimentatori dello shelf SAS, attendere il periodo di tempo appropriato, quindi riaccendere l'unità) per rendere effettivo l'ID dello shelf.
+
+
+.Fasi
+. Alimentare lo shelf collegando i cavi di alimentazione allo shelf, fissandoli in posizione con il fermo del cavo di alimentazione, collegando i cavi di alimentazione a sorgenti di alimentazione su diversi circuiti, quindi accendendo l'interruttore di alimentazione di ciascuno degli alimentatori (sul retro dello shelf).
++
+Il ripiano si accende e si avvia automaticamente all'accensione.
+
+. Rimuovere il cappuccio terminale sinistro per accedere al pulsante arancione ID ripiano sulla mascherina.
++
+image::../media/drw_shelf_id_sas_ieops-2187.svg[Modificare l'ID dello shelf sas]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Tappo terminale dello scaffale
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Numero di didascalia 2]
+ a| 
+Mascherina dello scaffale
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Numero di didascalia 3]
+ a| 
+Pulsante ID ripiano
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Numero di didascalia 4]
+ a| 
+Numero ID ripiano
+
+|===
+. Modificare il primo numero dell'ID dello shelf:
++
+.. Tenere premuto il pulsante ID ripiano finché il primo numero sul display digitale non lampeggia, quindi rilasciare il pulsante.
++
+Il lampeggiamento del numero può richiedere fino a 15 secondi. In questo modo viene attivata la modalità di programmazione degli ID dello shelf.
+
++
+
+NOTE: Se l'ID richiede più di 15 secondi per lampeggiare, tenere premuto nuovamente il pulsante ID ripiano, assicurandosi di premerlo completamente.
+
+.. Premere e rilasciare il pulsante ID ripiano per far avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
++
+La durata di ogni stampa e rilascio può essere di un solo secondo.
+
++
+Il primo numero continua a lampeggiare.
+
+
+
+. Modificare il secondo numero dell'ID dello shelf:
++
+.. Tenere premuto il pulsante fino a quando il secondo numero sul display digitale non lampeggia.
++
+Il lampeggiamento del numero può richiedere fino a tre secondi.
+
++
+Il primo numero sul display digitale smette di lampeggiare.
+
+.. Premere e rilasciare il pulsante ID ripiano per far avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
++
+Il secondo numero continua a lampeggiare.
+
+
+
+. Bloccare il numero desiderato e uscire dalla modalità di programmazione tenendo premuto il pulsante ID ripiano finché il secondo numero non smette di lampeggiare.
++
+Il numero può richiedere fino a tre secondi per smettere di lampeggiare.
+
++
+Entrambi i numeri sul display digitale iniziano a lampeggiare e il LED ambra si illumina dopo circa cinque secondi, avvisando che l'ID ripiano in sospeso non ha ancora avuto effetto.
+
+. Spegnere e riaccendere lo shelf per almeno 10 secondi per rendere effettivo l'ID dello shelf.
++
+.. Spegnere l'interruttore di alimentazione di ciascun alimentatore.
+.. Attendere 10 secondi.
+.. Accendere l'interruttore di alimentazione di ciascun alimentatore per completare il ciclo di alimentazione.
++
+Quando si accende un alimentatore, il LED bicolore si illumina di verde.
+
+
+
+. Sostituire il cappuccio terminale sinistro.
+
+
+
+
+== Fase 2: Accendere i controller
+
+Dopo aver acceso gli scaffali e assegnato loro ID univoci, accendere i controller di storage.
+
+.Fasi
+. Collegare il computer portatile alla porta seriale della console. Ciò consente di monitorare la sequenza di avvio quando i controller sono accesi.
++
+.. Impostare la porta seriale della console del computer portatile a 115.200 baud con N-8-1.
++
+
+NOTE: Per istruzioni su come configurare la porta seriale della console, consultare la guida in linea del laptop.
+
+.. Utilizzando il cavo della console fornito con il sistema di archiviazione, collegare un'estremità del cavo della console al computer portatile e l'altra estremità alla porta seriale della console sul controller A.
+.. Collegare il computer portatile allo switch sulla subnet di gestione.
++
+image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Collegamenti della console]
+
+
+
+. Assegnare un indirizzo TCP/IP al computer portatile, utilizzando un indirizzo presente nella subnet di gestione.
+. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
++
+image::../media/drw_psu_layout_1_ieops-1886.svg[Schema di collegamento dell'alimentazione del sistema di archiviazione A20 o A30 o A50]
+
++
+** Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
+** I LED lampeggiano e le ventole si avviano, a indicare che i controller si stanno accendendo.
+** Le ventole potrebbero essere molto rumorose al primo avvio. Il rumore della ventola all'avviamento è normale.
+** Il display dell'ID dello shelf sulla parte anteriore dello chassis del sistema non si illumina.
+
+
+. Fissare i cavi di alimentazione utilizzando il dispositivo di fissaggio su ciascun alimentatore. :fas50-a20-30-50!:
+
+
+.Quali sono le prossime novità?
+Dopo aver acceso il sistema di archiviazione, si link:install-complete.html["completare la configurazione del sistema"].

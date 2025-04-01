@@ -1,0 +1,70 @@
+---
+permalink: fas50/bootmedia-recovery-image-boot.html 
+sidebar: sidebar 
+keywords: fas50, boot the recovery image 
+summary: 'Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema FAS50, è possibile avviare l"immagine di ripristino da un"unità USB e ripristinare la configurazione dal nodo partner.' 
+---
+= Avviare l'immagine di ripristino - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema FAS50, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
+
+.Fasi
+. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
++
+L'immagine viene scaricata dall'unità flash USB.
+
+. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
+. Ripristinare il file system var:
++
+[role="tabbed-block"]
+====
+.Opzione 1: ONTAP 9.16,0 o versione precedente
+--
+.. Sul controller con problemi, premere `Y` quando viene visualizzato `Do you want to restore the backup configuration now?`
+.. Sul controller danneggiato, premere `Y` quando viene richiesto di sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.
+.. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege advanced`.
+.. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address` .
++
+*NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
+
+.. Sul controller partner sano, riportare il controller danneggiato al livello di amministratore: `set -privilege admin`.
+.. Sul controller con problemi, premere `Y` quando viene visualizzato `Was the restore backup procedure successful?`.
+.. Sul controller con problemi, premere `Y` quando viene visualizzato `...would you like to use this restored copy now?`.
+.. Sul controller danneggiato, premere `Y` quando richiesto per riavviare il controller danneggiato e premere `ctrl-c` per il menu di avvio.
+.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristino della crittografia"].
+
+
+--
+.Opzione 2: ONTAP 9.16,1 o versione successiva
+--
+.. Sul controller danneggiato, premere `Y` quando viene richiesto di ripristinare la configurazione di backup.
++
+Una volta completata la procedura di ripristino, questo messaggio viene visualizzato sulla console - `syncflash_partner: Restore from partner complete`.
+
+.. Sul controller danneggiato, premere `Y` quando richiesto per confermare se il backup di ripristino è stato eseguito correttamente.
+.. Sul controller danneggiato, premere `Y` quando viene richiesto di utilizzare la configurazione ripristinata.
+.. Sul controller danneggiato, premere `Y` quando viene richiesto di riavviare il nodo.
+.. Sul controller danneggiato, premere `Y` quando richiesto per riavviare il controller danneggiato e premere `ctrl-c` per il menu di avvio.
+.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristino della crittografia"].
+
+
+--
+====
+
+
+. Collegare il cavo della console al controller partner.
+. Restituire il controller utilizzando `storage failover giveback -fromnode local` comando.
+. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
+. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
++
+*NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
+
+
+
+.Quali sono le prossime novità?
+Dopo aver avviato l'immagine di ripristino, è necessario link:bootmedia-encryption-restore.html["ripristinare la crittografia sul supporto di avvio"].

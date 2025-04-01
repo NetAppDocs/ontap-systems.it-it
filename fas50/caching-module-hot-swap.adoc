@@ -1,0 +1,74 @@
+---
+permalink: fas50/caching-module-hot-swap.html 
+sidebar: sidebar 
+keywords: fas50, hot swap, replace, Flash Cache 
+summary: 'È possibile sostituire a caldo un modulo SSD Flash cache NVMe (modulo di caching) con una stessa capacità dello stesso vendor o di un altro vendor supportato.' 
+---
+= Modulo di caching hot-swap - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire a caldo un modulo SSD NVMe (modulo Flash cache) con una stessa capacità dello stesso vendor o di un altro vendor supportato.
+
+.Prima di iniziare
+Il sistema storage deve soddisfare determinati criteri a seconda della situazione:
+
+* Il sistema di archiviazione deve disporre del sistema operativo appropriato per il modulo di caching che si sta installando.
+* Il modulo di caching sostitutivo deve avere la stessa capacità del modulo di caching guasto, ma può provenire da un altro vendor supportato.
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.
+
+
+.Fasi
+. Mettere a terra l'utente.
+. Individuare il modulo di caching guasto tramite il LED di attenzione giallo acceso sulla parte anteriore del modulo di caching.
++
+Un modulo di caching può trovarsi nell'alloggiamento unità 0 o 23.
+
+. Rimuovere il modulo di caching:
++
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[immagine delle fasi di sostituzione del modulo di caching fas50]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Premere il pulsante di rilascio sulla superficie del modulo per aprire la maniglia della camma.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Ruotare la maniglia della camma verso il basso per disinnestare il modulo dalla piastra interna.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Estrarre il modulo dall'alloggiamento utilizzando la maniglia della camma e sostenendo il modulo con l'altra mano.
+
+Quando si rimuove un modulo, utilizzare sempre due mani per sostenerne il peso.
+
+|===
+. Attendere almeno 70 secondi prima di inserire il modulo di caching sostitutivo.
+. Installare il modulo di caching sostitutivo:
++
+.. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire il modulo.
+.. Premere delicatamente fino a quando il modulo non si arresta.
+.. Chiudere la maniglia della camma in modo che il modulo sia completamente inserito nella parte interna e che la maniglia scatti in posizione.
++
+Assicurarsi di chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie del modulo.
+
+
+
+. Verificare che il LED di attività del modulo (verde) sia acceso.
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
+

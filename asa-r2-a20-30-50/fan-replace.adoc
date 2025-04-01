@@ -13,6 +13,8 @@ summary: 'Sostituire un modulo della ventola nel sistema ASA A20, ASA A30 o ASA 
 [role="lead"]
 Sostituire un modulo della ventola nel sistema ASA A20, ASA A30 o ASA A50 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
+Per sostituire una ventola, è necessario rimuovere la centralina, rimuovere la ventola difettosa, installare la ventola di ricambio, quindi reinstallare la centralina.
+
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
 
@@ -23,8 +25,6 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 == Fase 1: Spegnere il controller compromesso
-
-Spegnere o sostituire il controller compromesso.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -84,7 +84,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Assicurarsi che tutti gli altri componenti del sistema di stoccaggio funzionino correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .Fasi
 . Sul controller danneggiato, assicurarsi che il LED NV sia spento.

@@ -20,7 +20,7 @@ Sostituire lo chassis del sistema AFF C30 o AFF C60 quando un guasto hardware lo
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Assicurarsi che tutti gli altri componenti del sistema di stoccaggio funzionino correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .Fasi
 . Sul controller danneggiato, assicurarsi che il LED NV sia spento.
@@ -124,50 +124,47 @@ Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguett
 
 
 
-== Fase 2: Rimuovere le unità dal telaio danneggiato
+== Passaggio 2: Rimuovere i moduli di caching dal telaio danneggiato
 
-È necessario rimuovere tutte le unità e gli eventuali alloggiamenti delle unità dallo chassis danneggiato in modo che, successivamente, nella procedura, sia possibile installarle nello chassis sostitutivo.
+È necessario rimuovere eventuali moduli di caching e alloggiamenti delle unità dallo chassis danneggiato in modo da poterli installare nello chassis di sostituzione in un secondo momento della procedura.
 
 . Rimuovere delicatamente il frontalino dalla parte anteriore del sistema di archiviazione.
-. Rimuovere le unità e gli eventuali alloggiamenti:
+. Rimuovere i moduli di caching e gli spazi vuoti delle unità:
 +
 
-NOTE: Tenere traccia dell'alloggiamento da cui è stato rimosso ciascun disco e ciascun disco vuoto perché devono essere installati negli stessi alloggiamenti delle unità nello chassis sostitutivo.
+NOTE: Tenere traccia dell'alloggiamento dell'unità da cui sono stati rimossi ciascun modulo di caching e il disco vuoto poiché devono essere installati negli stessi alloggiamenti dell'unità nello chassis sostitutivo.
 
 +
-image::../media/drw_nvme_drive_replace_ieops-1904.svg[Rimuovere l'unità NVMe]
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[immagine delle fasi di sostituzione del modulo di caching fas50]
 
 +
-[cols="1,4"]
+[cols="20%,80%"]
 |===
 
 
  a| 
 image::../media/icon_round_1.png[Numero di didascalia 1]
  a| 
-Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
+Premere il pulsante di rilascio sulla superficie del modulo per aprire la maniglia della camma.
 
 
 
  a| 
 image::../media/icon_round_2.png[Numero di didascalia 2]
  a| 
-Ruotare la maniglia della camma verso il basso per disinnestare la trasmissione dalla piastra intermedia.
+Ruotare la maniglia della camma verso il basso per disinnestare il modulo dalla piastra interna.
 
 
 
  a| 
 image::../media/icon_round_3.png[Numero di didascalia 3]
  a| 
-Estrarre l'unità dall'alloggiamento utilizzando la maniglia della camma e sostenendo l'unità con l'altra mano.
+Estrarre il modulo dall'alloggiamento utilizzando la maniglia della camma e sostenendo il modulo con l'altra mano.
 
-Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
-
-
-NOTE: Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
+Quando si rimuove un modulo, utilizzare sempre due mani per sostenerne il peso.
 
 |===
-. Mettere da parte le unità su un carrello o un tavolo privo di elettricità statica.
+. Mettere da parte i moduli di caching su un carrello o tavolo privo di elettricità statica.
 
 
 
@@ -237,23 +234,23 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il controller nel
 
 . Se necessario, è possibile recuperare il controller, ad eccezione dei cavi di alimentazione.
 . Ripetere questi passi per installare il secondo controller nel telaio.
-. Installare le unità e gli eventuali alloggiamenti delle unità rimossi dallo chassis danneggiato nello chassis sostitutivo:
+. Installare i moduli di caching e gli alloggiamenti delle unità rimossi dallo chassis danneggiato nello chassis sostitutivo:
 +
 
-NOTE: Le unità e gli alloggiamenti delle unità devono essere installati negli stessi alloggiamenti dello chassis sostitutivo.
+NOTE: I moduli di caching e gli alloggiamenti delle unità devono essere installati negli stessi alloggiamenti nello chassis sostitutivo.
 
-+
-.. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire l'unità.
-.. Premere delicatamente fino a quando l'unità non si arresta.
-.. Chiudere la maniglia della camma in modo che l'unità sia completamente alloggiata nel piano interno e che la maniglia scatti in posizione.
+
+
+. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire l'unità.
+. Premere delicatamente fino a quando l'unità non si arresta.
+. Chiudere la maniglia della camma in modo che l'unità sia completamente alloggiata nel piano interno e che la maniglia scatti in posizione.
 +
 Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
 
-.. Ripetere la procedura per le unità rimanenti.
-
-
-. Installare il frontalino.
-. Ricollegare i cavi di alimentazione agli alimentatori (PSU) nei controller.
+. Ripetere la procedura per le unità rimanenti.
++
+.. Installare il frontalino.
+.. Ricollegare i cavi di alimentazione agli alimentatori (PSU) nei controller.
 +
 Una volta ripristinata l'alimentazione a un alimentatore, il LED di stato dovrebbe essere verde.
 
@@ -270,8 +267,8 @@ NOTE: I controller iniziano ad avviarsi non appena l'alimentazione viene riprist
  a| 
 ALIMENTATORE CA
  a| 
-.. Collegare il cavo di alimentazione all'alimentatore.
-.. Fissare il cavo di alimentazione con il fermo del cavo di alimentazione.
+... Collegare il cavo di alimentazione all'alimentatore.
+... Fissare il cavo di alimentazione con il fermo del cavo di alimentazione.
 
 
 
@@ -279,18 +276,20 @@ ALIMENTATORE CA
  a| 
 ALIMENTATORE CC
  a| 
-.. Collegare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
-.. Serrare le due viti ad alette per fissare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+... Collegare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+... Serrare le due viti ad alette per fissare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
 
 
 |===
-. Se i controller si avviano al prompt di Loader, riavviare i controller:
+.. Se i controller si avviano al prompt di Loader, riavviare i controller:
 +
 `boot_ontap`
 
-. Riattiva AutoSupport:
+.. Riattiva AutoSupport:
 +
 `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
 
 
 

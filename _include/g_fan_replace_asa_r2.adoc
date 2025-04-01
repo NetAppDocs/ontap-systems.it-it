@@ -1,0 +1,334 @@
+= Fase 1: Spegnere il controller compromesso
+:allow-uri-read: 
+
+
+Per sostituire una ventola, è necessario rimuovere la centralina, rimuovere la ventola difettosa, installare la ventola di ricambio, quindi reinstallare la centralina.
+
+.A proposito di questa attività
+Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
+
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["stato quorum"] di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+
+|===
+
+
+
+
+== Fase 2: Rimuovere il controller
+
+È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
+
+.Prima di iniziare
+Assicurarsi che tutti gli altri componenti del sistema di stoccaggio funzionino correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+.Fasi
+. Sul controller danneggiato, assicurarsi che il LED NV sia spento.
++
+Quando il LED NV è spento, la decolorazione è completa ed è possibile rimuovere la centralina guasta in tutta sicurezza.
+
++
+
+NOTE: Se il LED NV lampeggia (verde), è in corso la procedura di destage. È necessario attendere lo spegnimento del LED NV. Tuttavia, se il lampeggiamento continua per più di cinque minuti, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
++
+Il LED NV si trova accanto all'icona NV sulla centralina.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Posizione del LED di stato NV]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Icona NV e LED sul controller
+
+|===
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare l'alimentazione dal controller danneggiato:
++
+
+NOTE: Gli alimentatori non sono dotati di interruttore di alimentazione.
+
++
+[cols="1,2"]
+|===
+| Se si scollega... | Quindi... 
+
+
+ a| 
+ALIMENTATORE CA
+ a| 
+.. Aprire il fermo del cavo di alimentazione.
+.. Scollegare il cavo di alimentazione dall'alimentatore e metterlo da parte.
+
+
+
+
+ a| 
+ALIMENTATORE CC
+ a| 
+.. Svitare le due viti ad alette sul connettore del cavo di alimentazione CC D-SUB.
+.. Scollegare il cavo di alimentazione dall'alimentatore e metterlo da parte.
+
+
+|===
+. Scollegare tutti i cavi dal controller danneggiato.
++
+Tenere traccia del punto in cui sono stati collegati i cavi.
+
+. Rimuovere la centralina danneggiata:
++
+L'illustrazione seguente mostra il funzionamento delle maniglie del controller (dal lato sinistro del controller) durante la rimozione di un controller:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[funzionamento della maniglia del controller per rimuovere un controller]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Su entrambe le estremità del controller, spingere le linguette di bloccaggio verticali verso l'esterno per rilasciare le maniglie.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+** Tirare le maniglie verso di sé per sganciare il controller dalla scheda di collegamento interna.
++
+Mentre si tira, le maniglie si estendono fuori dal controller e poi si sente una certa resistenza, continuare a tirare.
+
+** Far scorrere il controller fuori dallo chassis sostenendo la parte inferiore del controller e posizionarlo su una superficie piana e stabile.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio.
+
+|===
+. Aprire il coperchio del controller ruotando la vite a testa zigrinata in senso antiorario per allentarla, quindi aprire il coperchio.
+
+
+
+
+== Passo 3: Sostituire la ventola
+
+Per sostituire una ventola, rimuoverla e sostituirla con una nuova.
+
+. Identificare la ventola da sostituire controllando i messaggi di errore della console.
+. Rimuovere la ventola guasta:
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Sostituzione della ventola]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+| Tenere entrambi i lati della ventola in corrispondenza dei punti di contatto blu. 
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+| Tirare la ventola verso l'alto ed estrarla dalla presa. 
+|===
+. Inserire la ventola di ricambio allineandola all'interno delle guide, quindi spingere verso il basso finché il connettore della ventola non è completamente inserito nello zoccolo.
+
+
+
+
+== Fase 4: Reinstallare il modulo controller
+
+Reinstallare il controller nel telaio e riavviarlo.
+
+.A proposito di questa attività
+L'illustrazione seguente mostra il funzionamento delle maniglie del controller (dal lato sinistro di un controller) durante la reinstallazione del controller e può essere utilizzata come riferimento per le altre fasi di reinstallazione del controller.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[funzionamento della maniglia della centralina per installare una centralina]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Se le maniglie del controller sono state ruotate in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio durante la manutenzione del controller, ruotarle in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Spingere le maniglie per reinserire a metà il controller nel telaio, quindi, quando richiesto, premere fino a quando il controller non è completamente inserito.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Ruotare le maniglie in posizione verticale e bloccarle in posizione con le linguette di bloccaggio.
+
+|===
+.Fasi
+. Chiudere il coperchio del controller e ruotare la vite a testa zigrinata in senso orario fino a serrarla.
+. Inserire a metà il controller nel telaio.
++
+Allineare la parte posteriore del controller con l'apertura nel telaio, quindi spingere delicatamente il controller utilizzando le maniglie.
+
++
+
+NOTE: Non inserire completamente il controller nel telaio fino a quando non viene richiesto.
+
+. Collegare il cavo della console alla porta della console sul controller e al computer portatile in modo che il computer portatile riceva i messaggi della console al riavvio del controller.
+. Posizionare completamente la centralina nel telaio:
++
+.. Premere con decisione le maniglie fino a quando il controller non incontra la scheda di collegamento interna e non è completamente inserito.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il controller nel telaio, poiché potrebbe danneggiare i connettori.
+
+.. Ruotare le maniglie del controller verso l'alto e bloccarle in posizione con le linguette.
++
+
+NOTE: Il controller inizia ad avviarsi non appena è completamente inserito nel telaio.
+
+
+
+. Portare il controller al prompt Loader premendo CTRL-C per interrompere L'AUTOBOOT.
+. Impostare la data e l'ora sul controller:
++
+Assicurarsi di essere al prompt Loader del controller.
+
++
+.. Visualizzare la data e l'ora sul controller:
++
+`show date`
+
++
+
+NOTE: L'ora e la data predefinite sono in GMT. È possibile visualizzare l'ora locale e la modalità 24hr.
+
+.. Impostare l'ora corrente in GMT:
++
+`set time hh:mm:ss`
+
++
+Puoi ottenere il GMT corrente dal nodo sano:
+
++
+`date -u`
+
+.. Impostare la data corrente in GMT:
++
+`set date mm/dd/yyyy`
+
++
+Puoi ottenere il GMT corrente dal nodo sano: +
+`date -u`
+
+
+
+. Se necessario, è possibile recuperare il controller.
+. Ricollegare il cavo di alimentazione all'alimentatore (PSU).
++
+Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato deve essere verde.
+
++
+[cols="1,2"]
+|===
+| Se si sta ricollegando... | Quindi... 
+
+
+ a| 
+ALIMENTATORE CA
+ a| 
+.. Collegare il cavo di alimentazione all'alimentatore.
+.. Fissare il cavo di alimentazione con il fermo del cavo di alimentazione.
+
+
+
+
+ a| 
+ALIMENTATORE CC
+ a| 
+.. Collegare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+.. Serrare le due viti ad alette per fissare il connettore del cavo di alimentazione CC D-SUB all'alimentatore.
+
+
+|===
+
+
+
+
+== Fase 5: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.
