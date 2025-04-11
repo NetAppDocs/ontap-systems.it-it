@@ -34,7 +34,7 @@ Lo stato ha deve essere lo stesso per tutti i componenti.
 
 . Se lo stato del sistema visualizzato del controller non corrisponde alla configurazione del sistema di archiviazione, impostare lo `HA` stato per il controller:
 +
-`ha-config modify controller ha-state`
+`ha-config modify controller ha`
 
 +
 Il valore dello stato ha può essere uno dei seguenti:

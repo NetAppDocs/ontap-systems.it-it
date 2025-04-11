@@ -36,11 +36,20 @@ Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. E
 
 
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback false`
+
 +
 
 NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
@@ -69,17 +78,25 @@ Premere Ctrl-C, quindi rispondere `y` quando richiesto.
  a| 
 Prompt di sistema o prompt della password
  a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
 
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
 
 
 
 
-== Fase 2: Sostituire il modulo NVRAM
+== Passo 2: Sostituire il modulo NVRAM o il modulo DIMM NVRAM
 
+Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropriata riportata di seguito.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Sostituire il modulo NVRAM
+--
 Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del telaio e seguire la sequenza specifica di passi.
 
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
@@ -149,10 +166,9 @@ NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 
 
-
-
-== Fase 3: Sostituire un DIMM NVRAM
-
+--
+.Opzione 2: Sostituire il modulo DIMM NVRAM
+--
 Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
 
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
@@ -225,9 +241,11 @@ NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 
 
+--
+====
 
 
-== Fase 4: Verifica dello stato del controller
+== Fase 3: Verifica dello stato del controller
 
 All'avvio del controller, è necessario confermare lo stato del controller collegato al pool di dischi.
 
@@ -297,6 +315,6 @@ Disk                   Size Shelf Bay Type    Type        Name
 
 
 
-== Fase 5: Restituire il componente guasto a NetApp
+== Fase 4: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

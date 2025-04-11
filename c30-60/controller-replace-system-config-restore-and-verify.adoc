@@ -45,7 +45,7 @@ Lo stato ha deve essere lo stesso per tutti i componenti.
 
 . Se lo stato del sistema visualizzato del controller non corrisponde alla configurazione del sistema di archiviazione, impostare lo `HA` stato per il controller:
 +
-`ha-config modify controller ha-state`
+`ha-config modify controller ha`
 
 +
 Il valore dello stato ha può essere uno dei seguenti:
@@ -81,4 +81,4 @@ In caso di problemi, controllare il cablaggio e riposizionare i cavi.
 
 
 .Quali sono le prossime novità?
-Dopo aver ripristinato e verificato la configurazione di sistema per il sistema AFF C30 o AFF C60, è necessario link:controller-replace-recable-reassign-disks.html["restituire il controller"].
+Dopo aver ripristinato e verificato la configurazione del sistema, è necessario link:controller-replace-recable-reassign-disks.html["restituire il controller"].

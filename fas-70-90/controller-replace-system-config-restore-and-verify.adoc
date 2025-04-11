@@ -37,7 +37,7 @@ NOTE: Se viene visualizzato _PERSONALITY MISMATCH_, contattare l'assistenza clie
 +
 Lo stato ha deve essere lo stesso per tutti i componenti.
 
-. Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
+. Se lo stato del sistema visualizzato del modulo controller non corrisponde alla configurazione del sistema, impostare `HA` lo stato per il modulo controller: `ha-config modify controller ha`
 +
 Il valore dello stato ha può essere uno dei seguenti:
 

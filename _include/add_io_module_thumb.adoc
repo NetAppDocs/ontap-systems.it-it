@@ -20,7 +20,7 @@ Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Sul controller danneggiato, rimuovere il modulo di chiusura i/o dallo slot di destinazione.
 +
-Gli slot i/o inutilizzati devono avere un modulo di chiusura installato per evitare possibili problemi termici.
+Gli slot i/o inutilizzati devono avere un modulo di chiusura installato per evitare possibili problemi termici e per garantire la conformità EMC.
 
 +
 image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Rimuovere un modulo di chiusura i/O.]
@@ -61,7 +61,7 @@ Se è stato installato un modulo i/o di storage, installare e collegare i ripian
 +
 Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
 
-. Restituire il controller danneggiato dal controller partner: `storage failover giveback -ofnode _impaired_node_name_`
+. Restituire il controller danneggiato dal controller in buone condizioni: `storage failover giveback -ofnode _impaired_node_name_`
 . Ripetere questi passaggi per aggiungere un modulo i/o all'altro controller.
 . Ripristino del giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback _true_`
 . Se AutoSupport è abilitato, ripristinare (riattivare) la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
@@ -144,10 +144,10 @@ Se è stato installato un modulo i/o di storage, installare e collegare i ripian
 +
 Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
 
-. Restituire il controller danneggiato dal controller partner: `storage failover giveback -ofnode _impaired_node_name_`
+. Restituire il controller danneggiato dal controller in buone condizioni: `storage failover giveback -ofnode _impaired_node_name_`
 . Ripristino del giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback _true_`
-. Se AutoSupport è abilitato, ripristinare (riattivare) la creazione automatica dei casi: AutoSupport del nodo di sistema Invoke -node * -type all -message MAINT=END
-. Se è stato installato un modulo NIC, specificare la modalità di utilizzo per ciascuna porta come _network_: `storage port modify -node *_<node name>_ -port *_<port name>_ -mode network`
+. Se AutoSupport è abilitato, ripristinare (riattivare) la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+. Se è stato installato un modulo NIC, specificare la modalità di utilizzo per ciascuna porta come _network_: `storage port modify -node _node_name_ -port _port_name_ -mode _network_`
 . Ripetere questa procedura per l'altro controller.
 
 

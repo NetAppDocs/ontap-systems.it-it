@@ -36,11 +36,20 @@ Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. E
 
 
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback false`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback false`
+
 +
 
 NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
@@ -69,9 +78,11 @@ Premere Ctrl-C, quindi rispondere `y` quando richiesto.
  a| 
 Prompt di sistema o prompt della password
  a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
 
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
 
@@ -82,15 +93,27 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 * Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* È necessario aver confermato che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale (`metrocluster node show`).
+* È necessario aver confermato che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale:
++
+`metrocluster node show`
+
 
 
 .Fasi
-. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro:
++
+`storage failover modify –node local -auto-giveback false`
+
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
 +
 [cols="1,2"]
@@ -115,9 +138,11 @@ Premere Ctrl-C, quindi rispondere `y` quando richiesto.
  a| 
 Prompt di sistema o prompt della password (inserire la password di sistema)
  a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
 
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
 

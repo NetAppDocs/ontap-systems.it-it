@@ -19,16 +19,18 @@ Per completare la sostituzione del controller per i sistemi FAS70 e FAS90, ripri
 
 È necessario installare nuove licenze per il nodo _replacement_ se il nodo compromesso utilizzava funzioni ONTAP che richiedono una licenza standard (bloccata da nodo). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
 
-.A proposito di questa attività
-Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione.
+.Prima di iniziare
+Se il sistema inizialmente utilizzava ONTAP 9.10,1 o versioni successive, utilizzare la procedura descritta in  https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes^["Post-processo di sostituzione della scheda madre per aggiornare le licenze sulle piattaforme ONTAP"]. In caso di dubbi sulla versione iniziale di ONTAP per il sistema in uso, consultare link:https://hwu.netapp.com["NetApp Hardware Universe"^] per ulteriori informazioni.
 
+.A proposito di questa attività
+* Fino all'installazione delle chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo _replacement_. Tuttavia, se il nodo compromesso era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione.
++
 Inoltre, l'utilizzo di funzionalità senza licenza sul nodo potrebbe non essere conforme al contratto di licenza, pertanto è necessario installare la chiave o le chiavi di licenza sostitutive sul nodo _replacement_ il prima possibile.
 
-Le chiavi di licenza devono essere in formato a 28 caratteri.
+* Le chiavi di licenza devono essere in formato a 28 caratteri.
+* Si dispone di un periodo di prova di 90 giorni per l'installazione delle chiavi di licenza. Dopo il periodo di tolleranza, tutte le vecchie licenze vengono invalidate. Dopo aver installato una chiave di licenza valida, si hanno a disposizione 24 ore per installare tutte le chiavi prima della fine del periodo di tolleranza.
+* Se il nodo si trova in una configurazione MetroCluster e tutti i nodi di un sito sono stati sostituiti, le chiavi di licenza devono essere installate sul nodo o sui nodi _replacement_ prima dello switchback.
 
-Si dispone di un periodo di prova di 90 giorni per l'installazione delle chiavi di licenza. Dopo il periodo di tolleranza, tutte le vecchie licenze vengono invalidate. Dopo aver installato una chiave di licenza valida, si hanno a disposizione 24 ore per installare tutte le chiavi prima della fine del periodo di tolleranza.
-
-Se il nodo si trova in una configurazione MetroCluster e tutti i nodi di un sito sono stati sostituiti, le chiavi di licenza devono essere installate sul nodo o sui nodi _replacement_ prima dello switchback.
 
 .Fasi
 . Se sono necessarie nuove chiavi di licenza, procurarsi le chiavi di licenza sostitutive sul https://mysupport.netapp.com/site/global/dashboard["Sito di supporto NetApp"] Nella sezione My Support (supporto personale) sotto Software licensed (licenze software).

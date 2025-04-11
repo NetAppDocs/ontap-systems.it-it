@@ -53,7 +53,7 @@ Sullo schermo viene visualizzato il seguente messaggio:
 
 . Monitorare il processo di ripristino dell'installazione dei supporti di avvio.
 +
-Il processo viene completato e viene visualizzato il `Installation complete.` messaggio.
+Il processo viene completato e viene visualizzato il `Installation complete` messaggio.
 
 . Il sistema controlla il tipo di crittografia e di crittografia e visualizza uno dei due messaggi. A seconda del messaggio visualizzato, eseguire una delle seguenti operazioni:
 +
@@ -348,7 +348,10 @@ kmip2_client: Successfully imported the keys from external key server: xxx.xxx.x
 Successfully recovered keymanager secrets.
 ....
 =====
-*** Se la chiave non viene ripristinata correttamente, il sistema si arresta e indica che non è stato possibile ripristinarla. Vengono visualizzati i messaggi di errore e di avvertenza. Eseguire nuovamente il processo di ripristino immettendo `boot_recovery -partner`.
+*** Se la chiave non viene ripristinata correttamente, il sistema si arresta e indica che non è stato possibile ripristinarla. Vengono visualizzati i messaggi di errore e di avvertenza. Eseguire nuovamente il processo di ripristino:
++
+`boot_recovery -partner`
+
 +
 .Mostrare un esempio di messaggi di errore e di avvertenza relativi al ripristino della chiave
 [%collapsible]
@@ -378,7 +381,7 @@ LOADER-B>
 .. Quando il nodo viene riavviato, verificare che il ripristino del supporto di avvio sia stato eseguito correttamente confermando che il sistema è nuovamente online e operativo.
 .. Riportare il controller al funzionamento normale restituendo lo storage:
 +
-`storage failover giveback -ofnode _impaired_node_name_`.
+`storage failover giveback -ofnode _impaired_node_name_`
 
 
 
@@ -388,11 +391,11 @@ LOADER-B>
 
 . Se il giveback automatico è stato disattivato, riabilitarlo:
 +
-`storage failover modify -node local -auto-giveback true`.
+`storage failover modify -node local -auto-giveback true`
 
 . Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
 +
-`system node autosupport invoke -node * -type all -message MAINT=END`.
+`system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 

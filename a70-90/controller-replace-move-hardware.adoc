@@ -219,7 +219,27 @@ Spostare i moduli DIMM nel modulo controller sostitutivo.
 .. Sollevare il condotto dell'aria e ruotarlo verso l'alto fino in fondo.
 
 
-. Individuare i DIMM di sistema sulla scheda madre.
+. Individuare i DIMM di sistema sulla scheda madre, utilizzando la mappa DIMM sulla parte superiore del condotto dell'aria.
++
+Le posizioni dei DIMM, in base al modello, sono elencate nella tabella seguente:
+
++
+[cols="1,4"]
+|===
+
+
+| Modello | Posizione dell'alloggiamento DIMM 
+
+
+ a| 
+FAS70
+| 3, 10, 19, 26 
+
+
+ a| 
+FAS90
+| 3, 7, 10, 14, 19, 23, 26, 30 
+|===
 +
 image::../media/drw_a70_90_dimm_ieops-1513.svg[Mappa DIMM]
 

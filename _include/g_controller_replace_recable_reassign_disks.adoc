@@ -75,7 +75,7 @@ Reimpostare la crittografia e riportare il controller al normale funzionamento.
 
 .Fasi
 . Se il volume root è crittografato con External Key Manager e il cavo console è collegato al nodo sostitutivo, immettere `boot_ontap menu` e selezionare opzione `11`.
-. Rispondere `y` o `n` alle seguenti domande:
+. Se compaiono queste domande, rispondere `y` o `n` secondo necessità:
 +
 Si dispone di una copia del file /cfcard/kmip/certs/client.crt? {y/n}
 
@@ -84,9 +84,6 @@ Avete una copia del file /cfcard/kmip/certs/client.key? {y/n}
 
 +
 Si dispone di una copia del file /cfcard/kmip/certs/CA.pem? {y/n}
-
-+
-OPPURE
 
 +
 Si dispone di una copia del file /cfcard/kmip/servers.cfg? {y/n}

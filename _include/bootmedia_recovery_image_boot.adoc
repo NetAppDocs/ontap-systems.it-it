@@ -15,7 +15,7 @@ L'immagine viene scaricata dall'unità flash USB.
 .Opzione 1: ONTAP 9.16,0 o versione precedente
 --
 .. Sul controller con problemi, premere `Y` quando viene visualizzato `Do you want to restore the backup configuration now?`
-.. Sul controller danneggiato, premere `Y` quando viene richiesto di sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.
+.. Se richiesto sul controller danneggiato, premere `Y` per sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.
 .. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege advanced`.
 .. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address` .
 +

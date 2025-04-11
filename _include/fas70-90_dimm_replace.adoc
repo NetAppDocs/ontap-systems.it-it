@@ -1,17 +1,6 @@
----
-permalink: c80/dimm-replace.html 
-sidebar: sidebar 
-keywords: c80, replace a dimm 
-summary: Sostituire un modulo DIMM nel sistema AFF C80 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. 
----
-= Sostituire un modulo DIMM - AFF C80
+= Fase 1: Spegnere il controller compromesso
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Sostituire un modulo DIMM nel sistema AFF C80 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
 .Prima di iniziare
 * Assicurarsi che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il supporto tecnico.
@@ -156,13 +145,9 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 == Fase 2: Rimuovere il modulo controller
 
-È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
-. Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
-+
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
-
-. Verificare che il LED di stato della NVRAM color ambra situato nello slot 4/5 sul retro del modulo controller danneggiato sia spento. Cercare l'icona NV.
+. Controllare il LED di stato NVRAM situato nello slot 4/5 del sistema. Sul pannello anteriore del modulo controller è presente anche un LED NVRAM. Cercare l'icona NV:
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
 
@@ -190,22 +175,12 @@ LED di attenzione NVRAM
 
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare i cavi di alimentazione del modulo controller dagli alimentatori del modulo controller (PSU).
+. Sulla parte anteriore dell'unità, agganciare le dita nei fori delle camme di bloccaggio, premere le linguette sulle leve a camma e ruotare delicatamente, ma con decisione, entrambi i fermi verso di sé contemporaneamente.
 +
-
-NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
-
-. Scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
-+
-Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
-
-. Rimuovere il dispositivo di gestione dei cavi dal modulo controller.
-. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
-+
-Il modulo controller si sposta leggermente fuori dallo chassis.
+Il modulo controller si sposta leggermente all'esterno del contenitore.
 
 +
-image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Immagine di rimozione della centralina]
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Immagine di rimozione della centralina]
 
 +
 [cols="1,4"]
@@ -214,28 +189,19 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Immagine di rimozio
 
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
- a| 
-Fermo di bloccaggio
-
-
-
- a| 
-image:../media/icon_round_2.png["Numero di didascalia 2"]
- a| 
-Perno di bloccaggio
-
+| Blocco dei fermi della camma 
 |===
-. Estrarre il modulo controller dal telaio e collocarlo su una superficie piana e stabile.
+. Estrarre il modulo controller dal contenitore e collocarlo su una superficie piana e stabile.
 +
-Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si estrae dal contenitore.
 
 
 
 
 
-== Fase 3: Sostituire l'DIMM
+== Fase 3: Sostituire un DIMM
 
-Per sostituire il modulo DIMM, individuarli all'interno del controller e seguire la sequenza specifica di passi.
+È necessario sostituire un DIMM quando il sistema segnala una condizione di errore permanente per tale DIMM.
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Aprire il condotto dell'aria della centralina sulla parte superiore della centralina.
@@ -244,17 +210,36 @@ Per sostituire il modulo DIMM, individuarli all'interno del controller e seguire
 .. Sollevare il condotto dell'aria e ruotarlo verso l'alto fino in fondo.
 
 
-. Individuare i moduli DIMM sul modulo controller e identificare il modulo DIMM di destinazione.
+. Individuare i moduli DIMM sul modulo controller e identificare il modulo DIMM da sostituire.
 +
-Utilizzare la mappa FRU sul condotto dell'aria del controller per individuare lo slot DIMM.
+Le posizioni dei moduli DIMM dipendono dal modello di sistema:
 
++
+[cols="1,4"]
+|===
+
+
+| Modello | Posizione dell'alloggiamento DIMM 
+
+
+| FAS70  a| 
+Slot 3, 10, 19, 26
+
+
+
+ a| 
+FAS90
+ a| 
+Slot 3, 7, 10, 14, 19, 23, 26, 30
+
+|===
 . Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
 +
 
 IMPORTANT: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
 
 +
-image::../media/drw_a70_90_dimm_ieops-1513.svg[DIMM sostituire]
+image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM sostituire]
 
 +
 [cols="1,4"]
@@ -285,48 +270,22 @@ IMPORTANT: Esaminare visivamente il DIMM per verificare che sia allineato in mod
 
 
 
-== Fase 4: Reinstallare il modulo controller
+== Fase 4: Installare il controller
 
-Reinstallare il modulo controller e riavviarlo.
+Reinstallare il modulo controller e avviarlo.
 
 . Assicurarsi che il condotto dell'aria sia completamente chiuso ruotandolo verso il basso fino in fondo.
 +
 Deve essere a filo con la lamiera del modulo controller.
 
-. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Allineare l'estremità del modulo controller con l'apertura nel contenitore, quindi far scorrere il modulo controller nel telaio con le leve ruotate lontano dalla parte anteriore del sistema.
+. Una volta che il modulo controller non riesce a farlo scorrere ulteriormente, ruotare le maniglie della camma verso l'interno fino a quando non si bloccano sotto le ventole
 +
 
-NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
-
-. Possibilità di recuperare il sistema storage secondo necessità.
-+
-Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel contenitore per evitare di danneggiare i connettori.
 
 +
-
-NOTE: Assicurarsi che il cavo della console sia collegato al modulo controller riparato in modo che riceva i messaggi della console al riavvio. Il controller riparato riceve l'alimentazione dal controller in buone condizioni e inizia a riavviarsi non appena viene inserito completamente nello chassis.
-
-. Completare la reinstallazione del modulo controller:
-+
-.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
-+
-I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
-
-+
-
-NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
-
-.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
-
-
-+
-
-NOTE: Se il controller viene avviato al prompt di Loader, riavviarlo con il `boot_ontap` comando.
-
-. Collegare i cavi di alimentazione agli alimentatori.
-+
-
-NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nel contenitore.
 
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
 . Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
