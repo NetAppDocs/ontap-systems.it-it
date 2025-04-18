@@ -43,14 +43,14 @@ Local System ID: 118065481
     ...
     ...
 ----
-. Riassegnare la proprietà del disco (per i sistemi FAS) o la proprietà del LUN (per i sistemi FlexArray), utilizzando le informazioni sull'ID di sistema ottenute dal comando disk show: `disk reassign -s old system ID`
+. Riassegnare la proprietà del disco (per sistemi FAS) utilizzando le informazioni sull'ID di sistema ottenute dal comando disk show: `disk reassign -s old system ID`
 +
 Nel caso dell'esempio precedente, il comando è: `disk reassign -s 118073209`
 
 +
 Puoi rispondere `Y` quando viene richiesto di continuare.
 
-. Verificare che i dischi (o LUN FlexArray) siano stati assegnati correttamente: `disk show -a`
+. Verificare che i dischi siano stati assegnati correttamente: `disk show -a`
 +
 Verificare che i dischi appartenenti al nodo _replacement_ mostrino il nuovo ID di sistema per il nodo _replacement_. Nell'esempio seguente, i dischi di proprietà del sistema-1 ora mostrano il nuovo ID di sistema, 118065481:
 

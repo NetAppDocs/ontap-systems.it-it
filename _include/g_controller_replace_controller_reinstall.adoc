@@ -60,6 +60,40 @@ NOTE: Il controller sostitutivo riceve alimentazione dal controller funzionante 
 
 
 
+. Portare il controller al prompt Loader premendo CTRL-C per interrompere L'AUTOBOOT.
+. Impostare la data e l'ora sul controller:
++
+Assicurarsi di essere al prompt Loader del controller.
+
++
+.. Visualizzare la data e l'ora sul controller:
++
+`show date`
+
++
+
+NOTE: L'ora e la data predefinite sono in GMT. È possibile visualizzare l'ora locale e la modalità 24hr.
+
+.. Impostare l'ora corrente in GMT:
++
+`set time hh:mm:ss`
+
++
+Puoi ottenere il GMT corrente dal nodo sano:
+
++
+`date -u`
+
+.. Impostare la data corrente in GMT:
++
+`set date mm/dd/yyyy`
+
++
+Puoi ottenere il GMT corrente dal nodo sano: +
+`date -u`
+
+
+
 . Se necessario, è possibile recuperare il controller.
 . Ricollegare il cavo di alimentazione all'alimentatore (PSU).
 +

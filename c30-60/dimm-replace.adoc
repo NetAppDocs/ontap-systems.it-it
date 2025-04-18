@@ -382,6 +382,10 @@ Allineare la parte posteriore del controller con l'apertura nel telaio, quindi s
 NOTE: Non inserire completamente il controller nel telaio fino a quando non viene richiesto.
 
 . Collegare il cavo della console alla porta della console sul controller e al computer portatile in modo che il computer portatile riceva i messaggi della console al riavvio del controller.
++
+
+NOTE: Non collegare altri cavi o cavi di alimentazione in questo momento.
+
 . Posizionare completamente la centralina nel telaio:
 +
 .. Premere con decisione le maniglie fino a quando il controller non incontra la scheda di collegamento interna e non è completamente inserito.
@@ -392,41 +396,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il controller nel
 .. Ruotare le maniglie del controller verso l'alto e bloccarle in posizione con le linguette.
 +
 
-NOTE: Il controller inizia ad avviarsi non appena è completamente inserito nel telaio.
-
-
-
-. Portare il controller al prompt Loader premendo CTRL-C per interrompere L'AUTOBOOT.
-. Impostare la data e l'ora sul controller:
-+
-Assicurarsi di essere al prompt Loader del controller.
-
-+
-.. Visualizzare la data e l'ora sul controller:
-+
-`show date`
-
-+
-
-NOTE: L'ora e la data predefinite sono in GMT. È possibile visualizzare l'ora locale e la modalità 24hr.
-
-.. Impostare l'ora corrente in GMT:
-+
-`set time hh:mm:ss`
-
-+
-Puoi ottenere il GMT corrente dal nodo sano:
-
-+
-`date -u`
-
-.. Impostare la data corrente in GMT:
-+
-`set date mm/dd/yyyy`
-
-+
-Puoi ottenere il GMT corrente dal nodo sano: +
-`date -u`
+NOTE: Il controller sostitutivo riceve alimentazione dal controller funzionante e inizia ad avviarsi non appena è completamente inserito nello chassis.
 
 
 

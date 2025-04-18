@@ -2151,10 +2151,8 @@
   <block id="741c2196cc7abcf971992d4e656da7ea" category="paragraph">In questo esempio, Node_B_1 è il nodo precedente, con il vecchio ID di sistema 118073209:</block>
   <block id="2aa94dd7242f16ec9126f4d25ad06195" category="list-text">Visualizzare il nuovo ID di sistema al prompt della modalità di manutenzione sul nodo non valido:<block ref="63328c72194085e2f8ff497b866f6d24" prefix=" " category="inline-code"></block></block>
   <block id="761dab2a2eaf4e205d39d0acc4925d17" category="paragraph">In questo esempio, il nuovo ID di sistema è 118065481:</block>
-  <block id="73a7440753d817323876d5857eb4a3f7" category="list-text">Riassegnare la proprietà del disco (per i sistemi FAS) o la proprietà del LUN (per i sistemi FlexArray), utilizzando le informazioni sull'ID di sistema ottenute dal comando disk show:<block ref="c59d47aa9e91bfb7b5c45feb4846c496" prefix=" " category="inline-code"></block></block>
   <block id="aab7ee705a771085da41cf3f32f1aebe" category="paragraph">Nel caso dell'esempio precedente, il comando è:<block ref="655dddb3fabb311af9cfc11782afaecd" prefix=" " category="inline-code"></block></block>
   <block id="1d1227c1811174bd93682bbcc9fdce3c" category="paragraph">Puoi rispondere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando viene richiesto di continuare.</block>
-  <block id="a3437746fcb93fe85bd0d8ade510007d" category="list-text">Verificare che i dischi (o LUN FlexArray) siano stati assegnati correttamente:<block ref="bdf99381eed86756b3f0c3a159c50f5c" prefix=" " category="inline-code"></block></block>
   <block id="21d6dd74cdb7e164685f5da4f2e76256" category="paragraph">Verificare che i dischi appartenenti al nodo _replacement_ mostrino il nuovo ID di sistema per il nodo _replacement_. Nell'esempio seguente, i dischi di proprietà del sistema-1 ora mostrano il nuovo ID di sistema, 118065481:</block>
   <block id="23b40d7aca05dd545bc77221d79f3fbe" category="list-text">Dal nodo integro, verificare che tutti i coredump siano salvati:</block>
   <block id="b06003538a02608d68f5e58756344017" category="list-text">Verificare che i coredump siano salvati:<block ref="99a27805d60e05546da1e515902b0e95" prefix=" " category="inline-code"></block></block>
@@ -2413,14 +2411,12 @@
   <block id="c6f502d8dd8eb8b387d8da2e59e48c95" category="summary">Il seguente video mostra la configurazione software end-to-end per i sistemi che eseguono ONTAP 9.2.</block>
   <block id="1ab25fd464770ca38598dbf7e3aa872c" category="doc">Video di installazione e configurazione - AFF A700s</block>
   <block id="0e77f42d7c64a07ce718d60dd8e6bd46" category="inline-link-macro">Video di configurazione di AFF A700s</block>
-  <block id="ad95e5b69f87474809f8228af5e2fbe2" category="paragraph"><block ref="ad95e5b69f87474809f8228af5e2fbe2" category="inline-link-macro-rx"></block></block>
   <block id="2a468fdd2649c2bddd5f46d0d16b08af" category="doc">Spegnere il controller compromesso - AFF A700</block>
   <block id="0adc04c81c64b8636310e95596f6f092" category="summary">Per sostituire una scheda PCIe, scollegare i cavi dalle schede nel riser, rimuovere il riser, sostituire il riser, quindi riposizionare le schede nel riser.</block>
   <block id="ae5748bcef90e1cb5076c109b969e1d9" category="doc">Sostituire una scheda PCIe - AFF A700</block>
   <block id="ab0f1b74bde528a6c04a7682a94cb284" category="paragraph">Per sostituire una scheda PCIe, è necessario rimuovere il cablaggio e gli eventuali SFP dalle porte delle schede PCIe nel riser di destinazione, rimuovere il riser dal modulo controller, rimuovere e sostituire la scheda PCIe, reinstallare il riser e recuperarla.</block>
   <block id="27e824f8d84211dc662b81aa3d2c5296" category="paragraph">È possibile scegliere tra diversi formati di contenuto per l'installazione e la configurazione del nuovo sistema di storage.</block>
   <block id="320003b122e9ced04801080d4fca8abd" category="list-text"><block ref="320003b122e9ced04801080d4fca8abd" category="inline-link-macro-rx"></block></block>
-  <block id="604b91e7007f6b52b608d188580ff582" category="list-text"><block ref="604b91e7007f6b52b608d188580ff582" category="inline-link-macro-rx"></block></block>
   <block id="f03c92168a16d01cf92fdfdfc719b6b5" category="summary">È possibile utilizzare il foglio di lavoro per raccogliere e registrare gli indirizzi IP specifici del sito e le altre informazioni richieste durante la configurazione di un cluster ONTAP.</block>
   <block id="1790a5691629705d1dfd90934b6c5f4d" category="doc">Foglio di lavoro per la configurazione del cluster - AFF A700s</block>
   <block id="29bd1f640adeeec5f2bc6e197d0840c4" category="paragraph"><block ref="29bd1f640adeeec5f2bc6e197d0840c4" category="inline-link-macro-rx"></block></block>
@@ -2730,7 +2726,6 @@
   <block id="ced259bed2c440468dc818b5e8ced3ef" category="paragraph">Passare alla fase successiva. La procedura di switchback MetroCluster viene eseguita nell'attività successiva del processo di sostituzione.</block>
   <block id="1a15b219d2d38ec83e74d12c75a5f388" category="section-title">Fase 5 (solo MetroCluster a due nodi): Switch back aggregate</block>
   <block id="3bc737994532b61e4fad9c84d6dccfc0" category="summary">La presente a fornisce istruzioni dettagliate e dettagliate per l'installazione di un sistema NetApp tipico.</block>
-  <block id="b37eeea92bef8e254a5c7650e7002788" category="doc">Fasi dettagliate - AFF 900</block>
   <block id="fa3056f29df183b75e177c2b6ee65b45" category="paragraph">Questo articolo fornisce istruzioni dettagliate per l'installazione di un sistema NetApp tipico. Per istruzioni di installazione più dettagliate, consulta questo articolo.</block>
   <block id="b223e7b739d071d1e94b262773fc5fc2" category="paragraph">Per installare il sistema, è necessario creare un account sul NetApp Support Site, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
   <block id="8666406295c84e68942a4f6fc1b2cb4e" category="paragraph">È necessario disporre dell'accesso a<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> per informazioni sui requisiti del sito e ulteriori informazioni sul sistema configurato.</block>
@@ -2931,7 +2926,6 @@
   <block id="13437270a7a5bb30024bcf51e56b9645" category="doc">Restituire il componente guasto a NetApp - AFF A900</block>
   <block id="eee1a85c64e17c1ca9ed30c1f544d35d" category="doc">Sostituire il modulo controller - AFF A900</block>
   <block id="8b20a20371bd26b5083507f395cf24ab" category="paragraph">Per sostituire il modulo controller guasto, è necessario spegnere il controller guasto, spostare i componenti interni nel modulo controller sostitutivo, installare il modulo controller sostitutivo e riavviare il controller sostitutivo.</block>
-  <block id="2cbabd3028fd0cb6f4a57144ace2ee33" category="list-text">Se il sistema in uso è un sistema FlexArray o dispone di una licenza V_StorageAttach, prima di eseguire questa procedura è necessario fare riferimento ai passaggi aggiuntivi richiesti.</block>
   <block id="3f0db9aa8dd4145d2c4b64ea3481303a" category="list-text">In questa procedura, il dispositivo di boot viene spostato dal controller guasto al controller sostitutivo in modo che il controller sostitutivo si avvii nella stessa versione di ONTAP del vecchio modulo controller.</block>
   <block id="c679e8417b3c86837c70fa5e162e77a6" category="list-text">Il controller guasto è il controller che viene sostituito.</block>
   <block id="df958dff87a8c819a8e0b81a1b306ead" category="list-text">Il controller sostitutivo è il nuovo controller che sostituisce il controller compromesso.</block>
@@ -3625,7 +3619,6 @@
   <block id="757216293ea1da04339a2c9b8eaa2641" category="admonition">Il file tar.gz deve essere collocato in una partizione formattata con FAT32 di almeno 4 GB. Mentre le partizioni FAT32 possono essere grandi fino a 2 TB, i tool integrati di Windows (ad esempio diskpart) non possono formattare partizioni FAT32 di dimensioni superiori a 32 GB.</block>
   <block id="d48c73102976c851dd07cb5e9103a138" category="doc">Sostituire una scheda PCIe - FAS8200</block>
   <block id="9285e5d96d62653cbfc04067e2de249c" category="list-text"><block ref="9285e5d96d62653cbfc04067e2de249c" category="inline-link-macro-rx"></block></block>
-  <block id="ddd1a9511bc4cec117e8b939fbe7f2cc" category="list-text"><block ref="ddd1a9511bc4cec117e8b939fbe7f2cc" category="inline-link-macro-rx"></block></block>
   <block id="b8657f72d8b4e1ef5c7e2c082690279e" category="list-text"><block ref="b8657f72d8b4e1ef5c7e2c082690279e" category="inline-link-rx"></block></block>
   <block id="4d2e328d055378ef43067726132a9c56" category="list-text"><block ref="4d2e328d055378ef43067726132a9c56" category="inline-link-rx"></block></block>
   <block id="0c778d4562d4433df431e74565c47304" category="doc">Sostituire il modulo di caching - FAS8200</block>
@@ -4217,16 +4210,13 @@
   <block id="1ab6b8fc7d00d8cf418a98c2a06619a5" category="doc">Ripristinare e verificare la configurazione - FAS2600</block>
   <block id="04a9405b6945cd62aebba48163e7663f" category="doc">Sostituire un alimentatore - FAS2600</block>
   <block id="7030094db64cfe33a24436a2528348b6" category="inline-link-macro">Video sulla sostituzione dell'alimentatore AFF FAS2600</block>
-  <block id="e85e66f99bf70a0cd52615d346aa4f9f" category="paragraph"><block ref="e85e66f99bf70a0cd52615d346aa4f9f" category="inline-link-macro-rx"></block></block>
   <block id="f8775be935fb9d9effeb8c290b2531ef" category="doc">Installazione e configurazione del PDF poster - FAS2600</block>
   <block id="4707af501257324eebcc0182dcfed521" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di FAS2600</block>
   <block id="e968d995195c5befd8e63072a29d7a87" category="paragraph">È possibile utilizzare il poster PDF per installare e configurare il nuovo sistema. Il <block ref="7bcaada228bfef0bb9707c307be17530" category="inline-link-macro-rx"></block> fornisce istruzioni dettagliate con collegamenti in tempo reale a contenuti aggiuntivi.</block>
   <block id="478fc4fb96b68e7639f1b8b60636da7c" category="doc">Sostituire la batteria NVMEM - FAS2600</block>
   <block id="c8ce5afe6808111cafcf57c11a22b941" category="inline-link-macro">Video sulla sostituzione della batteria NVMEM di AFF FAS2600</block>
-  <block id="42eb4da4054bc83a79fd36f832504d55" category="paragraph"><block ref="42eb4da4054bc83a79fd36f832504d55" category="inline-link-macro-rx"></block></block>
   <block id="9d74ba2bcb476d63733debafcde443ea" category="doc">Sostituire un DIMM - FAS2600</block>
   <block id="c217f888de7cccc4e5f27065cb754354" category="inline-link-macro">Video di sostituzione dei moduli DIMM AFF FAS2600</block>
-  <block id="e3d9e54e0daad2e60e36e8b370fec883" category="paragraph"><block ref="e3d9e54e0daad2e60e36e8b370fec883" category="inline-link-macro-rx"></block></block>
   <block id="7a463f9e839bbbeef6456ebce3997799" category="paragraph">Arrestare o sostituire il controller compromesso con procedure diverse, a seconda della configurazione hardware del sistema di storage.</block>
   <block id="cc0229491324372575d8e9833b910f02" category="list-text">Ricontrollare il LED NVMEM.</block>
   <block id="36ca3aba3a7a15053f83817ea55948cc" category="doc">Riscrivere il sistema e riassegnare i dischi - FAS2600</block>
@@ -4235,18 +4225,15 @@
   <block id="cdb877e559bf1542dd2ee0540807d4a8" category="doc">Ripristinare e verificare la configurazione di sistema - FAS2600</block>
   <block id="017630cf9ee2c9c60d9112bb45f305ca" category="doc">Sostituire l'hardware del modulo controller - FAS2600</block>
   <block id="5b9bf9643d348558871bac7550eb6bf2" category="inline-link-macro">Video sulla sostituzione del controller AFF FAS2600</block>
-  <block id="bfc5f4fff0a27940b1f4676800d974c4" category="paragraph"><block ref="bfc5f4fff0a27940b1f4676800d974c4" category="inline-link-macro-rx"></block></block>
   <block id="86b067a1faa816ad3c0a245cc1e409ad" category="section-title">Fase 5: Spostare il modulo di caching</block>
   <block id="f5f4db4cbf741ec589cd881a641a1a02" category="paragraph">Per spostare un modulo di caching denominato scheda M.2 PCIe sull'etichetta del controller, individuarlo e spostarlo dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.</block>
   <block id="02b2ef9566494498645accc0aa3742ef" category="doc">Sostituire il supporto di avvio - FAS2600</block>
   <block id="c66eef3fd6b2a7fdd9b6e9fbe927aa2f" category="doc">Video di installazione e configurazione - FAS2600</block>
   <block id="7d529e0ab83dded43342f45ed2a098bd" category="inline-link-macro">Video di configurazione di AFF FAS2600</block>
-  <block id="5f3f6cd3a4d5edc50129f46b603aa9c2" category="paragraph"><block ref="5f3f6cd3a4d5edc50129f46b603aa9c2" category="inline-link-macro-rx"></block></block>
   <block id="0443683677e40fa41815d2d7edef042b" category="doc">Spegnere il controller - FAS2600</block>
   <block id="49ba302fbc53429009e579494e0457be" category="list-text"><block ref="49ba302fbc53429009e579494e0457be" category="inline-link-macro-rx"></block></block>
   <block id="a618373732a54299b15020c4fdcc9ff7" category="doc">Sostituire il modulo di caching - FAS2600</block>
   <block id="f6f6b5bb4c3c117ebfdad565e3beb0c3" category="inline-link-macro">Video di sostituzione del modulo di caching AFF FAS2600</block>
-  <block id="083781fc87756a032121b806b4d18a92" category="paragraph"><block ref="083781fc87756a032121b806b4d18a92" category="inline-link-macro-rx"></block></block>
   <block id="e91a3b78a16fbd7eb7d01342d1c07d69" category="doc">Foglio di lavoro per la configurazione del cluster - FAS2600</block>
   <block id="048623d528706e72f17139851220f65a" category="doc">Panoramica sulla sostituzione dei supporti di avvio - FAS2600</block>
   <block id="d2efa0c31f219abbc043377bfd4ffa3b" category="doc">Avviare l'immagine di ripristino - FAS2600</block>
@@ -9901,7 +9888,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="07e9b2c4f45f1b16bcc15da0757a3cab" category="admonition">Non inserire completamente il controller nel telaio fino a quando non viene richiesto.</block>
   <block id="ef25353e4e6a2996c8c58db66688c4b4" category="list-text">Collegare il cavo della console alla porta della console sul controller e al computer portatile in modo che il computer portatile riceva i messaggi della console al riavvio del controller.</block>
   <block id="b5286ddd59d2d1bedeafbeaffb7de288" category="list-text">Posizionare completamente la centralina nel telaio:</block>
-  <block id="28b7fea1449f9a616376a90e478d67b0" category="admonition">Il controller inizia ad avviarsi non appena è completamente inserito nel telaio.</block>
   <block id="f34b6cfc50a1739d51d949fcdd369dad" category="list-text">Portare il controller al prompt Loader premendo CTRL-C per interrompere L'AUTOBOOT.</block>
   <block id="316bb85cd1ab9a7f0cc40325c5827a6d" category="list-text">Impostare la data e l'ora sul controller:</block>
   <block id="1e5698196a8490bf6290a21eeb883524" category="paragraph">Assicurarsi di essere al prompt Loader del controller.</block>
@@ -11911,4 +11897,19 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3034b89fc8e6fc3ae99585d8f1eab80e" category="doc">Requisiti per sostituire la centralina - FAS50</block>
   <block id="5c15054b184102da84361b1cd1e81384" category="paragraph">Aggiungi un modulo i/o al sistema storage FAS50 per migliorare la connettività di rete e ampliare le capacità del sistema di gestire il traffico dati.</block>
   <block id="9bb6ca48b5f448262155e3c3811e7d6e" category="paragraph">È possibile aggiungere un modulo i/o al sistema di archiviazione FAS50 quando sono disponibili degli slot o quando tutti gli slot sono completamente popolati (rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto).</block>
+  <block id="b9aaf4b8305c7a34a4b30da6df50ebc5" category="list-text">Riassegnare la proprietà del disco (per sistemi FAS) utilizzando le informazioni sull'ID di sistema ottenute dal comando disk show:<block ref="c59d47aa9e91bfb7b5c45feb4846c496" prefix=" " category="inline-code"></block></block>
+  <block id="2dcdf3018c4d483d8c38e450dbdf5944" category="list-text">Se il sistema dispone di una licenza V_StorageAttach, è necessario fare riferimento ai passaggi aggiuntivi richiesti prima di eseguire questa procedura.</block>
+  <block id="1253bf6221482d606a7719ba415d9176" category="admonition">Non collegare altri cavi o cavi di alimentazione in questo momento.</block>
+  <block id="c69071436bdfe1b2f2edc29969a29980" category="admonition">Il controller sostitutivo riceve alimentazione dal controller funzionante e inizia ad avviarsi non appena è completamente inserito nello chassis.</block>
+  <block id="5cb4dbca31ce772b17987c15a725b52e" category="list-text">Ripristinare il funzionamento normale del nodo:</block>
+  <block id="257315f653a5868c10e8897449aa264f" category="list-text">Ripristino del giveback automatico dalla console del controller integro:</block>
+  <block id="b9adb77861a7f27800ce914be076df5d" category="list-text"><block ref="b9adb77861a7f27800ce914be076df5d" category="inline-link-macro-rx"></block></block>
+  <block id="ec3558cc556230de3472d8f669055445" category="paragraph"><block ref="ec3558cc556230de3472d8f669055445" category="inline-link-macro-rx"></block></block>
+  <block id="2b1f12b6c48af6da013ad7ca0b3e507d" category="doc">Procedura dettagliata - AFF A900</block>
+  <block id="b8a400661d0d8f4681160e3984f8fe0e" category="paragraph"><block ref="b8a400661d0d8f4681160e3984f8fe0e" category="inline-link-macro-rx"></block></block>
+  <block id="c17ceb181c73449b45e8ac62b23f0788" category="paragraph"><block ref="c17ceb181c73449b45e8ac62b23f0788" category="inline-link-macro-rx"></block></block>
+  <block id="7d3ad47a619f98568e42b3c81d3fc66e" category="paragraph"><block ref="7d3ad47a619f98568e42b3c81d3fc66e" category="inline-link-macro-rx"></block></block>
+  <block id="3f6b8f5ed334d33d55220057f3840983" category="paragraph"><block ref="3f6b8f5ed334d33d55220057f3840983" category="inline-link-macro-rx"></block></block>
+  <block id="13ac941ecf968dc28151bce5851fd7a9" category="paragraph"><block ref="13ac941ecf968dc28151bce5851fd7a9" category="inline-link-macro-rx"></block></block>
+  <block id="f9314d663ff89799d6d255ab7e3ca079" category="paragraph"><block ref="f9314d663ff89799d6d255ab7e3ca079" category="inline-link-macro-rx"></block></block>
 </blocks>

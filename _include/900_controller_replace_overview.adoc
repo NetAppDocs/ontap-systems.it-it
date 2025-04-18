@@ -8,7 +8,7 @@ Per sostituire il modulo controller guasto, è necessario spegnere il controller
 È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.
 
 * Tutti gli shelf di dischi devono funzionare correttamente.
-* Se il sistema in uso è un sistema FlexArray o dispone di una licenza V_StorageAttach, prima di eseguire questa procedura è necessario fare riferimento ai passaggi aggiuntivi richiesti.
+* Se il sistema dispone di una licenza V_StorageAttach, è necessario fare riferimento ai passaggi aggiuntivi richiesti prima di eseguire questa procedura.
 * Se il sistema si trova in una coppia ha, il controller integro deve essere in grado di assumere il controllo che viene sostituito (indicato in questa procedura come "`controller alterato`").
 * Se il sistema si trova in una configurazione MetroCluster, consultare la sezione https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Scelta della procedura di ripristino corretta"] per determinare se utilizzare questa procedura.
 +
