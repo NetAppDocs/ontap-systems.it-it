@@ -54,10 +54,10 @@ Utilizzare il cavo di interconnessione Cluster/ha per collegare le porte da E1a 
 *Cavi di interconnessione cluster/ha*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cavo ha del cluster]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cavo ha del cluster]
 
 +
-image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Schema di cablaggio del cluster senza switch a due nodi]
+image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Schema di cablaggio del cluster senza switch a due nodi]
 
 
 
@@ -72,13 +72,11 @@ Utilizzare il cavo 100 GbE per collegare le porte da E1a a E1a e le porte da e7a
 +
 *Cavo 100 GbE*
 
-+
+
+
 image::../media/oie_cable100_gbe_qsfp28.png[Cavo da 100 GB]
 
-+
 image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Connessioni cluster via cavo alla rete cluster]
-
-
 
 --
 ====
@@ -123,9 +121,9 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cavo alla rete Etherne
 
 Utilizzare i cavi 1000BASE-T RJ-45 per collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
 
-image::../media/oie_cable_rj45.png[Cavi RJ-45]
-
 *CAVI RJ-45 1000BASE-T.
+
+image::../media/oie_cable_rj45.png[Cavi RJ-45]
 
 image::../media/drw_70-90_management_connection_ieops-1656.svg[Connettersi alla rete di gestione]
 

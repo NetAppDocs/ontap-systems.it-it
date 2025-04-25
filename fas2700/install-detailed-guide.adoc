@@ -479,13 +479,10 @@ NON collegare i cavi di alimentazione a questo punto.
 
 È necessario collegare i controller agli shelf utilizzando le porte di storage integrate. NetApp consiglia il cablaggio MP-ha per i sistemi con storage esterno. Se si dispone di un'unità a nastro SAS, è possibile utilizzare il cablaggio a percorso singolo. Se non si dispone di shelf esterni, il cablaggio MP-ha alle unità interne è opzionale (non mostrato) se i cavi SAS vengono ordinati con il sistema.
 
+.Prima di iniziare
+* È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi.
+* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
-
-=== Opzione 1: Storage via cavo su una coppia ha con shelf di dischi esterni
-
-È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi.
-
-Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo.
 
 image::../media/oie_cable_pull_tab_down.png[Connettore per cavo con linguetta di estrazione sul fondo]
 
@@ -539,12 +536,15 @@ Collegare ciascun nodo all'IOM B nello stack
 
 ** Porta del controller 1 0a alla porta IOM B 1 sul primo shelf di dischi nello stack.
 ** Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.
+
+
 image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Connettore da mini-SAS a mini-SAS"]     Cavi da mini-SAS HD a mini-SAS HD
 
-
 |===
-+
-Se si dispone di più shelf di dischi, consultare la _Guida all'installazione e al cablaggio_ per il tipo di shelf di dischi.
+
+
+
+NOTE: Per ulteriori informazioni sul cablaggio SAS e fogli di lavoro, vedere link:../sas3/overview-cabling-rules-examples.html["Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12"]
 
 . Per completare la configurazione del sistema, vedere <<Fase 5: Completare l'installazione e la configurazione del sistema>>
 
@@ -585,12 +585,11 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
-image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTAP]
+Drw_autoDiscovery_controler_Select_ieops-1849.svg[selezionare un'icona ONTAP]
 
 +
 .. Aprire file Explorer.
-.. Fare clic su Network (rete) nel riquadro sinistro.
-.. Fare clic con il pulsante destro del mouse e selezionare Aggiorna.
+.. Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 

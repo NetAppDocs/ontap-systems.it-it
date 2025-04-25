@@ -13,8 +13,10 @@ summary: 'Sostituire un modulo DIMM nel sistema ASA A20, ASA A30 o ASA A50 se ve
 [role="lead"]
 Sostituire un modulo DIMM nel sistema ASA A20, ASA A30 o ASA A50 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
+È necessario sostituire un modulo DIMM nel controller quando il sistema di archiviazione rileva errori quali la presenza di un numero eccessivo di codici di correzione degli errori CECC (Correctable Error Correction Codes) basati su avvisi di Health Monitor o errori ECC non correggibili, in genere causati da un singolo errore del modulo DIMM che impedisce al sistema di archiviazione di avviare ONTAP.
+
 .Prima di iniziare
-* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.
+* Assicurarsi che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare."
 * È necessario sostituire il componente FRU guasto con un componente FRU sostitutivo ricevuto dal fornitore.
 
 
@@ -29,12 +31,6 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 == Fase 1: Spegnere il controller compromesso
 
-Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
-
-[role="tabbed-block"]
-====
-.Opzione 1: La maggior parte dei sistemi
---
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -97,68 +93,6 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 |===
 
 
---
-.Opzione 2: Controller in un MetroCluster
---
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* È necessario aver confermato che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale:
-+
-`metrocluster node show`
-
-
-
-.Fasi
-. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
-+
-`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-
-+
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
-
-+
-`cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro:
-+
-`storage failover modify –node local -auto-giveback false`
-
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla sezione successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro:
-
-`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
-
-Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
-
-|===
-
-
---
-====
 
 
 == Fase 2: Rimuovere il controller

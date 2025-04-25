@@ -147,10 +147,7 @@
   <block id="ea68fc4bd3124625f5669e18cc6321be" category="list-text">Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.</block>
   <block id="b3a9c9a12a5c08d26dedba9b785cdd73" category="video-title">Animazione - collegare il laptop allo switch di gestione</block>
   <block id="e897f5a61b2733e58437829c5307ea46" category="list-text">Selezionare un'icona ONTAP elencata per scoprire:</block>
-  <block id="0b62e9153cdcecb79f7e53c87ce67330" category="image-alt">selezione del controllo di rilevamento automatico drw</block>
   <block id="098bbae74bb948e3ff3baff0a28b2546" category="list-text">Aprire file Explorer.</block>
-  <block id="dd91aaae84d7888dedec54ca2a506f0b" category="list-text">Fare clic su Network (rete) nel riquadro sinistro.</block>
-  <block id="45ee8c440f001b54eda6e16b8de7a56f" category="list-text">Fare clic con il pulsante destro del mouse e selezionare Aggiorna.</block>
   <block id="81592bfecc2f1f54499d5458079662a4" category="list-text">Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.</block>
   <block id="ddd155ae3314c6b49467b47ed3f5bced" category="admonition">XXXXX è il numero di serie del sistema per il nodo di destinazione.</block>
   <block id="7e043f500d316c07931a265899f256e5" category="paragraph">Viene visualizzato Gestione sistema.</block>
@@ -343,7 +340,6 @@
   <block id="d07d22679fd595588166f72cbc3fcec6" category="paragraph">Il LED NVDIMM lampeggia durante la destaging del contenuto quando si arresta il sistema. Una volta completata la destage, il LED si spegne.</block>
   <block id="d51d3e7568ea6b575902677aaf5d5ccc" category="paragraph">Per sostituire la batteria NVDIMM, è possibile utilizzare l'animazione, l'illustrazione o la procedura scritta riportate di seguito.</block>
   <block id="77803fc96df4106eec4ce497c210708c" category="video-title">Animazione - sostituire la batteria NVDIMM</block>
-  <block id="54c5909d12d5c473924ce9b2c856a68d" category="image-alt">Drw A400 Nvdimm Batt IEOPS 1004</block>
   <block id="b83b44d067ff2b81649ca1ec4d078840" category="list-text">Aprire il condotto dell'aria:</block>
   <block id="7f17300d94b3ad1307db5cc0a95ca048" category="list-text">Premere le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.</block>
   <block id="3f88f0afc7a9dcaea99ffc820cae4c95" category="list-text">Far scorrere il condotto dell'aria verso la parte posteriore del modulo controller, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.</block>
@@ -1227,7 +1223,6 @@
   <block id="0e714115aae93f290bf1207a9c149283" category="paragraph">La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, consultare <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> individuare il cavo e identificarne l'utilizzo.</block>
   <block id="6c2f5875cec2a33db9d2ba4133823107" category="paragraph">Cavo da 100 GbE</block>
   <block id="b772890c716d468c4b26510d897c0276" category="paragraph">Interconnessione HA</block>
-  <block id="3d8315ff7403b2d22ef55f5c6720369f" category="paragraph">X66211A-05 (112-00595), 0,5 m;</block>
   <block id="a3ad201a1a037cefc3f3acc547d02b93" category="paragraph">X66211-1 (112-00573), 1 m.</block>
   <block id="78ea38c5daf93362b975846e2a11be7c" category="paragraph">Rete di interconnessione del cluster</block>
   <block id="b5aa834207857f1041aac5cca3b2acbd" category="paragraph">X66211-2 (112-00574), 2 m;</block>
@@ -1960,7 +1955,6 @@
   <block id="6dcfa32e861b657cd137a281916a5188" category="paragraph">Connessione della console durante la configurazione del software su computer portatili/console non Windows o Mac</block>
   <block id="5dce1d6a0952709f0d3753b80a1cfdfb" category="list-text">Scarica e completa il _foglio di lavoro di configurazione del cluster_.</block>
   <block id="9245f306913d78c734376f866af93a01" category="paragraph"><block ref="9245f306913d78c734376f866af93a01" category="inline-link-rx"></block></block>
-  <block id="78b39d88cb979ddb300a4cf2c6cdb1be" category="image-alt">installazione di ARM per la gestione dei cavi drw</block>
   <block id="27b080f64d728dcb5d21170ab42a4bb8" category="section-title">Opzione 1: Collegamento via cavo a un cluster senza switch a due nodi, configurazione di rete unificata</block>
   <block id="a8cb52644fd63b3d401b5a740d7a6af4" category="paragraph">La rete di gestione, la rete dati UTA2 e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.</block>
   <block id="3b698ffd7d1122eeee5457612745ea25" category="list-text">È possibile utilizzare la figura o le istruzioni dettagliate per completare il cablaggio tra i controller e gli switch:</block>
@@ -2749,7 +2743,6 @@
   <block id="12f433cfca5ad984274ffdaf0fc4902b" category="paragraph">Dati Ethernet,</block>
   <block id="09fd8552ab48c65ddc70dbeb1978b198" category="paragraph">rete del cluster</block>
   <block id="9e970bc474972d15dfb05462a6fa4595" category="paragraph">Rete ottica FC</block>
-  <block id="c08fd160f4570df01d3a40efa2524ce7" category="image-alt">cavo di alimentazione dell'oie</block>
   <block id="28746f946d763ce537494ffe0d6c6727" category="list-text">Esaminare<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> e raccogliere le informazioni richieste elencate nella guida.</block>
   <block id="94f6805f56a12322f9f69e911a22d9b8" category="paragraph">Il seguente diagramma mostra l'aspetto tipico di un sistema e la posizione dei componenti principali sul retro del sistema:</block>
   <block id="39ee497291056c5c7e4ecc487f5e822d" category="open-title">Opzione 1: Cluster senza switch a due nodi</block>
@@ -4123,8 +4116,6 @@
   <block id="5852e0b4d479d20d783c528e9f8e41fa" category="doc">Sistemi FAS9500</block>
   <block id="cdcb00922b21796793c48c3b35b6c0f4" category="doc">Avviare l'immagine di ripristino - FAS9500</block>
   <block id="bc8cb8c20c19791f56e4ce60f7a2aad0" category="doc">Rimuovere il controller, sostituire il supporto di avvio e trasferire l'immagine di avvio - FAS9500</block>
-  <block id="0c95144374a371b7d780cf2dda8caa68" category="image-alt">Drw 9500 PCM open source</block>
-  <block id="3937ac537a8c89789d0e3e5e505a0afb" category="image-alt">drw 9500 rimuovere boot dev source</block>
   <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
   <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">partner-sysid</block>
   <block id="bac349cdf99ddd20206c9b20eb9e6d22" category="list-text">bootarg.init.flash_optimized per AFF</block>
@@ -6108,8 +6099,6 @@
   <block id="206f40d3d3a553b715b00b4ada962595" category="image-alt">Drw 2850 coperchio aperto del modulo controller IEOPS 695</block>
   <block id="ac250ab529052385767cc5abd9d02efe" category="paragraph">Pulsante di rilascio del coperchio del modulo controller</block>
   <block id="02196554e362859bf13fdb8c354bd53c" category="paragraph">Individuare il supporto di avvio nel modulo controller, situato sotto la scheda mezzanine e seguire le istruzioni per sostituirlo.</block>
-  <block id="b269a4583845b75a99e2494b866181d5" category="inline-image-macro">larghezza=500</block>
-  <block id="ab18556462377223339c421c568ab231" category="paragraph"><block ref="ab18556462377223339c421c568ab231" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6b6e58fb741960f0300c7783438276a5" category="paragraph">Linguetta di blocco dei supporti di avvio</block>
   <block id="fa8b2d8b91c1c89065d3652288dbddc1" category="list-text">Rimuovere la scheda mezzanine utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:</block>
   <block id="d62aede9e33b9cbeca49d6fcc6de78c2" category="list-text">Allentare le viti a testa zigrinata sulla scheda mezzanino.</block>
@@ -6282,7 +6271,6 @@ Installare la batteria sostitutiva:</block>
   <block id="9e4563e9b028264514409ab230a5da42" category="paragraph">X66240A-05, 0,5 m.</block>
   <block id="0aeb49c9fa6e4bb6f0e2ba133818122d" category="paragraph">X66240-2, 2 m</block>
   <block id="f6f5073d92449b0a0e2bd3034fc1ecea" category="paragraph">X66240A-5, 5 m.</block>
-  <block id="dea505bfaa4f0d732b7c8f5f9938f6be" category="image-alt">Cavo oie 25GB Ethernet SFP28 IEOPS 1069</block>
   <block id="cd438f3250a6932c30ca2344ae39b00e" category="paragraph">Fibre Channel da 32 GB,
 SFP+ (destinazione/iniziatore)</block>
   <block id="2c4afc06b1fdae4cd99b305968ffe5d2" category="paragraph">X66250-2, 2 m</block>
@@ -6297,7 +6285,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7176bca53e61f926de4367eb107ce7c8" category="paragraph">Cavo console USB-C.</block>
   <block id="34dc50315428bf6e6940b722c6a21ee9" category="paragraph">Cavo FC opzionale</block>
   <block id="01b24af9f8a6b3efddd64ee9ab57a42e" category="paragraph">Cavo di rete FC aggiuntivo</block>
-  <block id="3157ab12e29c7ae731c3bbc36443b23f" category="image-alt">Avvertenza peso oie fas2800 IEOPS 1070</block>
   <block id="9646d1820777de5269873d2317186ecb" category="paragraph">Switch di rete di gestione</block>
   <block id="e80abcbf02cd3bed5561a16253c1dea0" category="paragraph">Switch di rete host</block>
   <block id="3b9d43c8f889d04a7e7e50ecc887f626" category="paragraph">Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster senza switch a due nodi.</block>
@@ -6305,11 +6292,8 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="43f3f164715da7f3368f26b28f4ef36f" category="video-title">Animazione - cablaggio di un cluster senza switch a due nodi</block>
   <block id="00cdc1c050c54120647c95f8ac43e946" category="list-text">Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:</block>
   <block id="64d64c32d62f821e30eb2ef5d4583099" category="paragraph">*Cavi di interconnessione cluster*</block>
-  <block id="0d31c2b61f0790381bf124be78a40d97" category="image-alt">Drw 2800 tnsc - cablaggio cluster IEOPS 892</block>
   <block id="329a1da79dbbba5ea7dea23acd21eb44" category="paragraph">*Cavi RJ45*</block>
-  <block id="71148769b55621d50b01310cdb17af44" category="image-alt">Connessione di gestione drw 2800 IEOPS 1077</block>
   <block id="69dc61becc19938a9333356069afeddb" category="list-text">Collegare le porte della scheda mezzanine alla rete host.</block>
-  <block id="a773f522f61f6a463095f90a0f74a848" category="image-alt">Cablaggio di rete drw 2800 IEOPS 894</block>
   <block id="1d249cc4581bfebd1ac174f1d758e2de" category="list-text">Se si dispone di una rete dati Ethernet a 4 porte, collegare le porte e1a tramite e1d alla rete dati Ethernet.</block>
   <block id="1cc0b86b94e25e4841fd242fdbd850e8" category="list-text">4 porte, Ethernet 10 GB, SFP28</block>
   <block id="213b283921a16f109ab5a42efd1afde7" category="list-text">4 PORTE, 10GBASE-T, RJ45</block>
@@ -6325,18 +6309,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="6ac0c621e44f0d6d3cfb9a6035ba969b" category="list-text">Dalla porta 1 su IOM A alla porta 3 sull'IOM A sullo shelf direttamente sotto.</block>
   <block id="a2a4a3ef1017cf43a3cf109d61286633" category="list-text">Porta 1 su IOM B alla porta 3 sull'IOM B sullo shelf direttamente sotto.</block>
   <block id="9f8e1f093714df2b4e4cea2483986e1f" category="paragraph">*Cavi da mini-SAS HD a mini-SAS HD*</block>
-  <block id="202f3ec29ba7fc0c62960a60ae2f794f" category="image-alt">Cablaggio da shelf a shelf drw 2800 IEOPS 895</block>
-  <block id="b1905c91f00e1e7ad75a290938d0c0ae" category="list-text">Collegare il controller a agli shelf di dischi.</block>
-  <block id="7414b28752291f5ed73122cbbe85acd3" category="list-text">Porta del controller A da 0a a IOM B porta 1 sul primo shelf di dischi nello stack.</block>
-  <block id="d490aaf97e1fdf82eb244edca242e5f7" category="list-text">Controller A port 0b1 to IOM A port 3 on the last drive shelf in the stack.</block>
-  <block id="0d5514b466e4b55a41f3994d3034c96f" category="image-alt">dwr 2800 controller1 per gli shelf IEOPS 896</block>
-  <block id="575f5a968bfa57f9d0a99b09b5f73ff2" category="list-text">Collegare il controller B agli shelf di dischi.</block>
-  <block id="49fefb8508936cb5a0f672b0146c0013" category="list-text">Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack.</block>
-  <block id="0cbd55a3e4a33973ae5e025f7565fe75" category="list-text">Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.</block>
-  <block id="8f61138caddaadc30f99b723e123cf22" category="image-alt">dwr 2800 controller2 a shelf IEOPS 897</block>
-  <block id="17eddeb5ca42d640ce98ba7b90523804" category="image-alt">dwr 2800 accendere l'alimentazione IEOPS 898</block>
   <block id="5725fc4af65adef1b57d4b7c9a365287" category="paragraph">Se il rilevamento della rete non è abilitato sul laptop, completare manualmente la configurazione e la configurazione.</block>
-  <block id="6f196fc99c938b047a2dbbae60694da9" category="image-alt">Drw 2800 laptop per passare al controller IEOPS 1084</block>
   <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio del modulo controller.</block>
   <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">Individuare il modulo DIMM all'interno del controller, rimuoverlo e sostituirlo.</block>
   <block id="95da017c37970d073ec39c2d3a5f57a0" category="admonition">Prima di sostituire un modulo DIMM, scollegare la batteria NVMEM dal modulo controller.</block>
@@ -7072,7 +7045,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c4d97f649f8fd0bc0d2842c98374b325" category="summary">Il video Installazione e configurazione mostra come installare e collegare il nuovo sistema.</block>
   <block id="728c8b35a059c5debd8717ebc5eef9cc" category="doc">Fasi video - ASA A250</block>
   <block id="da8c100a35e67a4a9a03589f6afa9ddc" category="doc">Fasi video - FAS500f</block>
-  <block id="0a5ad698c7446792fa1695e8ef9001ee" category="image-alt">Drw 2800 cablaggio cluster commutato IEOPS 893</block>
   <block id="92217d103cec461ace2aded92b4f42ab" category="doc">Restituire il componente guasto a NetApp - ASA C400</block>
   <block id="f4b7b756855e1111bd19648537226e16" category="doc">Gestire l'hardware ASA C400</block>
   <block id="f85c225eac9932f77dacb6e6236f7ce2" category="paragraph">Per il sistema di archiviazione ASA C400, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
@@ -7268,7 +7240,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="70cdb4752e56964c8e382c73c4dad5a3" category="list-text">Registrare il sistema all'indirizzo<block ref="609ce97692648785b01245072a80d78d" category="inline-link-rx"></block>.</block>
   <block id="6ef8afe0d08cfff8d7c63feeb46c3bbe" category="inline-link">Risorse NetApp ONTAP</block>
   <block id="1e030dc8ef51cc0c3b7cfdf5b1fb31ef" category="list-text">Una volta completata la configurazione iniziale, passare alla<block ref="0d9c07b12aa4e6262cc31099f94c22ac" category="inline-link-rx"></block> Pagina per informazioni sulla configurazione di funzioni aggiuntive in ONTAP.</block>
-  <block id="c1abdda48959ad5305acdea9199b4083" category="list-text">Collegare il cavo della console al computer portatile o alla console e collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema di archiviazione, quindi collegare il computer portatile o la console allo switch sulla subnet di gestione.</block>
   <block id="ea6092d42464dfafd164efeca17f02cc" category="list-text">Configurare il sistema di archiviazione utilizzando i dati raccolti in <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>..</block>
   <block id="6a1952da65ff3ad3728cd89ec078bfa2" category="paragraph">Questa procedura fornisce istruzioni dettagliate dettagliate per l'installazione di un sistema di archiviazione AFF C250.</block>
   <block id="3e9ec063809ed35fdf77c6c261c6e205" category="paragraph">La guida rapida fornisce istruzioni grafiche per un'installazione tipica del sistema, dal rack al cablaggio, fino alla messa in funzione iniziale del sistema. Utilizzare questo contenuto se si ha familiarità con l'installazione dei sistemi NetApp.</block>
@@ -7485,17 +7456,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="381f37fd0c6301b4adcfedecc4eda925" category="image-alt">Avvertenza per sollevamento a quattro persone</block>
   <block id="3a0eeccdd4e521f45365f2b428095f2d" category="image-alt">Collegamento del dispositivo di gestione dei cavi</block>
   <block id="5ef048ab759bf73977c35349ec483eab" category="inline-image-macro">Cablaggio di coppia HA</block>
-  <block id="2b1368b4381f3629e96800ab48579d68" category="list-text">da e1b a e1b
-<block ref="aa46ce125e154e60d93093e92fe06f34" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4fae04c8c73682a0f5aee781b4ba55e0" category="list-text">da e1a a e1a
-<block ref="ce168455f06d894620cf25f3ad7f95ae" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2d5ce426423eeeead4f35769cd8b1b27" category="inline-image-macro">Passaggio 3</block>
   <block id="75f728010e80f6e306c8d0419ab6e02f" category="inline-image-macro">Simbolo di attenzione</block>
   <block id="a64c1d9519895ea9b4d05af7302a3f5d" category="paragraph"><block ref="a64c1d9519895ea9b4d05af7302a3f5d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a9640555fa5bc248b1730cc507ea1862" category="paragraph">Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE.
-** e0a
-** e1a
-<block ref="03c334f1a71e7086b1987bb740b5b995" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fae734ae73d4d9ca0d2c390bc2bb7c39" category="inline-image-macro">Cablaggio di rete host Fibre Channel</block>
   <block id="b2d4d0d6d18aadc5250160804ec5f72c" category="paragraph">Collegare le porte da 2a a 2d agli switch host FC.<block ref="f7469edef6c72cc42131f9dced4b36a4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e69c5c6214fe233e92d0ac376a7db30a" category="paragraph">Collegare le porte da e4a a e4d agli switch di rete host da 10 GbE.<block ref="54eadf4427f8838bf31ee4b6c63b48ac" category="inline-image-macro-rx" type="image"></block></block>
@@ -8512,7 +8475,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="eeadc1e47c5ada05336cc4a2430aff44" category="paragraph">Collegare il controller A ai ripiani: <block ref="d1f96be8e1b1f281d39fbb850bfff8ae" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f7272edef7a7fba4085ccfab3dcab29" category="inline-image-macro">Il cavo di collegamento al controller b</block>
   <block id="5068cb73707de732551109a3000233a5" category="paragraph">Collegare il controller B ai ripiani: <block ref="a2de9db71ec552fd6bcd09e536f53289" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3efca07728c425a2d570687f9c5ee055" category="list-text">Aprire Esplora file .</block>
   <block id="060661d6632055dffb9c643daef86e4f" category="image-alt">Collegare il computer portatile allo switch della subnet di gestione</block>
   <block id="cf3f3f0fc4be4a45a82eb23742f77b44" category="image-alt">Sostituire la batteria NV</block>
   <block id="8dd9b5acff09c1cf11545aba64dc805d" category="image-alt">Sostituire l'NVDIMM</block>
@@ -9186,7 +9148,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f7305488b29b60c60ef013880d0f02ad" category="paragraph"><block ref="f7305488b29b60c60ef013880d0f02ad" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a18694bfa10dd9b027282521693676b2" category="paragraph"><block ref="a18694bfa10dd9b027282521693676b2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="479d87b89f643c48150efb707fc18d0f" category="paragraph"><block ref="479d87b89f643c48150efb707fc18d0f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f62c6097f594e20eff16caf60adf9108" category="paragraph"><block ref="f62c6097f594e20eff16caf60adf9108" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a367e21663d7d88be766a2410f65c492" category="paragraph"><block ref="a367e21663d7d88be766a2410f65c492" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0efe74a0894d83f88156519939a5c6c8" category="image-alt">Fonti di alimentazione</block>
   <block id="8123303767547374b75236612d61eaea" category="paragraph"><block ref="8123303767547374b75236612d61eaea" category="inline-image-macro-rx" type="image"></block></block>
@@ -9236,7 +9197,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8188063ba0cf302b151076be57ced81f" category="image-alt">Cablaggio a due ripiani</block>
   <block id="d30d07697739e058466e9449e759a88c" category="paragraph"><block ref="d30d07697739e058466e9449e759a88c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="caf1bb6cd794cb2234ad5594cd599806" category="image-alt">Connessione da computer portatile a switch</block>
-  <block id="cdde7ae0e94e375bc190503128bce1fc" category="image-alt">Rilevamento automatico</block>
   <block id="4dbdeeec8c8a1db8c3051377a336528c" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="4756441374eb951a9eff4e8462cce863" category="inline-link-macro-rx"></block></block>
   <block id="295e63d74f4c0ccd864527db0492eb45" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="743c3bfe574d2216cecf6275411cf3b1" category="inline-link-macro-rx"></block></block>
   <block id="b45a109e4d0580107e262e3038f944ca" category="paragraph"><block ref="b45a109e4d0580107e262e3038f944ca" category="inline-image-macro-rx" type="image"></block></block>
@@ -9505,7 +9465,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7ca88951bb06ba87dc8ba0b64e33c507" category="list-text">Impostare l'ora corrente in GMT con il<block ref="0ad4ade5bf715a5335525c69a44424c1" prefix=" " category="inline-code"></block> comando. Potete ottenere il GMT corrente dal nodo partner il comando `date -u`.</block>
   <block id="cdce55e02d4cb663168a3f407165ecce" category="list-text">Se il LED NV è spento, passare alla fase successiva.</block>
   <block id="3e206922895508e63afff7ed9697807f" category="list-text">Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.</block>
-  <block id="224597833baafb79ff1d8b9ef9e0bff7" category="paragraph">Reimpostare la crittografia se abilitata e riportare il controller al normale funzionamento.</block>
   <block id="151adffc209b320ba53a9853aae1eabe" category="open-title">Nessuna crittografia</block>
   <block id="a2f6973fda0857d7d2ce0472981331ed" category="list-text">Dal prompt DI Loader, immettere<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block>.</block>
   <block id="dab3afc1f6c32cd488de89f6f35ab456" category="list-text">Premere &lt;enter&gt; quando i messaggi della console si interrompono.</block>
@@ -10201,7 +10160,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4e38ca25783f7173a88cdcafcbc8fcf1" category="doc">Collegare l'hardware - AFF A20, AFF A30 e AFF A50</block>
   <block id="c0b72cc8650fc5a7e5f5cf9c191a5b7c" category="paragraph">Dopo aver installato l'hardware del sistema di storage AFF A20, AFF A30 o AFF A50, collegare i controller alla rete e agli shelf.</block>
   <block id="b3a1e3cfc607694cb423d46b8b23fa54" category="paragraph">Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch di rete.</block>
-  <block id="f37876f75af8e8f5192b039199defe16" category="list-text">Le procedure di cablaggio cluster/ha e rete host mostrano le configurazioni comuni. Tenete presente che il cablaggio specifico dipende dai componenti ordinati per il vostro sistema di storage. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
   <block id="28c4b42113d6ebd3c5e6ca40929d04a6" category="list-text">Le immagini dei cavi hanno icone a freccia che mostrano l'orientamento corretto (verso l'alto o verso il basso) della linguetta di estrazione del connettore del cavo quando si inserisce un connettore in una porta.</block>
   <block id="c486d43df45ffe41cde84a1b0fa45aa0" category="paragraph"><block ref="c486d43df45ffe41cde84a1b0fa45aa0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3eb777419d46f8ec20ca944795a4d26" category="list-text">Se si effettua il cablaggio a uno switch ottico, inserire il ricetrasmettitore ottico nella porta del controller prima di collegare il cavo alla porta dello switch.</block>
@@ -10331,7 +10289,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="aac515bc7c0fef6db4d96f41deee5fd1" category="doc">Spegnere le centraline - AFF C30 e AFF C60</block>
   <block id="63e13473c1728f519626b3fe2d9025a1" category="doc">Flusso di lavoro per la sostituzione dello chassis - AFF C30 e AFF C60</block>
   <block id="48bcab49f13e58a7dda016546607124d" category="doc">Sostituire la centralina - AFF C30 e AFF C60</block>
-  <block id="27a8d5c594dd7466b19bfce476d8655f" category="doc">È possibile recuperare e restituire il controller - AFF C30 e AFF C60</block>
   <block id="985e3f4c0c5e5154a781b3845a345cdf" category="doc">Sostituzione completa della centralina - AFF C30 e AFF C60</block>
   <block id="7198cc5bade7b4a7512214ef6d139fb9" category="doc">Spegnere la centralina guasta - AFF C30 e AFF C60</block>
   <block id="1bd446701023b8913ca9b526c3e92f2e" category="doc">Ripristinare e verificare la configurazione di sistema - AFF C30 e AFF C60</block>
@@ -10365,7 +10322,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="90a513766fed06a1c7ddad5bc9b658b0" category="doc">Sostituire il supporto di avvio - AFF C80</block>
   <block id="157ac321bdd43ec0c575181166c8b935" category="doc">Sostituzione completa dello chassis - AFF C80</block>
   <block id="f7366f893dcc8238229a1e5377b17a3b" category="doc">Sostituire il telaio - AFF C80</block>
-  <block id="ab855d4ae0d2ee27daa0f6dffb2837b4" category="doc">Possibilità di recuperare e restituire il controller - AFF C80</block>
   <block id="8def3d76b77de6e3dbb32ae5e959e725" category="doc">Sostituzione completa della centralina - AFF C80</block>
   <block id="2fff840bbe3ee1ad4cc2f3efd810b44b" category="doc">Spegnere il controller danneggiato - AFF C80</block>
   <block id="5c26fa22febe5fde9e598be8ee312d12" category="doc">Ripristinare e verificare la configurazione di sistema - AFF C80</block>
@@ -10628,7 +10584,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f376855bc2e70ede2a3302568f196ac3" category="sidebar">AFF C30 e AFF C60 mantengono</block>
   <block id="60e1f7550be0949bf7734cc91fda2356" category="sidebar">Chassis AFF C30 e AFF C60</block>
   <block id="045c113b9d1cea61a74dc657da45639a" category="sidebar">Modulo controller AFF C30 e AFF C60</block>
-  <block id="26916af0dde7f17e1c0020bc61152522" category="sidebar">Controller Recable e give back</block>
   <block id="f22a96549ddb43b0980ceea8499ceba7" category="sidebar">Sistemi AFF C80</block>
   <block id="af39c2d08f5bb60a56a2c3273eb31df0" category="sidebar">Installazione e configurazione di C80</block>
   <block id="68bf1f26144175dee40f3509aa1cb595" category="sidebar">Manutenzione di C80</block>
@@ -11376,7 +11331,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="35ac4e474d14cd3235380c2e767e83a3" category="paragraph">Sostituire il NVRAM nel sistema FAS70 o FAS90 quando la memoria non volatile si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sostituzione del modulo NVRAM o del modulo DIMM NVRAM, la riassegnazione dei dischi e la restituzione del componente guasto a NetApp.</block>
   <block id="a7188c3f4745ef552e2d05d7b35f5f28" category="summary">Sostituire la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel sistema FAS70 o FAS90 per garantire che i servizi e le applicazioni che si affidano alla sincronizzazione accurata dell'ora rimangano operativi.</block>
   <block id="2ffef1288a7f6acf62a54035268660b1" category="summary">Sostituire il modulo di gestione del sistema FAS70 o FAS90 se è difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.</block>
-  <block id="61a20642d1e9cad056e372d8196160b8" category="paragraph">+ l'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.</block>
   <block id="5058f1af8388633f609cadb75a75dc9d" category="paragraph">.</block>
   <block id="83755d1a8b686dba4bc8143c0cb7f397" category="doc">Flusso di lavoro per la sostituzione dei supporti di avvio - AFF A1K</block>
   <block id="25602a3f0e04b149a4c958bcec65c371" category="summary">Il supporto di avvio del sistema AFF A1K memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi e il trasferimento dell'immagine ONTAP sui supporti di avvio sostitutivi.</block>
@@ -11647,8 +11601,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="23ec6e18dffbef0189449646f5931878" category="image-alt">Connettore 100 GbE in rame</block>
   <block id="483f1570f8eb0f7bf748ec2f83a68cba" category="paragraph">*Cavo Mini-SAS*</block>
   <block id="9f4af5ab487f7477da2dd13bdd9a635c" category="paragraph">Collega gli shelf dei dischi nello stack due l'uno all'altro, utilizzando il grafico come riferimento.</block>
-  <block id="5314841cf1990f9c696f41eaf702eb4f" category="image-alt">drw autodiscovery controler selezionare ieops 1849</block>
-  <block id="4c871f3eceeb63ae32259cd45a0be767" category="list-text">Fare clic su rete nel riquadro sinistro, quindi fare clic con il pulsante destro del mouse e selezionare Aggiorna.</block>
   <block id="08308f65214c45c04131a1ad77f35101" category="list-text">Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> prima di continuare con questa procedura.</block>
   <block id="6c9f2761d7d74eb3a979daf442af39b5" category="paragraph">Assicurarsi che tutti gli altri componenti del sistema di stoccaggio funzionino correttamente; in caso contrario, è necessario contattare<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> prima di continuare con questa procedura.</block>
   <block id="452dbbce25fd2a411a98a68c759a30a7" category="paragraph">Il valore per ha-state deve essere _ha_. Il valore per ha-state può essere uno dei seguenti: _Ha_ _mcc_ (non supportato in ASA)</block>
@@ -11912,4 +11864,63 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3f6b8f5ed334d33d55220057f3840983" category="paragraph"><block ref="3f6b8f5ed334d33d55220057f3840983" category="inline-link-macro-rx"></block></block>
   <block id="13ac941ecf968dc28151bce5851fd7a9" category="paragraph"><block ref="13ac941ecf968dc28151bce5851fd7a9" category="inline-link-macro-rx"></block></block>
   <block id="f9314d663ff89799d6d255ab7e3ca079" category="paragraph"><block ref="f9314d663ff89799d6d255ab7e3ca079" category="inline-link-macro-rx"></block></block>
+  <block id="83bff0d5c34d578fa839ac49404c9392" category="list-text">Scollegare i cavi i/o dal modulo controller.</block>
+  <block id="d86f5a7ed8b3122487d6d2983a3d95f1" category="list-text">Ricollegare i cavi i/o del modulo controller.</block>
+  <block id="db424e93139f05b40145c02ca1496dab" category="image-alt">Sostituire la batteria NVDIMM</block>
+  <block id="f01c12d2b181f3fa692e46f31483240d" category="list-text">Assicurarsi che i perni di guida del cabinet o del rack per telecomunicazioni siano fissati negli slot della guida del telaio.</block>
+  <block id="0ce45b8799d32fa93b50aed5301e827b" category="list-text">Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack. + <block ref="065babb6c425d208f17452adf684f6f8" category="inline-image-macro-rx" type="image"></block>cavi da mini-SAS HD a mini-SAS HD</block>
+  <block id="ce48b5f9c255c35e0431b311322885fc" category="list-text">Le procedure di cablaggio cluster/ha e rete host mostrano le configurazioni comuni.</block>
+  <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">Se la configurazione non viene visualizzata qui, visitare il sito Web <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> per informazioni complete sulla configurazione e sulla priorità degli slot per collegare il sistema di storage.</block>
+  <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">Cavo fc da 64 GB</block>
+  <block id="0bf370304560205688213d22ba637c07" category="paragraph"><block ref="0bf370304560205688213d22ba637c07" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="beb0d5517240a78e9a0d820d0cc72901" category="cell">Per... 2+</block>
+  <block id="41808d27e9d2aded3d4e7b4d381cd4f6" category="paragraph">X66240-2 (112-00573), 2m .3+</block>
+  <block id="610784c65e00a7160be578b24e829e1f" category="inline-image-macro">Cablaggio del controller 1</block>
+  <block id="fb1a92a9f3466626feb9c8b39fc2f15a" category="paragraph"><block ref="fb1a92a9f3466626feb9c8b39fc2f15a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4aee1879aa42ff92e3eacf5873fbb5d4" category="inline-image-macro">Cablaggio del controller 2</block>
+  <block id="db57e3bdde1cc2a58f1093e55c91edd8" category="paragraph"><block ref="db57e3bdde1cc2a58f1093e55c91edd8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a6e3a7ce135d06e87acea56094849bd" category="paragraph">X66211-2 (112-00574), 2 m.</block>
+  <block id="445ce7c267c4207385a654bbf96a7cd2" category="inline-image-macro">Connettore 10 GbE QSFP28</block>
+  <block id="ff93dddb805cf284a90f50a9478044a8" category="paragraph"><block ref="ff93dddb805cf284a90f50a9478044a8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6c61df210c55ff2f064cc13ece1afeb8" category="inline-image-macro">Connettore 25 GbE QSFP28</block>
+  <block id="33bad94543f43b5a86ed85b45f07fad9" category="paragraph"><block ref="33bad94543f43b5a86ed85b45f07fad9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eec89088ee408b80387155272b113256" category="list-text">Rete</block>
+  <block id="b44c77c4bff9d030b38703307329190c" category="paragraph">Collegamento delle PSU alla fonte di alimentazione</block>
+  <block id="5d1da2d235e27fc0bcc9ce897d690f1a" category="list-text">da e1b a e1b</block>
+  <block id="aa46ce125e154e60d93093e92fe06f34" category="paragraph"><block ref="aa46ce125e154e60d93093e92fe06f34" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dab4cb98bc90925ff554009f35b28013" category="list-text">da e1a a e1a</block>
+  <block id="ce168455f06d894620cf25f3ad7f95ae" category="paragraph"><block ref="ce168455f06d894620cf25f3ad7f95ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d82509fd67d3344fdfc796875cbb5148" category="paragraph">Collegare le porte di interconnessione del cluster agli switch di interconnessione del cluster 100 GbE.</block>
+  <block id="922c556baf6272bffc4fa28b2e9a0bbc" category="list-text">e0a</block>
+  <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
+  <block id="03c334f1a71e7086b1987bb740b5b995" category="paragraph"><block ref="03c334f1a71e7086b1987bb740b5b995" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="149908e216dc72e0533f69ab126aad8f" category="doc">Restituire il controller - AFF C30 e AFF C60</block>
+  <block id="d577eb8153a8191824e900c199f4adb5" category="image-alt">schema di cablaggio del cluster senza switch a30 e a60 utilizzando due moduli io 100gbe</block>
+  <block id="b36b92a50cc219291b67a5511975b913" category="image-alt">schema di cablaggio del cluster senza switch a30 e a60 utilizzando un modulo io 100gbe</block>
+  <block id="ccea46e36f76a430c118e619834cee72" category="image-alt">schema di cablaggio del cluster commutato a30 e a60 utilizzando due moduli io 100gbe</block>
+  <block id="526ef9ab51ab95d97249aac6cc69c855" category="doc">Restituire il controller - AFF C80</block>
+  <block id="f114d3932a75433b75f66fa15d3b0340" category="list-text">Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.</block>
+  <block id="6ba9035799414ab848820232d6755ea3" category="paragraph">Drw_autoDiscovery_controler_Select_ieops-1849.svg[selezionare un'icona ONTAP]</block>
+  <block id="ace672d02e91b22d0e293d6ce8c9ee77" category="image-alt">Aprire il controller</block>
+  <block id="ecb9e090aec7cb8bd31f706750ce1760" category="paragraph"><block ref="ecb9e090aec7cb8bd31f706750ce1760" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c332a8daf8a0021ec9153a974044b66" category="image-alt">25GB cavo di rete</block>
+  <block id="262904644a868ffbd1ee5c1fd87f7e1a" category="image-alt">Cavo da mini-SAS a mini-SAS</block>
+  <block id="b68abce5afd4f011d69f546d6ca42bb0" category="image-alt">Etichetta di avvertenza per il sollevamento</block>
+  <block id="952940d015e596e40662acd687844cc4" category="image-alt">Cablaggio del cluster a due nodi</block>
+  <block id="a1200bdfe199f9fa17797210969ba510" category="image-alt">Connessione di gestione</block>
+  <block id="20822b3c185b92a79afd73ff588c5aca" category="image-alt">Connessioni di rete</block>
+  <block id="610f4c607b42bf25cf6ef97ed4b0f226" category="image-alt">25GB cavo Ethernet</block>
+  <block id="d3a1b9f7d22d4b09db0b92c5183f1170" category="image-alt">Connettore Ethernet 25GB</block>
+  <block id="ee151691d95fa34033bab458f921f308" category="image-alt">Collegamenti del cluster commutati</block>
+  <block id="422b19e9df415d67d88bd9b0fb3451d2" category="image-alt">Connessione di rete di gestione</block>
+  <block id="fb8d77e1874a8ce16ad0e1d15408d8cd" category="image-alt">Connettore da mini SAS a mini SAS</block>
+  <block id="ead5f0e9b0fc157a5b141be2ccd44dbd" category="paragraph">+ immagine:../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[cablaggio da ripiano a ripiano]</block>
+  <block id="b672b75ae62195a280bf8f67f6923701" category="paragraph">+ . Collegare il controller a agli shelf di dischi. .. Porta del controller A da 0a a IOM B porta 1 sul primo shelf di dischi nello stack. .. Controller A port 0b1 to IOM A port 3 on the last drive shelf in the stack.</block>
+  <block id="331c92c74ae2411dbfdce0b34bc0251f" category="paragraph">+ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[connettore da Mini SAS a mini SAS]</block>
+  <block id="2525bc76b22ae63a5087b660ed944490" category="paragraph">+ immagine:../media/dwr-2800_controller1-to schelf_IEOPS-896.svg[collegamento da controller A A shelf]</block>
+  <block id="d93bc8a87f3c34f95017b69aa2590230" category="paragraph">+ . Collegare il controller B agli shelf di dischi. .. Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack. .. Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.</block>
+  <block id="05a6bd9e18c93cca4d9b550746dfd5d1" category="paragraph">+ immagine:../media/dwr-2800_controller2-to schelf_IEOPS-897.svg[collegamento da controller B a shelf]</block>
+  <block id="40bde7f2324ee2876dd8a09846b14ff4" category="image-alt">Accendere l'unità</block>
+  <block id="512bdc85c8065a0397ce7025381aaf66" category="image-alt">Sistema di rilevamento automatico</block>
+  <block id="397249170dcc18ae00c3a7885f97fdc1" category="list-text">Collegare il cavo della console al computer portatile o alla console e collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema di archiviazione, quindi collegare il computer portatile o la console allo switch sulla subnet di gestione.</block>
 </blocks>

@@ -14,6 +14,7 @@ Per accedere ai componenti all'interno del modulo controller, rimuovere prima il
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Scollegare i cavi i/o dal modulo controller.
 . Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.
 +
 
@@ -23,6 +24,7 @@ NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare 
 image::../media/drw_a250_pcm_remove_install.png[Apertura del meccanismo di chiusura]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -45,6 +47,7 @@ Meccanismo di blocco
 image::../media/drw_a250_open_controller_module_cover.png[Apertura del coperchio del modulo controller]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -143,16 +146,13 @@ Il file di immagine del servizio decompresso contiene due cartelle:
 
 
 .. Copiare la cartella efi nella directory principale dell'unità flash USB.
-
-
 +
 
 NOTE: Se l'immagine di servizio non dispone di una cartella efi, vedere link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["Cartella EFI mancante dal file di download dell'immagine di servizio utilizzato per il ripristino del dispositivo di avvio per i modelli FAS e AFF^"].
 
 +
-+ l'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
+L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
 
-+
 .. Rimuovere l'unità flash USB dal computer portatile.
 .. Se non è già stato fatto, installare il condotto dell'aria.
 +
@@ -192,6 +192,7 @@ Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dis
 +
 Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
 
+.. Ricollegare i cavi i/o del modulo controller.
 .. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
 +
 Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimentazione. Prepararsi ad interrompere il processo di avvio.

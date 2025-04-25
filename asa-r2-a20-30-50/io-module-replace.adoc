@@ -13,8 +13,10 @@ summary: Per sostituire una scheda PCIe, scollegare i cavi dalle schede, rimuove
 [role="lead"]
 Sostituire un modulo i/o nel sistema ASA A20, ASA A30 o ASA A50 quando il modulo non funziona o richiede un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp.
 
+Utilizzare questa procedura per sostituire un modulo i/o guasto.
+
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -27,12 +29,6 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 == Fase 1: Spegnere il controller compromesso
 
-Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
-
-[role="tabbed-block"]
-====
-.Opzione 1: La maggior parte dei sistemi
---
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -95,68 +91,6 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 |===
 
 
---
-.Opzione 2: Controller in un MetroCluster
---
-Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
-
-* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
-* È necessario aver confermato che lo stato di configurazione MetroCluster è configurato e che i nodi sono in uno stato abilitato e normale:
-+
-`metrocluster node show`
-
-
-
-.Fasi
-. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
-+
-`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-
-+
-Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
-
-+
-`cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Disattivare il giveback automatico dalla console del controller integro:
-+
-`storage failover modify –node local -auto-giveback false`
-
-. Portare la centralina danneggiata al prompt DEL CARICATORE:
-+
-[cols="1,2"]
-|===
-| Se il controller non utilizzato visualizza... | Quindi... 
-
-
- a| 
-Il prompt DEL CARICATORE
- a| 
-Passare alla sezione successiva.
-
-
-
- a| 
-In attesa di un giveback...
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
-
-
-
- a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
- a| 
-Assumere il controllo o arrestare il controller compromesso dal controller integro:
-
-`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
-
-Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
-
-|===
-
-
---
-====
 
 
 == Fase 2: Sostituire un modulo i/o guasto
@@ -210,26 +144,12 @@ Estrarre il modulo i/o dal controller utilizzando la linguetta dell'etichetta de
 Dopo aver sostituito un modulo i/o, è necessario riavviare il controller.
 
 .Fasi
-. Riavviare il controller dal prompt DEL CARICATORE:
+. Riavviare il controller dal prompt di Loader: `bye`
 +
-`bye`
+Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
 
-+
-
-NOTE: Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
-
-. Ripristinare il funzionamento normale del nodo:
-+
-`storage failover giveback -ofnode _impaired_node_name_`
-
-. Ripristino del giveback automatico dalla console del controller integro:
-+
-`storage failover modify -node local -auto-giveback _true_`
-
-. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`
-
+. Riportare il nodo al funzionamento normale: `storage failover giveback -ofnode _impaired_node_name_`
+. Ripristino del giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback _true_`
 
 
 
