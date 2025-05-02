@@ -256,10 +256,16 @@ NOTE: Per istruzioni su come configurare la porta seriale della console, consult
 
 .. Utilizzando il cavo della console fornito con il sistema di archiviazione, collegare un'estremità del cavo della console al computer portatile e l'altra estremità alla porta seriale della console sul controller A.
 .. Collegare il computer portatile allo switch sulla subnet di gestione.
++
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Collegamenti della console]
+
 
 
 . Assegnare un indirizzo TCP/IP al computer portatile, utilizzando un indirizzo presente nella subnet di gestione.
-. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
+. Collegare i due cavi di alimentazione agli alimentatori del controller, quindi collegarli alle sorgenti di alimentazione su circuiti diversi.
++
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Schema di collegamento dell'alimentazione AFF A1K AFF A70 o AFF A90 o FAS70 o FAS90]
+
 +
 ** Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
 ** I LED lampeggiano e le ventole si avviano, a indicare che i controller si stanno accendendo.

@@ -132,6 +132,8 @@ NOTE: Lo spostamento di un cavo non richiede alcun tempo di attesa tra lo scolle
 . Possibilità di recuperare i collegamenti dello shelf esistente su due set di porte compatibili RoCE in slot diversi, in base al modello di piattaforma utilizzato.
 
 
+* Per sistemi AFF:
++
 [role="tabbed-block"]
 ====
 .AFF A1K
@@ -141,22 +143,22 @@ Fai una delle seguenti operazioni se stai aggiungendo a caldo un secondo ripiano
 
 NOTE: Se disponi di una coppia ha AFF A1K e stai aggiungendo a caldo un terzo shelf e installando un terzo o quarto modulo i/o compatibile RoCE in ciascun controller, il terzo shelf è cablato solo al terzo o al quarto modulo i/O. Non è necessario recuperare gli scaffali esistenti.
 
-* Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 10 di ciascun controller.
+** Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 10 di ciascun controller.
 +
 Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
 
 +
-.. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e10b) dello slot 10.
-.. Ripetere lo stesso cavo per spostare il controller B.
+... Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e10b) dello slot 10.
+... Ripetere lo stesso cavo per spostare il controller B.
 
 
-* Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 9 e nello slot 8 di ciascun controller.
+** Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 9 e nello slot 8 di ciascun controller.
 +
 Le fasi secondarie presuppongono che il terzo ripiano sia cablato a un modulo i/o compatibile con RoCE nello slot 9 su ciascun controller.
 
 +
-.. Sul controller A, spostare il cavo dalla porta b (e9b) dello slot 9 alla porta b (e8b) dello slot 8.
-.. Ripetere lo stesso cavo per spostare il controller B.
+... Sul controller A, spostare il cavo dalla porta b (e9b) dello slot 9 alla porta b (e8b) dello slot 8.
+... Ripetere lo stesso cavo per spostare il controller B.
 
 
 
@@ -168,8 +170,8 @@ Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo 
 
 Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
 
-. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e8b) dello slot 8.
-. Ripetere lo stesso cavo per spostare il controller B.
+.. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e8b) dello slot 8.
+.. Ripetere lo stesso cavo per spostare il controller B.
 
 
 --
@@ -179,8 +181,8 @@ Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo 
 
 I passaggi secondari presuppongono che lo shelf esistente sia collegato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.
 
-. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
-. Ripetere lo stesso cavo per spostare il controller B.
+.. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
+.. Ripetere lo stesso cavo per spostare il controller B.
 
 
 --
@@ -190,8 +192,8 @@ Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo 
 
 I passaggi secondari presuppongono che lo shelf esistente sia collegato ai moduli i/o compatibili con RoCE nello slot 3 di ciascun controller.
 
-. Sul controller A, spostare il cavo dallo slot 3, porta b (e3b) allo slot 7, porta b (e7b).
-. Ripetere lo stesso cavo per spostare il controller B.
+.. Sul controller A, spostare il cavo dallo slot 3, porta b (e3b) allo slot 7, porta b (e7b).
+.. Ripetere lo stesso cavo per spostare il controller B.
 
 
 --
@@ -199,7 +201,7 @@ I passaggi secondari presuppongono che lo shelf esistente sia collegato ai modul
 --
 Se si sta aggiungendo a caldo un secondo ripiano, a seconda del modello di piattaforma, eseguire una delle seguenti operazioni:
 
-* Su AFF A400:
+** Su AFF A400:
 +
 È possibile recuperare il primo shelf attraverso i due set di porte compatibili RoCE, integrate e0c/e0d e nello slot 5, su ciascun controller.
 
@@ -207,11 +209,11 @@ Se si sta aggiungendo a caldo un secondo ripiano, a seconda del modello di piatt
 Questa procedura secondaria presuppone che lo shelf esistente sia collegato via cavo a porte integrate e0c/e0d compatibili con RoCE su ciascun controller.
 
 +
-.. Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
-.. Ripetere lo stesso cavo per spostare il controller B.
+... Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
+... Ripetere lo stesso cavo per spostare il controller B.
 
 
-* Su AFF C400:
+** Su AFF C400:
 +
 Possibilità di recuperare il primo shelf sui due set di porte compatibili con RoCE negli slot 4 e 5, su ciascun controller.
 
@@ -219,8 +221,8 @@ Possibilità di recuperare il primo shelf sui due set di porte compatibili con R
 Le fasi secondarie presuppongono che lo shelf esistente sia cablato a porte compatibili con RoCE nello slot 4 su ciascun controller.
 
 +
-.. Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
-.. Ripetere lo stesso cavo per spostare il controller B.
+... Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
+... Ripetere lo stesso cavo per spostare il controller B.
 
 
 
@@ -230,22 +232,22 @@ Le fasi secondarie presuppongono che lo shelf esistente sia cablato a porte comp
 --
 Fai una delle seguenti operazioni se stai aggiungendo a caldo un secondo ripiano o un quarto ripiano.
 
-* Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 2 e nello slot 10 di ciascun controller.
+** Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 2 e nello slot 10 di ciascun controller.
 +
 Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 2 su ciascun controller.
 
 +
-.. Sul controller A, spostare il cavo dalla porta b (e2b) dello slot 2 alla porta b (e10b) dello slot 10.
-.. Ripetere lo stesso cavo per spostare il controller B.
+... Sul controller A, spostare il cavo dalla porta b (e2b) dello slot 2 alla porta b (e10b) dello slot 10.
+... Ripetere lo stesso cavo per spostare il controller B.
 
 
-* Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 1 e nello slot 11 di ciascun controller.
+** Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 1 e nello slot 11 di ciascun controller.
 +
 Le fasi secondarie presuppongono che il terzo ripiano sia cablato a un modulo i/o compatibile con RoCE nello slot 1 su ciascun controller.
 
 +
-.. Sul controller A, spostare il cavo dalla porta b (e1b) dello slot 1 alla porta b (e11b) dello slot 11.
-.. Ripetere lo stesso cavo per spostare il controller B.
+... Sul controller A, spostare il cavo dalla porta b (e1b) dello slot 1 alla porta b (e11b) dello slot 11.
+... Ripetere lo stesso cavo per spostare il controller B.
 
 
 
@@ -257,12 +259,138 @@ Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo 
 
 Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 3 su ciascun controller.
 
-. Sul controller A, spostare il cavo dalla porta b (e3b) dello slot 3 alla porta b (e1b) dello slot 1.
-. Ripetere lo stesso cavo per spostare il controller B.
+.. Sul controller A, spostare il cavo dalla porta b (e3b) dello slot 3 alla porta b (e1b) dello slot 1.
+.. Ripetere lo stesso cavo per spostare il controller B.
 
 
 --
 ====
+
+
+* Per sistemi ASA:
++
+[role="tabbed-block"]
+====
+.ASA A1K
+--
+Fai una delle seguenti operazioni se stai aggiungendo a caldo un secondo ripiano o un quarto ripiano.
+
+
+NOTE: Se disponi di una coppia ha ASA A1K e stai aggiungendo a caldo un terzo shelf e installando un terzo o quarto modulo i/o compatibile RoCE in ciascun controller, il terzo shelf è cablato solo al terzo o al quarto modulo i/O. Non è necessario recuperare gli scaffali esistenti.
+
+** Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 10 di ciascun controller.
++
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e10b) dello slot 10.
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+** Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 9 e nello slot 8 di ciascun controller.
++
+Le fasi secondarie presuppongono che il terzo ripiano sia cablato a un modulo i/o compatibile con RoCE nello slot 9 su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dalla porta b (e9b) dello slot 9 alla porta b (e8b) dello slot 8.
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+--
+.ASA A70 o ASA A90
+--
+Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 8 di ciascun controller.
+
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 11 su ciascun controller.
+
+.. Sul controller A, spostare il cavo dalla porta b (e11b) dello slot 11 alla porta b (e8b) dello slot 8.
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+--
+.ASA A800 o ASA C800
+--
+Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i due set di porte compatibili RoCE nello slot 5 e nello slot 3 di ciascun controller.
+
+I passaggi secondari presuppongono che lo shelf esistente sia collegato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.
+
+.. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+--
+.ASA A400 o ASA C400
+--
+Se si sta aggiungendo a caldo un secondo ripiano, a seconda del modello di piattaforma, eseguire una delle seguenti operazioni:
+
+** Sul ASA A400:
++
+È possibile recuperare il primo shelf attraverso i due set di porte compatibili RoCE, integrate e0c/e0d e nello slot 5, su ciascun controller.
+
++
+Questa procedura secondaria presuppone che lo shelf esistente sia collegato via cavo a porte integrate e0c/e0d compatibili con RoCE su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+** Sul ASA C400:
++
+Possibilità di recuperare il primo shelf sui due set di porte compatibili con RoCE negli slot 4 e 5, su ciascun controller.
+
++
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a porte compatibili con RoCE nello slot 4 su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+--
+.ASA A900
+--
+Fai una delle seguenti operazioni se stai aggiungendo a caldo un secondo ripiano o un quarto ripiano.
+
+** Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 2 e nello slot 10 di ciascun controller.
++
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 2 su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dalla porta b (e2b) dello slot 2 alla porta b (e10b) dello slot 10.
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+** Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 1 e nello slot 11 di ciascun controller.
++
+Le fasi secondarie presuppongono che il terzo ripiano sia cablato a un modulo i/o compatibile con RoCE nello slot 1 su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dalla porta b (e1b) dello slot 1 alla porta b (e11b) dello slot 11.
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+--
+.ASA A30 o ASA A50
+--
+Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 3 e nello slot 1 di ciascun controller.
+
+Le fasi secondarie presuppongono che lo shelf esistente sia cablato a un modulo i/o compatibile con RoCE nello slot 3 su ciascun controller.
+
+.. Sul controller A, spostare il cavo dalla porta b (e3b) dello slot 3 alla porta b (e1b) dello slot 1.
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+--
+====
+
+
 . Verificare che il ripiano cablato sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
 +
 Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.

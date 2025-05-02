@@ -53,7 +53,7 @@ In caso contrario, passare alla fase successiva.
 L'illustrazione seguente evidenzia il cablaggio del secondo shelf nella coppia ha con due moduli i/o compatibili RoCE in ogni controller:
 
 +
-image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cablaggio per AFF A1K con due shelf e due moduli io]
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cablaggio per AFF/ASA A1K con due shelf e due moduli io]
 
 
 
@@ -67,7 +67,7 @@ image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cablaggio per AF
 La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con tre moduli i/o compatibili RoCE in ogni controller:
 
 +
-image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cablaggio per AFF A1K con tre shelf e tre moduli io]
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cablaggio per AFF/ASA A1K con tre shelf e tre moduli io]
 
 
 
@@ -81,7 +81,7 @@ image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cablaggio per AF
 La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:
 
 +
-image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cablaggio per AFF A1K con tre ripiani e quattro moduli io]
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cablaggio per AFF/ASA A1K con tre shelf e quattro moduli io]
 
 
 
@@ -95,7 +95,7 @@ image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cablaggio per AF
 La seguente illustrazione evidenzia il cablaggio per il quarto shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:
 
 +
-image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cablaggio per AFF A1K con quattro ripiani e quattro moduli io]
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cablaggio per AFF/ASA A1K con quattro shelf e quattro moduli io]
 
 
 
@@ -111,10 +111,10 @@ Se l'assegnazione automatica del disco è stata disattivata durante la preparazi
 In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.
 
 ====
-.Shelf per cavi a AFF A20, AFF A30, AFF A50, AFF C30 o AFF C60
+.Ripiano per cavi a AFF A20
 [%collapsible]
 ====
-Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha AFF A20, AFF A30, AFF C30, AFF A50 o AFF C60 quando è necessario aggiungere storage (nello shelf interno).
+Puoi aggiungere a caldo uno shelf NS224 a una coppia ha AFF A20 quando è necessario aggiungere storage (allo shelf interno).
 
 .Prima di iniziare
 * È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
@@ -123,12 +123,100 @@ Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha AFF A20, AFF A30
 
 
 .A proposito di questa attività
-* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che sia possibile:
+* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che venga aggiunta a caldo fino a un shelf aggiuntivo.
+* Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
 +
-** Fino a uno shelf aggiuntivo per AFF A20.
-** Fino a due shelf aggiuntivi e due moduli i/o compatibili RoCE in ciascun controller per AFF A30, AFF C30, AFF A50 o AFF C60.
+** Aggiunta a caldo del primo shelf a una coppia ha con un modulo i/o compatibile RoCE in ciascun controller.
+** Aggiunta a caldo del primo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller.
 
 
+* Questi sistemi sono compatibili con NS224 shelf con NSM100 moduli e NS224 shelf con NSM100B moduli. Per assicurarsi di collegare i controller alle porte corrette, sostituire la "X" in ogni schema con il numero di porta corretto per il modulo:
++
+[cols="1,4"]
+|===
+| Tipo di modulo | Etichettatura delle porte 
+
+
+ a| 
+NSM100
+ a| 
+"0"
+
+es. e0a
+
+
+
+ a| 
+NSM100B
+ a| 
+"1"
+
+es. e1a
+
+|===
+
+
+.Fasi
+. Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (un modulo i/o compatibile RoCE) in ogni modulo controller, e questo è l'unico shelf NS224 nella coppia ha, completa i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+
+NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 3.
+
++
+.. Ripiano per cavi NSM A porta EXA per il controllo A slot 3 porta a (e3a).
+.. Ripiano per cavi porta NSM A EXB a slot controller B 3 porta b (E3B).
+.. Ripiano per cavi porta NSM B EXA a slot controller B 3 porta a (e3a).
+.. Ripiano per cavi NSM B porta EXB a controller A slot 3 porta b (E3B).
++
+La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un modulo i/o compatibile con RoCE in ciascun modulo controller:
+
++
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cablaggio per AFF/ASA A20 con uno shelf e un modulo io]
+
+
+
+. Se si sta aggiungendo a caldo uno shelf utilizzando due set di porte compatibili RoCE (due moduli i/o compatibili RoCE) in ciascun modulo controller, completare i seguenti passaggi secondari.
++
+.. Cavo NSM A porta EXA al controller A slot 3 porta a (e3a).
+.. Cavo NSM A porta EXB a controller B slot 1 porta b (e1b).
+.. Cavo NSM B porta EXA a controller B slot 3 porta a (e3a).
+.. Cavo NSM B porta EXB a controller A slot 1 porta b (e1b).
+
+
+
+
+L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
+
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cablaggio per AFF/ASA A20 con uno shelf e due moduli io]
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+.Quali sono le prossime novità?
+Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco. Andare a link:complete-hot-add-shelf.html["Completare l'aggiunta a caldo"].
+
+In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.
+
+====
+.Shelf per cavi a AFF A30, AFF A50, AFF C30 o AFF C60
+[%collapsible]
+====
+Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha AFF A30, AFF C30, AFF A50 o AFF C60 quando è necessario storage aggiuntivo (allo shelf interno).
+
+.Prima di iniziare
+* È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
+* È necessario aver completato le procedure applicabili in link:prepare-hot-add-shelf.html["Preparare l'aggiunta a caldo di uno shelf"].
+* È necessario aver installato gli scaffali, acceso e impostato gli ID degli scaffali come descritto in link:prepare-hot-add-shelf.html["Installare uno shelf per un'aggiunta a caldo"].
+
+
+.A proposito di questa attività
+* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che venga aggiunto a caldo un massimo di due shelf aggiuntivi e due moduli i/o RoCE in ciascun controller.
 * Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
 +
 ** Aggiunta a caldo del primo shelf a una coppia ha con un modulo i/o compatibile RoCE in ciascun controller.
@@ -180,7 +268,7 @@ NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile 
 La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un modulo i/o compatibile con RoCE in ciascun modulo controller:
 
 +
-image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cablaggio per AFF A20,452px,AFF C30]
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cablaggio per AFF/ASA A30,452px,AFF/ASA A50]
 
 
 
@@ -207,7 +295,7 @@ Ripiano 1
 
 L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
 
-image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cablaggio per AFF A20,452px,AFF C30]
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cablaggio per AFF/ASA A30,452px,AFF/ASA A50]
 
 
 
@@ -223,7 +311,7 @@ Shelf 2
 
 L'illustrazione seguente mostra il cablaggio per due shelf a caldo che utilizzano due moduli i/o compatibili RoCE in ciascun modulo controller:
 
-image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[Cablaggio per AFF A20,452px,AFF C30]
+image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[Cablaggio per AFF A30/ASA,452px,AFF/ASA A50]
 
 |===
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
@@ -278,7 +366,7 @@ NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile 
 La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un modulo i/o compatibile con RoCE in ciascun modulo controller:
 
 +
-image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cablaggio per AFF A70 o A90 con uno shelf e un modulo io]
+image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cablaggio per AFF/ASA A70 o A90 con uno shelf e un modulo io]
 
 
 
@@ -305,7 +393,7 @@ Ripiano 1
 
 L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
 
-image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cablaggio per AFF A70 o A90 con uno shelf e due moduli io]
+image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cablaggio per AFF/ASA A70 o A90 con uno shelf e due moduli io]
 
 
 
@@ -321,7 +409,7 @@ Shelf 2
 
 L'illustrazione seguente mostra il cablaggio per due shelf a caldo che utilizzano due moduli i/o compatibili RoCE in ciascun modulo controller:
 
-image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cablaggio per AFF A70 o A90 con due shelf e due moduli io]
+image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cablaggio per AFF/ASA A70 o A90 con due shelf e due moduli di io]
 
 |===
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
@@ -358,7 +446,7 @@ Vista dal retro dello chassis della piattaforma, la porta della scheda compatibi
 .. Porta NSM B dello shelf per cavi e0a allo slot controller B 1 porta a (e1a).
 .. Porta NSM B del ripiano per cavi e0b allo slot a del controller 1 porta b (e1b). + la seguente illustrazione mostra il cablaggio dello shelf una volta completato.
 +
-image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cablaggio per AFF A250 C250 o FAS500f con uno shelf NS224 e un set di porte per schede PCIe]
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cablaggio per AFF/ASA A250 C250 o FAS500f con uno shelf NS224 e un set di porte per schede PCIe]
 
 
 
@@ -403,7 +491,7 @@ In caso contrario, passare alla fase successiva.
 L'illustrazione seguente mostra il cablaggio di uno shelf a caldo che utilizza un set di porte compatibili RoCE su ciascun controller:
 
 +
-image::../media/drw_ns224_a400_1shelf.png[Cablaggio per AFF A400 con uno shelf NS224 e un set di porte integrate]
+image::../media/drw_ns224_a400_1shelf.png[Cablaggio per AFF/ASA A400 con uno shelf NS224 e un set di porte integrate]
 
 
 
@@ -441,7 +529,7 @@ Shelf 2
 La seguente illustrazione mostra il cablaggio per due shelf aggiunti a caldo:
 
 +
-image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cablaggio per un AFF A400 con due shelf NS224, un set di porte integrate e un set di porte su schede PCIe]
+image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cablaggio per /ASA A400 con due shelf NS224, un set di porte integrate e un set di porte su schede PCIe]
 
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
 +
@@ -471,7 +559,7 @@ In caso contrario, passare alla fase successiva.
 L'illustrazione seguente mostra il cablaggio di uno shelf a caldo che utilizza un set di porte compatibili RoCE su ciascun controller:
 
 +
-image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cablaggio per AFF C400 con uno shelf NS224 e un set di porte per schede PCIe]
+image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cablaggio per AFF/ASA C400 con uno shelf NS224 e un set di porte per schede PCIe]
 
 
 
@@ -509,7 +597,7 @@ Shelf 2
 La seguente illustrazione mostra il cablaggio per due shelf aggiunti a caldo:
 
 +
-image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cablaggio per un AFF C400 con due shelf NS224 e due set di porte per schede PCIe]
+image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cablaggio per un AFF/ASA C400 con due shelf NS224 e due set di porte per schede PCIe]
 
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
 +
@@ -552,7 +640,7 @@ NOTE: Questa fase presuppone l'installazione della scheda PCIe compatibile con R
 L'illustrazione seguente mostra il cablaggio di uno shelf a caldo utilizzando una scheda PCIe compatibile RoCE su ciascun controller:
 
 +
-image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cablaggio per AFF A800 o AFF C800 con uno shelf NS224 e una scheda PCIe]
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cablaggio per AFF/ASA A800 o AFF/ASA C800 con uno shelf NS224 e una scheda PCIe]
 
 
 
@@ -644,7 +732,7 @@ In caso contrario, passare alla fase successiva.
 La figura seguente mostra il cablaggio del secondo shelf (e del primo shelf).
 
 +
-image::../media/drw_ns224_a900_2shelves.png[Cablaggio per un AFF A900 con due shelf NS224 e due moduli io]
+image::../media/drw_ns224_a900_2shelves.png[Cablaggio per un AFF/ASA A900 con due shelf NS224 e due moduli io]
 
 
 
@@ -661,7 +749,7 @@ In caso contrario, passare alla fase successiva.
 La figura seguente mostra il cablaggio del terzo shelf.
 
 +
-image::../media/drw_ns224_a900_3shelves.png[Cablaggio per un AFF A900 con tre shelf NS224 e quattro moduli io]
+image::../media/drw_ns224_a900_3shelves.png[Cablaggio per un AFF/ASA A900 con tre shelf NS224 e quattro moduli io]
 
 
 
@@ -678,7 +766,7 @@ In caso contrario, passare alla fase successiva.
 La figura seguente mostra il cablaggio del quarto shelf.
 
 +
-image::../media/drw_ns224_a900_4shelves.png[Cablaggio per un AFF A900 con quattro shelf NS224 e quattro moduli io]
+image::../media/drw_ns224_a900_4shelves.png[Cablaggio per un AFF/ASA A900 con quattro shelf NS224 e quattro moduli io]
 
 
 

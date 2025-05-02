@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-La modalità di cavo di uno shelf NS224 in una coppia ha AFF A800 o AFF C800 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui controller.
-
 .Prima di iniziare
 * È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
 * È necessario aver completato le procedure applicabili in link:prepare-hot-add-shelf.html["Preparare l'aggiunta a caldo di uno shelf"].
@@ -28,7 +26,7 @@ NOTE: Questa fase presuppone l'installazione della scheda PCIe compatibile con R
 L'illustrazione seguente mostra il cablaggio di uno shelf a caldo utilizzando una scheda PCIe compatibile RoCE su ciascun controller:
 
 +
-image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cablaggio per AFF A800 o AFF C800 con uno shelf NS224 e una scheda PCIe]
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cablaggio per AFF/ASA A800 o AFF/ASA C800 con uno shelf NS224 e una scheda PCIe]
 
 
 

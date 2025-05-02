@@ -16,19 +16,6 @@ Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA 
 Durante il processo di ripristino, il sistema controlla se la crittografia è attivata e determina il tipo di crittografia della chiave in uso. Se la crittografia della chiave è attivata, il sistema guida l'utente attraverso le procedure appropriate per ripristinarla.
 
 .Prima di iniziare
-* Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
-+
-** È possibile chiedere al cliente o all'amministratore di sistema se OKM o EKM sono abilitati.
-** Per verificare se OKM è abilitato, utilizzare il seguente comando:
-+
-`security key-manager onboard show`
-
-** Per verificare se EKM è abilitato, utilizzare il seguente comando:
-+
-`security key-manager external show`
-
-
-
 * Per OKM, è necessario il contenuto del file della passphrase OKM.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +

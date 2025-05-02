@@ -3,19 +3,6 @@
 
 
 .Prima di iniziare
-* Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
-+
-** È possibile chiedere al cliente o all'amministratore di sistema se OKM o EKM sono abilitati.
-** Per verificare se OKM è abilitato, utilizzare il seguente comando:
-+
-`security key-manager onboard show`
-
-** Per verificare se EKM è abilitato, utilizzare il seguente comando:
-+
-`security key-manager external show`
-
-
-
 * Per OKM, è necessario il contenuto del file della passphrase OKM.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +

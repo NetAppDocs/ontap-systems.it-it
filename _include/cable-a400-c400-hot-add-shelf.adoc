@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-La modalità di cavo di uno shelf NS224 per l'aggiunta a caldo dipende dal fatto che si disponga di una coppia ha AFF A400 o AFF C400.
-
 .Prima di iniziare
 * È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
 * È necessario aver completato le procedure applicabili in link:prepare-hot-add-shelf.html["Preparare l'aggiunta a caldo di uno shelf"].
@@ -28,7 +26,7 @@ In caso contrario, passare alla fase successiva.
 L'illustrazione seguente mostra il cablaggio di uno shelf a caldo che utilizza un set di porte compatibili RoCE su ciascun controller:
 
 +
-image::../media/drw_ns224_a400_1shelf.png[Cablaggio per AFF A400 con uno shelf NS224 e un set di porte integrate]
+image::../media/drw_ns224_a400_1shelf.png[Cablaggio per AFF/ASA A400 con uno shelf NS224 e un set di porte integrate]
 
 
 
@@ -66,7 +64,7 @@ Shelf 2
 La seguente illustrazione mostra il cablaggio per due shelf aggiunti a caldo:
 
 +
-image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cablaggio per un AFF A400 con due shelf NS224, un set di porte integrate e un set di porte su schede PCIe]
+image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cablaggio per /ASA A400 con due shelf NS224, un set di porte integrate e un set di porte su schede PCIe]
 
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
 +
@@ -96,7 +94,7 @@ In caso contrario, passare alla fase successiva.
 L'illustrazione seguente mostra il cablaggio di uno shelf a caldo che utilizza un set di porte compatibili RoCE su ciascun controller:
 
 +
-image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cablaggio per AFF C400 con uno shelf NS224 e un set di porte per schede PCIe]
+image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cablaggio per AFF/ASA C400 con uno shelf NS224 e un set di porte per schede PCIe]
 
 
 
@@ -134,7 +132,7 @@ Shelf 2
 La seguente illustrazione mostra il cablaggio per due shelf aggiunti a caldo:
 
 +
-image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cablaggio per un AFF C400 con due shelf NS224 e due set di porte per schede PCIe]
+image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cablaggio per un AFF/ASA C400 con due shelf NS224 e due set di porte per schede PCIe]
 
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
 +

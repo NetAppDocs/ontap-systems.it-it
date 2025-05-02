@@ -7996,20 +7996,17 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4367e3d6fa33a8e5340bcdfaf20e76b1" category="list-text">Aggiunta a caldo del secondo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller.</block>
   <block id="bd7b27778a055163b7315acc047708fd" category="list-text">Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (un modulo i/o compatibile RoCE) in ogni modulo controller, e questo è l'unico shelf NS224 nella coppia ha, completa i seguenti passaggi secondari.</block>
   <block id="7326450dfaf2d352b15c1dbb36a9010e" category="admonition">Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 11.</block>
-  <block id="f9ba636c0d9fc6353c91cac13fe6290c" category="image-alt">Cablaggio per AFF A70 o A90 con uno shelf e un modulo io</block>
   <block id="1d99994321fcf88aba221cbb6612805a" category="admonition">Questa fase presuppone che siano stati installati i moduli i/o compatibili con RoCE negli slot 11 e 8.</block>
   <block id="220b4e5517a1a5b99f0642ce282c3975" category="list-text">Cavo NSM Porta A e0a per controller slot A porta a 11 (e11a).</block>
   <block id="635ff36fada70d6b9a46124ec04022cf" category="list-text">Cavo dalla porta NSM A e0b allo slot controller B 8 porta b (e8b).</block>
   <block id="3adcb5d3f00489780b17f91dbcf4c8b6" category="list-text">Cavo dalla porta NSM B e0a allo slot controller B 11 porta a (e11a).</block>
   <block id="fed38315c77f3f617a7a61ed019eb467" category="list-text">Cavo NSM B port e0b al controller A slot 8 port b (e8b).</block>
   <block id="8b2cc73a271f9ec9f419e138f66cb109" category="paragraph">L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:</block>
-  <block id="0fd5a3b540c1af5ae188f141b2f40c24" category="image-alt">Cablaggio per AFF A70 o A90 con uno shelf e due moduli io</block>
   <block id="efd179e747ea06abffaa97721b0cc372" category="list-text">Cavo NSM Porta A e0a per controller slot A porta a 8 (e8a).</block>
   <block id="9db08de14bb838886cf8eaaee8575093" category="list-text">Cavo dalla porta NSM A e0b allo slot controller B 11 porta b (e11b).</block>
   <block id="e227bb2c8482a8ac7a342596ddc812fe" category="list-text">Cavo dalla porta NSM B e0a allo slot controller B 8 porta a (e8a).</block>
   <block id="6d4a579eaf72f5aec95723d499d76fe9" category="list-text">Cavo NSM B port e0b al controller A slot 11 port b (e11b).</block>
   <block id="ae14ce538d268aca5ec54fbb093b2156" category="paragraph">L'illustrazione seguente mostra il cablaggio per due shelf a caldo che utilizzano due moduli i/o compatibili RoCE in ciascun modulo controller:</block>
-  <block id="25862846eedff523b089999508c204b1" category="image-alt">Cablaggio per AFF A70 o A90 con due shelf e due moduli io</block>
   <block id="14ac662b33a52d48f6573c07b50e5b8f" category="list-text">Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>.</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Quali sono le prossime novità?</block>
   <block id="8d39c366d0f2a2847eeab7a904800822" category="paragraph">Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco. Andare a <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block>.</block>
@@ -8023,48 +8020,36 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="244addd6f2bc2e043852c2e18eeb5621" category="list-text">Aggiunta a caldo di un terzo shelf a una coppia ha con quattro moduli i/o RoCE in ciascun controller. (È stato installato un terzo e quarto modulo i/o e il terzo ripiano verrà collegato al terzo e quarto modulo i/o).</block>
   <block id="72cdf939e98d17baf87d0a5a64dfcea8" category="list-text">Aggiunta a caldo di un quarto shelf a una coppia ha con quattro moduli i/o RoCE in ciascun controller. (Hai installato un quarto modulo i/o e collegato il terzo shelf al terzo e quarto modulo i/o o già avevi il terzo shelf collegato al terzo e quarto modulo i/o). Collegare il quarto ripiano al terzo e al quarto modulo i/o).</block>
   <block id="b5fb112065a7304ad93afe5e3c7fa849" category="paragraph">L'illustrazione seguente evidenzia il cablaggio del secondo shelf nella coppia ha con due moduli i/o compatibili RoCE in ogni controller:</block>
-  <block id="ea0cc2be4039f5636ca9de5e2c7a3940" category="image-alt">Cablaggio per AFF A1K con due shelf e due moduli io</block>
   <block id="7190ee5c0c8079e24da44f24c6b7abbc" category="list-text">Se lo shelf NS224 che stai aggiungendo a caldo sarà il terzo shelf NS224 nella coppia ha con tre moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari. In caso contrario, passare alla fase successiva.</block>
   <block id="67a32de8a36abcac3887051fb422a5f5" category="list-text">Shelf di cavi NSM Porta A e0a per controller Slot A porta a 9 (e9a).</block>
   <block id="b94b22c566c53666c9eb824858482f94" category="list-text">Shelf per cavi dalla porta NSM A e0b allo slot controller B, 9 porte b (e9b).</block>
   <block id="daa2e224b274ef312de5853c6cbffaf6" category="list-text">Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 9 (e9a).</block>
   <block id="3a8f2e391b6044dec7d6ef6c3e9dda69" category="list-text">Porta NSM B dello shelf per cavi e0b allo slot a del controller 9 porta b (e9b).</block>
   <block id="6c6e97e4c29594c5856e13f4b1a8be0c" category="paragraph">La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con tre moduli i/o compatibili RoCE in ogni controller:</block>
-  <block id="94213ae2609c82c94807004beab91de1" category="image-alt">Cablaggio per AFF A1K con tre shelf e tre moduli io</block>
   <block id="46e04d93b6d495a5235036857998eae9" category="list-text">Se lo shelf NS224 che stai aggiungendo a caldo sarà il terzo shelf NS224 nella coppia ha con quattro moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari. In caso contrario, passare alla fase successiva.</block>
   <block id="abb0dbc2abeae0d456ed2095b4c9ed12" category="list-text">Shelf per cavi dalla porta NSM A e0b allo slot controller B, 8 porte b (e8b).</block>
   <block id="8ff8aa3f78832bf6ceceeea539763fec" category="list-text">Porta NSM B dello shelf per cavi e0b allo slot a del controller 8 porta b (e8b).</block>
   <block id="863764690b094c2d6a28b8edc2afba72" category="paragraph">La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:</block>
-  <block id="f9d0d9976d1ff7ee0097da8e1b7fb3c2" category="image-alt">Cablaggio per AFF A1K con tre ripiani e quattro moduli io</block>
   <block id="3bd0afb8978e34368879d152c8aec251" category="list-text">Se lo shelf NS224 che stai aggiungendo a caldo sarà il quarto shelf NS224 nella coppia ha con quattro moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari.</block>
   <block id="d10794f4d3cca7a2993e8d2d6a12cd28" category="list-text">Shelf di cavi NSM Porta A e0a per controller Slot A porta a 8 (e8a).</block>
   <block id="ed24faf41d7d53c3a668df6e070aca6d" category="list-text">Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 8 (e8a).</block>
   <block id="551d2fc9e8e1159b84b9c23da6d27984" category="paragraph">La seguente illustrazione evidenzia il cablaggio per il quarto shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:</block>
-  <block id="40d57aad6b502bb35f6aa64821041f6a" category="image-alt">Cablaggio per AFF A1K con quattro ripiani e quattro moduli io</block>
   <block id="8f5d4ff45922bd2a0a4b4ca26b784653" category="paragraph">Per aggiungere storage, è possibile aggiungere a caldo un massimo di uno shelf da NS224 a una coppia ha AFF A250 o AFF C250.</block>
   <block id="3c8f15ce2288517ffd28cbab07b4cd4f" category="paragraph">La modalità di cavo di uno shelf NS224 per l'aggiunta a caldo dipende dal fatto che si disponga di una coppia ha AFF A400 o AFF C400.</block>
   <block id="95e9c90f47d7134271c5de6f5d8d41f5" category="paragraph">*Da ripiano per cavi a una coppia AFF A400 ha*</block>
   <block id="e47d066c3638efab14a13923e89b312a" category="paragraph">Per una coppia ha di AFF A400, puoi aggiungere a caldo fino a due shelf e utilizzare le porte integrate e0c/e0d e le porte nello slot 5, in base alle esigenze.</block>
   <block id="d4e171bee30acee3b4097e177f087224" category="list-text">Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili con RoCE (porte integrate compatibili con RoCE) su ciascun controller, essendo l'unico shelf NS224 della coppia ha, completa i seguenti passaggi secondari.</block>
   <block id="4df6de3fb6b5eece4bd1d42f75e5ae3d" category="paragraph">L'illustrazione seguente mostra il cablaggio di uno shelf a caldo che utilizza un set di porte compatibili RoCE su ciascun controller:</block>
-  <block id="672cc22dbbc7622be2f56d3dce98ffcd" category="image-alt">Cablaggio per AFF A400 con uno shelf NS224 e un set di porte integrate</block>
   <block id="306fa6b2ff7e9909c6a2a302a380875a" category="list-text">Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili RoCE (porte compatibili RoCE e schede PCIe) su ciascun controller, completare i seguenti passaggi secondari.</block>
-  <block id="303de4b6b1481e40bb1b8e2368a123b6" category="image-alt">Cablaggio per un AFF A400 con due shelf NS224, un set di porte integrate e un set di porte su schede PCIe</block>
   <block id="41132f8bc7d00935b8687c18c2c9e35d" category="list-text">Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco, se necessario. Vedere <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block>.</block>
   <block id="406a6a05dc05bb651919c02b9570c743" category="paragraph">*Da ripiano per cavi a una coppia AFF C400 ha*</block>
   <block id="9d6636aae443fd88eb415b0a814eb7ed" category="paragraph">Per una coppia ha di AFF C400, puoi aggiungere a caldo fino a due shelf e utilizzare le porte negli slot 4 e 5 in base alle necessità.</block>
   <block id="b6c9c1f2bae5bda1b2ec0ca34865478a" category="list-text">Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili con RoCE su ogni controller e questo è l'unico shelf NS224 nella coppia ha, completa i seguenti passaggi secondari.</block>
-  <block id="a3c44bf0089bcb64a39869e3500ee7be" category="image-alt">Cablaggio per AFF C400 con uno shelf NS224 e un set di porte per schede PCIe</block>
   <block id="c4dcb8322178395823ac67e2ea704340" category="list-text">Se stai aggiungendo a caldo uno o due shelf utilizzando due set di porte compatibili RoCE su ogni controller, completa i seguenti passaggi secondari.</block>
-  <block id="8e60b7b6a9c9e9483da2fb013ea4987b" category="image-alt">Cablaggio per un AFF C400 con due shelf NS224 e due set di porte per schede PCIe</block>
   <block id="8b27019cea28c7866ff81a933ac7c02c" category="paragraph">La modalità di cavo di uno shelf NS224 in una coppia ha AFF A800 o AFF C800 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui controller.</block>
   <block id="e6960ae3a6a92d53555f3471da322c41" category="list-text">Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (una scheda PCIe compatibile RoCE) su ciascun controller, essendo l'unico shelf NS224 della coppia ha, completa i seguenti passaggi secondari.</block>
   <block id="c55555ebd43bc616a6c859bbbad79ac8" category="paragraph">L'illustrazione seguente mostra il cablaggio di uno shelf a caldo utilizzando una scheda PCIe compatibile RoCE su ciascun controller:</block>
-  <block id="e21205a57cd96b3d3b2ad37564df9874" category="image-alt">Cablaggio per AFF A800 o AFF C800 con uno shelf NS224 e una scheda PCIe</block>
   <block id="6f313b51958d9ef2aa65c80a9b64de6b" category="list-text">Se stai aggiungendo a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (due schede PCIe compatibili RoCE) su ciascun controller, completa le relative istruzioni secondarie.</block>
-  <block id="b44d424c15322ecb36a077b677527005" category="image-alt">Cablaggio per un AFF A900 con due shelf NS224 e due moduli io</block>
-  <block id="e896f649bc7a69947f85c288e5cb0b96" category="image-alt">Cablaggio per un AFF A900 con tre shelf NS224 e quattro moduli io</block>
-  <block id="325058948df9e92ff2c1577aeb745fc0" category="image-alt">Cablaggio per un AFF A900 con quattro shelf NS224 e quattro moduli io</block>
   <block id="40e6ceebb2eb1677b588bd7f52f95206" category="paragraph">Numero ID ripiano</block>
   <block id="42a63d570d38a93d3cbaddcfd266a58c" category="paragraph">Pulsante di accesso ID ripiano</block>
   <block id="d6f7de8608837079f0d0dd7fa668c457" category="list-text">Controllare lo stato di salute del cluster. Per ulteriori informazioni, consultare l'<block ref="9f193d2818f839c9575e0a6969820fd9" category="inline-link-rx"></block> articolo della KB.</block>
@@ -8572,7 +8557,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="cada3ae8b9b850f4721595b91f8ab383" category="doc">Fase 1: Recuperare il controller</block>
   <block id="f4c083c41633c63a72a1bbce7db1c159" category="sidebar">Restituire il controller</block>
   <block id="a39e0fbfb2db42a80ba7546850d8b5c6" category="paragraph"><block ref="a39e0fbfb2db42a80ba7546850d8b5c6" category="inline-link-rx"></block></block>
-  <block id="4c32ebd39f3a998e8ed434a92fb2337e" category="image-alt">Cablaggio per AFF A250 C250 o FAS500f con uno shelf NS224 e un set di porte per schede PCIe</block>
   <block id="3512d92434ff4ef9e4eb4253b21a863e" category="image-alt">I cavi vengono inseriti con la linguetta di estrazione del connettore rivolta verso l'alto</block>
   <block id="fa8057e66f11f58b193c0063c5f89d0f" category="image-alt">Posizione delle NS224 NSM100 porte del modulo e0a e e0b</block>
   <block id="21631ea576ae592d82bfa53578687d4b" category="image-alt">LED di alimentazione del pannello del display dell'operatore</block>
@@ -9060,15 +9044,8 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7bf4e86b8c2f5ff036932a932f9dc604" category="list-text"><block ref="7bf4e86b8c2f5ff036932a932f9dc604" category="inline-link-rx"></block></block>
   <block id="3ab6aa369c3f9b8276a331929da6f82c" category="example-title">Ripiano per cavi a ASA A1K</block>
   <block id="5085ff6c350861af4448d82a2c958fe8" category="paragraph">È possibile aggiungere fino a tre shelf aggiuntivi da NS224 (per un totale di quattro shelf) a una coppia ha di ASA A1K.</block>
-  <block id="b96506939d3be5ee82870422bae11f18" category="image-alt">Cablaggio per ASA A1K con due shelf e due moduli io</block>
-  <block id="7c5aa1be4042527c8f9979e790cb45ad" category="image-alt">Cablaggio per ASA A1K con tre shelf e tre moduli io</block>
-  <block id="09bb2c93b169f0c519beed078ec84db3" category="image-alt">Cablaggio per ASA A1K con tre ripiani e quattro moduli io</block>
-  <block id="568d158739474681892c0a2e2456188d" category="image-alt">Cablaggio per ASA A1K con quattro ripiani e quattro moduli io</block>
   <block id="ae9e439bbd5c00f8b8a1bc7a935729c7" category="example-title">Ripiano per cavi a ASA A70 o ASA A90</block>
   <block id="9e4b32259f721cc54024969657de5534" category="paragraph">Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha ASA A70 o ASA A90 quando è necessario ulteriore storage (nello shelf interno).</block>
-  <block id="087914c8dfa7abbb50d9c6d8ec5daab1" category="image-alt">Cablaggio per ASA A70 o A90 con uno shelf e un modulo io</block>
-  <block id="1bc9489d5803221329c048bb065c42ec" category="image-alt">Cablaggio per ASA A70 o A90 con uno shelf e due moduli io</block>
-  <block id="cdd4188b076dc68d9ffe52ac80b230c6" category="image-alt">Cablaggio per ASA A70 o A90 con due shelf e due moduli io</block>
   <block id="55ec693931401ff7a634100e33ff8cfd" category="doc">Novità dei sistemi hardware ONTAP</block>
   <block id="ec6e72d1c4bb7dccdc62b6caf35c95f7" category="sidebar">Documentazione sui sistemi hardware ONTAP</block>
   <block id="64f78e10c5d8a4db6f25299bf9a418cd" category="sidebar">I sistemi AFF A-Series e C-Series sono stati progettati per consentire alle organizzazioni di accelerare la trasformazione della propria infrastruttura e alimentare le strategie basate sui dati.</block>
@@ -9669,10 +9646,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e726d5f098bf18b53d3d464c11fbe033" category="list-text">Se AutoSupport è abilitato, ripristinare (riattivare) la creazione automatica dei casi: AutoSupport del nodo di sistema Invoke -node * -type all -message MAINT=END</block>
   <block id="975c4856a4750ba558520ec8a4820a30" category="list-text">Se è stato installato un modulo NIC, specificare la modalità di utilizzo per ciascuna porta come _network_:<block ref="2318bc4fadd0b94ffa92c4a515df2262" prefix=" " category="inline-code"></block></block>
   <block id="b6d91a8f20eef2bd8b5f445d19459cac" category="list-text">Ripetere questa procedura per l'altro controller.</block>
-  <block id="fbff7da02a9769667db9e912fa36fc5e" category="paragraph">Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha AFF A20, AFF A30, AFF C30, AFF A50 o AFF C60 quando è necessario aggiungere storage (nello shelf interno).</block>
-  <block id="73a95c42a81e9be601403e3a9d4a84c9" category="list-text">Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che sia possibile:</block>
-  <block id="c6e5816c4606aead75e5bf161bd98726" category="list-text">Fino a uno shelf aggiuntivo per AFF A20.</block>
-  <block id="11e9efba28ae2ed6dc6e8d713d0a9d85" category="list-text">Fino a due shelf aggiuntivi e due moduli i/o compatibili RoCE in ciascun controller per AFF A30, AFF C30, AFF A50 o AFF C60.</block>
   <block id="4a09af6ecaf81ef3c2832bb75c6a0661" category="list-text">Questi sistemi sono compatibili con NS224 shelf con NSM100 moduli e NS224 shelf con NSM100B moduli. Per assicurarsi di collegare i controller alle porte corrette, sostituire la "X" in ogni schema con il numero di porta corretto per il modulo:</block>
   <block id="d6df784a5f01190c34ccccae7152455a" category="cell">Tipo di modulo</block>
   <block id="0ef8def66b79f6a75efa2dde40c34190" category="cell">Etichettatura delle porte</block>
@@ -9687,7 +9660,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4719f083a14108e1749d33a162c3f72e" category="list-text">Ripiano per cavi porta NSM A EXB a slot controller B 3 porta b (E3B).</block>
   <block id="e12dd7341a7320b1bfee16cf7817ae73" category="list-text">Ripiano per cavi porta NSM B EXA a slot controller B 3 porta a (e3a).</block>
   <block id="36eb4fa8319a2d5789a89ff95d28ecb4" category="list-text">Ripiano per cavi NSM B porta EXB a controller A slot 3 porta b (E3B).</block>
-  <block id="4d6aa4e10ec4c72ec3a386b483422bc8" category="image-alt">Cablaggio per AFF A20</block>
   <block id="d6dc171c9f98fe17e814fd05d2ee1489" category="admonition">Questa fase presuppone che siano stati installati i moduli i/o compatibili con RoCE negli slot 3 e 1.</block>
   <block id="e8becaef69668c291a5f960c6cd5f04e" category="list-text">Cavo NSM A porta EXA al controller A slot 3 porta a (e3a).</block>
   <block id="5d0425db587b395e698ec97c99c625fc" category="list-text">Cavo NSM A porta EXB a controller B slot 1 porta b (e1b).</block>
@@ -10373,7 +10345,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="dafdc51bcfddfb75cdc104244fa42b60" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF C80</block>
   <block id="0c760c78e9d0c008701a3538ed8f1c85" category="doc">Sostituire il modulo di gestione del sistema - AFF C80</block>
   <block id="0e0493531094a28281ba5f32c328ac63" category="paragraph">Il sistema hardware può essere compatibile con NS224 shelf con NSM100 moduli e NS224 shelf con NSM100B moduli. Per verificare la compatibilità e i nomi delle porte per l'hardware e gli scaffali, consultare la<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>.</block>
-  <block id="c97d3a72e7c1692c1c5f56d517b82c8c" category="example-title">Shelf per cavi a AFF A20, AFF A30, AFF A50, AFF C30 o AFF C60</block>
   <block id="494fa596205dff234fa0bdbd9d667c60" category="example-title">Ripiano per cavi a AFF A70, AFF A90 o AFF C80</block>
   <block id="cfa4ea65df4b282eb8322ca03dbd679d" category="inline-link-macro">guida del cablaggio collegata allo switch</block>
   <block id="d8ddb474e138beeebfa487dca0fe0955" category="list-text">Questa procedura si applica solo allo storage collegato direttamente. Per visualizzare le istruzioni per lo spazio di archiviazione collegato allo switch, vedere la nostra <block ref="655fd8ce12b9f1cd7287415659488f07" category="inline-link-macro-rx"></block>.</block>
@@ -10614,7 +10585,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="dbc74f369dbf214b25d0f839fd4cd2b0" category="list-text">Ripristinare lo sconto automatico se è stato disattivato:</block>
   <block id="37e73c8cf9d7d3b4aeaa58f23b2fcb81" category="paragraph">Dopo l'attivazione del sistema di storage AFF A1K, è possibile rilevare una rete di cluster e configurare un cluster ONTAP.</block>
   <block id="f2cde5cb8aa49228f5cb392e473dff51" category="paragraph">Dopo l'inizializzazione del cluster, scaricare ed eseguire<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block> per confermare la configurazione.</block>
-  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">Schema di collegamento del sistema di archiviazione A1K e dell'alimentazione A70 o A90</block>
   <block id="e826d5b26017ec374bf63b94b8a425d9" category="list-text">Fissare i cavi di alimentazione utilizzando il dispositivo di fissaggio su ciascun alimentatore. :a1k-a70-90!:</block>
   <block id="0bf1ff1f561d2a96752b8ee596c65068" category="list-text">4U in una configurazione ha</block>
   <block id="3ac4d4a9f6b930345bd4ccdb8435d0fb" category="list-text">Sul modulo di gestione del sistema di ciascun controller</block>
@@ -10777,7 +10747,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepararsi alla sostituzione</block>
   <block id="19d944a3a323213d80bcdd66ecd5c26f" category="list-text">Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:</block>
-  <block id="b3387f173ebbff42e3160605c9db518a" category="list-text">È possibile chiedere al cliente o all'amministratore di sistema se OKM o EKM sono abilitati.</block>
   <block id="5dc17ba8443f8aafae4ca9de8cf9545b" category="list-text">Per verificare se OKM è abilitato, è possibile utilizzare<block ref="3c690d79c23fa8c25994507c25377567" prefix=" " category="inline-code"></block> .</block>
   <block id="4e447e93a3331607c74749775653cbfc" category="list-text">Per verificare se EKM è abilitato, è possibile utilizzare<block ref="001642cb897a8bebce3210207b7e81af" prefix=" " category="inline-code"></block> .</block>
   <block id="161a8b7bf3b6a7aaa3bda387e5eab04b" category="list-text">Per OKM, è necessario il contenuto del file della passphrase OKM.</block>
@@ -11119,10 +11088,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3b0feb5303f3eeec93eba65f8eb967ae" category="list-text">Assicurarsi che tutti gli altri componenti del sistema funzionino correttamente.</block>
   <block id="d5607198701fa39cc481498d62a52e7b" category="list-text">Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare per assistenza.<block ref="468ae937a554dfd3baf209aa53f9f7a6" category="inline-link-rx"></block></block>
   <block id="1b55fb3af000d448310e77a6de6c5161" category="paragraph">Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.</block>
-  <block id="566c293315d81d047304e5fade9a967d" category="list-text">Per verificare se OKM è abilitato, utilizzare il seguente comando:</block>
-  <block id="248c44cfee0de883f1e8e602cd90cfbb" category="paragraph"><block ref="3c690d79c23fa8c25994507c25377567" prefix="" category="inline-code"></block></block>
-  <block id="a0e65297bb80c27972e34aa4810ab81b" category="list-text">Per verificare se EKM è abilitato, utilizzare il seguente comando:</block>
-  <block id="49bfbad696a2529ef03d859ad9b3f40a" category="paragraph"><block ref="001642cb897a8bebce3210207b7e81af" prefix="" category="inline-code"></block></block>
   <block id="c174421f5b8f9ca697d7784c901fd0e7" category="paragraph">Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.</block>
   <block id="6e9d75b7e6d83f0d47bf1ca8b289ab30" category="summary">Se un componente del sistema AFF A1K non funziona, restituire il componente guasto a NetApp. Vedere la<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
   <block id="e7202980adb67469897852b1c95d1aa0" category="summary">Per garantire la sicurezza dei dati sul sistema di storage AFF A1K, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Controllare se la versione di ONTAP in uso supporta la crittografia dei volumi NetApp e prima di arrestare il controller verificare se il gestore delle chiavi è attivo.</block>
@@ -11923,4 +11888,50 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="40bde7f2324ee2876dd8a09846b14ff4" category="image-alt">Accendere l'unità</block>
   <block id="512bdc85c8065a0397ce7025381aaf66" category="image-alt">Sistema di rilevamento automatico</block>
   <block id="397249170dcc18ae00c3a7885f97fdc1" category="list-text">Collegare il cavo della console al computer portatile o alla console e collegare la porta della console sul controller utilizzando il cavo della console fornito con il sistema di archiviazione, quindi collegare il computer portatile o la console allo switch sulla subnet di gestione.</block>
+  <block id="caf5b8ffb4d79dceb1fb647290798a01" category="list-text">Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che venga aggiunta a caldo fino a un shelf aggiuntivo.</block>
+  <block id="93594816ce3f17fed74d263c83a0dbf3" category="image-alt">Cablaggio per AFF/ASA A20 con uno shelf e un modulo io</block>
+  <block id="1e105a621d0adba625aea7a6ae6a26c4" category="list-text">Se si sta aggiungendo a caldo uno shelf utilizzando due set di porte compatibili RoCE (due moduli i/o compatibili RoCE) in ciascun modulo controller, completare i seguenti passaggi secondari.</block>
+  <block id="ce8013dd06f3fee752bb7a7d4b9238d2" category="image-alt">Cablaggio per AFF/ASA A20 con uno shelf e due moduli io</block>
+  <block id="aa7a979a65afd227664ca4bcf07916aa" category="list-text">Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che venga aggiunto a caldo un massimo di due shelf aggiuntivi e due moduli i/o RoCE in ciascun controller.</block>
+  <block id="f2a9ba351ff729d0ca9404bb3db069f6" category="image-alt">Cablaggio per AFF/ASA A30</block>
+  <block id="22069d1c29859ffdad9469c1e6747cf1" category="image-alt">Cablaggio per AFF A30/ASA</block>
+  <block id="612bdab395b71e87cee7fad47c71f93d" category="image-alt">Cablaggio per AFF/ASA A70 o A90 con uno shelf e un modulo io</block>
+  <block id="e3292c7d546f92fd0a5ab680be388d1f" category="image-alt">Cablaggio per AFF/ASA A70 o A90 con uno shelf e due moduli io</block>
+  <block id="6aa91cf36fd9acfb2a369c09c6c070ca" category="image-alt">Cablaggio per AFF/ASA A70 o A90 con due shelf e due moduli di io</block>
+  <block id="9bb029ef1a9ff9e816e879a364d3c7b6" category="image-alt">Cablaggio per AFF/ASA A1K con due shelf e due moduli io</block>
+  <block id="7376879927d2b84ec553cfa3f1bfd0f4" category="image-alt">Cablaggio per AFF/ASA A1K con tre shelf e tre moduli io</block>
+  <block id="de5bea2fd617f7327f73c1c44e37b9a6" category="image-alt">Cablaggio per AFF/ASA A1K con tre shelf e quattro moduli io</block>
+  <block id="db0e24742d4fd4f6f2a732aeac2ca6a3" category="image-alt">Cablaggio per AFF/ASA A1K con quattro shelf e quattro moduli io</block>
+  <block id="ac2f75fe6673cb1f5f103f2229eb9ca0" category="image-alt">Cablaggio per AFF/ASA A250 C250 o FAS500f con uno shelf NS224 e un set di porte per schede PCIe</block>
+  <block id="eaa19193ad1b64f0162e8f312a6ddc47" category="image-alt">Cablaggio per AFF/ASA A400 con uno shelf NS224 e un set di porte integrate</block>
+  <block id="bba30f16a0c3755741b0f3e2032fe595" category="image-alt">Cablaggio per /ASA A400 con due shelf NS224, un set di porte integrate e un set di porte su schede PCIe</block>
+  <block id="062f2d0d7124d747b94b599ceb1f29ed" category="image-alt">Cablaggio per AFF/ASA C400 con uno shelf NS224 e un set di porte per schede PCIe</block>
+  <block id="ea4ee6dbdfefd4ed125fc31c39deee4c" category="image-alt">Cablaggio per un AFF/ASA C400 con due shelf NS224 e due set di porte per schede PCIe</block>
+  <block id="baa82981e40f9200b81a359d31653dd6" category="image-alt">Cablaggio per AFF/ASA A800 o AFF/ASA C800 con uno shelf NS224 e una scheda PCIe</block>
+  <block id="c398a3b33f9866994ec7dd506a0affe1" category="image-alt">Cablaggio per un AFF/ASA A900 con due shelf NS224 e due moduli io</block>
+  <block id="0e9ff50f94b0a9a55c9b9c4773ddccbe" category="image-alt">Cablaggio per un AFF/ASA A900 con tre shelf NS224 e quattro moduli io</block>
+  <block id="97f00e66a1cda314ebb07a43f08fca5b" category="image-alt">Cablaggio per un AFF/ASA A900 con quattro shelf NS224 e quattro moduli io</block>
+  <block id="10236a63db20e6dd5b0c0b8f3cbc1c18" category="list-text">Collegare i due cavi di alimentazione agli alimentatori del controller, quindi collegarli alle sorgenti di alimentazione su circuiti diversi.</block>
+  <block id="dba5caf7b75bcd8724abd1b1ca8827fd" category="image-alt">Schema di collegamento dell'alimentazione AFF A1K AFF A70 o AFF A90 o FAS70 o FAS90</block>
+  <block id="638f4a62fea5cc77db53abd671ddb8ef" category="example-title">Ripiano per cavi a AFF A20</block>
+  <block id="9eec124f47af3a03039f640091e3ed69" category="paragraph">Puoi aggiungere a caldo uno shelf NS224 a una coppia ha AFF A20 quando è necessario aggiungere storage (allo shelf interno).</block>
+  <block id="e76cf9924a9de1dd17f1b48f3a38d0cd" category="example-title">Shelf per cavi a AFF A30, AFF A50, AFF C30 o AFF C60</block>
+  <block id="5820f31f30f8fc695d25c9cec1305cdb" category="paragraph">Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha AFF A30, AFF C30, AFF A50 o AFF C60 quando è necessario storage aggiuntivo (allo shelf interno).</block>
+  <block id="2b5ec68149482145f38e8592a2e4b794" category="example-title">Ripiano per cavi a ASA A20</block>
+  <block id="c84fe478157d5a5e8c65815d80aa16a6" category="paragraph">Puoi aggiungere a caldo un massimo di uno shelf NS224 a una coppia ha ASA A20 in caso di necessità di storage aggiuntivo (allo shelf interno).</block>
+  <block id="bb5cf394b2e920ea8a139221d234cd8f" category="example-title">Ripiano per cavi a ASA A30 o ASA A50</block>
+  <block id="541e9b9bea8f992a6c173f0c44b17452" category="paragraph">Puoi aggiungere a caldo fino a due shelf da NS224 a una coppia ha ASA A30 o A50 in caso di necessità di storage aggiuntivo (allo shelf interno).</block>
+  <block id="46aa3bf0a87f8519f8e9314ed7186c68" category="paragraph">Per aggiungere storage, è possibile aggiungere a caldo un massimo di uno shelf da NS224 a una coppia ha ASA A250 o ASA C250.</block>
+  <block id="74259516da197cf641342dca62af2c0b" category="paragraph">La modalità di cavo di uno shelf NS224 per l'aggiunta a caldo dipende dal fatto che si disponga di una coppia ha ASA A400 o ASA C400.</block>
+  <block id="5a9c7ba8fea538e8bddca7cfd05765f9" category="paragraph">La modalità di cavo di uno shelf NS224 in una coppia ha ASA A800 o ASA C800 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili con RoCE (uno o due) che si stanno utilizzando sui controller.</block>
+  <block id="6bb205a0be0fdef8b8935f61e328f79d" category="paragraph">Quando è necessario uno storage aggiuntivo, è possibile aggiungere a caldo fino a tre shelf di dischi NS224 aggiuntivi (per un totale di quattro shelf) a una coppia ASA A900 ha.</block>
+  <block id="74375be821a0ccfdaa2aae68f1a39391" category="list-text">Per sistemi AFF:</block>
+  <block id="f7e7abd6131f4502c1bda794831656d2" category="list-text">Per sistemi ASA:</block>
+  <block id="c1ec0f43de6728212fc94985d5f83feb" category="admonition">Se disponi di una coppia ha ASA A1K e stai aggiungendo a caldo un terzo shelf e installando un terzo o quarto modulo i/o compatibile RoCE in ciascun controller, il terzo shelf è cablato solo al terzo o al quarto modulo i/O. Non è necessario recuperare gli scaffali esistenti.</block>
+  <block id="80e4582b9d6f2e4fef63bc13dc0ddad1" category="open-title">ASA A70 o ASA A90</block>
+  <block id="ba8d903e745090016b0afab400d33f7c" category="open-title">ASA A800 o ASA C800</block>
+  <block id="ade2052b1dc75cccb7fc7b0760456566" category="open-title">ASA A400 o ASA C400</block>
+  <block id="18b75697f84707c97e051581b495caae" category="list-text">Sul ASA A400:</block>
+  <block id="f08c247bf18a7d50e52f66010faca66f" category="list-text">Sul ASA C400:</block>
+  <block id="2aba7ab5e3f8f696965da4208fe4dd23" category="open-title">ASA A30 o ASA A50</block>
 </blocks>

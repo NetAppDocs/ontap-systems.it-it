@@ -17,13 +17,6 @@ Esaminare i seguenti requisiti.
 
 * È necessario sostituire il supporto di avvio guasto con un supporto di avvio sostitutivo ricevuto da NetApp.
 * Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
-* Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
-+
-** È possibile chiedere all'amministratore di sistema se OKM o EKM sono abilitati.
-** Per verificare se OKM è abilitato, è possibile utilizzare `security key-manager onboard show` .
-** Per verificare se EKM è abilitato, è possibile utilizzare `security key-manager external show` .
-
-
 * Per OKM, è necessario il contenuto del file della passphrase OKM.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +

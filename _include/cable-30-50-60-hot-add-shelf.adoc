@@ -9,7 +9,7 @@
 
 
 .A proposito di questa attività
-* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che si aggiungano a caldo fino a due shelf aggiuntivi e due moduli i/o RoCE in ciascun controller.
+* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che venga aggiunto a caldo un massimo di due shelf aggiuntivi e due moduli i/o RoCE in ciascun controller.
 * Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
 +
 ** Aggiunta a caldo del primo shelf a una coppia ha con un modulo i/o compatibile RoCE in ciascun controller.
@@ -17,6 +17,30 @@
 ** Aggiunta a caldo del secondo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller.
 
 
+* Questi sistemi sono compatibili con NS224 shelf con NSM100 moduli e NS224 shelf con NSM100B moduli. Per assicurarsi di collegare i controller alle porte corrette, sostituire la "X" in ogni schema con il numero di porta corretto per il modulo:
++
+[cols="1,4"]
+|===
+| Tipo di modulo | Etichettatura delle porte 
+
+
+ a| 
+NSM100
+ a| 
+"0"
+
+es. e0a
+
+
+
+ a| 
+NSM100B
+ a| 
+"1"
+
+es. e1a
+
+|===
 
 
 .Fasi
@@ -26,25 +50,25 @@ In caso contrario, passare alla fase successiva.
 
 +
 
-NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 11.
+NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 3.
 
 +
-.. Shelf di cavi NSM Porta A e0a per il controller Uno slot 11 porta a (e11a).
-.. Shelf per cavi, porta NSM A e0b allo slot B del controller, porta b 11 (e11b).
-.. Porta NSM B del ripiano per cavi e0a dello slot B del controller 11 porta a (e11a).
-.. Porta NSM B dello shelf per cavi e0b allo slot a del controller porta b 11 (e11b).
+.. Ripiano per cavi NSM A porta EXA per il controllo A slot 3 porta a (e3a).
+.. Ripiano per cavi porta NSM A EXB a slot controller B 3 porta b (E3B).
+.. Ripiano per cavi porta NSM B EXA a slot controller B 3 porta a (e3a).
+.. Ripiano per cavi NSM B porta EXB a controller A slot 3 porta b (E3B).
 +
 La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un modulo i/o compatibile con RoCE in ciascun modulo controller:
 
 +
-image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cablaggio per AFF/ASA A70 o A90 con uno shelf e un modulo io]
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cablaggio per AFF/ASA A30,452px,AFF/ASA A50]
 
 
 
 . Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (due moduli i/o compatibili con RoCE) in ciascun modulo controller, completare i passaggi secondari applicabili.
 +
 
-NOTE: Questa fase presuppone che siano stati installati i moduli i/o compatibili con RoCE negli slot 11 e 8.
+NOTE: Questa fase presuppone che siano stati installati i moduli i/o compatibili con RoCE negli slot 3 e 1.
 
 +
 [cols="1,3"]
@@ -55,32 +79,32 @@ NOTE: Questa fase presuppone che siano stati installati i moduli i/o compatibili
  a| 
 Ripiano 1
  a| 
-.. Cavo NSM Porta A e0a per controller slot A porta a 11 (e11a).
-.. Cavo dalla porta NSM A e0b allo slot controller B 8 porta b (e8b).
-.. Cavo dalla porta NSM B e0a allo slot controller B 11 porta a (e11a).
-.. Cavo NSM B port e0b al controller A slot 8 port b (e8b).
+.. Cavo NSM A porta EXA al controller A slot 3 porta a (e3a).
+.. Cavo NSM A porta EXB a controller B slot 1 porta b (e1b).
+.. Cavo NSM B porta EXA a controller B slot 3 porta a (e3a).
+.. Cavo NSM B porta EXB a controller A slot 1 porta b (e1b).
 .. Se si sta aggiungendo a caldo un secondo shelf, completare i passaggi secondari "`Shelf 2`"; in caso contrario, passare al punto 3.
 
 
 L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
 
-image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cablaggio per AFF/ASA A70 o A90 con uno shelf e due moduli io]
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cablaggio per AFF/ASA A30,452px,AFF/ASA A50]
 
 
 
  a| 
 Shelf 2
  a| 
-.. Cavo NSM Porta A e0a per controller slot A porta a 8 (e8a).
-.. Cavo dalla porta NSM A e0b allo slot controller B 11 porta b (e11b).
-.. Cavo dalla porta NSM B e0a allo slot controller B 8 porta a (e8a).
-.. Cavo NSM B port e0b al controller A slot 11 port b (e11b).
+.. Cavo NSM A porta EXA al controller A slot 1 porta a (E1a).
+.. Cavo NSM A porta EXB a controller B slot 3 porta b (E3B).
+.. Cavo NSM B porta EXA a controller B slot 1 porta a (E1a).
+.. Cavo NSM B porta EXB a controller A slot 3 porta b (E3B).
 .. Passare alla fase 3.
 
 
 L'illustrazione seguente mostra il cablaggio per due shelf a caldo che utilizzano due moduli i/o compatibili RoCE in ciascun modulo controller:
 
-image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cablaggio per AFF/ASA A70 o A90 con due shelf e due moduli di io]
+image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[Cablaggio per AFF A30/ASA,452px,AFF/ASA A50]
 
 |===
 . Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
