@@ -1,17 +1,6 @@
----
-permalink: fas50/chassis-replace-move-hardware.html 
-sidebar: sidebar 
-keywords: fas50, move hardware components, replace the chassis 
-summary: 'Sostituisci lo chassis del sistema di storage FAS50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, dei moduli di caching e degli alloggiamenti delle unità, l"installazione dello chassis di sostituzione e la reinstallazione dei componenti dello chassis.' 
----
-= Sostituire il telaio - FAS50
+= Fase 1: Rimuovere il controller
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Sostituisci lo chassis del sistema di storage FAS50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, dei moduli di caching e degli alloggiamenti delle unità, l'installazione dello chassis di sostituzione e la reinstallazione dei componenti dello chassis.
 
 
 
@@ -290,6 +279,3 @@ ALIMENTATORE CC
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
-
-.Quali sono le prossime novità?
-Dopo aver sostituito lo chassis FAS50 danneggiato e aver reinstallato i componenti, è necessario link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"].

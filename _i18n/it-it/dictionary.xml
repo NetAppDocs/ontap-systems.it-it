@@ -9787,7 +9787,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="72b54ea7be3a13b4755dc4521c8d0af6" category="paragraph">Estrarre l'unità dall'alloggiamento utilizzando la maniglia della camma e sostenendo l'unità con l'altra mano.</block>
   <block id="0093c88dee6ce91e0bd8ccb1cfbc03ff" category="admonition">Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.</block>
   <block id="0649d37403624118b801efa8956dc716" category="section-title">Fase 3: Sostituire lo chassis dall'interno del rack dell'apparecchiatura o dell'armadio del sistema</block>
-  <block id="e5a4b20c56ed46e589289f6e1a9368dd" category="paragraph">Rimuovere lo chassis danneggiato dal rack dell'apparecchiatura o dall'armadietto del sistema, installare lo chassis di ricambio, installare le unità, gli eventuali alloggiamenti delle unità, quindi installare il pannello.</block>
   <block id="eb8def779f4d3e61a371ec65c0cc0128" category="list-text">Rimuovere le viti dai punti di montaggio del telaio danneggiati.</block>
   <block id="16e252393218a73fc25b829675a86fce" category="paragraph">Mettere da parte le viti per utilizzarle successivamente in questa procedura.</block>
   <block id="433916ec8110bbee1005399f55ede944" category="admonition">Se il sistema di archiviazione viene fornito in un cabinet del sistema NetApp, è necessario rimuovere le viti aggiuntive sul retro dello chassis prima di poter rimuovere lo chassis.</block>
@@ -11808,7 +11807,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="64013ec345bda7b07597c5bf34eac5fe" category="open-title">Opzione 1: NS224 shelf</block>
   <block id="8a978cde5ab4fac3e67487580bc3a51a" category="open-title">Opzione 2: Shelf SAS</block>
   <block id="2cc2225989c416fa40923a89f7f8d99c" category="doc">Controllare il supporto e lo stato della chiave di crittografia sul supporto di avvio - FAS50</block>
-  <block id="e65767537c6f00cc3bec96359db6404a" category="summary">Sostituisci lo chassis del sistema di storage FAS50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione di eventuali moduli di caching, l'installazione dello chassis sostitutivo e la reinstallazione dei componenti dello chassis.</block>
   <block id="aa7129f47a0b0a00e74ba4024fe7ba35" category="paragraph">Sostituisci lo chassis del sistema di storage FAS50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, dei moduli di caching e degli alloggiamenti delle unità, l'installazione dello chassis di sostituzione e la reinstallazione dei componenti dello chassis.</block>
   <block id="d3f6a519d78eb3e642c0549ced5f8f2f" category="summary">Prima di sostituire il controller nel sistema di storage FAS50, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell'output della console del controller in un file di registro di testo.</block>
   <block id="3034b89fc8e6fc3ae99585d8f1eab80e" category="doc">Requisiti per sostituire la centralina - FAS50</block>
@@ -11934,4 +11932,23 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="18b75697f84707c97e051581b495caae" category="list-text">Sul ASA A400:</block>
   <block id="f08c247bf18a7d50e52f66010faca66f" category="list-text">Sul ASA C400:</block>
   <block id="2aba7ab5e3f8f696965da4208fe4dd23" category="open-title">ASA A30 o ASA A50</block>
+  <block id="e3fb1d8bd564bfe9f807ba42e5cd7b33" category="paragraph">Premere il pulsante di rilascio sul lato anteriore del modulo di caching per aprire la maniglia della camma.</block>
+  <block id="06269d1797937a16e290698098cc8abd" category="paragraph">Ruotare la maniglia della camma verso il basso per disinnestare il modulo di caching dal piano intermedio.</block>
+  <block id="469c355b09315b0a1d1690c1923180a4" category="paragraph">Estrarre il modulo di caching dall'alloggiamento dell'unità utilizzando la maniglia della camma e supportando il modulo di caching con l'altra mano.</block>
+  <block id="e84b84ef6157f4a35245509c8a7fa353" category="paragraph">Quando si rimuove un modulo di caching, utilizzare sempre due mani per sostenerne il peso.</block>
+  <block id="feec4c6e74f9f529edb4ef65e2cc4efc" category="paragraph">Rimuovere lo chassis danneggiato dal rack dell'apparecchiatura o dall'armadietto del sistema, installare lo chassis sostitutivo, installare i controller, installare i moduli di caching e i contenitori per unità, quindi installare il pannello frontale.</block>
+  <block id="19b2479c4fb73cb4e1e7a5cd66cd9fa9" category="list-text">Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire il modulo di caching.</block>
+  <block id="5b42dc5254df979588b011980c1a8adc" category="list-text">Premere delicatamente fino a quando il modulo di caching non si arresta.</block>
+  <block id="73e8bab771e1e37a562d7cdbeb444153" category="list-text">Chiudere la maniglia della camma in modo che il modulo di caching sia completamente inserito nel midplane e che la maniglia scatti in posizione.</block>
+  <block id="82a8073ecc9994385ee15cd53ba7d96a" category="paragraph">Assicurarsi di chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie del modulo di caching.</block>
+  <block id="0c1eef5d5ee997a38d2bb1303bcee89d" category="list-text">Se necessario, ripetere la procedura per il modulo cache rimanente.</block>
+  <block id="45d69e7bdfec0647cf3523f57e30a808" category="section-title">Fase 2: Rimuovere le unità dal telaio danneggiato</block>
+  <block id="c0055725498ec7c6a2d459f6d18aef46" category="paragraph">È necessario rimuovere tutte le unità e gli eventuali alloggiamenti delle unità dallo chassis danneggiato in modo che, successivamente, nella procedura, sia possibile installarle nello chassis sostitutivo.</block>
+  <block id="3e56a6d3defe800cc97429c918a7c4fb" category="list-text">Rimuovere le unità e gli eventuali alloggiamenti:</block>
+  <block id="ba52981b53ce10a301f84e2da386c778" category="admonition">Tenere traccia dell'alloggiamento da cui è stato rimosso ciascun disco e ciascun disco vuoto perché devono essere installati negli stessi alloggiamenti delle unità nello chassis sostitutivo.</block>
+  <block id="ab32ae446e6fa5de50a5d631bbe01daf" category="list-text">Mettere da parte le unità su un carrello o un tavolo privo di elettricità statica.</block>
+  <block id="17df5870a90dff11dc4f027f001751a7" category="section-title">Fase 2: Sostituire lo chassis dall'interno del rack dell'apparecchiatura o dell'armadio del sistema</block>
+  <block id="277a5698809db74260fd2ddda1e6acd9" category="paragraph">Rimuovere lo chassis danneggiato dal rack dell'apparecchiatura o dall'armadietto del sistema, installare lo chassis sostitutivo, installare le unità, gli eventuali alloggiamenti delle unità, quindi installare il frontalino.</block>
+  <block id="a6d6e73e138675b6ffbbb0e4663b2d5d" category="list-text">Installare le unità e gli eventuali alloggiamenti delle unità rimossi dallo chassis danneggiato nello chassis sostitutivo:</block>
+  <block id="4a7738e24d9329241e05c40def3be102" category="admonition">Le unità e gli alloggiamenti delle unità devono essere installati negli stessi alloggiamenti dello chassis sostitutivo.</block>
 </blocks>
