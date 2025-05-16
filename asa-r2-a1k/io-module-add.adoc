@@ -13,7 +13,13 @@ summary: Aggiungi un modulo i/o al sistema ASA A1K per migliorare la connettivit
 [role="lead"]
 Aggiungi un modulo i/o al sistema ASA A1K per migliorare la connettività di rete e espandere la capacità del sistema di gestire il traffico dati.
 
-È possibile aggiungere un modulo i/o al sistema di archiviazione ASA A1K quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati.
+È possibile aggiungere un modulo i/o al sistema di archiviazione ASA A1K quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati. .Informazioni su questa attività
+
+Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
+
+Un sistema di storage presenta due LED di posizione, uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
 
 
 
@@ -23,15 +29,33 @@ Spegnere o sostituire il modulo controller danneggiato.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
-.Prima di iniziare
-Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+.A proposito di questa attività
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["stato quorum"] di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
 
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
 +
 [cols="1,2"]
@@ -47,18 +71,20 @@ Passare alla fase successiva.
 
 
  a| 
-`Waiting for giveback...`
+In attesa di un giveback...
  a| 
 Premere Ctrl-C, quindi rispondere `y` quando richiesto.
 
 
 
  a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
+Prompt di sistema o prompt della password
  a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
 
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
 

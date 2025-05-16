@@ -32,15 +32,33 @@ Arrestare o sostituire il controller compromesso utilizzando una delle seguenti 
 --
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
-.Prima di iniziare
-Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+.A proposito di questa attività
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["stato quorum"] di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
 
 .Fasi
-. Se AutoSupport è attivato, sospendere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
 +
 [cols="1,2"]
@@ -56,18 +74,20 @@ Passare alla fase successiva.
 
 
  a| 
-`Waiting for giveback...`
+In attesa di un giveback...
  a| 
 Premere Ctrl-C, quindi rispondere `y` quando richiesto.
 
 
 
  a| 
-Prompt di sistema o prompt della password (inserire la password di sistema)
+Prompt di sistema o prompt della password
  a| 
-Arrestare o rilevare il controller danneggiato dal controller integro: `storage failover takeover -ofnode _impaired_node_name_`
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
 
-Quando il controller non utilizzato visualizza Waiting for giveback... (in attesa di giveback...), premere Ctrl-C e rispondere `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
 
@@ -182,13 +202,29 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 Dopo aver sostituito un modulo i/o, è necessario riavviare il modulo controller.
 
 .Fasi
-. Dal prompt DEL CARICATORE, riavviare il nodo: `bye`
+Dopo aver sostituito un modulo i/o, è necessario riavviare il controller.
+
+.Fasi
+. Riavviare il controller dal prompt DEL CARICATORE:
++
+`bye`
+
 +
 
-NOTE: In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.
+NOTE: Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
 
-. Riportare il nodo al normale funzionamento: _Failover giveback dello storage -ofnode inedito_node_name_
-. Se il giveback automatico è stato disattivato, riabilitarlo: _Storage failover modify -node local -auto-giveback true_
+. Ripristinare il funzionamento normale del nodo:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Ripristino del giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 

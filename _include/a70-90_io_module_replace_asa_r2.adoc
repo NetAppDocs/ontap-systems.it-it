@@ -133,20 +133,29 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 
 == Fase 3: Riavviare il controller
 
-Dopo aver sostituito un modulo i/o, è necessario riavviare il modulo controller.
+Dopo aver sostituito un modulo i/o, è necessario riavviare il controller.
 
 .Fasi
-. Dal prompt DI Loader, riavviare il nodo:`bye'
+. Riavviare il controller dal prompt DEL CARICATORE:
++
+`bye`
+
 +
 
-NOTE: In questo modo, vengono reinizializzate le schede i/o e altri componenti e viene riavviato il nodo.
+NOTE: Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
 
+. Ripristinare il funzionamento normale del nodo:
 +
+`storage failover giveback -ofnode _impaired_node_name_`
 
-NOTE: Assicurarsi di uscire dalla modalità di manutenzione dopo aver completato la conversione.
+. Ripristino del giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback _true_`
 
-. Ripristinare il funzionamento normale del nodo: `storage failover giveback -ofnode impaired_node_name`
-. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 
