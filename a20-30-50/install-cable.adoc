@@ -314,7 +314,13 @@ Questa procedura mostra come collegare i controller a uno shelf NS224.
 
 .A proposito di questa attività
 * Per conoscere il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, ad esempio ottico e switch-attached, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
-* È possibile collegare ciascun controller a ciascun modulo NSM100B sullo shelf NS224 utilizzando i cavi di archiviazione forniti con il sistema di archiviazione, che possono essere del tipo di cavo seguente:
+* La procedura di cablaggio a scaffale NS224 mostra moduli NSM100B anziché moduli NSM100. Il cablaggio è lo stesso indipendentemente dal tipo di modulo NSM utilizzato, solo i nomi delle porte sono diversi:
++
+** I moduli NSM100B utilizzano le porte e1a ed e1b su un modulo I/O nello slot 1.
+** I moduli NSM100 utilizzano le porte integrate (onboard) e0a ed e0b.
+
+
+* Collegare ciascun controller a ciascun modulo NSM sullo scaffale NS224 utilizzando i cavi di archiviazione forniti con il sistema di archiviazione, che potrebbero essere del seguente tipo:
 +
 *Cavi in rame 100 GbE QSFP28*
 

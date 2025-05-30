@@ -1,0 +1,56 @@
+---
+permalink: asa-r2-c30/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: asa c30, replace the boot media 
+summary: 'Prima di sostituire il supporto di avvio nel sistema di storage ASA C30, assicurarsi di soddisfare i requisiti e le considerazioni necessarie per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma del corretto funzionamento della porta e0S (chiave e0M) del controller danneggiato e la verifica dell"abilitazione di Onboard Key Manager (OKM) o External Key Manager (EKM).' 
+---
+= Requisiti per sostituire i supporti di avvio - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio nel sistema di storage ASA C30, assicurarsi di soddisfare i requisiti e le considerazioni necessarie per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma del corretto funzionamento della porta e0S (chiave e0M) del controller danneggiato e la verifica dell'abilitazione di Onboard Key Manager (OKM) o External Key Manager (EKM).
+
+
+
+== Requisiti
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo della stessa capacità ricevuta da NetApp.
+* La porta e0S (chiave da e0M mm) sulla centralina guasta non può essere guasta.
++
+La porta e0S viene utilizzata per il ripristino automatico dell'avvio.
+
+* Per OKM, è necessario il contenuto del file della passphrase OKM.
+* Per EKM, è necessario copiare i seguenti file dal nodo partner:
++
+** file /cfcard/kmip/servers.cfg.
+** file /cfcard/kmip/certs/client.crt.
+** file /cfcard/kmip/certs/client.key.
+** File /cfcard/kmip/certs/CA.pem.
+
+
+
+
+
+
+== Considerazioni
+
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+* Se necessario, è possibile attivare i LED di posizione del telaio della piattaforma (blu) per facilitare l'individuazione fisica della piattaforma interessata. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
+Un telaio della piattaforma ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ogni controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+.Cosa succederà
+Dopo aver esaminato i requisiti dei supporti di avvio, si link:bootmedia-shutdown-bmr.html["spegnere il controller"].

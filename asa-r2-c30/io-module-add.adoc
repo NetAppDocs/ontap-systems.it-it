@@ -1,0 +1,245 @@
+---
+permalink: asa-r2-c30/io-module-add.html 
+sidebar: sidebar 
+keywords: asa c30, add I/O module 
+summary: Aggiungi un modulo I/O al tuo sistema di archiviazione ASA C30 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati. 
+---
+= Aggiunta di un modulo i/o - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aggiungi un modulo I/O al tuo sistema di archiviazione ASA C30 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.
+
+È possibile aggiungere un modulo I/O al sistema di storage ASA C30 se sono disponibili slot. Se tutti gli slot sono completamente occupati, è possibile sostituire un modulo esistente per aggiungerne uno nuovo.
+
+.A proposito di questa attività
+Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
+
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+== Fase 1: Spegnere il controller compromesso
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["stato quorum"] di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
+
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
+
+|===
+
+
+
+
+== Fase 2: Aggiungere il nuovo modulo i/O.
+
+Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
+
+.Prima di iniziare
+* Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
+* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+
+[role="tabbed-block"]
+====
+.Aggiungere il modulo i/o a uno slot disponibile
+--
+È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con gli slot disponibili.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Sul controller danneggiato, rimuovere il modulo di chiusura i/o dallo slot di destinazione.
++
+Gli slot i/o inutilizzati devono avere un modulo di chiusura installato per evitare possibili problemi termici e per garantire la conformità EMC.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Rimuovere un modulo di chiusura i/O.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Sul modulo di chiusura i/o, ruotare la vite a testa zigrinata in senso antiorario per allentarla.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Estrarre il modulo di chiusura i/o dal controller utilizzando la linguetta a sinistra e la vite a testa zigrinata.
+
+|===
+. Installare il nuovo modulo i/o:
++
+.. Allineare il modulo i/o con i bordi dell'apertura dello slot del controller.
+.. Spingere delicatamente il modulo i/o fino in fondo nello slot, assicurandosi di inserirlo correttamente nel connettore.
++
+È possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata per inserire il modulo i/O.
+
+.. Ruotare la vite a testa zigrinata in senso orario per serrare.
+
+
+. Collegare il modulo i/o ai dispositivi designati.
++
+Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"^].
+
+. Riavviare il controller danneggiato dal prompt di Loader: `bye`
++
+Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
+
+. Restituire il controller danneggiato dal controller in buone condizioni: `storage failover giveback -ofnode _impaired_node_name_`
+. Ripetere questi passaggi per aggiungere un modulo i/o all'altro controller.
+. Ripristino del giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback _true_`
+. Se AutoSupport è abilitato, ripristinare (riattivare) la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+--
+.Aggiungere un modulo di i/o a un sistema completamente popolato
+--
+È possibile aggiungere un modulo i/o a un sistema completamente popolato rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto.
+
+.A proposito di questa attività
+Assicurarsi di comprendere i seguenti scenari per aggiungere un nuovo modulo di i/o a un sistema completamente popolato:
+
+[cols="1,2"]
+|===
+| Scenario | Azione richiesta 
+
+
+ a| 
+Da NIC a NIC (stesso numero di porte)
+ a| 
+I LIF migrano automaticamente quando il modulo controller viene spento.
+
+
+
+ a| 
+Da NIC a NIC (numero di porte diverso)
+ a| 
+Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
+
+
+
+ a| 
+Da NIC a modulo i/o di storage
+ a| 
+Utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^].
+
+|===
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Sul controller danneggiato, scollegare eventuali cavi dal modulo i/o di destinazione.
+. Rimuovere il modulo i/o di destinazione dal controller:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Rimuovere un modulo i/O.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Ruotare la vite a testa zigrinata del modulo i/o in senso antiorario per allentarla.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Estrarre il modulo i/o dal controller utilizzando la linguetta dell'etichetta della porta a sinistra e la vite a testa zigrinata.
+
+|===
+. Installare il nuovo modulo i/o nello slot di destinazione:
++
+.. Allineare il modulo i/o con i bordi dello slot.
+.. Spingere delicatamente il modulo i/o fino in fondo nello slot, assicurandosi di inserirlo correttamente nel connettore.
++
+È possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata per inserire il modulo i/O.
+
+.. Ruotare la vite a testa zigrinata in senso orario per serrare.
+
+
+. Collegare il modulo i/o ai dispositivi designati.
++
+Se è stato installato un modulo i/o di storage, installare e collegare i ripiani NS224, come descritto in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Workflow con aggiunta a caldo"^].
+
+. Ripetere la procedura di rimozione e installazione del modulo i/o per aggiungere eventuali moduli i/o aggiuntivi nel controller.
+. Riavviare il controller danneggiato dal prompt di Loader: `bye`
++
+Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
+
+. Restituire il controller danneggiato dal controller in buone condizioni: `storage failover giveback -ofnode _impaired_node_name_`
+. Ripristino del giveback automatico dalla console del controller integro: `storage failover modify -node local -auto-giveback _true_`
+. Se AutoSupport è abilitato, ripristinare (riattivare) la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+. Se è stato installato un modulo NIC, specificare la modalità di utilizzo per ciascuna porta come _network_: `storage port modify -node _node_name_ -port _port_name_ -mode _network_`
+. Ripetere questa procedura per l'altro controller.
+
+
+--
+====

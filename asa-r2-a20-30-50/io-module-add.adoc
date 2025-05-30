@@ -13,7 +13,7 @@ summary: Per sostituire un modulo i/o, è necessario scollegare i cavi dal modul
 [role="lead"]
 Aggiungi un modulo i/o al sistema ASA A20, ASA A30 o ASA A50 per migliorare la connettività di rete e ampliare la capacità del sistema di gestire il traffico dati.
 
-È possibile aggiungere un modulo i/o ai sistemi di storage ASA A20, ASA A30 e ASA A50 quando sono disponibili slot o quando tutti gli slot sono completamente popolati.
+È possibile aggiungere un modulo I/O al sistema di storage ASA C30 se sono disponibili slot. Se tutti gli slot sono completamente occupati, è possibile sostituire un modulo esistente per aggiungerne uno nuovo.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -24,7 +24,7 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
-== Fase 1: Arrestare il modulo controller danneggiato
+== Fase 1: Spegnere il controller compromesso
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

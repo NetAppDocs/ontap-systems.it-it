@@ -1,0 +1,34 @@
+---
+permalink: asa-r2-c30/bootmedia-replace-workflow-bmr.html 
+sidebar: sidebar 
+keywords: asa c30, replace the boot media 
+summary: 'Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C30, è necessario esaminare i requisiti di sostituzione, arrestare il controller danneggiato, sostituire il supporto di avvio, ripristinare l"immagine sul supporto di avvio e verificare la funzionalità del sistema.' 
+---
+= Flusso di lavoro per la sostituzione dei supporti di avvio - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C30, è necessario esaminare i requisiti di sostituzione, arrestare il controller danneggiato, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:bootmedia-replace-requirements-bmr.html["Esaminare i requisiti dei supporti di avvio"]
+[role="quick-margin-para"]
+Esaminare i requisiti per la sostituzione dei supporti di avvio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:bootmedia-shutdown-bmr.html["Spegnere il controller compromesso"]
+[role="quick-margin-para"]
+Spegnere o sostituire il controller danneggiato in modo che il controller integro continui a erogare dati dallo storage del controller danneggiato.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:bootmedia-replace-bmr.html["Sostituire il supporto di avvio"]
+[role="quick-margin-para"]
+Rimuovere il supporto di avvio guasto dal controller danneggiato e installare il supporto di avvio sostitutivo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine sul supporto di avvio"]
+[role="quick-margin-para"]
+Ripristinare l'immagine ONTAP dal controller integro.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:bootmedia-complete-rma-bmr.html["Restituire la parte guasta a NetApp"]
+[role="quick-margin-para"]
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.

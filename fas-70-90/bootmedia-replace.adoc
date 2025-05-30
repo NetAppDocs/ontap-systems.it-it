@@ -48,7 +48,7 @@ Supporto di boot
 
 |===
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare i cavi di alimentazione dalle PSU dal controller.
+. Scollegare i cavi di alimentazione dagli alimentatori del controller, quindi estrarre di qualche centimetro il modulo del controller, nella parte anteriore del sistema.
 +
 
 NOTE: Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dagli alimentatori.
@@ -124,9 +124,9 @@ L'unità flash USB dovrebbe avere l'immagine ONTAP appropriata di ciò che il co
 +
 Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
 
-. Collegare i cavi di alimentazione agli alimentatori e reinstallare il fermo del cavo di alimentazione.
+. Ricollegare i cavi di alimentazione all'alimentatore e riposizionare e bloccare delicatamente il modulo controller nella parte anteriore del sistema.
 +
-Il controller inizia ad avviarsi non appena l'alimentazione viene ricollegata al sistema.
+Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.
 
 . Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
 +

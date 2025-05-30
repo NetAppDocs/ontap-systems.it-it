@@ -1,0 +1,53 @@
+---
+permalink: asa-r2-c30/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa c30, prerequisite, replace the controller module 
+summary: 'Prima di sostituire il controller nel sistema di archiviazione ASA C30, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell"output della console del controller in un file di registro di testo.' 
+---
+= Requisiti per la sostituzione della centralina - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il controller nel sistema di archiviazione ASA C30, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell'output della console del controller in un file di registro di testo.
+
+È necessario rivedere i requisiti e le considerazioni per la procedura di sostituzione della centralina.
+
+
+
+== Requisiti
+
+* Tutti i ripiani devono funzionare correttamente.
+* Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
+* È necessario sostituire un controller con un controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il controller.
+* Non è possibile sostituire dischi o shelf nell'ambito di questa procedura.
+* È sempre necessario acquisire l'output della console del controller in un file di registro di testo.
++
+L'output della console fornisce una registrazione della procedura che è possibile utilizzare per risolvere i problemi che potrebbero verificarsi durante il processo di sostituzione.
+
+
+
+
+
+== Considerazioni
+
+* È importante applicare i comandi di questa procedura al controller corretto:
++
+** Il controller _alterato_ è il controller che viene sostituito.
+** Il controller _replacement_ è il nuovo controller che sostituisce il controller compromesso.
+** Il controller _healthy_ è il controller sopravvissuto.
+
+
+* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il controller danneggiato, è necessario link:controller-replace-shutdown.html["spegnere il controller danneggiato"].

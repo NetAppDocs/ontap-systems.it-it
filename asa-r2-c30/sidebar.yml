@@ -1,0 +1,75 @@
+---
+section: asa-r2-c30-maintain
+title: Sistemi ASA C30
+entries:
+- title: Mantenere
+  pdf-filename: Manutenzione di ASA C30
+  entries:
+  - title: Panoramica della manutenzione
+    url: "/asa-r2-c30/maintain-overview.html"
+  - title: Supporto di boot
+    pdf-filename: Supporti di avvio di ASA C30
+    entries:
+    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+      url: "/asa-r2-c30/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/asa-r2-c30/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/asa-r2-c30/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa-r2-c30/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/asa-r2-c30/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa-r2-c30/bootmedia-complete-rma-bmr.html"
+  - title: Chassis
+    pdf-filename: Chassis ASA C30
+    entries:
+    - title: Flusso di lavoro di sostituzione del telaio
+      url: "/asa-r2-c30/chassis-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa-r2-c30/chassis-replace-requirements.html"
+    - title: Spegnere i controller
+      url: "/asa-r2-c30/chassis-replace-shutdown.html"
+    - title: Sostituire il telaio
+      url: "/asa-r2-c30/chassis-replace-move-hardware.html"
+    - title: Sostituzione completa dello chassis
+      url: "/asa-r2-c30/chassis-replace-complete-system-restore-rma.html"
+  - title: Controller
+    pdf-filename: Modulo controller ASA C30
+    entries:
+    - title: Flusso di lavoro di sostituzione del controller
+      url: "/asa-r2-c30/controller-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa-r2-c30/controller-replace-requirements.html"
+    - title: Spegnere il controller compromesso
+      url: "/asa-r2-c30/controller-replace-shutdown.html"
+    - title: Sostituire il controller
+      url: "/asa-r2-c30/controller-replace-move-hardware.html"
+    - title: Ripristinare la configurazione del sistema
+      url: "/asa-r2-c30/controller-replace-system-config-restore-and-verify.html"
+    - title: Restituire il controller
+      url: "/asa-r2-c30/controller-replace-recable-reassign-disks.html"
+    - title: Sostituzione completa del controller
+      url: "/asa-r2-c30/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/asa-r2-c30/dimm-replace.html"
+  - title: Disco
+    url: "/asa-r2-c30/drive-replace.html"
+  - title: Ventola
+    url: "/asa-r2-c30/fan-replace.html"
+  - title: Modulo i/O.
+    pdf-filename: Modulo i/o ASA C30
+    entries:
+    - title: Panoramica del modulo di i/O.
+      url: "/asa-r2-c30/io-module-overview.html"
+    - title: Aggiungere il modulo i/O.
+      url: "/asa-r2-c30/io-module-add.html"
+    - title: Sostituire il modulo i/O.
+      url: "/asa-r2-c30/io-module-replace.html"
+  - title: Batteria NV
+    url: "/asa-r2-c30/nvdimm-battery-replace.html"
+  - title: Alimentatore
+    url: "/asa-r2-c30/power-supply-replace.html"
+  - title: Batteria con orologio in tempo reale
+    url: "/asa-r2-c30/rtc-battery-replace.html"

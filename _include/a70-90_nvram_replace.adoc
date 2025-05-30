@@ -160,11 +160,11 @@ Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del telaio e seguire
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
 
 . Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare l'alimentazione al modulo controller estraendo il modulo controller di circa tre pollici:
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del controller.
 +
-.. Premere verso il basso entrambi i fermi di bloccaggio del modulo controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.
-.. Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.
 
+NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
 
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere il modulo NVRAM di destinazione dal telaio:
@@ -206,18 +206,10 @@ Linguette di bloccaggio DIMM
 .. Far scorrere delicatamente il modulo nell'alloggiamento fino in fondo, quindi spingere il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
 
 
-. Ricollegare l'alimentazione al modulo controller:
-+
-.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
-+
-I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
-
-.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
-
-
+. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
 +
 
-NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
+NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
 
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
@@ -235,11 +227,10 @@ Per sostituire i moduli DIMM NVRAM nel modulo NVRAM, è necessario rimuovere pri
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
 
 . Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare l'alimentazione al modulo controller estraendo il modulo controller di circa tre pollici:
+. Scollegare gli alimentatori del controller.
 +
-.. Premere verso il basso entrambi i fermi di bloccaggio del modulo controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.
-.. Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.
 
+NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
 
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando delicatamente i perni alle estremità del vassoio e ruotandolo verso il basso.
 . Rimuovere il modulo NVRAM di destinazione dal telaio:
@@ -284,18 +275,10 @@ NOTE: Consultare l'etichetta della mappa FRU sul lato del modulo NVRAM per deter
 .. Far scorrere delicatamente il modulo nello slot fino a quando il dispositivo di chiusura della camma non inizia a innestarsi con il perno della camma di i/o, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
 
 
-. Ricollegare l'alimentazione al modulo controller:
-+
-.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
-+
-I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
-
-.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
-
-
+. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
 +
 
-NOTE: Il controller si riavvia non appena è completamente inserito nel telaio.
+NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
 
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.

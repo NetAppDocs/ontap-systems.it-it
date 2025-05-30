@@ -7693,7 +7693,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c7e42b88c75788e5a4dd44ffee425837" category="image-alt">I supporti di avvio sostituiscono l'immagine</block>
   <block id="65c48f838cd0d6bef4f7f9dfeffa6c20" category="paragraph">Dispositivo di chiusura della camma del modulo di gestione del sistema</block>
   <block id="8805d2e1601760a201715748ea07f6ee" category="paragraph">Pulsante di blocco dei supporti di avvio</block>
-  <block id="69d4901c403551aafed499a69f6a6854" category="list-text">Scollegare i cavi di alimentazione dalle PSU dal controller.</block>
   <block id="8f95aa0a30128c64f675b79156365155" category="admonition">Se il sistema di storage è dotato di alimentatori CC, scollegare il blocco cavi di alimentazione dagli alimentatori.</block>
   <block id="f1f9e5f6b36ebaca49f1a330347ef511" category="list-text">Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.</block>
   <block id="ef59e6e115d6a402e96debfbcf2d43a4" category="list-text">Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.</block>
@@ -7814,7 +7813,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="be9a1fd60aae57036d44ee7248eef782" category="list-text">Chiudere il coperchio del condotto dell'aria NV.</block>
   <block id="4241925b317fc8692e52a8a332fb8340" category="paragraph">Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block>.</block>
   <block id="eaf77e551d9134f3614ee70624c0542a" category="paragraph">Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del contenitore e seguire la sequenza di passaggi specifica.</block>
-  <block id="f7a22033f03f49d91738ef92b897c094" category="list-text">Scollegare il cavo di alimentazione da entrambi gli alimentatori.</block>
   <block id="37482fa38231232549f86b1d6fa25993" category="list-text">Ruotare il vassoio di gestione dei cavi verso il basso tirando delicatamente i perni alle estremità del vassoio e ruotandolo verso il basso.</block>
   <block id="5aaa2c1d195fa72e1355d04b3f634478" category="list-text">Rimuovere il modulo NVRAM danneggiato dal contenitore:</block>
   <block id="61aaaaab1400d8b97407614db657600d" category="list-text">Premere il pulsante della camma di bloccaggio.</block>
@@ -7834,7 +7832,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f1605e83555ac6fff25674a90928b3e7" category="list-text">Rimuovere il modulo DIMM premendo verso il basso le linguette di bloccaggio e sollevando il modulo DIMM dallo zoccolo.</block>
   <block id="23f5629213f6fe0e6f15f79ecad3b590" category="list-text">Installare il modulo NVRAM nel contenitore:</block>
   <block id="566acb9aca693613465c9963de07cf2d" category="list-text">Far scorrere delicatamente il modulo nello slot fino a quando il dispositivo di chiusura della camma non inizia a innestarsi con il perno della camma di i/o, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.</block>
-  <block id="8c7bd045108e1c5b78c97e914b17c504" category="list-text">Per avviare ONTAP dal prompt del CARICATORE, immettere _bye_.</block>
   <block id="92c80dd5462d9ebbe458a4d5574a0bcd" category="paragraph">È necessario confermare la modifica dell'ID di sistema all'avvio del controller e verificare che la modifica sia stata implementata.</block>
   <block id="4809a5131531611e176d418579ff2bce" category="list-text">Se la centralina è in modalità di manutenzione (viene visualizzato il<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block> messaggio), uscire dalla modalità di manutenzione e andare al prompt del CARICATORE: _Halt_</block>
   <block id="4e5f4ae21b25e767c4cce37a6162f267" category="list-text">Attendere fino all'attesa dello sconto... Viene visualizzato un messaggio sulla console del controller con il modulo sostitutivo, quindi, dal controller integro, verificare che il nuovo ID di sistema partner sia stato assegnato automaticamente: _Storage failover show_</block>
@@ -7890,14 +7887,12 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="74f39d10e6192c13072375a409227742" category="list-text">Allineare i bordi del modulo di gestione del sistema sostitutivo con l'apertura del sistema e spingerlo delicatamente nel modulo controller.</block>
   <block id="c5636b2c060822d9237c298c9b4ed296" category="list-text">Ruotare il ARM di gestione dei cavi verso l'alto fino alla posizione di chiusura.</block>
   <block id="d1e3991136db3d982ab25f6e5eeec67c" category="section-title">Passo 3: Riavviare il modulo controller</block>
-  <block id="87faf0594e9a4ac1e4ad3b090942d772" category="list-text">Ricollegare i cavi di alimentazione all'alimentatore.</block>
   <block id="5cf314d7d9b8c453e8f6d5ee28dc576f" category="paragraph">Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.</block>
   <block id="61f88778bfaaa034c04052c8ec25d964" category="list-text">Immettere _bye_ al prompt del CARICATORE.</block>
   <block id="4ea15f830f2e664204a3efb99fb72b4d" category="section-title">Passaggio 4: Installare le licenze e registrare il numero seriale</block>
   <block id="05dceffd3c31a9d53e9b23ec48d1bf77" category="paragraph">È necessario installare nuove licenze per il nodo se il nodo danneggiato stava utilizzando le funzioni ONTAP che richiedono una licenza standard (con blocco dei nodi). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.</block>
   <block id="d498932449bd1680afbe5aad136fb7e3" category="paragraph">Fino a quando non vengono installate le chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo. Tuttavia, se il nodo era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzioni senza licenza sul nodo potrebbe mettere fuori conformità con il contratto di licenza, pertanto è necessario installare la chiave di licenza sostitutiva sul nodo il prima possibile.</block>
   <block id="3e508eeaedfdae09fad57a764b5e2b73" category="section-title">Fase 1: Arrestare il modulo controller danneggiato</block>
-  <block id="5d053cb0e109f37b3c9cfa31e957c2bc" category="list-text">Estrarre il modulo controller di circa 3 pollici dal telaio per disinserire l'alimentazione.</block>
   <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">Per sostituire un modulo i/o, individuarlo all'interno del modulo controller e seguire la sequenza specifica di passi.</block>
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">Premere il pulsante del dispositivo di chiusura a camma.</block>
   <block id="ed5714a7b9709284c56117bd6dc4e081" category="list-text">Ruotare il vassoio di gestione dei cavi in posizione di blocco.</block>
@@ -8529,15 +8524,11 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4f46fe04ed7debd30ef1d3c151e24935" category="sidebar">Flusso di lavoro di sostituzione del controller</block>
   <block id="1ca4e63b42d944e09b1132b7f6f56b66" category="sidebar">Panoramica del modulo di i/O.</block>
   <block id="926cbecf3e76b90a2bcdbc9c4519fc77" category="sidebar">Flusso di lavoro di sostituzione del telaio</block>
-  <block id="1d2bcd4906e89f4b93900e7a729cfa23" category="list-text">Scollegare l'alimentazione al modulo controller estraendo il modulo controller di circa tre pollici:</block>
-  <block id="190e6dffac1e1ea2cdf61c6d2e1aa03f" category="list-text">Premere verso il basso entrambi i fermi di bloccaggio del modulo controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.</block>
   <block id="18db855640715fe2445fe253feaa5737" category="list-text">Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.</block>
   <block id="fd0b5e2ec2a2cf25a20efb1e3056cd3e" category="list-text">Reinstallare il modulo di gestione del sistema:</block>
   <block id="cad55b14298ba91aeb9818c5ded8ee54" category="list-text">Inserire l'unità flash USB nella porta USB-A del modulo di gestione del sistema.</block>
-  <block id="c81ac37e18f8d2fc1fa9a876a4ec31e6" category="list-text">Ricollegare l'alimentazione al modulo controller:</block>
   <block id="6d5d746399cefcc613daba11aecdc51c" category="paragraph">Recuperare le connessioni di storage e di rete, quindi restituire il controller.</block>
   <block id="539ae767713043504856676d47fbdf4b" category="paragraph">Accertarsi di etichettare i cavi in modo da sapere da dove provengono.</block>
-  <block id="959e9a2f2cfb56163a0772785510252a" category="admonition">Il controller si riavvia non appena è completamente inserito nel telaio.</block>
   <block id="efafbee0ffbc8d01f41e7d2a1428e535" category="section-title">Fase 4: Riassegnare i dischi</block>
   <block id="d2b549392d50d0e5724cdaa8e0662e54" category="list-text">Identificare l'unità guasta eseguendo il<block ref="aadfe3f601179615e320615d73c89773" prefix=" " category="inline-code"></block> comando dalla console di sistema.</block>
   <block id="9a3ce2ce3fa4d673c8baa3feb35a1d99" category="admonition">A seconda del tipo e della capacità, possono essere necessarie fino a diverse ore per visualizzare l'unità nell'elenco delle unità guaste.</block>
@@ -9072,7 +9063,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2d0e9a7694bf5bc701c3af145a6bba71" category="sidebar">Verifica dei requisiti</block>
   <block id="f76aaf3aaa7b30238e7a3e2b1a04493b" category="sidebar">Preparazione all'installazione</block>
   <block id="03f15d4e5abe2379224af55ea714e8fd" category="sidebar">Sistemi ASA A70 e ASA A90</block>
-  <block id="9c00140ee30800a9dd0418b3e4b50890" category="sidebar">Panoramica dei supporti di avvio</block>
   <block id="e0f5268186ba6af55aa3b68c29a31380" category="sidebar">Ripristinare l'immagine sul supporto di avvio</block>
   <block id="7b51a70874531a1eb0a69494afcf3fc1" category="sidebar">Sistemi ASA A1K</block>
   <block id="7b2d89b8fc4544d7b3fc7e1ae3e2a79b" category="sidebar">Sistemi FAS70 e FAS90</block>
@@ -9259,7 +9249,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9acf79506c541222d53e58985e01eb03" category="doc">Ripristinare la crittografia - AFF A900</block>
   <block id="9eeb212e62f650916daef03f37d7b903" category="paragraph"><block ref="9eeb212e62f650916daef03f37d7b903" category="inline-image-macro-rx" type="image"></block></block>
   <block id="21d7363ee72b4f7dbf229f951faae28f" category="paragraph"><block ref="21d7363ee72b4f7dbf229f951faae28f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7b8bb02fade9d4a58e3cfc42ecdcd970" category="summary">Informazioni sul metodo automatico per la sostituzione dei supporti di avvio.</block>
   <block id="a203ae5b4c010fa4bfba309f112022fe" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="bace9ebae872b936af5e4fb32c627436" category="inline-link-macro-rx"></block></block>
   <block id="cb6b9b62927bde4101155fb12ce4739b" category="paragraph">Sostituzione automatica dei supporti di avvio utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.</block>
   <block id="ff419f4954e3dbf64ddba1e44234dfc2" category="paragraph"><block ref="ff419f4954e3dbf64ddba1e44234dfc2" category="inline-image-macro-rx" type="image"></block></block>
@@ -9285,7 +9274,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="77464f13a7bfd5b5de3f6d6592b43344" category="admonition">Se il sistema inizialmente utilizzava ONTAP 9.10,1 o versioni successive, utilizzare la procedura descritta in <block ref="396f3a939b9056719487db53e0cdf43e" category="inline-link-macro-rx"></block>. In caso di dubbi sulla versione iniziale di ONTAP per il sistema in uso, consultare <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="8137cc3da5d92cb60020874c492d8701" category="list-text">Possibilità di recuperare il sistema storage secondo necessità.</block>
   <block id="fc2585bb5dd330e4d87dd2cdbd6c596b" category="admonition">Assicurarsi che il cavo della console sia collegato al modulo controller riparato in modo che riceva i messaggi della console al riavvio. Il controller riparato riceve l'alimentazione dal controller in buone condizioni e inizia a riavviarsi non appena viene inserito completamente nello chassis.</block>
-  <block id="1dbff4f0fe05034cfd08080f90023ca9" category="admonition">Se il controller viene avviato al prompt di Loader, riavviarlo con il<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block> comando.</block>
   <block id="c9a687d1939d0b48b69bff3618583e04" category="doc">Passaggio 1: Verificare che la versione di ONTAP in uso supporti la crittografia dei volumi NetApp</block>
   <block id="7a98ae061f92b7a841dcacb8930a02c5" category="paragraph">Per arrestare in modo sicuro un controller, identificare prima se il gestore chiavi esterno (EKM) o il gestore chiavi integrato (OKM) è attivo. Quindi, verificare il gestore delle chiavi in uso, visualizzare le informazioni sulla chiave appropriate ed eseguire le azioni necessarie in base allo stato delle chiavi di autenticazione.</block>
   <block id="8dd09587169b8d8db58ece09496b890f" category="cell">Eseguire questo comando</block>
@@ -9420,8 +9408,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="13e7cf07309f0d95eee5aa49b6842dc0" category="doc">Controllare il supporto e lo stato della chiave di crittografia - FAS9500</block>
   <block id="e4d9374bc79ce9095fb021e03551599f" category="doc">Ripristina crittografia - FAS9500</block>
   <block id="bd5c047c4a41e95a8a9424888875e56a" category="list-text">Collegare il modulo i/o al dispositivo designato.</block>
-  <block id="9d462bd05672844aeab0d3d5d323d66a" category="list-text">Reinstallare la centralina e ricollegare l'alimentazione al modulo controller:</block>
-  <block id="4d872659b015ad414d5e68440a7ddfd6" category="paragraph">Il controller inizia ad avviarsi non appena viene inserito e l'alimentazione viene ripristinata.</block>
   <block id="6f3fa8086df2fa20b3e903512f693396" category="list-text">Riportare la centralina guasta al normale funzionamento restituendo la memoria:</block>
   <block id="c2e17c0358bcab54416e83b4418be536" category="paragraph"><block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix="" category="inline-code"></block>.</block>
   <block id="32c032e6d73023a7bc6955f5bc422d4d" category="list-text">Se il giveback automatico è stato disattivato, riabilitarlo:</block>
@@ -9487,7 +9473,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b5507fd73a4983529ea95a333b70737d" category="paragraph">In caso di problemi, controllare il cablaggio e riposizionare i cavi.</block>
   <block id="b9b95d927da2cee98d985b1a328995c6" category="list-text">Uscire dalla modalità di manutenzione:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block>.</block>
   <block id="f1d532893d42eeecb43413920b6d1769" category="list-text">Reinstallare il ARM di gestione dei cavi, se rimosso, ma non ricollegare alcun cavo al controller sostitutivo.</block>
-  <block id="357f0f49c943fa136f00f3dd57ce7e41" category="list-text">Collegare il cavo console alla porta console del modulo controller sostitutivo e ricollegarlo al computer portatile in modo che riceva i messaggi della console al riavvio. Il controller sostitutivo riceve alimentazione dal controller integro e inizia a riavviarsi non appena viene inserito completamente nello chassis.</block>
   <block id="344f921d0ec02fd1e7780b61a619a100" category="admonition">Dopo aver sostituito la batteria RTC, inserito il controller e acceso il primo ripristino del BIOS, vengono visualizzati i seguenti messaggi di errore: Questi messaggi sono attesi ed è possibile continuare con questa procedura.<block ref="049ec00df3ddcbe28d63cf4fa733682c" prefix=" " category="inline-code"></block><block ref="6c8ad83004cc8bc224a596f5f1682744" prefix=" " category="inline-code"></block></block>
   <block id="f97ccb05cf3baac7ac118d1817e2a5fd" category="open-title">Opzione 1: ONTAP 9.16,0 o versione precedente</block>
   <block id="46656bb1c59aea0ac10f1105bf4c8b13" category="list-text">Sul controller con problemi, premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando viene visualizzato<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
@@ -10183,7 +10168,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="cc9dc8ff5d926a2f202e16be7619d147" category="section-title">Fase 4: Collegare i collegamenti dei ripiani</block>
   <block id="63a714a4848b4ea90e8f63ae1efc6250" category="paragraph">Questa procedura mostra come collegare i controller a uno shelf NS224.</block>
   <block id="02b0ddc9c51a6fd3d072763fb5b859f3" category="list-text">Per conoscere il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, ad esempio ottico e switch-attached, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
-  <block id="5721aeeb697208bf3fd5fab5ebf0a599" category="list-text">È possibile collegare ciascun controller a ciascun modulo NSM100B sullo shelf NS224 utilizzando i cavi di archiviazione forniti con il sistema di archiviazione, che possono essere del tipo di cavo seguente:</block>
   <block id="302158186d4e933e7fd1df5cef7e5e27" category="list-text">La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
   <block id="252938adaa820c554614fbc402a51423" category="list-text">Collegare il controller del cavo A allo shelf:</block>
   <block id="3c4324a5217fea116e9e54ac43c2946d" category="list-text">Porta e3a Del controller del cavo A alla porta NSM A E1a.</block>
@@ -10242,12 +10226,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c21a1648c7655abd0241b02472ce577b" category="doc">Sostituire un alimentatore - AFF A20, AFF A30 e AFF A50</block>
   <block id="d04789e64aa71c747fa327e4d399534e" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A20, AFF A30 e AFF A50</block>
   <block id="4bc0f3e72d6123d7efdfe5948cc79a4c" category="doc">Restituire il componente guasto a NetApp - AFF C30 e AFF C60</block>
-  <block id="a2465d131f0dc8d809437f68b008c8d1" category="doc">Reinstallare la centralina - AFF C30 e AFF C60</block>
-  <block id="55d316e07dd2e8961ed119f45a3dff33" category="doc">Rimuovere la centralina - AFF C30 e AFF C60</block>
   <block id="3ec7c47dabf1d4f35a400c4071a00ca3" category="doc">Avviare l'immagine di ripristino - AFF C30 e AFF C60</block>
   <block id="b51f305b31269b3c0c90f0c435f98dc7" category="doc">Flusso di lavoro per la sostituzione dei supporti di avvio - AFF C30 e AFF C60</block>
   <block id="eff4d8e89759d68c96ebcfc87dc315dd" category="doc">Sostituire i supporti di avvio - AFF C30 e AFF C60</block>
-  <block id="5cc55241a9614abe4087e6c9b29624e6" category="doc">Spegnere il controller con problemi - AFF C30 e AFF C60</block>
   <block id="5c067d0c56a9b99bc0f72610745316f6" category="doc">Sostituzione completa del telaio - AFF C30 e AFF C60</block>
   <block id="1ef6e58891bf9a008b8184c8021cc060" category="doc">Sostituire il telaio - AFF C30 e AFF C60</block>
   <block id="aac515bc7c0fef6db4d96f41deee5fd1" category="doc">Spegnere le centraline - AFF C30 e AFF C60</block>
@@ -10258,7 +10239,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1bd446701023b8913ca9b526c3e92f2e" category="doc">Ripristinare e verificare la configurazione di sistema - AFF C30 e AFF C60</block>
   <block id="dffc469bd601fde82121083a3480be81" category="doc">Flusso di lavoro per la sostituzione del controller - AFF C30 e AFF C60</block>
   <block id="520d3987267b97f93ef8b0f406babbc3" category="doc">Sostituire un modulo DIMM - AFF C30 e AFF C60</block>
-  <block id="a4e5adc7bc258b17747b6f19d04cc2fa" category="doc">Sostituire l'unità - AFF C30 e AFF C60</block>
   <block id="c610b83162fd42225d6905d0aaa5cac5" category="doc">Sostituire un modulo ventola - AFF C30 e AFF C60</block>
   <block id="d43c251fd920bd85be3d9f4fbae93bd6" category="summary">Eseguire la manutenzione dell'hardware AFF C30 e AFF C60</block>
   <block id="612700cc8178837b3b0e4453adecd5ff" category="doc">Manutenzione dell'hardware AFF C30 e AFF C60</block>
@@ -10735,9 +10715,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="98aab8017242eea1d6e23ba928b20ae5" category="list-text"><block ref="98aab8017242eea1d6e23ba928b20ae5" category="inline-link-macro-rx"></block></block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepararsi alla sostituzione</block>
-  <block id="19d944a3a323213d80bcdd66ecd5c26f" category="list-text">Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:</block>
-  <block id="5dc17ba8443f8aafae4ca9de8cf9545b" category="list-text">Per verificare se OKM è abilitato, è possibile utilizzare<block ref="3c690d79c23fa8c25994507c25377567" prefix=" " category="inline-code"></block> .</block>
-  <block id="4e447e93a3331607c74749775653cbfc" category="list-text">Per verificare se EKM è abilitato, è possibile utilizzare<block ref="001642cb897a8bebce3210207b7e81af" prefix=" " category="inline-code"></block> .</block>
   <block id="161a8b7bf3b6a7aaa3bda387e5eab04b" category="list-text">Per OKM, è necessario il contenuto del file della passphrase OKM.</block>
   <block id="7e8bda9aef5e8fb9e3018b4afe5250d1" category="list-text">Per EKM, è necessario copiare i seguenti file dal nodo partner:</block>
   <block id="0408893d877d770be02b8327fb6a5e89" category="list-text">file /cfcard/kmip/servers.cfg.</block>
@@ -10804,10 +10781,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c8d49d03a62a2aaa6d3002fec3a650ea" category="list-text">Selezionare opzione<block ref="1679091c5a880faf6fb5e6087eb1b2dc" prefix=" " category="inline-code"></block>.</block>
   <block id="fe5f4b926efaec8f9797da6b1b0b6c71" category="list-text">Premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando viene richiesto di ripristinare la configurazione di backup.</block>
   <block id="c22df67eafdbaec72d1c041a4f36d374" category="list-text">È necessario sostituire il supporto di avvio guasto con un supporto di avvio sostitutivo ricevuto da NetApp.</block>
-  <block id="0ff7731ee6e151edd45a22c7a84637f0" category="list-text">È possibile chiedere all'amministratore di sistema se OKM o EKM sono abilitati.</block>
-  <block id="f6482a2d2722297ff58ea916af2984cb" category="doc">Panoramica sul ripristino dei supporti di avvio - ASA A70 e ASA A90</block>
-  <block id="c987ba69ee60ff652b96f087d2e6ae84" category="paragraph">Il ripristino del supporto di avvio utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.</block>
-  <block id="4c676d1a7c436f114a574bfe649622ee" category="paragraph">Quando si verificano messaggi di errore di avvio simili a quelli illustrati di seguito, è necessario sostituire il supporto di avvio e ripristinare l'immagine ONTAP dal nodo partner.</block>
   <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">Cosa succederà</block>
   <block id="f88cdb2cd014d9929aa478cc85d4b492" category="inline-link-macro">Restituire la parte guasta a NetApp</block>
   <block id="7853c5276d1f54917577b980848960c3" category="paragraph">Dopo aver ripristinato l'immagine ONTAP e dopo aver attivato e distribuito i dati, si <block ref="977d546e7889319c9a653d351be92c2b" category="inline-link-macro-rx"></block>.</block>
@@ -10819,11 +10792,8 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2adbaa1720c6c394fbe2503b6da6fdb7" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="ffddb9c4b10a61c1cf9d29a315266845" category="inline-link-macro-rx"></block></block>
   <block id="a9a4115c08aa47aeef8b44d2372274ad" category="inline-link-macro">sostituire il supporto di avvio</block>
   <block id="aa8efed5979835fe328570ee208b1884" category="paragraph">Dopo aver spento il controller danneggiato, si <block ref="52c48d39b9a1e431e1d04998ae5045f5" category="inline-link-macro-rx"></block>.</block>
-  <block id="e0bfc72b163c6540df4eb3869f1393ff" category="paragraph"><block ref="e0bfc72b163c6540df4eb3869f1393ff" category="inline-link-macro-rx"></block></block>
   <block id="9d99224aaec79ef0b06c033956f14979" category="paragraph">È possibile sostituire un supporto di avvio non riuscito dal nodo partner per l'immagine di avvio.</block>
   <block id="5d9ac1643aa86c7bddb319af8c3e06e3" category="paragraph">Boot media replace utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.</block>
-  <block id="d152ad943d3809714aa2acb56114839e" category="doc">Panoramica del ripristino dei supporti di avvio - ASA A1K</block>
-  <block id="488cce5b2121242760d58a49c413507e" category="paragraph">Quando vengono visualizzati messaggi di errore di avvio, è necessario sostituire il supporto di avvio e ripristinare l'immagine ONTAP dal nodo partner.</block>
   <block id="a81626227e94d15884d465e1127d3af4" category="sidebar">Supporti di avvio ASA A70 e ASA A90</block>
   <block id="9482f3836d9bb6259f467a0685f5e3b4" category="sidebar">Supporti di avvio di ASA A1K</block>
   <block id="3636656d79b8f02465b883839da0c32b" category="paragraph">Esaminare i seguenti requisiti.</block>
@@ -10869,8 +10839,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c5a3b9039ee3d286f345090dc5bd7f24" category="summary">Prepararsi a sostituire lo chassis danneggiato del sistema ASA A70 o ASA A90 identificando lo chassis danneggiato, verificando i componenti di ricambio ed etichettando i cavi e i moduli del controller.</block>
   <block id="5cb5b467ffe15c96f5be4b190434f4d7" category="summary">Verificare che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage ASA A70 o ASA A90 e verificare che gli adattatori del sistema elencino tutti i percorsi dei dischi.</block>
   <block id="9b16f0deb40e2ccd298a84213dfcb3c1" category="summary">Sostituire un'unità nel sistema ASA A70 o ASA A90 quando un'unità si guasta o richiede un aggiornamento. Questo processo prevede l'identificazione dell'unità guasta, la rimozione sicura e l'installazione di una nuova unità per garantire l'accesso continuo ai dati e le prestazioni del sistema.</block>
-  <block id="8e10453b1538c94c1675905e948ad27f" category="doc">Reinstallare la centralina - ASA A20, ASA A30 e ASA A50</block>
-  <block id="77b6dee74a408b2a89351dd1b7874a9d" category="doc">Rimuovere la centralina - ASA A20, ASA A30 e ASA A50</block>
   <block id="1bd4517f6602bce986a904d28bd0d138" category="paragraph">Rimuovere il supporto di avvio guasto dal controller danneggiato e installare il supporto di avvio sostitutivo.</block>
   <block id="52e36495272e13465007207307f8b233" category="paragraph">Ripristinare l'immagine ONTAP dal controller integro.</block>
   <block id="8022fc0f0b4485cbb98cfd555c374305" category="doc">Sostituzione completa dello chassis - ASA A20, ASA A30 e ASA A50</block>
@@ -10887,7 +10855,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="fea30c44903d9b686caf9f4ef1fef103" category="summary">Eseguire la manutenzione dell'hardware di ASA A20, ASA A30 e ASA A50</block>
   <block id="0560ae441e964fbd0ea21e048b96e0c1" category="doc">Manutenzione dell'hardware ASA A20, ASA A30 e ASA A50</block>
   <block id="5e1381a5e0cf586808d824d931af18f5" category="paragraph">Per i sistemi di archiviazione ASA A20, ASA A30 o ASA A50, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
-  <block id="d70d74fb3e61a0a9af3ef593945dca19" category="paragraph">È possibile aggiungere un modulo i/o ai sistemi di storage ASA A20, ASA A30 e ASA A50 quando sono disponibili slot o quando tutti gli slot sono completamente popolati.</block>
   <block id="151d3f9489dc71ef0bf598517f9387d5" category="paragraph">Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione. Accedere a BMC utilizzando SSH e immettere il<block ref="748a449bca03582c103ee6b7bcd4a969" prefix=" " category="inline-code"></block> comando.</block>
   <block id="f7505dbf9cbf21226d33ed67b7c926e6" category="doc">Panoramica della manutenzione hardware - ASA A20, ASA A30 e ASA A50</block>
   <block id="02cbc9c9b92f52062a793fbc039a7a5f" category="paragraph">Per i sistemi di archiviazione ASA A20, ASA A30 e ASA A50, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
@@ -11138,7 +11105,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1b138e65eb583a747e0e4d3a8398fb6a" category="summary">Sostituire un modulo DIMM nel sistema AFF A70 o AFF A90 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.</block>
   <block id="99d3d3fcd25a3de8482ec4e2a68cd980" category="paragraph">Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, ripristinare la configurazione crittografia storage NetApp (se necessario) e installare le licenze per il nuovo controller.</block>
   <block id="bc8b7a027a67f1503950943beb4e6143" category="paragraph">Se un componente del sistema ASA A1K non funziona, restituire il componente guasto a NetApp. Vedere la<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
-  <block id="a2aac55abc6c28c4882557e0112dda0e" category="summary">Il ripristino del supporto di avvio per il sistema di storage ASA A70 o ASA A90 utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.</block>
   <block id="bd0c4a219c159fa570da1ded545f36d9" category="summary">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A70 o ASA A90, è possibile avviare il processo di ripristino automatico dei supporti di avvio per ripristinare la configurazione dal nodo partner.</block>
   <block id="b6bbff6284dec160274ef588afc1a30c" category="doc">Ripristinare l'immagine sul supporto di avvio - ASA A70 e ASA A90</block>
   <block id="24fd70ba02d3ad8edef21fae96195bae" category="paragraph">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A70 o ASA A90, è possibile avviare il processo di ripristino automatico dei supporti di avvio per ripristinare la configurazione dal nodo partner.</block>
@@ -11175,7 +11141,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="41e2f285e686b8f2a3edb4bab2e58d51" category="paragraph">Sostituire la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel sistema ASA A70 o ASA A90 per garantire che i servizi e le applicazioni che si affidano alla sincronizzazione accurata dell'ora rimangano operativi.</block>
   <block id="bcde75f7bddc9226b30c2cb1712cb52b" category="summary">Sostituire il modulo di gestione del sistema nel sistema ASA A70 o ASA A90 se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.</block>
   <block id="603c758839f418606126a3dd634c68d9" category="doc">Sostituire il modulo di gestione del sistema - ASA A70 e ASA A90</block>
-  <block id="73c7c606d50a6cd6a6bf0be619496e05" category="paragraph">Il ripristino del supporto di avvio per il sistema di storage ASA A1K utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.</block>
   <block id="dcfa3de2faa27a3e334c7c433ea50340" category="summary">Ripristinare l'immagine ONTAP sul supporto di avvio sostitutivo del sistema ASA A1K. Il processo prevede l'avvio del processo di ripristino dal prompt di Loader e il monitoraggio del processo di ripristino fino al completamento e al riavvio del nodo.</block>
   <block id="2cc0e4a695b44179f7b31d704877b9fc" category="doc">Ripristinare l'immagine sul supporto di avvio - ASA A1K</block>
   <block id="955b02a4be265a47dec370f73ec90202" category="paragraph">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A1K, è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
@@ -11213,7 +11178,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d5c5d5ed06719b517e116422631085f4" category="summary">Sostituire la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel sistema ASA A1K per garantire che i servizi e le applicazioni che si affidano alla sincronizzazione accurata dell'ora rimangano operativi.</block>
   <block id="9f3c1aa619a31cc111c40fc314f9faa2" category="summary">Sostituire il modulo di gestione del sistema nel sistema ASA A1K se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.</block>
   <block id="e04a3734ea529efaec431e68c61d0806" category="doc">Restituire il componente guasto a NetApp - ASA A20, ASA A30 e ASA A50</block>
-  <block id="23972a0b40b2aebc2048150eeceaebc3" category="doc">Panoramica sul ripristino dei supporti di avvio - ASA A20, ASA A30 e ASA A50</block>
   <block id="99408db22f283eaf0f69169123395c6f" category="doc">Sostituire i supporti di avvio - ASA A20, ASA A30 e ASA A50</block>
   <block id="f61a4b29bc6d3cca219956808d8cd39b" category="doc">Flusso di lavoro per la sostituzione dei supporti di avvio - ASA A20, ASA A30 e ASA A50</block>
   <block id="f08c3d5c20f112189a4f958d78f4d98e" category="paragraph">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema AFF C80, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.</block>
@@ -11370,11 +11334,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="05d5663ac0d1fbb9e47fdabe976bff04" category="paragraph">Gli slot i/o dei controller ASA A1K sono numerati da 1 a 11, come illustrato nella figura seguente.</block>
   <block id="4d7f3bf998f11ec51e5b1d5c5c650e48" category="image-alt">Numerazione degli slot su un controller ASA A1K</block>
   <block id="6cdd2252e3b0e8b6b38ce0acf92e33da" category="paragraph">Quando un componente del sistema di storage ASA A20, ASA A30 o ASA A50 si guasta, restituire il componente guasto a NetApp. Vedere la<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
-  <block id="87c3a7e23a933ae2a7f97c8b908592e6" category="paragraph">Il ripristino del supporto di avvio per il sistema di storage ASA A20, ASA A30 o ASA A50 utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.</block>
   <block id="82ab30608a615aba23a7ce646834847f" category="paragraph">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema di storage ASA A20, ASA A30 o ASA A50, è possibile avviare il processo di ripristino automatico dei supporti di avvio per ripristinare la configurazione dal nodo integro.</block>
   <block id="884e7c8aa1da8d043f1e79506ee853dc" category="summary">Prima di sostituire il supporto di avvio nel sistema di storage ASA A20, ASA A30 o ASA A50, assicurarsi di soddisfare i requisiti e le considerazioni necessari per una sostituzione corretta. Ciò include la verifica della presenza del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave da e0M mm) sul controller danneggiato non è guasta e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
   <block id="0855cbbfbd39228942736f1dd60ef241" category="paragraph">Dopo aver esaminato i requisiti dei supporti di avvio, si <block ref="f6f6eaac8bd3f857cf89c647db55229b" category="inline-link-macro-rx"></block>.</block>
-  <block id="2a22ac053b2a9d77374ec7727f46903c" category="summary">Iniziate a sostituire i supporti di avvio nei sistemi di storage ASA A30, ASA A20 e ASA A50 esaminando i requisiti di sostituzione, spegnendo il controller danneggiato, sostituendo i supporti di avvio, ripristinando l'immagine sui supporti di avvio e verificando la funzionalità del sistema.</block>
   <block id="2fd545b6948b18df87e2184b90a0ba0b" category="paragraph">Iniziate a sostituire i supporti di avvio nel vostro sistema di storage ASA A30, ASA A20 o ASA A50 rivedendo i requisiti di sostituzione, spegnendo il controller danneggiato, sostituendo i supporti di avvio, ripristinando l'immagine sul supporto di avvio e verificando la funzionalità del sistema.</block>
   <block id="f78c88bb1e8f1ee3c7a6ac3858965894" category="paragraph">Se un componente del sistema AFF C30 o AFF C60 non funziona, restituire il componente guasto a NetApp. Vedere la<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
   <block id="d21e93c705ab8bba60c13a4e0593f4af" category="doc">Verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio - AFF C30 e AFF C60</block>
@@ -11950,4 +11912,111 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3d30da9db64c70df76ae8eab8c37ddf1" category="list-text">Se si sostituisce un alimentatore CA per uno shelf NS224, è possibile osservare l'animazione seguente per acquisire familiarità con la procedura prima di iniziare. L'animazione mostra un NS224 con NSM100 moduli, ma i gradini sono gli stessi per gli scaffali con NSM100B moduli.</block>
   <block id="e772ad168b6f97f132982a96392cd046" category="example-title">Sostituire l'alimentatore CA per NS224</block>
   <block id="0dcc8efe101bb5e6350d650ce519cbfa" category="video-title">Sostituzione a caldo di un alimentatore CA in uno shelf NS224</block>
+  <block id="40f990da8c57e47c36081d4d612c9817" category="list-text">Scollegare i cavi di alimentazione dagli alimentatori, quindi estrarre il modulo controller di qualche centimetro dalla parte anteriore del sistema.</block>
+  <block id="5330c5fb5d366be53452014b9ecf03a7" category="paragraph">+ .. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo. .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso. .. Premere il pulsante della camma di gestione del sistema. .. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo. .. Rimuovere il modulo di gestione del sistema dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal contenitore. .. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile. . Rimuovere il supporto di avvio dal modulo di gestione:</block>
+  <block id="42daa41b8c19102ddb14e0889d7abbb4" category="paragraph">+ image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[Immagine di sostituzione del supporto di avvio]</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="193d35b8a9ac476b4099d10d04a128a6" category="list-text">Riposizionare delicatamente e bloccare il modulo del controller nella parte anteriore del sistema.</block>
+  <block id="c65e5ab2ccd40a14e7dbaad19aa0c504" category="list-text">Scollegare i cavi di alimentazione dagli alimentatori del controller, quindi estrarre di qualche centimetro il modulo del controller, nella parte anteriore del sistema.</block>
+  <block id="2a111f85cafe27d96d705414a1545f34" category="list-text">Ricollegare i cavi di alimentazione all'alimentatore e riposizionare e bloccare delicatamente il modulo controller nella parte anteriore del sistema.</block>
+  <block id="fabbb288606bc55258a9e8e717fe5213" category="list-text">Ricollegare il controller.</block>
+  <block id="a97d4703d17abbeceacc3edae4e8fdc4" category="list-text">Se non si è già collegati a terra, mettere a terra l'utente. Scollegare i cavi di alimentazione dagli alimentatori, quindi estrarre il modulo controller di qualche centimetro dalla parte anteriore del sistema.</block>
+  <block id="fda9664b829519d7882c4d0260276790" category="list-text">Scollegare gli alimentatori del controller.</block>
+  <block id="9ea5392d65d4b774209903c12c0b7a2c" category="list-text">Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.</block>
+  <block id="b4f9b4ed219fb6f91477aff5ebef3453" category="admonition">Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.</block>
+  <block id="4efb9ea6af03bf03e0cdc2a4164ea43c" category="list-text">Collegare il cavo console alla porta console del modulo controller sostitutivo e ricollegarlo al computer portatile in modo che riceva i messaggi della console al riavvio.</block>
+  <block id="fde22c7ade0121628e0502770ed5326e" category="list-text">Collegare gli alimentatori. Il controller si avvia al prompt LOADER non appena l'alimentazione viene ripristinata.</block>
+  <block id="ea1ad38d91c2e87ef2e9571bd55654fd" category="list-text">ONTAP 9.17.1</block>
+  <block id="14a1b02d9ac34f22a362671d392a3852" category="list-text">ASA C30</block>
+  <block id="ed57089257c5bf0e9855c2abce5e2f2c" category="paragraph">I sistemi di archiviazione AFF A1K supportano ripiani NS224 con modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:</block>
+  <block id="bee9bdef55e93399a97d85b3925cfca2" category="list-text">I moduli a scaffale NSM100 utilizzano le porte integrate e0a ed e0b.</block>
+  <block id="1d18f8f4fb2168d48bce60e13139f7da" category="list-text">I moduli shelf NSM100B utilizzano le porte e1a ed e1b nello slot 1.</block>
+  <block id="cc71e1eb20bbf56ae364562c6769007c" category="paragraph">Il seguente esempio di cablaggio mostra i moduli NSM100 negli scaffali NS224 quando si fa riferimento alle porte dei moduli sugli scaffali.</block>
+  <block id="a93a7a45b049b849ed9c03ad1c596615" category="list-text">La procedura di cablaggio a scaffale NS224 mostra moduli NSM100B anziché moduli NSM100. Il cablaggio è lo stesso indipendentemente dal tipo di modulo NSM utilizzato, solo i nomi delle porte sono diversi:</block>
+  <block id="30898d03a4ca37450e8ab2be81f38dd5" category="list-text">I moduli NSM100B utilizzano le porte e1a ed e1b su un modulo I/O nello slot 1.</block>
+  <block id="e6c68585977f6b3e8b2b4ced88ca3d4d" category="list-text">I moduli NSM100 utilizzano le porte integrate (onboard) e0a ed e0b.</block>
+  <block id="215caa644827ccfb864125e557ed29f2" category="list-text">Collegare ciascun controller a ciascun modulo NSM sullo scaffale NS224 utilizzando i cavi di archiviazione forniti con il sistema di archiviazione, che potrebbero essere del seguente tipo:</block>
+  <block id="01bd09c5271f772a108914f35e7efcd3" category="paragraph">I sistemi di archiviazione AFF A70 e 90 supportano ripiani NS224 con il modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:</block>
+  <block id="2486a91e78743df4d0cc635c5b8b51c8" category="list-text">I moduli shelf NSM100 utilizzano le porte integrate e0a ed e0b.</block>
+  <block id="a53b96fad1d9b45d4ddb6e31d5f14d63" category="paragraph">Dopo aver sostituito fisicamente il supporto di avvio danneggiato, <block ref="dcb4deaaa5f388ac9dd740fbe37648be" category="inline-link-macro-rx"></block> .</block>
+  <block id="023d1fe5c37125b4e245d88460c90d81" category="summary">Iniziate a sostituire i supporti di avvio nei sistemi di storage ASA A20, ASA A30 e ASA A50 esaminando i requisiti di sostituzione, spegnendo il controller danneggiato, sostituendo i supporti di avvio, ripristinando l'immagine sui supporti di avvio e verificando la funzionalità del sistema.</block>
+  <block id="34d3dea8236697b4a8d8e9bf094d3ee7" category="paragraph">Esaminare i requisiti per la sostituzione del telaio.</block>
+  <block id="1fcab41d4b270e3bb13c8e83cf6dbb29" category="paragraph">Sostituire il telaio spostando le unità e gli eventuali moduli di riempimento, i controller (con gli alimentatori) e la cornice dal telaio danneggiato al nuovo telaio e sostituendo il telaio danneggiato con il nuovo telaio dello stesso modello del telaio danneggiato.</block>
+  <block id="5e163d153d8c37baaa9fd7de379cf5bf" category="paragraph">Esaminare i requisiti per la sostituzione del controller.</block>
+  <block id="182e45b4e9d9b946f297d6188c6d4585" category="paragraph">È possibile aggiungere un modulo I/O al sistema di storage ASA C30 se sono disponibili slot. Se tutti gli slot sono completamente occupati, è possibile sostituire un modulo esistente per aggiungerne uno nuovo.</block>
+  <block id="008e878c00337b7c1676a1bf2b5e1f88" category="summary">Quando un componente del sistema di storage ASA C30 si guasta, restituisci la parte guasta a NetApp.</block>
+  <block id="1a74384be12ec55525108f8b4b66e4cf" category="doc">Restituire il componente guasto a NetApp - ASA C30</block>
+  <block id="5c57ecccb489a807b7ce058e84066112" category="paragraph">Quando un componente del sistema di storage ASA C30 si guasta, restituisci la parte guasta a NetApp. Vedere la<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="998d7afe02e862a99bc2356bb4360a68" category="doc">Reinstallare il controller - ASA C30</block>
+  <block id="f7fa8f7e10c9cc8ec8c1a66e7e044c0c" category="doc">Rimuovere il controller - ASA C30</block>
+  <block id="a6090718a9aeffd0a4509ab0c7982422" category="summary">Dopo aver installato il nuovo dispositivo di supporto di avvio nel sistema di archiviazione ASA C30, è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo funzionante.</block>
+  <block id="c2de4d4510a9a64facdf71ce04df1256" category="doc">Ripristinare l'immagine ONTAP sul supporto di avvio - ASA C30</block>
+  <block id="ea8fd5bd6c26f06b31f96391b253c778" category="summary">Il supporto di avvio del sistema di archiviazione ASA C30 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi e il trasferimento dell'immagine ONTAP sui supporti di avvio sostitutivi.</block>
+  <block id="5daa76a4aa0a675c1ff837ebfd9193de" category="doc">Sostituire il supporto di avvio - ASA C30</block>
+  <block id="bd9df02f270ea2cb9436c0038ef3b34a" category="summary">Prima di sostituire il supporto di avvio nel sistema di storage ASA C30, assicurarsi di soddisfare i requisiti e le considerazioni necessarie per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma del corretto funzionamento della porta e0S (chiave e0M) del controller danneggiato e la verifica dell'abilitazione di Onboard Key Manager (OKM) o External Key Manager (EKM).</block>
+  <block id="9711de828f499165b267f4aded9c85e0" category="doc">Requisiti per sostituire i supporti di avvio - ASA C30</block>
+  <block id="af64ca3ab36eca3c94582cbfadb2bb6d" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C30, è necessario esaminare i requisiti di sostituzione, arrestare il controller danneggiato, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="9e4d05a14fde717f129944022ed99861" category="doc">Flusso di lavoro per la sostituzione dei supporti di avvio - ASA C30</block>
+  <block id="ea792349c9ec99fe28db82adad3adccb" category="summary">Spegnere il controller danneggiato nel sistema di storage ASA C30 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="c9f4b7c42437a2c4b4690a3b013628ba" category="doc">Spegnere il controller per sostituire il supporto di avvio - ASA C30</block>
+  <block id="669772d17e2dc353f34f422c36121ce3" category="summary">Verificare lo stato HA dello chassis e quindi restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis ASA C30.</block>
+  <block id="23d33c98c35b14fd4a80967e1b3e3457" category="doc">Sostituzione completa dello chassis - ASA C30</block>
+  <block id="25237d71e9d7f1d0ad7e397e5833e8b3" category="summary">Sostituisci lo chassis del tuo sistema di archiviazione ASA C30 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller e degli alimentatori, la rimozione delle unità, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.</block>
+  <block id="635216b917d6fdf5a454b511576ce44d" category="doc">Sostituire il telaio - ASA C30</block>
+  <block id="aab639c4c9147a73b0546ea341640574" category="summary">Prima di sostituire il telaio del sistema di archiviazione ASA C30, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò comprende la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della correttezza del telaio di ricambio e degli strumenti necessari.</block>
+  <block id="d8d0c8656fc7188d35f6528aa09e4d2f" category="doc">Requisiti per la sostituzione del telaio - ASA C30</block>
+  <block id="5e10b31ed571502de1abfffd65faeed4" category="summary">Arrestare i controller nel sistema di archiviazione ASA C30 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
+  <block id="2f826d52c24daa29d9d263625be52c6d" category="doc">Spegnere le centraline - ASA C30</block>
+  <block id="ce586186264926dca69594bb6b7d8b7e" category="summary">La sostituzione dello chassis nel sistema di archiviazione ASA C30 consiste nell'esaminare i requisiti di sostituzione, spegnere i controller, sostituire lo chassis e verificare il funzionamento del sistema.</block>
+  <block id="e2ed0a4168043c9156a55b725d7222e5" category="doc">Flusso di lavoro per la sostituzione del telaio - ASA C30</block>
+  <block id="e0ac24275668c9f2a6cc457319a609cf" category="summary">Sostituisci il controller nel tuo sistema di archiviazione ASA C30 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti nel controller sostitutivo, l'installazione del controller sostitutivo e il riavvio.</block>
+  <block id="05e289dc15f65b50fbc090198495aabb" category="doc">Sostituire il controller - ASA C30</block>
+  <block id="46f7be643adbfb35dff8b275ed40b40a" category="summary">Restituisci il controllo delle risorse di storage al controller sostitutivo in modo che il sistema di storage ASA C30 possa riprendere il normale funzionamento. La procedura di restituzione varia in base al tipo di crittografia utilizzato dal sistema: nessuna crittografia, crittografia Onboard Key Manager (OKM) o crittografia External Key Manager (EKM).</block>
+  <block id="6b422659ac5fffe3ecc8c66789fdeadd" category="doc">Restituire il controller - ASA C30</block>
+  <block id="67cb3952ec89ce8d08815e47cfffe7fb" category="paragraph">Restituisci il controllo delle risorse di archiviazione al controller sostitutivo in modo che il tuo sistema di archiviazione ASA C30 possa riprendere a funzionare normalmente. La procedura di give back varia in base al tipo di crittografia utilizzato dal sistema: Nessuna crittografia, crittografia OKM (Onboard Key Manager) o EKM (External Key Manager).</block>
+  <block id="7ea5dd39204016c48a5829f91be918a1" category="summary">Prima di sostituire il controller nel sistema di archiviazione ASA C30, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica della corretta sostituzione del controller e il salvataggio dell'output della console del controller in un file di registro di testo.</block>
+  <block id="f0de359ba2c82f8ea7884966a3ba0c02" category="doc">Requisiti per la sostituzione della centralina - ASA C30</block>
+  <block id="3b97faedccbb32bf9302724d84bd3849" category="summary">Per completare la sostituzione del controller per il sistema di storage ASA C30, ripristinare prima la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze richieste sul nuovo controller. Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registrare il numero di serie della nuova centralina e restituire la parte guasta a NetApp.</block>
+  <block id="c9618ee1abbbc558b8f6afab18e9de6a" category="doc">Sostituzione completa della centralina - ASA C30</block>
+  <block id="91d5bdb9b8be20419adab0d70c3a9d3f" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione ASA C30 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.</block>
+  <block id="fc45a0ec77bb468d6fedb9674ced8528" category="doc">Spegnere il controller danneggiato - ASA C30</block>
+  <block id="91a97d4fdec1af557392f5388e45d03a" category="summary">Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage ASA C30 e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi.</block>
+  <block id="bd3d959eef2391eeddbe585e6aa31aaf" category="doc">Ripristinare e verificare la configurazione di sistema - ASA C30</block>
+  <block id="9d817ef7895689fb3cc5312747a60e5a" category="summary">Inizia a sostituire il controller nel sistema di storage ASA C30 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e restituendo il controllo delle risorse di storage al controller sostitutivo.</block>
+  <block id="803e804e07341009008b98487711f181" category="doc">Flusso di lavoro per la sostituzione del controller - ASA C30</block>
+  <block id="c61569158aa3671e77ca597581b887ef" category="summary">Sostituire un modulo DIMM nel sistema di archiviazione ASA C30 se vengono rilevati troppi errori di memoria correggibili o non correggibili. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.</block>
+  <block id="ec3e218e5469b0ce628477ad9f004c70" category="doc">Sostituire un modulo DIMM - ASA C30</block>
+  <block id="1803a1112a2904ae0921972c848b5e8f" category="summary">Sostituisci un'unità nel tuo sistema di archiviazione ASA C30 quando un'unità si guasta o necessita di un aggiornamento. Il processo di sostituzione prevede l'identificazione dell'unità guasta, la rimozione sicura e l'installazione di una nuova unità per garantire l'accesso continuo ai dati e le prestazioni del sistema.</block>
+  <block id="23b2049b2eea6424e3c9f2c437632516" category="doc">Sostituire un'unità - ASA C30</block>
+  <block id="f34d2c681546688dd685a08e6231060d" category="summary">Sostituisci un modulo ventola nel tuo sistema di archiviazione ASA C30 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.</block>
+  <block id="4ba0a2181ffa6e88b2a3a96e4335f373" category="doc">Sostituire un modulo ventola - ASA C30</block>
+  <block id="08eb5686abafb87a324c810a07f29f17" category="summary">Per i sistemi di archiviazione ASA C30, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="17a891651b2730bc15c982ad663e4f0a" category="doc">Gestire l'hardware ASA C30</block>
+  <block id="6b9adda1cbf39f0e67bdc239d9aa4627" category="summary">Aggiungi un modulo I/O al tuo sistema di archiviazione ASA C30 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.</block>
+  <block id="8129be3599ad6ec9ac772edc71b7c944" category="doc">Aggiunta di un modulo i/o - ASA C30</block>
+  <block id="efbf95fd94ecc04d20688f2a1a7413ed" category="summary">Il sistema di storage ASA C30 offre flessibilità nell'espansione o nella sostituzione dei moduli I/O per migliorare la connettività e le prestazioni della rete. L'aggiunta o la sostituzione di un modulo i/o è essenziale quando si aggiornano le funzionalità di rete o si risolve un problema di un modulo.</block>
+  <block id="3e1235f9663aca6507f5d16f948427e1" category="doc">Panoramica su aggiunta e sostituzione di un modulo i/o - ASA C30</block>
+  <block id="c7d9daf18836286b26e5af2f7a1b19f0" category="summary">Sostituisci un modulo I/O nel tuo sistema di storage ASA C30 quando il modulo si guasta o richiede un aggiornamento per supportare prestazioni più elevate o funzionalità aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp.</block>
+  <block id="04309486482d3d0620657420da172323" category="doc">Sostituire un modulo i/o - ASA C30</block>
+  <block id="1bc87c4a07526688d1214c5a431c934a" category="summary">Conserva l'hardware del tuo sistema storage ASA C30 per garantire affidabilità a lungo termine e performance ottimali. Eseguire regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, in quanto ciò consente di evitare tempi di inattività e perdite di dati.</block>
+  <block id="2b35d20ce09f7745c49b8451372caf6c" category="doc">Panoramica della manutenzione hardware - ASA C30</block>
+  <block id="907caac40616ad0b3b73482a664ecc6b" category="paragraph">Le procedure descritte in questa sezione presuppongono che il sistema di archiviazione ASA C30 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP.</block>
+  <block id="27bfa0f1b8609e118425afe072093cba" category="paragraph">Per il sistema di archiviazione ASA C30, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="754858e1736e8f08294476cdf876df07" category="summary">Sostituisci la batteria NV nel tuo sistema di storage ASA C30 quando inizia a scaricarsi o si guasta, poiché è responsabile della conservazione dei dati critici del sistema durante le interruzioni di corrente. Il processo di sostituzione prevede l'arresto del controller danneggiato, la rimozione del modulo controller, la sostituzione della batteria NV, la reinstallazione del modulo controller e la restituzione del componente guasto a NetApp.</block>
+  <block id="30439362b4a418aafdf1f5fca92ba9ae" category="doc">Sostituire la batteria NV - ASA C30</block>
+  <block id="34010b5f9d4ebf5305f175c19ab977fc" category="summary">Sostituisci un alimentatore CA o CC (PSU) nel tuo sistema di archiviazione ASA C30 quando si guasta o si guasta, assicurandoti che il sistema continui a ricevere l'alimentazione necessaria per un funzionamento stabile. Il processo di sostituzione prevede lo scollegamento dell'alimentatore difettoso dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la sostituzione dell'alimentatore difettoso e il ricollegamento alla fonte di alimentazione.</block>
+  <block id="b51e59bcca51590e8f0da1f045973db3" category="doc">Sostituire l'alimentatore - ASA C30</block>
+  <block id="9c0bdb399f0e50ec7c09183c83cb3eae" category="summary">Sostituisci la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel tuo sistema di archiviazione ASA C30 per garantire che i servizi e le applicazioni che si basano su una sincronizzazione oraria accurata rimangano operativi.</block>
+  <block id="fe9d07d7f91e1b374f95ba72708ba4ca" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA C30</block>
+  <block id="e30552dfe91bf978ebf6787b261fac5c" category="doc">Spegnere il controller per sostituire il supporto di avvio - AFF C30 e AFF C60</block>
+  <block id="0b7c680449e211bdbdb9d43223f6c69c" category="paragraph">Spegnere il controller del sistema di archiviazione AFF C30 o AFF C60 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="dda626e5ca7d24a899a17030ee1e8338" category="doc">Sostituzione di un'unità - AFF C30 e AFF C60</block>
+  <block id="5ff448003ebaf80171d13e6e73920334" category="section-title">Maggio 2025</block>
+  <block id="5a4e5cd19493dae0777edfcd18341c6e" category="paragraph">Il nuovo sistema ASA C30 estende le funzionalità di gestione dei dati ad alte prestazioni, intelligenti e complete a un maggior numero di clienti e carichi di lavoro.</block>
+  <block id="4b59a84869b0ee3437aa8c8b9dd4c786" category="sidebar">Sistemi ASA C30</block>
+  <block id="527a051a36c26b816e479ad211bc96ea" category="sidebar">Manutenzione di ASA C30</block>
+  <block id="63a52a2f30db6359822003e267bb9514" category="sidebar">Supporti di avvio di ASA C30</block>
+  <block id="b4a3b44dc7350cb88f59a4a2eb7dda1d" category="sidebar">Chassis ASA C30</block>
+  <block id="cb330090f109eb2fa5d8e0cb697b8627" category="sidebar">Modulo controller ASA C30</block>
+  <block id="d6cf13e3e73df787bea3a13aaa745efd" category="sidebar">Modulo i/o ASA C30</block>
 </blocks>

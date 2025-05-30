@@ -22,13 +22,6 @@ Prima di sostituire il supporto di avvio nel sistema di storage ASA A20, ASA A30
 +
 La porta e0S viene utilizzata per il ripristino automatico dell'avvio.
 
-* Determinare se OKM (Onboard Key Manager) o EKM (Eternal Key Manager) è configurato utilizzando uno dei seguenti metodi:
-+
-** È possibile chiedere all'amministratore di sistema se OKM o EKM sono abilitati.
-** Per verificare se OKM è abilitato, è possibile utilizzare `security key-manager onboard show` .
-** Per verificare se EKM è abilitato, è possibile utilizzare `security key-manager external show` .
-
-
 * Per OKM, è necessario il contenuto del file della passphrase OKM.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +

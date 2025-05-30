@@ -220,18 +220,17 @@ NOTE: Assicurarsi che il cavo della console sia collegato al modulo controller r
 +
 I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
 
+
+
 +
 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
++
 .. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
 
 
-+
-
-NOTE: Se il controller viene avviato al prompt di Loader, riavviarlo con il `boot_ontap` comando.
-
-. Collegare i cavi di alimentazione agli alimentatori.
+. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
 +
 
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.

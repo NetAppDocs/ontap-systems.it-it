@@ -140,6 +140,15 @@ Le seguenti procedure di cablaggio mostrano come collegare i controller a uno sh
 
 Per il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
 
+.A proposito di questa attività
+I sistemi di archiviazione AFF A70 e 90 supportano ripiani NS224 con il modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:
+
+* I moduli shelf NSM100 utilizzano le porte integrate e0a ed e0b.
+* I moduli shelf NSM100B utilizzano le porte e1a ed e1b nello slot 1.
+
+
+Il seguente esempio di cablaggio mostra i moduli NSM100 negli scaffali NS224 quando si fa riferimento alle porte dei moduli sugli scaffali.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Uno shelf storage NS224
