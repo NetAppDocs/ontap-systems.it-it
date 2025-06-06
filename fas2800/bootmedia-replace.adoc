@@ -16,7 +16,7 @@ Per sostituire il supporto di avvio, è necessario rimuovere il modulo controlle
 
 == Fase 1: Rimuovere il modulo controller
 
-[role="lead"]
+.Fasi
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -48,8 +48,6 @@ Pulsante di rilascio del coperchio del modulo controller
 
 Individuare il supporto di avvio nel modulo controller, situato sotto la scheda mezzanine e seguire le istruzioni per sostituirlo.
 
-.Animazione - sostituire il supporto di avvio
-video::10a29a01-a86e-451c-b05a-af4701726f57[panopto]
 image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["Sostituire il supporto di avvio"]
 
 [cols="1,2"]
@@ -126,19 +124,10 @@ Vedere https://kb.netapp.com/onprem/ontap/os/Which_ONTAP_image_should_I_download
 NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
 
 +
-Il file di immagine del servizio decompresso contiene due cartelle:
+L'unità flash USB deve avere la stessa versione del BIOS (Service Image) di quella in esecuzione sul controller danneggiato.
 
 +
-** `boot`
-** `efi`
-+
-... Copiare il `efi` Nella directory principale dell'unità flash USB.
-+
-L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
-
-... Rimuovere l'unità flash USB dal computer portatile.
-
-
+.. Rimuovere l'unità flash USB dal computer portatile.
 
 
 . Installare il modulo controller:

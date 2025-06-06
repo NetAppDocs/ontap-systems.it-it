@@ -142,6 +142,17 @@ Per il numero massimo di ripiani supportati per il sistema di storage e per tutt
 
 Per ulteriori istruzioni sul cablaggio degli shelf SAS, vedere link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html["Regole e concetti di cablaggio SAS - shelf con moduli IOM12/IOM12B"].
 
+.A proposito di questa attività
+I sistemi di archiviazione FAS70 e FAS90 supportano gli scaffali DS212C, DS224C, DS460C e NS224 con il modulo NSM100 o NSM100B.
+
+Le principali differenze tra i moduli NS224 sono:
+
+* I moduli shelf NSM100 utilizzano le porte integrate e0a ed e0b.
+* I moduli shelf NSM100B utilizzano le porte e1a ed e1b nello slot 1.
+
+
+Il seguente esempio di cablaggio NS224 mostra i moduli NSM100 negli scaffali NS224 quando si fa riferimento alle porte dei moduli sugli scaffali.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Uno shelf storage NS224

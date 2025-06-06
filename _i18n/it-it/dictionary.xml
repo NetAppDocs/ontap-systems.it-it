@@ -8937,8 +8937,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="789b5a8a8cbbdce99d0cd8864ee0122a" category="doc">Spegnere il controller compromesso - FAS70 e FAS90</block>
   <block id="2902ee20441450339d3c624a2432953d" category="list-text"><block ref="402920e7db99056d01d15836c97d7e6e" category="inline-xref-macro-rx"></block></block>
   <block id="0ead7a2e2db558cfd790c55a9c76462e" category="list-text">Verificare che tutti gli altri componenti funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.</block>
-  <block id="fd39955a756e9aaa81ca55b2791f9b72" category="example-title">Opzione 1 sistemi MOST</block>
-  <block id="d4373786f422d4c41e16fcb4a1e26b83" category="example-title">Configurazione MetroCluster opzione 2</block>
   <block id="1cc5afe23260cb08d578b3171ed8bb0d" category="paragraph">Memorizzazione nella cache dei numeri degli slot del modulo</block>
   <block id="9c7e22c30b9aa93d97efb0ef5d7ccaa8" category="list-text">Ruotare la linguetta allontanandola dal modulo.</block>
   <block id="21c6d5df7d87902fb54560352086c7e1" category="list-text">Premere la linguetta di color terracotta nella parte superiore del modulo di caching e ruotare la maniglia della camma allontanandola dal modulo di caching.</block>
@@ -11249,7 +11247,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="35ac4e474d14cd3235380c2e767e83a3" category="paragraph">Sostituire il NVRAM nel sistema FAS70 o FAS90 quando la memoria non volatile si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sostituzione del modulo NVRAM o del modulo DIMM NVRAM, la riassegnazione dei dischi e la restituzione del componente guasto a NetApp.</block>
   <block id="a7188c3f4745ef552e2d05d7b35f5f28" category="summary">Sostituire la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel sistema FAS70 o FAS90 per garantire che i servizi e le applicazioni che si affidano alla sincronizzazione accurata dell'ora rimangano operativi.</block>
   <block id="2ffef1288a7f6acf62a54035268660b1" category="summary">Sostituire il modulo di gestione del sistema FAS70 o FAS90 se è difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.</block>
-  <block id="5058f1af8388633f609cadb75a75dc9d" category="paragraph">.</block>
   <block id="83755d1a8b686dba4bc8143c0cb7f397" category="doc">Flusso di lavoro per la sostituzione dei supporti di avvio - AFF A1K</block>
   <block id="25602a3f0e04b149a4c958bcec65c371" category="summary">Il supporto di avvio del sistema AFF A1K memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi e il trasferimento dell'immagine ONTAP sui supporti di avvio sostitutivi.</block>
   <block id="b33207f5d0f2655fdef88d9bbf915f24" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione AFF A1K per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
@@ -11913,9 +11910,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e772ad168b6f97f132982a96392cd046" category="example-title">Sostituire l'alimentatore CA per NS224</block>
   <block id="0dcc8efe101bb5e6350d650ce519cbfa" category="video-title">Sostituzione a caldo di un alimentatore CA in uno shelf NS224</block>
   <block id="40f990da8c57e47c36081d4d612c9817" category="list-text">Scollegare i cavi di alimentazione dagli alimentatori, quindi estrarre il modulo controller di qualche centimetro dalla parte anteriore del sistema.</block>
-  <block id="5330c5fb5d366be53452014b9ecf03a7" category="paragraph">+ .. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo. .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso. .. Premere il pulsante della camma di gestione del sistema. .. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo. .. Rimuovere il modulo di gestione del sistema dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal contenitore. .. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile. . Rimuovere il supporto di avvio dal modulo di gestione:</block>
-  <block id="42daa41b8c19102ddb14e0889d7abbb4" category="paragraph">+ image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[Immagine di sostituzione del supporto di avvio]</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="193d35b8a9ac476b4099d10d04a128a6" category="list-text">Riposizionare delicatamente e bloccare il modulo del controller nella parte anteriore del sistema.</block>
   <block id="c65e5ab2ccd40a14e7dbaad19aa0c504" category="list-text">Scollegare i cavi di alimentazione dagli alimentatori del controller, quindi estrarre di qualche centimetro il modulo del controller, nella parte anteriore del sistema.</block>
   <block id="2a111f85cafe27d96d705414a1545f34" category="list-text">Ricollegare i cavi di alimentazione all'alimentatore e riposizionare e bloccare delicatamente il modulo controller nella parte anteriore del sistema.</block>
@@ -11926,7 +11920,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b4f9b4ed219fb6f91477aff5ebef3453" category="admonition">Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.</block>
   <block id="4efb9ea6af03bf03e0cdc2a4164ea43c" category="list-text">Collegare il cavo console alla porta console del modulo controller sostitutivo e ricollegarlo al computer portatile in modo che riceva i messaggi della console al riavvio.</block>
   <block id="fde22c7ade0121628e0502770ed5326e" category="list-text">Collegare gli alimentatori. Il controller si avvia al prompt LOADER non appena l'alimentazione viene ripristinata.</block>
-  <block id="ea1ad38d91c2e87ef2e9571bd55654fd" category="list-text">ONTAP 9.17.1</block>
   <block id="14a1b02d9ac34f22a362671d392a3852" category="list-text">ASA C30</block>
   <block id="ed57089257c5bf0e9855c2abce5e2f2c" category="paragraph">I sistemi di archiviazione AFF A1K supportano ripiani NS224 con modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:</block>
   <block id="bee9bdef55e93399a97d85b3925cfca2" category="list-text">I moduli a scaffale NSM100 utilizzano le porte integrate e0a ed e0b.</block>
@@ -12019,4 +12012,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b4a3b44dc7350cb88f59a4a2eb7dda1d" category="sidebar">Chassis ASA C30</block>
   <block id="cb330090f109eb2fa5d8e0cb697b8627" category="sidebar">Modulo controller ASA C30</block>
   <block id="d6cf13e3e73df787bea3a13aaa745efd" category="sidebar">Modulo i/o ASA C30</block>
+  <block id="8acf9575f7f79494b7321c6428846a4b" category="paragraph">Sostituire il supporto di avvio.</block>
+  <block id="8fdc5ec3ff56b023a707d257557cb7c1" category="paragraph">I sistemi di archiviazione FAS70 e FAS90 supportano gli scaffali DS212C, DS224C, DS460C e NS224 con il modulo NSM100 o NSM100B.</block>
+  <block id="cb1d7f2de7963108d3fe1b590a415523" category="paragraph">Le principali differenze tra i moduli NS224 sono:</block>
+  <block id="a1c52b2edb23bc93318c0b82dc9baead" category="paragraph">Il seguente esempio di cablaggio NS224 mostra i moduli NSM100 negli scaffali NS224 quando si fa riferimento alle porte dei moduli sugli scaffali.</block>
+  <block id="29cc4b807f94b06bddae2e11c6a56c1e" category="paragraph">L'unità flash USB deve avere la stessa versione del BIOS (Service Image) di quella in esecuzione sul controller danneggiato.</block>
 </blocks>
