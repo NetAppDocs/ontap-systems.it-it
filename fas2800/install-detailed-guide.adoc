@@ -233,17 +233,18 @@ Switch di rete host
 
 image::../media/oie_cable_pull_tab_down.png[Direzione della linguetta di estrazione]
 
+Per cablare i controller alla rete, è possibile utilizzare l'animazione applicabile o i passaggi dettagliati riportati nella tabella.
+
+.Animazione - cablaggio di un cluster senza switch a due nodi
+video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
+.Animazione - cablaggio del cluster con switch
+video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 [role="tabbed-block"]
 ====
 .Opzione 1: Collegare un cluster senza switch a due nodi
 --
 Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster senza switch a due nodi.
 
-.A proposito di questa attività
-Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra le centraline e gli interruttori.
-
-.Animazione - cablaggio di un cluster senza switch a due nodi
-video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
 .Fasi
 . Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:
 +
@@ -320,11 +321,6 @@ IMPORTANT: NON collegare i cavi di alimentazione.
 --
 Collegare le connessioni di rete e le porte di interconnessione del cluster per un cluster con switch.
 
-.A proposito di questa attività
-Utilizzare l'animazione o le istruzioni dettagliate per completare il cablaggio tra le centraline e gli interruttori.
-
-.Animazione - cablaggio del cluster con switch
-video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 .Fasi
 . Collegare le porte di interconnessione del cluster da e0a e0a e da e0b a e0b con il cavo di interconnessione del cluster:
 +
@@ -446,31 +442,29 @@ video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .. Dalla porta 1 su IOM A alla porta 3 sull'IOM A sullo shelf direttamente sotto.
 .. Porta 1 su IOM B alla porta 3 sull'IOM B sullo shelf direttamente sotto.
 +
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Connettore da mini SAS a mini SAS]
+image::../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[Cablaggio da scaffale a scaffale]
 
 
 
+. Collegare il controller a agli shelf di dischi.
++
+.. Porta del controller A da 0a a IOM B porta 1 sul primo shelf di dischi nello stack.
+.. Controller A port 0b1 to IOM A port 3 on the last drive shelf in the stack.
++
+image::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[Collegamento del controller A allo scaffale]
 
 
-*Cavi da mini-SAS HD a mini-SAS HD*
 
-+ immagine:../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[cablaggio da ripiano a ripiano]
+. Collegare il controller B agli shelf di dischi.
++
+.. Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack.
+.. Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.
 
-+ . Collegare il controller a agli shelf di dischi. .. Porta del controller A da 0a a IOM B porta 1 sul primo shelf di dischi nello stack. .. Controller A port 0b1 to IOM A port 3 on the last drive shelf in the stack.
 
-+ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[connettore da Mini SAS a mini SAS]
++
+image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Collegamento del controller B allo scaffale]
 
-*Cavi da mini-SAS HD a mini-SAS HD*
 
-+ immagine:../media/dwr-2800_controller1-to schelf_IEOPS-896.svg[collegamento da controller A A shelf]
-
-+ . Collegare il controller B agli shelf di dischi. .. Porta del controller B 0a alla porta IOM A 1 sul primo shelf di dischi nello stack. .. Dalla porta del controller B 0b1 alla porta IOM B 3 sull'ultimo shelf di dischi nello stack.
-
-+ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[connettore da Mini SAS a mini SAS]
-
-*Cavi da mini-SAS HD a mini-SAS HD*
-
-+ immagine:../media/dwr-2800_controller2-to schelf_IEOPS-897.svg[collegamento da controller B a shelf]
 
 
 
@@ -478,6 +472,10 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Connettore da mini SAS 
 
 Completare l'installazione e la configurazione del sistema di storage utilizzando l'opzione 1: Se la funzione di rilevamento della rete è attivata o l'opzione 2: Se la funzione di rilevamento della rete non è attivata.
 
+Utilizzare la seguente animazione in entrambe le opzioni in cui è richiesta l'impostazione dell'ID scaffale:
+
+.Animazione - impostazione degli ID dello shelf di dischi
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 [role="tabbed-block"]
 ====
 .Opzione 1: Se la funzione di rilevamento della rete è attivata
@@ -485,10 +483,7 @@ Completare l'installazione e la configurazione del sistema di storage utilizzand
 Se sul portatile è abilitata la funzione di rilevamento della rete, completare la configurazione e la configurazione del sistema storage utilizzando la funzione di rilevamento automatico del cluster.
 
 .Fasi
-. Utilizzare l'animazione seguente per attivare l'alimentazione degli scaffali e impostare gli ID degli scaffali.
-+
-.Animazione - impostazione degli ID dello shelf di dischi
-video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. Attivare l'alimentazione dello scaffale e impostare gli ID dello scaffale utilizzando l'animazione all'inizio di questo passaggio.
 . Accendere i controller
 +
 .. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
@@ -560,10 +555,7 @@ image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[Connessio
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 
 
-. Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi:
-+
-.Animazione - impostazione degli ID dello shelf di dischi
-video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. Attivare l'alimentazione dello scaffale e impostare gli ID dello scaffale utilizzando l'animazione all'inizio di questo passaggio.
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +

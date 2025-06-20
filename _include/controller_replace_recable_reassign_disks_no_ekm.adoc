@@ -1,17 +1,6 @@
----
-permalink: a1k/controller-replace-recable-reassign-disks.html 
-sidebar: sidebar 
-keywords: aff a1k, how to recable the system, how to reassign disks 
-summary: Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF A1K possa riprendere il normale funzionamento. 
----
-= Restituire il controller - AFF A1K
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema AFF A1K possa riprendere il normale funzionamento. La procedura di restituzione varia in base al tipo di crittografia utilizzato dal sistema: nessuna crittografia o crittografia Onboard Key Manager (OKM).
 
 [role="tabbed-block"]
 ====
@@ -79,5 +68,3 @@ Se l'output mostra i risultati (gli ID chiave delle chiavi che non sono presenti
 
 --
 ====
-.Quali sono le prossime novità?
-Dopo aver ritrasferito la proprietà delle risorse di storage al controller sostitutivo, occorre seguire link:controller-replace-restore-system-rma.html["completare la sostituzione della centralina"] la procedura.

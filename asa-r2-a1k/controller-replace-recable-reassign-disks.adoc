@@ -11,7 +11,7 @@ summary: Ripristina il controllo delle risorse di storage sul controller sostitu
 
 
 [role="lead"]
-Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema ASA A1K possa riprendere il normale funzionamento. La procedura di give back varia in base al tipo di crittografia utilizzato dal sistema: Nessuna crittografia, crittografia OKM (Onboard Key Manager) o EKM (External Key Manager).
+Ripristina il controllo delle risorse di storage sul controller sostitutivo, in modo che il sistema ASA A1K possa riprendere il normale funzionamento. La procedura di restituzione varia in base al tipo di crittografia utilizzato dal sistema: nessuna crittografia o crittografia Onboard Key Manager (OKM).
 
 [role="tabbed-block"]
 ====
@@ -72,53 +72,6 @@ Se l'output mostra i risultati (gli ID chiave delle chiavi che non sono presenti
 
 
 
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
-
-
---
-.Gestore chiavi esterno (EKM)
---
-Reimpostare la crittografia e riportare il controller al normale funzionamento.
-
-.Fasi
-. Se il volume root è crittografato con External Key Manager e il cavo console è collegato al nodo sostitutivo, immettere `boot_ontap menu` e selezionare opzione `11`.
-. Se compaiono queste domande, rispondere `y` o `n` secondo necessità:
-+
-Si dispone di una copia del file /cfcard/kmip/certs/client.crt? {y/n}
-
-+
-Avete una copia del file /cfcard/kmip/certs/client.key? {y/n}
-
-+
-Si dispone di una copia del file /cfcard/kmip/certs/CA.pem? {y/n}
-
-+
-Si dispone di una copia del file /cfcard/kmip/servers.cfg? {y/n}
-
-+
-Conosci l'indirizzo del server KMIP? {y/n}
-
-+
-Conosci la porta KMIP? {y/n}
-
-+
-
-NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di problemi.
-
-. Fornire le informazioni relative a:
-+
-** Il contenuto del file del certificato client (client.crt)
-** Il contenuto del file della chiave client (client.key)
-** Contenuto del file CA (CA.pem) del server KMIP
-** L'indirizzo IP del server KMIP
-** Porta per il server KMIP
-
-
-. Una volta che il sistema è stato elaborato, viene visualizzato il Boot Menu (Menu di avvio). Selezionare '1' per l'avvio normale.
-. Controllare lo stato del takeover: `storage failover show`
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata e quindi `run local partner nosavecore` a `set -privilege advanced` .
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
 . Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
 . Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`

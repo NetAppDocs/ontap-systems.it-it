@@ -10,7 +10,8 @@ summary: Individuare il supporto di avvio nel controller e seguire le istruzioni
 :imagesdir: ../media/
 
 
-Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+[role="lead"]
+È necessario rimuovere e aprire il modulo controller danneggiato, individuare e sostituire il supporto di avvio nel controller, trasferire l'immagine di avvio su un'unità USB, inserire l'unità USB nel controller e quindi avviare il controller.
 
 
 
@@ -118,18 +119,7 @@ Vedere https://kb.netapp.com/onprem/ontap/os/Which_ONTAP_image_should_I_download
 
 
 
-. Decomprimere l'immagine scaricata.
-+
-
-NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare WinZip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
-
-+
-L'unità flash USB deve avere la stessa versione del BIOS (Service Image) di quella in esecuzione sul controller danneggiato.
-
-+
-.. Rimuovere l'unità flash USB dal computer portatile.
-
-
+. Rimuovere l'unità flash USB dal computer portatile.
 . Installare il modulo controller:
 +
 .. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
@@ -145,14 +135,9 @@ Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dis
 
 . Inserire completamente il modulo controller nel sistema, assicurandosi che la maniglia della camma si allontani dall'unità flash USB, spingere con decisione la maniglia della camma per terminare l'inserimento del modulo controller, spingere la maniglia della camma in posizione chiusa, quindi serrare la vite a testa zigrinata.
 +
-Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
-
-. Interrompere il processo di avvio per interrompere il CARICAMENTO premendo Ctrl-C quando viene visualizzato Avvio DI AUTOBOOT premere Ctrl-C per interrompere....
-+
-Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
-
-. Per i sistemi con un controller nello chassis, ricollegare l'alimentazione e accendere gli alimentatori.
-+
-Il sistema inizia ad avviarsi e si arresta al prompt DEL CARICATORE.
+Il controller inizia ad avviarsi non appena è completamente installato nello chassis e si arresta al prompt LOADER.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il supporto di avvio, è necessario link:bootmedia-recovery-image-boot.html["avviare l'immagine di ripristino"].

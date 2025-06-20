@@ -230,10 +230,10 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . Utilizzare l'animazione o l'illustrazione per completare il cablaggio tra i controller e gli switch:
 +
-.Animazione - cablaggio del cluster senza switch a due nodi
+.Animazione Cablaggio cluster senza switch a due nodi
 video::da08295f-ba8c-4de7-88c3-ae7c0170408d[panopto]
 +
-image::../media/drw_9500_tnsc_network_cabling.svg[cablaggio di rete tnsc drw 9500]
+image::../media/drw_9500_tnsc_network_cabling.svg[Schema del cablaggio di rete TNSC]
 
 +
 [cols="20%,80%"]
@@ -322,10 +322,10 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . Utilizzare l'animazione o l'illustrazione per completare il cablaggio tra i controller e gli switch:
 +
-.Animazione - cablaggio del cluster con switch
+.Animazione Cablaggio cluster commutato
 video::3ad3f118-8339-4683-865f-ae7c0170400c[panopto]
 +
-image::../media/drw_9500_switched_network_cabling.svg[cablaggio di rete con switch drw 9500]
+image::../media/drw_9500_switched_network_cabling.svg[Cablaggio di rete cluster commutato]
 
 +
 [cols="20%,80%"]
@@ -422,10 +422,10 @@ NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in pos
 
 . Utilizza l'animazione o i disegni seguenti per collegare i controller a tre shelf di dischi DS224C (1 stack di uno shelf di dischi e uno stack di due shelf di dischi).
 +
-.Animazione - cablare gli shelf di dischi
+.Animazione Collega i tuoi scaffali di unità
 video::c958aae6-9d08-4d3d-a213-ae7c017040cd[panopto]
 +
-image::../media/drw_9500_sas_shelf_cabling.svg[cablaggio shelf sas drw 9500]
+image::../media/drw_9500_sas_shelf_cabling.svg[Cablaggio a scaffale SAS]
 
 +
 [cols="20%,80%"]
@@ -434,13 +434,13 @@ image::../media/drw_9500_sas_shelf_cabling.svg[cablaggio shelf sas drw 9500]
 
 
  a| 
-image::../media/icon_square_1_blue.png[icona quadrata 1 blu]
+image::../media/icon_square_1_blue.png[Icona didascalia 1]
  a| 
 Collegare lo stack di shelf di dischi uno ai controller, utilizzando la figura come riferimento.
 
 *Cavo Mini-SAS*
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cavo Mini-SAS HD]
 
 
 
@@ -451,7 +451,7 @@ Collega gli shelf dei dischi nello stack due l'uno all'altro, utilizzando il gra
 
 *Cavo Mini-SAS*
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cavo Mini-SAS HD]
 
 
 
@@ -462,7 +462,7 @@ Collegare lo stack di shelf due ai controller, utilizzando la figura come riferi
 
 *Cavo Mini-SAS*
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cavo oie da mini sas hd a mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cavo Mini-SAS HD]
 
 |===
 
@@ -481,10 +481,10 @@ Se sul laptop è attivata la funzione di rilevamento della rete, è possibile co
 
 . Utilizzare la seguente animazione o disegno per impostare uno o più ID shelf di dischi:
 +
-.Animazione - impostare l'ID dello shelf (N. 8217)
+.Animazione Imposta gli ID del tuo scaffale
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_power-on_set_shelf_ID_set.svg[Alimentazione drw su set ID shelf]
+image::../media/drw_power-on_set_shelf_ID_set.svg[Accendere e impostare l'ID dello scaffale]
 
 +
 [cols="20%,80%"]
@@ -533,10 +533,10 @@ Attendere 10 secondi per il LED ambra (!) Per visualizzare, quindi spegnere e ri
 |===
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
-.Animazione - consente di accendere i controller
+.Animazione Accendi l'alimentazione ai controller
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image::../media/drw_9500_power-on.svg[drw 9500 acceso]
+image::../media/drw_9500_power-on.svg[Accendere il sistema]
 
 +
 
@@ -548,10 +548,10 @@ Per ulteriori informazioni, consultare la guida in linea del portatile.
 
 . Utilizzare la seguente animazione per collegare il laptop allo switch di gestione.
 +
-.Animazione - collegare il laptop allo switch di gestione
+.Animazione Collega il tuo laptop allo switch di gestione
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 +
-image::../media/dwr_laptop_to_switch_only.svg[solo da portatile a switch dwr]
+image::../media/dwr_laptop_to_switch_only.svg[Cablaggio da laptop a switch]
 
 . Selezionare un'icona ONTAP elencata per scoprire:
 +
@@ -605,17 +605,17 @@ NOTE: Per informazioni su come configurare la porta della console, consultare la
 
 .. Collegare il cavo della console al laptop o alla console utilizzando il cavo della console fornito con il sistema, quindi collegare il laptop allo switch sulla subnet di gestione.
 +
-image::../media/drw_9500_cable_console_switch_controller.svg[controller switch console a cavo drw 9500]
+image::../media/drw_9500_cable_console_switch_controller.svg[Connessione da console a switch]
 
 .. Assegnare un indirizzo TCP/IP al portatile o alla console, utilizzando un indirizzo presente nella subnet di gestione.
 
 
 . Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi:
 +
-.Animazione - impostare l'ID dello shelf (N. 8217)
+.Animazione Imposta gli ID del tuo scaffale
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_power-on_set_shelf_ID_set.svg[Alimentazione drw su set ID shelf]
+image::../media/drw_power-on_set_shelf_ID_set.svg[Accendere e impostare l'ID dello scaffale]
 
 +
 [cols="20%,80%"]
@@ -664,10 +664,10 @@ Attendere 10 secondi per il LED ambra (!) Per visualizzare, quindi spegnere e ri
 |===
 . Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
-.Animazione - consente di accendere i controller
+.Animazione Accendi l'alimentazione ai controller
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image::../media/drw_9500_power-on.svg[drw 9500 acceso]
+image::../media/drw_9500_power-on.svg[Accendere il sistema]
 
 +
 
