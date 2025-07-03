@@ -11,7 +11,7 @@ summary: 'La sostituzione di un cassetto di dischi in uno shelf richiede l"arres
 
 
 [role="lead"]
-La sostituzione di un cassetto di dischi in uno shelf richiede l'arresto dell'intero sistema storage (coppia ha), che consente di mantenere gli aggregati di dati sullo shelf, oppure la possibilità di mantenere la coppia ha in funzione, ciò richiede lo spostamento di tutti i dati dagli aggregati di dati che risiedono sui dischi, la offline e l'eliminazione degli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato root, è necessario arrestare la coppia ha.
+Per sostituire un cassetto unità in uno scaffale, è possibile arrestare l'intero sistema di storage (coppia HA), il che consente di mantenere gli aggregati di dati sullo scaffale. In alternativa, è possibile mantenere la coppia HA attiva e funzionante, il che richiede di spostare tutti i dati dagli aggregati di dati sulle unità disco dello scaffale e quindi di portarli offline, eliminandoli. Se lo scaffale contiene un aggregato radice, è necessario arrestare la coppia HA.
 
 .Prima di iniziare
 Per questa procedura sono necessari i seguenti elementi:
@@ -61,7 +61,7 @@ image::../media/dcm2.png[Vista anteriore di uno shelf di dischi DCM2]
 
 Prima di sostituire un cassetto per dischi, è necessario aggiornare IOM12 FW se necessario e arrestare la coppia ha, che consente di mantenere aggregati di dati sullo shelf, oppure è possibile mantenere la coppia ha in funzione, ciò richiede lo spostamento di tutti i dati dagli aggregati di dati che risiedono sui dischi, la offline e l'eliminazione degli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato root, è necessario arrestare la coppia ha. Infine, è necessario spegnere lo shelf.
 
-.fasi
+.Fasi
 . Determinare se, quando si sostituisce il cassetto del disco guasto, lo shelf presenta una combinazione di moduli IOM12 e un numero qualsiasi di cassetti del disco DCM2.
 . Se lo shelf dispone di una combinazione di moduli IOM12 e di un numero qualsiasi di cassetti unità DCM2, è necessario aggiornare IOM12 FW alla versione 0300 o successiva; in caso contrario, passare alla fase successiva.
 +
@@ -88,7 +88,7 @@ NOTE: Gli aggregati di dati possono rimanere sullo shelf quando si arresta la co
 NOTE: Se si tenta di sostituire un cassetto con aggregati sullo shelf di dischi, si potrebbe causare un'interruzione del sistema con un panico multidisk.
 
 +
-.. Spostare tutti i dati dagli aggregati di dati che risiedono sui dischi.
+.. Spostare tutti i dati dagli aggregati di dati presenti su tutte le unità disco presenti sullo scaffale.
 +
 I dati includono, a titolo esemplificativo ma non esaustivo, volumi e LUN.
 

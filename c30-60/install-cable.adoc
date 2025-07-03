@@ -17,10 +17,6 @@ Dopo aver installato l'hardware del sistema di storage AFF C30 o AFF C60, colleg
 Contattare l'amministratore di rete per informazioni sulla connessione del sistema di archiviazione agli switch di rete.
 
 .A proposito di questa attività
-* Le procedure di cablaggio cluster/ha e rete host mostrano le configurazioni comuni.
-+
-Se la configurazione non viene visualizzata qui, visitare il sito Web link:https://hwu.netapp.com["NetApp Hardware Universe"^] per informazioni complete sulla configurazione e sulla priorità degli slot per collegare il sistema di storage.
-
 * Le immagini dei cavi hanno icone a freccia che mostrano l'orientamento corretto (verso l'alto o verso il basso) della linguetta di estrazione del connettore del cavo quando si inserisce un connettore in una porta.
 +
 Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
@@ -35,8 +31,15 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direzione della ling
 
 == Fase 1: Collegare i collegamenti cluster/ha
 
-Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.
+Creare connessioni al cluster ONTAP. Per i cluster senza switch, collegare i controller l'uno all'altro. Per i cluster commutati, collegare i controller agli switch di rete del cluster.
 
+[NOTE]
+====
+Gli esempi di cablaggio cluster/HA mostrano configurazioni comuni.
+
+Se la configurazione non viene visualizzata qui, visitare il sito Web link:https://hwu.netapp.com["NetApp Hardware Universe"^] per informazioni complete sulla configurazione e sulla priorità degli slot per collegare il sistema di storage.
+
+====
 [role="tabbed-block"]
 ====
 .Cablaggio cluster senza switch
@@ -168,6 +171,13 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 
 Collegare i controller alla rete host Ethernet o FC.
 
+[NOTE]
+====
+Gli esempi di cablaggio della rete host mostrano configurazioni comuni.
+
+Se la configurazione non viene visualizzata qui, visitare il sito Web link:https://hwu.netapp.com["NetApp Hardware Universe"^] per informazioni complete sulla configurazione e sulla priorità degli slot per collegare il sistema di storage.
+
+====
 [role="tabbed-block"]
 ====
 .Cablaggio host Ethernet

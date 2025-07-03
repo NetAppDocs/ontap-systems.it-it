@@ -5024,7 +5024,6 @@
   <block id="319d072de0a7eb80654d8506bc74de47" category="paragraph">I cassetti delle unità DCM2 si distinguono per una striscia blu e per l'etichetta "DCM2":</block>
   <block id="d5240bafd6bf54bcb59e9a9f899b324e" category="section-title">Preparare la sostituzione di un cassetto dell'unità</block>
   <block id="38cd7f0eca6a82b183b0f9dc3599583a" category="paragraph">Prima di sostituire un cassetto per dischi, è necessario aggiornare IOM12 FW se necessario e arrestare la coppia ha, che consente di mantenere aggregati di dati sullo shelf, oppure è possibile mantenere la coppia ha in funzione, ciò richiede lo spostamento di tutti i dati dagli aggregati di dati che risiedono sui dischi, la offline e l'eliminazione degli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato root, è necessario arrestare la coppia ha. Infine, è necessario spegnere lo shelf.</block>
-  <block id="fca3ffea6534176432f58b5a22ed22e1" category="list-title">fasi</block>
   <block id="f1d6fcc8467c66247fc38fc5bb1e448c" category="list-text">Determinare se, quando si sostituisce il cassetto del disco guasto, lo shelf presenta una combinazione di moduli IOM12 e un numero qualsiasi di cassetti del disco DCM2.</block>
   <block id="bb92ef0e860f1f3c67a9c3a453b2781c" category="list-text">Se lo shelf dispone di una combinazione di moduli IOM12 e di un numero qualsiasi di cassetti unità DCM2, è necessario aggiornare IOM12 FW alla versione 0300 o successiva; in caso contrario, passare alla fase successiva.</block>
   <block id="62f67af3803932031f11d177b5600361" category="list-text">Se lo shelf contiene l'aggregato root da uno dei controller della coppia ha o se si è scelto di arrestare la coppia ha (invece di mantenere la coppia ha in funzione), completare i seguenti passaggi secondari; in caso contrario, passare al punto successivo.</block>
@@ -5035,7 +5034,6 @@
   <block id="4bd0b0c2b519de54df41bc77088d8182" category="list-text">Vai alla sezione, <block ref="f9b764c55080d7cf77ed91e890c43565" category="inline-xref-macro-rx"></block>.</block>
   <block id="eb1a8e53bca0fcb026633a23b562bfff" category="list-text">Se si sceglie di mantenere attiva e attiva la coppia ha, completare i seguenti passaggi secondari:</block>
   <block id="1aea84d8e76217145d77f4dd7efe6f8f" category="admonition">Se si tenta di sostituire un cassetto con aggregati sullo shelf di dischi, si potrebbe causare un'interruzione del sistema con un panico multidisk.</block>
-  <block id="ea0b163daac6d7d1dbcf0110733b7a5c" category="list-text">Spostare tutti i dati dagli aggregati di dati che risiedono sui dischi.</block>
   <block id="a3285b442e65f70add01ba5f44551d15" category="paragraph">I dati includono, a titolo esemplificativo ma non esaustivo, volumi e LUN.</block>
   <block id="cf798cab97b54ad5fe43c91a959754ca" category="list-text">Dismettere ed eliminare gli aggregati per consentire ai dischi di diventare parti di ricambio:</block>
   <block id="19613506a0ea4d74ae9e654ba0e170e6" category="paragraph">I comandi possono essere inseriti dalla shell dei cluster di uno dei controller.</block>
@@ -10073,7 +10071,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d16a227aab66041a81c6f88b290eb486" category="section-title">Fase 1: Collegare i collegamenti cluster/ha</block>
   <block id="134e0586a0879fa097abfb47d5e64dbe" category="open-title">Cablaggio cluster senza switch</block>
   <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB</block>
-  <block id="1de8dab1beab3d5ee0495c66a3c814b7" category="paragraph">Collegare i controller l'uno all'altro per creare connessioni del cluster ONTAP.</block>
   <block id="a8d16746fb80901317600cba36862a10" category="list-text">Collegare le connessioni di interconnessione cluster/ha:</block>
   <block id="6780657f10ef4bbe5e784f3b1e7777e3" category="admonition">Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sui moduli i/o negli slot 2 e 4). Le porte sono 40/100 GbE.</block>
   <block id="efe3bfda2c730f42fd2741bc4722e6f0" category="list-text">Porta E2A Del controller del cavo A alla porta E2A del controller B.</block>
@@ -10544,7 +10541,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b3fb7cc55fec6d7df9078e2ee7739718" category="paragraph">Una volta inserito correttamente, il DIMM si inserisce facilmente ma si inserisce saldamente nello slot. In caso contrario, reinserire il DIMM.</block>
   <block id="7e08ee4b466dc677d31c40c8b0488339" category="list-text">Controllare visivamente il DIMM per assicurarsi che sia allineato uniformemente e inserito completamente nell'alloggiamento.</block>
   <block id="34f650ca44fabe66ff7e4095a137da22" category="list-text">Assicurarsi che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> prima di continuare."</block>
-  <block id="54d890bf92693607c99bccb67f9933f5" category="paragraph">Collegare i controller per creare connessioni del cluster ONTAP.</block>
   <block id="d48b3cfe096b47bcb7f13e683c934beb" category="paragraph">Collegare i controller alla rete host Ethernet o FC.</block>
   <block id="bb8661c49545cac68358046e25b8f950" category="open-title">Cablaggio host Ethernet</block>
   <block id="3c90cea8d34e6c024dcfcf7fbe2bc396" category="example-title">AFF A20, A30 o AFF A50 con un modulo i/o GbE a 4 porte da 10/25 GB</block>
@@ -11729,7 +11725,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="db424e93139f05b40145c02ca1496dab" category="image-alt">Sostituire la batteria NVDIMM</block>
   <block id="f01c12d2b181f3fa692e46f31483240d" category="list-text">Assicurarsi che i perni di guida del cabinet o del rack per telecomunicazioni siano fissati negli slot della guida del telaio.</block>
   <block id="0ce45b8799d32fa93b50aed5301e827b" category="list-text">Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack. + <block ref="065babb6c425d208f17452adf684f6f8" category="inline-image-macro-rx" type="image"></block>cavi da mini-SAS HD a mini-SAS HD</block>
-  <block id="ce48b5f9c255c35e0431b311322885fc" category="list-text">Le procedure di cablaggio cluster/ha e rete host mostrano le configurazioni comuni.</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">Se la configurazione non viene visualizzata qui, visitare il sito Web <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> per informazioni complete sulla configurazione e sulla priorità degli slot per collegare il sistema di storage.</block>
   <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">Cavo fc da 64 GB</block>
   <block id="0bf370304560205688213d22ba637c07" category="paragraph"><block ref="0bf370304560205688213d22ba637c07" category="inline-image-macro-rx" type="image"></block></block>
@@ -12021,4 +12016,15 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="bcbe9ce5b2d50ad0b254f40cda6fc7e1" category="image-alt">Accendere e impostare l'ID dello scaffale</block>
   <block id="43f978a7787080590a53cc2abdd637c9" category="image-alt">Sostituire il modulo LED</block>
   <block id="a54c219a955221bc0586ab22f8a07401" category="image-alt">Sostituisci la batteria RTC</block>
+  <block id="14d4a75ecbe13082ebd840dc7d091f2c" category="section-title">Passaggio 4: installare i controller e le unità</block>
+  <block id="7aa6db479f57ead7ac39225f410bdf2d" category="paragraph">Installare i controller e le unità nello chassis sostitutivo e riavviare i controller.</block>
+  <block id="3dbc14ba753f9b6deb52fc17f8c85cec" category="paragraph">Sostituire lo chassis del sistema AFF A20, AFF A30 o AFF A50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, la rimozione delle unità, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.</block>
+  <block id="fde22ae5f3a1cc39c61853ffe9a68675" category="paragraph">Creare connessioni al cluster ONTAP. Per i cluster senza switch, collegare i controller l'uno all'altro. Per i cluster commutati, collegare i controller agli switch di rete del cluster.</block>
+  <block id="4a1975a1a386f2f3f28c4859f5ea4976" category="paragraph">Gli esempi di cablaggio cluster/HA mostrano configurazioni comuni.</block>
+  <block id="8c3a29fca49d6a772e0a2f8ab6ab7280" category="paragraph">Gli esempi di cablaggio della rete host mostrano configurazioni comuni.</block>
+  <block id="6ce95ae69a1e0ed801b4369491228162" category="paragraph">Sostituire lo chassis del sistema ASA A20, ASA A30 o ASA A50 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, la rimozione delle unità, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.</block>
+  <block id="d756679882bcf80d5a80fd42020d0f25" category="paragraph">Sostituisci lo chassis del tuo sistema di archiviazione ASA C30 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, la rimozione delle unità, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.</block>
+  <block id="72dc238e73081e826d88e29df24b4c58" category="paragraph">Sostituire lo chassis del sistema AFF C30 o AFF C60 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, la rimozione delle unità, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.</block>
+  <block id="149eed3e03e259c4e52b1de45a4fe3e9" category="paragraph">Per sostituire un cassetto unità in uno scaffale, è possibile arrestare l'intero sistema di storage (coppia HA), il che consente di mantenere gli aggregati di dati sullo scaffale. In alternativa, è possibile mantenere la coppia HA attiva e funzionante, il che richiede di spostare tutti i dati dagli aggregati di dati sulle unità disco dello scaffale e quindi di portarli offline, eliminandoli. Se lo scaffale contiene un aggregato radice, è necessario arrestare la coppia HA.</block>
+  <block id="12e16a41f9ae5c97288e4e9e78b0bbf6" category="list-text">Spostare tutti i dati dagli aggregati di dati presenti su tutte le unità disco presenti sullo scaffale.</block>
 </blocks>
