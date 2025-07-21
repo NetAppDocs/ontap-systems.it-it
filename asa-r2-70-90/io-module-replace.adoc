@@ -155,13 +155,13 @@ Dopo aver sostituito un modulo i/o, è necessario riavviare il controller.
 
 NOTE: Il riavvio del controller danneggiato reinizializza anche i moduli i/o e gli altri componenti.
 
-. Ripristinare il funzionamento normale del nodo:
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
 +
 `storage failover giveback -ofnode _impaired_node_name_`
 
 . Ripristino del giveback automatico dalla console del controller integro:
 +
-`storage failover modify -node local -auto-giveback _true_`
+`storage failover modify -node local -auto-giveback true`
 
 . Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
 +

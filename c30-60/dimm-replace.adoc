@@ -428,6 +428,18 @@ ALIMENTATORE CC
 
 
 |===
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Ripristino del giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se AutoSupport è abilitato, ripristina (annulla) la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 

@@ -51,8 +51,8 @@ NOTE: La passphrase viene richiesta due volte.
 . Spostare il cavo della console sul nodo partner e accedere come `admin`.
 . Fornire solo gli aggregati CFO (l'aggregato root): `storage failover giveback -fromnode local -only-cfo-aggregates _true_`
 +
-** In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
 
+NOTE: In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
 
 . Attendere 5 minuti dopo il completamento del report di sconto e controllare lo stato di failover e di sconto: `storage failover show` E `storage failover show-giveback`.
 . Sincronizzare e verificare lo stato dei tasti:

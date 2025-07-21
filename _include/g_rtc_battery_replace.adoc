@@ -390,6 +390,18 @@ ALIMENTATORE CC
 
 
 |===
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Ripristino del giveback automatico dalla console del controller integro:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se AutoSupport è abilitato, ripristina (annulla) la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 
@@ -401,21 +413,31 @@ NOTE: Dopo aver sostituito la batteria RTC, inserito il controller e acceso il p
 `RTC date/time error. Reset date/time to default`
 `RTC power failure error`
 
-. Sul controller integro, controllare la data e l'ora con il `cluster date show` comando.
+. Sul controller funzionante, controllare la data e l'ora:
++
+`cluster date show`
+
 +
 
 NOTE: Se il sistema di archiviazione si arresta al menu di avvio, selezionare l'opzione  `Reboot node`e rispondere _y_ quando richiesto, quindi avviare Loader premendo _Ctrl-C_.
 
-. Sul controller danneggiato, al prompt Loader, controllare l'ora e la data: `cluster date show`
+. Sul controller non abilitato, al prompt LOADER, controllare l'ora e la data:
 +
-.. Se necessario, modificare la data: `set date _mm/dd/yyyy_`
-.. Se necessario, impostare l'ora, in GMT: `set time hh:mm:ss`
+`cluster date show`
+
++
+.. Se necessario, modificare la data:
++
+`set date _mm/dd/yyyy_`
+
+.. Se necessario, impostare l'ora in GMT:
++
+`set time hh:mm:ss`
+
 .. Confermare la data e l'ora.
 
 
 . Al prompt di Loader, immettere `bye` per reinizializzare i moduli i/o e gli altri componenti e lasciare che il controller si riavvii.
-. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
 
 
 
