@@ -24,7 +24,22 @@ entries:
   entries:
   - title: Panoramica della manutenzione
     url: "/a1k/maintain-overview.html"
-  - title: Supporto di boot
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio ASA A1K automatizzato
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a1k/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/a1k/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/a1k/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a1k/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a1k/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a1k/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
     pdf-filename: Supporti di avvio di AFF A1K
     entries:
     - title: Flusso di lavoro per la sostituzione dei supporti di avvio

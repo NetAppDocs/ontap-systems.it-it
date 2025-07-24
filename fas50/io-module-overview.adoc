@@ -2,22 +2,29 @@
 permalink: fas50/io-module-overview.html 
 sidebar: sidebar 
 keywords: AFF A90, AFF A70, replace io module 
-summary: 'I sistemi FAS50 offrono flessibilità nell"espansione o nella sostituzione dei moduli i/o per migliorare la connettività e le prestazioni della rete. L"aggiunta o la sostituzione di un modulo i/o è essenziale quando si aggiornano le funzionalità di rete o si risolve un problema di un modulo.' 
+summary: 'I sistemi FAS50 offrono flessibilità nell"espansione o nella sostituzione dei moduli I/O per migliorare la connettività e le prestazioni della rete. L"aggiunta, la sostituzione a caldo o la sostituzione di un modulo I/O sono essenziali per aggiornare le funzionalità di rete o risolvere un problema relativo a un modulo guasto.' 
 ---
-= Panoramica di aggiunta e sostituzione di un modulo i/o - FAS50
+= Panoramica su aggiunta, hot-swap e sostituzione di un modulo I/O - FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-I sistemi FAS50 offrono flessibilità nell'espansione o nella sostituzione dei moduli i/o per migliorare la connettività e le prestazioni della rete. L'aggiunta o la sostituzione di un modulo i/o è essenziale quando si aggiornano le funzionalità di rete o si risolve un problema di un modulo.
+I sistemi FAS50 offrono flessibilità nell'espansione o nella sostituzione dei moduli I/O per migliorare la connettività e le prestazioni della rete. L'aggiunta, la sostituzione a caldo o la sostituzione di un modulo I/O sono essenziali per aggiornare le funzionalità di rete o risolvere un problema relativo a un modulo guasto.
 
-È possibile sostituire un modulo i/o guasto nel sistema storage con uno stesso tipo di modulo i/o o o con un altro tipo di modulo i/O. È inoltre possibile aggiungere un modulo i/o a un sistema di archiviazione con gli slot disponibili.
+È possibile sostituire un modulo I/O guasto nel sistema di storage con un modulo I/O dello stesso tipo o con un modulo I/O diverso. È possibile sostituire a caldo un cluster e un modulo I/O HA quando il sistema di storage soddisfa requisiti specifici. È inoltre possibile aggiungere un modulo I/O a un sistema di storage con slot disponibili.
 
 * link:io-module-add.html["Aggiungere un modulo i/O."]
 +
 L'aggiunta di ulteriori moduli di i/o può migliorare la ridondanza, contribuendo a garantire che il sistema di storage rimanga operativo anche in caso di guasto di un modulo di i/O.
+
+* link:io-module-hotswap-ha-slot4.html["Sostituzione a caldo di un cluster e di un modulo I/O HA"]
++
+La sostituzione a caldo di un cluster guasto e di un modulo I/O HA può ripristinare il sistema di storage al suo stato operativo ottimale. La sostituzione a caldo viene eseguita senza dover intervenire manualmente sul controller danneggiato.
+
++
+Per utilizzare questa procedura, il sistema di archiviazione deve eseguire ONTAP 9.17.1 o versione successiva e soddisfare requisiti di sistema specifici.
 
 * link:io-module-replace.html["Sostituire un modulo i/O."]
 +

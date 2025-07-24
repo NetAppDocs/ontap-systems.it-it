@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
 summary: 'La sostituzione di un cassetto di dischi in uno shelf richiede l"arresto dell"intero sistema storage (coppia ha), che consente di mantenere gli aggregati di dati sullo shelf, oppure la possibilità di mantenere la coppia ha in funzione, ciò richiede lo spostamento di tutti i dati dagli aggregati di dati che risiedono sui dischi, la offline e l"eliminazione degli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato root, è necessario arrestare la coppia ha.' 
 ---
-= Sostituire un cassetto dischi in uno shelf di dischi DS460C con moduli IOM12/IOM12B
+= Sostituire un cassetto dell'unità - DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 'La sostituzione di un cassetto di dischi in uno shelf richiede l"arres
 
 [role="lead"]
 Per sostituire un cassetto unità in uno scaffale, è possibile arrestare l'intero sistema di storage (coppia HA), il che consente di mantenere gli aggregati di dati sullo scaffale. In alternativa, è possibile mantenere la coppia HA attiva e funzionante, il che richiede di spostare tutti i dati dagli aggregati di dati sulle unità disco dello scaffale e quindi di portarli offline, eliminandoli. Se lo scaffale contiene un aggregato radice, è necessario arrestare la coppia HA.
+
+Questa procedura si applica agli scaffali con moduli IOM12 o IOM12B.
 
 .Prima di iniziare
 Per questa procedura sono necessari i seguenti elementi:
@@ -27,20 +29,20 @@ NOTE: *Possibili danni all'hardware:* per evitare danni da scariche elettrostati
 
 
 .A proposito di questa attività
-* Questa procedura si applica agli shelf dotati di cassetti per unità DCM e/o cassetti per unità DCM2. (Gli shelf avranno anche due moduli IOM12 o due moduli IOM12B).
+* Questa procedura si applica ai ripiani dotati di cassetti per unità DCM e/o cassetti per unità DCM2 o DCM3. (I ripiani avranno anche due moduli IOM12 o due moduli IOM12B.)
 +
-In caso di guasto di un cassetto unità DCM o DCM2, si riceve un cassetto unità DCM o DCM2 per sostituirlo.
+Quando un cassetto unità DCM, DCM2 o DCM3 si guasta, riceverai un cassetto unità DCM, DCM2 o DCM3 per sostituirlo.
 
 
 
 [NOTE]
 ====
-Se si sostituisce un cassetto del disco guasto, lo shelf dispone di una combinazione di moduli IOM12 e di un numero qualsiasi di cassetti del disco DCM2, È necessario aggiornare IOM12 FW alla versione 0300 o successiva perché i moduli IOM12 richiedono una versione di FW che supporti i cassetti unità DCM2.
+Quando si sostituisce un cassetto unità guasto con un cassetto unità DCM2 o DCM3 più recente, assicurarsi che il software ONTAP e il firmware del modulo IOM12 o IOM12B eseguano le versioni minime richieste per supportare i cassetti DCM2 o DCM3.
 
 L'aggiornamento IOM12 FW può essere eseguito prima o dopo la sostituzione di un cassetto unità. Questa procedura consente di aggiornare il firmware come parte della preparazione per la procedura di sostituzione del cassetto.
 
 ====
-* I cassetti delle unità DCM e i cassetti delle unità DCM2 si distinguono per il loro aspetto:
+* I cassetti delle unità DCM, DCM2 e DCM3 possono essere distinti in base al loro aspetto:
 +
 I cassetti delle unità DCM hanno l'aspetto seguente:
 
@@ -53,22 +55,41 @@ I cassetti delle unità DCM2 si distinguono per una striscia blu e per l'etichet
 +
 image::../media/dcm2.png[Vista anteriore di uno shelf di dischi DCM2]
 
++
+I cassetti dell'unità DCM3 sono riconoscibili da una striscia blu e grigia e dall'etichetta "DCM3":
+
++
+image::../media/drw_dcm3_ieops-2176.svg[Vista frontale di un ripiano per unità DCM3]
 
 
 
 
-== Preparare la sostituzione di un cassetto dell'unità
 
-Prima di sostituire un cassetto per dischi, è necessario aggiornare IOM12 FW se necessario e arrestare la coppia ha, che consente di mantenere aggregati di dati sullo shelf, oppure è possibile mantenere la coppia ha in funzione, ciò richiede lo spostamento di tutti i dati dagli aggregati di dati che risiedono sui dischi, la offline e l'eliminazione degli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato root, è necessario arrestare la coppia ha. Infine, è necessario spegnere lo shelf.
+== Fase 1: Prepararsi a sostituire un cassetto dell'unità
+
+Prima di sostituire un cassetto unità, è necessario assicurarsi di aggiornare il firmware IOM e ONTAP , se necessario, e di arrestare la coppia HA, il che consente di mantenere gli aggregati di dati sullo shelf, oppure di mantenerla attiva e funzionante, il che richiede di spostare tutti i dati dagli aggregati di dati residenti sulle unità disco. È quindi necessario disattivare l'accesso offline ed eliminare gli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato radice, è necessario arrestare la coppia HA. Infine, è necessario spegnere lo shelf.
 
 .Fasi
 . Determinare se, quando si sostituisce il cassetto del disco guasto, lo shelf presenta una combinazione di moduli IOM12 e un numero qualsiasi di cassetti del disco DCM2.
-. Se lo shelf dispone di una combinazione di moduli IOM12 e di un numero qualsiasi di cassetti unità DCM2, è necessario aggiornare IOM12 FW alla versione 0300 o successiva; in caso contrario, passare alla fase successiva.
+. Determina se sarà necessario aggiornare il firmware IOM:
 +
-Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
+** Se lo shelf dispone di una combinazione di moduli IOM12 e di un numero qualsiasi di cassetti unità DCM2, è necessario aggiornare IOM12 FW alla versione 0300 o successiva; in caso contrario, passare alla fase successiva.
+** Se lo scaffale avrà una combinazione di moduli IOM12 e un numero qualsiasi di cassetti unità DCM3, è necessario aggiornare il firmware IOM12 alla versione 0401 o successiva.
+** Se lo scaffale avrà una combinazione di moduli IOM12B e un numero qualsiasi di cassetti unità DCM3, è necessario aggiornare il firmware IOM12B alla versione 0202 o successiva.
+
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
+Se necessario, puoi visitare il sito del supporto NetApp per  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["scarica le versioni correnti del firmware dello scaffale del disco"]. procedere al passaggio successivo.
+
+. Se il tuo scaffale avrà una combinazione di moduli IOM12 o IOM12B con un numero qualsiasi di cassetti per unità DCM3, il tuo sistema deve eseguire le seguenti versioni minime di ONTAP:
++
+** ONTAP 9.17.1RC1
+** ONTAP 9.16.1P3
+** ONTAP 9.15.1P11
+** ONTAP 9.14.1P13
+** ONTAP 9.13.1P16
+** ONTAP 9.12.1P18
+
 
 . Se lo shelf contiene l'aggregato root da uno dei controller della coppia ha o se si è scelto di arrestare la coppia ha (invece di mantenere la coppia ha in funzione), completare i seguenti passaggi secondari; in caso contrario, passare al punto successivo.
 +
@@ -79,7 +100,7 @@ NOTE: Gli aggregati di dati possono rimanere sullo shelf quando si arresta la co
 .. Arrestare entrambi i controller nella coppia ha.
 .. Verificare che la coppia ha sia interrotta controllando la console del sistema di storage.
 .. Spegnere lo shelf.
-.. Vai alla sezione, <<Rimuovere le catene portacavi>>.
+.. Vai alla sezione, <<remove_cable_chains,Rimuovere le catene portacavi>> .
 
 
 . Se si sceglie di mantenere attiva e attiva la coppia ha, completare i seguenti passaggi secondari:
@@ -122,12 +143,19 @@ NOTE: Se nello shelf sono presenti dischi guasti, `broken` viene visualizzato in
 
 
 
-== Rimuovere le catene portacavi
+== Fase 2: rimuovere le catene portacavi
 
 Le catene di cavi sinistra e destra per ciascun cassetto del disco nello shelf del disco DS460C consentono ai cassetti di scorrere verso l'interno e verso l'esterno. Prima di poter rimuovere un cassetto dell'unità, è necessario rimuovere entrambe le catene di cavi.
 
+.A proposito di questa attività
+Ciascun cassetto dispone di catene di cavi destra e sinistra. Le estremità metalliche delle catene per cavi scorrono nelle corrispondenti staffe verticali e orizzontali all'interno del contenitore, come indicato di seguito:
+
+* Le staffe verticali sinistra e destra collegano la catena di cavi alla scheda di interconnessione centrale del contenitore.
+* Le staffe orizzontali sinistra e destra collegano la catena di cavi al singolo cassetto.
+
+
 .Prima di iniziare
-* Hai completato il <<Preparare la sostituzione di un cassetto dell'unità>> Passaggi per arrestare la coppia ha o spostare tutti i dati dagli aggregati di dati che risiedono sui dischi, disaggregare ed eliminare gli aggregati di dati per consentire ai dischi di diventare parti di ricambio.
+* Hai completato il <<prepare_to_replace_drive_drawer,Preparare la sostituzione di un cassetto dell'unità>> passaggi in modo che la coppia HA venga arrestata o che tutti i dati vengano spostati dagli aggregati di dati residenti sulle unità disco e che gli aggregati di dati vengano disattivati ed eliminati per consentire alle unità disco di diventare di riserva.
 * Hai spento lo shelf.
 * Sono stati ottenuti i seguenti elementi:
 +
@@ -139,13 +167,6 @@ NOTE: *Possibili danni all'hardware:* per evitare danni causati da scariche elet
 ** Torcia
 
 
-
-
-.A proposito di questa attività
-Ciascun cassetto dispone di catene di cavi destra e sinistra. Le estremità metalliche delle catene per cavi scorrono nelle corrispondenti staffe verticali e orizzontali all'interno del contenitore, come indicato di seguito:
-
-* Le staffe verticali sinistra e destra collegano la catena di cavi alla scheda di interconnessione centrale del contenitore.
-* Le staffe orizzontali sinistra e destra collegano la catena di cavi al singolo cassetto.
 
 
 .Fasi
@@ -270,7 +291,7 @@ La figura mostra l'anello arancione sulla staffa orizzontale che viene spinto ve
 
 
 
-== Rimuovere un cassetto dell'unità
+== Passaggio 3: rimuovere un cassetto dell'unità
 
 Dopo aver rimosso le catene di destra e sinistra, è possibile rimuovere il cassetto dell'unità dallo shelf dell'unità. La rimozione di un cassetto dell'unità comporta l'estrazione della parte del cassetto, la rimozione delle unità e la rimozione del cassetto dell'unità.
 
@@ -325,7 +346,7 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 
 
 
-== Installare un cassetto dell'unità
+== Passaggio 4: installare un cassetto per unità
 
 L'installazione di un cassetto per dischi in uno shelf implica lo scorrimento del cassetto nello slot vuoto, l'installazione delle unità e la sostituzione del pannello anteriore.
 
@@ -421,7 +442,7 @@ NOTE: *Rischio di malfunzionamento dell'apparecchiatura:* assicurarsi di chiuder
 
 
 
-== Collegare le catene di cavi
+== Fase 5: Fissare le catene portacavi
 
 L'ultima fase dell'installazione di un cassetto dell'unità consiste nel fissare le catene di cavi sinistra e destra sostitutive allo shelf dell'unità. Quando si collega una catena di cavi, invertire l'ordine utilizzato per scollegare la catena di cavi. Inserire il connettore orizzontale della catena nella staffa orizzontale del contenitore prima di inserire il connettore verticale della catena nella staffa verticale del contenitore.
 
@@ -549,11 +570,5 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 
 
 . Se la coppia ha è stata interrotta, avviare ONTAP su entrambi i controller; in caso contrario, passare alla fase successiva.
-. Se i dati sono stati spostati fuori dallo shelf ed eliminati gli aggregati di dati, è ora possibile utilizzare i dischi spare nello shelf per la creazione o l'espansione dell'aggregato.
-+
-https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html["Workflow di creazione di aggregati"]
-
-+
-https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html["Workflow di espansione degli aggregati"]
-
+. Se hai spostato i dati dallo shelf ed eliminato gli aggregati di dati, ora puoi utilizzare i dischi di riserva nello shelf per la creazione o l'espansione degli aggregati. Per ulteriori informazioni su queste procedure, puoi fare riferimento a  https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html["Workflow di creazione di aggregati"] E  https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html["Workflow di espansione degli aggregati"] .
 

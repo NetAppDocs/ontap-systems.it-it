@@ -11,19 +11,25 @@ summary: Prima di sostituire il supporto di avvio nel sistema ASA A70 o A90, ass
 
 
 [role="lead"]
-Prima di sostituire il supporto di avvio nel sistema ASA A70 o ASA A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario verificare di disporre dei supporti di avvio sostitutivi corretti, confermare l'assenza di porte cluster difettose sul controller e determinare se il gestore delle chiavi integrato (OKM) o il gestore delle chiavi esterno (EKM) sono abilitati.
+Prima di sostituire il supporto di avvio nel sistema ASA A70 o ASA A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma del corretto funzionamento delle porte cluster sul controller danneggiato e la verifica dell'abilitazione di Onboard Key Manager (OKM) o External Key Manager (EKM).
 
 Esaminare i seguenti requisiti.
 
 * È necessario sostituire il supporto di avvio guasto con un supporto di avvio sostitutivo ricevuto da NetApp.
-* Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
+* Le porte del cluster vengono utilizzate per comunicare tra i due controller durante il processo di ripristino automatico dell'avvio. Assicurarsi che le porte del cluster sul controller danneggiato funzionino correttamente.
 * Per OKM, è necessario il contenuto del file della passphrase OKM.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +
-** file /cfcard/kmip/servers.cfg.
-** file /cfcard/kmip/certs/client.crt.
-** file /cfcard/kmip/certs/client.key.
-** File /cfcard/kmip/certs/CA.pem.
+** /cfcard/kmip/servers.cfg
+** /cfcard/kmip/certs/client.crt
+** /cfcard/kmip/certs/client.key
+** /cfcard/kmip/certs/CA.pem
+
+
+* Quando si sostituisce il supporto di avvio danneggiato, è fondamentale applicare i comandi al controller corretto:
++
+** Il _controller non funzionante_ è il controller su cui si sta eseguendo la manutenzione.
+** Il _controllore sano_ è il partner HA del controllore compromesso.
 
 
 

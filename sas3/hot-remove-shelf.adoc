@@ -4,16 +4,36 @@ sidebar: sidebar
 keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: 'È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12 (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire lo shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all"interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.' 
 ---
-= Shelf a hot-remove - shelf con moduli IOM12/IOM12B
+= Rimozione a caldo di un ripiano: DS212C, DS224C e DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12/IOM12B (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire uno shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.
+È possibile rimuovere a caldo uno shelf di dischi con moduli IOM12 o IOM12B (rimuovendo in modo non invasivo uno shelf di dischi da un sistema acceso e con operazioni di I/O in corso) quando è necessario spostarlo o sostituirlo. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.
+
+.A proposito di questa attività
+* Se si rimuove a caldo uno shelf di dischi da uno stack (ma si mantiene lo stack), è possibile recuperare e verificare un percorso alla volta (percorso A e percorso B) per bypassare lo shelf di dischi che si sta rimuovendo in modo da mantenere sempre la connettività a percorso singolo dai controller allo stack.
++
+
+NOTE: Se non si mantiene la connettività a percorso singolo dai controller allo stack quando si modifica lo stack per evitare lo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
+
+* *Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione "spostamento o trasporto degli shelf DS460C" alla fine di questa procedura.
+
 
 .Prima di iniziare
+* *Migliore pratica*: rimuovere la proprietà dell'unità disco dopo aver rimosso gli aggregati dalle unità disco negli scaffali dei dischi che si desidera rimuovere.
++
+La rimozione delle informazioni di proprietà da un disco spare consente di integrare correttamente il disco in un altro nodo (in base alle necessità).
+
+
+
+[NOTE]
+====
+È necessario disabilitare l'assegnazione automatica della proprietà del disco prima di rimuovere la proprietà dalle unità disco. Questa funzione verrà riabilitata al termine di questa procedura. Per ulteriori informazioni sugli aggregati di dischi, consultare  https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"^] .
+
+====
 * Il sistema deve essere una configurazione ha multipath, ha tri-path, multipath, ha quad-path o quad-path.
 +
 Per le piattaforme con storage interno, lo storage esterno deve essere cablato come ha multipath, ha tri-path o multipath.
@@ -24,38 +44,19 @@ NOTE: Per un sistema a controller singolo della serie FAS2600 dotato di storage 
 
 * Il sistema non può visualizzare messaggi di errore relativi al cablaggio SAS.
 +
-È possibile scaricare ed eseguire Active IQ Config Advisor per visualizzare eventuali messaggi di errore relativi al cablaggio SAS e le azioni correttive da intraprendere.
-
-+
-https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
+Per visualizzare eventuali messaggi di errore relativi al cablaggio SAS e le azioni correttive da intraprendere, scaricare ed eseguire il file  https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"^] .
 
 * Le configurazioni di coppia HA non possono essere in uno stato di Takeover.
 * È necessario rimuovere tutti gli aggregati dai dischi (i dischi devono essere spare) negli shelf di dischi che si stanno rimuovendo.
 +
 
-NOTE: Se si tenta di eseguire questa procedura con gli aggregati sullo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
+CAUTION: Se si tenta di eseguire questa procedura con gli aggregati sullo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
 
 +
 È possibile utilizzare `storage aggregate offline -aggregate _aggregate_name_` e quindi `storage aggregate delete -aggregate _aggregate_name_` comando.
 
 * Se si rimuovono uno o più shelf di dischi dall'interno di uno stack, è necessario tenere in considerazione la distanza necessaria per evitare gli shelf di dischi che si stanno rimuovendo; pertanto, se i cavi attuali non sono sufficientemente lunghi, è necessario disporre di cavi più lunghi.
-
-
-.A proposito di questa attività
-* *Best practice:* la Best practice consiste nel rimuovere la proprietà del disco dopo aver rimosso gli aggregati dai dischi negli shelf che si stanno rimuovendo.
-+
-La rimozione delle informazioni di proprietà da un disco spare consente di integrare correttamente il disco in un altro nodo (in base alle necessità).
-
-
-
-[NOTE]
-====
-La procedura per la rimozione della proprietà dai dischi richiede la disattivazione dell'assegnazione automatica della proprietà dei dischi. Al termine di questa procedura, viene riattivata l'assegnazione automatica della proprietà del disco.
-
-https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica su dischi e aggregati"^]
-
-====
-* Per un sistema ONTAP in cluster con più di due nodi, la Best practice consiste nel riassegnare epsilon a una coppia ha diversa da quella in fase di manutenzione pianificata.
+* *Migliore pratica*: per un sistema ONTAP in cluster con più di due nodi, riassegnare epsilon a una coppia HA diversa da quella sottoposta a manutenzione pianificata.
 +
 La riassegnazione di epsilon riduce al minimo il rischio di errori imprevisti che influiscono su tutti i nodi di un sistema ONTAP in cluster. Per determinare il nodo che contiene epsilon e riassegnare epsilon, se necessario, procedere come segue:
 
@@ -70,12 +71,6 @@ Viene visualizzato il nodo che contiene epsilon `true` in `Epsilon` colonna. (I 
 .. Tornare al livello di privilegio admin: `set -privilege admin`
 
 
-* Se si rimuove a caldo uno shelf di dischi da uno stack (ma si mantiene lo stack), è possibile recuperare e verificare un percorso alla volta (percorso A e percorso B) per bypassare lo shelf di dischi che si sta rimuovendo in modo da mantenere sempre la connettività a percorso singolo dai controller allo stack.
-+
-
-NOTE: Se non si mantiene la connettività a percorso singolo dai controller allo stack quando si modifica lo stack per evitare lo shelf di dischi che si sta rimuovendo, si potrebbe verificare un errore nel sistema con un panic su più dischi.
-
-* *Possibili danni allo shelf:* se si rimuove uno shelf DS460C e lo si sposta in una parte diversa del data center o lo si trasporta in una posizione diversa, consultare la sezione "spostamento o trasporto degli shelf DS460C" alla fine di questa procedura.
 
 
 .Fasi

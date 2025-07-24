@@ -24,7 +24,22 @@ entries:
   entries:
   - title: Panoramica della manutenzione
     url: "/fas-70-90/maintain-overview.html"
-  - title: Supporto di boot
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporti di avvio FAS70 e FAS90
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/fas-70-90/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/fas-70-90/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/fas-70-90/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/fas-70-90/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/fas-70-90/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/fas-70-90/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
     pdf-filename: Supporti di avvio FAS70 e FAS90
     entries:
     - title: Flusso di lavoro per la sostituzione dei supporti di avvio

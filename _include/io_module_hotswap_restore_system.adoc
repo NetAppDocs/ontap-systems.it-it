@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+Ripristina il normale funzionamento del sistema di archiviazione restituendo spazio di archiviazione al controller funzionante, ripristinando la restituzione automatica e riattivando la creazione automatica dei casi da AutoSupport .
+
+.Fasi
+. Ripristinare il normale funzionamento del controller funzionante (quello che era stato preso in carico) restituendone la memoria:
++
+`storage failover giveback -ofnode _healthy_node_name_`
+
+. Ripristinare il ritorno automatico dalla console del controller non funzionante (il controller che ha preso il controllo del controller sano):
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+

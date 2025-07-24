@@ -2,9 +2,9 @@
 permalink: c30-60/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, pre-shutdown checks for onboard encryption keys 
-summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+summary: Per garantire la sicurezza dei dati sul sistema di storage AFF C30 o AFF C60, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare che la versione di ONTAP supporti NetApp Volume Encryption e, prima di arrestare il controller, verificare che il gestore delle chiavi sia attivo. 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio - AFF C30 e AFF C60
+= Controllare il supporto di crittografia per il ripristino manuale dei supporti di avvio - AFF C30 e AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

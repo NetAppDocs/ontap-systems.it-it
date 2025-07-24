@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, pre-shutdown checks for onboard encryption keys 
 summary: 'Per garantire la sicurezza dei dati sul sistema di storage FAS50, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.' 
 ---
-= Controllare il supporto e lo stato della chiave di crittografia sul supporto di avvio - FAS50
+= Controllare il supporto della crittografia per il ripristino manuale dei supporti di avvio - FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

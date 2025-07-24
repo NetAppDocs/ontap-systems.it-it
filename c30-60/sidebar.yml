@@ -24,10 +24,25 @@ entries:
   entries:
   - title: Panoramica della manutenzione
     url: "/c30-60/maintain-overview.html"
-  - title: Supporto di boot
+  - title: Supporto di avvio - ripristino automatico
     pdf-filename: Supporti di avvio AFF C30 e AFF C60
     entries:
-    - title: Flusso di lavoro di sostituzione dei supporti di avvio
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/c30-60/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/c30-60/bootmedia-replace-requirements-bmr.html"
+    - title: Spegnere il controller compromesso
+      url: "/c30-60/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/c30-60/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/c30-60/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/c30-60/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Supporti di avvio AFF C30 e AFF C60
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
       url: "/c30-60/bootmedia-replace-workflow.html"
     - title: Verifica dei requisiti
       url: "/c30-60/bootmedia-replace-requirements.html"
@@ -86,6 +101,8 @@ entries:
       url: "/c30-60/io-module-overview.html"
     - title: Aggiungere il modulo i/O.
       url: "/c30-60/io-module-add.html"
+    - title: Modulo cluster/HA hot-swap
+      url: "/c30-60/io-module-hotswap-ha-slot4.html"
     - title: Sostituire il modulo i/O.
       url: "/c30-60/io-module-replace.html"
   - title: Batteria NV

@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: È possibile individuare il supporto di avvio non riuscito rimuovendo il modulo di gestione del sistema prima di sostituire il supporto di avvio. 
+summary: 'Il supporto di avvio del sistema ASA A20, ASA A30 o ASA A50 memorizza firmware e dati di configurazione essenziali. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l"installazione del supporto di avvio sostitutivo e la successiva reinstallazione del modulo controller.' 
 ---
 = Sostituire i supporti di avvio - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,17 @@ summary: È possibile individuare il supporto di avvio non riuscito rimuovendo i
 
 
 [role="lead"]
-Il supporto di avvio del sistema ASA A20, ASA A30 o ASA A50 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi e il trasferimento dell'immagine ONTAP sui supporti di avvio sostitutivi.
+Il supporto di avvio del sistema ASA A20, ASA A30 o ASA A50 memorizza firmware e dati di configurazione essenziali. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo e la successiva reinstallazione del modulo controller.
+
+
+
+== A proposito di questa attività
+
+Se necessario, è possibile attivare i LED di posizione del telaio della piattaforma (blu) per facilitare l'individuazione fisica della piattaforma interessata. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
+
+Un telaio della piattaforma ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ogni controller. I LED di posizione rimangono accesi per 30 minuti.
+
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
 
 
 

@@ -2,16 +2,20 @@
 permalink: a20-30-50/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: 'Come iniziare a sostituire i supporti di avvio nel sistema di storage AFF A20, AFF A30 o AFF A50, rivedere i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l"immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.' 
+summary: 'Il ripristino manuale dell"immagine di avvio prevede l"utilizzo di un"unità USB per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema AFF A20, AFF A30 o AFF A50. È necessario scaricare l"immagine di ripristino ONTAP appropriata dal sito di supporto NetApp e copiarla su un"unità USB. Questa unità USB preparata viene quindi utilizzata per eseguire il ripristino e ripristinare il sistema allo stato operativo.' 
 ---
-= Flusso di lavoro per la sostituzione dei supporti di avvio - AFF A20, AFF A30 e AFF A50
+= Flusso di lavoro per il ripristino manuale dei supporti di avvio: AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Come iniziare a sostituire i supporti di avvio nel sistema di storage AFF A20, AFF A30 o AFF A50, rivedere i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.
+Il ripristino manuale dell'immagine di avvio prevede l'utilizzo di un'unità USB per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema AFF A20, AFF A30 o AFF A50. È necessario scaricare l'immagine di ripristino ONTAP appropriata dal sito di supporto NetApp e copiarla su un'unità USB. Questa unità USB preparata viene quindi utilizzata per eseguire il ripristino e ripristinare il sistema allo stato operativo.
+
+Se il sistema è in esecuzione in ONTAP 9.17.1 e versioni successive, utilizzare link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .
+
+Per iniziare, rivedere i requisiti di ripristino, spegnere il controller, sostituire il supporto di avvio, utilizzare l'unità USB per ripristinare l'immagine e riapplicare le impostazioni di crittografia, se necessario.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:bootmedia-replace-requirements.html["Esaminare i requisiti dei supporti di avvio"]
 [role="quick-margin-para"]
@@ -23,11 +27,11 @@ Determinare se il sistema dispone di un gestore delle chiavi di sicurezza abilit
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Due"]link:bootmedia-shutdown.html["Spegnere il controller"]
 [role="quick-margin-para"]
-Spegnere o sostituire il controller danneggiato in modo che il controller integro continui a erogare dati dallo storage del controller danneggiato.
+Spegnere il controller quando è necessario sostituire il supporto di avvio.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Tre"]link:bootmedia-replace.html["Sostituire il supporto di avvio"]
 [role="quick-margin-para"]
-Rimuovere il supporto di avvio guasto dal controller danneggiato e installare il supporto di avvio sostitutivo, quindi trasferire un'immagine ONTAP utilizzando un'unità flash USB sul supporto di avvio sostitutivo.
+Rimuovere il supporto di avvio non riuscito dal controller danneggiato e installare il supporto di avvio sostitutivo, quindi trasferire un'immagine ONTAP tramite un'unità flash USB.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Quattro"]link:bootmedia-recovery-image-boot.html["Avviare l'immagine di ripristino"]
 [role="quick-margin-para"]
@@ -35,7 +39,7 @@ Avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verifica
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Cinque"]link:bootmedia-encryption-restore.html["Ripristino della crittografia"]
 [role="quick-margin-para"]
-Ripristinare la configurazione del gestore delle chiavi integrato o del gestore delle chiavi esterno dal menu di avvio ONATP.
+Ripristinare la configurazione del gestore chiavi integrato o del gestore chiavi esterno dal menu di avvio ONTAP .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sei"]link:bootmedia-complete-rma.html["Restituire la parte guasta a NetApp"]
 [role="quick-margin-para"]

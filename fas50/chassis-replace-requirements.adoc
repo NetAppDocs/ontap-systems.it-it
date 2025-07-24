@@ -27,16 +27,9 @@ Esaminare i seguenti requisiti e considerazioni.
 
 == Considerazioni
 
-* *La procedura di sostituzione del telaio non funziona.* Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* La procedura di sostituzione dello chassis provoca interruzioni. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
 * Puoi utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal tuo sistema storage.
 * La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, le unità, gli eventuali alloggiamenti e i controller vengano spostati nel nuovo chassis.
-* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
-+
-Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
-
-+
-È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
-
 
 
 .Quali sono le prossime novità?

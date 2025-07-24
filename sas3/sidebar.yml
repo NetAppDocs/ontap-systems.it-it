@@ -3,14 +3,12 @@ section: sas3
 title: Shelf SAS
 entries:
 - title: Installazione e cavo
-  pdf-filename: Shelf con installazione e cavo dei moduli IOM12/IOM2B
+  pdf-filename: Installazione e cablaggio dei ripiani DS212C, DS224C o DS460C
   entries:
   - title: Installazione e shelf per cavi per il nuovo sistema
     url: "/sas3/install-new-system.html"
   - title: Shelf hot-add
     url: "/sas3/install-hot-add-shelf.html"
-  - title: Aggiunta a caldo di shelf IOM12/IOM12B per lo stack di shelf IOM6
-    url: "/sas3/iom12-hot-add-mix.html"
   - title: Modificare l'ID dello shelf
     url: "/sas3/install-change-shelf-id.html"
   - title: Regole di cablaggio SAS, fogli di lavoro ed esempi
@@ -19,22 +17,22 @@ entries:
       url: "/sas3/overview-cabling-rules-examples.html"
     - title: Regole e concetti relativi al cablaggio SAS
       url: "/sas3/install-cabling-rules.html"
-    - title: Fogli di lavoro per il cablaggio ed esempi per ha multipath
+    - title: HA multipercorso
       url: "/sas3/install-cabling-worksheets-examples-multipath.html"
-    - title: Fogli di lavoro per il cablaggio di piattaforme con storage interno
+    - title: Piattaforme con storage interno
       url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
-    - title: Foglio di lavoro per il cablaggio e esempio di ha quad-path
+    - title: HA a quattro percorsi
       url: "/sas3/install-worksheets-examples-quadpath.html"
-    - title: Foglio di lavoro per il cablaggio per la connettività multipath
+    - title: Connettività multipath
       url: "/sas3/install-cabling-worksheet-template-multipath.html"
-    - title: Foglio di lavoro per il cablaggio per la connettività quad-path
+    - title: Connettività quad-path
       url: "/sas3/install-cabling-worksheet-template-quadpath.html"
-    - title: Come leggere il foglio di lavoro per la connettività multipath
+    - title: Connettività multipath
       url: "/sas3/install-cabling-worksheets-how-to-read-multipath.html"
     - title: Come leggere il foglio di lavoro per la connettività quad-path
       url: "/sas3/install-cabling-worksheets-how-to-read-quadpath.html"
 - title: Mantenere
-  pdf-filename: Gli shelf con i moduli IOM12/IOM12B mantengono la manutenzione
+  pdf-filename: Gli scaffali DS212C, DS224C o DS460C mantengono
   entries:
   - title: Disco in shelf DS224C o DS212C
     url: "/sas3/service-hot-swap-drive-ds224c-ds212c.html"

@@ -28,7 +28,7 @@ L'immagine viene scaricata dall'unità flash USB.
 .. Sul controller con problemi, premere `Y` quando viene visualizzato `Do you want to restore the backup configuration now?`
 .. Se richiesto sul controller danneggiato, premere `Y` per sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.
 .. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege advanced`.
-.. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address` .
+.. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address`.
 +
 *NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: Se il tuo nuovo sistema - configurazione a coppia ha o a controller singolo - non è stato installato in un cabinet, devi installare e cablare gli shelf di dischi in un rack. 
 ---
-= Installazione e shelf per l'installazione di un nuovo sistema - shelf con moduli IOM12/IOM12B
+= Installazione e cablaggio di ripiani - DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,36 +13,7 @@ summary: Se il tuo nuovo sistema - configurazione a coppia ha o a controller sin
 [role="lead"]
 Se il tuo nuovo sistema - configurazione a coppia ha o a controller singolo - non è stato installato in un cabinet, puoi installare e cablare gli shelf di dischi in un rack.
 
-
-
-== Requisiti per l'installazione e il cablaggio di shelf di dischi con moduli IOM12/IOM12B per un'installazione di nuovo sistema
-
-È necessario soddisfare alcuni requisiti prima di installare e collegare gli shelf di dischi.
-
-* È necessario disporre delle istruzioni di installazione e configurazione per il modello di piattaforma in uso.
-+
-Le istruzioni di installazione e configurazione riguardano la procedura completa per l'installazione, l'installazione e la configurazione del sistema. Questa procedura viene utilizzata solo (_Installazione e shelf di cavi per un'installazione di un nuovo sistema_) insieme alle istruzioni di installazione e configurazione della piattaforma, se sono necessarie informazioni dettagliate sull'installazione o il cablaggio degli shelf di dischi nel sistema storage.
-
-+
-Le istruzioni di installazione e configurazione sono disponibili accedendo alla documentazione del modello di piattaforma.
-
-+
-link:../index.html["Documentazione sui sistemi AFF e FAS"]
-
-* Gli shelf di dischi e i controller non devono essere accesi in questo momento.
-* Se si utilizzano cavi ottici SAS mini-SAS HD, è necessario rispettare le regole riportate in link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regole per i cavi ottici SAS mini-SAS HD"].
-
-
-
-
-== Considerazioni per l'installazione e il cablaggio di shelf di dischi con moduli IOM12/IOM12B per un'installazione di nuovo sistema
-
-Prima di installare e collegare gli shelf di dischi, è necessario acquisire familiarità con gli aspetti e le Best practice di questa procedura.
-
-
-
-=== Considerazioni generali
-
+.A proposito di questa attività
 * Gli shelf di dischi con moduli IOM12/IOM12B vengono forniti con ID shelf preimpostati a 00.
 +
 
@@ -51,70 +22,63 @@ NOTE: Se si dispone di una coppia ha con almeno due stack, lo shelf di dischi co
 +
 È necessario impostare gli shelf ID in modo che siano univoci all'interno della configurazione a coppia ha o a controller singolo. È possibile impostare manualmente gli ID degli shelf o assegnare automaticamente gli ID degli shelf per tutti gli shelf di dischi nella configurazione a coppia ha o a controller singolo utilizzando un comando in modalità di manutenzione. Vengono fornite le istruzioni per entrambi i metodi.
 
-* Gli shelf di dischi contenenti gli aggregati root possono essere identificati dalle etichette presenti sullo shelf box di dischi e sullo chassis dello shelf di dischi.
+* È possibile identificare gli scaffali dei dischi contenenti gli aggregati radice tramite le etichette presenti sulla scatola dello scaffale dei dischi e sul telaio dello scaffale dei dischi.
 +
 Le etichette indicano il numero dello stack, ad esempio *Loop o Stack n.: 1* e *Loop o Stack n.: 2*. Gli shelf di dischi che non contengono gli aggregati root mostrano solo il numero di serie dello shelf di dischi sulle etichette.
 
-* Se durante l'installazione e la configurazione del sistema non si configura il sistema per l'utilizzo dell'assegnazione automatica della proprietà del disco, è necessario assegnare manualmente la proprietà del disco.
+* Se durante l'installazione e la configurazione del sistema non si configura il sistema per l'assegnazione automatica della proprietà del disco, è necessario assegnare manualmente la proprietà del disco.
 * IBACP (in-band Alternate Control Path) viene attivato automaticamente.
 +
 IBACP non è supportato nelle configurazioni ha a percorso singolo o a percorso singolo.
 
 
 
+.Prima di iniziare
+Prima di installare e cablare gli scaffali dei dischi, è necessario soddisfare determinati requisiti e acquisire familiarità con le best practice e le considerazioni relative a questa procedura.
 
-
-=== Considerazioni sulle Best practice
-
-* La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP).
+* Ottieni le istruzioni di installazione e configurazione per il tuo modello di piattaforma.
 +
-L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati, evitando così messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi. Si evita inoltre la possibile prevenzione del partizionamento dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
+Le istruzioni di installazione e configurazione descrivono la procedura completa per l'installazione, la configurazione e l'impostazione del sistema. Utilizzare questa procedura insieme alle istruzioni di installazione e configurazione della piattaforma solo se sono necessarie informazioni dettagliate sull'installazione o il cablaggio degli shelf di dischi al sistema di storage.
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
+Le istruzioni per l'installazione e la configurazione possono essere trovate navigando sulla tua piattaforma in link:../index.html["Documentazione sui sistemi AFF e FAS"] .
 
-* La procedura consigliata consiste nel scaricare ed eseguire Config Advisor dopo l'installazione di un nuovo sistema.
+* Gli shelf di dischi e i controller non devono essere accesi in questo momento.
+* *Migliore pratica*: assicurati che il tuo sistema possa riconoscere e utilizzare le unità disco appena qualificate  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["scaricando la versione corrente del Disk Qualification Package (DQP)"^] .
 +
-L'esecuzione di Config Advisor dopo l'installazione di un nuovo sistema consente di verificare che le connessioni SAS siano cablate correttamente e che gli ID shelf siano univoci all'interno della configurazione a coppia ha o a controller singolo.
+Ciò consente di evitare messaggi di evento di sistema relativi alla presenza di informazioni non aggiornate sull'unità disco. Si evita inoltre il possibile blocco del partizionamento del disco dovuto al mancato riconoscimento delle unità disco. Il DQP segnala la presenza di firmware non aggiornato sull'unità disco.
 
+* *Migliore pratica*: verificare che le connessioni SAS siano cablate correttamente e che gli IDS dello scaffale siano univoci all'interno della coppia HA o della configurazione del singolo controller tramite  https://mysupport.netapp.com/site/tools["scaricando ed eseguendo Config Advisor"^] dopo l'installazione di un nuovo sistema.
 +
 Se vengono generati errori di cablaggio SAS o ID shelf duplicati, seguire le azioni correttive fornite.
 
 +
 Per scaricare Config Advisor è necessario disporre dell'accesso di rete.
 
+* Familiarizzare con le considerazioni per una corretta gestione dei cavi SAS:
 +
-https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
-
-
-
-
-
-=== Considerazioni sulla gestione dei cavi SAS
-
-* Controllare visivamente la porta SAS per verificare il corretto orientamento del connettore prima di collegarlo.
+** Se si utilizzano cavi ottici SAS mini-SAS HD, è necessario rispettare le regole riportate in link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regole per i cavi ottici SAS mini-SAS HD"].
+** Controllare visivamente la porta SAS per verificare il corretto orientamento del connettore prima di collegarlo.
 +
 I connettori dei cavi SAS sono dotati di chiavi. Se orientato correttamente in una porta SAS, il connettore scatta in posizione e, se l'alimentazione dello shelf di dischi è attiva, il LED LNK della porta SAS dello shelf di dischi si illumina di verde. Per gli shelf di dischi, inserire un connettore per cavo SAS con la linguetta rivolta verso il basso (nella parte inferiore del connettore).
 
 +
 Per i controller, l'orientamento delle porte SAS può variare a seconda del modello di piattaforma; pertanto, l'orientamento corretto del connettore del cavo SAS varia.
 
-* Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+** Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
 +
 I cavi hanno un raggio di curvatura minimo. Le specifiche del produttore dei cavi definiscono il raggio di curvatura minimo; tuttavia, una linea guida generale per il raggio di curvatura minimo è 10 volte il diametro del cavo.
 
-* L'utilizzo di pellicole in velcro anziché di fascette per fissare e fissare i cavi di sistema consente di regolare i cavi in modo più semplice.
+** *Migliore pratica*: utilizzare fascette in velcro anziché fascette stringicavo per legare e fissare i cavi del sistema, in modo da semplificare le regolazioni dei cavi.
 
 
-
-
-=== Considerazioni sulla gestione dei dischi DS460C
-
-* I dischi sono confezionati separatamente dallo chassis dello shelf.
+* Familiarizzare con le considerazioni per una corretta gestione delle unità DS460C:
++
+** I dischi sono confezionati separatamente dallo chassis dello shelf.
 +
 È necessario eseguire l'inventario dei dischi insieme al resto delle apparecchiature di sistema ricevute.
 
-* Dopo aver disimballato le unità, conservare il materiale di imballaggio per un utilizzo futuro.
+** Dopo aver disimballato le unità, conservare il materiale di imballaggio per un utilizzo futuro.
 +
 
 CAUTION: *Possibile perdita di accesso ai dati:* se in futuro lo shelf viene spostato in una parte diversa del data center o lo shelf viene trasportato in una posizione diversa, è necessario rimuovere le unità dai cassetti delle unità per evitare possibili danni ai cassetti e alle unità.
@@ -123,7 +87,7 @@ CAUTION: *Possibile perdita di accesso ai dati:* se in futuro lo shelf viene spo
 
 NOTE: Tenere le unità disco nella custodia ESD fino a quando non si è pronti per l'installazione.
 
-* Quando si maneggiano i dischi, indossare sempre un braccialetto antistatico collegato a massa su una superficie non verniciata dello chassis del contenitore di storage per evitare scariche elettrostatiche.
+** Quando si maneggiano i dischi, indossare sempre un braccialetto antistatico collegato a massa su una superficie non verniciata dello chassis del contenitore di storage per evitare scariche elettrostatiche.
 +
 Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del contenitore di storage prima di maneggiare il disco.
 
@@ -131,7 +95,9 @@ Se non è disponibile un braccialetto, toccare una superficie non verniciata sul
 
 
 
-== Installazione di shelf di dischi con moduli IOM12/IOM12B per un'installazione di nuovo sistema
+
+
+== Passaggio 1: installare gli scaffali dei dischi per una nuova installazione del sistema
 
 Gli shelf di dischi vengono installati in un rack utilizzando i kit di montaggio in rack forniti con gli shelf di dischi.
 
@@ -142,27 +108,24 @@ NOTE: Se si installano più shelf di dischi, installarli dal basso verso la part
 
 +
 
-NOTE: Non montare lo shelf di dischi in un rack di tipo teleco con montaggio a flangia; il peso dello shelf di dischi può causare il collasso nel rack sotto il proprio peso.
+CAUTION: Non montare lo shelf di dischi in un rack di tipo teleco con montaggio a flangia; il peso dello shelf di dischi può causare il collasso nel rack sotto il proprio peso.
 
 . Installare e fissare lo shelf di dischi sulle staffe di supporto e sul rack utilizzando l'opuscolo di installazione fornito con il kit.
 +
 Per rendere uno shelf di dischi più leggero e facile da manovrare, rimuovere gli alimentatori e i moduli i/o (IOM).
 
 +
-Per gli shelf di dischi DS460C, anche se i dischi sono confezionati separatamente, il che rende lo shelf più leggero, uno shelf DS460C vuoto pesa ancora circa 132 kg; pertanto, prestare attenzione quando si sposta uno shelf.
+
+CAUTION: Sebbene le unità nei ripiani DS460C siano imballate separatamente, il che rende il ripiano più leggero, un ripiano DS460C vuoto pesa comunque circa 60 kg. Si consiglia di utilizzare un sollevatore meccanico o quattro persone che utilizzino le maniglie di sollevamento per spostare in sicurezza un ripiano DS460C vuoto.
 
 +
-
-CAUTION: Si consiglia di utilizzare un sollevatore meccanico o quattro persone che utilizzano le maniglie di sollevamento per spostare in sicurezza un ripiano DS460C vuoto.
-
-+
-La spedizione DS460C è stata fornita con quattro maniglie di sollevamento rimovibili (due per ciascun lato). Per utilizzare le maniglie di sollevamento, installarle inserendo le linguette delle maniglie negli slot sul lato dello scaffale e spingendole verso l'alto fino a quando non scattano in posizione. Quindi, quando si fa scorrere lo shelf di dischi sulle guide, si scollega un set di maniglie alla volta utilizzando il dispositivo di chiusura con pollice. La figura seguente mostra come collegare una maniglia di sollevamento.
+La confezione del DS460C include quattro maniglie di sollevamento rimovibili (due per lato). Per utilizzare le maniglie di sollevamento, installarle inserendo le linguette delle maniglie nelle fessure laterali del ripiano e spingendole verso l'alto fino a sentire un clic. Quindi, mentre si fa scorrere il ripiano portadischi sulle guide, staccare un set di maniglie alla volta utilizzando il fermo a pressione. L'illustrazione seguente mostra come fissare una maniglia di sollevamento.
 
 +
 image::../media/drw_ds460c_handles.gif[Installazione delle maniglie di sollevamento]
 
 . Reinstallare eventuali alimentatori e IOM rimossi prima di installare lo shelf di dischi nel rack.
-. Se si sta installando uno shelf di dischi DS460C, installare le unità nei cassetti delle unità; in caso contrario, passare alla fase successiva.
+. Se si installa un ripiano per dischi DS460C, installare le unità nei cassetti appositi. In caso contrario, procedere al passaggio successivo.
 +
 [NOTE]
 ====
@@ -172,7 +135,7 @@ Se non è disponibile un braccialetto, toccare una superficie non verniciata sul
 
 ====
 +
-Se è stato acquistato uno shelf parzialmente popolato, ovvero che lo shelf ha meno di 60 dischi supportati, per ciascun cassetto, installare i dischi come segue:
+Se hai acquistato uno scaffale parzialmente occupato, ovvero con meno di 60 unità supportate, installa le unità in ogni cassetto come segue:
 
 +
 ** Installare le prime quattro unità negli slot anteriori (0, 3, 6 e 9).
@@ -213,19 +176,12 @@ Assicurarsi che gli slot 0, 3, 6 e 9 di ciascun cassetto contengano dischi.
 
 ... Spingere con cautela il cassetto dell'unità all'interno del contenitore.
 +
-|===
-
-
- a| 
 image:../media/2860_dwg_e2860_de460c_gentle_close.gif["Chiudere delicatamente il cassetto"]
 
-
-
- a| 
++
 
 CAUTION: *Possibile perdita di accesso ai dati:* non chiudere mai il cassetto. Spingere lentamente il cassetto per evitare di strattonare il cassetto e danneggiare lo storage array.
 
-|===
 ... Chiudere il cassetto dell'unità spingendo entrambe le leve verso il centro.
 ... Ripetere questa procedura per ciascun cassetto dello shelf di dischi.
 ... Fissare il pannello anteriore.
@@ -241,15 +197,26 @@ NOTE: Non accendere gli shelf di dischi in questo momento.
 
 
 
-== Shelf di dischi per cavi con moduli IOM12/IOM12B per una nuova installazione del sistema
+== Fase 2: Mensole per dischi portacavi per l'installazione di un nuovo sistema
 
 Le connessioni SAS per shelf di dischi via cavo (shelf-to-shelf) e controller-to-shelf (controller-to-shelf) consentono di stabilire la connettività dello storage per il sistema.
 
-.Prima di iniziare
-È necessario aver soddisfatto i requisiti indicati in <<Requisiti per l'installazione e il cablaggio di shelf di dischi con moduli IOM12/IOM12B per un'installazione di nuovo sistema>> e hanno installato gli shelf di dischi nel rack.
-
 .A proposito di questa attività
 Dopo aver collegato gli shelf di dischi, accenderli, impostare gli ID degli shelf e completare la configurazione e la configurazione del sistema.
+
+.Prima di iniziare
+È necessario aver soddisfatto i seguenti requisiti e aver installato gli scaffali per dischi nel rack.
+
+* È necessario disporre delle istruzioni di installazione e configurazione per il modello di piattaforma in uso.
++
+Le istruzioni di installazione e configurazione descrivono la procedura completa per l'installazione, la configurazione e l'impostazione del sistema. Utilizzare questa procedura insieme alle istruzioni di installazione e configurazione della piattaforma solo se sono necessarie informazioni dettagliate sull'installazione o il cablaggio degli shelf di dischi al sistema di storage.
+
++
+Le istruzioni per l'installazione e la configurazione possono essere trovate navigando sulla tua piattaforma in link:../index.html["Documentazione sui sistemi AFF e FAS"] .
+
+* Gli shelf di dischi e i controller non devono essere accesi in questo momento.
+* Se si utilizzano cavi ottici SAS mini-SAS HD, è necessario rispettare le regole riportate in link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regole per i cavi ottici SAS mini-SAS HD"].
+
 
 .Fasi
 . Collegare i collegamenti shelf-to-shelf all'interno di ogni stack se lo stack dispone di più shelf di dischi; in caso contrario, passare alla fase successiva:
@@ -408,12 +375,9 @@ NOTE: Prima di avviare il sistema, è consigliabile sfruttare questa opportunit�
 
 
 
-. Scaricare ed eseguire Config Advisor seguendo le istruzioni di installazione e configurazione del modello di piattaforma in uso per verificare che le connessioni SAS siano cablate correttamente e che non siano presenti ID shelf duplicati nel sistema.
+. Verificare che le connessioni SAS siano cablate correttamente e che non vi siano ID di scaffale duplicati all'interno del sistema  https://mysupport.netapp.com/site/tools["scaricando ed eseguendo Config Advisor"^] come indicato nelle istruzioni di installazione e configurazione per il tuo modello di piattaforma.
 +
 Se vengono generati errori di cablaggio SAS o ID shelf duplicati, seguire le azioni correttive fornite.
-
-+
-https://mysupport.netapp.com/site/tools["Download NetApp: Config Advisor"^]
 
 +
 È inoltre possibile eseguire `storage shelf show -fields shelf-id` Per visualizzare un elenco di shelf ID già in uso (e duplicati, se presenti) nel sistema.
@@ -426,11 +390,11 @@ Nell'output, "`in-band`" viene indicato come "`Active`" per ciascun nodo.
 
 
 
-== Spostare o trasportare gli shelf DS460C
+== (Facoltativo) Passaggio 3: spostare o trasportare gli scaffali DS460C
 
-Se in futuro si spostano gli shelf DS460C in una parte diversa del data center o si trasportano gli shelf in una posizione diversa, è necessario rimuovere le unità dai cassetti delle unità per evitare possibili danni ai cassetti e alle unità.
+Se in futuro si spostano i ripiani DS460C in una parte diversa del data center o si trasportano i ripiani in una posizione diversa, è necessario rimuovere le unità dai cassetti per evitare possibili danni ai cassetti e alle unità stesse.
 
-* Se durante l'installazione del nuovo sistema sono stati installati gli shelf DS460C, i materiali di imballaggio dei dischi sono stati salvati, utilizzarli per reimballare i dischi prima di spostarli.
+* Se hai conservato i materiali di imballaggio delle unità quando hai installato i ripiani DS460C come parte dell'installazione del nuovo sistema, utilizzali per riimballare le unità prima di spostarle.
 +
 Se non hai salvato il materiale di imballaggio, devi posizionare i dischi su superfici imbottite o utilizzare un imballaggio imbottito alternativo. Non impilare mai i dischi l'uno sull'altro.
 

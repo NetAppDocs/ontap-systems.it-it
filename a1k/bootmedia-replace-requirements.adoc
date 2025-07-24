@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, replace the boot media 
 summary: 'Prima di sostituire il supporto di avvio nel sistema AFF A1K, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un"unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.' 
 ---
-= Requisiti per sostituire i supporti di avvio - AFF A1K
+= Requisiti per il ripristino manuale del supporto di avvio - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,17 +13,22 @@ summary: 'Prima di sostituire il supporto di avvio nel sistema AFF A1K, assicura
 [role="lead"]
 Prima di sostituire il supporto di avvio nel sistema AFF A1K, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un'unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.
 
-Esaminare i seguenti requisiti.
-
-* È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.
-* È necessario copiare il `image_xxx.tgz` file nell'unità flash USB per utilizzarlo successivamente in questa procedura.
-* È necessario sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
-* È importante applicare i comandi descritti di seguito al controller corretto:
-+
-** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
-** Il controller _healthy_ è il partner ha del controller compromesso.
+.Chiavetta USB
+* Assicurati di avere una chiavetta USB formattata in FAT32.
+* La chiavetta USB deve avere una capacità di archiviazione sufficiente per contenere il  `image_xxx.tgz` file.
 
 
+.Preparazione del file
+Copia il  `image_xxx.tgz` file sull'unità flash USB. Questo file verrà utilizzato quando si trasferisce l'immagine ONTAP tramite l'unità flash USB.
+
+.Sostituzione dei componenti
+Sostituire il componente guasto con il componente sostitutivo fornito da NetApp.
+
+.Identificazione del controllore
+Quando si sostituisce il supporto di avvio danneggiato, è fondamentale applicare i comandi al controller corretto:
+
+* Il _controller non funzionante_ è il controller su cui si sta eseguendo la manutenzione.
+* Il _controllore sano_ è il partner HA del controllore compromesso.
 
 
 .Quali sono le prossime novità?

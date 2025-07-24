@@ -24,7 +24,22 @@ entries:
   entries:
   - title: Panoramica della manutenzione
     url: "/c80/maintain-overview.html"
-  - title: Supporto di boot
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: C80 Boot Media
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/c80/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/c80/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/c80/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/c80/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/c80/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/c80/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
     pdf-filename: C80 Boot Media
     entries:
     - title: Flusso di lavoro per la sostituzione dei supporti di avvio

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b, concepts 
 summary: 'Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in configurazioni a coppia ha e a controller singolo (per le piattaforme supportate).' 
 ---
-= Regole e concetti di cablaggio SAS - shelf con moduli IOM12/IOM12B
+= Regole e concetti di cablaggio SAS: DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in 
 Gli shelf di dischi con moduli IOM12/IOM12B possono essere cablati in configurazioni a coppia ha e a controller singolo (per le piattaforme supportate) applicando le regole di cablaggio SAS: Regole di configurazione, regole di numerazione degli slot del controller, regole di connessione shelf-to-shelf, regole di connessione controller-to-stack e, se applicabili, regole per cavi ottici SAS HD mini-SAS.
 
 
-NOTE: Le regole di cablaggio SAS relative alle regole di numerazione degli slot dei controller, alle regole di connessione shelf-to-shelf e alle regole di connessione controller-to-stack descritte in questa guida sono le stesse che si applicano a tutti gli shelf di dischi SAS, indipendentemente dal fatto che dispongano di moduli IOM12/IOM12B, IOM6 o IOM3. Tuttavia, le informazioni contenute in questa guida sono specifiche per le caratteristiche esclusive degli shelf di dischi con moduli IOM12/IOM12B e per il loro utilizzo nelle configurazioni supportate.
+NOTE: Le regole di cablaggio SAS relative alla numerazione degli slot del controller, alle regole di connessione tra shelf e controller e alle regole di connessione tra controller e stack descritte in questa guida sono le stesse che si applicano a tutti gli shelf di dischi SAS, indipendentemente dal fatto che siano dotati di moduli IOM12 o IOM12B. Tuttavia, le informazioni contenute in questa guida si riferiscono specificamente alle caratteristiche specifiche degli shelf di dischi con moduli IOM12/IOM12B e al loro utilizzo nelle configurazioni supportate.
 
 Le regole di cablaggio SAS relative alle regole di configurazione e alle regole per i cavi ottici SAS mini-SAS HD descritte in questa guida sono specifiche per gli shelf di dischi con moduli IOM12/IOM12B.
 
@@ -33,9 +33,6 @@ Evitare di discostarsi dalle regole; le deviazioni potrebbero ridurre affidabili
 == Regole di configurazione
 
 Gli shelf di dischi con moduli IOM12/IOM12B sono supportati su specifici tipi di configurazioni a coppia ha e a controller singolo.
-
-
-NOTE: Le piattaforme FAS25XX non sono trattate in questo contenuto.
 
 [NOTE]
 ====

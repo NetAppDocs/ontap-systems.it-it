@@ -2,45 +2,33 @@
 permalink: fas50/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas50, replace the boot media 
-summary: 'Prima di sostituire il supporto di avvio nel sistema FAS50, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un"unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.' 
+summary: 'Prima di sostituire il supporto di avvio nel sistema di storage FAS50, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un"unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.' 
 ---
-= Requisiti per la sostituzione dei supporti di avvio - FAS50
+= Requisiti per il ripristino manuale del supporto di avvio - FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di sostituire il supporto di avvio nel sistema FAS50, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un'unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.
+Prima di sostituire il supporto di avvio nel sistema di storage FAS50, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.
 
-Prima di sostituire il supporto di avvio, verificare i seguenti requisiti e considerazioni.
-
-
-
-== Requisiti
-
-* È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz`.
-* È necessario copiare il `image_xxx.tgz` file nell'unità flash USB per utilizzarlo successivamente in questa procedura.
-* È necessario sostituire il componente guasto con un componente FRU sostitutivo della stessa capacità ricevuta dal provider.
+.Chiavetta USB
+* Assicurati di avere una chiavetta USB formattata in FAT32.
+* La chiavetta USB deve avere una capacità di archiviazione sufficiente per contenere il  `image_xxx.tgz` file.
 
 
+.Preparazione del file
+Copia il  `image_xxx.tgz` file sull'unità flash USB. Questo file verrà utilizzato quando si trasferisce l'immagine ONTAP tramite l'unità flash USB.
 
+.Sostituzione dei componenti
+Sostituire il componente guasto con il componente sostitutivo fornito da NetApp.
 
-== Considerazioni
+.Identificazione del controllore
+Quando si sostituisce il supporto di avvio danneggiato, è fondamentale applicare i comandi al controller corretto:
 
-* È importante applicare i comandi descritti di seguito al controller corretto:
-+
-** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
-** Il controller _healthy_ è il partner ha del controller compromesso.
-
-
-* Se necessario, è possibile attivare i LED di posizione del telaio della piattaforma (blu) per facilitare l'individuazione fisica della piattaforma interessata. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
-+
-Un telaio della piattaforma ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ogni controller. I LED di posizione rimangono accesi per 30 minuti.
-
-+
-È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
-
+* Il _controller non funzionante_ è il controller su cui si sta eseguendo la manutenzione.
+* Il _controllore sano_ è il partner HA del controllore compromesso.
 
 
 .Quali sono le prossime novità?

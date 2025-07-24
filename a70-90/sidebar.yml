@@ -24,7 +24,22 @@ entries:
   entries:
   - title: Panoramica della manutenzione
     url: "/a70-90/maintain-overview.html"
-  - title: Supporto di boot
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: AFF A70, supporti di avvio AFF A90
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a70-90/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/a70-90/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/a70-90/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a70-90/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a70-90/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a70-90/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
     pdf-filename: AFF A70, supporti di avvio AFF A90
     entries:
     - title: Flusso di lavoro per la sostituzione dei supporti di avvio

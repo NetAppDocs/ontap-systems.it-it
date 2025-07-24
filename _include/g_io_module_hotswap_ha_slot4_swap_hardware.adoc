@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+Sostituire il cluster guasto e il modulo I/O HA nello slot 4 con un modulo I/O equivalente:
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il cluster guasto e il modulo I/O HA dal controller danneggiato:
++
+image::../media/drw_g_io_module_hotswap_slot4_ieops-2366.svg[cluster hotswap e modulo I/O ha nello slot 4]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Ruotare la vite a testa zigrinata del modulo i/o in senso antiorario per allentarla.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Estrarre il modulo I/O dal controller utilizzando la linguetta dell'etichetta della porta a sinistra e la vite a testa zigrinata a destra.
+
+|===
+. Installare il cluster sostitutivo e il modulo HA I/O nello slot 4:
++
+.. Allineare il modulo i/o con i bordi dello slot.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi di inserirlo correttamente nel connettore.
++
+Per spingere all'interno il modulo I/O è possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata a destra.
+
+.. Ruotare la vite a testa zigrinata in senso orario per serrare.
+
+
+. Cablare il cluster e il modulo I/O HA.
+

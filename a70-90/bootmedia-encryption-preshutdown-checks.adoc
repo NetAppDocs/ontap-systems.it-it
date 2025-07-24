@@ -2,9 +2,9 @@
 permalink: a70-90/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, pre-shutdown checks for onboard encryption keys 
-summary: 'Per garantire la sicurezza dei dati sul sistema di storage AFF A70 e AFF A90, è necessario verificare il supporto della chiave di crittografia e lo stato del supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.' 
+summary: 'Per garantire la sicurezza dei dati sul sistema di storage AFF A70 o AFF A90, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.' 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio - AFF A70 e AFF A90
+= Controllare il supporto di crittografia per il ripristino manuale dei supporti di avvio - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

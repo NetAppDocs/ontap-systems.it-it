@@ -4,25 +4,14 @@ sidebar: sidebar
 keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
 summary: 'È possibile modificare l"ID di uno shelf in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima di essere collegato al sistema. Puoi anche modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire dati) e tutti i dischi nello shelf sono di proprietà, parti di ricambio o parte di aggregati non allineati.' 
 ---
-= Modifica di un ID shelf - shelf con moduli IOM12/IOM12B
+= Modificare un ID scaffale: DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile modificare l'ID di uno shelf in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima di essere collegato al sistema. È inoltre possibile modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire dati) e tutti i dischi nello shelf sono di proprietà, parti di ricambio o parte di aggregati non allineati.
-
-.Prima di iniziare
-* Se ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire i dati), è necessario verificare che tutti i dischi nello shelf siano privi di proprietà, parti di ricambio o parte di aggregati non allineati.
-+
-È possibile verificare lo stato dei dischi utilizzando `storage disk show -shelf _shelf_number_` comando. Se si tratta di un disco guasto, l'output nella colonna Container Type dovrebbe visualizzare spare o rotto. Inoltre, le colonne Container Name (Nome contenitore) e Owner (Proprietario) dovrebbero avere un trattino.
-
-* È possibile verificare gli shelf ID già in uso nel sistema eseguendo Active IQ Config Advisor o utilizzando `storage shelf show -fields shelf-id` comando.
-+
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Download NetApp: Config Advisor"]
-
-
+È possibile modificare un ID shelf in un sistema con moduli IOM12/IOM12B quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima che venga cablato al sistema. È inoltre possibile modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per la gestione dei dati) e tutte le unità nello shelf sono di proprietà, di riserva o fanno parte di aggregati offline.
 
 .A proposito di questa attività
 * Un ID shelf valido va da 00 a 99.
@@ -34,6 +23,14 @@ Se si dispone di una piattaforma con storage interno, gli shelf ID devono essere
 +
 Il tempo di attesa prima della riaccensione dipende dallo stato di ONTAP, come descritto più avanti in questa procedura.
 
+
+
+.Prima di iniziare
+* Se ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire i dati), è necessario verificare che tutti i dischi nello shelf siano privi di proprietà, parti di ricambio o parte di aggregati non allineati.
++
+È possibile verificare lo stato dei dischi utilizzando `storage disk show -shelf _shelf_number_` comando. Se si tratta di un disco guasto, l'output nella colonna Container Type dovrebbe visualizzare spare o rotto. Inoltre, le colonne Container Name (Nome contenitore) e Owner (Proprietario) dovrebbero avere un trattino.
+
+* È possibile verificare gli ID degli scaffali già in uso nel sistema eseguendo Active IQ Config Advisor o utilizzando  `storage shelf show -fields shelf-id` comando. Puoi  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["scarica e accedi ad Active IQ Config Advisor"] sul sito di supporto NetApp .
 
 
 .Fasi

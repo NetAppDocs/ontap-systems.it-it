@@ -2,9 +2,9 @@
 permalink: fas-70-90/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: fas70, fas90, pre-shutdown checks for onboard encryption keys 
-summary: 'Per garantire la sicurezza dei dati sul sistema di storage FAS70 o FAS90, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.' 
+summary: Per garantire la sicurezza dei dati sul sistema di storage FAS70 o FAS90, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare se la versione di ONTAP supporta NetApp Volume Encryption e, prima di arrestare il controller, verificare che il gestore delle chiavi sia attivo. 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia sui supporti di avvio - FAS70 e FAS90
+= Controllare il supporto della crittografia per il ripristino manuale dei supporti di avvio - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

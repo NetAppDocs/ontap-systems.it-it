@@ -4,20 +4,30 @@ sidebar: sidebar
 keywords: hot-swap, fail, disk, drive, ds224c, ds212c, disk, shelf-nondisruptive, nondisruptive, replace, i/o, hot-swap a disk drive in a ds224c or ds212c disk shelf 
 summary: È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS224C o DS212C. 
 ---
-= Unità disco hot-swap in shelf di dischi DS224C o DS212C - shelf con moduli IOM12/IOM12B
+= Sostituzione a caldo di un'unità disco - DS212C, DS224C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS224C o DS212C.
+È possibile sostituire a caldo un'unità disco guasta in uno scaffale per dischi DS224C o DS212C con moduli IOM12, IOM12B.
+
+.A proposito di questa attività
+* Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
++
+
+NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
+
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Uno shelf di dischi dispone di tre LED di posizione: Uno sul display operatore e uno su ciascun IOM dello shelf. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
+
+* Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
+
 
 .Prima di iniziare
-* Il disco che si sta installando deve essere supportato dallo shelf di dischi DS224C o DS212C.
-+
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
+* L'unità disco che si sta installando deve essere supportata dallo scaffale di dischi DS224C o DS212C. È possibile visualizzare le unità disco supportate per la configurazione in  https://hwu.netapp.com["NetApp Hardware Universe"] .
 * Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
 * Il disco che si sta rimuovendo deve essere guasto.
 +
@@ -29,14 +39,13 @@ NOTE: A seconda del tipo di disco e della capacità, potrebbero essere necessari
 
 * Se si sostituisce un disco con crittografia automatica (SED), seguire le istruzioni per la sostituzione di un SED nella documentazione di ONTAP relativa alla versione di ONTAP in uso.
 +
-Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
+Istruzioni nel  https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"] La documentazione descrive i passaggi aggiuntivi che è necessario eseguire prima e dopo la sostituzione di un SED.
 
+* *Migliore pratica*: assicurati che il tuo sistema possa riconoscere e utilizzare le unità disco appena qualificate  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["scaricando la versione corrente del Disk Qualification Package (DQP)"^] prima di sostituire a caldo un'unità.
 +
-https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"^]
+Ciò consente di evitare messaggi di evento di sistema relativi alla presenza di informazioni non aggiornate sull'unità disco. Si evita inoltre il possibile blocco del partizionamento del disco dovuto al mancato riconoscimento delle unità disco. Il DQP segnala la presenza di firmware non aggiornato sull'unità disco.
 
-
-
-.A proposito di questa attività
+* *Procedura consigliata*: assicurarsi che il sistema disponga delle versioni aggiornate del firmware dello shelf di dischi (IOM) e del firmware dell'unità disco prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS. È possibile visitare il sito di supporto NetApp per  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["scarica il firmware dello scaffale del disco"^] E  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["scarica il firmware dell'unità disco"^] .
 * È necessario adottare le misure necessarie per evitare scariche elettrostatiche (ESD):
 +
 ** Conservare il disco nel sacchetto ESD fino a quando non si è pronti per l'installazione.
@@ -67,33 +76,6 @@ NOTE: Non posizionare le mani sulle schede del disco esposte nella parte inferio
 
 NOTE: I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
 
-* La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di sostituire a caldo un disco.
-+
-L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati, evitando così messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi. Si evita inoltre la possibile prevenzione del partizionamento dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
-
-* La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
-+
-Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
-
-* Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
-+
-
-NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
-
-* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf di dischi per individuare fisicamente lo shelf di dischi interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
-+
-Uno shelf di dischi dispone di tre LED di posizione: Uno sul display operatore e uno su ciascun IOM dello shelf. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
-
-* Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
 
 
 .Fasi

@@ -1,0 +1,21 @@
+= 
+:allow-uri-read: 
+
+
+.Chiavetta USB
+* Assicurati di avere una chiavetta USB formattata in FAT32.
+* La chiavetta USB deve avere una capacità di archiviazione sufficiente per contenere il  `image_xxx.tgz` file.
+
+
+.Preparazione del file
+Copia il  `image_xxx.tgz` file sull'unità flash USB. Questo file verrà utilizzato quando si trasferisce l'immagine ONTAP tramite l'unità flash USB.
+
+.Sostituzione dei componenti
+Sostituire il componente guasto con il componente sostitutivo fornito da NetApp.
+
+.Identificazione del controllore
+Quando si sostituisce il supporto di avvio danneggiato, è fondamentale applicare i comandi al controller corretto:
+
+* Il _controller non funzionante_ è il controller su cui si sta eseguendo la manutenzione.
+* Il _controllore sano_ è il partner HA del controllore compromesso.
+

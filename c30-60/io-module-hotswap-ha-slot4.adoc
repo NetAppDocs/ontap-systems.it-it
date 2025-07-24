@@ -1,0 +1,298 @@
+---
+permalink: c30-60/io-module-hotswap-ha-slot4.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, hotswap a cluster ha card 
+summary: Il modulo I/O per cluster e HA supporta interconnessioni per clustering e alta disponibilità. È possibile sostituire a caldo il modulo nel sistema di storage AFF C30 o AFF C60 in caso di guasto. 
+---
+= Sostituzione a caldo del modulo I/O utilizzato per il cluster e il traffico HA - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il modulo I/O per cluster e HA supporta interconnessioni per clustering e alta disponibilità. È possibile sostituire a caldo il modulo nel sistema di storage AFF C30 o AFF C60 in caso di guasto del modulo e se il sistema di storage soddisfa requisiti specifici.
+
+Il processo di hot-swap prevede la preparazione del sistema di storage e dello slot 4 del modulo I/O in modo che sia possibile rimuovere in sicurezza il modulo guasto, la sostituzione a caldo del modulo guasto con uno equivalente, la messa online del modulo sostitutivo, il ripristino del normale funzionamento del sistema di storage e la restituzione del modulo guasto a NetApp.
+
+.Prima di iniziare
+* Per poter utilizzare questa procedura, il sistema di archiviazione deve soddisfare tutti i seguenti requisiti.
++
+
+NOTE: Se il sistema di archiviazione non soddisfa tutti i seguenti requisiti, è necessario utilizzare link:io-module-replace.html["sostituire una procedura del modulo I/O"] .
+
++
+** Il sistema di archiviazione deve eseguire ONTAP 9.17.1 o versione successiva.
+** Il modulo I/O guasto deve essere un modulo I/O cluster e HA nello slot 4 e deve essere sostituito con un altro modulo I/O cluster e HA. Non è possibile modificare il tipo di modulo I/O.
+** La configurazione del sistema di storage deve avere un solo cluster e modulo I/O HA nello slot 4, non due cluster e moduli I/O HA.
+** Il sistema di archiviazione deve essere una configurazione cluster a due nodi (switchless o switching).
+** Il controller con il cluster guasto e il modulo I/O HA (il controller non funzionante) deve aver già preso il controllo del controller partner funzionante. Il controllo avrebbe dovuto avvenire automaticamente in caso di guasto del modulo I/O.
++
+Per i cluster a due nodi, il sistema di storage non è in grado di individuare quale controller abbia il modulo I/O guasto, quindi uno dei due controller potrebbe avviare il takeover. La procedura di hot-swap del cluster e del modulo I/O HA è supportata solo quando il controller con il modulo I/O guasto (il controller in panne) ha preso il controllo del controller funzionante.
+
++
+È possibile verificare che il controller non funzionante abbia preso il controllo del controller sano immettendo  `storage failover show` comando.
+
++
+Se non si è sicuri di quale controller abbia il modulo I/O guasto, contattare  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] .
+
+
+
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+
+.A proposito di questa attività
+* Grazie alla sostituzione a caldo del cluster e del modulo I/O HA non è necessario eseguire un'acquisizione manuale: il controller non funzionante (quello con il cluster e il modulo I/O HA guasti) ha automaticamente rilevato il controller funzionante.
++
+Quando il controller difettoso ha preso il controllo del controller sano, l'unico modo per ripristinare il funzionamento senza interruzioni è sostituire a caldo il modulo.
+
+* È fondamentale applicare i comandi al controller corretto quando si esegue la sostituzione a caldo del cluster e del modulo I/O HA:
++
+** Il _controller non funzionante_ è il controller su cui si esegue la sostituzione a caldo del cluster e del modulo I/O HA ed è il controller che ha preso il controllo del controller funzionante.
+** Il _controllore sano_ è il partner HA del controllore compromesso ed è il controllore che è stato preso in carico dal controllore compromesso.
+
+
+* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+
+
+== Fase 1: preparare il sistema di storage e lo slot 4 del modulo I/O
+
+Preparare il sistema di storage e lo slot 4 del modulo I/O in modo da poter rimuovere in sicurezza il cluster guasto e il modulo I/O HA:
+
+. Mettere a terra l'utente.
+. Scollegare i cavi dal cluster guasto e dal modulo I/O HA.
++
+Assicuratevi di etichettare i cavi in modo che più avanti in questa procedura sia possibile ricollegarli alle stesse porte.
+
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Ad esempio, il seguente messaggio AutoSupport sopprime la creazione automatica dei casi per due ore:
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattivare il ritorno automatico dalla console del controllore non abilitato:
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
+
+. Preparare il cluster guasto e il modulo HA nello slot 4 per la rimozione, rimuovendoli dal servizio e spegnendoli:
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
++
+
+NOTE: Quando vedi _Vuoi continuare?_, inserisci  `y` .
+
++
+Ad esempio, il seguente comando prepara il modulo nello slot 4 sul nodo 2 (il controller danneggiato) per la rimozione e visualizza un messaggio che indica che è possibile rimuoverlo in sicurezza:
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+. Verificare che il cluster non funzionante e il modulo HA nello slot 4 siano spenti:
++
+`system controller slot module show`
+
++
+L'output dovrebbe mostrare  `_powered-off_` nella colonna di stato del modulo guasto nello slot 4.
+
+
+
+
+
+== Passaggio 2: sostituire il cluster guasto e il modulo I/O HA
+
+Sostituire il cluster guasto e il modulo I/O HA nello slot 4 con un modulo I/O equivalente:
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il cluster guasto e il modulo I/O HA dal controller danneggiato:
++
+image::../media/drw_g_io_module_hotswap_slot4_ieops-2366.svg[cluster hotswap e modulo I/O ha nello slot 4]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Ruotare la vite a testa zigrinata del modulo i/o in senso antiorario per allentarla.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Estrarre il modulo I/O dal controller utilizzando la linguetta dell'etichetta della porta a sinistra e la vite a testa zigrinata a destra.
+
+|===
+. Installare il cluster sostitutivo e il modulo HA I/O nello slot 4:
++
+.. Allineare il modulo i/o con i bordi dello slot.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi di inserirlo correttamente nel connettore.
++
+Per spingere all'interno il modulo I/O è possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata a destra.
+
+.. Ruotare la vite a testa zigrinata in senso orario per serrare.
+
+
+. Cablare il cluster e il modulo I/O HA.
+
+
+
+
+== Fase 3: portare online il cluster sostitutivo e il modulo I/O HA
+
+Portare online il cluster sostitutivo e il modulo I/O HA nello slot 4, verificare che le porte del modulo siano state inizializzate correttamente, verificare che lo slot 4 sia acceso, quindi verificare che il modulo sia online e riconosciuto.
+
+. Mettere online il cluster sostitutivo e il modulo I/O HA:
++
+`system controller slot module insert -node impaired_node_name_ -slot _slot_name_`
+
++
+
+NOTE: Quando vedi _Vuoi continuare?_, inserisci  `y` .
+
++
+L'output dovrebbe confermare che il cluster e il modulo I/O HA sono stati portati online correttamente (accesi, inizializzati e messi in servizio).
+
++
+Ad esempio, il seguente comando porta online lo slot 4 sul nodo 2 (il controller non funzionante) e visualizza un messaggio che indica che il processo è riuscito:
+
++
+[listing]
+----
+node2::> system controller slot module insert -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered on and initialized.
+
+Do you want to continue? {y|n}: `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. Verificare che ogni porta sul cluster e il modulo I/O HA siano stati inizializzati correttamente:
++
+`event log show -event \*hotplug.init*`
+
++
+
+NOTE: Potrebbero essere necessari alcuni minuti per consentire gli eventuali aggiornamenti del firmware e l'inizializzazione delle porte.
+
++
+L'output dovrebbe mostrare un evento EMS hotplug.init.success registrato per ogni porta sul cluster e modulo I/O HA con  `_hotplug.init.success:_` nel  `_Event_` colonna.
+
++
+Ad esempio, l'output seguente mostra l'inizializzazione riuscita per le porte e4b ed e4a del cluster e del modulo I/O HA:
+
++
+[listing]
+----
+node2::> event log show -event *hotplug.init*
+
+Time                Node             Severity      Event
+
+------------------- ---------------- ------------- ---------------------------
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4b" in slot 4 succeeded
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4a" in slot 4 succeeded
+
+2 entries were displayed.
+----
+. Verificare che lo slot 4 del modulo I/O sia acceso e pronto per il funzionamento:
++
+`system controller slot module show`
+
++
+L'output dovrebbe mostrare lo stato dello slot 4 come  `_powered-on_` e quindi pronto per il funzionamento del cluster sostitutivo e del modulo HA I/O.
+
+. Verificare che il cluster sostitutivo e il modulo I/O HA siano online e riconosciuti.
++
+Inserire il comando dalla console del controller non abilitato:
+
++
+`system controller config show -node local -slot4`
+
++
+Se il cluster sostitutivo e il modulo I/O HA sono stati portati online correttamente e riconosciuti, l'output mostra le informazioni sul modulo I/O, comprese le informazioni sulla porta, per lo slot 4.
+
++
+Ad esempio, dovresti vedere un output simile al seguente:
+
++
+[listing]
+----
+node2::> system controller config show -node local -slot 4
+
+Node: node2
+Sub- Device/
+Slot slot Information
+---- ---- -----------------------------
+   4    - Dual 40G/100G Ethernet Controller CX6-DX
+                  e4a MAC Address: d0:39:ea:59:69:74 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2807GJFM-B
+                  e4b MAC Address: d0:39:ea:59:69:75 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2809G26F-A
+                  Device Type:        CX6-DX PSID(NAP0000000027)
+                  Firmware Version:   22.44.1700
+                  Part Number:        111-05341
+                  Hardware Revision:  20
+                  Serial Number:      032403001370
+----
+
+
+
+
+== Fase 4: Ripristinare il normale funzionamento del sistema di archiviazione
+
+Ripristina il normale funzionamento del sistema di archiviazione restituendo spazio di archiviazione al controller funzionante, ripristinando la restituzione automatica e riattivando la creazione automatica dei casi da AutoSupport .
+
+.Fasi
+. Ripristinare il normale funzionamento del controller funzionante (quello che era stato preso in carico) restituendone la memoria:
++
+`storage failover giveback -ofnode _healthy_node_name_`
+
+. Ripristinare il ritorno automatico dalla console del controller non funzionante (il controller che ha preso il controllo del controller sano):
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+
+
+
+
+== Fase 5: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -4,25 +4,22 @@ sidebar: sidebar
 keywords: system, configuration, whether, perform, nondisruptive, iom12, module, hot-swap, disruptive, replacement, hot-swap or replace an iom12/iom12b module, iom12b 
 summary: La configurazione del sistema determina se è possibile eseguire una sostituzione a caldo del modulo IOM12/IOM12B senza interruzioni o una sostituzione del modulo IOM12/IOM12B senza interruzioni in caso di guasto di un modulo IOM12/IOM12B. 
 ---
-= Sostituire a caldo o sostituire un modulo IOM12/IOM12B - shelf con moduli IOM12/IOM12B
+= Sostituzione o sostituzione a caldo di un modulo IOM: DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La configurazione del sistema determina se è possibile eseguire una sostituzione a caldo IOM dello shelf senza interruzioni o una sostituzione IOM dello shelf in caso di guasto di un IOM dello shelf.
-
-.Prima di iniziare
-Tutti gli altri componenti del sistema, compreso l'altro modulo IOM12/IOM12B, devono funzionare correttamente.
+La configurazione del sistema determina se è possibile eseguire una sostituzione a caldo dell'IOM a scaffale non distruttiva o una sostituzione dell'IOM a scaffale distruttiva in caso di guasto dell'IOM a scaffale IOM12 o IOM12B.
 
 .A proposito di questa attività
-* Questa procedura si applica agli shelf con moduli IOM12 e shelf con moduli IOM12B.
+* Questa procedura si applica agli scaffali dotati di moduli IOM12 o IOM12B.
 +
 
-NOTE: Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf simili. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12B con un altro modulo IOM12B. (Lo shelf può avere due moduli IOM12 o due moduli IOM12B).
+NOTE: Questa procedura è valida per sostituzioni o hot-swap IOM di tipo "shelf-for-like". Ciò significa che è possibile sostituire un modulo IOM12 solo con un altro modulo IOM12 o un modulo IOM12B solo con un altro modulo IOM12B.
 
-* I moduli IOM12 e i moduli IOM12B si distinguono per il loro aspetto:
+* I moduli IOM12 o IOM12B si distinguono per il loro aspetto:
 +
 I moduli IOM12 si distinguono per l'etichetta "IOM12":
 
@@ -40,17 +37,7 @@ image::../media/iom12b.png[Parte anteriore di IOM12B]
 * Per le configurazioni a percorso singolo della serie FAS2600, è necessario arrestare il sistema per sostituire un IOM shelf.
 +
 
-NOTE: Se si tenta di sostituire a caldo un IOM di shelf su uno shelf di dischi con una connessione a percorso singolo, si perde l'accesso ai dischi nello shelf e agli eventuali shelf di dischi sottostanti. È anche possibile ridurre l'intero sistema.
-
-* La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
-+
-Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"^]
+CAUTION: Se si tenta di sostituire a caldo un IOM di shelf su uno shelf di dischi con una connessione a percorso singolo, si perde l'accesso ai dischi nello shelf e agli eventuali shelf di dischi sottostanti. È anche possibile ridurre l'intero sistema.
 
 * Il firmware dello shelf di dischi (IOM) viene aggiornato automaticamente (senza interruzioni) su un nuovo IOM dello shelf con una versione del firmware non aggiornata.
 +
@@ -60,7 +47,12 @@ I controlli del firmware IOM sullo shelf avvengono ogni dieci minuti. L'aggiorna
 +
 Uno shelf di dischi dispone di tre LED di posizione: Uno sul display operatore e uno su ciascun IOM dello shelf. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarli immettendo lo stesso comando, ma utilizzando l'opzione Off.
 
-* Se necessario, fare riferimento alla sezione Monitoring disk shelf LED per informazioni sul significato e la posizione dei LED dello shelf di dischi sul display operatore e sui componenti FRU.
+* Se necessario, puoi fare riferimento a link:/sas3/service-monitor-leds.html#operator-display-panel-leds["Monitoraggio dei LED del ripiano del disco"] guida per informazioni sul significato e la posizione dei LED del ripiano del disco sul pannello di visualizzazione dell'operatore e sui componenti FRU.
+
+
+.Prima di iniziare
+* Tutti gli altri componenti del sistema, compreso l'altro modulo IOM12/IOM12B, devono funzionare correttamente.
+* *Procedura consigliata*: assicurarsi che il sistema disponga delle versioni aggiornate del firmware dello shelf di dischi (IOM) e del firmware dell'unità disco prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS. È possibile visitare il sito di supporto NetApp per  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["scarica il firmware dello scaffale del disco"] E  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["scarica il firmware dell'unità disco"] .
 
 
 .Fasi

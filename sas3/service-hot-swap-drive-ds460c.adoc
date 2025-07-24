@@ -4,20 +4,17 @@ sidebar: sidebar
 keywords: hot-swap, fail, disk, drive, ds460c, nondisruptive, replace, system, power, serving, data, i/o, hot-swap a disk drive in a ds460c disk shelf 
 summary: È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS460C. 
 ---
-= Disco hot-swap in shelf DS460C - shelf con moduli IOM12/IOM12B
+= Sostituzione a caldo di un'unità disco - DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile sostituire a caldo un disco guasto in uno shelf di dischi DS460C.
+È possibile sostituire a caldo un'unità disco guasta in uno scaffale per dischi DS460C con moduli IOM12 o IOM12B.
 
 .Prima di iniziare
-* Il disco sostitutivo deve essere supportato dallo shelf di dischi DS460C.
-+
-https://hwu.netapp.com["NetApp Hardware Universe"]
-
+* L'unità disco sostitutiva deve essere supportata dallo scaffale dischi DS460C. È possibile visualizzare le unità disco supportate per la configurazione in  https://hwu.netapp.com["NetApp Hardware Universe"] .
 * Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
 * Il disco che si sta rimuovendo deve essere guasto.
 +
@@ -29,10 +26,7 @@ NOTE: A seconda del tipo di disco e della capacità, potrebbero essere necessari
 
 * Se si sostituisce un disco con crittografia automatica (SED), seguire le istruzioni per la sostituzione di un SED nella documentazione di ONTAP relativa alla versione di ONTAP in uso.
 +
-Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggiuntivi da eseguire prima e dopo la sostituzione di un SED.
-
-+
-https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"]
+Istruzioni nel  https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"] La documentazione descrive i passaggi aggiuntivi che è necessario eseguire prima e dopo la sostituzione di un SED.
 
 
 
@@ -67,23 +61,11 @@ NOTE: Non posizionare le mani sulle schede del disco esposte nella parte inferio
 
 NOTE: I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
 
-* La procedura consigliata consiste nell'installare la versione corrente del Disk Qualification Package (DQP) prima di sostituire a caldo un disco.
+* *Migliore pratica*: assicurati che il tuo sistema possa riconoscere e utilizzare le unità disco appena qualificate  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["scaricando la versione corrente del Disk Qualification Package (DQP)"^] prima di sostituire a caldo un'unità disco.
 +
-L'installazione della versione corrente di DQP consente al sistema di riconoscere e utilizzare dischi appena qualificati, evitando così messaggi di eventi di sistema relativi alla presenza di informazioni non aggiornate sui dischi. Si evita inoltre la possibile prevenzione del partizionamento dei dischi perché i dischi non vengono riconosciuti. Inoltre, il DQP notifica la presenza di firmware del disco non aggiornato.
+L'installazione della versione corrente del DQP consente al sistema di riconoscere e utilizzare le unità disco appena qualificate, evitando così la visualizzazione di messaggi di evento di sistema relativi alla presenza di informazioni non aggiornate sulle unità disco. Si evita inoltre il possibile blocco del partizionamento del disco dovuto al mancato riconoscimento delle unità disco. Il DQP segnala la presenza di firmware non aggiornato sulle unità disco.
 
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Download NetApp: Pacchetto di qualificazione dei dischi"^]
-
-* La procedura consigliata consiste nell'avere le versioni correnti del firmware dello shelf di dischi (IOM) e del firmware del disco sul sistema prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS.
-+
-Le versioni correnti del firmware sono disponibili sul sito del supporto NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Download NetApp: Firmware shelf di dischi"]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Download NetApp: Firmware del disco"]
-
+* *Procedura consigliata*: assicurarsi che il sistema disponga delle versioni aggiornate del firmware dello shelf di dischi (IOM) e del firmware dell'unità disco prima di aggiungere nuovi shelf di dischi, componenti FRU dello shelf o cavi SAS. È possibile visitare il sito di supporto NetApp per  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["scarica il firmware dello scaffale del disco"^] E  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["scarica il firmware dell'unità disco"^] .
 * Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non correnti.
 +
 
