@@ -14,7 +14,10 @@ summary: 'Prima di sostituire il supporto di avvio nel sistema di storage ASA C3
 Prima di sostituire il supporto di avvio nel sistema di storage ASA C30, assicurarsi di soddisfare i requisiti e le considerazioni necessarie per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma del corretto funzionamento della porta e0S (chiave e0M) del controller danneggiato e la verifica dell'abilitazione di Onboard Key Manager (OKM) o External Key Manager (EKM).
 
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo della stessa capacità ricevuta da NetApp.
-* La porta e0S (chiave e0M) viene utilizzata per comunicare tra i due controller durante il processo di ripristino automatico dell'avvio. Assicurarsi che la porta e0S del controller in questione funzioni correttamente.
+* Verificare che la porta e0M (chiave inglese) sul controller danneggiato sia collegata e non sia difettosa.
++
+La porta e0M viene utilizzata per comunicare tra i due controller durante il processo di ripristino automatico dell'avvio.
+
 * Per OKM, è necessario il contenuto del file della passphrase OKM.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +

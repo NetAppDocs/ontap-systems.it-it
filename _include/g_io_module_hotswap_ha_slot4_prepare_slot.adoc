@@ -19,22 +19,22 @@ Ad esempio, il seguente messaggio AutoSupport sopprime la creazione automatica d
 +
 `node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Disattivare il ritorno automatico dalla console del controllore non abilitato:
+. Disattiva la restituzione automatica:
++
+.. Immettere il seguente comando dalla console del controller non funzionante:
 +
 `storage failover modify -node local -auto-giveback false`
 
-+
+.. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
 
-NOTE: Quando viene visualizzato _Vuoi disattivare il giveback automatico?_, inserisci `y`.
 
 . Preparare il cluster guasto e il modulo HA nello slot 4 per la rimozione, rimuovendoli dal servizio e spegnendoli:
 +
+.. Immettere il seguente comando:
++
 `system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
 
-+
-
-NOTE: Quando vedi _Vuoi continuare?_, inserisci  `y` .
-
+.. Entra `y` quando vedi il messaggio _Vuoi continuare?_
 +
 Ad esempio, il seguente comando prepara il modulo nello slot 4 sul nodo 2 (il controller danneggiato) per la rimozione e visualizza un messaggio che indica che è possibile rimuoverlo in sicurezza:
 
@@ -49,6 +49,8 @@ Do you want to continue? {y|n}: y
 
 The module has been successfully removed from service and powered off. It can now be safely removed.
 ----
+
+
 . Verificare che il cluster non funzionante e il modulo HA nello slot 4 siano spenti:
 +
 `system controller slot module show`

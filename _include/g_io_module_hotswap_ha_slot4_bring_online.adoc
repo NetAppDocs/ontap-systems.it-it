@@ -6,12 +6,11 @@ Portare online il cluster sostitutivo e il modulo I/O HA nello slot 4, verificar
 
 . Mettere online il cluster sostitutivo e il modulo I/O HA:
 +
-`system controller slot module insert -node impaired_node_name_ -slot _slot_name_`
-
+.. Immettere il seguente comando:
 +
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_name_`
 
-NOTE: Quando vedi _Vuoi continuare?_, inserisci  `y` .
-
+.. Entra `y` quando vedi il messaggio _Vuoi continuare?_
 +
 L'output dovrebbe confermare che il cluster e il modulo I/O HA sono stati portati online correttamente (accesi, inizializzati e messi in servizio).
 
@@ -29,6 +28,8 @@ Do you want to continue? {y|n}: `y`
 
 The module has been successfully powered on, initialized and placed into service.
 ----
+
+
 . Verificare che ogni porta sul cluster e il modulo I/O HA siano stati inizializzati correttamente:
 +
 `event log show -event \*hotplug.init*`
