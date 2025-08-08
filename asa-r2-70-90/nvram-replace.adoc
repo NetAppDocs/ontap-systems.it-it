@@ -15,9 +15,10 @@ Sostituire il NVRAM nel sistema ASA A70 o ASA A90 quando la memoria non volatile
 
 Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://support.netapp.com["Supporto NetApp"].
+.Prima di iniziare
+* Assicurarsi di avere a disposizione il pezzo di ricambio. È necessario sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
+* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare https://support.netapp.com["Supporto NetApp"].
 
-Assicurarsi di sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
 
 
 
@@ -91,7 +92,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 == Passo 2: Sostituire il modulo NVRAM o il modulo DIMM NVRAM
 
-Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropriata riportata di seguito.
+Sostituire il modulo NVRAM o i DIMM NVRAM utilizzando l'opzione appropriata.
 
 [role="tabbed-block"]
 ====
@@ -99,6 +100,7 @@ Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropria
 --
 Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del telaio e seguire la sequenza specifica di passi.
 
+.Fasi
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
@@ -163,6 +165,7 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 --
 Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
 
+.Fasi
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]

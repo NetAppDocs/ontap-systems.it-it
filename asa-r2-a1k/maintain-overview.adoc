@@ -26,11 +26,18 @@ Per il sistema di archiviazione ASA A1K, è possibile eseguire le procedure di m
 
 
  a| 
-link:bootmedia-replace-workflow-bmr.html["Supporto di boot"]
+link:bootmedia-replace-workflow-bmr.html["Supporto di avvio - ripristino automatico"]
  a| 
-È possibile sostituire un supporto di avvio non riuscito dal nodo partner per l'immagine di avvio.
+Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio.  Durante il ripristino automatico, il sistema recupera l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione di menu di avvio appropriata per installare l'immagine sul supporto di avvio sostitutivo.
 
-Sostituzione automatica dei supporti di avvio utilizza l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di avvio per installare l'immagine di avvio sul supporto di avvio sostitutivo.
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
+
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Supporto di avvio - ripristino manuale"]
+ a| 
+Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per avviare l'immagine da un'unità USB e ripristinare la configurazione dal nodo partner
 
 
 

@@ -172,6 +172,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 Sostituire il modulo di gestione del sistema danneggiato.
 
+.Fasi
 . Rimuovere il modulo di gestione del sistema:
 +
 
@@ -193,7 +194,11 @@ Dispositivo di chiusura della camma del modulo di gestione del sistema
 |===
 +
 .. Se non si è già collegati a terra, mettere a terra l'utente.
-.. Scollegare i cavi di alimentazione dagli alimentatori, quindi estrarre il modulo controller di qualche centimetro dalla parte anteriore del sistema.
+.. Scollegare i cavi di alimentazione dagli alimentatori.
+
+
+. Rimuovere il modulo Gestione sistema
++
 .. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi che l'etichetta in cui sono stati collegati i cavi sia visibile per poterli collegare alle porte corrette quando si reinstalla il modulo.
 .. Scollegare i cavi di alimentazione dall'alimentatore per il controller danneggiato.
 .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
@@ -260,7 +265,8 @@ Supporto di boot
 
 Riavviare il modulo controller.
 
-. Ricollegare i cavi di alimentazione all'alimentatore e riposizionare e bloccare delicatamente il modulo controller nella parte anteriore del sistema.
+.Fasi
+. Ricollegare i cavi di alimentazione all'alimentatore.
 +
 Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.
 

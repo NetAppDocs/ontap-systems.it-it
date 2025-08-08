@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/io-module-add.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, add I/O module 
-summary: Per sostituire un modulo i/o, è necessario scollegare i cavi dal modulo, rimuovere i moduli SFP e QSFP dal modulo, rimuovere il modulo, installare il modulo sostitutivo, reinstallare i moduli SFP e QSFP, quindi collegare il modulo i/O. 
+summary: Aggiungi un modulo I/O al tuo sistema di archiviazione ASA A20, ASA A30 o ASA A50 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati. 
 ---
 = Aggiungere un modulo i/o: ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: Per sostituire un modulo i/o, è necessario scollegare i cavi dal modul
 
 
 [role="lead"]
-Aggiungi un modulo i/o al sistema ASA A20, ASA A30 o ASA A50 per migliorare la connettività di rete e ampliare la capacità del sistema di gestire il traffico dati.
+Aggiungi un modulo I/O al tuo sistema di archiviazione ASA A20, ASA A30 o ASA A50 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.
 
-È possibile aggiungere un modulo I/O al sistema di storage ASA C30 se sono disponibili slot. Se tutti gli slot sono completamente occupati, è possibile sostituire un modulo esistente per aggiungerne uno nuovo.
+È possibile aggiungere un modulo I/O al sistema di archiviazione ASA A20, ASA A30 o ASA A50 se sono disponibili slot.  Se tutti gli slot sono completamente occupati, è possibile sostituire un modulo esistente per aggiungerne uno nuovo.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.

@@ -3,11 +3,7 @@
 
 
 .Fasi
-. Se si desidera assegnare manualmente la proprietà del disco per il disco sostitutivo, è necessario disattivare l'assegnazione automatica del disco sostitutivo, se abilitato
-+
-
-NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
-
+. Se si desidera assegnare manualmente la proprietà dell'unità per l'unità sostitutiva, è necessario disattivare l'assegnazione automatica dell'unità, se abilitata.
 +
 .. Verificare se l'assegnazione automatica dei dischi è abilitata: `storage disk option show`
 +
@@ -55,21 +51,30 @@ Chiudere lentamente la maniglia della camma in modo che sia allineata correttame
 +
 Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
 
-. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
+. Se si sostituisce un'altra unità, ripetere i passaggi da 3 a 7.
 . Se nel passaggio 1 è stata disattivata l'assegnazione automatica delle unità, assegnare manualmente la proprietà delle unità e riabilitare l'assegnazione automatica delle unità, se necessario.
 +
-.. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
+.. Visualizzare tutti i dischi non posseduti:
++
+`storage disk show -container-type unassigned`
+
 +
 È possibile immettere il comando su entrambi i moduli controller.
 
-.. Assegnare ciascuna unità: `storage disk assign -disk disk_name -owner node_name`
+.. Assegnare ciascun disco:
++
+`storage disk assign -disk disk_name -owner node_name`
+
 +
 È possibile immettere il comando su entrambi i moduli controller.
 
 +
 È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
 
-.. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node node_name -autoassign on`
+.. Se necessario, riabilitare l'assegnazione automatica del disco:
++
+`storage disk option modify -node node_name -autoassign on`
+
 +
 È necessario riabilitare l'assegnazione automatica dei dischi su entrambi i moduli controller.
 
@@ -77,6 +82,6 @@ Quando il LED di attività del disco è acceso, significa che il disco è alimen
 
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 +
-Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+Contatto https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] se hai bisogno del numero RMA o di ulteriore assistenza con la procedura di sostituzione.
 
 

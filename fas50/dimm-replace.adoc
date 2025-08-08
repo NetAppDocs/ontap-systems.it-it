@@ -2,7 +2,7 @@
 permalink: fas50/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas50, replace a dimm 
-summary: 'Sostituire un DIMM nel sistema FAS50 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l"arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.' 
+summary: Sostituire un modulo DIMM nel sistema di archiviazione FAS50 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp. 
 ---
 = Sostituire un DIMM - FAS50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sostituire un DIMM nel sistema FAS50 se vengono rilevati errori di mem
 
 
 [role="lead"]
-Sostituire un DIMM nel sistema FAS50 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
+Sostituire un modulo DIMM nel sistema di archiviazione FAS50 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
 .Prima di iniziare
 * Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.

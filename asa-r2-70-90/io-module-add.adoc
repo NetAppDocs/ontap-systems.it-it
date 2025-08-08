@@ -13,8 +13,9 @@ summary: Aggiungi un modulo i/o al sistema ASA A70 o ASA A90 per migliorare la c
 [role="lead"]
 Aggiungi un modulo i/o al sistema ASA A70 o ASA A90 per migliorare la connettività di rete e ampliare la capacità del sistema di gestire il traffico dei dati.
 
-È possibile aggiungere un modulo i/o al sistema di archiviazione ASA A70 e ASA A90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente popolati. .Informazioni su questa attività
+È possibile aggiungere un modulo I/O al sistema di archiviazione ASA A70 e ASA A90 quando sono disponibili slot vuoti o quando tutti gli slot sono completamente occupati.
 
+.A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
 
 Un sistema di storage presenta due LED di posizione, uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.

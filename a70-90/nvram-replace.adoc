@@ -158,6 +158,10 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 == Passo 2: Sostituire il modulo NVRAM o il modulo DIMM NVRAM
 
+
+
+== Passo 2: Sostituire il modulo NVRAM o il modulo DIMM NVRAM
+
 Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropriata riportata di seguito.
 
 [role="tabbed-block"]
@@ -309,11 +313,17 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 CAUTION: La riassegnazione del disco è necessaria solo quando si sostituisce il modulo NVRAM e non si applica alla sostituzione del DIMM NVRAM.
 
 .Fasi
-. Se la centralina è in modalità di manutenzione (viene visualizzato il `*>` messaggio), uscire dalla modalità di manutenzione e andare al prompt del CARICATORE: _Halt_
-. Dal prompt del CARICATORE sul controller, avviare il controller e immettere _y_ quando viene richiesto di ignorare l'ID del sistema a causa di una mancata corrispondenza dell'ID del sistema.
-. Attendere fino all'attesa dello sconto... Viene visualizzato un messaggio sulla console del controller con il modulo sostitutivo, quindi, dal controller integro, verificare che il nuovo ID di sistema partner sia stato assegnato automaticamente: _Storage failover show_
+. Se il controller è in modalità di manutenzione (mostrando il `*>` prompt), uscire dalla modalità Manutenzione e andare al prompt LOADER:
 +
-Nell'output del comando, viene visualizzato un messaggio che indica che l'ID del sistema è stato modificato sul controller compromesso, mostrando gli ID vecchi e nuovi corretti. Nell'esempio seguente, il node2 è stato sostituito e ha un nuovo ID di sistema pari a 151759706.
+`halt`
+
+. Dal prompt del CARICATORE sul controller, avviare il controller e immettere _y_ quando viene richiesto di ignorare l'ID del sistema a causa di una mancata corrispondenza dell'ID del sistema.
+. Attendere che sulla console del controller con il modulo sostitutivo venga visualizzato il messaggio In attesa di restituzione, quindi, dal controller funzionante, verificare che il nuovo ID del sistema partner sia stato assegnato automaticamente:
++
+`storage failover show`
+
++
+Nell'output del comando dovresti vedere un messaggio che indica che l'ID di sistema è cambiato sul controller non funzionante, mostrando gli ID vecchi e nuovi corretti.  Nell'esempio seguente, il nodo 2 è stato sostituito e ha un nuovo ID di sistema pari a 151759706.
 
 +
 [listing]
@@ -328,7 +338,8 @@ node2             node1             -            Waiting for giveback (HA mailbo
 ----
 . Restituire il controller:
 +
-.. Dal controller integro, restituisci lo storage del controller sostituito: _Storage failover giveback -node replacement_node_name_
+.. Dal controller sano, restituisci la memoria del controller sostituito: +
+`storage failover giveback -ofnode replacement_node_name`
 +
 Il controller recupera lo storage e completa l'avvio.
 
@@ -336,11 +347,10 @@ Il controller recupera lo storage e completa l'avvio.
 Se viene richiesto di sovrascrivere l'ID del sistema a causa di una mancata corrispondenza dell'ID del sistema, immettere _y_.
 
 +
-
-NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
+Se il giveback viene vetoed, puoi prendere in considerazione la possibilità di ignorare i veti.
 
 +
-Per ulteriori informazioni, consultare https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["Comandi manuali di giveback"^] argomento per ignorare il veto.
+Per maggiori informazioni, vedere https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["comandi di restituzione manuale"^] per annullare il veto.
 
 .. Al termine del giveback, verifica che la coppia ha sia in buone condizioni e che il takeover sia possibile: _Failover dello storage show_
 +
@@ -348,7 +358,10 @@ L'output di `storage failover show` Il comando non deve includere l'ID di sistem
 
 
 
-. Verificare che i dischi siano stati assegnati correttamente: `storage disk show -ownership`
+. Verificare che i dischi siano stati assegnati correttamente:
++
+`storage disk show -ownership`
+
 +
 I dischi appartenenti al controller dovrebbero mostrare il nuovo ID di sistema. Nell'esempio seguente, i dischi di proprietà di node1 ora mostrano il nuovo ID di sistema, 151759706:
 
@@ -396,11 +409,23 @@ dr-group-id            cluster node           configuration-state
 
 4 entries were displayed.
 ----
-. Verificare che i volumi previsti siano presenti per ciascun controller: `vol show -node node-name`
+. Verificare che i volumi previsti siano presenti per ciascun controller:
++
+`vol show -node node-name`
+
 . Se la crittografia dello storage è attivata, è necessario ripristinare la funzionalità.
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 

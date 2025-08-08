@@ -19,6 +19,7 @@ Verifica che la configurazione ha del controller sia attiva e funzioni correttam
 
 Verificare `HA` stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.
 
+.Fasi
 . Avvio in modalità di manutenzione: `boot_ontap maint`
 +
 .. Immettere `y` quando viene visualizzato _continuare con boot?_.
@@ -55,6 +56,7 @@ Il valore dello stato ha può essere uno dei seguenti:
 
 == Passo 2: Verifica dell'elenco dei dischi
 
+.Fasi
 . Verificare che la scheda di rete elenchi i percorsi verso tutti i dischi con `storage show disk -p` .
 +
 In caso di problemi, controllare il cablaggio e riposizionare i cavi.

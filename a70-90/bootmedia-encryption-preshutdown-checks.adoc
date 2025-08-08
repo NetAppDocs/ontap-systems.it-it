@@ -19,6 +19,7 @@ Per garantire la sicurezza dei dati sul sistema di storage AFF A70 o AFF A90, è
 
 Verifica se la versione di ONTAP in uso supporta la crittografia dei volumi di NetApp (NVE). Queste informazioni sono fondamentali per scaricare l'immagine ONTAP corretta.
 
+.Fasi
 . Per determinare se la versione di ONTAP in uso supporta la crittografia, eseguire il seguente comando:
 +
 `version -v`
@@ -40,6 +41,7 @@ Se l'output include `1Ono-DARE`, NVE non è supportato nella versione del cluste
 
 Per arrestare in modo sicuro un controller, identificare prima se il gestore chiavi esterno (EKM) o il gestore chiavi integrato (OKM) è attivo. Quindi, verificare il gestore delle chiavi in uso, visualizzare le informazioni sulla chiave appropriate ed eseguire le azioni necessarie in base allo stato delle chiavi di autenticazione.
 
+.Fasi
 . Determinare quale gestore delle chiavi è abilitato sul proprio sistema:
 +
 [cols="1a,2a"]

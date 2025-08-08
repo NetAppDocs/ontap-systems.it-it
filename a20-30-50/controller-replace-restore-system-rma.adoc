@@ -2,7 +2,7 @@
 permalink: a20-30-50/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: Per ripristinare il funzionamento completo del sistema AFF A20, AFF A30 o AFF A50, installare le licenze richieste sul nuovo controller, verificare che le interfacce logiche stiano segnalando le proprie porte home ed eseguire un controllo dello stato di salute del cluster. Infine, registrare il numero di serie della nuova centralina e restituire la parte guasta a NetApp. 
+summary: 'Per completare la sostituzione del controller per il sistema di storage AFF A20, AFF A30 o AFF A50, ripristinare innanzitutto la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze richieste sul nuovo controller.  Successivamente, verificare che le interfacce logiche (LIF) segnalino le rispettive porte home ed eseguire un controllo dello stato del cluster.  Infine, registra il numero di serie del nuovo controller e restituisci la parte guasta a NetApp.' 
 ---
 = Sostituzione completa del controller - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Per ripristinare il funzionamento completo del sistema AFF A20, AFF A30
 
 
 [role="lead"]
-Per completare il ricambio del controller per il sistema AFF A20, AFF A30 o AFF A50, ripristinare prima la configurazione crittografia storage NetApp (se necessario) e installare le licenze richieste sul nuovo controller. Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registrare il numero di serie della nuova centralina e restituire la parte guasta a NetApp.
+Per completare la sostituzione del controller per il sistema di storage AFF A20, AFF A30 o AFF A50, ripristinare innanzitutto la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze richieste sul nuovo controller.  Successivamente, verificare che le interfacce logiche (LIF) segnalino le rispettive porte home ed eseguire un controllo dello stato del cluster.  Infine, registra il numero di serie del nuovo controller e restituisci la parte guasta a NetApp.
 
 
 

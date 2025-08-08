@@ -16,7 +16,7 @@ Dopo aver installato il nuovo supporto di avvio nel sistema di storage AFF C80, 
 Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
 
 .Prima di iniziare
-* Per OKM, è necessario il contenuto del file della passphrase OKM.
+* Per OKM, è necessaria la passphrase dell'intero cluster e anche i dati di backup.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +
 ** file /cfcard/kmip/servers.cfg.
@@ -107,20 +107,32 @@ Entering Bootmenu Option 10...
 This option must be used only in disaster recovery procedures. Are you sure? (y or n):
 ....
 .. Immettere `Y` quando richiesto per confermare che si desidera avviare il processo di ripristino OKM.
-.. Immettere la passphrase per il gestore delle chiavi integrato quando richiesto, quindi immettere nuovamente la passphrase quando richiesto, per confermare.
+.. Quando richiesto, immettere quanto segue:
 +
-.Mostrare un esempio di prompt di passphrase
+... La frase segreta
+... La passphrase di nuovo quando viene richiesto di confermare
+... Dati di backup per il gestore delle chiavi di bordo
++
+.Mostra un esempio di richiesta di passphrase e dati di backup
 [%collapsible]
 =====
 ....
 Enter the passphrase for onboard key management:
-Enter the passphrase again to confirm:
-Enter the backup data:
 -----BEGIN PASSPHRASE-----
 <passphrase_value>
 -----END PASSPHRASE-----
+Enter the passphrase again to confirm:
+-----BEGIN PASSPHRASE-----
+<passphrase_value>
+-----END PASSPHRASE-----
+Enter the backup data:
+-----BEGIN BACKUP-----
+<passphrase_value>
+-----END ACKUP-----
 ....
 =====
+
+
 .. Continuare a monitorare il processo di ripristino durante il ripristino dei file appropriati dal nodo partner.
 +
 Al termine del processo di ripristino, il nodo viene riavviato. I seguenti messaggi indicano che il ripristino è stato eseguito correttamente:
@@ -181,7 +193,7 @@ Se `AUTOBOOT` non è impostato, immettere il comando di avvio appropriato. Il no
 
 
  a| 
-ONTAP 9.16.1
+ONTAP 9.16.1 e versioni successive
  a| 
 Passare alla fase successiva.
 
@@ -259,6 +271,8 @@ xxx.xxx.xxx.xxx:5696.netapp_keystore_uuid=<id_value>
 
  a| 
 Se richiesto, immettere l'UUID cluster ONTAP dal partner.
+
+È possibile controllare l'UUID del cluster dal nodo partner utilizzando `cluster identify show` comando.
  a| 
 .Mostra un esempio di UUID cluster ONTAP
 [%collapsible]
@@ -276,6 +290,13 @@ System is ready to utilize external key manager(s).
 
  a| 
 Se richiesto, inserire l'interfaccia di rete temporanea e le impostazioni per il nodo.
+
+Devi inserire:
+
+... L'indirizzo IP per la porta
+... La netmask per la porta
+... L'indirizzo IP del gateway predefinito
+
  a| 
 .Mostrare un esempio di impostazione di rete temporanea
 [%collapsible]
@@ -298,44 +319,11 @@ Trying to recover keys from key servers....
 |===
 .. A seconda che la chiave sia stata ripristinata correttamente, eseguire una delle seguenti operazioni:
 +
-*** Se la configurazione EKM è stata ripristinata correttamente, il processo tenta di ripristinare i file appropriati dal nodo partner e riavvia il nodo. Passare al punto d.
+*** Se vedi `kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696` nell'output, la configurazione EKM è stata ripristinata correttamente.
 +
-.Mostrare un esempio di messaggi di ripristino 9.16.0 riusciti
-[%collapsible]
-=====
-....
+Il processo tenta di ripristinare i file appropriati dal nodo partner e riavvia il nodo.  Vai al passaggio d.
 
-kmip2_client: Importing keys from external key server: xxx.xxx.xxx.xxx:5696
-[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdUtils: [locateMrootAkUuids]:420: Locating local cluster MROOT-AK with keystore UUID: <uuid>
-[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:79: Calling KMIP Locate for the following attributes: [<x-NETAPP-ClusterId, <uuid>>, <x-NETAPP-KeyUsage, MROOT-AK>, <x-NETAPP-KeystoreUuid, <uuid>>, <x-NETAPP-Product, Data ONTAP>]
-[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:84: KMIP Locate executed successfully!
-[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [setUuidList]:50: UUID returned: <uuid>
-...
-kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696
-
-GEOM_ELI: Device nvd0s4.eli created.
-GEOM_ELI: Encryption: AES-XTS 256
-GEOM_ELI:     Crypto: software
-Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:140 MROOT-AK is requested.
-Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:162 Returning MROOT-AK.
-....
-=====
-+
-.Mostrare un esempio di messaggi di ripristino 9.16.1 riusciti
-[%collapsible]
-=====
-....
-
-System is ready to utilize external key manager(s).
-Trying to recover keys from key servers....
-[discover_versions]
-[status=SUCCESS reason= message=]
-...
-kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:xxxx
-Successfully recovered keymanager secrets.
-....
-=====
-*** Se la chiave non viene ripristinata correttamente, il sistema si arresta e indica che non è stato possibile ripristinarla. Vengono visualizzati i messaggi di errore e di avvertenza. Eseguire nuovamente il processo di ripristino:
+*** Se il ripristino della chiave non riesce, il sistema si arresta e indica che non è stato possibile ripristinarla.  Vengono visualizzati i messaggi di errore e di avviso.  È necessario eseguire nuovamente il processo di ripristino:
 +
 `boot_recovery -partner`
 

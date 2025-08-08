@@ -2,7 +2,7 @@
 permalink: c30-60/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace a dimm 
-summary: 'Sostituire un DIMM nel modulo controller quando il sistema registra un numero crescente di codici di correzione degli errori correggibili (ECC); il mancato rispetto di questa precauzione causa il blocco del sistema.' 
+summary: Sostituire un modulo DIMM nel sistema di archiviazione AFF C30 o AFF C60 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp. 
 ---
 = Sostituire un modulo DIMM - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sostituire un DIMM nel modulo controller quando il sistema registra un
 
 
 [role="lead"]
-Sostituire un modulo DIMM nel sistema AFF C30 o AFF C60 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
+Sostituire un modulo DIMM nel sistema di archiviazione AFF C30 o AFF C60 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
 .Prima di iniziare
 * Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.

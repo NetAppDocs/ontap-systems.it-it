@@ -2,7 +2,7 @@
 permalink: a20-30-50/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace a dimm 
-summary: 'Sostituire un modulo DIMM nel sistema AFF A20, AFF A30 o AFF A50 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l"arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.' 
+summary: Sostituire un modulo DIMM nel sistema di archiviazione AFF A20, AFF A30 o AFF A50 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp. 
 ---
 = Sostituire un modulo DIMM: AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sostituire un modulo DIMM nel sistema AFF A20, AFF A30 o AFF A50 se ve
 
 
 [role="lead"]
-Sostituire un modulo DIMM nel sistema AFF A20, AFF A30 o AFF A50 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
+Sostituire un modulo DIMM nel sistema di archiviazione AFF A20, AFF A30 o AFF A50 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
 .Prima di iniziare
 * Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.

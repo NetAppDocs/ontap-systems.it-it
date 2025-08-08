@@ -2,7 +2,7 @@
 permalink: c30-60/fan-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: 'Sostituire un modulo ventola nel sistema AFF C30 o AFF C60 in caso di guasto o funzionamento non efficiente di una ventola, in quanto ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l"arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.' 
+summary: Sostituisci un modulo ventola nel tuo sistema di archiviazione AFF C30 o AFF C60 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali.  Il processo di sostituzione prevede lo spegnimento del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione della parte guasta a NetApp. 
 ---
 = Sostituire un modulo ventola - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sostituire un modulo ventola nel sistema AFF C30 o AFF C60 in caso di 
 
 
 [role="lead"]
-Sostituire un modulo ventola nel sistema AFF C30 o AFF C60 in caso di guasto o funzionamento non efficiente di una ventola, in quanto ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
+Sostituisci un modulo ventola nel tuo sistema di archiviazione AFF C30 o AFF C60 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali.  Il processo di sostituzione prevede lo spegnimento del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.

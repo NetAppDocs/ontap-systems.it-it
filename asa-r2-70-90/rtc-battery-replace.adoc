@@ -91,6 +91,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
+.Fasi
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
@@ -170,6 +171,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 Rimuovere la batteria RTC guasta e installare la batteria RTC di ricambio.
 
+.Fasi
 . Aprire il condotto dell'aria della centralina sulla parte superiore della centralina.
 +
 .. Inserire le dita nelle cavità alle estremità più lontane del condotto dell'aria.
@@ -191,8 +193,7 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 |===
 . Estrarre delicatamente la batteria dal supporto, ruotarla verso l'esterno, quindi estrarla dal supporto.
 +
-
-NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supporto. La batteria è contrassegnata con un segno più e deve essere posizionata correttamente nel supporto. Un segno più vicino al supporto indica come posizionare la batteria.
+Prendere nota della polarità della batteria mentre viene rimossa dal supporto. La batteria è contrassegnata con un segno più e deve essere posizionata correttamente nel supporto. Un segno più vicino al supporto indica come posizionare la batteria.
 
 . Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
 . Prendere nota della polarità della batteria RTC, quindi inserirla nel supporto inclinandola e spingendola verso il basso.
@@ -205,6 +206,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 Reinstallare il modulo controller e riavviarlo.
 
+.Fasi
 . Assicurarsi che il condotto dell'aria sia completamente chiuso ruotandolo verso il basso fino in fondo.
 +
 Deve essere a filo con la lamiera del modulo controller.
@@ -219,8 +221,7 @@ NOTE: Non inserire completamente il modulo controller nel telaio fino a quando n
 Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
 
 +
-
-NOTE: Assicurarsi che il cavo della console sia collegato al modulo controller riparato in modo che riceva i messaggi della console al riavvio. Il controller riparato riceve l'alimentazione dal controller in buone condizioni e inizia a riavviarsi non appena viene inserito completamente nello chassis.
+Assicurarsi che il cavo della console sia collegato al modulo controller riparato in modo che riceva i messaggi della console al riavvio. Il controller riparato riceve l'alimentazione dal controller in buone condizioni e inizia a riavviarsi non appena viene inserito completamente nello chassis.
 
 . Completare la reinstallazione del modulo controller:
 +
@@ -228,49 +229,52 @@ NOTE: Assicurarsi che il cavo della console sia collegato al modulo controller r
 +
 I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
 
-
-
 +
+Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
-NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
-
-+
 .. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
 
 
 . Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
 +
+Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.
 
-NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio.
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
 
-. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback true`.
-. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 
 
 == Passaggio 5: Reimpostare l'ora e la data sul controller
 
+Dopo aver sostituito la batteria RTC, inserito il controller e acceso il computer per il primo ripristino del BIOS, verranno visualizzati i seguenti messaggi di errore:
 
-NOTE: Dopo aver sostituito la batteria RTC, inserito il controller e acceso il primo ripristino del BIOS, vengono visualizzati i seguenti messaggi di errore:
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error` Questi messaggi sono stati eliminati ed è possibile continuare con questa procedura.
 
-. Controllare la data e l'ora sul controller integro con il `cluster date show` comando.
+`RTC power failure error`
 
+Questi messaggi sono attesi e puoi continuare con questa procedura.
 
-
-NOTE: Se il sistema si arresta al menu di avvio, selezionare l'opzione per  `Reboot node` e rispondere _y_ quando richiesto, quindi avviare il CARICATORE premendo _Ctrl-C_
-
-. Al prompt DEL CARICATORE sul controller di destinazione, controllare l'ora e la data con il `cluster date show` comando.
-. Se necessario, modificare la data con `set date mm/dd/yyyy` comando.
-. Se necessario, impostare l'ora, in GMT, utilizzando `set time hh:mm:ss` comando.
+.Fasi
+. Controllare la data e l'ora sul controller sano con il `cluster date show` comando.  + Se il sistema si ferma al menu di avvio, selezionare l'opzione per `Reboot node` e rispondi _y_ quando richiesto, quindi avvia LOADER premendo _Ctrl-C_
 +
-.. Confermare la data e l'ora sul controller di destinazione.
-.. Al prompt del CARICATORE, immettere _bye_ per reinizializzare le schede PCIe e gli altri componenti e lasciare che il controller si riavvii.
+.. Al prompt DEL CARICATORE sul controller di destinazione, controllare l'ora e la data con il `cluster date show` comando.
+.. Se necessario, modificare la data con `set date mm/dd/yyyy` comando.
+.. Se necessario, impostare l'ora, in GMT, utilizzando `set time hh:mm:ss` comando.
 
 
+. Confermare la data e l'ora sul controller di destinazione.
+. Al prompt del CARICATORE, immettere _bye_ per reinizializzare le schede PCIe e gli altri componenti e lasciare che il controller si riavvii.
 
 
 

@@ -7,11 +7,9 @@
 . Rimuovere il frontalino dalla parte anteriore del sistema di archiviazione.
 . Identificare fisicamente il disco guasto.
 +
-In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED attenzione (ambra) sul pannello del display dell'operatore dello scaffale e l'unità guasta si accendono.
+** In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED attenzione (ambra) sul pannello del display dell'operatore dello scaffale e l'unità guasta si accendono.
+** Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
 
-+
-
-NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
 
 . Rimuovere il disco guasto:
 +
@@ -43,8 +41,7 @@ Estrarre l'unità dall'alloggiamento utilizzando la maniglia della camma e soste
 
 Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
 
-
-NOTE: Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
+Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
 
 |===
 . Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
@@ -69,6 +66,6 @@ Quando il LED di attività del disco è acceso, significa che il disco è alimen
 . Reinstallare il frontalino sul lato anteriore del sistema di archiviazione.
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 +
-Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+Contatta il supporto tecnico https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] se hai bisogno del numero RMA o di ulteriore assistenza con la procedura di sostituzione.
 
 

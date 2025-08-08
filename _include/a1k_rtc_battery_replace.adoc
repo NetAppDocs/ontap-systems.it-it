@@ -147,6 +147,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
+.Fasi
 . Controllare il LED di stato NVRAM situato nello slot 4/5 del sistema. Sul pannello anteriore del modulo controller è presente anche un LED NVRAM. Cercare l'icona NV:
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
@@ -203,6 +204,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si e
 
 Rimuovere la batteria RTC guasta e installare la batteria RTC di ricambio.
 
+.Fasi
 . Aprire il condotto dell'aria della centralina sulla parte superiore della centralina.
 +
 .. Inserire le dita nelle cavità alle estremità più lontane del condotto dell'aria.
@@ -238,6 +240,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 Reinstallare il modulo controller e avviarlo.
 
+.Fasi
 . Assicurarsi che il condotto dell'aria sia completamente chiuso ruotandolo verso il basso fino in fondo.
 +
 Deve essere a filo con la lamiera del modulo controller.
@@ -265,6 +268,7 @@ NOTE: Dopo aver sostituito la batteria RTC, inserito il controller e acceso il p
 `RTC date/time error. Reset date/time to default`
 `RTC power failure error` Questi messaggi sono stati eliminati ed è possibile continuare con questa procedura.
 
+.Fasi
 . Controllare la data e l'ora sul controller integro con il comando _cluster date show_.
 
 

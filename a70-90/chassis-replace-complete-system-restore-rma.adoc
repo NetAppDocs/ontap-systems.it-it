@@ -19,6 +19,7 @@ Riavviare i controller, verificare lo stato del sistema e restituire il componen
 
 Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
 
+.Fasi
 . Controllare l'output della console:
 +
 .. Se il controller viene avviato al prompt Loader, riavviarlo con il `boot_ontap` comando.
@@ -39,6 +40,7 @@ Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
 
 Dopo che il controller ha restituito lo spazio di archiviazione, è necessario controllare lo stato generale con https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
 
+.Fasi
 . Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.
 . Correggere eventuali problemi riscontrati.
 

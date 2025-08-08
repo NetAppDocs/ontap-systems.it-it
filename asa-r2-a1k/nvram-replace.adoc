@@ -100,7 +100,9 @@ Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropria
 --
 Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del contenitore e seguire la sequenza di passaggi specifica.
 
-. Se non si è già collegati a terra, mettere a terra l'utente. Scollegare i cavi di alimentazione dagli alimentatori, quindi estrarre il modulo controller di qualche centimetro dalla parte anteriore del sistema.
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi di alimentazione dagli alimentatori.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando delicatamente i perni alle estremità del vassoio e ruotandolo verso il basso.
 . Rimuovere il modulo NVRAM danneggiato dal contenitore:
 +
@@ -145,8 +147,9 @@ Linguette di bloccaggio DIMM
 --
 Per sostituire i DIMM NVRAM nel modulo NVRAM, è necessario rimuovere il modulo NVRAM e sostituire il DIMM di destinazione.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare i cavi di alimentazione dagli alimentatori, quindi estrarre il modulo controller di qualche centimetro dalla parte anteriore del sistema.
+. Scollegare i cavi di alimentazione dagli alimentatori del controller.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando delicatamente i perni alle estremità del vassoio e ruotandolo verso il basso.
 . Rimuovere il modulo NVRAM di destinazione dal contenitore.
 +
@@ -190,13 +193,9 @@ NOTE: Consultare l'etichetta della mappa FRU sul lato del modulo NVRAM per deter
 
 == Fase 3: Riavviare il controller
 
-Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
+Dopo aver sostituito il componente, è necessario riavviare il modulo controller ricollegando i cavi di alimentazione all'alimentatore.
 
-. Ricollegare i cavi di alimentazione all'alimentatore e riposizionare e bloccare delicatamente il modulo controller nella parte anteriore del sistema.
-+
 Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.
-
-
 
 
 

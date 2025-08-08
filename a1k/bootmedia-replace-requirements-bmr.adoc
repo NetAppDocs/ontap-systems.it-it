@@ -19,7 +19,7 @@ Esaminare i seguenti requisiti.
 
 * È necessario sostituire il supporto di avvio guasto con un supporto di avvio sostitutivo ricevuto da NetApp.
 * Le porte del cluster vengono utilizzate per comunicare tra i due controller durante il processo di ripristino automatico dell'avvio. Assicurarsi che le porte del cluster sul controller danneggiato funzionino correttamente.
-* Per OKM, è necessario il contenuto del file della passphrase OKM.
+* Per OKM, è necessaria la passphrase dell'intero cluster e anche i dati di backup.
 * Per EKM, è necessario copiare i seguenti file dal nodo partner:
 +
 ** /cfcard/kmip/servers.cfg

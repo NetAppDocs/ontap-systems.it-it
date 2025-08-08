@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Per completare il ricambio del controller per il sistema ASA A20, ASA A30 o ASA A50, ripristinare prima la configurazione crittografia storage NetApp (se necessario) e installare le licenze richieste sul nuovo controller. Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registrare il numero di serie del nuovo controller e restituire il componente guasto a NetApp.' 
+summary: 'Per completare la sostituzione del controller per il sistema di storage ASA A20, ASA A30 o ASA A50, ripristinare innanzitutto la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze richieste sul nuovo controller.  Successivamente, verificare che le interfacce logiche (LIF) segnalino le rispettive porte home ed eseguire un controllo dello stato del cluster.  Infine, registra il numero di serie del nuovo controller e restituisci la parte guasta a NetApp.' 
 ---
 = Sostituzione completa del controller - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Per completare il ricambio del controller per il sistema ASA A20, ASA 
 
 
 [role="lead"]
-Per completare il ricambio del controller per il sistema ASA A20, ASA A30 o ASA A50, ripristinare prima la configurazione crittografia storage NetApp (se necessario) e installare le licenze richieste sul nuovo controller. Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registrare il numero di serie del nuovo controller e restituire il componente guasto a NetApp.
+Per completare la sostituzione del controller per il sistema di storage ASA A20, ASA A30 o ASA A50, ripristinare innanzitutto la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze richieste sul nuovo controller.  Successivamente, verificare che le interfacce logiche (LIF) segnalino le rispettive porte home ed eseguire un controllo dello stato del cluster.  Infine, registra il numero di serie del nuovo controller e restituisci la parte guasta a NetApp.
 
 
 
