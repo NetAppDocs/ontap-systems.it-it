@@ -13,6 +13,9 @@ summary: 'È possibile rimuovere a caldo uno shelf di dischi NS224 che ha rimoss
 [role="lead"]
 È possibile rimuovere a caldo uno shelf di dischi NS224 che ha rimosso gli aggregati dai dischi, in una coppia ha attiva e in grado di fornire dati (i/o in corso).
 
+
+NOTE: Questa procedura non si applica ai sistemi ASA r2.
+
 .Prima di iniziare
 * La coppia ha non può trovarsi in uno stato di Takeover.
 * È necessario rimuovere tutti gli aggregati dai dischi (i dischi devono essere spare) nello shelf che si sta rimuovendo.

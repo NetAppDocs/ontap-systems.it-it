@@ -33,6 +33,6 @@ Per collegare l'hardware, collegare prima gli storage controller alla rete e poi
 [role="quick-margin-para"]
 Prima di accendere i controller, accendere ogni shelf NS224 e assegnare un ID di shelf univoco per garantire che ogni shelf sia identificato in modo univoco all'interno dell'installazione, collegare il laptop o la console al controller, quindi collegare i controller alle sorgenti di alimentazione.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:install-complete.html["Completare la configurazione del sistema storage"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]/
 [role="quick-margin-para"]
-Per completare l'installazione del sistema, accedere a ONTAP System Manager puntando un browser all'indirizzo IP del controller. Una procedura di installazione guidata consente di completare la configurazione del cluster per il sistema di storage AFF A70 o AFF A90.
+Dopo aver acceso il sistema di archiviazione, https://docs.netapp.com/us-en/ontap/software_setup/workflow-summary.html["configura il tuo cluster"] .

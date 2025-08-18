@@ -1,4 +1,4 @@
-= Fase 3: Riavviare il controller
+= 
 :allow-uri-read: 
 
 
@@ -93,26 +93,4 @@ Supporto di boot
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
 
 . Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
-
-
-
-
-== Fase 3: Riavviare il controller
-
-Riavviare il modulo controller.
-
-.Fasi
-. Immettere _bye_ al prompt del CARICATORE.
-. Riportare il controller al funzionamento normale restituendo lo storage:
-+
-`storage failover giveback -ofnode _impaired_node_name_`
-
-. Ripristina la restituzione automatica:
-+
-`storage failover modify -node local -auto-giveback true`
-
-. Se è stata attivata una finestra di manutenzione AutoSupport , chiuderla:
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`
-
 
