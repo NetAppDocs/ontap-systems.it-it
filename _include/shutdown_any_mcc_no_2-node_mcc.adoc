@@ -22,9 +22,14 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 +
 `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Disattivare il giveback automatico dalla console del controller integro:
+. Disattiva la restituzione automatica:
 +
-`storage failover modify –node local -auto-giveback false`
+.. Immettere il seguente comando dalla console del controller funzionante:
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
+
 
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
 +
