@@ -1,10 +1,10 @@
 ---
 permalink: fas8300/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
+keywords: fas8300, fas8700, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
 summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia - AFF FAS8300 e FAS8700
+= Controllare il supporto e lo stato delle chiavi di crittografia - FAS8300 e FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Prima di spegnere il controller compromesso e controllare lo stato dell
 
 [role="lead"]
 Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 
 

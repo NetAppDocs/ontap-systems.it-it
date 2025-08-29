@@ -6,35 +6,52 @@ entries:
   pdf-filename: Installazione e configurazione di AFF A900
   entries:
   - title: Scegli l'esperienza di installazione e configurazione
-    url: "/a900/install_setup.html"
+    url: "/a900/install-setup.html"
   - title: Passaggi rapidi
-    url: "/a900/install_quick_guide.html"
+    url: "/a900/install-quick-guide.html"
   - title: Video fasi
-    url: "/a900/install_videos.html"
+    url: "/a900/install-videos.html"
   - title: Passaggi dettagliati
-    url: "/a900/install_detailed_guide.html"
+    url: "/a900/install-detailed-guide.html"
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A900
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/a900/maintain-overview.html"
-  - title: Supporto di boot
-    pdf-filename: Supporti per l'avvio AFF A900
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio AFF A900 automatizzato
     entries:
-    - title: Panoramica
-      url: "/a900/bootmedia_replace_overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a900/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/a900/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/a900/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a900/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/a900/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a900/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale del supporto di avvio AFF A900
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a900/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/a900/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
-      url: "/a900/bootmedia_encryption_preshutdown_checks.html"
+      url: "/a900/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso
       url: "/a900/bootmedia-shutdown.html"
-    - title: Sostituire l'immagine di boot
-      url: "/a900/bootmedia_replace.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a900/bootmedia-replace.html"
     - title: Immagine di recovery all'avvio
       url: "/a900/bootmedia_recovery_image.html"
     - title: Ripristino della crittografia
       url: "/a900/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp
-      url: "/a900/bootmedia_complete_rma.html"
+      url: "/a900/bootmedia-complete-rma.html"
   - title: Chassis
     pdf-filename: Chassis AFF A900
     entries:

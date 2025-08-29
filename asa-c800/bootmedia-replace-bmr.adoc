@@ -1,0 +1,172 @@
+---
+permalink: asa-c800/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: asa c800, replace the boot media 
+summary: 'Il supporto di avvio del sistema ASA C800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l"installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.' 
+---
+= Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il supporto di avvio del sistema ASA C800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.
+
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
+
+Il supporto di avvio si trova all'interno del modulo controller sotto il condotto dell'aria ed è accessibile rimuovendo il modulo controller dal sistema.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
+. Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[Rilascio del modulo controller]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermo di bloccaggio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Perno di bloccaggio
+
+|===
+. Estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
++
+.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
++
+image::../media/drw_a800_open_air_duct.png[Apertura del condotto dell'aria]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguette di bloccaggio del condotto dell'aria
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Far scorrere il condotto dell'aria verso i moduli delle ventole
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Ruotare il condotto dell'aria verso i moduli delle ventole
+
+|===
+
+
+. Individuare il supporto di avvio nel modulo controller e sostituirlo:
++
+image::../media/drw_a800_boot_media_replace.png[Sostituire il supporto di avvio]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Riser 3
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Cacciavite Phillips n. 1
+
+
+
+ a| 
+image:../media/icon_round_4.png["Numero di didascalia 4"]
+ a| 
+Vite del supporto di avvio
+
+
+
+ a| 
+image:../media/icon_round_5.png["Numero di didascalia 5"]
+ a| 
+Supporto di boot
+
+|===
++
+.. Utilizzando un cacciavite Phillips n. 1, rimuovere la vite che fissa il supporto di avvio e mettere da parte la vite in un luogo sicuro.
+.. Afferrare i lati del supporto di avvio, ruotare delicatamente il supporto di avvio verso l'alto, quindi estrarre il supporto di avvio dalla presa e metterlo da parte.
+
+
+. Installare il supporto di avvio sostitutivo nel modulo controller:
++
+.. Allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente a squadra nello zoccolo.
+.. Ruotare il supporto di avvio verso il basso verso la scheda madre.
+.. Fissare il supporto di avvio alla scheda madre utilizzando la vite del supporto di avvio.
++
+Non serrare eccessivamente la vite per evitare di danneggiare il supporto di avvio.
+
+
+
+. Reinstallare il riser nel modulo controller.
+. Chiudere il condotto dell'aria:
++
+.. Ruotare il condotto dell'aria verso il basso.
+.. Far scorrere il condotto dell'aria verso i montanti fino a farlo scattare in posizione.
+
+
+. Installare il modulo controller:
++
+.. Allineare l'estremità del modulo controller con l'apertura nello chassis, quindi spingere delicatamente il modulo controller fino a metà nel sistema.
+.. Ricollegare il modulo controller, spingere con decisione la maniglia a camma per completare l'inserimento del modulo controller, spingere la maniglia a camma in posizione chiusa e quindi serrare la vite a testa zigrinata.
++
+Il modulo controller inizia l'avvio e si arresta al prompt LOADER.
+
+
+
+
+
+.Cosa succederà
+Dopo aver sostituito fisicamente i supporti di avvio danneggiati, link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine ONTAP dal nodo partner"].

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c800, replace the boot media 
 summary: Individuare il supporto di avvio guasto nel modulo controller rimuovendo il riser 3 sul modulo controller prima di sostituire il supporto di avvio. 
 ---
-= Sostituire il supporto di avvio - ASA C800
+= Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA C800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Individuare il supporto di avvio guasto nel modulo controller rimuovend
 
 [role="lead"]
 Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare la procedura di ripristino automatico all'avvio.  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 
 
 

@@ -23,6 +23,7 @@ video::dc8d4acb-e061-45dd-8a0e-ae78004b6974[panopto]
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare i cavi dal modulo controller guasto e tenere traccia del punto in cui sono stati collegati i cavi.
 . Far scorrere verso il basso il pulsante terra cotta sulla maniglia della camma fino a sbloccarla.
@@ -76,6 +77,7 @@ Pulsante di bloccaggio del coperchio del modulo controller
 
 Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecchio controller e inserirlo nel nuovo controller.
 
+.Fasi
 . Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
 +
 image::../media/drw_9500_remove_boot_dev.svg[Rimuovere il dispositivo di avvio]
@@ -120,6 +122,7 @@ Per spostare i moduli DIMM, individuarli e spostarli dal vecchio controller al c
 
 NOTE: Il controller ver2 dispone di un numero inferiore di socket DIMM. Non vi è alcuna riduzione nel numero di DIMM supportati o modifica nella numerazione dei socket DIMM. Quando si spostano i moduli DIMM nel nuovo modulo controller, installare i moduli DIMM nello stesso numero/posizione del modulo controller danneggiato.  Vedere il diagramma della mappa FRU sul modulo controller ver2 per le posizioni dei socket DIMM.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Individuare i DIMM sul modulo controller.
 . Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
@@ -181,6 +184,7 @@ Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in 
 
 NOTE: Il sistema potrebbe aggiornare il firmware di sistema all'avvio. Non interrompere questo processo. La procedura richiede di interrompere il processo di avvio, che in genere può essere eseguito in qualsiasi momento dopo la richiesta. Tuttavia, se il sistema aggiorna il firmware del sistema all'avvio, è necessario attendere il completamento dell'aggiornamento prima di interrompere il processo di avvio.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Se non è già stato fatto, riposizionare il coperchio sul modulo controller.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.

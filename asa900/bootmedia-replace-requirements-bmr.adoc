@@ -1,0 +1,41 @@
+---
+permalink: asa900/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: asa900, replace the boot media 
+summary: Prima di sostituire il supporto di avvio nel sistema ASA A900, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. 
+---
+= Requisiti per il ripristino automatico dei supporti di avvio - ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio nel tuo ASA A900, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.
+
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo della stessa capacità ricevuta da NetApp.
+* Verificare che la porta e0M (chiave inglese) sul controller danneggiato sia collegata e non sia difettosa.
++
+La porta e0M viene utilizzata per comunicare tra i due controller durante il processo di ripristino automatico dell'avvio.
+
+* Per OKM, è necessaria la passphrase dell'intero cluster e anche i dati di backup.
+* Per EKM, è necessario copiare i seguenti file dal nodo partner:
++
+** file /cfcard/kmip/servers.cfg.
+** file /cfcard/kmip/certs/client.crt.
+** file /cfcard/kmip/certs/client.key.
+** File /cfcard/kmip/certs/CA.pem.
+
+
+* Quando si sostituisce il supporto di avvio danneggiato, è fondamentale applicare i comandi al controller corretto:
++
+** Il _controller non funzionante_ è il controller su cui si sta eseguendo la manutenzione.
+** Il _controllore sano_ è il partner HA del controllore compromesso.
+
+
+
+
+.Cosa succederà
+Dopo aver esaminato i requisiti dei supporti di avvio, si link:bootmedia-shutdown-bmr.html["spegnere il controller"].

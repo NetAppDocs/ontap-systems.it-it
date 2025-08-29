@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a400, aff, a400, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller non utilizzato - AFF A400
+= Arrestare il controller per il ripristino manuale del supporto di avvio - AFF A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 [role="lead"]
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 
 
 

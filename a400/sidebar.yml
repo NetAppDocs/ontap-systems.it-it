@@ -16,23 +16,38 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A400
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/a400/maintain-overview.html"
-  - title: Supporto di boot
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio AFF A400 automatizzato
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a400/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/a400/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/a400/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a400/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/a400/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a400/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
     pdf-filename: Supporti per l'avvio AFF A400
     entries:
-    - title: Panoramica
-      url: "/a400/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a400/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/a400/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
       url: "/a400/bootmedia-encryption-preshutdown-checks.html"
-    - title: Spegnere il controller compromesso
+    - title: Arrestare il controller
       url: "/a400/bootmedia-shutdown.html"
     - title: Sostituire il supporto di avvio
       url: "/a400/bootmedia-replace.html"
     - title: Immagine di recovery all'avvio
       url: "/a400/bootmedia-recovery-image-boot.html"
-    - title: Tornare indietro alla configurazione MetroCluster
-      url: "/a400/bootmedia-2n-mcc-switchback.html"
     - title: Ripristino della crittografia
       url: "/a400/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp

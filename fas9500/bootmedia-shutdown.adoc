@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller compromesso - FAS9500
+= Arrestare il controller per il ripristino manuale del supporto di avvio - FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,8 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
 
 Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

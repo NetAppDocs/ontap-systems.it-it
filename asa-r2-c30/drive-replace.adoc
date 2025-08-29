@@ -13,7 +13,7 @@ summary: 'Sostituisci un"unità nel tuo sistema di archiviazione ASA C30 quando 
 [role="lead"]
 Sostituisci un'unità nel tuo sistema di archiviazione ASA C30 quando un'unità si guasta o necessita di un aggiornamento. Il processo di sostituzione prevede l'identificazione dell'unità guasta, la rimozione sicura e l'installazione di una nuova unità per garantire l'accesso continuo ai dati e le prestazioni del sistema.
 
-È possibile sostituire un'unità SSD guasta senza interruzioni mentre l'i/o è in corso.
+È possibile sostituire un disco guasto senza interruzioni mentre l'i/o è in corso.
 
 .Prima di iniziare
 * L'unità che si sta installando deve essere supportata dal sistema di archiviazione.
@@ -27,7 +27,7 @@ Le istruzioni contenute nella documentazione di ONTAP descrivono i passaggi aggi
 +
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con CLI"^]
 
-* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 * Verificare che l'unità che si sta rimuovendo non sia funzionante.
 +
 È possibile verificare che il disco non funzioni correttamente eseguendo `storage disk show -broken` comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.
@@ -75,40 +75,13 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 .Fasi
-. Se si desidera assegnare manualmente la proprietà del disco per l'unità sostitutiva, è necessario disattivare l'assegnazione automatica del disco, se attivata.
-+
-
-NOTE: Assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco più avanti in questa procedura.
-
-+
-.. Verificare se l'assegnazione automatica dei dischi è abilitata:
-+
-`storage disk option show`
-
-+
-È possibile immettere il comando su uno dei controller.
-
-+
-Se l'assegnazione automatica dell'unità di comando è attivata, l'uscita viene visualizzata `on` nella `Auto Assign` colonna (per ogni unità di comando).
-
-.. Se l'assegnazione automatica dei dischi è attivata, disattivarla:
-+
-`storage disk option modify -node node_name -autoassign off`
-
-+
-È necessario disattivare l'assegnazione automatica della guida su entrambi i controller.
-
-
-
 . Mettere a terra l'utente.
 . Rimuovere il frontalino dalla parte anteriore del sistema di archiviazione.
 . Identificare fisicamente il disco guasto.
 +
-In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED di attenzione (ambra) sul display operatore dello shelf di dischi e il disco guasto si illuminano.
+** In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED attenzione (ambra) sul pannello del display dell'operatore dello scaffale e l'unità guasta si accendono.
+** Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
 
-+
-
-NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
 
 . Rimuovere il disco guasto:
 +
@@ -140,14 +113,16 @@ Estrarre l'unità dall'alloggiamento utilizzando la maniglia della camma e soste
 
 Quando si rimuove un disco, utilizzare sempre due mani per sostenerne il peso.
 
-
-NOTE: Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
+Poiché i dischi sono fragili, ridurre al minimo la manipolazione per evitare di danneggiarli.
 
 |===
 . Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
++
+Questo consente al sistema di riconoscere che un disco è stato rimosso.
+
 . Inserire l'unità sostitutiva:
 +
-.. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire l'unità.
+.. Con la maniglia della camma in posizione aperta, inserire l'unità sostitutiva con entrambe le mani.
 .. Premere delicatamente fino a quando l'unità non si arresta.
 .. Chiudere la maniglia della camma in modo che l'unità sia completamente alloggiata nel piano interno e che la maniglia scatti in posizione.
 +
@@ -159,38 +134,10 @@ Chiudere lentamente la maniglia della camma in modo che sia allineata correttame
 +
 Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
 
-. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 8.
+. Se si sostituisce un'altra unità, ripetere i passaggi da 3 a 7.
 . Reinstallare il frontalino sul lato anteriore del sistema di archiviazione.
-. Se l'assegnazione automatica del disco è stata disattivata nel passaggio 1, assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco:
-+
-.. Visualizzare tutti i dischi non posseduti:
-+
-`storage disk show -container-type unassigned`
-
-+
-È possibile immettere il comando su uno dei controller.
-
-.. Assegnare ciascun disco:
-+
-`storage disk assign -disk disk_name -owner owner_name`
-
-+
-È possibile immettere il comando su uno dei controller.
-
-+
-È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
-
-.. Se necessario, riabilitare l'assegnazione automatica del disco:
-+
-`storage disk option modify -node node_name -autoassign on`
-
-+
-È necessario riattivare l'assegnazione automatica della guida su entrambi i controller.
-
-
-
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 +
-Contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.
+Contatta il supporto tecnico https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] se hai bisogno del numero RMA o di ulteriore assistenza con la procedura di sostituzione.
 
 

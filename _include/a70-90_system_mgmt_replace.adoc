@@ -6,9 +6,35 @@ Sostituire il modulo di gestione del sistema danneggiato.
 
 .Fasi
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
-. Prima di procedere, verificare che la NVRAM sia stata completata. Quando il LED sul modulo NV è spento, il NVRAM viene rimosso. Se il LED lampeggia, attendere l'arresto del lampeggiamento. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+
+. Prima di procedere, verificare che la NVRAM sia stata completata. Quando il LED sul modulo NV è spento, il NVRAM viene rimosso. Se il LED lampeggia, attendere l'arresto del lampeggiamento. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+LED di stato NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+LED di attenzione NVRAM
+
+|===
++
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+
 
 . Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare gli alimentatori del controller.

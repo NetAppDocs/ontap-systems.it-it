@@ -1,0 +1,38 @@
+---
+permalink: asa-c400/bootmedia-replace-workflow-bmr.html 
+sidebar: sidebar 
+keywords: asa-c400, replace the boot media 
+summary: 'Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C400, esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l"immagine sul supporto di avvio e verificare la funzionalità del sistema.' 
+---
+= Flusso di lavoro di ripristino automatico dei supporti di avvio - ASA C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage ASA C400.
+
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
+
+Per iniziare, rivedere i requisiti di sostituzione, arrestare il controller, sostituire il supporto di avvio, consentire al sistema di ripristinare l'immagine e verificare la funzionalità del sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:bootmedia-replace-requirements-bmr.html["Esaminare i requisiti dei supporti di avvio"]
+[role="quick-margin-para"]
+Esaminare i requisiti per la sostituzione dei supporti di avvio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:bootmedia-shutdown-bmr.html["Spegnere il controller"]
+[role="quick-margin-para"]
+Arrestare il controller nel sistema di storage quando è necessario sostituire i supporti di avvio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:bootmedia-replace-bmr.html["Sostituire il supporto di avvio"]
+[role="quick-margin-para"]
+Rimuovere il supporto di avvio non riuscito dal modulo controller e installare il supporto di avvio sostitutivo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine sul supporto di avvio"]
+[role="quick-margin-para"]
+Ripristinare l'immagine ONTAP dal controller partner.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:bootmedia-complete-rma-bmr.html["Restituire la parte guasta a NetApp"]
+[role="quick-margin-para"]
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.

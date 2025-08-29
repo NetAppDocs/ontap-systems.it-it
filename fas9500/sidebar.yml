@@ -6,37 +6,52 @@ entries:
   pdf-filename: Installazione e configurazione di FAS9500
   entries:
   - title: Scegli l'esperienza di installazione e configurazione
-    url: "/fas9500/install_setup.html"
+    url: "/fas9500/install-setup.html"
   - title: Passaggi rapidi
-    url: "/fas9500/install_quick_guide.html"
+    url: "/fas9500/install-quick-guide.html"
   - title: Video fasi
-    url: "/fas9500/install_videos.html"
+    url: "/fas9500/install-videos.html"
   - title: Passaggi dettagliati
-    url: "/fas9500/install_detailed_guide.html"
+    url: "/fas9500/install-detailed-guide.html"
 - title: Mantenere
   pdf-filename: Manutenzione di FAS9500
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/fas9500/maintain-overview.html"
-  - title: Supporto di boot
-    pdf-filename: FAS9500 Boot Media
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio FAS9500 automatizzato
     entries:
-    - title: Panoramica
-      url: "/fas9500/bootmedia_replace_overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/fas9500/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/fas9500/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/fas9500/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/fas9500/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/fas9500/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/fas9500/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale del supporto di avvio FAS9500
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/fas9500/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/fas9500/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
-      url: "/fas9500/bootmedia_encryption_preshutdown_checks.html"
+      url: "/fas9500/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso
       url: "/fas9500/bootmedia-shutdown.html"
     - title: Sostituire il supporto di avvio
-      url: "/fas9500/bootmedia_replace.html"
-    - title: Avviare l'immagine di ripristino
-      url: "/fas9500/bootmedia_recovery_image.html"
-    - title: Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE
-      url: "/fas9500/bootmedia_encryption_restore.html"
+      url: "/fas9500/bootmedia-replace.html"
+    - title: Immagine di recovery all'avvio
+      url: "/fas9500/bootmedia-recovery-image.html"
+    - title: Ripristino della crittografia
+      url: "/fas9500/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp
-      url: "/fas9500/bootmedia_complete_rma.html"
-  - title: Modulo di caching
-    url: "/fas9500/caching_module_hot_swap.html"
+      url: "/fas9500/bootmedia-complete-rma.html"
   - title: Chassis
     pdf-filename: Chassis FAS9500
     entries:
@@ -44,22 +59,22 @@ entries:
       url: "/fas9500/chassis_replace_overview.html"
     - title: Spegnere il controller compromesso
       url: "/fas9500/chassis_replace_shutdown.html"
-    - title: Sostituire l'hardware
+    - title: Sostituire il telaio
       url: "/fas9500/chassis_replace_move_hardware.html"
-    - title: Ripristino e verifica della configurazione
+    - title: Ripristinare e verificare la configurazione
       url: "/fas9500/chassis_replace_complete_system_restore_rma.html"
-  - title: Modulo controller
+  - title: Controller
     pdf-filename: Modulo controller FAS9500
     entries:
     - title: Panoramica
       url: "/fas9500/controller_replace_overview.html"
     - title: Spegnere il controller compromesso
       url: "/fas9500/controller_replace_shutdown.html"
-    - title: Sostituire l'hardware del modulo controller
+    - title: Sostituire il controller
       url: "/fas9500/controller_replace.html"
     - title: Ripristinare e verificare la configurazione del sistema
       url: "/fas9500/controller_replace_system_config_restore_and_verify.html"
-    - title: Ricable del sistema
+    - title: Sistema ricable
       url: "/fas9500/controller_replace_recable_reassign_disks.html"
     - title: Ripristino completo del sistema
       url: "/fas9500/controller_replace_complete_system_restoration_rma.html"

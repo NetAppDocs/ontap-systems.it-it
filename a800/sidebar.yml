@@ -16,13 +16,30 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di AFF A800
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/a800/maintain-overview.html"
-  - title: Supporto di boot
-    pdf-filename: Supporti per l'avvio AFF A800
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio AFF A800 automatizzato
     entries:
-    - title: Panoramica
-      url: "/a800/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a800/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/a800/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/a800/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/a800/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/a800/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/a800/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale del supporto di avvio AFF A800
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/a800/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/a800/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
       url: "/a800/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso

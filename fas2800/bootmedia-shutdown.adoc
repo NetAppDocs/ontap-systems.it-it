@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, shut, down, impaired, controller, take, over 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller compromesso - FAS2820
+= Arrestare il controller per il ripristino manuale del supporto di avvio - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 [role="lead"]
 Spegnere o sostituire il controller compromesso.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 

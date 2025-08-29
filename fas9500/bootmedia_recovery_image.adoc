@@ -13,6 +13,9 @@ summary: 'La procedura per avviare il nodo con problemi dall"immagine di riprist
 [role="lead"]
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
+
+.Fasi
 . Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
 +
 L'immagine viene scaricata dall'unità flash USB.
@@ -88,7 +91,7 @@ Se viene richiesto di continuare con l'aggiornamento, premere `y`.
 
 . Il successivo dipende dalla configurazione del sistema:
 +
-** Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito xref:bootmedia_encryption_restore.adoc[Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE]
+** Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito xref:bootmedia-encryption-restore.adoc[Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE]
 ** Se il sistema non dispone di onboard keymanager, NSE o NVE configurati, completare la procedura descritta in questa sezione.
 
 

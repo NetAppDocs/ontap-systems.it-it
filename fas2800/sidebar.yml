@@ -14,15 +14,32 @@ entries:
   - title: Passaggi dettagliati
     url: "/fas2800/install-detailed-guide.html"
 - title: Mantenere
-  pdf-filename: Manutenzione di FAS2820
+  pdf-filename: Manutenzione AFF FAS2800
   entries:
-  - title: Panoramica
+  - title: Panoramica sulla manutenzione
     url: "/fas2800/maintain-overview.html"
-  - title: Supporto di boot
-    pdf-filename: FAS2820 Boot Media
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio FAS2820 automatizzato
     entries:
-    - title: Panoramica
-      url: "/fas2800/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/fas2800/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/fas2800/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/fas2800/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/fas2800/bootmedia-replace-bmr.html"
+    - title: Immagine di recovery all'avvio
+      url: "/fas2800/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/fas2800/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale del supporto di avvio FAS2820
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/fas2800/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/a800/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
       url: "/fas2800/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso

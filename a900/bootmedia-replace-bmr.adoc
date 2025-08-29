@@ -1,0 +1,131 @@
+---
+permalink: a900/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: a900, replace the boot media 
+summary: 'Il supporto di avvio del sistema AFF A900 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l"installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.' 
+---
+= Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - AFF A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il supporto di avvio del sistema AFF A900 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.
+
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
+
+Il supporto di avvio si trova all'interno del modulo controller sotto il condotto dell'aria ed è accessibile rimuovendo il modulo controller dal sistema.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi dal modulo controller guasto e tenere traccia del punto in cui sono stati collegati i cavi.
+. Far scorrere verso il basso il pulsante terra cotta sulla maniglia della camma fino a sbloccarla.
++
+.Animazione - rimuovere il controller
+video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
++
+image::../media/drw_a900_remove_PCM.png[Rilasciare la centralina]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Pulsante di rilascio della maniglia della camma
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Maniglia CAM
+
+|===
+. Ruotare la maniglia della camma in modo da disimpegnare completamente il modulo controller dal telaio, quindi estrarre il modulo controller dal telaio.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+. Posizionare il coperchio del modulo controller con il lato rivolto verso l'alto su una superficie stabile e piana, premere il pulsante blu sul coperchio, far scorrere il coperchio sul retro del modulo controller, quindi sollevare il coperchio ed estrarlo dal modulo controller.
++
+image::../media/drw_a900_PCM_open.png[Sollevare il coperchio dal modulo controller]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Pulsante di bloccaggio del coperchio del modulo controller
+
+|===
+. Sostituire il supporto di avvio:
++
+.. Sollevare il condotto d'aria nero sul retro del modulo controller, quindi individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
++
+.Animazione - sostituire il supporto di avvio
+video::c5080658-765e-4d29-8456-adf2000e1495[panopto]
++
+image::../media/drw_9000_remove_boot_dev.svg[Rimuovere il supporto di avvio]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Premere il tasto di rilascio Tab
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Supporto di boot
+
+|===
+.. Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
++
+
+NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto potrebbe danneggiare la presa o il supporto di avvio.
+
+.. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
+.. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
++
+Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
+
+.. Premere il supporto di avvio verso il basso per inserire il pulsante di blocco sull'alloggiamento del supporto di avvio.
+
+
+. Reinstallare il coperchio del modulo controller allineando i perni sul coperchio con gli slot sul supporto della scheda madre, quindi far scorrere il coperchio in posizione.
+. Reinstallare il modulo controller:
++
+.. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+.. Se necessario, è possibile ricable il modulo controller.
+.. Inserire completamente il modulo controller nel sistema, assicurandosi che la maniglia della camma si allontani dall'unità flash USB, spingere con decisione la maniglia della camma per terminare l'inserimento del modulo controller, quindi spingere la maniglia della camma in posizione chiusa.
++
+Il controller inizia ad avviarsi non appena viene installato completamente nello chassis.
+
++
+Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
+
+
+
+. Se il controller si trova in un MetroCluster esteso o collegato al fabric, è necessario ripristinare la configurazione dell'adattatore FC:
++
+.. Avvio in modalità di manutenzione: `boot_ontap maint`
+.. Impostare le porte MetroCluster come iniziatori: `ucadmin modify -m fc -t iniitator adapter_name`
+.. Halt per tornare alla modalità di manutenzione: `halt`
+
+
+
+
+.Cosa succederà
+Dopo aver sostituito fisicamente i supporti di avvio danneggiati, link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine ONTAP dal nodo partner"].

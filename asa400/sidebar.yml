@@ -16,13 +16,30 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di ASA A400
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/asa400/maintain-overview.html"
-  - title: Supporto di boot
-    pdf-filename: Supporti per l'avvio ASA A400
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio ASA A400 automatizzato
     entries:
-    - title: Panoramica
-      url: "/asa400/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/asa400/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/asa400/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/asa400/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa400/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/asa400/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa400/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale del supporto di avvio ASA A400
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/asa400/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa400/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
       url: "/asa400/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso
@@ -31,8 +48,6 @@ entries:
       url: "/asa400/bootmedia-replace.html"
     - title: Immagine di recovery all'avvio
       url: "/asa400/bootmedia-recovery-image-boot.html"
-    - title: Tornare indietro alla configurazione MetroCluster
-      url: "/asa400/bootmedia-2n-mcc-switchback.html"
     - title: Ripristino della crittografia
       url: "/asa400/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp

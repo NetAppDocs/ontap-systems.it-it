@@ -16,23 +16,38 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di ASA A900
   entries:
-  - title: Panoramica
-    url: "/asa900/index.html"
-  - title: Supporto di boot
-    pdf-filename: Supporti per l'avvio ASA A900
+  - title: Panoramica della manutenzione
+    url: "/asa900/maintain-overview.html"
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: Supporto di avvio automatico AFF ASA 900
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/asa900/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/asa900/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/asa900/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa900/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/asa900/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa900/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale del supporto di avvio AFF ASA 900
     entries:
     - title: Panoramica
       url: "/asa900/bootmedia_replace_overview.html"
     - title: Controllare le chiavi di crittografia
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: Spegnere il controller compromesso
-      url: "/asa900/bootmedia_impaired_controller_shutdown.html"
-    - title: Sostituire il supporto di avvio guasto
+      url: "/asa900/bootmedia-shutdown.html"
+    - title: Sostituire il supporto di avvio
       url: "/asa900/bootmedia_replace.html"
     - title: Immagine di recovery all'avvio
       url: "/asa900/bootmedia_recovery_image.html"
     - title: Ripristino della crittografia
-      url: "/asa900/bootmedia_encryption_restore.html"
+      url: "/asa900/bootmedia-encryption-restore.html"
     - title: Restituire la parte guasta a NetApp
       url: "/asa900/bootmedia_complete_rma.html"
   - title: Chassis

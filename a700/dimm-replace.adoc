@@ -337,8 +337,6 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
-Una volta completata la sostituzione dell'unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l'operazione di switchback dell'unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine sincronizzata (SVM) sul sito precedentemente compromesso ora attive e che forniscono i dati dai pool di dischi locali.
-
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
 
 .Fasi

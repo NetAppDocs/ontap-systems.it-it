@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ASA A900, replace, boot, media, controller, directions. replace boot media, transfer image 
 summary: 'È necessario rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l"immagine sul supporto di avvio sostitutivo.' 
 ---
-= Sostituire il supporto di avvio - ASA A900
+= Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 'È necessario rimuovere e aprire il modulo controller, individuare e s
 
 [role="lead"]
 È necessario scollegare il modulo controller, rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l'immagine sul supporto di avvio sostitutivo.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 
 
@@ -80,7 +82,7 @@ Individuare il supporto di avvio nel controller e seguire le istruzioni per sost
 .Animazione - sostituire il supporto di avvio
 video::c5080658-765e-4d29-8456-adf2000e1495[panopto]
 +
-image::../media/drw_a900_remove_boot_dev.png[Rimuovere il supporto di avvio]
+image::../media/drw_9000_remove_boot_dev.svg[Rimuovere il supporto di avvio]
 
 +
 [cols="1,4"]
@@ -162,7 +164,7 @@ Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzion
 . Se il controller si trova in un MetroCluster esteso o collegato al fabric, è necessario ripristinare la configurazione dell'adattatore FC:
 +
 .. Avvio in modalità di manutenzione: `boot_ontap maint`
-.. Impostare le porte MetroCluster come iniziatori: `ucadmin modify -m fc -t iniitator adapter_name`
+.. Impostare le porte MetroCluster come iniziatori: `ucadmin modify -m fc -t initiator adapter_name`
 .. Halt per tornare alla modalità di manutenzione: `halt`
 
 

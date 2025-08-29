@@ -35,7 +35,7 @@ Il supporto di avvio memorizza un set primario e secondario di file immagine ONT
  a| 
 link:bootmedia-replace-workflow.html["Supporto di avvio - ripristino manuale"]
  a| 
-Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per avviare l'immagine da un'unità USB e ripristinare la configurazione dal nodo partner
+Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio. Durante il ripristino manuale, si avvia il sistema di archiviazione da un'unità USB e si ripristina manualmente l'immagine e la configurazione del file system.  Se il sistema di archiviazione esegue ONTAP 9.17.1 e versioni successive, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .
 
 
 
@@ -112,6 +112,6 @@ Una batteria dell'orologio in tempo reale conserva le informazioni relative alla
  a| 
 link:system-management-replace.html["Modulo di gestione del sistema"]
  a| 
-Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un laptop per scopi di manutenzione del controller o del sistema. Il modulo di gestione del sistema contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).
+Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un laptop per scopi di manutenzione del controller o del sistema.  Il modulo System Management contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).
 
 |===

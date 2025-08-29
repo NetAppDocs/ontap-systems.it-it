@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, replace, boot, media, controller, module, fru map 
 summary: Individuare il supporto di avvio nel controller e seguire le istruzioni per sostituirlo. 
 ---
-= Sostituire il supporto di avvio - FAS2820
+= Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Individuare il supporto di avvio nel controller e seguire le istruzioni
 
 [role="lead"]
 È necessario rimuovere e aprire il modulo controller danneggiato, individuare e sostituire il supporto di avvio nel controller, trasferire l'immagine di avvio su un'unità USB, inserire l'unità USB nel controller e quindi avviare il controller.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 
 

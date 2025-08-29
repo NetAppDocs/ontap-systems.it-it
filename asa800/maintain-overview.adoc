@@ -1,7 +1,7 @@
 ---
 permalink: asa800/maintain-overview.html 
 sidebar: sidebar 
-keywords: asa A800 maintenance, maintenance, repairing A800, repairing asa A800, replace asa A800 components, replace asa A800 components 
+keywords: asa A800 maintenance, maintenance, repairing ASA A800, repairing asa A800, replace asa A800 components, replace asa A800 components 
 summary: 'Manutenzione dell"hardware ASA A800' 
 ---
 = Manutenzione dell'hardware ASA A800
@@ -11,70 +11,100 @@ summary: 'Manutenzione dell"hardware ASA A800'
 
 
 [role="lead"]
+Mantieni l'hardware del tuo sistema di archiviazione ASA A800 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.
+
+Le procedure di manutenzione presuppongono che il sistema di archiviazione ASA A800 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .
+
+
+
+== Componenti del sistema
+
 Per il sistema storage ASA A800, è possibile eseguire le procedure di manutenzione sui seguenti componenti.
 
+[cols="25,65"]
+|===
 
 
-== Supporto di boot
+ a| 
+link:bootmedia-replace-workflow-bmr.html["Supporto di avvio - ripristino automatico"]
+ a| 
+Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio.  Durante il ripristino automatico, il sistema recupera l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione di menu di avvio appropriata per installare l'immagine sul supporto di avvio sostitutivo. Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
 
-Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Supporto di avvio - ripristino manuale"]
+ a| 
+Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio. Durante il ripristino manuale, si avvia il sistema di archiviazione da un'unità USB e si ripristina manualmente l'immagine e la configurazione del file system.  Se il sistema di archiviazione esegue ONTAP 9.17.1 e versioni successive, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .
 
 
 
-== Chassis
-
+ a| 
+link:chassis-replace-overview.html["Chassis"]
+ a| 
 Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
 
 
 
-== Controller
-
+ a| 
+link:controller-replace-overview.html["Controller"]
+ a| 
 Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
 
 
 
-== DIMM
-
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
 È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
 
 
 
-== Disco
-
+ a| 
+link:drive-replace.html["Disco"]
+ a| 
 Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
 
 
 
-== Ventola
-
+ a| 
+link:fan-replace.html["Ventola"]
+ a| 
 La ventola raffredda il controller.
 
 
 
-== NVDIMM
-
+ a| 
+link:nvdimm-replace.html["NVDIMM"]
+ a| 
 Il modulo NVDIMM (Dual in-line memory module non volatile) gestisce il trasferimento dei dati dalla memoria volatile allo storage non volatile e mantiene l'integrità dei dati in caso di interruzione dell'alimentazione o di spegnimento del sistema.
 
 
 
-== Batteria NVDIMM
-
+ a| 
+link:nvdimm-battery-replace.html["Batteria NVDIMM"]
+ a| 
 La batteria NVDIMM mantiene l'alimentazione del modulo NVDIMM.
 
 
 
-== Scheda PCIe
+ a| 
+link:pci-cards-and-risers-replace.html["Scheda PCIe e riser"]
+ a| 
+Una scheda PCIe (Peripheral Component Interconnect Express) è una scheda di espansione che si collega allo slot PCIe sulla scheda madre o ai riser collegati alla scheda madre.
 
-Una scheda PCIe (Peripheral Component Interconnect Express) è una scheda di espansione che si inserisce nello slot PCIe della scheda madre.
 
 
-
-== Alimentatore
-
+ a| 
+link:power-supply-replace.html["Alimentatore"]
+ a| 
 Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
 
 
 
-== Batteria con orologio in tempo reale
-
+ a| 
+link:rtc-battery-replace.html["Batteria con orologio in tempo reale"]
+ a| 
 Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.
+
+|===

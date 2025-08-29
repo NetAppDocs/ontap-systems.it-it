@@ -1,0 +1,37 @@
+---
+permalink: asa400/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa400, replace the boot media 
+summary: 'Prima di sostituire il supporto di avvio nel sistema ASA A400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un"unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.' 
+---
+= Requisiti per il ripristino manuale del supporto di avvio - ASA A400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio nel sistema ASA A400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
+
+.Chiavetta USB
+* Assicurati di avere una chiavetta USB formattata in FAT32.
+* La chiavetta USB deve avere una capacità di archiviazione sufficiente per contenere il  `image_xxx.tgz` file.
+
+
+.Preparazione del file
+Copia il  `image_xxx.tgz` file sull'unità flash USB. Questo file verrà utilizzato quando si trasferisce l'immagine ONTAP tramite l'unità flash USB.
+
+.Sostituzione dei componenti
+Sostituire il componente guasto con il componente sostitutivo fornito da NetApp.
+
+.Identificazione del controllore
+Quando si sostituisce il supporto di avvio danneggiato, è fondamentale applicare i comandi al controller corretto:
+
+* Il _controller non funzionante_ è il controller su cui si sta eseguendo la manutenzione.
+* Il _controllore sano_ è il partner HA del controllore compromesso.
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessario link:bootmedia-encryption-preshutdown-checks.html["controllare il supporto e lo stato della chiave di crittografia sul supporto di avvio"].

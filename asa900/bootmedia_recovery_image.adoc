@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'La procedura per avviare il controller compromesso dall"immagine di ripristino dipende dalla configurazione MetroCluster a due nodi del sistema.' 
 ---
-= Avviare l'immagine di ripristino - ASA A900
+= Ripristino manuale del supporto di avvio da un'unità USB - ASA A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 'La procedura per avviare il controller compromesso dall"immagine di ri
 
 [role="lead"]
 Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 .Fasi
 . Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`

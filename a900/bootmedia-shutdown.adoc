@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller compromesso - AFF A900
+= Arrestare il controller per il ripristino manuale del supporto di avvio - AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,11 +13,15 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 [role="lead"]
 Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
 
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
+
 [role="tabbed-block"]
 ====
 .La maggior parte delle configurazioni
 --
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare la procedura di ripristino automatico all'avvio.  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

@@ -361,7 +361,6 @@
   <block id="365fae0e6393caadfc5e7bef45b9ce56" category="section-title">Fase 7: Switch back aggregates in una configurazione MetroCluster a due nodi</block>
   <block id="e81625c6f6813a6e5480c2987f5bd781" category="section-title">Fase 8: Restituire il componente guasto a NetApp</block>
   <block id="fd440756b4a0ce8acdb949b641576347" category="summary">Dopo aver sostituito il componente, è possibile restituirne il guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Contattare il supporto tecnico all'indirizzo<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>, 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se si necessita del numero RMA o di ulteriore assistenza per la procedura di sostituzione.</block>
-  <block id="22cc15dad4c522616e5130f927446d07" category="doc">Restituire il componente guasto a NetApp - AFF A400</block>
   <block id="6f00135662159734f14958c139370d97" category="summary">È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.</block>
   <block id="61c752abcbb868d9432b6f4a5da1593b" category="doc">Panoramica della sostituzione del modulo controller - AFF A400</block>
   <block id="271c5a034296b2fd598c729a341c9b8a" category="list-text">Tutti gli shelf di dischi devono funzionare correttamente.</block>
@@ -404,7 +403,6 @@
   <block id="6c97fa57e091b1cbdae941c425706f24" category="list-text">Se non lo si è già fatto, recuperare il resto del sistema.</block>
   <block id="1a3890308672bc09a82a2b01bfd856b6" category="list-text">Reinstallare il pannello anteriore del sistema.</block>
   <block id="21a759f002cfc3385b168953dde9a34e" category="summary">La procedura per avviare il controller compromesso dall'immagine di ripristino dipende dalla configurazione MetroCluster a due nodi del sistema.</block>
-  <block id="d8be62011c1882fcf382ba1c61256314" category="doc">Avviare l'immagine di ripristino - AFF A400</block>
   <block id="4e0316258b9c412eb9479c8f462e10f4" category="section-title">Opzione 1: La maggior parte dei sistemi</block>
   <block id="f63424327284890605f150c96c2c4961" category="paragraph">È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.</block>
   <block id="7314a9fd3ee72bf0d057c4e5272b697e" category="paragraph">Questa procedura si applica ai sistemi che non si trovano in una configurazione MetroCluster a due nodi.</block>
@@ -688,7 +686,6 @@
   <block id="c80537fb323930f899a793bcde5d41e4" category="admonition">Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e inserito completamente nello slot.</block>
   <block id="4962b83b6a8a444589f8f671a2a4bbe3" category="list-text">Spingere con cautela, ma con decisione, il bordo superiore del modulo NVDIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del modulo NVDIMM.</block>
   <block id="601c15b5101316dedeb3a25975e9e2f9" category="summary">Individuare il supporto di avvio nel modulo controller (vedere la mappa FRU sul modulo controller), quindi seguire le istruzioni per sostituirlo.</block>
-  <block id="170df6d027f1af0af09f17faa2ab6d64" category="doc">Sostituire il supporto di avvio - AFF A400</block>
   <block id="e5c77732c72900008e8eb20c104f7bfd" category="paragraph">Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.</block>
   <block id="88ef394be03c2dee8da212eb3ce203d3" category="paragraph">Fermi di bloccaggio</block>
   <block id="be0b7bebdbc010beb298a7c7fac29946" category="paragraph">Estrarre il controller dallo chassis</block>
@@ -1376,12 +1373,10 @@
   <block id="df0ede63d2bddc647b3f8cf55d7be4f6" category="paragraph">Assicurarsi che la spina si blocchi nella presa.</block>
   <block id="d38e923a5dbd4c9cea0e47d7894638fd" category="section-title">Fase 4: Reinstallare il modulo controller e avviare il sistema</block>
   <block id="751da2770ffa07ad30e1b98d596ba78c" category="paragraph">Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.</block>
-  <block id="a7d1c95d57e2d4d91562898a605711c2" category="doc">Restituire il componente guasto a NetApp - AFF C800</block>
   <block id="47b1e09c5a04b6651d4bc03190565935" category="doc">Panoramica della sostituzione del modulo controller - AFF C800</block>
   <block id="736818ee29ba3143ee0a9e06231deb0e" category="list-text">Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").</block>
   <block id="8fc18417b34debbf06d43a8004e7af83" category="list-text">Il controller _replacement_ è il nuovo controller che sostituisce il controller compromesso.</block>
   <block id="1bab600dfeb5dd52557d4dc719a4016b" category="admonition">Non eseguire il downgrade della versione del BIOS del controller _replacement_ in modo che corrisponda al controller partner o al vecchio modulo del controller.</block>
-  <block id="f3812c1bc21f4b91457674bcb79e0abd" category="doc">Spegnere il controller - AFF C800</block>
   <block id="f0623f3de563d7ac67a984a76c53803d" category="paragraph">Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.</block>
   <block id="442396e207d697f3466573acd63cdeb7" category="section-title">Opzione 2: Il sistema è in un MetroCluster</block>
   <block id="7084b904bc2fba91a6a3acb82001365c" category="doc">Completare il processo di ripristino e sostituzione - AFF C800</block>
@@ -1497,7 +1492,6 @@
   <block id="ca7c99126c90b6d4e929e35a12f23c35" category="paragraph">Per sostituire il modulo NVDIMM, individuarlo nel modulo del controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi sostituirlo seguendo la sequenza specifica dei passaggi.</block>
   <block id="2c0856fef0927def0bd154513fb326fb" category="list-text">Se si rimuove o si sposta un NVDIMM, sbloccare il fermo di blocco sul riser, quindi rimuovere il riser applicabile.</block>
   <block id="09286498e9c19adb60810f2dcab43b11" category="summary">Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.</block>
-  <block id="a3ab531d62779409698b7c4da393c7e6" category="doc">Trasferire l'immagine di boot sul supporto di boot - AFF C800</block>
   <block id="13d5b33c8f1d9280033879c8b0a8fb7c" category="list-text">È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.</block>
   <block id="0746d07b3ea1b2abd9f375beb3d5799a" category="list-text">Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.</block>
   <block id="72188531636fc5815089233196e1ec35" category="paragraph">Riser</block>
@@ -1521,7 +1515,6 @@
   <block id="d34866f3088c7776e916f77e459c1c80" category="list-text">Salvare le variabili di ambiente modificate con<block ref="c1a29cc79fbc441f23fa8d5d10961fd8" prefix=" " category="inline-code"></block> comando</block>
   <block id="d28690996b38deb3b6d333e5751da58d" category="list-text">Confermare le modifiche utilizzando<block ref="1f2a30709555736fff7a751384c24798" prefix=" " category="inline-code"></block> comando.</block>
   <block id="759e216c6a22313a95c34c198ce8cb0b" category="summary">Individuare il supporto di avvio guasto nel modulo controller rimuovendo il riser 3 sul modulo controller prima di sostituire il supporto di avvio.</block>
-  <block id="b841c581d0bd2543077c9323cde216c2" category="doc">Sostituire il supporto di avvio - AFF C800</block>
   <block id="588550e231fd9dcead167f2e3a8a2926" category="paragraph">Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a stella.</block>
   <block id="b075a4576b5250274446097769fe8ec1" category="list-text">Installare il supporto di avvio sostitutivo nel modulo controller:</block>
   <block id="2d246efbd344924acb05ea2d4db3768e" category="list-text">Reinstallare il riser nel modulo controller.</block>
@@ -1570,7 +1563,6 @@
   <block id="3df4b609e8276258189914063ffb17c2" category="list-text">È importante applicare i comandi descritti di seguito al controller corretto:</block>
   <block id="f9d753fddfdd4cf75bdcf826d545a576" category="list-text">Il controller _alterato_ è il controller su cui si esegue la manutenzione.</block>
   <block id="e4107ee9d71fad92265b6222f2822ad8" category="list-text">Il controller _healthy_ è il partner ha del controller compromesso.</block>
-  <block id="83087c77244cbf7473481303d60706cd" category="doc">Avviare l'immagine di ripristino - AFF C800</block>
   <block id="5ff3f260d4c603a9f1e9d18be080e7e7" category="list-text">Ripristinare il file system var:</block>
   <block id="044d6d45343bea91e00935a60885325b" category="paragraph">Se viene richiesto di continuare con l'aggiornamento, premere<block ref="13a9c4ec1810b3cc11a9e77c220f41c9" prefix=" " category="inline-code"></block>.</block>
   <block id="51ab7fb6e9e4a8ef6232b2cbb7c7abaf" category="paragraph">Nessuna connessione di rete e si trova in una configurazione MetroCluster IP</block>
@@ -1869,9 +1861,7 @@
   <block id="1e1eb097395dd5376d6e746987676ab9" category="doc">Sostituire una ventola - AFF A800</block>
   <block id="b8984f02e6cfd8c017d9d0f4737d0ac7" category="doc">Sostituire il telaio - AFF A800</block>
   <block id="2ee0c03cb33be156e12b5b33dbf8e422" category="doc">Sostituire la batteria NVDIMM - AFF A800</block>
-  <block id="228833e7e465458067df236eb339d948" category="doc">Restituire il componente guasto a NetApp - AFF A800</block>
   <block id="868fb46f8db1c45bfa9a49dea454c35a" category="doc">Panoramica della sostituzione del modulo controller - AFF A800</block>
-  <block id="03163c4d180c5b6d6482efa550043cd8" category="doc">Spegnere il controller - AFF A800</block>
   <block id="fd1cff0abcf1ef0e075b330e2ee360fe" category="doc">Completare il processo di ripristino e sostituzione - AFF A800</block>
   <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">Passaggi rapidi - AFF A800</block>
   <block id="42e8099baf01da8bcc3b8362f29f317c" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF A800</block>
@@ -1900,13 +1890,10 @@
   <block id="5189bdda5c50ec48e9cb3132d0fa8678" category="list-text">Collegare il connettore del cavo di alimentazione all'alimentatore.</block>
   <block id="996349ffc749676ad9ad3291406b24cf" category="list-text">Fissare il cavo di alimentazione all'alimentatore con le viti a testa zigrinata.</block>
   <block id="161d11f75b68457ea33ac52c79b01c05" category="doc">Sostituire un modulo NVDIMM - AFF A800</block>
-  <block id="80257ad9b8e102e01f1a08f309c3eed0" category="doc">Trasferire l'immagine di boot sul supporto di boot - AFF A800</block>
-  <block id="34cf3a43d39d8b0acc65bd578d7188da" category="doc">Sostituire il supporto di avvio - AFF A800</block>
   <block id="865bb86499cf1ad3a70c7ff888673760" category="doc">Spegnere il controller non utilizzato - AFF A800</block>
   <block id="b847555d08409368f0fef45554d04bc5" category="doc">Sostituire una scheda PCIe - AFF A800</block>
   <block id="2bb6eb6e274e403747742b20b6b76f1a" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A800</block>
   <block id="0e3989fd0fd811ede751f0ca9dbfbe88" category="doc">Panoramica della sostituzione dei supporti di avvio - AFF A800</block>
-  <block id="4050846ab3a5766e0ed28bed6ef9631b" category="doc">Avviare l'immagine di ripristino - AFF A800</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
@@ -2902,7 +2889,6 @@
   <block id="10446d8e0f9e8e6b297995ce7dafe03c" category="doc">Completare il processo di sostituzione - AFF A900</block>
   <block id="727b43bb986548fddfd9fbbfd6c3c609" category="summary">Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, è necessario recuperare lo storage, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller.</block>
   <block id="055140d300b472c3cf197b316fc1a111" category="doc">Ripristino completo del sistema - AFF A900</block>
-  <block id="13437270a7a5bb30024bcf51e56b9645" category="doc">Restituire il componente guasto a NetApp - AFF A900</block>
   <block id="eee1a85c64e17c1ca9ed30c1f544d35d" category="doc">Sostituire il modulo controller - AFF A900</block>
   <block id="8b20a20371bd26b5083507f395cf24ab" category="paragraph">Per sostituire il modulo controller guasto, è necessario spegnere il controller guasto, spostare i componenti interni nel modulo controller sostitutivo, installare il modulo controller sostitutivo e riavviare il controller sostitutivo.</block>
   <block id="3f0db9aa8dd4145d2c4b64ea3481303a" category="list-text">In questa procedura, il dispositivo di boot viene spostato dal controller guasto al controller sostitutivo in modo che il controller sostitutivo si avvii nella stessa versione di ONTAP del vecchio modulo controller.</block>
@@ -2985,15 +2971,12 @@
   <block id="0927521d277e31ef032f3c9f7cd60215" category="list-text">Ruotare la maniglia della camma del modulo controller in posizione di blocco.</block>
   <block id="800c8750475f7f7221a9b7946bec8d10" category="list-text">Selezionare l'opzione per avviare IL CARICATORE.</block>
   <block id="b35a00e75330322eefd710713ca83b02" category="doc">Sistemi AFF A900</block>
-  <block id="097b77e85acb6a3710edc7929eb72d93" category="doc">Avviare l'immagine di ripristino - AFF A900</block>
   <block id="6ce5f7147d284a7d41c1fc93d3072d57" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di sovrascrivere<block ref="295b4ac77f4e1c5f93c6894df85fd86d" prefix=" " category="inline-code"></block>.</block>
   <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di confermare se il backup di ripristino è stato eseguito correttamente.</block>
   <block id="c9ed271ea801891a1b5c1e6e048813b6" category="list-text">Premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando viene richiesto di ripristinare la copia della configurazione.</block>
   <block id="cf32c31dc3885f15168fe5279b7d1cf8" category="list-text">Eseguire il comando di ripristino del backup:<block ref="44d388b27236c791c5fe1d30cc29bc43" prefix=" " category="inline-code"></block></block>
   <block id="d2f83f17d591f35e8d5d48e486cff011" category="inline-xref-macro">Fasi di sostituzione dei supporti post-boot per OKM, NSE e NVE</block>
-  <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
   <block id="f019032ca5e4ee1339ef0bcd485f9c8d" category="summary">È necessario rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l'immagine sul supporto di avvio sostitutivo.</block>
-  <block id="f42f050dc5269ad7b9f62abb5be6f335" category="doc">Rimuovere il controller, sostituire il supporto di avvio e trasferire l'immagine di avvio - AFF A900</block>
   <block id="5f1d298de53194255e6ce0c8f30f4bdb" category="list-text">Sollevare il condotto d'aria nero sul retro del modulo controller, quindi individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:</block>
   <block id="0b8e9f368ea269ec23c6c676a7561e53" category="video-title">Animazione - sostituire il supporto di avvio</block>
   <block id="c8587180911d070686f7467322a07db1" category="list-text">Reinstallare il coperchio del modulo controller allineando i perni sul coperchio con gli slot sul supporto della scheda madre, quindi far scorrere il coperchio in posizione.</block>
@@ -4050,7 +4033,6 @@
   <block id="537af5095a4992ae7e9026bd3ff008a6" category="list-text">Il nodo integro è il nodo sopravvissuto.</block>
   <block id="68828ed4b0036df85ace8abb1ad7c137" category="doc">Ripristinare e verificare la configurazione - FAS9500</block>
   <block id="1aa73ef56da88752323de5876f9b3750" category="doc">Sostituire un alimentatore - FAS9500</block>
-  <block id="c3b3c57f039315476b0683acbee42a5a" category="doc">Spegnere il controller compromesso - FAS9500</block>
   <block id="a7ed9ff4da75adb740c610eda185e598" category="doc">Passaggi rapidi - FAS9500</block>
   <block id="6c77c0963cc43d89befd25aeab2f805c" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di FAS9500</block>
   <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">Modulo di caching hot-swap - FAS9500</block>
@@ -4079,20 +4061,6 @@
   <block id="abe0e9d012f3bb2e25626cbd54f69e36" category="video-title">Animazione - Installazione del modulo controller</block>
   <block id="5852e0b4d479d20d783c528e9f8e41fa" category="doc">Sistemi FAS9500</block>
   <block id="cdcb00922b21796793c48c3b35b6c0f4" category="doc">Avviare l'immagine di ripristino - FAS9500</block>
-  <block id="bc8cb8c20c19791f56e4ce60f7a2aad0" category="doc">Rimuovere il controller, sostituire il supporto di avvio e trasferire l'immagine di avvio - FAS9500</block>
-  <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
-  <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">partner-sysid</block>
-  <block id="bac349cdf99ddd20206c9b20eb9e6d22" category="list-text">bootarg.init.flash_optimized per AFF</block>
-  <block id="f3b31cc7028e1885fb21b81b0fdbee37" category="list-text">bootarg.init.san_optimized per AFF</block>
-  <block id="cbcb656967b507992a4a640a604c47e0" category="list-text">bootarg.init.switchless_cluster.enable</block>
-  <block id="8e66622dd5a924bd59ee4f46318a13a9" category="list-text">bootarg.storageencryption.support &lt;value&gt;</block>
-  <block id="bdafe896118bc000c3a68090808112cd" category="list-text">bootarg.keymanager.support &lt;value&gt;</block>
-  <block id="8f4ea3656910a928382f8c75368c3c2a" category="list-text">kmip.init.interface &lt;value&gt;</block>
-  <block id="b2adbab4ce96430a3475db235c4be8c3" category="list-text">kmip.init.ipaddr &lt;value&gt;</block>
-  <block id="70e8273bd6b058c89bc23bad2de4c396" category="list-text">kmip.init.netmask &lt;value&gt;</block>
-  <block id="4d10af14d34e5e468c4aee19207329d3" category="list-text">kmip.init.gateway &lt;value&gt;</block>
-  <block id="a1781eecf18376feb2f740b6a3d7781d" category="list-text">bootarg.onboard_keymanager &lt;value&gt;</block>
-  <block id="8ed13fe688162a9d4d89829700344e8f" category="list-text">Confermare le modifiche utilizzando<block ref="de69d3b344fe42b2519bfd5cb80aa443" prefix=" " category="inline-code"></block> comando.</block>
   <block id="859c951ebab21901f2fd6183c53339d5" category="summary">Per sostituire a caldo un modulo di alimentazione del controller di destinazione (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.</block>
   <block id="821b1e6be57f410ab68ac2071fc04df4" category="doc">Sostituire il modulo di alimentazione Destage Control contenente la batteria NVRAM11 - FAS9500</block>
   <block id="6acd2520bad86e2719b0a66d04f59f28" category="list-text">Premere il pulsante di blocco terracotta sulla maniglia del modulo, quindi estrarre il modulo DCPM dal telaio.</block>
@@ -4133,7 +4101,6 @@
   <block id="4d8adba62be8512e84ae7825848692e9" category="doc">Restituire il componente guasto a NetApp - AFF C400</block>
   <block id="76f50c3f31d2ab405df556357b00ae41" category="doc">Panoramica della sostituzione del modulo controller - AFF C400</block>
   <block id="8403c2aeb3b774ba2a4c036b814a8776" category="doc">Completare il processo di ripristino e sostituzione - AFF C400</block>
-  <block id="f961e8ce56452340996ff8bab8e0d037" category="doc">Avviare l'immagine di ripristino - AFF C400</block>
   <block id="aeb801131e9e445741a961cfb931c2db" category="doc">Spegnere il controller compromesso - AFF C400</block>
   <block id="bb2c0218cb7e6195837599cbb3d03ac1" category="doc">Switch back aggregates in una configurazione MetroCluster a due nodi - AFF C400</block>
   <block id="28dd2419d5232cd5e390f590d7d76b55" category="doc">Guida rapida - AFF C400</block>
@@ -4145,7 +4112,6 @@
   <block id="51e4f59a1aaa143b8d5c910f0a77328e" category="video-title">Animazione - istruzioni per l'installazione e la configurazione di AFF C400</block>
   <block id="327f4c7d5141a205c506afea880dfdef" category="doc">Sostituzione di un alimentatore - AFF C400</block>
   <block id="eca713323e6fa9782ebae60357fc0453" category="doc">Sostituire un modulo NVDIMM - AFF C400</block>
-  <block id="a8284f2b3b25b926b6a065b08aa67e1a" category="doc">Sostituire il supporto di avvio - AFF C400</block>
   <block id="7fc305adae8e903c0dc8bff5a49862c9" category="doc">Sostituire una scheda PCIe o mezzanine - AFF C400</block>
   <block id="d01bad26d559eb16c91d450cefe02539" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF C400</block>
   <block id="042e6e8da8b6da480bf85ff04e4d7922" category="doc">Panoramica della sostituzione dei supporti di avvio - AFF C400</block>
@@ -4204,12 +4170,8 @@
   <block id="ed8e6ac65f869dd5cec262d6da357514" category="doc">Completare il processo di sostituzione - FAS8300 e FAS8700</block>
   <block id="25a1b4c8ff5717b58eca78fec7573116" category="doc">Panoramica della sostituzione dello chassis - FAS8300 e FAS8700</block>
   <block id="b98cf2068f61b55f2a9881a2a679fcc3" category="doc">Sostituire la batteria NVDIMM - FAS8300 e FAS8700</block>
-  <block id="14df5008a24cd65fbb232505d17779b3" category="doc">Restituire il componente guasto a NetApp - AFF fas8300 e FAS8700</block>
   <block id="94aea6f09b1466d3642940029f1b693a" category="doc">Panoramica della sostituzione del modulo controller - FAS8300 e FAS8700</block>
   <block id="5b904801e53f1801fe6ebd755f21ce8e" category="doc">Completare il processo di ripristino e sostituzione - FAS8300 e FAS8700</block>
-  <block id="9860772233b4555001c5a388230758df" category="doc">Avviare l'immagine di ripristino - AFF FAS8300 e FAS8700</block>
-  <block id="27dcde903ce9d2827a6882d72efe7cb4" category="doc">Spegnere il controller compromesso - AFF FAS8300 e FAS8700</block>
-  <block id="bef53c14eb719bb1cd8539b91f7515d7" category="doc">Switch back aggregates in una configurazione MetroCluster a due nodi - AFF fas8300 e FAS8700</block>
   <block id="d1903d398c4c8283b66cc2ee2599cef5" category="doc">Guida rapida - FAS8300 e FAS8700</block>
   <block id="221315bbb17a9424f37793425986d6c2" category="inline-link-macro">Istruzioni di installazione e configurazione di FAS8300 e FAS8700</block>
   <block id="66baa375eeb4eeafaa0788f1450b293e" category="paragraph"><block ref="66baa375eeb4eeafaa0788f1450b293e" category="inline-link-macro-rx"></block></block>
@@ -4243,7 +4205,6 @@
   <block id="73e891cd10bc7a669d3df2629ca0ed7c" category="doc">Sostituire un modulo NVDIMM - FAS8300 e FAS8700</block>
   <block id="edae17e7394c8face12fc5d74d33aa9b" category="paragraph">Per sostituire il modulo NVDIMM, individuarlo nel modulo controller utilizzando la mappa FRU sulla parte superiore del condotto dell'aria della mappa FRU sulla parte superiore del riser dello slot 1.</block>
   <block id="bf333756fca94003818a0db8ced6f7d9" category="list-text">Riportare il controller al funzionamento normale restituendo lo storage:<block ref="a2a0d2a805a6a7b779572d78313420fd" prefix=" " category="inline-code"></block></block>
-  <block id="ba4fadf78396a2db14bc9a4e0f707f9d" category="doc">Sostituire il supporto di avvio - FAS8300 e FAS8700</block>
   <block id="4a848babffe3702bffe9efa29dd12c61" category="paragraph">Per sostituire il supporto di avvio, è possibile utilizzare l'animazione, le illustrazioni o i passaggi scritti riportati di seguito.</block>
   <block id="fc68b2259a318d9688e92ea62281a6d1" category="video-title">Animazione - sostituire il supporto di avvio</block>
   <block id="fe0879209afd1fc2f28d40077ccda980" category="doc">Spegnere il controller compromesso - FAS8300 e FAS8700</block>
@@ -4268,7 +4229,6 @@
   <block id="9fd188207b0f7e77aa563d18053142c8" category="section-title">Fase 8: Completare il processo di sostituzione</block>
   <block id="c0925c06c8c424f377718df251d2ae9f" category="doc">Sostituire la batteria dell'orologio in tempo reale - FAS8300 e FAS8700</block>
   <block id="97a3946d5380c45539697b463767b69c" category="section-title">Fase 4: Reinstallare il modulo controller e impostare data/ora dopo la sostituzione della batteria RTC</block>
-  <block id="fe0e817b3bc5b4c3f92a0bd2fc673648" category="doc">Panoramica sulla sostituzione dei supporti di avvio - AFF FAS8300 e FAS8700</block>
   <block id="88afeb50c76c0c11cfa02af19240816d" category="doc">Spostare e sostituire l'hardware - AFF A200</block>
   <block id="8ef8932f72109469af86d4e2c65c227c" category="paragraph">Spostare l'alimentatore dal vecchio chassis al nuovo chassis.</block>
   <block id="3c533ebf2f9fc11504f4940fa25f3d60" category="doc">Sostituire l'unità SSD o HDD - AFF A200</block>
@@ -4518,7 +4478,6 @@
   <block id="e36a558e7bc20ae0e75bec222964d055" category="paragraph">Entrambi i numeri sul display digitale iniziano a lampeggiare e il LED ambra sul display dell'operatore si illumina dopo circa cinque secondi, avvisando l'utente che l'ID dello shelf del disco in sospeso non è ancora entrato in vigore.</block>
   <block id="9c221bef9744439a86ecbb6f88e250ff" category="list-text">Spegnere e riaccendere lo shelf di dischi per rendere effettivo l'ID dello shelf.</block>
   <block id="205f1a8463c3864309c68834a88b379a" category="paragraph">Per completare il ciclo di alimentazione, è necessario spegnere entrambi gli interruttori di alimentazione, attendere il tempo necessario e riaccenderli.</block>
-  <block id="15a1d20a0f87ef124a4dfb12c2d12f8a" category="list-text">Se ONTAP è in esecuzione (i controller sono disponibili per fornire i dati) e tutti i dischi nello shelf non sono di proprietà, spare o parte di aggregati non allineati, attendere almeno 70 secondi.</block>
   <block id="0de4baec8d6e3dac5c52267ff0631bac" category="list-text">Ripetere i passaggi da 1 a 9 per ogni shelf di dischi aggiuntivo.</block>
   <block id="c6f83377a8f707e5d4500fa6c34141e8" category="list-text">Verificare che il sistema non disponga di shelf ID duplicati.</block>
   <block id="79a8830b6eb260be5b914306191dde58" category="paragraph">Quando due o più shelf di dischi hanno lo stesso ID, il sistema assegna al shelf di dischi duplicati un numero di ID soft uguale o superiore a 100. È necessario modificare il numero del soft ID (duplicato).</block>
@@ -5476,7 +5435,6 @@
   <block id="abab29a6fb252536c5c31f6382d49164" category="sidebar">Sistemi AFF C800</block>
   <block id="7db3bd8a3e788453e923804704eb87b7" category="sidebar">Installazione e configurazione di AFF C800</block>
   <block id="27d884866d0c53b71a3641e639ac19f3" category="sidebar">Manutenzione di AFF C800</block>
-  <block id="36c69c49c18ae2fa7dce0347a69f0065" category="sidebar">Supporti per l'avvio AFF C800</block>
   <block id="50e67d9b10aa79baef3dc48d6b7a85e0" category="sidebar">Sostituire l'immagine di boot</block>
   <block id="81e825abffe43a736d6c9dc55fd84da2" category="sidebar">Chassis AFF C800</block>
   <block id="9bbf373797bf7cf7ba62c80023682e25" category="sidebar">Controller</block>
@@ -5491,7 +5449,6 @@
   <block id="7990706983b7a68de799c5164d608a30" category="sidebar">Sistemi AFF A800</block>
   <block id="f9bc6672d0c11aeaba7c639726c8452d" category="sidebar">Installazione e configurazione di AFF A800</block>
   <block id="cfa03b31ffbc6dcdead22aa89e56143c" category="sidebar">Manutenzione di AFF A800</block>
-  <block id="b5b680b3561fefc523bf540f6cbb76a5" category="sidebar">Supporti per l'avvio AFF A800</block>
   <block id="7bc56029e8efc19176ac65d5c1b11f63" category="sidebar">Chassis AFF A800</block>
   <block id="03a6e6d8c5aef6f456ef142fc5a3912b" category="sidebar">Modulo controller A800 AFF</block>
   <block id="78d2c75e596fdde729e02a7f3810fe1f" category="sidebar">Sistemi FAS2700</block>
@@ -5537,13 +5494,9 @@
   <block id="c49dd0e106f4d1baf8b7e7083d5068b3" category="sidebar">Modulo controller A300 AFF</block>
   <block id="4ea03be5210b1deef6915fc966939eb4" category="sidebar">Installazione e configurazione di AFF A900</block>
   <block id="9dac2c892993fb8afd0257c050073a7a" category="sidebar">Manutenzione di AFF A900</block>
-  <block id="fe673aff2ce9eb5c6eaf841f4ec88b30" category="sidebar">Supporti per l'avvio AFF A900</block>
   <block id="d5e04348de632d7c88520b90cf79f1fa" category="sidebar">Avviare l'immagine di ripristino</block>
   <block id="6cff7e5493433d24015d6ef5a8566b38" category="sidebar">Chassis AFF A900</block>
-  <block id="2e8840df8a206cd4e5aa7e0fa02b1cf7" category="sidebar">Sostituire l'hardware</block>
-  <block id="fa526b254f42bdec5706995cc5868952" category="sidebar">Ripristino e verifica della configurazione</block>
   <block id="7d1c80f318f9bf16deac2495abe88a7e" category="sidebar">Modulo controller A900 AFF</block>
-  <block id="043f87552b799b527c2dd72b0313e404" category="sidebar">Sostituire l'hardware del modulo controller</block>
   <block id="718b8a88a314d56b344c3895d896ab2a" category="sidebar">Ripristinare e verificare la configurazione del sistema</block>
   <block id="6068fc2d3e06aeff53e2c84fd7bd9e9e" category="sidebar">Sistemi FAS500f</block>
   <block id="d8763c6ad52728ece5b2ff77bdb94ed2" category="sidebar">Installazione e configurazione di FAS500f</block>
@@ -5592,13 +5545,11 @@
   <block id="4ee45fd3000c3d26ca4a96d5e0a1f8ae" category="sidebar">Batteria con clock in tempo reale AFF A150</block>
   <block id="d73758375aa4c2c0d806b85cf93229be" category="sidebar">Installazione e configurazione di FAS9500</block>
   <block id="fd44bc5547a31fa6a44a5dba383710f5" category="sidebar">Manutenzione di FAS9500</block>
-  <block id="ee6cf51d21f40cc78c0a70dbb1b8d104" category="sidebar">FAS9500 Boot Media</block>
   <block id="33a725da473f57f9db39e8cb90fb8ec1" category="sidebar">Chassis FAS9500</block>
   <block id="cea781d942e6e6feafc25284d025750b" category="sidebar">Modulo controller FAS9500</block>
   <block id="6329b1134cd585a80e1c1289687135be" category="sidebar">Sistemi AFF C400</block>
   <block id="fef6e20056a9a97444ad5d035918d0f2" category="sidebar">Installazione e configurazione di AFF C400</block>
   <block id="abdc9f1c1f1fa93deddb3513a455ff74" category="sidebar">Manutenzione di AFF C400</block>
-  <block id="69077bf839678df07e0a3ee2c5ce0c19" category="sidebar">Supporti di avvio AFF C400</block>
   <block id="4e7c968326614b0c8bb6e7220446c15e" category="sidebar">Chassis AFF C400</block>
   <block id="275e786433a7b9ba3c47efacaf9e9d56" category="sidebar">Modulo controller AFF C400</block>
   <block id="a49ab8f17cda96f1a42a275df274b272" category="sidebar">DIMM AFF C400</block>
@@ -5621,16 +5572,6 @@
   <block id="ad9de388f41dbddb2716bd80eb671561" category="sidebar">Chassis FAS2600</block>
   <block id="f2ce7cccebe6e19fd464832f6290305a" category="sidebar">Modulo controller FAS2600</block>
   <block id="246a9aee554901f0dcaa84281ba65f27" category="sidebar">Sistemi FAS8300 e FAS8700</block>
-  <block id="47457e18f221715e00fad3fb4c7a52dc" category="sidebar">Installazione e configurazione di AFF FAS8300 e FAS8700</block>
-  <block id="de07745e6df6470f2740b5a80f2cfc02" category="sidebar">Manutenzione di AFF FAS8300 e FAS8700</block>
-  <block id="a137d57ddda596bd08f1d0704c5d1c39" category="sidebar">Supporti per l'avvio di AFF FAS8300 e FAS8700</block>
-  <block id="32efd1c40b64ba63f8e2ef74e7bbd3ef" category="sidebar">Modulo caching AFF FAS8300 e FAS8700</block>
-  <block id="ce745a6886861b37bbd4e634d23d3d30" category="sidebar">Chassis AFF FAS8300 e FAS8700</block>
-  <block id="a387a6313c902695bd31ebfe788cd3a4" category="sidebar">Controller AFF FAS8300 e FAS8700</block>
-  <block id="0fcef37c24790dd8deb76f0463ab8ae7" category="sidebar">DIMM AFF FAS8300 e FAS8700</block>
-  <block id="89a799818e0c9e291b449a0b1a37c1a8" category="sidebar">Scheda PCIe o mezzanine AFF FAS8300 e FAS8700</block>
-  <block id="b93c4e02bbbbb606086c414028b69b0c" category="sidebar">Alimentatori AFF FAS8300 e FAS8700</block>
-  <block id="099c4a72daac7793c0290ca5e2fdf623" category="sidebar">Batteria con clock in tempo reale AFF FAS8300 e FAS8700</block>
   <block id="c8773f5cba3b9e8aa265fa0dc1a2c09e" category="sidebar">Sistemi AFF A200</block>
   <block id="9ea8548070881e82ab793011f6dd50c5" category="sidebar">Installazione e configurazione di AFF A200</block>
   <block id="d21266dfc7dc62ffd1536ac599bb377e" category="sidebar">Manutenzione di AFF A200</block>
@@ -6168,9 +6109,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="832db81167fd84efee6f2f1426f0d945" category="doc">Spegnere il modulo controller guasto - ASA A250</block>
   <block id="e31f48aed610f4dfc632dee37773ef46" category="section-title">Fase 7: Ripristinare il funzionamento del modulo controller</block>
   <block id="4de03bc95ff205a87859998054c21b43" category="paragraph">Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio.</block>
-  <block id="ae07b1debd7dfb2474b29c923f78cb6a" category="summary">Manutenzione dell'hardware FAS8330 e FAS8700</block>
   <block id="f92b0aabcfb0600795d091d920f2ee13" category="doc">Manutenzione dell'hardware FAS8300 e FAS8700</block>
-  <block id="0eeb87f24d0432f0969e16a0d5862ea7" category="paragraph">Per i sistemi storage FAS8300 e FAS8700, è possibile eseguire procedure di manutenzione sui seguenti componenti.</block>
   <block id="67e353c31cb553b860a67adade3b1120" category="paragraph">È necessario sostituire il modulo di caching del controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline.</block>
   <block id="7d3c8192745dac8d9c9ce0b0eaffb290" category="section-title">Fase 3: Completare il processo di sostituzione</block>
   <block id="067920079e2e1532ebc5f61e1b39a90e" category="doc">Manutenzione dell'hardware AFF A300</block>
@@ -6241,7 +6180,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9dbc6de9e979960d269ff45dfa541d76" category="doc">Ricable the system and reassign disks - ASA A800 (riscrivere il sistema e riassegnare i dischi)</block>
   <block id="0b61404420e238ba6738c723b617ba4f" category="doc">Panoramica della sostituzione dei supporti di avvio - ASA A800</block>
   <block id="308e5629f56cd85980c01c5a7d6b4a5e" category="doc">Sostituire una ventola - ASA A800</block>
-  <block id="d6a1076e496a5256314c747b11460d37" category="doc">Sostituire il supporto di avvio - ASA A800</block>
   <block id="799d5020bc2d18c715e106de04ae1867" category="doc">Sostituire il telaio - ASA A800</block>
   <block id="3ef7061589a2a04431ea9f25b6e79307" category="doc">Spegnere il controller non utilizzato - ASA A800</block>
   <block id="e2bc701c24d2b9ed0f95fc6ba2920d2d" category="doc">Ripristinare e verificare la configurazione del sistema - ASA A800</block>
@@ -6253,7 +6191,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="5fa3fc366648b99a59526964d222385e" category="summary">Manutenzione dell'hardware ASA A800</block>
   <block id="8c32524c30f1cf8ac0610fc400ed0758" category="doc">Manutenzione dell'hardware ASA A800</block>
   <block id="d374640195a360abfae0102d10acd97b" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA A800</block>
-  <block id="6d197c1fa114418d0086844edf0867e7" category="doc">Trasferire l'immagine di boot sul supporto di boot - ASA A800</block>
   <block id="202dc1ddf91930fc943d288f13abc2c4" category="doc">Sostituire il modulo DIMM - ASA A800</block>
   <block id="498a9392717395bcd76919fcbc8cd683" category="doc">Spegnere i controller - ASA A800</block>
   <block id="8eeb34b2abc09270a61b91c0fea86350" category="doc">Ripristinare OKM, NSE e NVE - ASA A800</block>
@@ -6261,15 +6198,12 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d1df8c22a8919d325b97cb34cdbfec4f" category="doc">Passaggi rapidi - ASA A800</block>
   <block id="caa8aa4a595b6f33857d21fb97a3622e" category="paragraph">Questa pagina fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> Se hai familiarità con l'installazione dei sistemi NetApp.</block>
   <block id="f0d6a8fa292b0f0965c180c3ec81b98c" category="admonition">Il sistema ASA A800 utilizza la stessa procedura di installazione del sistema AFF A800.</block>
-  <block id="027df07ace2b49bdd101ed7de8831a66" category="doc">Avviare l'immagine di ripristino - ASA A800</block>
   <block id="1809d57833f6aee6ca28a7a9976f3c02" category="doc">Sostituire l'unità SSD o HDD - ASA A800</block>
   <block id="8efb05cbcb76a25c9260967bb6da74ea" category="doc">Sostituire l'alimentatore - ASA A800</block>
   <block id="ab40c87c67587a22552f3f86175f6b6c" category="doc">Sostituire il controller - ASA A800</block>
   <block id="3e1e482bf99769f878506ac262ea9469" category="doc">Sostituire il telaio - ASA A800</block>
   <block id="cf89ec61d7d165d24a4540839ef73f51" category="doc">Sostituzione completa dello chassis - ASA A800</block>
   <block id="67908030f8ab0c8af80f92c280cae057" category="doc">Panoramica della sostituzione del controller - ASA A800</block>
-  <block id="9bada4e82bb10497f6b0fb3e9469479c" category="doc">Restituire il componente guasto a NetApp - ASA A800</block>
-  <block id="bb1471f2572ce66912ad367693b967e2" category="doc">Spegnere il controller - ASA A800</block>
   <block id="aac030e27e2d05ac9c8d86c5ee6b670b" category="doc">Sostituire un modulo LED USB - FAS9000</block>
   <block id="f149ffc69b5cfb8f7aad3b01a8a19d4a" category="doc">Riscrivere il sistema e riassegnare i dischi - FAS9000</block>
   <block id="c6dffe83bee9ebc28b0c537a4a763ffe" category="doc">Panoramica della sostituzione dei supporti di avvio - FAS9000</block>
@@ -6346,7 +6280,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="ed6183c79360d84f37e156e80fe33aa6" category="doc">Spegnere i controller - ASA A900</block>
   <block id="67bcd92a05c94a3a813d8e595b1f5283" category="doc">Ripristino completo del sistema - ASA A900</block>
   <block id="eb192783589d844d1af1ecb849489b22" category="section-title">Fase 1: Installare le licenze per il nuovo controller</block>
-  <block id="996a9b0ff7207d4230b2b6f5ca8de4e0" category="doc">Avviare l'immagine di ripristino - ASA A900</block>
   <block id="4da6be1bf421fc7ff067ee2e73b4b8b1" category="summary">Fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema.</block>
   <block id="4848727d4d964e87d86f556430e12505" category="doc">Passaggi rapidi - ASA A900</block>
   <block id="c247d6dca80720b1329aceeb17a50ccf" category="admonition">Il sistema ASA A900 utilizza la stessa procedura di installazione del sistema AFF A900.</block>
@@ -6472,7 +6405,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9a54ff3f438075f6ab130fd5ddae6cb8" category="paragraph">Dopo aver installato il modulo controller e qualsiasi altro componente nello chassis sostitutivo, avviare il sistema.</block>
   <block id="e7e663b99514b25c64e06ab89f12a96d" category="summary">Dopo aver sostituito l'hardware e aver avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
   <block id="941c5c287ded8e20a0e0afb65a87e0f3" category="paragraph">Una volta completata la sostituzione dell'hardware, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
-  <block id="f8ead0e1f5f1d60e8cfce169aadd994f" category="summary">Manutenzione dell'hardware ASA FAS9500</block>
   <block id="1308073a5b44cc77fcce7142e61edf15" category="doc">Manutenzione dell'hardware FAS9500</block>
   <block id="9e209d7a48bf7b8bd414632f31a6d032" category="paragraph">Per il sistema storage FAS9500, è possibile eseguire le procedure di manutenzione dei seguenti componenti.</block>
   <block id="48f49ab53c743281158bdd3a887f7928" category="summary">Manutenzione dell'hardware ASA C400</block>
@@ -6485,7 +6417,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="387bb93ff4bb00a831a3ddb5c619a84a" category="doc">Riscrivere il sistema e riassegnare i dischi - ASA A400</block>
   <block id="f4a25106acc9f2b398da8ab1dbc2278a" category="doc">Panoramica della sostituzione dei supporti di avvio - ASA A400</block>
   <block id="1ad7108acef5f97dbf6407833d441058" category="doc">Modulo ventola hot-swap - ASA A400</block>
-  <block id="54a4d4e7da8d9e37d2ba61fd94122d60" category="doc">Sostituire il supporto di avvio - ASA A400</block>
   <block id="f04cfd2261dd6a1f556f80b087e6b8e6" category="doc">Sostituire l'hardware - ASA A400</block>
   <block id="f52c387171f2e8c70a6f184572b951e7" category="doc">Switch back aggregates in una configurazione MetroCluster a due nodi - ASA A400</block>
   <block id="0a852867e7d67d61d0c2e9fc0bf5c25b" category="doc">Spegnere il controller non utilizzato - ASA A400</block>
@@ -6505,7 +6436,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="fbe5ac44caed14b65f65c674c260d4f6" category="list-text"><block ref="fbe5ac44caed14b65f65c674c260d4f6" category="inline-link-macro-rx"></block></block>
   <block id="5ba82c1fe7f9a054ea742a089f7a227e" category="list-text"><block ref="5ba82c1fe7f9a054ea742a089f7a227e" category="inline-link-macro-rx"></block></block>
   <block id="b8a21ef26361bcf497970ad95729f649" category="doc">Ripristino completo del sistema - ASA A400</block>
-  <block id="9e386c9e794f2f2e7ef00f62fb22c636" category="doc">Avviare l'immagine di ripristino - ASA A400</block>
   <block id="b65dcf1c7ad6c86f6d2d5bed4626bcc6" category="doc">Guida rapida - ASA A400</block>
   <block id="5eb8101a6e8a2a3f54c56549ab21ade4" category="admonition">Il sistema ASA A400 utilizza la stessa procedura di installazione del sistema AFF A400.</block>
   <block id="b26cf0fc163ec7e9ea966514eed60da1" category="doc">Sostituzione di un alimentatore - ASA A400</block>
@@ -6513,7 +6443,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="1952c1c21894126b1d43fd1b446add88" category="doc">Panoramica della sostituzione dello chassis - ASA A400</block>
   <block id="8a5c79d05f266b99fd8b21d069b75d78" category="doc">Sostituzione completa dello chassis - ASA A400</block>
   <block id="c4b2f6abafcc332bf4722cbb6468f31f" category="doc">Panoramica della sostituzione del controller - ASA A400</block>
-  <block id="15421bef78aa7462014529dab7da5730" category="doc">Restituire il componente guasto a NetApp - ASA A400</block>
   <block id="466aa8d45982e2ca3b8ed3fa99638ca2" category="paragraph">Dopo aver installato il modulo controller nel nuovo chassis, avviarlo.</block>
   <block id="145ef1ac525baa70aa5c03030fa49d7b" category="summary">Manutenzione dell'hardware del AFF A700s</block>
   <block id="5128a68724ce704ce115a0fb76e61b2d" category="doc">Manutenzione dell'hardware AFF A700s</block>
@@ -6573,7 +6502,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="157402a98436e93454bd795f06631e26" category="sidebar">Sistemi ASA A800</block>
   <block id="fe7deec5120abaf62371300bd4da5b6e" category="sidebar">Installazione e configurazione di ASA A800</block>
   <block id="bdab0fcadbf708f1f1fb16afd6fd466a" category="sidebar">Manutenzione di ASA A800</block>
-  <block id="52e0537c8f1ec6be694befd3617cd3dd" category="sidebar">Supporti per l'avvio ASA A800</block>
   <block id="418a8ea1c4ad523a83014cbdae44b5c3" category="sidebar">Chassis ASA A800</block>
   <block id="4589f7e3740a32d8bc8cb9c0e65f4a89" category="sidebar">Modulo controller A800 ASA</block>
   <block id="e4f0abc832a633a54f5a664b5033be93" category="sidebar">Aggiunta del modulo X91148A nel sistema con slot aperti</block>
@@ -6581,8 +6509,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="6fd9a3ad4812220bfa5621a9f82f04e7" category="sidebar">Sistemi ASA A900</block>
   <block id="3e1d68740fe9fb085d3acbdce19296b5" category="sidebar">Installazione e configurazione di ASA A900</block>
   <block id="0cb2548ce0f040b7a8125ebff5e56d6e" category="sidebar">Manutenzione di ASA A900</block>
-  <block id="9fbfbe4519034a95aa1a640a08e5b606" category="sidebar">Supporti per l'avvio ASA A900</block>
-  <block id="a0b6c54fae9a886e9274ded73da53353" category="sidebar">Sostituire il supporto di avvio guasto</block>
   <block id="b4b3b0c8d46b310c654d75599964cbe9" category="sidebar">Chassis ASA A900</block>
   <block id="53c8a64dd1d3685bac59f29b275f09fd" category="sidebar">Ripristinare e verificare la configurazione</block>
   <block id="042788b5141a1d26f2ec23d657ceb901" category="sidebar">Modulo controller A900 ASA</block>
@@ -6606,7 +6532,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="880e70d8b15ad919e463072506581a9a" category="sidebar">Sistemi ASA A400</block>
   <block id="9d524e3b80cdb8b322945f9b3acd0611" category="sidebar">Installazione e configurazione di ASA A400</block>
   <block id="34dd7f09476a68e4a11cace464b55609" category="sidebar">Manutenzione di ASA A400</block>
-  <block id="6dd829424be1ac15f2f65c92a7ed934b" category="sidebar">Supporti per l'avvio ASA A400</block>
   <block id="8cd2b472b79fbafe2b2b4f850e9be042" category="sidebar">Chassis ASA A400</block>
   <block id="187bfe8d41a4ffd322e65c79309c5089" category="sidebar">Modulo controller A400 ASA</block>
   <block id="ffb35c2db1105f8728e738072aa35c9e" category="sidebar">DIMM ASA A400</block>
@@ -6731,7 +6656,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c4d97f649f8fd0bc0d2842c98374b325" category="summary">Il video Installazione e configurazione mostra come installare e collegare il nuovo sistema.</block>
   <block id="728c8b35a059c5debd8717ebc5eef9cc" category="doc">Fasi video - ASA A250</block>
   <block id="da8c100a35e67a4a9a03589f6afa9ddc" category="doc">Fasi video - FAS500f</block>
-  <block id="92217d103cec461ace2aded92b4f42ab" category="doc">Restituire il componente guasto a NetApp - ASA C400</block>
   <block id="f4b7b756855e1111bd19648537226e16" category="doc">Gestire l'hardware ASA C400</block>
   <block id="f85c225eac9932f77dacb6e6236f7ce2" category="paragraph">Per il sistema di archiviazione ASA C400, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="2097e20950ae1f46d998ba486146b369" category="doc">Sostituire un NVDIMM - ASA C400</block>
@@ -6739,12 +6663,10 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="ec587342818437cd0c6a0daf4be599a1" category="doc">Sposta gli aggregati di back-up in una configurazione MetroCluster a due nodi - ASA C400</block>
   <block id="f7f6cafa82cca0d649fec769636a374b" category="doc">Spegnere il controller danneggiato - ASA C400</block>
   <block id="124e5d993905ca8fc1e3ed8fa62e76ad" category="doc">Sostituire un modulo DIMM - ASA C400</block>
-  <block id="987d3338a5584fedd4b7efd844691246" category="doc">Sostituire il supporto di avvio - ASA C400</block>
   <block id="9187e0a8947f2ca2039bb2793202300f" category="doc">Sostituire la batteria NVDIMM - ASA C400</block>
   <block id="d8f9a29ce7164ac54d9904be12998cb5" category="doc">Panoramica della sostituzione del modulo controller - ASA C400</block>
   <block id="d593ab590ed489d6717b0d0fbc84376f" category="doc">Sostituire l'hardware del modulo controller - ASA C400</block>
   <block id="00e85c9b81ade8fe5e2f38c4a31d4388" category="doc">Modulo ventola hot-swap a - ASA C400</block>
-  <block id="c1f915ba5e3e17f84a3238a75c84e2c9" category="doc">Avviare l'immagine di ripristino - ASA C400</block>
   <block id="b31b0c352e7abb4634524d9d53f5fcce" category="doc">Sostituire una scheda PCIe o mezzanine - ASA C400</block>
   <block id="b4247ab28006e796109bb9e6443b612f" category="doc">Panoramica sulla sostituzione dei supporti di avvio - ASA C400</block>
   <block id="967b266f7bf42739746ff8ee10704ec8" category="doc">Ripristino completo del sistema - ASA C400</block>
@@ -6793,24 +6715,20 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8cbcc8d109afe5c1880ad74857d5f039" category="list-text"><block ref="8cbcc8d109afe5c1880ad74857d5f039" category="inline-link-macro-rx"></block></block>
   <block id="117802f52fb0f0fc020147893a4130c5" category="doc">Spegnere le centraline - ASA C250</block>
   <block id="0bec81f6d2e70dbe308b882253ae1ad4" category="doc">Procedura rapida - ASA C250</block>
-  <block id="56e4846e0597740899e073a1ec45d163" category="doc">Restituire il componente guasto a NetApp - ASA C800</block>
   <block id="1074d363c9086b22a355d4527d32b28c" category="doc">Gestire l'hardware ASA C800</block>
   <block id="f9ea5dff2f002c5b2f6eeeb84451e9f5" category="paragraph">Per il sistema di archiviazione ASA C800, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
   <block id="3f9ba83126a2d0a1b4562908efe4870c" category="doc">Sostituire un NVDIMM - ASA C800</block>
   <block id="50097ad5c1b5e616bbe0f94d6918f272" category="doc">Sostituire il telaio - ASA C800</block>
   <block id="f672d90fc8d0ab339549e32ae4a18c26" category="doc">Sostituire un modulo DIMM - ASA C800</block>
-  <block id="dccd487628e9e3fb202bf1d54f224f85" category="doc">Sostituire il supporto di avvio - ASA C800</block>
   <block id="16c54e4c9f50a83bb13eddc18729c9e7" category="doc">Sostituire la batteria NVDIMM - ASA C800</block>
   <block id="6a9d061449e03d1a36e0711f39abff8f" category="doc">Spegnere il controller danneggiato - ASA C800</block>
   <block id="f5811521c6ed1fabe9020730715bf6ec" category="doc">Panoramica della sostituzione del modulo controller - ASA C800</block>
   <block id="a77bfb07153ea54985cd6d32b137a0c8" category="doc">Sostituire una ventola - ASA C800</block>
   <block id="0033b3cf7bd066a6dcb42aab6d55a7f7" category="doc">Sostituire l'hardware del modulo controller - ASA C800</block>
   <block id="bc6187f0b8778014377ccebd8b17d2ed" category="doc">Sostituire l'unità SSD o l'unità HDD - ASA C800</block>
-  <block id="d9fe8c436c5cbc472b9ebf52adbbc858" category="doc">Trasferire l'immagine di avvio sul supporto di avvio - ASA C800</block>
   <block id="2f7ac9575acad766cc32c4e3e9719d24" category="doc">Sostituire una scheda PCIe - ASA C800</block>
   <block id="dee67159310079d1b0fb667da81d6e9e" category="doc">Panoramica sulla sostituzione dei supporti di avvio - ASA C800</block>
   <block id="7aceb406cd07b754209377738399299c" category="doc">Ripristino completo del sistema - ASA C800</block>
-  <block id="6099221a831c734ee14418269bc9c024" category="doc">Spegnere il controller - ASA C800</block>
   <block id="7eb1428cde412a152576637c584b14c0" category="doc">Possibilità di recuperare il sistema e di riassegnare i dischi - ASA C800</block>
   <block id="ea1dc19906ddc0d31254dd6f8ec34328" category="doc">Spostare e sostituire la bulloneria - ASA C800</block>
   <block id="5bb05bb37b0f50f78a66bcb870b4f799" category="doc">Sostituire l'alimentatore - ASA C800</block>
@@ -6820,7 +6738,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4a9663f34d974f62e97bc12e3339b829" category="summary">Questa sezione fornisce istruzioni dettagliate dettagliate per l'installazione di un sistema ASA C800.</block>
   <block id="785cd996138f338b507afb4b1a247f7a" category="doc">Procedura dettagliata - ASA C800</block>
   <block id="0638f850898c092d5e1fe72b87242595" category="paragraph">Per installare il sistema ASA C800, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
-  <block id="3682f89576a4cb3869bd075b26450b14" category="doc">Avviare l'immagine di ripristino - ASA C800</block>
   <block id="1a127c6545345af120647a9618b2e726" category="doc">Video - ASA C800</block>
   <block id="71eb59c59a42227ae8b45d0cfaf6f52f" category="paragraph">Sono disponibili due video: Uno che mostra come installare e collegare il sistema in rack e uno che mostra un esempio di utilizzo della configurazione guidata di System Manager per eseguire la configurazione iniziale del sistema.</block>
   <block id="2ff6b785c9bbb9bd149f3c338b823e06" category="section-title">Video uno di due: Installazione hardware e cablaggio</block>
@@ -6842,12 +6759,10 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c1370c033cc8d9c44f943c71c77e2612" category="sidebar">Sistemi ASA C400</block>
   <block id="84f8b16af6e61b50a60f6963a3714dce" category="sidebar">Installazione e configurazione di ASA C400</block>
   <block id="6e6b83322f27e0a481920c1942ca4d06" category="sidebar">Manutenzione di ASA C400</block>
-  <block id="42dcbb2a8a1d5c203703489b6bfd2d41" category="sidebar">Supporti di avvio di ASA C400</block>
   <block id="ccf8018b3d654d823bd222ff5852d94c" category="sidebar">Chassis ASA C400</block>
   <block id="f1ce6ee6a9b6701ded3e7305d1a47f8b" category="sidebar">Modulo controller ASA C400</block>
   <block id="037942e17a72efbec3fbd02f17ae222e" category="sidebar">DIMM ASA C400</block>
   <block id="a476b30aedf19d74cc76a81c627ef010" category="sidebar">Modulo ventola ASA C400</block>
-  <block id="5ac4d65b443121440994b5efbc6fe2db" category="sidebar">Batteria ASA C400 NVDIMM</block>
   <block id="7da162a63ee18d83599a6f39dfad99f3" category="sidebar">Scheda Mezzanine o PCIe ASA C400</block>
   <block id="e7d6c70be60310d753bb04f93958a99e" category="sidebar">Alimentatore ASA C400</block>
   <block id="6e1f6b52dcbf426bd04e045b833f7989" category="sidebar">Batteria orologio in tempo reale ASA C400</block>
@@ -6860,7 +6775,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f52cc0c002eb630b3aee28324fd8a0a0" category="sidebar">Sistemi ASA C800</block>
   <block id="5185f6f6f1211a7e3fff65634642f7bf" category="sidebar">Installazione e configurazione di ASA C800</block>
   <block id="6254a52fafb7f7564e91436cf4b47113" category="sidebar">Manutenzione di ASA C800</block>
-  <block id="052bc2e859c31b84b04f42db7b60abff" category="sidebar">Supporti di avvio di ASA C800</block>
   <block id="801fdf5b112137a107d3f17390e4042d" category="sidebar">Chassis ASA C800</block>
   <block id="ca7dce9cd06f0f2ef6e548c8c26d54d9" category="sidebar">Modulo controller ASA C800</block>
   <block id="664f9c52f93e2fbf6e801148b0f573ad" category="inline-link">Gestione delle coppie HA</block>
@@ -8357,7 +8271,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7f5f5398e620a9f9ae998736b2d4d230" category="list-text">Attendere che venga visualizzato il messaggio Waiting for giveback... (in attesa di giveback...) sulla console del controller con il modulo sostitutivo, quindi, dal controller integro, verificare lo stato del sistema: _Storage failover show_</block>
   <block id="c1b6a9a30a6ce8d79305050622234851" category="paragraph">Nell'output del comando, dovrebbe essere visualizzato un messaggio che indica lo stato dei controller.</block>
   <block id="b58ec5a6cf078c8a3a2b309a797f9e62" category="paragraph">Il controller ricollega il proprio pool di storage e completa l'avvio.</block>
-  <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">Disco drw a800 installato IEOPS 960</block>
   <block id="db4669e53766b1110dbd428a22b6f5cc" category="list-text">Premere il pulsante della camma di gestione del sistema.</block>
   <block id="cf91b43675e7187d6e724e7c312e336a" category="list-text">Ruotare il dispositivo di chiusura della camma allontanandolo completamente dal modulo.</block>
   <block id="f5c1d99a4f032f30d087e32fbbbdb994" category="paragraph">Spegnere o sostituire il controller compromesso. - Per arrestare il controller danneggiato, è necessario determinare lo stato del controller e, se necessario, rilevare il controller in modo che il controller integro continui a fornire i dati dalla memoria del controller danneggiato.</block>
@@ -9035,8 +8948,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="a7b0a510fdfaae6ab395e09cd164f2f8" category="doc">Ripristina crittografia - FAS500f</block>
   <block id="8de2c4c1d0c319cb07b6837fd62d106e" category="doc">Controllare il supporto e lo stato della chiave di crittografia - FAS8200</block>
   <block id="9845ad900ab8d052684f6f9e49107a1f" category="doc">Ripristina crittografia - FAS8200</block>
-  <block id="1bc2845699cb3ceb88ee2b3bffabb9b4" category="doc">Verificare il supporto e lo stato della chiave di crittografia - AFF FAS8300 e FAS8700</block>
-  <block id="e9f4f2164b3732f470d6acec805f446d" category="doc">Ripristina crittografia - AFF FAS8300 e FAS8700</block>
   <block id="3d7237c5aa2d20431d9cae1d4abbadb9" category="doc">Ripristina crittografia - FAS9000</block>
   <block id="13e7cf07309f0d95eee5aa49b6842dc0" category="doc">Controllare il supporto e lo stato della chiave di crittografia - FAS9500</block>
   <block id="e4d9374bc79ce9095fb021e03551599f" category="doc">Ripristina crittografia - FAS9500</block>
@@ -9124,12 +9035,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="4443f66d8d4febc600e0d4d0b3b0db91" category="doc">Restituire il controller - ASA A70 e ASA A90</block>
   <block id="425248bc914ee69e002743b7cff8fb0a" category="doc">Sostituire il modulo di gestione del sistema - ASA A1K</block>
   <block id="fc633a3acea06ec7b13b95943af5a8f1" category="doc">Sostituire il modulo di gestione del sistema - FAS70 e FAS90</block>
-  <block id="3af65f186d9005b4ac041f824d01a2a6" category="doc">Restituire il componente guasto a NetApp - FAS2820</block>
   <block id="c6850888623b4b33ceba4c1bd9322642" category="doc">Controllare il supporto e lo stato della chiave di crittografia - FAS2820</block>
   <block id="0152b6e0cea632db2750cd8de20a739e" category="doc">Ripristina crittografia - FAS2820</block>
-  <block id="9e84d4138651a02fba804117209b607b" category="doc">Avviare l'immagine di ripristino - FAS2820</block>
   <block id="d4d79c1a5bf62b9ce87343c6306b87c5" category="doc">Panoramica della sostituzione dei supporti di avvio - FAS2820</block>
-  <block id="0d0170db1c817b32ed8190527b1999f1" category="doc">Sostituire il supporto di avvio - FAS2820</block>
   <block id="3d0983e4676ad818dc9c354efeabe635" category="doc">Spegnere il controller compromesso - FAS2820</block>
   <block id="fd167e36c21bd8b8595824591db88367" category="doc">Sostituire il modulo di caching - FAS2820</block>
   <block id="6e0f0070d93d5a9e57db58dbec60bc75" category="doc">Ripristinare e verificare la configurazione - FAS2820</block>
@@ -9175,8 +9083,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3a537c99c5b869e844d774557fbcee80" category="sidebar">Modulo i/o ASA A1K</block>
   <block id="3006210264711079652e75e697fdde7b" category="sidebar">Sistemi FAS2820</block>
   <block id="e9fb835c094e7078b3fdd1712ccae31c" category="sidebar">Installazione e configurazione di FAS2820</block>
-  <block id="6129374f01cd3ebeb12420c58801778c" category="sidebar">Manutenzione di FAS2820</block>
-  <block id="bb0a174c5a82de66489299528cf518fe" category="sidebar">FAS2820 Boot Media</block>
   <block id="b5f3da387d229686fd3cc259cd99b323" category="sidebar">Modulo caching FAS2820</block>
   <block id="1271e815e1d2a4bf736cb807a3b42df6" category="sidebar">Chassis FAS2820</block>
   <block id="2432fa0f9f02a35df250d771c0865ed4" category="sidebar">Controller FAS2820</block>
@@ -10653,12 +10559,10 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="99d3d3fcd25a3de8482ec4e2a68cd980" category="paragraph">Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, ripristinare la configurazione crittografia storage NetApp (se necessario) e installare le licenze per il nuovo controller.</block>
   <block id="bc8b7a027a67f1503950943beb4e6143" category="paragraph">Se un componente del sistema ASA A1K non funziona, restituire il componente guasto a NetApp. Vedere la<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
   <block id="bd0c4a219c159fa570da1ded545f36d9" category="summary">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A70 o ASA A90, è possibile avviare il processo di ripristino automatico dei supporti di avvio per ripristinare la configurazione dal nodo partner.</block>
-  <block id="b6bbff6284dec160274ef588afc1a30c" category="doc">Ripristinare l'immagine sul supporto di avvio - ASA A70 e ASA A90</block>
   <block id="24fd70ba02d3ad8edef21fae96195bae" category="paragraph">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A70 o ASA A90, è possibile avviare il processo di ripristino automatico dei supporti di avvio per ripristinare la configurazione dal nodo partner.</block>
   <block id="fee45db111832f938d749d9972109b24" category="paragraph">Durante il processo di ripristino, il sistema controlla se la crittografia è attivata e determina il tipo di crittografia della chiave in uso. Se la crittografia della chiave è attivata, il sistema guida l'utente attraverso le procedure appropriate per ripristinarla.</block>
   <block id="9ebf0f9cdc8e3d4b2cb25a5314423cb2" category="summary">Il supporto di avvio del sistema ASA A70 o ASA A90 memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi nel modulo di gestione del sistema, quindi la reinstallazione del modulo di gestione del sistema.</block>
   <block id="f64cb6d84d7c27a06ee97bfed6357102" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A70 o A90, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
-  <block id="dd43e74377ed32c7af5731f3c6c94085" category="doc">Necessità di sostituire i supporti di avvio - ASA A70 e ASA A90</block>
   <block id="c330ef0ca8c9d8e7a95cd59e8bd29028" category="paragraph">Dopo aver esaminato i requisiti dei supporti di avvio, si <block ref="a9f725bc41d31688b04caf5a2f249945" category="inline-link-macro-rx"></block>.</block>
   <block id="2637ddc571b4eec6fba99d80e4508ea3" category="summary">Come iniziare a sostituire i supporti di avvio nel sistema di storage ASA A70 e ASA A90, rivedere i requisiti di sostituzione, arrestare il controller, sostituire i supporti di avvio, ripristinare l'immagine sui supporti di avvio e verificare la funzionalità del sistema.</block>
   <block id="e02c1c38027df9cf184c084019ca80bd" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="c17103ffaf4bf6b45a49b4f8fd312634" category="inline-link-macro-rx"></block></block>
@@ -10687,7 +10591,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="bcde75f7bddc9226b30c2cb1712cb52b" category="summary">Sostituire il modulo di gestione del sistema nel sistema ASA A70 o ASA A90 se risulta difettoso o se il firmware è danneggiato. Il processo di sostituzione prevede l'arresto del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione del componente guasto a NetApp.</block>
   <block id="603c758839f418606126a3dd634c68d9" category="doc">Sostituire il modulo di gestione del sistema - ASA A70 e ASA A90</block>
   <block id="dcfa3de2faa27a3e334c7c433ea50340" category="summary">Ripristinare l'immagine ONTAP sul supporto di avvio sostitutivo del sistema ASA A1K. Il processo prevede l'avvio del processo di ripristino dal prompt di Loader e il monitoraggio del processo di ripristino fino al completamento e al riavvio del nodo.</block>
-  <block id="2cc0e4a695b44179f7b31d704877b9fc" category="doc">Ripristinare l'immagine sul supporto di avvio - ASA A1K</block>
   <block id="955b02a4be265a47dec370f73ec90202" category="paragraph">Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema ASA A1K, è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
   <block id="09922310f86dcfda39249f4666ce5146" category="summary">Il supporto di avvio del sistema ASA A1K memorizza i dati di configurazione e il firmware essenziali. Il processo di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione dei supporti di avvio danneggiati, l'installazione dei supporti di avvio sostitutivi nel modulo di gestione del sistema, quindi la reinstallazione del modulo di gestione del sistema.</block>
   <block id="71b41768755429f94118b959381a52b4" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A1K, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
@@ -11124,7 +11027,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f3b6228c1cbd418b703785112e6450cf" category="list-text">Se richiesto sul controller danneggiato, premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> per sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.</block>
   <block id="343b939e82f6c7bd4d0b3724a8118a24" category="list-text">Se nel passaggio 1 è stata disattivata l'assegnazione automatica delle unità, assegnare manualmente la proprietà delle unità e riabilitare l'assegnazione automatica delle unità, se necessario.</block>
   <block id="4a7998c6b7bf581d6118278f506a5818" category="list-text">Rimuovere il frontalino dalla parte anteriore del sistema di archiviazione.</block>
-  <block id="23cb2d8a7bcff2be32dfdc6532d9a330" category="list-text">Se si sta sostituendo un'altra unità, ripetere i passaggi da 2 a 7.</block>
   <block id="6447c21ef920ffa27c0fa03f8a1f5fde" category="list-text">Reinstallare il frontalino sul lato anteriore del sistema di archiviazione.</block>
   <block id="1796631c78343fa139263e5130977036" category="paragraph">Le posizioni dei moduli DIMM dipendono dal modello di sistema:</block>
   <block id="f150c3e678803cfab7db992b3aed8654" category="paragraph">Slot 3, 10, 19, 26</block>
@@ -11132,7 +11034,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="28201d108eeaa65ba3986e8d2995486e" category="admonition">Il controller viene avviato al prompt Loader quando è completamente inserito nel telaio. Riceve la potenza dal controller partner.</block>
   <block id="a163e755300f34b3c5f473a61ca749d5" category="admonition">Tenere traccia dell'alloggiamento dell'unità da cui ciascun modulo di caching è stato rimosso, poiché deve essere installato negli stessi alloggiamenti dell'unità nello chassis di sostituzione.</block>
   <block id="dd974151ca8e1528e09f3e46a090f617" category="paragraph"><block ref="120d2ded4595f37c06ed8c4aa3b846ea" prefix="" category="inline-code"></block></block>
-  <block id="02f9bb2fa8a3e17cc8807f1c822c2d25" category="list-text">Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 8.</block>
   <block id="d5dd94ee04fd2267b6c2e4e6e2b590de" category="inline-link">Post-processo di sostituzione della scheda madre per aggiornare le licenze sulle piattaforme ONTAP</block>
   <block id="bfa89a6ce1f8c47724bbe6c9b703c00b" category="paragraph">Se il sistema inizialmente utilizzava ONTAP 9.10,1 o versioni successive, utilizzare la procedura descritta in <block ref="db67b8b77fc4e1d6512bfc70b85bb60a" category="inline-link-rx"></block>. In caso di dubbi sulla versione iniziale di ONTAP per il sistema in uso, consultare <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="0f741141425a35612c14f0bd5cc39ad7" category="paragraph">Gli slot i/o sul controller AFF A1K sono numerati da 1 a 11, come illustrato nella figura seguente.</block>
@@ -11453,7 +11354,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c19c878358034620e42421b1d0e88979" category="image-alt">Connessione da console a switch</block>
   <block id="bcbe9ce5b2d50ad0b254f40cda6fc7e1" category="image-alt">Accendere e impostare l'ID dello scaffale</block>
   <block id="43f978a7787080590a53cc2abdd637c9" category="image-alt">Sostituire il modulo LED</block>
-  <block id="a54c219a955221bc0586ab22f8a07401" category="image-alt">Sostituisci la batteria RTC</block>
   <block id="14d4a75ecbe13082ebd840dc7d091f2c" category="section-title">Passaggio 4: installare i controller e le unità</block>
   <block id="7aa6db479f57ead7ac39225f410bdf2d" category="paragraph">Installare i controller e le unità nello chassis sostitutivo e riavviare i controller.</block>
   <block id="fde22ae5f3a1cc39c61853ffe9a68675" category="paragraph">Creare connessioni al cluster ONTAP. Per i cluster senza switch, collegare i controller l'uno all'altro. Per i cluster commutati, collegare i controller agli switch di rete del cluster.</block>
@@ -11642,7 +11542,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="61e03a9ae98f11e74ecca739028b0d8d" category="doc">Requisiti per il ripristino manuale dei supporti di avvio - AFF A70 e AFF A90</block>
   <block id="3d2127437f7682efd33cc290f8c65313" category="summary">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata nel menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema di storage AFF A70 o AFF A90 .</block>
   <block id="ba6215836b185b42ba18f8576bf97d60" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio: AFF A70 e AFF A90</block>
-  <block id="25d514d7003721a0847e201148310402" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata nel menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema di storage AFF A70 o AFF A90 .</block>
   <block id="f2a3b87fc596fdb0e863f6ea05d31ec8" category="summary">Il ripristino manuale dell'immagine di avvio prevede l'utilizzo di un'unità USB per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema AFF A70 o AFF A90 . È necessario scaricare l'immagine di ripristino ONTAP appropriata dal sito di supporto NetApp e copiarla su un'unità USB. Questa unità USB preparata viene quindi utilizzata per eseguire il ripristino e ripristinare il sistema allo stato operativo.</block>
   <block id="c605804530ac6780903b2cd5d714e7bf" category="doc">Flusso di lavoro per il ripristino manuale dei supporti di avvio - AFF A70 e AFF A90</block>
   <block id="81933396946b55d13782566f5b10b705" category="summary">Il supporto di avvio del sistema AFF A70 o AFF A90 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo e il trasferimento manuale dell'immagine ONTAP sul supporto di avvio sostitutivo tramite un'unità flash USB.</block>
@@ -12085,4 +11984,446 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8e7e4fe549d31d35f22d5919a6326875" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="d8f87fb4140fea77f47017bd9ec5dcdd" category="inline-link-macro-rx"></block></block>
   <block id="034cb39094d8eb483c641ad0dfc1c27f" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="5cf36f95205599c906eaa6f0709db155" category="inline-link-macro-rx"></block></block>
   <block id="af42a6a9db306b2ac5725e006de14a7a" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="8a056a6439f08c4b1b6c616463cfac54" category="inline-link-macro-rx"></block></block>
+  <block id="e872032fe954a0a016830d7e9591352e" category="paragraph">Il supporto di avvio si trova all'interno del modulo controller ed è accessibile rimuovendo il modulo controller dallo chassis e rimuovendo il coperchio del modulo controller dal sistema.</block>
+  <block id="5f69d11faaea3ac587d471e8151ad364" category="list-text">Allineare l'estremità del modulo controller con l'apertura nello chassis, quindi spingere delicatamente il modulo controller fino a metà nel sistema.</block>
+  <block id="362c38f73eac0b4be28a88885d41ace1" category="list-text">Ricollegare il controller, spingere con decisione la maniglia della camma per completare l'inserimento del modulo del controller, spingere la maniglia della camma in posizione chiusa e quindi stringere la vite a testa zigrinata.</block>
+  <block id="53a6e0164d86afa690a9ff0940f16e43" category="paragraph">Il controller inizia l'avvio e si arresta al prompt LOADER.</block>
+  <block id="b1e9aebf4ad402db02d940afdcc2e99f" category="paragraph">Il supporto di avvio si trova all'interno del modulo controller sotto il condotto dell'aria ed è accessibile rimuovendo il modulo controller dal sistema.</block>
+  <block id="0fdc60b29d5e5c778f4b3a3c6e75da94" category="list-text">Individuare il supporto di avvio nel modulo controller e sostituirlo:</block>
+  <block id="b79ec07311b0b2e9007a947502ca1217" category="list-text">Ricollegare il modulo controller, spingere con decisione la maniglia a camma per completare l'inserimento del modulo controller, spingere la maniglia a camma in posizione chiusa e quindi serrare la vite a testa zigrinata.</block>
+  <block id="ece11f9c3d8f9d6d8aff79c9273631aa" category="paragraph">Il modulo controller inizia l'avvio e si arresta al prompt LOADER.</block>
+  <block id="2658eb11cd0ca39cfc2d7394809fff01" category="list-text">Impostare le porte MetroCluster come iniziatori:<block ref="2c8f25cb974f5d5b1e520b768a31cde6" prefix=" " category="inline-code"></block></block>
+  <block id="262d6ff37dc133df81dc97d7127c21ca" category="list-text">Reinstallare il modulo controller:</block>
+  <block id="aae9b254c24cc3785086114d3d117232" category="list-text">Se si sostituisce un'altra unità, ripetere i passaggi da 3 a 7.</block>
+  <block id="7c9d4c7520ca0f8e1dc57c8c26289d65" category="list-text">Se si sostituisce un'altra unità, ripetere i passaggi da 4 a 8.</block>
+  <block id="6ab51c87498e3948742262b60aeeee14" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage AFF A1K.</block>
+  <block id="1598afb8f3a2e9755fe6204af9dbaa8d" category="inline-link-macro">procedura di ripristino automatico dell'avvio</block>
+  <block id="a3484b2f8cbf6736974f7d02ebc99cb3" category="paragraph">Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block> .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.</block>
+  <block id="cc513374e31e81a36ff55275c714cbac" category="paragraph">Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block> .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.</block>
+  <block id="6ff1453623c70a2b8780ad2767e3b225" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - AFF A400</block>
+  <block id="22575bfd6e6d83a939c93fbb6e575ac4" category="paragraph">Se un componente del sistema AFF A400 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="7f404c3390a92744a76c0e6cda8523bd" category="summary">Dopo aver installato il nuovo supporto di avvio nel sistema AFF A400 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
+  <block id="7329e2e54a0c6f2594e93d7b150ad530" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - AFF A400</block>
+  <block id="e534d775ebf989520a3da41d67088a88" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema AFF A400 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="2977d2cbc48cf6d17f3f085799333ebf" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - AFF A400</block>
+  <block id="6777ba2bbc950c2b774b64c5bcdb29e5" category="summary">Il supporto di avvio del sistema AFF A400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="75e79c10dfb5b715570f884a06eaf614" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - AFF A400</block>
+  <block id="41291641a69711b11f70781c3e5f5b31" category="paragraph">Il supporto di avvio del sistema AFF A400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="9ffad2a2e8a0a7b04526d1ca06c188a5" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="4221e926e9f147f537d074c9f2b0ce81" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - AFF A400</block>
+  <block id="3c50ce07906925ea3d8c4b688f2694e3" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF A400, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="46b9703cb3ee80b60b84932a8ac8176e" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="d6191c7ed5d4b01af56240eea73c1db7" category="doc">Requisiti per il ripristino manuale del supporto di avvio - AFF A400</block>
+  <block id="13dc1f2a9b4cecb516f1df45df0cc6e5" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A400 , esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="3c2f2827e811189b36235deeac40b9b1" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - AFF A400</block>
+  <block id="9195c4cc5374a942663f8840fb1281fe" category="paragraph">Rimuovere il supporto di avvio non riuscito dal modulo controller e installare il supporto di avvio sostitutivo.</block>
+  <block id="406c2c347bf25875352cbe864c54760e" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A400 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="41227c678f01396d0ca339e8c01c5a46" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - AFF A400</block>
+  <block id="9640026e903f94f4800da359d913e0a9" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di archiviazione AFF A400 .</block>
+  <block id="66155ab867b9e72e003c32039430a194" category="paragraph">Ripristinare la configurazione del gestore chiavi integrato o del gestore chiavi esterno dal menu di avvio ONATP .</block>
+  <block id="b4eff71b8a25e1341c978f074e809f5f" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - AFF A400</block>
+  <block id="25a6eda8b598dc35f40455a3b6650942" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione AFF A400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="33f15341dc012b7a1741173f0a003ced" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - AFF A400</block>
+  <block id="217151ef13b32a9ab67e7c5b3ba1f936" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione AFF A400 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="74c6811365bff32176970c98a7ab6f9d" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - AFF A400</block>
+  <block id="c6615dfdc0291800b33208ac35a4f3a7" category="summary">Mantieni l'hardware AFF A400</block>
+  <block id="72b339e7e15c8320ce1d0ba12fe138c8" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione AFF A400 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="5c2498e6d495f2eadf0d5823b9b81b5f" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione AFF A400 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="2deff6ec3e4c0e2a0db765f462db4612" category="paragraph"><block ref="2deff6ec3e4c0e2a0db765f462db4612" category="inline-link-macro-rx"></block></block>
+  <block id="e447290ac243d603f20831e02d91710f" category="paragraph">Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio. Durante il ripristino manuale, si avvia il sistema di archiviazione da un'unità USB e si ripristina manualmente l'immagine e la configurazione del file system.  Se il sistema di archiviazione esegue ONTAP 9.17.1 e versioni successive, utilizzare<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block> .</block>
+  <block id="051f22735645ddcfbfa223db7367938f" category="paragraph"><block ref="051f22735645ddcfbfa223db7367938f" category="inline-link-macro-rx"></block></block>
+  <block id="88bdf3fa698fc0c434013372c8db3385" category="paragraph"><block ref="88bdf3fa698fc0c434013372c8db3385" category="inline-link-macro-rx"></block></block>
+  <block id="57f2f0606695bac4136b80682c0dd404" category="paragraph"><block ref="57f2f0606695bac4136b80682c0dd404" category="inline-link-macro-rx"></block></block>
+  <block id="2dd9606b888bc028dc9419210515e786" category="paragraph"><block ref="2dd9606b888bc028dc9419210515e786" category="inline-link-macro-rx"></block></block>
+  <block id="17f029f989bdbbf0434ea622cfd5e805" category="inline-link-macro">Scheda PCIe e riser</block>
+  <block id="7760b4ea4020d480f5d1e31697315dff" category="paragraph"><block ref="7760b4ea4020d480f5d1e31697315dff" category="inline-link-macro-rx"></block></block>
+  <block id="349fb764bbd6401eb7d613694f98f7c4" category="paragraph">Una scheda PCIe (Peripheral Component Interconnect Express) è una scheda di espansione che si collega allo slot PCIe sulla scheda madre o ai riser collegati alla scheda madre.</block>
+  <block id="01899ffb4a605f0c7e9ab547e7577a77" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema di storage AFF A70 o AFF A90.</block>
+  <block id="ebe44cd1c2b4953680597bc907ac847f" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - AFF A800</block>
+  <block id="c361ce5877b4c3472f7530b0c7183085" category="paragraph">Se un componente del sistema AFF A800 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="6ff2e5a3499f954eec5bcb32d690d50f" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - AFF A800</block>
+  <block id="8159e9573b2be76b1df996506aa14ac7" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema AFF A800 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="2ed5d23a0ec9dff10c56f0887a40e290" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - AFF A800</block>
+  <block id="8abdc855ddcb65fe07b133d1a1c8acee" category="summary">Il supporto di avvio del sistema AFF A800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="334e327e3022d260eb3917df3b148515" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - AFF A800</block>
+  <block id="a62fdb9237bcfd937af4d6d9819f6e82" category="paragraph">Il supporto di avvio del sistema AFF A800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="7b0145095bc96cae451f4d9717ea7de7" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="ef4dc8a2da4b460a22a10167539ebd57" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - AFF A800</block>
+  <block id="fc99496f3b91b50bff484d30be86c54b" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF A800, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="2bb55bbdd1cec1049fafcad902f0a44d" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="11d22079e470961bf43da95fc1b2d7f6" category="doc">Requisiti per il ripristino manuale del supporto di avvio - AFF A800</block>
+  <block id="eaff295096fb469efcbefa49e0f4f3ed" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A800 , esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="f738af3fa00b500bdfc7e9e4892d6ad9" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - AFF A800</block>
+  <block id="b02c6242a336a84e34ccd1cd6aebc376" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage AFF A800.</block>
+  <block id="449c78eca1dca9facdb7ce55e5dc2673" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A800 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="88138d0001152b572df5180bdabce355" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - AFF A800</block>
+  <block id="9d9c5a6acf31e2700c8e91d48b92825c" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - AFF A800</block>
+  <block id="21b70166f3276f0c9a5dfd8176a16044" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione AFF A800 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="48751441f8d0b29dffdfa73f7ef6b039" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - AFF A800</block>
+  <block id="de98338fbf36a37cb429421fc6f9d489" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione AFF A800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="4bf6f934b24bd52641aa4ad81da672ea" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - AFF A800</block>
+  <block id="142b3fd7edc5dab0d9075db01d128ae6" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione AFF A800 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="257144cee758fa901d78671592b3aa8c" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione AFF A800 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="5708588245469f24c7a1fd90d0157713" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - AFF A900</block>
+  <block id="3a3de961b8b171b1d7e682900a483148" category="paragraph">Se un componente del sistema AFF A900 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="a3dae0277377edf5da3a49e133321874" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - AFF A900</block>
+  <block id="60c62d69aaafba15d3027f86dac5dd9a" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema AFF A900 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="4059a51c70923734ed21300a115eb92d" category="summary">Il supporto di avvio del sistema AFF A900 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="b2849f50cfae619af9a6a868bae178ed" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - AFF A900</block>
+  <block id="f39e44e4f6d4595e06d41036eb263bf1" category="paragraph">Il supporto di avvio del sistema AFF A900 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="d67ade4ae91f7c0d5eb3c9d1e641bde7" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A900, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="b9ee889c6b2d7a600d42e364dba9cc43" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - AFF A900</block>
+  <block id="e096b937f22c19f1446afb0aabfa4204" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF A900, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="e4ce3d52f68e109081a7c4e9ec974ef3" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A900, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="01e10f901636359acda9f4714a592dca" category="doc">Requisiti per il ripristino manuale del supporto di avvio - AFF A900</block>
+  <block id="3b6aca2c18ad84f0e83d21c5342d3cc1" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A900 , esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="97e88b41b05cca9f6c5bd170c4c703a7" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - AFF A900</block>
+  <block id="131365dfbc2c8580e0b7c418b577017c" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage AFF A900.</block>
+  <block id="40d1397376c7893f9fe8ab2b99914b10" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A900 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="173ec8ed18c52eafad0830ed08789676" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - AFF A900</block>
+  <block id="b5bf4b2796b6023656eab3e1737c94eb" category="paragraph">Spegnere il controller quando è necessario sostituire il supporto di avvio.</block>
+  <block id="85ed6aa6d1e8311e80e0619c4d18d303" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="a70ed88f8fc545e1d29198fc61b5c58e" category="inline-link-macro-rx"></block></block>
+  <block id="16544e4cd0d15558e854f3b9c762c1e0" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - AFF A900</block>
+  <block id="d7797b426a89708a73784826c2bd25a8" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione AFF A900 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="f2fa38e6be0c053e489deb839142196d" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - AFF A900</block>
+  <block id="5f7924b943afe82cde397c44d409ccd8" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione AFF A900 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="facc45ff99f31b515df42f2b0ba59c86" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - AFF A900</block>
+  <block id="4b4a03214cc0238211a99dae237814c6" category="paragraph">Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare la procedura di ripristino automatico all'avvio.  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.</block>
+  <block id="712bd387d50c5fc749ffb5f431130a44" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - AFF A900</block>
+  <block id="d7759bb9755ab1f9bc3537241c66c6ba" category="summary">Mantieni l'hardware AFF A900</block>
+  <block id="b1869a7fddfc52d740077ac0eba816bb" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione AFF A900 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="1a04019f5defd9a03ee7c19509f69f9d" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione AFF A900 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="adc9cb4ce04e3f5ffaacafe1972bd0d0" category="paragraph">Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio. Durante il ripristino automatico, il sistema di archiviazione recupera l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione di menu di avvio appropriata per installare l'immagine sul supporto di avvio sostitutivo. Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare <block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block> .</block>
+  <block id="bd03785e613dc329f14cf463b0512423" category="paragraph"><block ref="bd03785e613dc329f14cf463b0512423" category="inline-link-macro-rx"></block></block>
+  <block id="fffcae23e95c33bd8606d21e412441f5" category="paragraph"><block ref="fffcae23e95c33bd8606d21e412441f5" category="inline-link-macro-rx"></block></block>
+  <block id="6ab755457f66e7be1a26019a04d5ccad" category="paragraph"><block ref="6ab755457f66e7be1a26019a04d5ccad" category="inline-link-macro-rx"></block></block>
+  <block id="b1d4e14e51fd80f3d42a5a61331331ec" category="paragraph"><block ref="b1d4e14e51fd80f3d42a5a61331331ec" category="inline-link-macro-rx"></block></block>
+  <block id="1ff948d4fdd43a5c08683922d48952ae" category="paragraph"><block ref="1ff948d4fdd43a5c08683922d48952ae" category="inline-link-macro-rx"></block></block>
+  <block id="1cfeb929027ebaebb9322da45a5af3d3" category="paragraph"><block ref="1cfeb929027ebaebb9322da45a5af3d3" category="inline-link-macro-rx"></block></block>
+  <block id="4d505ded17e0fc2301810e57a288db7d" category="paragraph"><block ref="4d505ded17e0fc2301810e57a288db7d" category="inline-link-macro-rx"></block></block>
+  <block id="ec8a7de2ed4b8f6b9bc4b06a500a8696" category="paragraph"><block ref="ec8a7de2ed4b8f6b9bc4b06a500a8696" category="inline-link-macro-rx"></block></block>
+  <block id="8911a2f78b707f48ed59f4823bc6ea2b" category="paragraph">Il modulo NVRAM (Non-Volatile Random Access Memory) consente al controller di conservare i dati durante i cicli di accensione e spegnimento o i riavvii del sistema, mentre il modulo NVRAM DIMM mantiene le impostazioni NVRAM .</block>
+  <block id="06ae2e96e772f1ebb7bcbdfaf2a29619" category="paragraph"><block ref="06ae2e96e772f1ebb7bcbdfaf2a29619" category="inline-link-macro-rx"></block></block>
+  <block id="3b6e8011ba80e6703880646bf3925bff" category="paragraph"><block ref="3b6e8011ba80e6703880646bf3925bff" category="inline-link-macro-rx"></block></block>
+  <block id="e10e00b4c53f89990e82ffd1e6f22f61" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - ASA C400</block>
+  <block id="352d38ced977b67bb2c4f5a69083d03d" category="paragraph">Se un componente del sistema ASA C400 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="e788a48adb6a19e7299317986939a9a2" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - ASA C400</block>
+  <block id="34b29be83d480738889d8ebcd1886ec1" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema ASA C400 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="9d39a64ade57e142a88ec768b81c91d9" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - ASA C400</block>
+  <block id="83c2b84806c943f6b50bafd0fb4efb51" category="summary">Il supporto di avvio del sistema ASA C400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="55d53312805fe204533f1bb33f0fedca" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - ASA C400</block>
+  <block id="5d69ccf09575fcce4a0fcad17c305a7b" category="paragraph">Il supporto di avvio del sistema ASA C400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="95af7460d1911057f13d748a51faf551" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA C400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="fafee2b3699468f91e3f14fc4e792257" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - ASA C400</block>
+  <block id="10d2fbd856f042a1112a6b4be8d605a4" category="paragraph">Prima di sostituire il supporto di avvio nel tuo ASA C400, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="1a3246c7ae0b5f948f467b33a302c911" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA C400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="da706d63b6432a748eccdc32954975df" category="doc">Requisiti per il ripristino manuale del supporto di avvio - ASA C400</block>
+  <block id="939257993754234e74b76aea6f4e4e43" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C400, esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="8fcfa8e6cb87eb29b8bae4c2c6a95100" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - ASA C400</block>
+  <block id="61aba7c99f550875e7735725dc17f5f1" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage ASA C400.</block>
+  <block id="dc9867e84dc1dc6d42d61ec374a11844" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C400, esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="d1f17cccb0588b5d0d37a939af6b6ec9" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - ASA C400</block>
+  <block id="1f67115261e58e4a3c2902f55ff1870a" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA C400</block>
+  <block id="dcc1e7905dc913d93bd16a9d4b0cddd4" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione ASA C400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="a4c3f985c6515c8f88e604f7a11905f1" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - ASA C400</block>
+  <block id="cb0dfaa8139b94587b39f5694c8c8f9e" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione ASA C400 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="5dd2434180bdbd6f1d65f83bd7aa5bb8" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - ASA C400</block>
+  <block id="c1f0d47ed40a4f3a4a19c11084ae58a5" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione ASA C400 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="15bc84fa5489d2e54fdf72482df3e3ce" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione ASA C400 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="9850c9d30ed561f1bc1a63527d554b78" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - ASA C800</block>
+  <block id="b602900a2c4edc1e98c65f23c235accb" category="paragraph">Se un componente del sistema ASAF C800 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="9d2068a55a2da473bf1c33aae89a36d2" category="paragraph">Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare<block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block></block>
+  <block id="d514a7489ec95bb2a3e761f79dd08254" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - ASA C800</block>
+  <block id="43535e76f42e16cae35e58f51112fee3" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema ASA C800 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="e797cc14cbd83adea19055313ce780d2" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - ASA C800</block>
+  <block id="cc6c150eeeda76035baba1ca9bec7f8b" category="summary">Il supporto di avvio del sistema ASA C800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="9075606b5faf6dd212619308b8e5025e" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - ASA C800</block>
+  <block id="075d5fc89153c0383e52d9f3e5badfb0" category="paragraph">Il supporto di avvio del sistema ASA C800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="6bca484b66731ad1c39b5ddad4ee5423" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA C800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="18319bfb663e3372f07d3e1e8e0ed3de" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - ASA C800</block>
+  <block id="eab54dfc4e7beb82ae1f48213a2b2b62" category="paragraph">Prima di sostituire il supporto di avvio nel tuo ASA C800, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="a0e501facd187264d36a04b26ace9613" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA C800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="97b8e0ee1943302c9ce7b8c3f7099672" category="doc">Requisiti per il ripristino manuale del supporto di avvio - ASA C800</block>
+  <block id="46d81f9ac1f40f51995ed2d2a864c7d0" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C800, esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="bd2004181e783a2ce1a7edb9d36c9621" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - ASA C800</block>
+  <block id="c17c6cd7d230d26b6055df587fff8f2a" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage ASA C800.</block>
+  <block id="fc4543934233e0bf02e26cec60f78e13" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA C800, esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="87b2f8106853b00c0b2dc002a92e6c71" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - ASA C800</block>
+  <block id="49b0bd3c0dbb58facff799b0de224229" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA C800</block>
+  <block id="9cbb8388a3adabc9382cb6a250286db6" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione ASA C800 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="1874f003f2109c6554e8680d99e76e4d" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - ASA C800</block>
+  <block id="f36e4e67bad8abd5dd4c7e4ab62dafbc" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione ASA C800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="fb90cfe951df7435d9ebfc3ad5489b6b" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - ASA C800</block>
+  <block id="d3c68c0d6fbe8e59b9ce22c40e047bb6" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione ASA C800 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="1cdf405b83256c8187cb8d239742c6e6" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione ASA C800 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="86eaa4c0bb049cd4791891b569f8b208" category="paragraph">Se un componente del sistema ASA 70-90 si guasta, restituire la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="34a6a22de50bdf82fc335ef9ba00f122" category="doc">Ripristinare l'immagine ONTAP sul supporto di avvio - ASA A70 e ASA A90</block>
+  <block id="311fdf0bc640bef9909a44de7e92965d" category="doc">Requisiti per la sostituzione del supporto di avvio - ASA A70 e ASA A90</block>
+  <block id="41b89d0490625c676af5a5cff71cfb3e" category="doc">Spegnere il controller per sostituire il supporto di avvio: ASA A70 o ASA A90</block>
+  <block id="02b0f3d45bd8a43d8e99a812c22f13a0" category="doc">Ripristinare l'immagine ONTAP sul supporto di avvio - ASA A1K</block>
+  <block id="0e4aeec1f9da6d5e96e0144b5f37e09a" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - ASA A400</block>
+  <block id="f7c6615d138a63d22cf5023c69e7319a" category="paragraph">Se un componente del sistema ASA A400 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="c0f6a2eb47a57b7c065866b33fdf90ac" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - ASA A400</block>
+  <block id="85856d7fbf598be1af6359e041dbc6c0" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema ASA A400 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="834ffef5d40b393f44e5d2a7b7ca183e" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - ASA A400</block>
+  <block id="a1102252f7d291ba487477c1ad7dc0f4" category="summary">Il supporto di avvio del sistema ASA A400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="183429bd185c0bb89d230721c8bafb0f" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - ASA A400</block>
+  <block id="f8dd43c0db45969cb260f51342c2daf8" category="paragraph">Il supporto di avvio del sistema ASA A400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="7bedaa496cfd73e8b1e6cfc86c091f63" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="f2c392f30e5fe029dc592be664339154" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - ASA A400</block>
+  <block id="ef5ca04fc37545d8e98cf02275bc6c17" category="paragraph">Prima di sostituire il supporto di avvio nel tuo ASA A400, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="84d5e9550c5d39d2538fd0be0557590f" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="7f32935bbd94e38a894928143b4b15c6" category="doc">Requisiti per il ripristino manuale del supporto di avvio - ASA A400</block>
+  <block id="a20ebcdc01dd4e5abab7f61885008057" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA A400, esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="015033a6e051cecbcf4d2c3aebdc2b40" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - ASA A400</block>
+  <block id="6507c6b787cdc07b44b60600bf4145e9" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema ASA A400 .</block>
+  <block id="329c9ace994be9248b3043e77ed3e54f" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA A400 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="22f353a6c038ce3ebff60b5a2080b0ec" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - ASA A400</block>
+  <block id="e5bcdce4e562b8b60ae89794b945de42" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA A400</block>
+  <block id="e72e7228a5180ac1bfa285a4f11bc4f5" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione ASA A400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="66f12ed6d68584ef675075a288b7b482" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - ASA A400</block>
+  <block id="7cb7231cf20dc931525517d42b1e5409" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione ASA A400 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="6effad4b4f854b5d9f5212f5786dec6c" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - ASA A400</block>
+  <block id="63316578a99d2be44745f91a8a533687" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione ASA A400 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="f84d129ccf9d1cd4adfd21c0a2e73b20" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione ASA A400 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="2fa228b1a6b52ddee3a9c6779943197f" category="paragraph">Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema di archiviazione utilizza per l'avvio. Durante il ripristino automatico, il sistema recupera l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione di menu di avvio appropriata per installare l'immagine sul supporto di avvio sostitutivo. Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare <block ref="d83b47a0a2d85a13a2094c696f473b60" category="inline-link-macro-rx"></block> .</block>
+  <block id="361b65eef42e888122f41f11eac8fa07" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - ASA A800</block>
+  <block id="06275ea376599fc8bf14d5bde1a4cc31" category="paragraph">Se un componente del sistema ASAF A800 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="924624c8588a90de7fdeb6caf86c2203" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - ASA A800</block>
+  <block id="eb5a4bd38649b66fbf79fa72698b100d" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema ASA A800 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="d8640bcfad4728aed30f3f1a19ed9aab" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - ASA A800</block>
+  <block id="16083bf1712dbe8dce78059c2dcbfab8" category="summary">Il supporto di avvio del sistema ASA A800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="e6a5d51d9bb4a462a50b66e9607ed4c9" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - ASA A800</block>
+  <block id="c750b42bbf0b2a1a720c61535134b17b" category="paragraph">Il supporto di avvio del sistema ASA A800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="c93806c44a1a1eacf0faaf11c4a72185" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="e149ea0285b07569363801278d2e4f1e" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - ASA A800</block>
+  <block id="2c7180a3080a06cb0599eed2d1ca8b9a" category="paragraph">Prima di sostituire il supporto di avvio nel tuo ASA A800, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="aa2b63e39c66d87e3ef0adb54f3a479e" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="8b4167c8eb3a3738ce201cbad23f4a4f" category="doc">Requisiti per il ripristino manuale del supporto di avvio - ASA A800</block>
+  <block id="2f6dc43fac8155de65b6846438a8462a" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA A800, esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="f50118f7e12a2ef1e5a8f1983b2eff33" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - ASA A800</block>
+  <block id="8e70b97e62889f4765f18fc1c9d41928" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo del sistema ASA A800 .</block>
+  <block id="3535229cbc089db5881d1253c5694ce3" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA A800, è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="bcbcde938bdf5537e124daf437e7b9db" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - ASA A800</block>
+  <block id="dc9758be9759e8c57475ad932fefe4db" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA A800</block>
+  <block id="efdee91879779d5ca7bdeca68ad8554e" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione ASA A800 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="5f3255ff63cc7544f1e12eab4fb27c88" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - ASA A800</block>
+  <block id="1ff29b745be87692db3430ac143ca156" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione ASA A800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="057a80e24c284868ae5c3b2342b8f7db" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - ASA A800</block>
+  <block id="a6ef9b4193af40daa8e0af1cb39800be" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione ASA A800 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="f479f65c7fc63d1be810d8c72e66fa74" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione ASA A800 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="991fde1e2f472e8a5745cbdf81e079bc" category="paragraph">Se un componente del sistema ASA A900 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="853ed3f66990612e4e0c819c5d847ab0" category="summary">Dopo aver installato il nuovo supporto di avvio nel sistema ASA A900 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
+  <block id="9ba315e2dcb74d7d652a176d97bfa363" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - ASA A900</block>
+  <block id="f054df79bb11619746d06ed0958953a0" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema ASA A900 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
+  <block id="f844aa112f2ce2bbb31f34acfc4e2526" category="summary">Il supporto di avvio del sistema ASA A900 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="b0a9527bfb8ce1fb0c8d3d5aa7b2ce80" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - ASA A900</block>
+  <block id="1a36d4701aabbe1db74da28a8cc140b3" category="paragraph">Il supporto di avvio del sistema ASA A900 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="1fbc095e27acc85d2d626dc44b1698c9" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A900, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="6371c9113bb173db821f8c48a70384c0" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - ASA A900</block>
+  <block id="9e897d5c1be66981a1ee20fced4d99fa" category="paragraph">Prima di sostituire il supporto di avvio nel tuo ASA A900, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="c1de618be6f54f816019fc5cb45c849b" category="doc">Requisiti per il ripristino manuale del supporto di avvio - ASA A900</block>
+  <block id="5b631559aae3b51d865116d5608bd577" category="paragraph">Prima di sostituire il supporto di avvio nel sistema ASA A900, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="5485c081c1aaeb9399be0ef0aa1243e3" category="paragraph">Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessario<block ref="3b50245387c5d16203a9ca127a792c70" category="inline-link-macro-rx"></block> .</block>
+  <block id="849dbcb9cff10c2c3ce685ff21f7c30c" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA A900, esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="fb2125bdc8e77f8630fb3e030e8857f8" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - ASA A900</block>
+  <block id="d799be71967575706ca5ccebf03648f1" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage ASA A900.</block>
+  <block id="40421d6a1e6e75d7ef1ebc0e1744e8d1" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - ASA A900</block>
+  <block id="517be28f997c15f4e0a9610c7b8eb98a" category="paragraph">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione ASA A900 , esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="0e2db22b9c9decd8463dba0e31f85618" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="9ed39e651cfa2bfcad897ddd10297697" category="inline-link-macro-rx"></block></block>
+  <block id="8686efd91f938565a531b86e4c6484ad" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="710153b81007aab4b847b09b692bebbc" category="inline-link-macro-rx"></block></block>
+  <block id="764396cc36f254bde1c6a8bb8648fe3d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block><block ref="a98f18c86f9fa7a3f9a442daf9108144" category="inline-link-macro-rx"></block></block>
+  <block id="6929742e903d13c0715ad73d359fba49" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione ASA A900 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="9b845a693c955827a416b44a9519c242" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - ASA A900</block>
+  <block id="bc350e9ed5562f8e05caf725860ee458" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - ASA A900</block>
+  <block id="ddd2c1807a530195dc9c14c581b7fe0d" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - ASA A900</block>
+  <block id="332b46a23e8dff84588d76fe63f1cc25" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - ASA A900</block>
+  <block id="a8cc89dd83e94825c63fb5042ce52a8c" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione ASA A900 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="e78d2f54e32be5aace4ee0e915e12814" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione ASA A900 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="a8ebccad83f39d45d83692638bd1be35" category="paragraph">Se un componente del sistema AFF C400 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="65970b34da900e5881f17583856bc5cd" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - AFF C400</block>
+  <block id="152037f5b7b5780b475e2597da9bbe78" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - AFF C400</block>
+  <block id="4b0c67a505fa209d6a529a42e37faf4c" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema AFF C400 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
+  <block id="d5c70f79d37569cc26a869ff117966be" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - AFF C400</block>
+  <block id="11e63cc559e327f289e6412304de9cbc" category="summary">Il supporto di avvio del sistema AFF C400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="50c31d72416e6fd79a7ef27a60db744a" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - AFF C400</block>
+  <block id="fd80fb86220d663f3c8686b29148ae99" category="paragraph">Il supporto di avvio del sistema AFF C400 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="e72434326057ff97f987b53641ca00dd" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF C400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="5e2aa7d9d2c2ab236eb3da371e4c94cd" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - AFF C400</block>
+  <block id="90e3ca94599436bafa3254e647b43203" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF C400, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="5e5d0bcb9eda9596399336b7fd66585b" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF C400, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="356cabc5259436f13451eb0e681a3d7f" category="doc">Requisiti per il ripristino manuale del supporto di avvio - AFF C400</block>
+  <block id="403d3b92cecce32f9df4f2ccf0c26869" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF C400 , è necessario esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="816ca9c03b9dc4b02266d8e1f92392b0" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - AFF C400</block>
+  <block id="a15fd3940e63990ccc51f739d2346c37" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di archiviazione AFF C400 .</block>
+  <block id="9fc72301b7287c718e79e66fb08e294c" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF C400 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="4faa36a85b9d111fe4905e6b2e10a27c" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - AFF C400</block>
+  <block id="eaf1f4f25a5276152228f6fc62bc398a" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - AFF C400</block>
+  <block id="a0dbcf6f0f26d754fde2bb6d70fbb73f" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione AFF C400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="966d4890030f1e5c3f1b51c3c5299a94" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - AFF C400</block>
+  <block id="e36c07ddc2c852e96b18f7eda4762c15" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - AFF C400</block>
+  <block id="a42309898a70f71c8b47fb7946ed0fa2" category="summary">Mantieni l'hardware AFF C400</block>
+  <block id="37a0c3f42116a45593e1759f7ca396f7" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione AFF C400 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="3fc46261568f86b2dfeb5c6ac5374871" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione AFF C400 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="a6783798c7878d8ef836e14478c0ef38" category="paragraph">Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un laptop per scopi di manutenzione del controller o del sistema.  Il modulo System Management contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).</block>
+  <block id="6a927a72a3647dbe3f40171b477f09d5" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - AFF C800</block>
+  <block id="6833a1d5259195b475f6fe2e0b87de67" category="paragraph">Se un componente del sistema AFF C800 si guasta, restituisci la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="bf6fd99254dd358ccb3761bdb86f6ee6" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - AFF C800</block>
+  <block id="6d359ea24bf33b0c9bc36b5be1f31e14" category="paragraph">Dopo aver installato il nuovo supporto di avvio nel sistema AFF C800 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="59614d7f8c54752af4b5da2b2b5ad34b" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - AFF C800</block>
+  <block id="86d17ca75354a41103a63cf402b7270c" category="summary">Il supporto di avvio del sistema AFF C800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="2fba40f1d4b0b0191c3ce74446e448f2" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - AFF C800</block>
+  <block id="e14388897a217e1a857388770cabf974" category="paragraph">Il supporto di avvio del sistema AFF C800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="d883ace2fbed4bfa3af3fbcc4b01bdc1" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF C800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="cdb79bc35cd41638183f39b8a4ce7fd3" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - AFF C800</block>
+  <block id="762a189e47993cdece764acffc3ceaa4" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF C800, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="94af2227395ddad6e5559560cd877271" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF C800, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="376d0b7cc18d28859e4ffa0d79786298" category="doc">Requisiti per il ripristino manuale del supporto di avvio - AFF C800</block>
+  <block id="19c26b68bb7cb462e4abd364c6328f0f" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF C800 , esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="11f28b493b22c26e63808c0ef19438fb" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - AFF C800</block>
+  <block id="45205ddf6f9c7e719aaaa7cbae3d0889" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage AFF C800.</block>
+  <block id="302e158fc93380f5f3a9d40cf82e06f9" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF C800 , esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="7af8a97506402cb0ac9ef5bfd59bd213" category="doc">Flusso di lavoro per il ripristino manuale del supporto di avvio - AFF C800</block>
+  <block id="fbe931acedf8eb5e6a3615d416560ed4" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - AFF C800</block>
+  <block id="d16211cc14d5926be04fb22e96001a9a" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione AFF C800 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="b168114c4413f6996c9f2a75b1a5a2ef" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - AFF C800</block>
+  <block id="4049e0486575464f760ada93973aa794" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione AFF C800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="7dfe2a1426c539750938a390c889f3c7" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - AFF C800</block>
+  <block id="09cd0fdcd9f1256abe6169998fea7954" category="summary">Mantieni l'hardware AFF C800</block>
+  <block id="ae52032c0389bb7e30fc8a1b1d42aca4" category="paragraph">Mantieni l'hardware del tuo sistema di archiviazione AFF C800 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="d0dc52ec8db18186cb1170efa77d4057" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione AFF C800 sia già stato implementato come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="24cceeaae404051397c2983029af36f3" category="summary">Se un componente del sistema FAS2800 si guasta, restituire la parte guasta a NetApp.</block>
+  <block id="f182f34c787823aeadccd435dcec1399" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - FAS2800</block>
+  <block id="b3361527c62bdeb1f36dbc5fa70c1b86" category="paragraph">Se un componente del sistema FAS2800 si guasta, restituire la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="208666d4a1799cf8d635583dc8b3e3de" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - FAS2820</block>
+  <block id="f8baed9ec7bf1a62d9ce35c80a3d8c51" category="summary">Ripristinare l'immagine ONTAP sul supporto di avvio sostitutivo nel sistema fas2800.  Il processo prevede l'avvio del processo di ripristino dell'avvio dal prompt LOADER e il monitoraggio del processo di ripristino fino al suo completamento e al riavvio del nodo.</block>
+  <block id="e6fe534627555f8e7a33805bc543abdc" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - FAS2800</block>
+  <block id="cc0ed6aa6da428e81652617693d61afb" category="paragraph">Dopo aver installato il nuovo dispositivo di supporto di avvio nel sistema FAS2800, è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="f2bc732a7d5d8c83b606d4b87b43d0c8" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - FAS2820</block>
+  <block id="1e791cb35abdd5d00f53d3d3c4443566" category="summary">Il supporto di avvio del sistema FAS2800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="743e8a6f1f9f11ff4a64d576d02918df" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - FAS2800</block>
+  <block id="25e62a9fdcc1989a75580a47b34b825a" category="paragraph">Il supporto di avvio del sistema FAS2800 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="b25d39100142d4325a36a2f1dc51b357" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS2800, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="b0c926b67df8c50f554c31ba5f438d3b" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - FAS2800</block>
+  <block id="391ecd0e8870e2b4f7726e8e0e4535b4" category="paragraph">Prima di sostituire il supporto di avvio nel sistema FAS2800, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="540645a7a8b968d2bfc1cb50135e74b5" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS2800, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="f42d257c8d78af23f34def0cfd5c0e41" category="doc">Requisiti per il ripristino manuale del supporto di avvio - FAS2800</block>
+  <block id="95ede32ef16239c3cc5bbb5979861cd5" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione FAS2800, esaminare i requisiti di sostituzione, spegnere i controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="7d5a43c9fba8074e1fcb5d5b13d61a95" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - FAS2800</block>
+  <block id="3255a747b4184547071b1ae5154169ee" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage FAS2800.</block>
+  <block id="9a9625cd4ab60019935c414944220ecf" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione FAS2800, esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="ebcc7e58b81c25dd73c9df8fe6181151" category="doc">Flusso di lavoro di ripristino manuale del supporto di avvio - FAS2800</block>
+  <block id="3ee8f094be932eefb34c56849195a95c" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - FAS2820</block>
+  <block id="761cd9929abac19a1b8c34b6aabb24d1" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione FAS2800 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="708e5a998bc4f6c04fcaa8374cb2876c" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - FAS2800</block>
+  <block id="e78e9090c463ee72ca6961d2d9410202" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione FAS2800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="f786f72f787253592e5245b4d428485a" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - FAS2820</block>
+  <block id="0d524c2055dbb11c0b4664cba6b67f83" category="paragraph">Mantenete l'hardware del vostro sistema di storage FAS2820 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="f0a79de90b99f5f050883964e05d8d52" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione FAS2820 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="f33c5fec2de4fbf5a4380cbc9a2ddaa6" category="paragraph"><block ref="f33c5fec2de4fbf5a4380cbc9a2ddaa6" category="inline-link-macro-rx"></block></block>
+  <block id="b964db289e222d97cb288f76b040aa05" category="paragraph"><block ref="b964db289e222d97cb288f76b040aa05" category="inline-link-macro-rx"></block></block>
+  <block id="ae67a746eb3619b67c535b49242009cc" category="paragraph"><block ref="ae67a746eb3619b67c535b49242009cc" category="inline-link-macro-rx"></block></block>
+  <block id="59fd433224242913fbfcbf0af8c25782" category="paragraph">Una scheda Mezzanine è una scheda di espansione progettata per essere inserita in uno slot specializzato sulla scheda madre e contiene le schede I/O.</block>
+  <block id="ccb46cd83815d2a0d4deb3061e1890cd" category="paragraph"><block ref="ccb46cd83815d2a0d4deb3061e1890cd" category="inline-link-macro-rx"></block></block>
+  <block id="4b90affa7835ea96a51fed1943ed714a" category="doc">Ripristinare gli aggregati in una configurazione MetroCluster a due nodi: FAS8300 e FAS8700</block>
+  <block id="873aecdad0cb49d6576e39c8298dd1bf" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - FAS8300 e FAS8700</block>
+  <block id="be73561cb8cd15d6613be2396178e43c" category="paragraph">Se un componente del sistema FAS8300 o FAS8700 si guasta, restituire la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="b76577fa042165d3e8e07c529d9b9d1c" category="doc">Controllare il supporto e lo stato delle chiavi di crittografia - FAS8300 e FAS8700</block>
+  <block id="5b43006cee0518e13913328d7814035f" category="doc">Ripristinare la crittografia - FAS8300 e FAS8700</block>
+  <block id="0924b401802439618a718e54fb8b6c2a" category="summary">Dopo aver installato il nuovo dispositivo di supporto di avvio nel sistema FAS8300 o FAS8700 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
+  <block id="f054e77489472e63e19b45e2c9ff31c4" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - FAS8300 e FAS8700</block>
+  <block id="524ffc85b676c8fa7303fecc45c332ab" category="paragraph">Dopo aver installato il nuovo dispositivo di supporto di avvio nel sistema FAS8300 o FAS8700 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="093908c6170c1795125ba47dc3c5f5c8" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - FAS8300 e FAS8700</block>
+  <block id="ba37f46ada6aaff46e63e14da5857450" category="summary">Il supporto di avvio del sistema FAS8300 o FAS8700 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="2f5bd969b0f29b1308a14f3006b040f3" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - FAS8300 e FAS8700</block>
+  <block id="96c4098495740e7119648c5d4dfcc81f" category="paragraph">Il supporto di avvio del sistema FAS8300 o FAS8700 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="6d38c98f35feff5362357d90ac3df2f0" category="doc">Panoramica sulla sostituzione del supporto di avvio - FAS8300 e FAS8700</block>
+  <block id="fa6154065b326631d4348a136b2cfb2c" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS8300 o FAS8700 , accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="d17ebedff2aa967786a1f05ffdd1d4a5" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - FAS8300 e FAS8700</block>
+  <block id="a9f25df7e08b579215eb3375343eb3a5" category="paragraph">Prima di sostituire il supporto di avvio nel FAS8300 o FAS8700, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="be767870bb556c204155138a2ea3ad9f" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS8300 e FAS8700 , accertarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="cc2c652dd46d9b43caba43e56578d8fc" category="doc">Requisiti per il ripristino manuale dei supporti di avvio - FAS8300 e FAS8700</block>
+  <block id="00211911b2ba513521720fdc3f5c8683" category="paragraph">Prima di sostituire il supporto di avvio nel sistema FAS8300 o FAS8700 , accertarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="65899bfeb0f4080d023f5b76933df62a" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione FAS8300 o FAS8700 , esaminare i requisiti di sostituzione, arrestare il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="9c211242417a2d4e971c87e2f2ab93b0" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio: FAS8300 e FAS8700</block>
+  <block id="c23c751e94afc93f18b1692d0c6f7466" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di archiviazione FAS8300 o FAS8700 .</block>
+  <block id="cd59b9e4a3eff357c3e5ea8cfd55b7e7" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione FAS8300 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="20f77c655b1ed667f582034518a6b13f" category="doc">Flusso di lavoro di ripristino manuale del supporto di avvio - FAS8300 e FAS8700</block>
+  <block id="8769b23b60bc0ed47c85cd0f85d8a72f" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - FAS8300 e FAS8700</block>
+  <block id="f92852859a1256b879ad5dfabaea0674" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione FAS8300 o FAS8700 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="b2afd54a88356df6b7914f4f501173fe" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - FAS8300 e FAS8700</block>
+  <block id="710b1825cc3b61d89111ebcb4f63d4ed" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - FAS8300 e FAS8700</block>
+  <block id="cdcc1635d67f2d69b9bc78130ddd2127" category="summary">Manutenere l'hardware FAS8300 e FAS8700</block>
+  <block id="8dc6127ffd213090bdfb30a973df145d" category="paragraph">Esegui la manutenzione dell'hardware del tuo sistema di archiviazione FAS8300 e FAS8700 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="2f5b095ada5faeed091717ef3fef109e" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione FAS8300 e FAS8700 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="0facd68d08373b50ebf915bc5f5d5586" category="paragraph">Per i sistemi di archiviazione FAS8300 e FAS8700 , è possibile eseguire procedure di manutenzione sui seguenti componenti.</block>
+  <block id="7c407f24f3e8906fc28272461447b787" category="doc">Restituisci il supporto di avvio non riuscito a NetApp - FAS9500</block>
+  <block id="fb86ae9d6001d86ff643fedb448fbcd7" category="paragraph">Se un componente del sistema FAS9500 si guasta, restituire la parte guasta a NetApp. Vedere <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="adaa659861ef96874f01b66fb3085af7" category="summary">Dopo aver installato il nuovo dispositivo di supporto di avvio nel sistema FAS9500 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner.</block>
+  <block id="90b0b54831ab373418e5ba1f7e36930e" category="doc">Ripristino automatico del supporto di avvio dal nodo partner - FAS9500</block>
+  <block id="144634326815d011e3c0544a865340fa" category="paragraph">Dopo aver installato il nuovo dispositivo di supporto di avvio nel sistema FAS9500 , è possibile avviare il processo di ripristino automatico del supporto di avvio per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia a chiave in uso. Se la crittografia a chiave è abilitata, il sistema guida l'utente attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="43c0f29ffe78a563d4821e6d5071db39" category="doc">Ripristino manuale del supporto di avvio da un'unità USB - FAS9500</block>
+  <block id="465fc6d88891709a6b5ec571f0fca1ec" category="summary">Il supporto di avvio del sistema FAS9500 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="dc7b436e17040bcd855e157c87919d67" category="doc">Sostituisci il supporto di avvio per il ripristino automatico dell'avvio - FAS9500</block>
+  <block id="ec8924ddfa313bcce83832f40a4baa04" category="paragraph">Il supporto di avvio del sistema FAS9500 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="7704cc4b3655d0f9e0e1a04dd2b14fa0" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS9500 , accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="33d8e575e5d342885f50e373977da7e6" category="doc">Requisiti per il ripristino automatico dei supporti di avvio - FAS9500</block>
+  <block id="c1c756e9da2d209c0c17a3d0d725eda1" category="paragraph">Prima di sostituire il supporto di avvio nel FAS9500, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (chiave e0M) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="fecc555d30c9690385419a4e597992b0" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS9500 , accertarsi di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di disporre di un'unità flash USB con la capacità di archiviazione adeguata e di disporre del dispositivo di avvio sostitutivo corretto.</block>
+  <block id="d67fdc8908e6979f4155c6f1e5e595a4" category="doc">Requisiti per il ripristino manuale del supporto di avvio - FAS9500</block>
+  <block id="42f8dd2364f77d762591cef6b62b04df" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione FAS9500 , esaminare i requisiti di sostituzione, spegnere il controller, sostituire il supporto di avvio, ripristinare l'immagine sul supporto di avvio e verificare la funzionalità del sistema.</block>
+  <block id="bfefca4afffb74e4e761491f28a131f6" category="doc">Flusso di lavoro di ripristino automatico dei supporti di avvio - FAS9500</block>
+  <block id="1b8cebd8291d5bfb01ca423636061fe8" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di storage FAS9500.</block>
+  <block id="d0be1e41f5efadbe5260140391f8f070" category="summary">Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione FAS9500 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.</block>
+  <block id="8697a2c0e8a58bab734aee2fe05e19b5" category="doc">Flusso di lavoro di ripristino manuale del supporto di avvio - FAS9500</block>
+  <block id="19a42cf51141a99fd44aa4a3127b58d8" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="300546c55a0d2f6b7698e0a84c6153c8" category="inline-link-macro-rx"></block></block>
+  <block id="815bc0bcd0054c7517bbb33733536cc4" category="doc">Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - FAS9500</block>
+  <block id="027c11afe276b4d26b9766b35d4d9ad2" category="summary">Arrestare il controller danneggiato nel sistema di archiviazione FAS9500 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.</block>
+  <block id="def66a7f50caa48722a73294ce8ebd3b" category="doc">Arrestare il controller per il ripristino automatico del supporto di avvio - FAS9500</block>
+  <block id="743d8586c85598b53462cd9178125494" category="paragraph">Arrestare il controller danneggiato nel sistema di archiviazione FAS9500 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.</block>
+  <block id="5bf7e02c281c350a900998a7828cb257" category="doc">Arrestare il controller per il ripristino manuale del supporto di avvio - FAS9500</block>
+  <block id="736d29c74e85cdb54018f2987a6768a8" category="summary">Mantenere l'hardware FAS9500</block>
+  <block id="dc5e9025fa86b8774f3ddf2324b611ac" category="paragraph">Mantenete l'hardware del vostro sistema di storage FAS9500 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="8e9e5dffbf855d3c7d941afd70d9cedd" category="paragraph">Le procedure di manutenzione presuppongono che il sistema di archiviazione FAS9500 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .</block>
+  <block id="f09996a6db4296438daa24156ff1a1de" category="paragraph"><block ref="f09996a6db4296438daa24156ff1a1de" category="inline-link-macro-rx"></block></block>
+  <block id="f91d147c48561257f64c342fae27eef7" category="list-text">Se ONTAP è in esecuzione (i controller sono disponibili per gestire i dati) e tutte le unità disco nello scaffale sono di proprietà, di riserva o fanno parte di aggregati offline, attendere almeno 120 secondi.</block>
+  <block id="502c078a8048be1df907e48bf701b982" category="sidebar">Supporto di avvio AFF A400 automatizzato</block>
+  <block id="202476252b9c9c8129a604e257244ba5" category="sidebar">Supporto di avvio AFF A800 automatizzato</block>
+  <block id="f807c912f6737e2b2dad57aef36ad2fa" category="sidebar">Manuale del supporto di avvio AFF A800</block>
+  <block id="a4489912dbfe35fd210adadc480dce1f" category="sidebar">Supporto di avvio AFF A900 automatizzato</block>
+  <block id="6d57596897407d8d46c3194d7e06319e" category="sidebar">Manuale del supporto di avvio AFF A900</block>
+  <block id="068f81a3552788580eabee4f71ba08e5" category="sidebar">Supporto di avvio ASA C400 automatizzato</block>
+  <block id="d446c141458991578f7f367cdefd1543" category="sidebar">Manuale del supporto di avvio ASA C400</block>
+  <block id="07af2586f8972447a5389c5ed63a2fd6" category="sidebar">Batteria ASA C400 NVDIMM</block>
+  <block id="6c2cbc73b4ce8864a3fac3a14c1016de" category="sidebar">ASA C400 NVDIMM</block>
+  <block id="6ec3fd53b9e8060329a181b68e94213f" category="sidebar">Supporto di avvio ASA C800 automatizzato</block>
+  <block id="6832a3aaee06e686f8e63b80669d39ed" category="sidebar">Manuale del supporto di avvio ASA C800</block>
+  <block id="cfadc5aad1c7058062b660223b587c20" category="sidebar">Supporto di avvio ASA A400 automatizzato</block>
+  <block id="b3b2022a701d54310615a57645d62cae" category="sidebar">Manuale del supporto di avvio ASA A400</block>
+  <block id="43d69a4e133a92260ad49f36d7a05314" category="sidebar">Supporto di avvio ASA A800 automatizzato</block>
+  <block id="c9d91f4ea6962720259fdd3c16389ba8" category="sidebar">Manuale del supporto di avvio ASA A800</block>
+  <block id="6dcafec1d678591dc948d8e32182a7a5" category="sidebar">Supporto di avvio automatico AFF ASA 900</block>
+  <block id="4aa0b2363af339f0ad6cead0a79ed708" category="sidebar">Manuale del supporto di avvio AFF ASA 900</block>
+  <block id="ca96cd7359b9e5e04ba20a6984160e96" category="sidebar">Supporto di avvio AFF C400 automatizzato</block>
+  <block id="9e87c4c8e827eb7823ebebbcd271b8ee" category="sidebar">Manuale del supporto di avvio AFF C400</block>
+  <block id="2b544173f05b3881e3d51af3e4025a38" category="sidebar">Supporto di avvio AFF C800 automatizzato</block>
+  <block id="8b4bd76545bbd6f247c6a51cd425af88" category="sidebar">Manuale del supporto di avvio AFF C800</block>
+  <block id="e73568e0a1463c8025d72668296e80db" category="sidebar">Manutenzione AFF FAS2800</block>
+  <block id="0a83395bce1aa0ecd6fa3f7f207f952f" category="sidebar">Panoramica sulla manutenzione</block>
+  <block id="9fd044ae1396335c1e195383a9a59de8" category="sidebar">Supporto di avvio FAS2820 automatizzato</block>
+  <block id="671911c7ec14361dc8322a55a2156535" category="sidebar">Supporto di avvio - ripristino manuale</block>
+  <block id="1c30f96bf597bbdfd26e310e59eb5854" category="sidebar">Manuale del supporto di avvio FAS2820</block>
+  <block id="4c430810e44153a64c88da3a6cf7142a" category="sidebar">Installazione e configurazione FAS8300 e FAS8700</block>
+  <block id="6845236a22320cce517f949631bddf30" category="sidebar">Manutenzione FAS8300 e FAS8700</block>
+  <block id="cbaa86b5dbdf706f5cc08b5bbb1513cb" category="sidebar">Supporto di avvio FAS8300 e FAS8700 automatizzato</block>
+  <block id="bc0e1310870c6a6fc5e2b8667ad10d8f" category="sidebar">Manuale del supporto di avvio FAS8300 e FAS8700</block>
+  <block id="bec00705870c9891f2ef3af87007bd9a" category="sidebar">Modulo di memorizzazione nella cache FAS8300 e FAS8700</block>
+  <block id="929d95f2ea68f18ba02ae5368e08e5db" category="sidebar">Telaio FAS8300 e FAS8700</block>
+  <block id="404700197343ce725269e5effa1d5195" category="sidebar">Controllore FAS8300 e FAS8700</block>
+  <block id="dc4411936a1b60d450c095695c5e2202" category="sidebar">DIMM FAS8300 e FAS8700</block>
+  <block id="760db64ab19de7bfb40eccff0f7386c6" category="sidebar">Scheda PCIe o Mezzanine FAS8300 e FAS8700</block>
+  <block id="f17dc0d5f272bb8850e52f96c86ea835" category="sidebar">Alimentatore FAS8300 e FAS8700</block>
+  <block id="b283de4e13a7d5b68dec3f041941e3bc" category="sidebar">Batteria dell'orologio in tempo reale FAS8300 e FAS8700</block>
+  <block id="49083f96e824487850956b55d36a363f" category="sidebar">Supporto di avvio FAS9500 automatizzato</block>
+  <block id="92e1f12178f27a238b4b86215c5615af" category="sidebar">Manuale del supporto di avvio FAS9500</block>
 </blocks>

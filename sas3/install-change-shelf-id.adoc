@@ -67,7 +67,7 @@ Per completare il ciclo di alimentazione, è necessario spegnere entrambi gli in
 
 +
 ** Se ONTAP non è ancora in esecuzione o si sta aggiungendo a caldo uno shelf (che non è ancora stato cablato al sistema), attendere almeno 10 secondi.
-** Se ONTAP è in esecuzione (i controller sono disponibili per fornire i dati) e tutti i dischi nello shelf non sono di proprietà, spare o parte di aggregati non allineati, attendere almeno 70 secondi.
+** Se ONTAP è in esecuzione (i controller sono disponibili per gestire i dati) e tutte le unità disco nello scaffale sono di proprietà, di riserva o fanno parte di aggregati offline, attendere almeno 120 secondi.
 +
 Questa volta consente a ONTAP di eliminare correttamente il vecchio indirizzo di shelf e aggiornare la copia del nuovo indirizzo di shelf.
 

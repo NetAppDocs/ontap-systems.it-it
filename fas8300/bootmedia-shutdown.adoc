@@ -1,14 +1,19 @@
 ---
 permalink: fas8300/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
+keywords: fas8300, fas8700, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller compromesso - AFF FAS8300 e FAS8700
+= Arrestare il controller per il ripristino manuale del supporto di avvio - FAS8300 e FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+
+Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
 
 

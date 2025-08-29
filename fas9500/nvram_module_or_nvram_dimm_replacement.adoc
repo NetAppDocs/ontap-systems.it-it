@@ -84,6 +84,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 Per sostituire il modulo NVRAM, posizionarlo nello slot 6 dello chassis e seguire la sequenza di passaggi specifica.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rimuovere il modulo NVRAM di destinazione dal telaio:
 +
@@ -160,6 +161,7 @@ Schede di espulsione DIMM e DIMM
 
 Per sostituire i DIMM NVRAM nel modulo NVRAM, rimuovere il modulo NVRAM, aprire il modulo e sostituire il DIMM di destinazione.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rimuovere il modulo NVRAM di destinazione dal telaio:
 +
@@ -237,8 +239,7 @@ Schede di espulsione DIMM e DIMM
 
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
-. Per avviare ONTAP dal prompt DEL CARICATORE, immettere `bye`.
-
+Per avviare ONTAP dal prompt DEL CARICATORE, immettere `bye`.
 
 
 
