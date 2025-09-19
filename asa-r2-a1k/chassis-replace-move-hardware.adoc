@@ -1,0 +1,250 @@
+---
+permalink: asa-r2-a1k/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: asa a1k, move hardware components, replace the chassis 
+summary: 'Sostituisci lo chassis del tuo sistema ASA A1K quando un guasto hardware lo richiede.  Il processo di sostituzione prevede la rimozione del controller dalla parte anteriore dello chassis, la rimozione degli alimentatori (PSU), della NVRAM12, dei moduli I/O e dei moduli vuoti, nonché del modulo di gestione del sistema, quindi l"installazione dello chassis sostitutivo e la reinstallazione dei componenti dello chassis.' 
+---
+= Sostituire il telaio - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sostituisci lo chassis del tuo sistema ASA A1K quando un guasto hardware lo richiede.  Il processo di sostituzione prevede la rimozione del controller, delle schede I/O, del modulo NVRAM12, del modulo di gestione del sistema e delle unità di alimentazione (PSU), l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.
+
+
+
+== Fase 1: Rimuovere le PSU e i cavi
+
+Prima di rimuovere il controller è necessario rimuovere i due alimentatori (PSU).
+
+.Fasi
+. Rimuovere gli alimentatori:
++
+.. Se non si è già collegati a terra, mettere a terra l'utente.
+.. Scollegare i cavi di alimentazione dagli alimentatori.
++
+Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
+
+.. Rimuovere i due alimentatori dalla parte posteriore dello chassis ruotando la maniglia dell'alimentatore verso l'alto in modo da poterlo estrarre, premere la linguetta di bloccaggio dell'alimentatore ed estrarlo dallo chassis.
++
+
+CAUTION: L'alimentatore è in corto. Utilizzare sempre due mani per sostenerlo durante la rimozione dal modulo controller in modo che non si sposti improvvisamente dal modulo controller e non causi lesioni.
+
++
+image::../media/drw_a1k_psu_remove_replace_ieops-1378.svg[Rimuovere o sostituire l'alimentatore]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguetta di bloccaggio PSU in terracotta
+
+|===
+.. Ripetere questi passaggi per il secondo alimentatore.
+
+
+. Rimuovere i cavi:
++
+.. Scollegare i cavi di sistema e gli eventuali moduli SFP e QSFP (se necessario) dal modulo controller, ma lasciarli nel dispositivo di gestione dei cavi per mantenerli organizzati.
++
+
+NOTE: I cavi devono essere stati etichettati all'inizio di questa procedura.
+
+.. Rimuovere il dispositivo di gestione dei cavi dallo chassis e metterlo da parte.
+
+
+
+
+
+
+== Passaggio 2: rimuovere le schede I/O, NVRAM12 e il modulo di gestione del sistema
+
+. Rimuovere il modulo i/o di destinazione dallo chassis:
++
+image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["Rimuovere il modulo di i/O."]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Blocco camma i/O.
+
+|===
++
+.. Premere il pulsante CAM sul modulo target.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
+.. Rimuovere il modulo dal telaio inserendo il dito nell'apertura della leva a camma ed estraendo il modulo dal telaio.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
+.. Mettere da parte il modulo I/O e ripetere questi passaggi per tutti gli altri moduli I/O.
+
+
+. Rimuovere il modulo NVRAM12:
++
+.. Premere il pulsante della camma di bloccaggio.
++
+Il pulsante CAM si allontana dal telaio.
+
+.. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo.
+.. Rimuovere il modulo NVRAM dal telaio agganciando il dito nell'apertura della leva a camme ed estraendo il modulo dal telaio.
++
+image::../media/drw_nvram1_remove_only_ieops-2574.svg[Rimuovere il modulo NVRAM12 e i DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+| Chiusura a camma NVRAM12 
+|===
+.. Impostare il modulo NVRAM su una superficie stabile.
+
+
+. Rimuovere il modulo di gestione del sistema:
++
+.. Premere il pulsante CAM sul modulo di gestione del sistema.
+.. Ruotare la leva della camma verso il basso fino in fondo.
+.. Avvolgere il dito nel foro sulla leva della camma ed estrarre il modulo dal sistema.
++
+image::../media/drw_a1k_sys-mgmt_remove_ieops-1384.svg[Rimozione della gestione del sistema]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Dispositivo di chiusura della camma del modulo di gestione del sistema
+
+|===
+
+
+
+
+
+
+== Fase 3: Rimuovere il modulo controller
+
+. Sulla parte anteriore dell'unità, agganciare le dita nei fori delle camme di bloccaggio, premere le linguette sulle leve a camma e ruotare delicatamente, ma con decisione, entrambi i fermi verso di sé contemporaneamente.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Immagine di rimozione della centralina]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+| Blocco dei fermi della camma 
+|===
+. Estrarre il modulo controller dal telaio e collocarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+
+
+
+
+== Fase 4: sostituire il telaio danneggiato
+
+Rimuovere il telaio danneggiato e installare il telaio sostitutivo.
+
+.Fasi
+. Rimuovere il telaio danneggiato:
++
+.. Rimuovere le viti dai punti di montaggio del telaio.
+.. Far scorrere lo chassis danneggiato fuori dalle guide del rack in un cabinet di sistema o in un rack per apparecchiature, quindi metterlo da parte.
+
+
+. Installare il telaio di ricambio:
++
+.. Installare il telaio sostitutivo nel rack dell'apparecchiatura o nell'armadio di sistema guidando il telaio sulle guide del rack in un armadio di sistema o in un rack dell'apparecchiatura.
+.. Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
+.. Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dallo chassis compromesso.
+
+
+
+
+
+
+== Fase 5: installare i componenti del telaio
+
+Dopo aver installato il telaio sostitutivo, è necessario installare il modulo controller, ricollegare i moduli I/O e il modulo di gestione del sistema, quindi reinstallare e collegare gli alimentatori.
+
+.Fasi
+. Installare il modulo controller:
++
+.. Allineare l'estremità del modulo controller con l'apertura nella parte anteriore dello chassis, quindi spingere delicatamente il controller fino in fondo nello chassis.
+.. Ruotare i fermi di bloccaggio in posizione di blocco.
+
+
+. Installare le schede I/O nella parte posteriore dello chassis:
++
+.. Allineare l'estremità del modulo I/O con lo stesso slot nello chassis sostitutivo e nello chassis danneggiato, quindi spingere delicatamente il modulo fino in fondo nello chassis.
+.. Ruotare il fermo a camma verso l'alto fino alla posizione di blocco.
+.. Ripetere questi passaggi per tutti gli altri moduli I/O.
+
+
+. Installare il modulo di gestione del sistema nella parte posteriore dello chassis:
++
+.. Allineare l'estremità del modulo di gestione del sistema con l'apertura nello chassis, quindi spingere delicatamente il modulo fino in fondo nello chassis.
+.. Ruotare il fermo a camma verso l'alto fino alla posizione di blocco.
+.. Se non lo hai già fatto, reinstalla il dispositivo di gestione dei cavi e ricollega i cavi alle schede I/O e al modulo di gestione del sistema.
++
+
+NOTE: Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli.
+
++
+Assicurarsi che i cavi siano collegati secondo le etichette.
+
+
+
+. Installare il modulo NVRAM12 nella parte posteriore dello chassis:
++
+.. Allineare l'estremità del modulo NVRAM12 con l'apertura nello chassis, quindi spingere delicatamente il modulo fino in fondo nello chassis.
+.. Ruotare il fermo a camma verso l'alto fino alla posizione di blocco.
+
+
+. Installare gli alimentatori:
++
+.. Utilizzando entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis.
+.. Spingere delicatamente l'alimentatore nello chassis finché la linguetta di bloccaggio non scatta in posizione.
++
+Gli alimentatori si innestano correttamente solo con il connettore interno e si bloccano in un modo.
+
++
+
+NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema.
+
+
+
+. Ricollegare i cavi di alimentazione dell'alimentatore a entrambi gli alimentatori e fissare ciascun cavo di alimentazione all'alimentatore utilizzando il fermacavo.
++
+Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori dopo che il modulo controller è stato inserito completamente nel telaio e fissare il cavo di alimentazione all'alimentatore con le viti a testa zigrinata.
+
++
+I moduli controller iniziano ad avviarsi non appena l'alimentatore viene installato e l'alimentazione viene ripristinata.
+
+
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il telaio ASA A1K danneggiato e reinstallato i componenti al suo interno, è necessariolink:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"] .

@@ -1,0 +1,67 @@
+---
+permalink: a1k/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: aff a1k, replace the chassis 
+summary: Preparatevi a sostituire lo chassis danneggiato nel vostro sistema AFF A1K identificando lo chassis danneggiato, verificando i componenti sostitutivi ed etichettando i cavi e i moduli del controller. 
+---
+= Prepararsi a sostituire il telaio - AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Preparatevi a sostituire il telaio danneggiato nel vostro sistema AFF A1K identificando il telaio danneggiato, verificando i componenti sostitutivi ed etichettando i cavi e il modulo controller.
+
+
+
+== Fase 1: Individuare e monitorare il sistema
+
+È necessario aprire una sessione della console e salvare i registri delle sessioni per riferimenti futuri, nonché attivare il LED di posizione del sistema per individuare il telaio danneggiato.
+
+.Fasi
+. Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.
+. Individuare e accendere il LED di posizione del controller:
++
+.. Utilizzare il `system controller location-led show` comando per visualizzare lo stato corrente del LED di posizione.
+.. Modificare lo stato del LED di posizione su "ON":
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+Il LED posizione rimane acceso per 30 minuti.
+
+
+
+
+
+
+
+== Fase 2: Verifica dei componenti sostitutivi
+
+È necessario verificare di aver ricevuto i componenti necessari, rimuoverli dalla confezione e conservarli.
+
+.Fasi
+. Prima di aprire la confezione, controllare l'etichetta della confezione e verificare:
++
+** Numero di parte del componente.
+** Descrizione della parte.
+** Quantità nella scatola.
+
+
+. Rimuovere il contenuto dalla confezione e utilizzare la confezione per restituire il componente guasto a NetApp.
+
+
+
+
+== Passaggio 3: etichettare i cavi
+
+È necessario etichettare i cavi prima di rimuoverli dai moduli I/O sul retro del sistema.
+
+.Fasi
+. Etichettare tutti i cavi associati al sistema di archiviazione. Ciò aiuta a riabilitarlo più avanti in questa procedura.
+. Se non siete già correttamente collegati a terra, mettetevi a terra.
+
+
+.Quali sono le prossime novità?
+Dopo esserti preparato a sostituire l'hardware del telaio AFF A1K , devilink:chassis-replace-shutdown.html["spegnere il controller"] .

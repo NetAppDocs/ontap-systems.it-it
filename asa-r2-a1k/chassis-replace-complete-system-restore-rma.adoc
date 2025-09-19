@@ -1,0 +1,54 @@
+---
+permalink: asa-r2-a1k/chassis-replace-complete-system-restore-rma.html 
+sidebar: sidebar 
+keywords: asa a1k,  verify and set HA state, complete the replacement process 
+summary: Riavviare il controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis ASA A1K. 
+---
+= Completare la sostituzione del telaio - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Riavviare il controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis ASA A1K.
+
+
+
+== Fase 1: Avviare i controller e restituirli
+
+Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
+
+.Fasi
+. Controllare l'output della console:
++
+.. Se il controller viene avviato al prompt Loader, riavviarlo con il `boot_ontap` comando.
+.. Se la console viene visualizzata `waiting for giveback` dopo il riavvio, accedere al controller partner e verificare che il controller sostituito sia pronto per il giveback con il `storage failover show` comando.
+
+
+. Eseguire lo sconto:
++
+.. Collegare il cavo della console al controller partner.
+.. Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
+.. Se la restituzione automatica è stata disabilitata, riabilitarla: `storage failover modify -node _impaired_node_name_ -auto-giveback _true_`
+.. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+
+
+
+== Fase 2: Verifica dello stato del sistema di archiviazione
+
+Dopo che il controller ha restituito lo spazio di archiviazione, è necessario controllare lo stato generale con https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
+
+.Fasi
+. Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.
+. Correggere eventuali problemi riscontrati.
+
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

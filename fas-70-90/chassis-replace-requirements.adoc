@@ -1,0 +1,28 @@
+---
+permalink: fas-70-90/chassis-replace-requirements.html 
+sidebar: sidebar 
+keywords: fas70, fas90, replace the chassis 
+summary: Prima di sostituire il telaio del sistema FAS70 o FAS90, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica di disporre delle credenziali di amministratore locale per ONTAP, del telaio sostitutivo corretto e degli strumenti necessari. 
+---
+= Requisiti per la sostituzione del telaio - FAS70 e FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il telaio del sistema FAS70 o FAS90, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica di disporre delle credenziali di amministratore locale per ONTAP, del telaio sostitutivo corretto e degli strumenti necessari.
+
+Lo chassis è il telaio fisico che ospita tutti i componenti del sistema, come ventole, unità controller/CPU, NVRAM12, modulo di gestione del sistema, schede I/O e moduli di oscuramento, nonché alimentatori.
+
+Esaminare i seguenti requisiti.
+
+* Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare per assistenza. http://mysupport.netapp.com/["Supporto NetApp"^]
+* Ottenere le credenziali di amministratore locale per ONTAP se non si dispone di tali credenziali.
+* Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
+* È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.
+* La procedura di sostituzione dello chassis è scritta partendo dal presupposto che si stiano spostando la cornice, le ventole, il modulo controller, la NVRAM12, il modulo di gestione del sistema, le schede I/O e i moduli di oscuramento, nonché gli alimentatori nel nuovo chassis e che lo chassis sostitutivo sia un nuovo componente di NetApp.
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il telaio, è necessario link:chassis-replace-prepare.html["prepararsi a sostituire il telaio"].

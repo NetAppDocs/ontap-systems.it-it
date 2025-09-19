@@ -1,0 +1,34 @@
+---
+permalink: fas-70-90/chassis-replace-workflow.html 
+sidebar: sidebar 
+keywords: fas70, fas90, replace the chassis workflow 
+summary: Per iniziare a sostituire lo chassis del sistema di archiviazione FAS70 o FAS90, è necessario esaminare i requisiti di sostituzione, spegnere il controller, sostituire lo chassis e verificare il funzionamento del sistema. 
+---
+= Flusso di lavoro per la sostituzione del telaio - FAS70 e FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per iniziare a sostituire lo chassis del sistema di archiviazione FAS70 o FAS90, è necessario esaminare i requisiti di sostituzione, spegnere il controller, sostituire lo chassis e verificare il funzionamento del sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:chassis-replace-requirements.html["Esaminare i requisiti di sostituzione del telaio"]
+[role="quick-margin-para"]
+Esaminare i requisiti di sostituzione del telaio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["due"]link:chassis-replace-prepare.html["Preparare la sostituzione del telaio"]
+[role="quick-margin-para"]
+Preparare la sostituzione del telaio individuando il sistema, raccogliendo le credenziali di sistema e gli strumenti necessari, verificando che il telaio di ricambio sia stato ricevuto ed etichettando i cavi del sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["tre"]link:chassis-replace-shutdown.html["Spegnere il controller"]
+[role="quick-margin-para"]
+Spegnere il controller in modo da poter eseguire la manutenzione sullo chassis.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:chassis-replace-move-hardware.html["Sostituire il telaio"]
+[role="quick-margin-para"]
+Sostituire il telaio spostando i componenti dal telaio danneggiato al telaio sostitutivo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:chassis-replace-complete-system-restore-rma.html["Completare la sostituzione del telaio"]
+[role="quick-margin-para"]
+Completare la sostituzione dello chassis sollevando il controller, restituendo il controller e restituendo lo chassis guasto a NetApp.

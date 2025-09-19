@@ -43,7 +43,7 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 +
 .. Immettere il seguente comando dalla console del controller funzionante:
 +
-`storage failover modify -node local -auto-giveback false`
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
 
 .. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
 
