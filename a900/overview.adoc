@@ -1,0 +1,115 @@
+---
+permalink: a900/overview.html 
+sidebar: sidebar 
+summary: Specifiche chiave per il gruppo di piattaforme A900 
+---
+= Specifiche chiave per AFF A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF A900 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+
+
+
+== Specifiche chiave per AFF A900
+
+* Configurazione della piattaforma: coppia HA a telaio singolo AFF A900
+* Capacità massima grezza: 14,6880 PB
+* Memoria: 2048.0000 GB
+* Fattore di forma: chassis 8U con 2 controller HA
+* Versione ONTAP : ONTAP: 9.16.1P2
+* Slot di espansione PCIe: 20
+* Versione minima ONTAP : ONTAP 9.10.1RC2 == Massimi di scalabilità
+* Tipo: NAS; Coppie HA: 12; Capacità raw: 176,3 PB / 156,5 PiB; Memoria massima: 24576 GB
+* Tipo: SAN; Coppie HA: 6; Capacità grezza: 88,1 PB / 78,3 PiB; Memoria massima: 12288 GB
+* Tipo: coppia HA; capacità grezza: 14,7 PB / 13,0 PiB; memoria massima: 2048,0000
+
+
+
+
+== I/O
+
+
+
+=== I/O integrato
+
+Nessun dato I/O integrato.
+
+
+
+=== Totale I/O
+
+* Protocollo: Ethernet 100 Gbps; Porte: 32
+* Protocollo: Ethernet 25 Gbps; Porte: 64
+* Protocollo: Ethernet 10 Gbps; Porte: 64
+* Protocollo: FC 32 Gbps; Porte: 64
+* Protocollo: NVMe/FC 32 Gbps; Porte: 64
+* Porte: 0
+* Protocollo: SAS 12 Gbps; Porte: 64
+
+
+
+
+=== Porte di gestione
+
+* Protocollo: Ethernet 1 Gbps; Porte: 2
+* Protocollo: RS-232 115 Kbps; Porte: 6
+* Protocollo: USB 12 Mbps; Porte: 2
+
+
+
+
+== Rete di archiviazione supportata
+
+* CIFS
+* FC
+* iSCSI
+* NFS v3
+* NFS v4.0
+* NFS v4.1
+* NFS v4.2
+* NVMe/FC
+* NVMe/TCP
+* S3
+* S3 con NAS
+* SMB 2.0
+* SMB 2.1
+* SMB 2.x
+* SMB 3.0
+* SMB 3.1
+* SMB 3.1.1 == Specifiche dell'ambiente di sistema
+* Potenza tipica: 8004 BTU/ora
+* Potenza nel caso peggiore: 9937 BTU/ora
+* Peso: 220,5 libbre 100,0 kg
+* Altezza: 8U
+* Larghezza: 19" conforme allo standard IEC per rack (17,7" 45,0 cm)
+* Profondità: 28,8" (36,8" con staffa di gestione dei cavi)
+* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: Potenza sonora dichiarata (LwAd): 7,4 Pressione sonora (LpAm) (posizioni degli astanti): 65,0 dB
+
+
+
+
+== Conformità
+
+* Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
+* Certificazioni sicurezza: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificazioni Sicurezza/EMC/EMI: EAC, UKRSEPRO
+* Certificazioni Sicurezza/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Standard EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Standard di sicurezza: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 n. 60950-1, CAN/CSA C22.2 n. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+== Alta disponibilità
+
+* Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
+* Controller ridondanti sostituibili a caldo
+* Alimentatori ridondanti sostituibili a caldo
+* Gestione in banda SAS su connessioni SAS
+

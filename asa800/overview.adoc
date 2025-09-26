@@ -1,0 +1,95 @@
+---
+permalink: asa800/overview.html 
+sidebar: sidebar 
+summary: Specifiche chiave per il gruppo di piattaforme ASA800 
+---
+= Specifiche chiave per ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA A800 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+
+
+
+== Specifiche chiave per ASA A800
+
+* Configurazione della piattaforma: coppia HA a telaio singolo ASA A800
+* Capacità massima grezza: 6,6096 PB
+* Memoria: 1280.0000 GB
+* Fattore di forma: chassis 4U con 2 controller HA e 48 slot per unità
+* Versione ONTAP : ONTAP: 9.16.1P2
+* Slot di espansione PCIe: 10
+* Versione minima ONTAP : ONTAP 9.13.1 == Massimi di scalabilità
+* Tipo: NAS
+* Tipo: SAN; Coppie HA: 6; Capacità grezza: 39,7 PB / 35,2 PiB; Memoria massima: 7680 GB
+* Tipo: coppia HA; capacità grezza: 6,6 PB / 5,9 PiB; memoria massima: 1280.0000
+
+
+
+
+== I/O
+
+
+
+=== I/O integrato
+
+* Protocollo: Ethernet 100 Gbps; Porte: 4
+
+
+
+
+=== Totale I/O
+
+* Protocollo: Ethernet 100 Gbps; Porte: 20
+* Protocollo: Ethernet 25 Gbps; Porte: 16
+* Protocollo: Ethernet 10 Gbps; Porte: 32
+* Protocollo: FC 32 Gbps; Porte: 32
+* Protocollo: NVMe/FC 32 Gbps; Porte: 32
+* Porte: 0
+* Porte: 0
+* Protocollo: SAS 12 Gbps; Porte: 32
+
+
+
+
+=== Porte di gestione
+
+* Protocollo: Ethernet 1 Gbps; Porte: 4
+* Protocollo: RS-232 115 Kbps; Porte: 4
+* Protocollo: USB 12 Mbps; Porte: 4
+
+
+
+
+== Rete di archiviazione supportata
+
+* FC
+* iSCSI
+* NVMe/FC
+* NVMe/TCP == Specifiche dell'ambiente di sistema Nessun dato sull'ambiente disponibile.
+
+
+
+
+== Conformità
+
+* Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
+* Certificazioni sicurezza: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificazioni Sicurezza/EMC/EMI: EAC, UKRSEPRO
+* Certificazioni Sicurezza/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Standard EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Standard di sicurezza: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 n. 60950-1, CAN/CSA C22.2 n. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+== Alta disponibilità
+
+* Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
+* Controller ridondanti sostituibili a caldo
+* Alimentatori ridondanti sostituibili a caldo
+* Gestione in banda SAS su connessioni SAS per scaffali esterni
+
