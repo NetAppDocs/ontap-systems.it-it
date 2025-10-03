@@ -2,74 +2,74 @@
 permalink: fru-reference/fru-overview.html 
 sidebar: sidebar 
 keywords: FRU reference, field replaceable units, platform FRUs, hardware components, replacement procedures 
-summary: Panoramica delle unità sostituibili sul campo della piattaforma e collegamenti alle procedure di sostituzione in base al tipo di FRU. 
+summary: Trova le procedure di sostituzione per il tuo sistema di storage NetApp organizzate in base al tipo di componente.  Questo riferimento fornisce collegamenti diretti a flussi di lavoro di sostituzione passo passo per i sistemi AFF, ASA e FAS per aiutarti a individuare rapidamente la procedura corretta per le tue specifiche esigenze di manutenzione hardware. 
 ---
-= Riferimento FRU della piattaforma
+= Riferimento sostitutivo per i sistemi di storage NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per i sistemi hardware ONTAP , è possibile eseguire procedure di manutenzione sui seguenti componenti FRU (Field Replaceable Unit).
+Trova le procedure di sostituzione per il tuo sistema di storage NetApp organizzate in base al tipo di componente.  Questo riferimento fornisce collegamenti diretti a flussi di lavoro di sostituzione passo passo per i sistemi AFF, ASA e FAS per aiutarti a individuare rapidamente la procedura corretta per le tue specifiche esigenze di manutenzione hardware.
 
 [cols="1,2"]
 |===
 
 
-| Procedura FRU | Descrizione 
+| Componente di sistema | Descrizione 
 
 
-| link:bootmedia-fru-links.html["Procedure di sostituzione del supporto di avvio per piattaforma"^] | Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio. 
+| link:bootmedia-fru-links.html["Procedure di sostituzione del supporto di avvio"] | Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio. 
 
 
-| link:caching-module-fru-links.html["Procedure di sostituzione del modulo di memorizzazione nella cache per piattaforma"^] | È necessario sostituire il modulo di caching del controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline. 
+| link:caching-module-fru-links.html["Procedure di sostituzione del modulo di memorizzazione nella cache"] | È necessario sostituire il modulo di caching del controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline. 
 
 
-| link:chassis-fru-links.html["Procedure di sostituzione del telaio per piattaforma"^] | Lo chassis è l'involucro fisico che ospita tutti i componenti del controller, come l'unità controller/CPU, l'alimentatore e l'I/O. 
+| link:chassis-fru-links.html["Procedure di sostituzione del telaio"] | Lo chassis è l'involucro fisico che ospita tutti i componenti del controller, come l'unità controller/CPU, l'alimentatore e l'I/O. 
 
 
-| link:controller-fru-links.html["Procedure di sostituzione del controller per piattaforma"^] | Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP. 
+| link:controller-fru-links.html["Procedure di sostituzione del controller"] | Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP. 
 
 
-| link:dcpm-power-fru-links.html["Procedure di sostituzione del modulo di alimentazione DCPM per piattaforma"^] | Il modulo di alimentazione della memoria persistente del centro dati (DCPM) fornisce alimentazione di backup per i moduli DCPM in caso di imprevisti eventi di interruzione di corrente. 
+| link:dcpm-power-fru-links.html["Procedure di sostituzione del modulo di alimentazione DCPM"] | Il modulo di alimentazione della memoria persistente del centro dati (DCPM) fornisce alimentazione di backup per i moduli DCPM in caso di imprevisti eventi di interruzione di corrente. 
 
 
-| link:dimm-fru-links.html["Procedure di sostituzione DIMM per piattaforma"^] | È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM. 
+| link:dimm-fru-links.html["Procedure di sostituzione DIMM"] | È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM. 
 
 
-| link:drive-fru-links.html["Procedure di sostituzione dell'unità per piattaforma"^] | Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati. 
+| link:drive-fru-links.html["Procedure di sostituzione dell'unità"] | Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati. 
 
 
-| link:fan-fru-links.html["Procedure di sostituzione della ventola per piattaforma"^] | Una ventola fornisce il flusso d'aria per raffreddare i componenti del sistema e mantenere le temperature di esercizio adeguate. 
+| link:fan-fru-links.html["Procedure di sostituzione della ventola"] | Una ventola fornisce il flusso d'aria per raffreddare i componenti del sistema e mantenere le temperature di esercizio adeguate. 
 
 
-| link:io-module-fru-links.html["Procedure di sostituzione del modulo IO per piattaforma"^] | Un modulo I/O fornisce interfacce di connettività di rete e di archiviazione per il controller. 
+| link:io-module-fru-links.html["Procedure di sostituzione del modulo IO"] | Un modulo I/O fornisce interfacce di connettività di rete e di archiviazione per il controller. 
 
 
-| link:led-module-fru-links.html["Procedure di sostituzione dei moduli LED per piattaforma"^] | Il modulo LED fornisce indicatori visivi di stato per lo stato del sistema e dei componenti. 
+| link:led-module-fru-links.html["Procedure di sostituzione del modulo LED"] | Il modulo LED fornisce indicatori visivi di stato per lo stato del sistema e dei componenti. 
 
 
-| link:mezzanine-fru-links.html["Procedure di sostituzione del mezzanino per piattaforma"^] | Una scheda mezzanine fornisce connettività I/O aggiuntiva e capacità di espansione per il controller. 
+| link:mezzanine-fru-links.html["Procedure di sostituzione del mezzanino"] | Una scheda mezzanine fornisce connettività I/O aggiuntiva e capacità di espansione per il controller. 
 
 
-| link:nvdimm-fru-links.html["Procedure di sostituzione NVDIMM per piattaforma"^] | È necessario sostituire un NVDIMM (modulo di memoria non volatile dual in-line) quando il modulo si guasta o presenta errori. 
+| link:nvdimm-fru-links.html["Procedure di sostituzione NVDIMM"] | È necessario sostituire un NVDIMM (modulo di memoria non volatile dual in-line) quando il modulo si guasta o presenta errori. 
 
 
-| link:nvmem-battery-fru-links.html["Procedure di sostituzione della batteria NVMEM/ NVRAM per piattaforma"^] | Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA. 
+| link:nvmem-battery-fru-links.html["Procedure di sostituzione della batteria NVMEM/ NVRAM"] | Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA. 
 
 
-| link:nvram-module-fru-links.html["Procedure di sostituzione del modulo NVRAM per piattaforma"^] | Il modulo NVRAM fornisce un archivio non volatile per i metadati di sistema e i dati di scrittura memorizzati nella cache. 
+| link:nvram-module-fru-links.html["Procedure di sostituzione del modulo NVRAM"] | Il modulo NVRAM fornisce un archivio non volatile per i metadati di sistema e i dati di scrittura memorizzati nella cache. 
 
 
-| link:pci-cards-fru-links.html["Procedure di sostituzione delle schede PCI e dei riser per piattaforma"^] | Le schede PCI e i riser forniscono slot di espansione per funzionalità aggiuntive e connettività I/O. 
+| link:pci-cards-fru-links.html["Procedure di sostituzione delle schede PCI e dei riser"] | Le schede PCI e i riser forniscono slot di espansione per funzionalità aggiuntive e connettività I/O. 
 
 
-| link:power-supply-fru-links.html["Procedure di sostituzione dell'alimentatore per piattaforma"^] | Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller. 
+| link:power-supply-fru-links.html["Procedure di sostituzione dell'alimentatore"] | Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller. 
 
 
-| link:rtc-battery-fru-links.html["Procedure di sostituzione della batteria RTC per piattaforma"^] | Una batteria dell'orologio in tempo reale conserva le informazioni relative alla data e all'ora del sistema se l'alimentazione è spenta. 
+| link:rtc-battery-fru-links.html["Procedure di sostituzione della batteria RTC"] | Una batteria dell'orologio in tempo reale conserva le informazioni relative alla data e all'ora del sistema se l'alimentazione è spenta. 
 
 
-| link:system-management-fru-links.html["Procedure di sostituzione del modulo di gestione del sistema per piattaforma"^] | Il modulo di gestione del sistema fornisce funzionalità di gestione fuori banda per il sistema. 
+| link:system-management-fru-links.html["Procedure di sostituzione del modulo di gestione del sistema"] | Il modulo di gestione del sistema fornisce funzionalità di gestione fuori banda per il sistema. 
 |===

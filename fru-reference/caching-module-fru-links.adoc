@@ -2,36 +2,23 @@
 sidebar: sidebar 
 permalink: fru-reference/caching-module-fru-links.html 
 keywords: caching module, field replaceable units, FRU, caching module replacement 
-summary: Questa pagina fornisce collegamenti alle procedure di sostituzione dei moduli di memorizzazione nella cache in base al sistema. 
+summary: Trova le procedure di sostituzione dei moduli di memorizzazione nella cache per il tuo sistema di storage NetApp organizzate per famiglia di piattaforme.  Questo riferimento fornisce collegamenti diretti ai flussi di lavoro di sostituzione dei moduli di memorizzazione nella cache passo dopo passo per i sistemi AFF, ASA e FAS per aiutarti a individuare rapidamente la procedura corretta per il tuo modello specifico. 
 ---
-= Collegamenti FRU del modulo di memorizzazione nella cache
+= Procedure di sostituzione del modulo di memorizzazione nella cache per famiglia di piattaforme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Questa pagina fornisce collegamenti alle procedure di sostituzione dei moduli di memorizzazione nella cache organizzate per sistema.
+Trova le procedure di sostituzione dei moduli di memorizzazione nella cache per il tuo sistema di storage NetApp organizzate per famiglia di piattaforme.  Questo riferimento fornisce collegamenti diretti ai flussi di lavoro passo passo per la sostituzione dei moduli di memorizzazione nella cache per i sistemi FAS , per aiutarti a individuare rapidamente la procedura corretta per il tuo modello specifico.
 
-[role="tabbed-block"]
-====
-.Sistemi AFF
---
-* link:../a700/caching-module-and-core-dump-module-replace.html["AFF A700"^]
+* link:../fas50/caching-module-hot-swap.html["FAS50"]
+* link:../fas-70-90/caching-module-hot-swap.html["FAS70/90"]
+* link:../fas2600/caching-module-replace.html["FAS2600"]
+* link:../fas2700/caching-module-replace.html["FAS2700"]
+* link:../fas2800/caching-module-replace.html["FAS2800"]
+* link:../fas8200/caching-module-replace.html["FAS8200"]
+* link:../fas8300/caching-module-replace.html["FAS8300"]
+* link:../fas9000/caching-module-hot-swap.html["FAS9000"]
 
-
---
-.Sistemi FAS
---
-* link:../fas50/caching-module-hot-swap.html["FAS50"^]
-* link:../fas-70-90/caching-module-hot-swap.html["FAS70/90"^]
-* link:../fas2600/caching-module-replace.html["FAS2600"^]
-* link:../fas2700/caching-module-replace.html["FAS2700"^]
-* link:../fas2800/caching-module-replace.html["FAS2800"^]
-* link:../fas8200/caching-module-replace.html["FAS8200"^]
-* link:../fas8300/caching-module-replace.html["FAS8300"^]
-* link:../fas9000/caching-module-hot-swap.html["FAS9000"^]
-
-
---
-====
