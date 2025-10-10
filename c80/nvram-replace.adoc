@@ -11,7 +11,7 @@ summary: 'Il modulo NVRAM è costituito da NVRAM12 GB e DIMM e fino a due moduli
 
 
 [role="lead"]
-Sostituire il NVRAM nel sistema AFF C80 quando la memoria non volatile si guasta o richiede un aggiornamento. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sostituzione del modulo NVRAM o del modulo DIMM NVRAM, la riassegnazione dei dischi e la restituzione del componente guasto a NetApp.
+Sostituisci la NVRAM nel tuo sistema AFF c80 quando la memoria non volatile diventa difettosa o necessita di un aggiornamento.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la completa interruzione dell'alimentazione estraendo il controller di qualche centimetro, la sostituzione del modulo NVRAM o del DIMM NVRAM , la riassegnazione dei dischi e la restituzione della parte guasta a NetApp.
 
 Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropriata riportata di seguito.
 
@@ -32,6 +32,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del s
 
 NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
 
+. Premere entrambi i fermi di bloccaggio sul controller, ruotarli entrambi contemporaneamente verso il basso ed estrarre il controller di circa 3 o 4 pollici.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere il modulo NVRAM di destinazione dal telaio:
 +
@@ -72,7 +73,20 @@ Linguette di bloccaggio DIMM
 .. Far scorrere delicatamente il modulo nell'alloggiamento fino in fondo, quindi spingere il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
 
 
-. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
+. Reinstallare il modulo controller.  Il controller si riavvia non appena è completamente inserito.
++
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
+
+
+. Collegare i cavi di alimentazione agli alimentatori.
 +
 
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
@@ -98,6 +112,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del s
 
 NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
 
+. Premere entrambi i fermi di bloccaggio sul controller, ruotarli entrambi contemporaneamente verso il basso ed estrarre il controller di circa 3 o 4 pollici.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando delicatamente i perni alle estremità del vassoio e ruotandolo verso il basso.
 . Rimuovere il modulo NVRAM di destinazione dal telaio:
 +
@@ -141,7 +156,20 @@ NOTE: Consultare l'etichetta della mappa FRU sul lato del modulo NVRAM per deter
 .. Far scorrere delicatamente il modulo nello slot fino a quando il dispositivo di chiusura della camma non inizia a innestarsi con il perno della camma di i/o, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
 
 
-. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
+. Reinstallare il modulo controller.  Il controller si riavvia non appena è completamente inserito.
++
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
+
+
+. Collegare i cavi di alimentazione agli alimentatori.
 +
 
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.

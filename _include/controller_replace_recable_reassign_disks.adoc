@@ -107,7 +107,6 @@ NOTE: Contattare https://support.netapp.com["Supporto NetApp"] in caso di proble
 
 . Una volta che il sistema è stato elaborato, viene visualizzato il Boot Menu (Menu di avvio). Selezionare '1' per l'avvio normale.
 . Controllare lo stato del takeover: `storage failover show`
-. Assicurarsi che tutti i core dump sul nodo riparato siano salvati passando alla modalità avanzata e quindi `run local partner nosavecore` a `set -privilege advanced` .
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
 . Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
 . Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`

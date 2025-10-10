@@ -212,6 +212,7 @@ LED di attenzione NVRAM
 
 NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
 
+. Premere entrambi i fermi di bloccaggio sul controller, ruotarli entrambi contemporaneamente verso il basso ed estrarre il controller di circa 3 o 4 pollici.
 . Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
 . Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi che l'etichetta in cui sono stati collegati i cavi sia visibile per poterli collegare alle porte corrette quando si reinstalla il modulo.
 +
@@ -283,7 +284,20 @@ Supporto di boot
 
 
 . Eseguire il richiamo del modulo Gestione del sistema.
-. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
+. Reinstallare il modulo controller.  Il controller si riavvia non appena è completamente inserito.
++
+.. Spingere con decisione il modulo controller nello chassis fino a quando non raggiunge la scheda intermedia e non è completamente inserito.
++
+I fermi di bloccaggio si sollevano quando il modulo controller è completamente inserito.
+
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Ruotare i fermi di bloccaggio verso l'alto in posizione bloccata.
+
+
+. Collegare i cavi di alimentazione agli alimentatori.
 +
 
 NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
