@@ -1,0 +1,156 @@
+---
+permalink: afx-1k/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: afx 1k, how to recable the system, how to reassign disks 
+summary: Restituisci il controllo delle risorse di archiviazione al controller sostitutivo in modo che il tuo sistema di archiviazione AFX 1K possa riprendere il normale funzionamento. 
+---
+= Restituisci il controller - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Restituisci il controllo delle risorse di archiviazione al controller sostitutivo in modo che il tuo sistema di archiviazione AFX 1K possa riprendere il normale funzionamento.  La procedura di restituzione varia in base al tipo di crittografia utilizzato dal sistema: nessuna crittografia o crittografia Onboard Key Manager (OKM).
+
+[role="tabbed-block"]
+====
+.Nessuna crittografia
+--
+Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione.
+
+.Fasi
+. Dal prompt LOADER, immettere
++
+`boot_ontap`
+
+. Premere <enter> quando i messaggi della console si interrompono.
++
+** Se viene visualizzato il prompt _login_, andare al passo successivo alla fine di questa sezione.
+** Se non vedi la richiesta di accesso, premi il tasto <Invio>; se ancora non vedi la richiesta, accedi al nodo partner.
+
+
+. Restituisci solo la radice con l'opzione override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.  Per ulteriori informazioni sui livelli di privilegio, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Comprendere i livelli di privilegio per i comandi CLI ONTAP"^] .
+
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+. Attendi 5 minuti dopo il completamento del report di restituzione, quindi controlla lo stato di failover e restituzione:
++
+`storage failover show`E `storage failover show-giveback`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
+
+. Se i collegamenti interconnessi HA sono stati interrotti, ripristinarli:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Crittografia OKM
+--
+Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
+
+.Fasi
+. Dal prompt DEL CARICATORE, immettere:
++
+`boot_ontap maint`
+
+. Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
+. Immettere la passphrase OKM. È possibile ottenere questa passphrase dal cliente oppure contattare https://support.netapp.com["Supporto NetApp"].
++
+
+NOTE: La passphrase verrà richiesta due volte.
+
+. Immettere i dati della chiave di backup quando richiesto.
+. Nel menu di avvio, inserire l'opzione `1` per l'avvio normale.
+. Spostare il cavo della console sul nodo partner e immettere il seguente login:
++
+`admin`
+
+. Restituisci solo la radice con l'opzione override-destination-checks:
++
+`storage  failover giveback -ofnode impaired-node -only-root true -override-destination-checks true`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.  Per ulteriori informazioni sui livelli di privilegio, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Comprendere i livelli di privilegio per i comandi CLI ONTAP"^] .
+
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+. Attendi 5 minuti dopo il completamento del report di restituzione, quindi controlla lo stato di failover e restituzione:
++
+`storage failover show`E `storage failover show-giveback`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
+
+. Spostare il cavo della console sul nodo sostitutivo e immettere quanto segue:
++
+`security key-manager onboard sync`
+
++
+
+NOTE: Verrà richiesta la passphrase a livello di cluster di OKM per il cluster.
+
+. Verificare lo stato delle chiavi con il seguente comando:
++
+`security key-manager key query -key-type svm-KEK`
+
++
+Se la colonna _restarted_ mostra qualcosa tranne _true_, contattare https://support.netapp.com["Supporto NetApp"].
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
++
+.. Se i collegamenti di interconnessione HA sono stati interrotti, ripristinarli per riprendere il giveback automatico:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+====
+.Quali sono le prossime novità?
+Dopo aver trasferito la proprietà delle risorse di archiviazione al controller sostitutivo,link:controller-replace-restore-system-rma.html["finire di sostituire il controller"] .

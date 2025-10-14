@@ -1,0 +1,121 @@
+---
+permalink: nx224/service-replace-drive.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, fail, replace, drive, nondisruptive, i/o, hot-swap, hot-swap a drive 
+summary: 'È possibile sostituire un"unità guasta senza interrompere l"alimentazione in uno scaffale NX224 acceso e mentre è in corso un"operazione di I/O.' 
+---
+= Sostituzione a caldo di un'unità - Scaffali NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un'unità guasta senza interrompere l'alimentazione in uno scaffale NX224 acceso e mentre è in corso un'operazione di I/O.
+
+.Prima di iniziare
+* L'unità che si sta installando deve essere supportata dallo scaffale NX224.  Puoi verificare le unità compatibili del tuo scaffale in https://hwu.netapp.com["NetApp Hardware Universe"^] .
+* Se l'autenticazione SED è attivata, è necessario utilizzare le istruzioni per la sostituzione SED nella documentazione di ONTAP.
++
+È possibile visualizzare i passaggi aggiuntivi che devono essere completati prima e dopo la sostituzione di un SED in https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Panoramica della crittografia NetApp con la documentazione CLI"^] .
+
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Verificare che l'unità che si sta rimuovendo non sia funzionante.
++
+È possibile verificare che il disco non funzioni correttamente eseguendo `storage disk show -broken` comando. Il disco guasto viene visualizzato nell'elenco dei dischi guasti. In caso contrario, attendere ed eseguire nuovamente il comando.
+
++
+
+NOTE: A seconda del tipo e della capacità del disco, potrebbero essere necessarie diverse ore prima che il disco venga visualizzato nell'elenco dei dischi guasti.
+
+
+
+.A proposito di questa attività
+* *Migliore pratica:* assicurati che il tuo sistema possa riconoscere e utilizzare le unità appena qualificate https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["scaricando la versione corrente del pacchetto di qualificazione del disco"^] .
++
+In questo modo si evitano messaggi di eventi di sistema relativi alla presenza di informazioni sull'unità non aggiornate e si impedisce il partizionamento dell'unità perché le unità non vengono riconosciute.  Il DQP ti avvisa anche della presenza di firmware dell'unità non aggiornato.
+
+* *Migliore pratica:* la migliore pratica è quella di avere le versioni aggiornate del firmware del modulo NVMe shelf (NSM) e del firmware dell'unità sul sistema prima di sostituire i componenti FRU. È possibile visitare il sito di supporto NetApp per  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["scarica il firmware dello scaffale del disco"^] E  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["scarica il firmware dell'unità disco"^] .
++
+[NOTE]
+====
+Non riportare il firmware a una versione che non supporta lo shelf e i relativi componenti.
+
+====
+* Il firmware del disco viene aggiornato automaticamente (senza interruzioni) sui nuovi dischi con versioni firmware non aggiornate.
++
+
+NOTE: I controlli del firmware del disco vengono eseguiti ogni due minuti.
+
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf per individuare fisicamente lo shelf interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se non si conosce `_shelf_name_` dello shelf interessato, eseguire `storage shelf show` comando.
+
++
+Uno scaffale ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando l' `off`opzione .
+
+* Quando si disimballa l'unità sostitutiva, conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce l'unità guasta.
++
+Per ottenere il numero RMA o ulteriore assistenza per la procedura di sostituzione, contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico).
+
+
+
+.Fasi
+. Mettere a terra l'utente.
+. Identificare fisicamente il disco guasto.
++
+In caso di guasto di un disco, il sistema registra un messaggio di avviso alla console di sistema che indica quale disco si è guastato. Inoltre, il LED attenzione (ambra) sul pannello del display dell'operatore dello scaffale e l'unità guasta si accendono.
+
++
+
+NOTE: Il LED di attività (verde) su un disco guasto può essere acceso (fisso), che indica che il disco è alimentato, ma non deve lampeggiare, il che indica l'attività i/O. Un disco guasto non ha attività i/O.
+
+. Rimuovere il disco guasto:
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Rimuovere l'unità.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Premere il pulsante di rilascio sulla superficie dell'unità per aprire la maniglia della camma.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Ruotare la maniglia della camma verso il basso per disinnestare la trasmissione dalla piastra intermedia.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Estrarre l'unità dallo scaffale utilizzando la maniglia della camma e supportarla con l'altra mano.
+
+|===
+. Attendere almeno 70 secondi prima di inserire l'unità sostitutiva.
++
+Questo consente al sistema di riconoscere che un disco è stato rimosso.
+
+. Inserire l'unità sostitutiva:
++
+.. Con la maniglia della camma in posizione aperta, utilizzare entrambe le mani per inserire l'unità.
+.. Premere delicatamente fino a quando l'unità non si arresta.
+.. Chiudere la maniglia della camma in modo che l'unità sia completamente inserita nel piano intermedio e la maniglia scatti in posizione.
++
+Chiudere lentamente la maniglia della camma in modo che sia allineata correttamente con la superficie dell'unità.
+
+
+
+. Verificare che il LED di attività del disco (verde) sia acceso.
++
+Quando il LED di attività del disco è acceso, significa che il disco è alimentato. Quando il LED di attività del disco lampeggia, significa che il disco è alimentato e che l'i/o è in corso. Se il firmware del disco viene aggiornato automaticamente, il LED lampeggia.
+
+. Se si sta sostituendo un'altra unità, ripetere i passi da 3 a 7.
+

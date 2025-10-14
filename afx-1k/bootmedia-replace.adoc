@@ -1,0 +1,88 @@
+---
+permalink: afx-1k/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: afx 1k, replace the boot media 
+summary: 'Il supporto di avvio del sistema di archiviazione AFX 1K memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l"installazione del supporto di avvio sostitutivo nel modulo di gestione del sistema e la successiva reinstallazione del modulo di gestione del sistema.' 
+---
+= Sostituisci il supporto di avvio - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il supporto di avvio del sistema di archiviazione AFX 1K memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo di gestione del sistema e la successiva reinstallazione del modulo di gestione del sistema.
+
+Il supporto di avvio si trova all'interno del modulo di gestione del sistema ed è accessibile rimuovendo il modulo dal sistema.
+
+image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[I supporti di avvio sostituiscono l'immagine]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Dispositivo di chiusura della camma del modulo di gestione del sistema
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Pulsante di blocco dei supporti di avvio
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Supporto di boot
+
+|===
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi di alimentazione dagli alimentatori.
+. Rimuovere il modulo di gestione del sistema:
++
+.. Rimuovere i cavi dal modulo di gestione del sistema ed etichettarli per garantire la corretta riconnessione durante la reinstallazione.
+.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
+.. Premere il pulsante della camma di gestione del sistema.
+.. Ruotare il dispositivo di chiusura della camma verso il basso fino in fondo.
+.. Rimuovere il modulo di gestione del sistema dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal contenitore.
+.. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile.
+
+
+. Rimuovere il supporto di avvio dal modulo di gestione:
++
+.. Premere il pulsante di bloccaggio blu.
+.. Ruotare il supporto di avvio verso l'alto, farlo scorrere fuori dallo zoccolo e metterlo da parte.
+
+
+. Installare il supporto di avvio sostitutivo nel modulo di gestione del sistema:
++
+.. Allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente a squadra nello zoccolo.
+.. Ruotare il supporto di avvio verso il basso verso il pulsante di bloccaggio.
+.. Premere il pulsante di bloccaggio, ruotare completamente il supporto di avvio e rilasciare il pulsante di bloccaggio.
+
+
+. Reinstallare il modulo di gestione del sistema:
++
+.. Allineare il modulo con i bordi dell'apertura dello slot del contenitore.
+.. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
++
+.. Eseguire il richiamo del modulo Gestione del sistema.
+
+
+. Collegare i cavi di alimentazione agli alimentatori e reinstallare il fermo del cavo di alimentazione.
++
+Il controller inizia ad avviarsi non appena l'alimentazione viene ricollegata al sistema.
+
+
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il supporto di avvio,link:bootmedia-recovery-image-boot.html["Ripristinare l'immagine ONTAP dal nodo partner"] .

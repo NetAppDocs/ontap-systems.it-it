@@ -33,7 +33,24 @@ Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum
 +
 Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Disattivare il ritorno automatico dalla console del controllore non abilitato:
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: Quando vedi _Vuoi disattivare la restituzione automatica?_, inserisci `y` .
+
++
+.. Se il controller non funzionante non può essere riavviato o è già stato preso in carico, è necessario disattivare il collegamento di interconnessione HA dal controller funzionante prima di avviare il controller non funzionante.  Ciò impedirà al controllore non autorizzato di effettuare la restituzione automatica.
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
+
+
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
 +
 [cols="1,2"]
@@ -45,13 +62,6 @@ Il seguente comando AutoSupport sopprime la creazione automatica dei casi per du
 Il prompt DEL CARICATORE
  a| 
 Passare alla fase successiva.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
 
 
 

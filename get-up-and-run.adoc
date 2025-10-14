@@ -21,28 +21,11 @@ Utilizzare il seguente flusso di lavoro per implementare il sistema storage quan
 [role="quick-margin-para"]
 Installare gli switch nel rack o nell'armadietto. Accedere alle seguenti istruzioni relative al modello di switch in uso.
 
-[role="quick-margin-para"]
-**Switch del cluster**
-
 [role="quick-margin-list"]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/install-hardware-bes53248.html["Installare lo switch BES-53248"^]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/install-switch-9336c-cluster.html["Installare lo switch Cisco Nexus 9336C-FX2"^]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/install-hardware-sn2100-cluster.html["Installare lo switch NVIDIA SN2100"^]
-
-
-[role="quick-margin-para"]
-**Switch storage**
-
-[role="quick-margin-list"]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/install-9336c-storage.html["Installare lo switch Cisco Nexus 9336C-FX2"^]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100-storage/configure-overview-sn2100-storage.html["Installare lo switch NVIDIA SN2100"^]
-
-
-[role="quick-margin-para"]
-**Switch condivisi**
-
-[role="quick-margin-list"]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/install-9336c-shared.html["Installare lo switch Cisco Nexus 9336C-FX2"^]^
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Interruttori AFX"^]
+* link:https://review.docs.netapp.com/us-en/ontap-systems-switches/cluster/index.html["Interruttori a grappolo"^]
+* link:https://review.docs.netapp.com/us-en/ontap-systems-switches/storage/index.html["Interruttori di archiviazione"^]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/install-9336c-shared.html["Switch condivisi"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Installazione del sistema di storage e dei shelf di storage
@@ -52,7 +35,8 @@ Installare il sistema di archiviazione e gli scaffali nel cabinet o nel rack. Ac
 [role="quick-margin-list"]
 * link:aff-landing/index.html["Sistemi AFF"]
 * link:allsan-landing/index.html["Sistemi ASA"]
-* https://docs.netapp.com/us-en/asa-r2/index.html["Sistemi ASA r2"]
+* link:https://docs.netapp.com/us-en/ontap-afx/install-setup/install-setup-workflow.html["Sistemi AFX"]
+* https://docs.netapp.com/us-en/asa-r2/install-setup/install-setup-workflow.html["Sistemi ASA r2"]
 * link:fas/index.html["Sistemi FAS"]
 
 
@@ -65,6 +49,6 @@ Collegare i controller alla rete, quindi collegare i controller agli scaffali.  
 Dopo aver installato e configurato controller e switch, è necessario completare la configurazione dello storage in ONTAP. Accedere alle seguenti istruzioni in base alla configurazione di implementazione.
 
 [role="quick-margin-list"]
-* Per le implementazioni ONTAP, vedere https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Configurare ONTAP"].
-* Per le implementazioni di ONTAP con MetroCluster, vedere https://docs.netapp.com/us-en/ontap-metrocluster/["Configurare MetroCluster con ONTAP"].
+* Per le distribuzioni ONTAP , vedere https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Configurare ONTAP"^] .
+* Per le distribuzioni ONTAP con MetroCluster , vedere https://docs.netapp.com/us-en/ontap-metrocluster/["Configurare MetroCluster con ONTAP"^] .
 

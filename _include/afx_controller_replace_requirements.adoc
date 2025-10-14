@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+Esaminare i requisiti per la sostituzione del controller.
+
+* È importante applicare i comandi descritti di seguito ai sistemi corretti:
++
+** Il controller _alterato_ è il controller che viene sostituito.
+** Il controller _replacement_ è il nuovo controller che sostituisce il controller compromesso.
+** Il controller _healthy_ è il controller sopravvissuto.
+
+
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
+* È necessario sostituire il componente guasto con l'unità FRU (Field-Replaceable Unit) ricevuta da NetApp.
+* È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
+* Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
+* È sempre necessario acquisire l'output della console del controller in un file di registro di testo.
++
+In questo modo è possibile registrare la procedura per risolvere eventuali problemi riscontrati durante il processo di sostituzione.
+
+

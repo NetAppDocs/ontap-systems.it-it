@@ -1,0 +1,96 @@
+---
+permalink: afx-1k/maintain-overview.html 
+sidebar: sidebar 
+keywords: afx 1k maintenance, maintenance, repairing a1k, repairing afx 1k, replace afx 1k components, replace afx 1k components 
+summary: 'Mantieni l"hardware del tuo sistema di archiviazione AFX 1K per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.' 
+---
+= Panoramica delle procedure di manutenzione - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mantieni l'hardware del tuo sistema di archiviazione AFX 1K per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.
+
+Le procedure di manutenzione presuppongono che il sistema di storage AFX 1K sia già stato implementato come nodo di storage nell'ambiente ONTAP .
+
+
+
+== Componenti del sistema
+
+Per il sistema di archiviazione AFX 1K, è possibile eseguire procedure di manutenzione sui seguenti componenti.
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Supporto di boot"]
+ a| 
+Il supporto di avvio memorizza un set primario e uno secondario di file immagine ONTAP che il sistema utilizza all'avvio.
+
+
+
+ a| 
+link:controller-replace-workflow.html["Controller"]
+ a| 
+Un controller è costituito da una scheda, firmware e software. Controlla le unità ed esegue il software del sistema operativo ONTAP.
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+Un modulo DIMM (Dual in-line Memory Module) è un tipo di memoria per computer. Vengono installati per aggiungere memoria di sistema a una scheda madre del controller.
+
+
+
+ a| 
+link:fan-replace.html["Ventola"]
+ a| 
+Una ventola raffredda la centralina.
+
+
+
+ a| 
+link:nvram-replace.html["Modulo NVRAM"]
+ a| 
+Il modulo NVRAM (Non-Volatile Random Access Memory) consente al controller di proteggere e salvare i dati di volo in caso di interruzione di corrente del sistema.  L'ID del sistema è memorizzato nel modulo NVRAM .  Una volta sostituito, il controller utilizza il nuovo ID di sistema del modulo NVRAM sostitutivo.
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["Batteria NV"]
+ a| 
+La batteria NV è responsabile dell'alimentazione al modulo NVRAM mentre i dati in-flight vengono trasferiti alla memoria flash dopo un'interruzione dell'alimentazione.
+
+
+
+ a| 
+link:io-module-overview.html["Modulo i/O."]
+ a| 
+Il modulo i/o (modulo Input/Output) è un componente hardware che funge da intermediario tra il controller e vari dispositivi o sistemi che devono scambiare dati con il controller.
+
+
+
+ a| 
+link:power-supply-replace.html["Alimentatore"]
+ a| 
+Un alimentatore fornisce una fonte di alimentazione ridondante in un controller.
+
+
+
+ a| 
+link:rtc-battery-replace.html["Batteria con orologio in tempo reale"]
+ a| 
+Una batteria dell'orologio in tempo reale conserva le informazioni relative alla data e all'ora del sistema se l'alimentazione è spenta.
+
+
+
+ a| 
+link:system-management-replace.html["Modulo di gestione del sistema"]
+ a| 
+Il modulo di gestione del sistema fornisce l'interfaccia tra il controller e una console o un computer portatile per scopi di manutenzione del controller o del sistema. Il modulo di gestione del sistema contiene il supporto di avvio e memorizza il numero di serie del sistema (SSN).
+
+|===

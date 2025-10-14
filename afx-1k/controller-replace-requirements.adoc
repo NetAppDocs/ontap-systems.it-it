@@ -1,0 +1,37 @@
+---
+permalink: afx-1k/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 1k, prerequisite, replace the controller module 
+summary: 'Prima di sostituire il controller nel sistema di archiviazione AFX 1K, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita.  Ciò include disporre del controller sostitutivo corretto, di un backup della configurazione del sistema e dell"accesso a tutti gli strumenti e al firmware necessari.' 
+---
+= Requisiti per la sostituzione del controller - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il controller nel sistema di archiviazione AFX 1K, accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di registro di testo.
+
+Esaminare i requisiti per la sostituzione del controller.
+
+* È importante applicare i comandi descritti di seguito ai sistemi corretti:
++
+** Il controller _alterato_ è il controller che viene sostituito.
+** Il controller _replacement_ è il nuovo controller che sostituisce il controller compromesso.
+** Il controller _healthy_ è il controller sopravvissuto.
+
+
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
+* È necessario sostituire il componente guasto con l'unità FRU (Field-Replaceable Unit) ricevuta da NetApp.
+* È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
+* Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
+* È sempre necessario acquisire l'output della console del controller in un file di registro di testo.
++
+In questo modo è possibile registrare la procedura per risolvere eventuali problemi riscontrati durante il processo di sostituzione.
+
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il controller AFX 1K,link:controller-replace-shutdown.html["spegnere i controller"] .

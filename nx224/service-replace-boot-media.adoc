@@ -1,0 +1,195 @@
+---
+permalink: nx224/service-replace-boot-media.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, i/o 
+summary: 'È possibile sostituire un supporto di avvio non riuscito in uno scaffale NX224.  La sostituzione del supporto di avvio può essere effettuata senza interruzioni, mentre lo scaffale è acceso e l"I/O è in corso.' 
+---
+= Sostituire il supporto di avvio - ripiani NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un supporto di avvio non riuscito in uno scaffale NX224.  La sostituzione del supporto di avvio può essere effettuata senza interruzioni, mentre lo scaffale è acceso e l'I/O è in corso.
+
+.A proposito di questa attività
+* Dopo la sostituzione del supporto di avvio, l'immagine di avvio dal NSM partner dello shelf viene copiata automaticamente sul supporto di avvio sostitutivo.
++
+Questa operazione può richiedere fino a cinque minuti.
+
+* Attendere almeno 70 secondi tra la rimozione e l'installazione del modulo NVMe shelf (NSM).
++
+Ciò consente a ONTAP di elaborare l'evento di rimozione NSM.
+
+* Se necessario, è possibile attivare i LED di posizione (blu) dello shelf per individuare fisicamente lo shelf interessato: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se non si conosce `_shelf_name_` dello shelf interessato, eseguire `storage shelf show` comando.
+
++
+Uno scaffale ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun NSM. I LED di posizione rimangono accesi per 30 minuti. È possibile disattivarle immettendo lo stesso comando, ma utilizzando l' `off`opzione .
+
+* Dopo aver sostituito il supporto di avvio, è possibile restituire il componente guasto a NetApp come descritto nelle istruzioni RMA fornite con il kit.
++
+Per ottenere il numero RMA o ulteriore assistenza per la procedura di sostituzione, contattare il supporto tecnico all'indirizzo https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico).
+
+
+
+.Prima di iniziare
+* L'NSM partner dello scaffale deve essere attivo e funzionante e cablato correttamente, in modo che lo scaffale mantenga la connettività quando si rimuove l'NSM con la FRU guasta (NSM di destinazione).  Puoi verificare lo stato del partner NSM tramite https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["scaricando ed eseguendo Config Advisor"^] .
+* Tutti gli altri componenti del sistema devono funzionare correttamente.
+
+
+.Fasi
+. Mettere a terra l'utente.
+. Scollegare il cablaggio dall'NSM che contiene la FRU che si sta sostituendo:
++
+.. Scollegare il cavo di alimentazione dall'alimentatore aprendo il fermo del cavo di alimentazione e quindi scollegando il cavo di alimentazione dall'alimentatore.
++
+Gli alimentatori non dispongono di un interruttore di alimentazione.
+
+.. Scollegare il cablaggio di archiviazione dalle porte NSM.
++
+Prendere nota delle porte NSM a cui è collegato ciascun cavo. Quando si reinserisce l'NSM, ricollegare i cavi alle stesse porte, più avanti in questa procedura.
+
+
+
+. Rimuovere l'NSM:
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Rimuovere l'NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Su entrambe le estremità dell'NSM, spingere le linguette di bloccaggio verticali verso l'esterno per rilasciare le maniglie.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+** Tirare le maniglie verso di sé per sganciare l'NSM dalla midplane.
++
+Mentre tirate, le maniglie si estendono fuori dal ripiano. Quando si avverte una certa resistenza, continuare a tirare.
+
+** Far scorrere l'NSM fuori dal ripiano e posizionarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore dell'NSM mentre la si fa scorrere fuori dallo scaffale.
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio.
+
+|===
+. Aprire il coperchio NSM ruotando la vite a testa zigrinata in senso antiorario per allentarlo, quindi aprire il coperchio.
+. Individuare fisicamente il supporto di avvio guasto.
+. Rimuovere il supporto di avvio:
++
+image::../media/drw_tp_boot_media_replace_ieops-2201.svg[Rimuovere il supporto di avvio.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Posizione dei supporti di avvio
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Premere la linguetta blu per rilasciare l'estremità destra del supporto di avvio.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Sollevare leggermente l'estremità destra del supporto di avvio per ottenere una buona presa lungo i lati del supporto di avvio.
+
+
+
+ a| 
+image::../media/icon_round_4.png[Numero di didascalia 4]
+ a| 
+Estrarre delicatamente l'estremità sinistra del supporto di avvio dal relativo alloggiamento.
+
+|===
+. Installare il supporto di avvio sostitutivo:
++
+.. Allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente a squadra nello zoccolo.
+.. Ruotare il supporto di avvio verso il basso verso il pulsante di bloccaggio.
+.. Premere il pulsante di blocco, ruotare completamente il supporto di avvio, quindi rilasciare il pulsante di blocco.
+
+
+. Chiudere il coperchio NSM, quindi serrare la vite ad alette.
+. Inserire l'NSM nello scaffale:
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Sostituire l'NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Se le maniglie NSM sono state ruotate in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio durante la manutenzione dell'NSM, ruotarle in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Allineare la parte posteriore dell'NSM con l'apertura nel ripiano, quindi spingere delicatamente l'NSM utilizzando le maniglie fino a insediarlo completamente.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Numero di didascalia 3]
+ a| 
+Ruotare le maniglie in posizione verticale e bloccarle in posizione con le linguette.
+
+|===
+. Ricollegare il cablaggio all'NSM:
++
+.. Ricollegare il cablaggio di archiviazione alle stesse otto porte NSM.
++
+I cavi devono essere inseriti con la linguetta di estrazione del connettore rivolta verso l'alto. Quando un cavo è inserito correttamente, scatta in posizione.
+
+.. Ricollegare il cavo di alimentazione all'alimentatore, quindi fissarlo con l'apposito fermacavo.
++
+Quando funziona correttamente, il LED bicolore di un alimentatore si illumina di verde.
+
++
+Inoltre, entrambi i LED LNK (verde) della porta NSM si accendono. Se il LED LNK non si accende, ricollegare il cavo.
+
+
+
+. Verificare che i LED di attenzione (ambra) sull'NSM contenenti il supporto di avvio guasto e il pannello del display dell'operatore non siano più illuminati.
++
+I LED di attenzione possono impiegare da 5 a 10 minuti per spegnersi. Questa è la quantità di tempo necessaria all'NSM per il riavvio e per il completamento della copia dell'immagine del supporto di avvio.
+
++
+Se i LED di errore rimangono accesi, il supporto di avvio potrebbe non essere inserito correttamente oppure potrebbe esserci un altro problema e contattare il supporto tecnico per assistenza.
+
+. Verificare che l'NSM sia cablato correttamente, https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["esecuzione di Active IQ Config Advisor"^] .
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

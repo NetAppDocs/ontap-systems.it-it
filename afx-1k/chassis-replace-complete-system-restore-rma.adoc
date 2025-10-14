@@ -1,0 +1,89 @@
+---
+permalink: afx-1k/chassis-replace-complete-system-restore-rma.html 
+sidebar: sidebar 
+keywords: afx 1k,  verify and set HA state, complete the replacement process 
+summary: Riavviare il controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis AFF A1K . 
+---
+= Completare la sostituzione del telaio - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Riavviare il controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis AFX 1K.
+
+
+
+== Fase 1: Avviare i controller e restituirli
+
+Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
+
+.Fasi
+. Controllare l'output della console:
++
+.. Se il controller si arresta al prompt LOADER, avviare il controller con `boot_ontap` comando.
+.. Una volta che il nodo si avvia e fornisce il prompt di accesso, accedi al controller partner e verifica che il controller sostituito sia pronto per la restituzione con `storage failover show` comando.
+
+
+. Eseguire lo sconto:
++
+.. Collegare il cavo della console al controller partner.
+.. Premere <enter> quando i messaggi della console si interrompono.
++
+*** Se viene visualizzato il prompt _login_, procedere al passaggio successivo.
+*** Se non vedi il prompt di accesso, accedi al nodo partner.
+
+
+.. Restituisci solo la radice con l'opzione override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.  Per ulteriori informazioni sui livelli di privilegio, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Comprendere i livelli di privilegio per i comandi CLI ONTAP"^] .
+
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+.. Attendere 5 minuti dopo il completamento del report di sconto e verificare lo stato di failover e dello stato dello sconto:
++
+`storage failover show`E `storage failover show-giveback`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
+
+.. Se i collegamenti interconnessi HA sono stati interrotti, ripristinarli:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+.. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+.. Se la restituzione automatica è stata disabilitata, riabilitarla: `storage failover modify -node _impaired_node_name_ -auto-giveback-of _true_`
+.. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+
+
+
+== Fase 2: Verifica dello stato del sistema di archiviazione
+
+Dopo che il controller restituisce l'archiviazione, controlla lo stato di salute utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
+
+.Fasi
+. Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.
+. Correggere eventuali problemi riscontrati.
+
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

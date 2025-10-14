@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+Reinstallare il modulo controller e avviarlo.
+
+. Assicurarsi che il condotto dell'aria sia completamente chiuso ruotandolo verso il basso fino in fondo.
++
+Deve essere a filo con la lamiera del modulo controller.
+
+. Allineare l'estremità del modulo controller con l'apertura nel contenitore, quindi far scorrere il modulo controller nel telaio con le leve ruotate lontano dalla parte anteriore del sistema.
+. Una volta che il modulo controller non riesce a farlo scorrere ulteriormente, ruotare le maniglie della camma verso l'interno fino a quando non si bloccano sotto le ventole
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel contenitore per evitare di danneggiare i connettori.
+
++
+
+NOTE: Il controller viene avviato al prompt Loader non appena è completamente inserito.
+
+. Dal prompt Loader, immettere `show date` per visualizzare la data e l'ora sulla centralina sostitutiva. Data e ora sono in GMT.
++
+
+NOTE: L'ora viene visualizzata in base all'ora locale e nel formato 24 ore.
+
+. Se necessario, impostare la data corrente con il `set date mm/dd/yyyy` comando.
+. Se necessario, impostare l'ora, in GMT, utilizzando `set time hh:mm:ss` comando.
++
+.. È possibile ottenere l'attuale GMT dal nodo partner con `date -u` comando.
+
+
+

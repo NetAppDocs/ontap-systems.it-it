@@ -1,0 +1,31 @@
+---
+permalink: afx-1k/io-module-overview.html 
+sidebar: sidebar 
+keywords: afx 1k, replace io module 
+summary: 'Il sistema di storage AFX 1K offre flessibilità nell"espansione o nella sostituzione dei moduli I/O per migliorare la connettività e le prestazioni della rete.  L"aggiunta o la sostituzione di un modulo I/O è essenziale quando si desidera aggiornare le capacità di rete o risolvere un problema con un modulo guasto.' 
+---
+= Panoramica di aggiunta e sostituzione del modulo I/O - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il sistema di storage AFX 1K offre flessibilità nell'espansione o nella sostituzione dei moduli I/O per migliorare la connettività e le prestazioni della rete.  L'aggiunta o la sostituzione di un modulo I/O è essenziale quando si desidera aggiornare le capacità di rete o risolvere un problema con un modulo guasto.
+
+È possibile sostituire un modulo I/O guasto nel sistema di archiviazione AFX 1K con lo stesso tipo di modulo I/O oppure con un tipo diverso di modulo I/O.  È anche possibile aggiungere un modulo I/O in un sistema con slot vuoti.
+
+* link:io-module-add.html["Aggiungere un modulo i/O."]
++
+L'aggiunta di moduli aggiuntivi può migliorare la ridondanza, contribuendo a garantire che il sistema rimanga operativo anche in caso di guasto di un modulo.
+
+* link:io-module-replace.html["Sostituire un modulo i/O."]
++
+La sostituzione di un modulo i/o guasto può ripristinare il sistema allo stato operativo ottimale.
+
+
+
+.Numerazione degli slot i/O.
+Gli slot I/O sul controller AFX 1K sono numerati da 1 a 11, come mostrato nella seguente illustrazione.
+
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numerazione degli slot su un controller AFX 1K]

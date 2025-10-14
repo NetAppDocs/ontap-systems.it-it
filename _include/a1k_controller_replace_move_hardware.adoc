@@ -209,7 +209,7 @@ NOTE: Il controller viene avviato al prompt Loader non appena è completamente i
 
 NOTE: L'ora visualizzata è l'ora locale non sempre GMT e viene visualizzata in modalità 24hr.
 
-. Impostare l'ora corrente in GMT con il `set time hh:mm:ss` comando. Potete ottenere il GMT corrente dal nodo partner il comando `date -u`.
+. Imposta l'ora corrente in GMT con `set time hh:mm:ss` comando.  È possibile ottenere l'ora GMT corrente dal nodo partner con il comando `date -u`.
 . Possibilità di recuperare il sistema storage secondo necessità.
 +
 Se sono stati rimossi i ricetrasmettitori (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.

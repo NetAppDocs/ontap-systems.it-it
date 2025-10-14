@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
+. Controllare il LED di stato NVRAM situato nello slot 4/5 del sistema. Sul pannello anteriore del modulo controller è presente anche un LED NVRAM. Cercare l'icona NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+LED di stato NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+LED di attenzione NVRAM
+
+|===
++
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere la lunetta (se necessario) con due mani, afferrando le aperture su ciascun lato della lunetta e tirando verso di sé finché la lunetta non si stacca dai perni sferici sul telaio.
+. Sulla parte anteriore dell'unità, agganciare le dita nei fori delle camme di bloccaggio, premere le linguette sulle leve a camma e ruotare delicatamente, ma con decisione, entrambi i fermi verso di sé contemporaneamente.
++
+Il modulo controller si sposta leggermente all'esterno del contenitore.
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Immagine di rimozione della centralina]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+| Blocco dei fermi della camma 
+|===
+. Estrarre il modulo controller dal contenitore e collocarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si estrae dal contenitore.
+
+

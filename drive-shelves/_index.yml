@@ -7,6 +7,12 @@ indexpage:
   lead: Gli shelf NS224 e gli shelf SAS di NetApp contribuiscono a fornire le performance,
     la resilienza e la flessibilità richieste dalla trasformazione digitale.
   tiles:
+  - title: Installare gli scaffali NX224
+    links:
+    - title: Shelf hot-add
+      url: "../nx224/hot-add-shelf.html"
+    - title: Modificare l'ID dello shelf
+      url: "../nx224/change-shelf-id.html"
   - title: Installare gli shelf NS224
     links:
     - title: Shelf hot-add
@@ -25,6 +31,26 @@ indexpage:
       url: "../sas3/install-change-shelf-id.html"
     - title: Regole di cablaggio SAS, fogli di lavoro ed esempi
       url: "../sas3/overview-cabling-rules-examples.html"
+  - title: Mantenere gli scaffali NX224
+    links:
+    - title: Supporto di boot
+      url: "../nx224/service-replace-boot-media.html"
+    - title: DIMM
+      url: "../nx224/service-replace-dimm.html"
+    - title: Disco
+      url: "../nx224/service-replace-drive.html"
+    - title: Shelf di dischi
+      url: "../nx224/nx224-shelf-overview.html"
+    - title: Ventola
+      url: "../nx224/service-replace-fan.html"
+    - title: Modulo i/O.
+      url: "../nx224/service-replace-io-module.html"
+    - title: NSM
+      url: "../nx224/service-replace-nsm140.html"
+    - title: Alimentatore
+      url: "../nx224/service-replace-power-supply.html"
+    - title: Batteria RTC
+      url: "../nx224/service-replace-rtc-battery.html"
   - title: Manutenzione degli shelf NS224
     links:
     - title: Supporto di boot

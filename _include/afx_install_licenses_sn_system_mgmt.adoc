@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Quando si sostituisce il modulo di gestione del sistema, il numero di serie del sistema (SSN) del controller cambia.  È necessario installare nuove licenze per il nodo se il nodo danneggiato utilizzava funzionalità ONTAP che richiedono una licenza standard (bloccata sul nodo).  Per le funzionalità con licenze standard, ogni nodo del cluster deve avere la propria chiave per la funzionalità.
+
+.A proposito di questa attività
+Fino a quando non vengono installate le chiavi di licenza, le funzionalità che richiedono licenze standard continuano a essere disponibili per il nodo. Tuttavia, se il nodo era l'unico nodo nel cluster con una licenza per la funzione, non sono consentite modifiche di configurazione alla funzione. Inoltre, l'utilizzo di funzioni senza licenza sul nodo potrebbe mettere fuori conformità con il contratto di licenza, pertanto è necessario installare la chiave di licenza sostitutiva sul nodo il prima possibile.
+
+.Prima di iniziare
+È richiesto un file di licenza NetApp (NLF) per il nuovo numero di serie del sistema.  Per ulteriori informazioni sui file di licenza NetApp , vederelink:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/ONTAP_9.10.1_and_later_licensing_overview["Panoramica delle licenze ONTAP 9.10.1 e versioni successive"^] .
+
+Hai 90 giorni per installare le chiavi di licenza, dopodiché tutte le vecchie licenze non saranno più valide.  Dopo aver installato una chiave di licenza valida, hai 24 ore di tempo per installare tutte le chiavi prima che termini il periodo di tolleranza.
+
+
+NOTE: Se inizialmente il sistema eseguiva ONTAP 9.15.1 o versione successiva, utilizzare la procedura documentata inlink:https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system["Post-processo di sostituzione della scheda madre per aggiornare la licenza su un sistema AFF/FAS"^] .  Se non sei sicuro della versione iniziale ONTAP per il tuo sistema, consultalink:https://hwu.netapp.com["NetApp Hardware Universe"^] per maggiori informazioni.
+
+.Fasi
+. Se sono necessarie nuove chiavi di licenza, procurarsi le chiavi di licenza sostitutive sul https://mysupport.netapp.com/site/global/dashboard["Sito di supporto NetApp"] Nella sezione My Support (supporto personale) sotto Software licensed (licenze software).
++
+
+NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e inviate all'indirizzo e-mail in archivio. Se non si riceve l'e-mail contenente le chiavi di licenza entro 30 giorni, contattare il supporto tecnico.
+
+. Installare ciascuna chiave di licenza tramite ONTAP System Manager.
++
+Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["Abilita nuove funzionalità aggiungendo chiavi di licenza con ONTAP System Manager"^] .
+
+. Rimuovere le vecchie licenze, se necessario:
++
+.. Verificare la presenza di licenze inutilizzate: `license clean-up -unused -simulate`
+.. Se l'elenco appare corretto, rimuovere le licenze inutilizzate: `license clean-up -unused`
+
+
+. Registrare il numero di serie del sistema presso il supporto NetApp.
++
+** Se AutoSupport è attivato, inviare un messaggio AutoSupport per registrare il numero di serie.
+** Se AutoSupport non è attivato, chiamare https://mysupport.netapp.com["Supporto NetApp"] per registrare il numero di serie.
+
+
+

@@ -1,0 +1,40 @@
+---
+permalink: afx-1k/controller-replace-restore-system-rma.html 
+sidebar: sidebar 
+keywords: afx 1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: 'Verificare che le interfacce logiche (LIF) segnalino la propria porta home, eseguire un controllo dello stato del cluster e quindi restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione del controller AFX 1K.' 
+---
+= Sostituzione completa del controller - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verificare che le interfacce logiche (LIF) segnalino la propria porta home, eseguire un controllo dello stato del cluster e quindi restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione del controller AFX 1K.
+
+
+
+== Fase 1: Verifica delle LIF e verifica dello stato del cluster
+
+Prima di rimettere in servizio il nodo sostitutivo, assicurarsi che le interfacce logiche siano sulle loro porte home, controllare lo stato del cluster e reimpostare il giveback automatico.
+
+.Fasi
+. Verificare che le interfacce logiche segnalino il proprio server di origine e le porte:
++
+`network interface show -is-home false`
+
++
+Se alcune interfacce logiche sono elencate come false, riportale alle loro porte home:
+
++
+`network interface revert -vserver * -lif *`
+
+. Controllare lo stato di salute del cluster. Per ulteriori informazioni, consultare l' https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"^] articolo della KB.
+
+
+
+
+== Fase 2: Restituire il componente guasto a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

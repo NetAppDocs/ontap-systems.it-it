@@ -66,9 +66,25 @@ ONTAP 9.7::
 
 
 --
+.Sistemi AFX
+--
+I sistemi AFX forniscono una soluzione disaggregata progettata per soddisfare i rigorosi requisiti dei carichi di lavoro NAS e S3 ad alte prestazioni, comprese le applicazioni AI/ML. link:https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html["Scopri di più sul sistema AFX"^] .
+
+I sistemi AFX sono supportati a partire dalla versione ONTAP successiva.
+
+ONTAP 9.17.1::
++
+--
+* AFX 1K
+
+
+--
+
+
+--
 .Sistemi ASA r2
 --
-I sistemi ASA R2 forniscono una soluzione hardware e software unificata che crea un'esperienza semplificata specifica delle esigenze dei clienti SAN. link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Ulteriori informazioni sui sistemi ASA R2"].
+I sistemi ASA r2 offrono una soluzione hardware e software unificata che crea un'esperienza semplificata specifica per le esigenze dei clienti SAN-only. link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Ulteriori informazioni sui sistemi ASA R2"^] .
 
 I sistemi ASA R2 sono supportati a partire dalle seguenti versioni di ONTAP.
 
@@ -193,10 +209,17 @@ ONTAP 9.7::
 --
 .Shelf di dischi
 --
-Gli shelf di dischi sono progettati appositamente per i sistemi NetApp AFF, ASA e FAS e aiutano a offrire le performance, la resilienza e la flessibilità richieste dalla tua digital transformation.
+Gli scaffali delle unità sono progettati specificamente per i sistemi NetApp AFF, AFX, ASA e FAS e contribuiscono a fornire le prestazioni, la resilienza e la flessibilità di cui la tua trasformazione digitale ha bisogno.
 
 Gli shelf di dischi sono disponibili a partire dalle seguenti release di ONTAP.
 
+ONTAP 9.17.1::
++
+--
+* Mensola NSX224 per sistemi AFX
+
+
+--
 ONTAP 9.16.1::
 +
 --

@@ -1,0 +1,42 @@
+= Fase 1: Verificare le impostazioni di configurazione ha
+:allow-uri-read: 
+
+
+
+
+== Fase 1: Verificare le impostazioni di configurazione ha
+
+Verificare `HA` stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.
+
+. Avvio in modalità di manutenzione: `boot_ontap maint`
++
+.. Immettere `y` quando viene visualizzato _continuare con boot?_.
++
+Se viene visualizzato il messaggio di avviso _System ID mismatch_, immettere `y`.
+
+
+
+. Immettere `sysconfig -v` e acquisire il contenuto del display.
++
+
+NOTE: Se viene visualizzato _PERSONALITY MISMATCH_, contattare l'assistenza clienti.
+
+. Dall' `sysconfig -v`uscita, confrontare le informazioni della scheda adattatore con le schede e le posizioni nella centralina sostitutiva.
+
+
+
+
+== Passo 2: Verifica dell'elenco dei dischi
+
+. Verificare che la scheda di rete elenchi i percorsi per tutti i dischi:
++
+`storage show disk -p`
+
++
+In caso di problemi, controllare il cablaggio e riposizionare i cavi.
+
+. Uscire dalla modalità di manutenzione:
++
+`halt`
+
+

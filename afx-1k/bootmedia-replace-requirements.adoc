@@ -1,0 +1,29 @@
+---
+permalink: afx-1k/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 1k, replace the boot media 
+summary: 'Prima di sostituire il supporto di avvio nel sistema di archiviazione AFX 1K, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che non vi siano porte cluster difettose sul controller e la determinazione se è abilitato Onboard Key Manager (OKM) o External Key Manager (EKM).' 
+---
+= Requisiti per la sostituzione del supporto di avvio - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio nel sistema di archiviazione AFX 1K, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.  Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che non vi siano porte cluster difettose sul controller e la determinazione se è abilitato Onboard Key Manager (OKM) o External Key Manager (EKM).
+
+Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
+
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+* Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessariolink:bootmedia-shutdown.html["spegnere il controller"] .

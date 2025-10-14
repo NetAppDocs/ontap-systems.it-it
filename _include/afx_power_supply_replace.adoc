@@ -1,0 +1,72 @@
+= 
+:allow-uri-read: 
+
+
+.A proposito di questa attività
+* Questa procedura è stata scritta per la sostituzione di una PSU alla volta.
++
+
+IMPORTANT: Non combinare PSU con diversi indici di efficienza. Sostituire sempre come per come.
+
+* Gli alimentatori sono ridondanti e sostituibili a caldo; non è necessario prendere il controllo del controller per eseguire questa operazione.
+
+
+.Sostituire un alimentatore CA
+--
+Per sostituire un alimentatore CA, attenersi alla seguente procedura.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Identificare la PSU che si desidera sostituire, in base ai messaggi di errore della console o tramite il LED di errore rosso sull'alimentatore.
+. Scollegare l'alimentatore:
++
+.. Aprire il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dall'alimentatore.
+
+
+. Rimuovere l'alimentatore ruotando la maniglia verso l'alto, premere la linguetta di bloccaggio, quindi estrarre l'alimentatore dal modulo controller.
++
+
+CAUTION: L'alimentatore è compatto.  Utilizzare entrambe le mani per sostenerlo durante la rimozione, per evitare che si stacchi dal modulo controller e possa causare lesioni.
+
+
+
+image::../media/drw_a1k_psu_remove_replace_ieops-1378.svg[Sostituire la scheda PSU]
+
++
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguetta di bloccaggio PSU in terracotta
+
+|===
+. Installare l'alimentatore sostitutivo nel modulo controller:
++
+.. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore sostitutivo con l'apertura nel modulo controller.
+.. Spingere delicatamente l'alimentatore nel modulo controller fino a quando la linguetta di bloccaggio non scatta in posizione.
++
+Gli alimentatori si innestano correttamente solo con il connettore interno e si bloccano in un modo.
+
++
+
+NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema.
+
+
+
+. Ricollegare il cablaggio dell'alimentatore:
++
+.. Ricollegare il cavo di alimentazione all'alimentatore.
+.. Fissare il cavo di alimentazione all'alimentatore utilizzando il fermo del cavo di alimentazione.
+
+
++
+Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato deve essere verde.
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
+
+
+--

@@ -35,7 +35,24 @@ Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum
 +
 Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Disattivare il giveback automatico dalla console del controller integro: `storage failover modify –node local -auto-giveback false`
+. Disattivare il ritorno automatico dalla console del controllore non abilitato:
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: Quando vedi _Vuoi disattivare la restituzione automatica?_, inserisci `y` .
+
++
+.. Se il controller non funzionante non può essere riavviato o è già stato preso in carico, è necessario disattivare il collegamento di interconnessione HA dal controller funzionante prima di avviare il controller non funzionante.  Ciò impedirà al controllore non autorizzato di effettuare la restituzione automatica.
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
+
+
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
 +
 [cols="1,2"]
@@ -47,13 +64,6 @@ Il seguente comando AutoSupport sopprime la creazione automatica dei casi per du
 Il prompt DEL CARICATORE
  a| 
 Passare alla fase successiva.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Premere Ctrl-C, quindi rispondere `y` quando richiesto.
 
 
 
@@ -128,6 +138,7 @@ Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo 
 * Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
 * Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
 * Assicurarsi che tutti gli altri componenti funzionino correttamente.
+* Assicurati di avere il componente sostitutivo ricevuto da NetApp.
 
 
 [role="tabbed-block"]

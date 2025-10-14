@@ -1,0 +1,45 @@
+---
+indexpage:
+  title: Sistema AFX
+  summary: Il sistema di storage NetApp AFX è una soluzione hardware e software disaggregata,
+    incentrata sulle esigenze specifiche dei clienti NAS e S3 ad alte prestazioni.
+    Le prestazioni e la scalabilità sono progettate specificamente per soddisfare
+    i requisiti dei carichi di lavoro di intelligenza artificiale e apprendimento
+    automatico.
+  keywords: afx, afx 1k, install, setup, maintain
+  lead: Il sistema di storage NetApp AFX è una soluzione hardware e software disaggregata,
+    incentrata sulle esigenze specifiche dei clienti NAS e S3 ad alte prestazioni.
+    Le prestazioni e la scalabilità sono progettate specificamente per soddisfare
+    i requisiti dei carichi di lavoro di intelligenza artificiale e apprendimento
+    automatico.
+  tiles:
+  - title: Inizia subito
+    links:
+    - title: Scopri di più sullo storage AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html
+    - title: Caratteristiche del sistema AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/get-started/system-design.html
+    - title: Architettura AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/get-started/software-architecture.html
+  - title: Installare e mantenere AFX
+    links:
+    - title: Installare l'hardware AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/install-setup/install-setup-workflow.html
+    - title: Manutenzione dell'hardware AFX
+      url: "../afx-landing-maintain/index.html"
+  - title: Gestisci i dati su AFX
+    links:
+    - title: Crea un volume AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/manage-data/create-configure-volume.html
+    - title: Gestisci i volumi AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/manage-data/manage-volumes.html
+    - title: Crea un bucket AFX
+      url: https://docs.netapp.com/us-en/ontap-afx/manage-data/create-configure-bucket.html
+  - title: Proteggi e metti in sicurezza i dati su AFX
+    links:
+    - title: Creare snapshot
+      url: https://docs.netapp.com/us-en/ontap-afx/protect-data/create-snapshot.html
+    - title: Configurare la replica snapshot
+      url: https://docs.netapp.com/us-en/ontap-afx/protect-data/snapshot-replication.html
+    - title: Esegui la crittografia dei dati inutilizzati
+      url: https://docs.netapp.com/us-en/ontap-afx/secure-data/encrypt-data-at-rest.html

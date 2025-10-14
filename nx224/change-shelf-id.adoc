@@ -1,0 +1,142 @@
+---
+permalink: nx224/change-shelf-id.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, change, shelf, id, system, ontap, unown, spare, offline, aggregate, change an nx224 drive shelf id 
+summary: 'È possibile modificare un ID scaffale in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno scaffale prima che venga cablato al sistema.  È anche possibile modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire dati) e tutte le unità nello shelf sono senza proprietario, di riserva o fanno parte di aggregati offline.' 
+---
+= Modificare un ID scaffale - Scaffali NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare un ID scaffale NX224 in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno scaffale prima che venga cablato al sistema.  È anche possibile modificare un ID shelf quando ONTAP è attivo e funzionante (i moduli controller sono disponibili per fornire dati) e tutte le unità nello shelf sono di proprietà o di riserva.
+
+.Prima di iniziare
+* Se ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire i dati), è necessario verificare che tutti i dischi nello shelf siano privi di proprietà, parti di ricambio o parte di aggregati non allineati.
++
+È possibile verificare lo stato dei dischi utilizzando `storage disk show -shelf _shelf_number_` comando. Output in `Container Type` viene visualizzata la colonna `spare` oppure `broken` se si tratta di un disco guasto. Inoltre, il `Container Name` e. `Owner` le colonne devono avere un trattino.
+
+* È necessaria una graffetta con un lato raddrizzato o una penna a sfera con punta stretta.
++
+Utilizzare la graffetta o la penna a sfera per accedere al pulsante ID dello shelf attraverso il piccolo foro, a destra dei LED, nel pannello ODP (Operator Display Panel).
+
+
+
+.A proposito di questa attività
+* Un ID shelf valido va da 00 a 99.
+* Gli ID scaffale devono essere univoci all'interno di un cluster AFX.
+* Per rendere effettivo l'ID dello shelf, è necessario spegnere e riaccendere uno shelf (scollegare entrambi i cavi di alimentazione, attendere il tempo appropriato e ricollegarli).
++
+Il tempo di attesa prima di ricollegare i cavi di alimentazione dipende dallo stato di ONTAP, come descritto più avanti in questa procedura.
+
++
+
+NOTE: Gli scaffali NX224 non hanno interruttori di alimentazione sugli alimentatori.
+
+
+
+.Fasi
+. Accendere lo shelf, se non è già acceso.
++
+Collegare i cavi di alimentazione prima allo shelf, fissandoli in posizione con il fermo del cavo di alimentazione, quindi collegare i cavi di alimentazione a diverse fonti di alimentazione per una maggiore resilienza.
+
++
+L'alimentatore si accende non appena si collega il cavo di alimentazione. Il LED bicolore dovrebbe illuminarsi di verde.  Attendi che venga visualizzato l'ID dello scaffale prima di procedere al passaggio successivo.
+
+. Rimuovere il cappuccio terminale sinistro per individuare il piccolo foro a destra dei LED.
++
+image::../media/drw_tp_change_shelf_id_ieops-2381.svg[Cambia ID scaffale NX224]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Tappo terminale dello scaffale
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Numero di didascalia 2]
+ a| 
+Mascherina dello scaffale
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Numero di didascalia 3]
+ a| 
+Numero ID ripiano
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Numero di didascalia 4]
+ a| 
+Accesso tramite pulsante ID scaffale
+
+|===
+. Modificare il primo numero dell'ID dello shelf:
++
+.. Inserire la graffetta o la penna a sfera nel piccolo foro.
+.. Tenere premuto il pulsante fino a quando il primo numero sul display digitale non lampeggia, quindi rilasciare il pulsante.
++
+Il lampeggiamento del numero può richiedere fino a 15 secondi. In questo modo viene attivata la modalità di programmazione degli ID dello shelf.
+
++
+
+NOTE: Se l'ID impiega più di 15 secondi per lampeggiare, tenere premuto di nuovo il pulsante, assicurandosi di premerlo completamente.
+
+.. Premere e rilasciare il pulsante per avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
++
+La durata di ogni stampa e rilascio può essere di un solo secondo.
+
++
+Il primo numero continua a lampeggiare.
+
+
+
+. Modificare il secondo numero dell'ID dello shelf:
++
+.. Tenere premuto il pulsante fino a quando il secondo numero sul display digitale non lampeggia.
++
+Il lampeggiamento del numero può richiedere fino a tre secondi.
+
++
+Il primo numero sul display digitale smette di lampeggiare.
+
+.. Premere e rilasciare il pulsante per avanzare il numero fino a raggiungere il numero desiderato da 0 a 9.
++
+Il secondo numero continua a lampeggiare.
+
+
+
+. Bloccare il numero desiderato e uscire dalla modalità di programmazione tenendo premuto il tasto fino a quando il secondo numero non smette di lampeggiare.
++
+Il numero può richiedere fino a tre secondi per smettere di lampeggiare.
+
++
+Entrambi i numeri sul display digitale iniziano a lampeggiare e il LED ambra sull'ODP si illumina dopo circa cinque secondi, avvisando l'utente che l'ID dello shelf in sospeso non è ancora entrato in vigore.
+
+. Spegnere e riaccendere lo shelf per rendere effettivo l'ID dello shelf.
++
+Scollegare il cavo di alimentazione da entrambi gli alimentatori dello shelf, attendere il tempo necessario, quindi ricollegarli agli alimentatori dello shelf per completare il ciclo di alimentazione.
+
++
+L'alimentatore viene acceso non appena il cavo di alimentazione viene collegato. Il LED a due colori dovrebbe illuminarsi di verde.
+
++
+** Se ONTAP non è ancora in esecuzione o si sta aggiungendo a caldo uno shelf (che non è ancora stato cablato al sistema), attendere almeno 10 secondi.
+** Se ONTAP è in esecuzione (i controller sono disponibili per fornire dati) e tutte le unità nello shelf sono di riserva, non di proprietà, attendere almeno 180 secondi.
++
+Questa volta consente a ONTAP di eliminare correttamente il vecchio indirizzo di shelf e aggiornare la copia del nuovo indirizzo di shelf.
+
+
+
+. Sostituire il cappuccio terminale sinistro.
+

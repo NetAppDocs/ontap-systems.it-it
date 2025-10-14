@@ -1,0 +1,284 @@
+---
+permalink: afx-1k/io-module-add.html 
+sidebar: sidebar 
+keywords: afx 1k, add I/O module 
+summary: Aggiungi un modulo I/O al tuo sistema di archiviazione AFX 1K per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati. 
+---
+= Aggiungi modulo I/O - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aggiungi un modulo I/O al tuo sistema di archiviazione AFX 1K per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.
+
+È possibile aggiungere un modulo I/O al sistema di archiviazione AFX 1K quando sono disponibili slot vuoti o quando tutti gli slot sono completamente occupati.
+
+
+
+== Fase 1: Arrestare il modulo controller danneggiato
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.Prima di iniziare
+Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+.Fasi
+. Se AutoSupport è abilitato, sopprimere la creazione automatica dei casi richiamando un comando di messaggio AutoSupport :
++
+`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+
++
+Il seguente comando AutoSupport sopprime la creazione automatica dei casi per due ore:
+
++
+`cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disabilitare il ritorno automatico dalla console del controller sano:
++
+`storage failover modify –node local -auto-giveback false`
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+`Waiting for giveback...`
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password (inserire la password di sistema)
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
+
+`storage failover takeover -ofnode impaired_node_name -halt true`
+
+IL `-halt true` Il parametro ti porta al prompt LOADER.
+
+|===
+
+
+
+
+== Fase 2: Aggiungere il nuovo modulo i/O.
+
+Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
+
+.Prima di iniziare
+* Controlla il https://hwu.netapp.com/["NetApp Hardware Universe"^] per garantire che il nuovo modulo I/O sia compatibile con il sistema di archiviazione e la versione ONTAP .
+* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
+* Assicurarsi che tutti gli altri componenti funzionino correttamente.
+* Assicurati di avere il componente sostitutivo ricevuto da NetApp.
+
+
+[role="tabbed-block"]
+====
+.Aggiungere il modulo i/o a uno slot disponibile
+--
+È possibile aggiungere un nuovo modulo i/o in un sistema di archiviazione con gli slot disponibili.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
+. Rimuovere il modulo di chiusura dello slot di destinazione dal supporto:
++
+.. Premere il dispositivo di chiusura della camma sul modulo di chiusura nello slot di destinazione.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
+.. Rimuovere il modulo dal contenitore agganciando il dito nell'apertura della leva della camma ed estraendo il modulo dal contenitore.
+
+
+. Installare il modulo i/o:
++
+.. Allineare il modulo i/o con i bordi dell'apertura dello slot del contenitore.
+.. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Collegare il modulo i/o al dispositivo designato.
++
+
+NOTE: Assicurarsi che tutti gli slot i/o inutilizzati siano dotati di spazi vuoti per evitare possibili problemi di temperatura.
+
+. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Dal prompt DEL CARICATORE, riavviare il nodo:
++
+`bye`
+
++
+
+NOTE: In questo modo, il modulo i/o e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
+. Premere <enter> quando i messaggi della console si interrompono.
++
+** Se viene visualizzato il prompt _login_, procedere al passaggio successivo.
+** Se non vedi il prompt di accesso, accedi al nodo partner.
+
+
+. Restituisci solo la radice con l'opzione override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.  Per ulteriori informazioni sui livelli di privilegio, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Comprendere i livelli di privilegio per i comandi CLI ONTAP"^] .
+
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+. Attendere 5 minuti dopo il completamento del report di sconto e verificare lo stato di failover e dello stato dello sconto:
++
+`storage failover show`E `storage failover show-giveback`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
+
+. Se i collegamenti interconnessi HA sono stati interrotti, ripristinarli:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Ripetere questi passi per il controller B.
+. Dal nodo integro, ripristinare lo giveback automatico se disabilitato:
++
+`storage failover modify -node local -auto-giveback-of _true_`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Aggiungere un modulo di i/o a un sistema completamente popolato
+--
+È possibile aggiungere un modulo i/o a un sistema completamente popolato rimuovendo un modulo i/o esistente e installandone uno nuovo al suo posto.
+
+.A proposito di questa attività
+Assicurarsi di comprendere i seguenti scenari per aggiungere un nuovo modulo di i/o a un sistema completamente popolato:
+
+[cols="1,2"]
+|===
+| Scenario | Azione richiesta 
+
+
+ a| 
+Da NIC a NIC (stesso numero di porte)
+ a| 
+I LIF migrano automaticamente quando il modulo controller viene spento.
+
+
+
+ a| 
+Da NIC a NIC (numero di porte diverso)
+ a| 
+Riassegna in modo permanente le LIF selezionate a una porta home diversa. Per ulteriori informazioni, vedere https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^] .
+
+
+
+ a| 
+Da NIC a modulo i/o di storage
+ a| 
+Utilizzare System Manager per migrare in modo permanente i file LIF su diverse porte home, come descritto in https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migrazione di una LIF"^].
+
+|===
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare eventuali cavi dal modulo i/o di destinazione.
+. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti all'interno del vassoio di gestione dei cavi e ruotandolo verso il basso.
+. Rimuovere il modulo i/o di destinazione dallo chassis:
++
+.. Premere il pulsante del dispositivo di chiusura a camma.
+.. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
+.. Rimuovere il modulo dal contenitore agganciando il dito nell'apertura della leva della camma ed estraendo il modulo dal contenitore.
++
+Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
+
+
+. Installare il modulo i/o nello slot di destinazione del contenitore:
++
+.. Allineare il modulo con i bordi dell'apertura dello slot del contenitore.
+.. Far scorrere delicatamente il modulo nello slot fino in fondo al contenitore, quindi ruotare il dispositivo di chiusura della camma completamente verso l'alto per bloccare il modulo in posizione.
+
+
+. Collegare il modulo i/o al dispositivo designato.
+. Ripetere i passi di rimozione e installazione per sostituire i moduli aggiuntivi per la centralina.
+. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
+. Riavviare il controller dal prompt del CARICATORE:_bye_
++
+In questo modo, le schede PCIe e gli altri componenti vengono reinizializzati e il nodo viene riavviato.
+
+. Premere <enter> quando i messaggi della console si interrompono.
++
+** Se viene visualizzato il prompt _login_, procedere al passaggio successivo.
+** Se non vedi il prompt di accesso, accedi al nodo partner.
+
+
+. Restituisci solo la radice con l'opzione override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.  Per ulteriori informazioni sui livelli di privilegio, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Comprendere i livelli di privilegio per i comandi CLI ONTAP"^] .
+
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+. Attendere 5 minuti dopo il completamento del report di sconto e verificare lo stato di failover e dello stato dello sconto:
++
+`storage failover show`E `storage failover show-giveback`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
+
+. Se i collegamenti interconnessi HA sono stati interrotti, ripristinarli:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode impaired_node_name`
+
+. Abilitare il giveback automatico se è stato disattivato:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Effettuare una delle seguenti operazioni:
++
+** Se è stato rimosso un modulo I/O di archiviazione e installato un nuovo modulo I/O NIC, utilizzare il seguente comando di rete per ciascuna porta:
++
+`storage port modify -node <node name>__ -port <port name>__ -mode network`
+
+** Se è stato rimosso un modulo I/O NIC e installato un modulo I/O di archiviazione, installare e cablare i ripiani NX224, come descritto inlink:../nx224/hot-add-shelf.html["Ripiano NX224 ad aggiunta rapida"] .
+
+
+. Ripetere questi passi per il controller B.
+
+
+--
+====
