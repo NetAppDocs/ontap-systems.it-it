@@ -22,10 +22,6 @@ IMPORTANT: Non combinare PSU con diversi indici di efficienza. Sostituire sempre
 * Gli alimentatori sono ridondanti e sostituibili a caldo; non è necessario prendere il controllo del controller per eseguire questa operazione.
 
 
-.Sostituire un alimentatore CA
---
-Per sostituire un alimentatore CA, attenersi alla seguente procedura.
-
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Identificare la PSU che si desidera sostituire, in base ai messaggi di errore della console o tramite il LED di errore rosso sull'alimentatore.
@@ -39,12 +35,10 @@ Per sostituire un alimentatore CA, attenersi alla seguente procedura.
 
 CAUTION: L'alimentatore è compatto.  Utilizzare entrambe le mani per sostenerlo durante la rimozione, per evitare che si stacchi dal modulo controller e possa causare lesioni.
 
-
-
++
 image::../media/drw_a1k_psu_remove_replace_ieops-1378.svg[Sostituire la scheda PSU]
 
 +
-
 [cols="1,4"]
 |===
 
@@ -79,5 +73,3 @@ Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato deve es
 
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.
 
-
---

@@ -13879,9 +13879,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d256a527bf5d931f1d622c72ddf1dded" category="list-text">Dal controller funzionante, verificare che il nuovo ID del sistema partner sia stato assegnato automaticamente:<block ref="1d9c4708f7f65a8fab50047c3df2e664" prefix=" " category="inline-code"></block></block>
   <block id="cfcb90feb85f8859e220b212215b63b0" category="paragraph">Nell'output del comando dovresti vedere un messaggio che mostra lo stato attuale della sostituzione dell'archiviazione.  Nell'esempio seguente, node2 è stato sostituito e visualizza lo stato attuale come "In takeover".</block>
   <block id="8011afadee4323a554fac9e6cc29e58d" category="list-text">Dal controller sano, restituisci lo storage del controller sostituito:`_storage failover giveback -ofnode replacement_node_name_`</block>
-  <block id="17d9dcc7db89f6a4682cb542cf2044fc" category="open-title">Sostituire un alimentatore CA</block>
   <block id="88a2125e60807865335c8747496af95b" category="admonition">L'alimentatore è compatto.  Utilizzare entrambe le mani per sostenerlo durante la rimozione, per evitare che si stacchi dal modulo controller e possa causare lesioni.</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="1ff94e598108905bef8834018bba5d86" category="paragraph">Rimuovere la batteria RTC guasta e installare quella sostitutiva.</block>
   <block id="344f921d0ec02fd1e7780b61a619a100" category="admonition">Dopo aver sostituito la batteria RTC, inserito il controller e acceso il primo ripristino del BIOS, verranno visualizzati i seguenti messaggi di errore:<block ref="049ec00df3ddcbe28d63cf4fa733682c" prefix=" " category="inline-code"></block><block ref="6c8ad83004cc8bc224a596f5f1682744" prefix=" " category="inline-code"></block> Questi messaggi sono attesi e puoi continuare con questa procedura.</block>
   <block id="5862e3059693b0ae5802e65d68b3df4c" category="list-text">Controllare la data e l'ora sul controller sano con il<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block> comando.</block>
@@ -14199,4 +14197,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="a43cc36cba3c97642118a8f1e1411d2a" category="sidebar">Scaffali NX224</block>
   <block id="44897f292c79e694fcea494af35f40cc" category="sidebar">NX224 manutenzione scaffale</block>
   <block id="9356bad064253adcb17a19cef3f04d34" category="sidebar">Sostituire il ripiano dell'unità NX224</block>
+  <block id="5198087ddb6461cb35b786132461261c" category="sidebar">Supporto di avvio AFX 1K</block>
+  <block id="5a94cb746c52c38beb8e02711e643cd9" category="sidebar">Ripristinare il supporto di avvio</block>
+  <block id="d3bca45bb48d04c6d999281b772fa015" category="sidebar">Telaio AFX A1K</block>
+  <block id="9a4e2ca13bc5368ad30e628996c8e94e" category="sidebar">Controller AFX 1K</block>
+  <block id="4c052a07dcf923d8d73e0be9a32b97a7" category="sidebar">Modulo AFX 1K IO</block>
 </blocks>
