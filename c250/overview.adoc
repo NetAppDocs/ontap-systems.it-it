@@ -1,7 +1,8 @@
 ---
 permalink: c250/overview.html 
 sidebar: sidebar 
-summary: Specifiche chiave per il gruppo piattaforma C250 
+keywords: AFF C250 specifications, AFF C250 specs, NetApp AFF C250, AFF C250 hardware 
+summary: Specifiche chiave per il sistema di archiviazione AFF C250 
 ---
 = Specifiche chiave per AFF C250
 :allow-uri-read: 
@@ -10,87 +11,127 @@ summary: Specifiche chiave per il gruppo piattaforma C250
 
 
 [role="lead"]
-Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF C250 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+Di seguito sono riportate alcune specifiche selezionate per l' AFF C250.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per un elenco completo delle specifiche AFF C250 .  Questa pagina riflette una singola coppia ad alta disponibilità.
 
 
 
 == Specifiche chiave per AFF C250
 
-* Configurazione della piattaforma: coppia HA a telaio singolo AFF C250
-* Capacità massima grezza: 1,4736 PB
-* Memoria: 128.0000 GB
-* Fattore di forma: chassis 2U con 2 controller HA e 24 slot per unità
-* Versione ONTAP : ONTAP: 9.16.1P2
-* Slot di espansione PCIe: 4
-* Versione minima ONTAP : ONTAP 9.10.1P15 == Massimi di scalabilità
-* Tipo: NAS; Coppie HA: 12; Capacità raw: 17,7 PB / 15,7 PiB; Memoria massima: 1536 GB
-* Tipo: SAN; Coppie HA: 6; Capacità grezza: 8,8 PB / 7,9 PiB; Memoria massima: 768 GB
-* Tipo: coppia HA; capacità grezza: 1,5 PB / 1,3 PiB; memoria massima: 128.0000
+Configurazione della piattaforma: coppia HA a telaio singolo AFF C250
+
+Capacità massima grezza: 1,4736 PB
+
+Memoria: 128.0000 GB
+
+Fattore di forma: chassis 2U con 2 controller HA e 24 slot per unità
+
+Versione ONTAP : b_startONTAP: 9.16.1P2b_end
+
+Slot di espansione PCIe: 4
+
+Versione minima ONTAP : ONTAP 9.10.1P15
 
 
+
+== Massimi di scalabilità
+
+|===
+
+
+| Tipo | Coppie HA | Capacità grezza | Memoria massima 
+
+
+| NAS | 12 | 17,7 PB / 15,7 PiB | 1536 GB 
+
+
+| SAN | 6 | 8,8 PB / 7,9 PiB | 768 GB 
+
+
+| Coppia HA |  | 1,5 PB / 1,3 PiB | 128,0000 
+|===
 
 
 == I/O
 
 
 
-=== I/O integrato
+=== IO di bordo
 
-* Protocollo: Ethernet 25 Gbps; Porte: 4
-* Protocollo: Ethernet 10 Gbps; Porte: 4
-
+|===
 
 
-
-=== Totale I/O
-
-* Protocollo: Ethernet 100 Gbps; Porte: 4
-* Protocollo: Ethernet 25 Gbps; Porte: 20
-* Protocollo: Ethernet 10 Gbps; Porte: 4
-* Protocollo: FC 32 Gbps; Porte: 16
-* Protocollo: NVMe/FC 32 Gbps; Porte: 16
-* Porte: 0
+| Protocollo | porti 
 
 
+| Ethernet 25 Gbps | 4 
+
+
+| Ethernet 10 Gbps | 4 
+|===
+
+
+=== IO totale
+
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 100 Gbps | 4 
+
+
+| Ethernet 25 Gbps | 20 
+
+
+| Ethernet 10 Gbps | 4 
+
+
+| FC 32 Gbps | 16 
+
+
+| NVMe/FC 32 Gbps | 16 
+
+
+|  | 0 
+|===
 
 
 === Porte di gestione
 
-* Protocollo: Ethernet 1 Gbps; Porte: 2
-* Protocollo: RS-232 115 Kbps; Porte: 4
-* Protocollo: USB 12 Mbps; Porte: 4
+|===
 
 
+| Protocollo | porti 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 4 
+|===
 
 
 == Rete di archiviazione supportata
 
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 con NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == Specifiche dell'ambiente di sistema
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 con NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 2906 BTU/ora
 * Potenza nel caso peggiore: 3750 BTU/ora
-* Peso: 54,3 libbre 24,6 kg
+* Peso: 54,3 libbre/24,6 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
-* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
-* Rumore acustico: Potenza sonora dichiarata (LwAd): 7,2 Pressione sonora (LpAm) (posizioni degli astanti): 69,1 dB
+* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a 3048 m (da 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi)<br/>Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: Potenza sonora dichiarata (LwAd): 7,2;br/Pressione sonora (LpAm) (posizioni degli astanti): 69,1 dB
 
 
 
@@ -109,7 +150,6 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 == Alta disponibilità
 
-* Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
-* Controller ridondanti sostituibili a caldo
-* Alimentatori ridondanti sostituibili a caldo
+Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo;
 
+[//] 2025-10-15 ontap-systems-internal/issues/1357

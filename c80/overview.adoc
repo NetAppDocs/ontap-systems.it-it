@@ -1,7 +1,8 @@
 ---
 permalink: c80/overview.html 
 sidebar: sidebar 
-summary: Specifiche chiave per il gruppo piattaforma C80 
+keywords: AFF C80 specifications, AFF C80 specs, NetApp AFF C80, AFF C80 hardware 
+summary: Specifiche chiave per il sistema di archiviazione AFF C80 
 ---
 = Specifiche chiave per AFF C80
 :allow-uri-read: 
@@ -10,84 +11,117 @@ summary: Specifiche chiave per il gruppo piattaforma C80
 
 
 [role="lead"]
-Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF C80 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+Di seguito sono riportate alcune specifiche selezionate per l' AFF C80.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per un elenco completo delle specifiche AFF C80.  Questa pagina riflette una singola coppia ad alta disponibilità.
 
 
 
-== Specifiche chiave per AFF C80
+=== Specifiche chiave per AFF C80
 
-* Configurazione della piattaforma: coppia HA a telaio singolo AFF C80
-* Capacità massima grezza: 14,7360 PB
-* Memoria: 512.0000 GB
-* Fattore di forma: chassis 4U con 2 controller HA e 48 slot per unità
-* Versione ONTAP : ONTAP: 9.16.1P2
-* Slot di espansione PCIe: 18
-* Versione minima ONTAP : ONTAP 9.16.1RC1 == Massimi di scalabilità
-* Tipo: NAS; Coppie HA: 12; Capacità raw: 176,8 PB / 157,0 PiB; Memoria massima: 6144 GB
-* Tipo: SAN; Coppie HA: 6; Capacità grezza: 88,4 PB / 78,5 PiB; Memoria massima: 3072 GB
-* Tipo: coppia HA; capacità grezza: 14,7 PB / 13,1 PiB; memoria massima: 512.0000
+Configurazione della piattaforma: coppia HA a telaio singolo AFF C80
 
+Capacità massima grezza: 14,7360 PB
 
+Memoria: 512.0000 GB
 
+Fattore di forma: chassis 4U con 2 controller HA e 48 slot per unità
 
-== I/O
+Versione ONTAP : b_startONTAP: 9.16.1P2b_end
+
+Slot di espansione PCIe: 18
+
+Versione minima ONTAP : ONTAP 9.16.1RC1
 
 
 
-=== I/O integrato
+=== Massimi di scalabilità
 
-Nessun dato I/O integrato.
-
-
-
-=== Totale I/O
-
-* Protocollo: Ethernet 200 Gbps; Porte: 24
-* Protocollo: Ethernet 100 Gbps; Porte: 36
-* Protocollo: Ethernet 25 Gbps; Porte: 56
-* Protocollo: Ethernet 10 Gbps; Porte: 56
-* Protocollo: FC 64 Gbps; Porte: 56
-* Protocollo: NVMe/FC 64 Gbps; Porte: 56
-* Porte: 0
+|===
 
 
+| Tipo | Coppie HA | Capacità grezza | Memoria massima 
 
 
-=== Porte di gestione
+| NAS | 12 | 176,8 PB / 157,0 PiB | 6144 GB 
 
-* Protocollo: Ethernet 1 Gbps; Porte: 2
-* Protocollo: RS-232 115 Kbps; Porte: 4
-* Protocollo: USB 600 Mbps; Porte: 2
+
+| SAN | 6 | 88,4 PB / 78,5 PiB | 3072 GB 
+
+
+| Coppia HA |  | 14,7 PB / 13,1 PiB | 512,0000 
+|===
+
+
+=== Io
 
 
 
+==== IO di bordo
 
-== Rete di archiviazione supportata
-
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NFSv3/RDMA
-* NFSv4/RDMA
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 con NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == Specifiche dell'ambiente di sistema Nessun dato sull'ambiente disponibile.
+Nessun dato IO a bordo.
 
 
 
+==== IO totale
 
-== Conformità
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 200 Gbps | 24 
+
+
+| Ethernet 100 Gbps | 36 
+
+
+| Ethernet 25 Gbps | 56 
+
+
+| Ethernet 10 Gbps | 56 
+
+
+| FC 64 Gbps | 56 
+
+
+| NVMe/FC 64 Gbps | 56 
+
+
+|  | 0 
+|===
+
+
+==== Porte di gestione
+
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 600 Mbps | 2 
+|===
+
+
+=== Rete di archiviazione supportata
+
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; NVMe/FC; NVMe/TCP; S3; S3 con NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+=== Specifiche dell'ambiente di sistema
+
+Nessun dato ambientale disponibile.
+
+
+
+=== Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
 * Certificazioni sicurezza: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
@@ -99,9 +133,6 @@ Nessun dato I/O integrato.
 
 
 
-== Alta disponibilità
+=== Alta disponibilità
 
-* Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
-* Controller ridondanti sostituibili a caldo
-* Alimentatori ridondanti sostituibili a caldo
-
+Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; [//] 2025-10-15 ontap-systems-internal/issues/1357

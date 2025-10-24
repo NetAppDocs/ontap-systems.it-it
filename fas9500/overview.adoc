@@ -1,103 +1,136 @@
 ---
 permalink: fas9500/overview.html 
 sidebar: sidebar 
-keywords: fas9500 overview, specifications fas9500, fas9500 components, fas9500 specifications 
-summary: Specifiche chiave per il gruppo di piattaforme FAS9500 
+keywords: FAS9500 specifications, FAS9500 specs, NetApp FAS9500, FAS9500 hardware 
+summary: Specifiche chiave per il sistema di archiviazione FAS9500 
 ---
 = Specifiche chiave per FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
-:revdate: The following are select specifications for the FAS9500 storage system in a single high availability pair. Visit NetApp Hardware Universe (HWU) for the complete specifications for this storage system.
+
+
+[role="lead"]
+Di seguito sono riportate alcune specifiche selezionate per il FAS9500.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per un elenco completo delle specifiche FAS9500 .  Questa pagina riflette una singola coppia ad alta disponibilità.
 
 
 
+=== Specifiche chiave per FAS9500
 
-== Specifiche chiave per FAS9500
+Configurazione della piattaforma: coppia HA a telaio singolo FAS9500
 
-* Configurazione della piattaforma: coppia HA a telaio singolo FAS9500
-* Capacità massima grezza: 15.0000 PB
-* Memoria: 2048.0000 GB
-* Fattore di forma: chassis 8U con 2 controller HA
-* Versione ONTAP : ONTAP: 9.16.1P2
-* Slot di espansione PCIe: 20
-* Versione minima ONTAP : ONTAP 9.10.1P3 == Massimi di scalabilità
-* Tipo: NAS; Coppie HA: 12; Capacità raw: 180,0 PB / 159,9 PiB; Memoria massima: 24576 GB
-* Tipo: SAN; Coppie HA: 6; Capacità grezza: 90,0 PB / 79,9 PiB; Memoria massima: 12288 GB
-* Tipo: coppia HA; capacità grezza: 15,0 PB / 13,3 PiB; memoria massima: 2048,0000
+Capacità massima grezza: 15.0000 PB
 
+Memoria: 2048.0000 GB
 
+Fattore di forma: chassis 8U con 2 controller HA
 
+Versione ONTAP : b_startONTAP: 9.16.1P2b_end
 
-== I/O
+Slot di espansione PCIe: 20
+
+Versione minima ONTAP : ONTAP 9.10.1P3
 
 
 
-=== I/O integrato
+=== Massimi di scalabilità
 
-Nessun dato I/O integrato.
-
-
-
-=== Totale I/O
-
-* Protocollo: Ethernet 100 Gbps; Porte: 32
-* Protocollo: Ethernet 25 Gbps; Porte: 64
-* Protocollo: Ethernet 10 Gbps; Porte: 64
-* Protocollo: FC 32 Gbps; Porte: 64
-* Protocollo: NVMe/FC 32 Gbps; Porte: 64
-* Porte: 0
-* Protocollo: SAS 12 Gbps; Porte: 64
+|===
 
 
+| Tipo | Coppie HA | Capacità grezza | Memoria massima 
 
 
-=== Porte di gestione
+| NAS | 12 | 180,0 PB / 159,9 PiB | 24576 GB 
 
-* Protocollo: Ethernet 1 Gbps; Porte: 2
-* Protocollo: RS-232 115 Kbps; Porte: 6
-* Protocollo: USB 12 Mbps; Porte: 2
+
+| SAN | 6 | 90,0 PB / 79,9 PiB | 12288 GB 
+
+
+| Coppia HA |  | 15,0 PB / 13,3 PiB | 2048,0000 
+|===
+
+
+=== Io
 
 
 
+==== IO di bordo
 
-== Rete di archiviazione supportata
+Nessun dato IO a bordo.
 
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 con NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == Specifiche dell'ambiente di sistema
+
+
+==== IO totale
+
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 100 Gbps | 32 
+
+
+| Ethernet 25 Gbps | 64 
+
+
+| Ethernet 10 Gbps | 64 
+
+
+| FC 32 Gbps | 64 
+
+
+| NVMe/FC 32 Gbps | 64 
+
+
+|  | 0 
+
+
+| SAS 12 Gbps | 64 
+|===
+
+
+==== Porte di gestione
+
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 6 
+
+
+| USB 12 Mbps | 2 
+|===
+
+
+=== Rete di archiviazione supportata
+
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 con NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+=== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 8004 BTU/ora
 * Potenza nel caso peggiore: 9937 BTU/ora
-* Peso: 220,5 libbre 100,0 kg
+* Peso: 220,5 libbre/100,0 kg
 * Altezza: 8U
 * Larghezza: 19" conforme allo standard IEC per rack (17,7" 45,0 cm)
-* Profondità: 28,8" (36,8" con staffa di gestione dei cavi)
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% al 90%, senza condensa
-* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
-* Rumore acustico: Potenza sonora dichiarata (LwAd): 7,4 Pressione sonora (LpAm) (posizioni degli astanti): 65,0 dB
+* Profondità: 28,8" (36,8" con staffa per la gestione dei cavi)
+* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a 3048 m (da 10000 piedi) di altitudine; umidità relativa dall'8% al 90%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi)<br/>Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: Potenza sonora dichiarata (LwAd): 7,4;br/Pressione sonora (LpAm) (posizioni degli astanti): 65,0 dB
 
 
 
 
-== Conformità
+=== Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
 * Certificazioni sicurezza: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
@@ -109,10 +142,6 @@ Nessun dato I/O integrato.
 
 
 
-== Alta disponibilità
+=== Alta disponibilità
 
-* Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
-* Controller ridondanti sostituibili a caldo
-* Alimentatori ridondanti sostituibili a caldo
-* Gestione in banda SAS su connessioni SAS per scaffali esterni
-
+Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS su connessioni SAS per ripiani esterni; [//] 2025-10-15 ontap-systems-internal/issues/1357

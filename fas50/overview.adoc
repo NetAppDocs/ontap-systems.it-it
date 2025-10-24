@@ -1,7 +1,8 @@
 ---
 permalink: fas50/overview.html 
 sidebar: sidebar 
-summary: Specifiche chiave per il gruppo di piattaforme FAS50 
+keywords: FAS50 specifications, FAS50 specs, NetApp FAS50, FAS50 hardware 
+summary: Specifiche chiave per il sistema di archiviazione FAS50 
 ---
 = Specifiche chiave per FAS50
 :allow-uri-read: 
@@ -10,91 +11,126 @@ summary: Specifiche chiave per il gruppo di piattaforme FAS50
 
 
 [role="lead"]
-Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS50 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+Di seguito sono riportate alcune specifiche selezionate per il FAS50.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) per un elenco completo delle specifiche FAS50.  Questa pagina riflette una singola coppia ad alta disponibilità.
 
 
 
-== Specifiche chiave per FAS50
+=== Specifiche chiave per FAS50
 
-* Configurazione della piattaforma: coppia HA a telaio singolo FAS50
-* Capacità massima grezza: 10,5600 PB
-* Memoria: 128.0000 GB
-* Fattore di forma: chassis 2U con 2 controller HA
-* Versione ONTAP : ONTAP: 9.16.1P2
-* Slot di espansione PCIe: 12
-* Versione minima ONTAP : ONTAP 9.16.1 == Massimi di scalabilità
-* Tipo: NAS; Coppie HA: 4; Capacità raw: 42,2 PB / 37,5 PiB; Memoria massima: 512 GB
-* Tipo: SAN; Coppie HA: 4; Capacità grezza: 42,2 PB / 37,5 PiB; Memoria massima: 512 GB
-* Tipo: coppia HA; capacità grezza: 10,6 PB / 9,4 PiB; memoria massima: 128.0000
+Configurazione della piattaforma: coppia HA a telaio singolo FAS50
 
+Capacità massima grezza: 10,5600 PB
 
+Memoria: 128.0000 GB
 
+Fattore di forma: chassis 2U con 2 controller HA
 
-== I/O
+Versione ONTAP : b_startONTAP: 9.16.1P2b_end
+
+Slot di espansione PCIe: 12
+
+Versione minima ONTAP : ONTAP 9.16.1
 
 
 
-=== I/O integrato
+=== Massimi di scalabilità
 
-Nessun dato I/O integrato.
-
-
-
-=== Totale I/O
-
-* Protocollo: Ethernet 100 Gbps; Porte: 16
-* Protocollo: Ethernet 25 Gbps; Porte: 24
-* Protocollo: Ethernet 10 Gbps; Porte: 24
-* Protocollo: FC 64 Gbps; Porte: 24
-* Protocollo: NVMe/FC 64 Gbps; Porte: 24
-* Porte: 0
-* Protocollo: SAS 12 Gbps; Porte: 16
+|===
 
 
+| Tipo | Coppie HA | Capacità grezza | Memoria massima 
 
 
-=== Porte di gestione
+| NAS | 4 | 42,2 PB / 37,5 PiB | 512 GB 
 
-* Protocollo: Ethernet 1 Gbps; Porte: 2
-* Protocollo: RS-232 115 Kbps; Porte: 4
-* Protocollo: USB 600 Mbps; Porte: 2
+
+| SAN | 4 | 42,2 PB / 37,5 PiB | 512 GB 
+
+
+| Coppia HA |  | 10,6 PB / 9,4 PiB | 128,0000 
+|===
+
+
+=== Io
 
 
 
+==== IO di bordo
 
-== Rete di archiviazione supportata
+Nessun dato IO a bordo.
 
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 con NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == Specifiche dell'ambiente di sistema
+
+
+==== IO totale
+
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 100 Gbps | 16 
+
+
+| Ethernet 25 Gbps | 24 
+
+
+| Ethernet 10 Gbps | 24 
+
+
+| FC 64 Gbps | 24 
+
+
+| NVMe/FC 64 Gbps | 24 
+
+
+|  | 0 
+
+
+| SAS 12 Gbps | 16 
+|===
+
+
+==== Porte di gestione
+
+|===
+
+
+| Protocollo | porti 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 600 Mbps | 2 
+|===
+
+
+=== Rete di archiviazione supportata
+
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 con NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+=== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 2319 BTU/ora
 * Potenza nel caso peggiore: 3872 BTU/ora
-* Peso: 52,2 libbre 23,7 kg
+* Peso: 52,2 libbre/23,7 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
-* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
-* Rumore acustico: Potenza sonora dichiarata (LwAd): 8,0 Pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
+* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a 3048 m (da 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi)<br/>Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: Potenza sonora dichiarata (LwAd): 8,0;br/Pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
 
 
 
 
-== Conformità
+=== Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
 * Certificazioni sicurezza: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
@@ -106,10 +142,6 @@ Nessun dato I/O integrato.
 
 
 
-== Alta disponibilità
+=== Alta disponibilità
 
-* Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
-* Controller ridondanti sostituibili a caldo
-* Alimentatori ridondanti sostituibili a caldo
-* Gestione in banda SAS su connessioni SAS per scaffali esterni
-
+Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS su connessioni SAS per ripiani esterni; [//] 2025-10-15 ontap-systems-internal/issues/1357

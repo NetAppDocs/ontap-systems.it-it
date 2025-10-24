@@ -64,7 +64,7 @@ image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Schema di cablaggi
 --
 .Cablaggio del cluster con switch
 --
-Utilizzare il cavo 100 GbE per collegare le porte da E1a a E1a e le porte da e7a a e7a.
+Utilizzare il cavo 100 GbE per collegare le porte e1a ed e7a dei controller A e B agli switch di rete del cluster A e B.
 
 .Fasi
 . Collegare la porta E1a sul controller A e la porta E1a sul controller B allo switch di rete del cluster A.
@@ -94,7 +94,7 @@ Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per
 . Collegare le porte e9a e e9b allo switch di rete dati Ethernet.
 +
 
-NOTE: Per ottenere le massime performance di sistema per il traffico cluster e ha, non utilizzare le porte e1b e e7b per le connessioni di rete host. Utilizzare una scheda host separata per ottimizzare le prestazioni.
+NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Utilizzare una scheda host separata.
 
 +
 *Cavo 100 GbE*
