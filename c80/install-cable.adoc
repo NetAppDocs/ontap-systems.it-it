@@ -64,9 +64,15 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Schema di cablaggio 
 --
 .Cablaggio del cluster con switch
 --
-Utilizzare il cavo 100 GbE per collegare le porte e1a ed e7a dei controller A e B agli switch di rete del cluster A e B. .Passaggi . Collegare la porta e1a sul Controller A e la porta e1a sul Controller B allo switch di rete del cluster A. Collegare la porta e7a sul Controller A e la porta e7a sul Controller B allo switch di rete del cluster B.
+Utilizzare il cavo 100 GbE per collegare le porte e1a ed e7a dei controller A e B agli switch di rete del cluster A e B.
 
-+ *Cavo 100 GbE*
+.Fasi
+. Collegare la porta E1a sul controller A e la porta E1a sul controller B allo switch di rete del cluster A.
+. Collegare la porta e7a sul controller A e la porta e7a sul controller B allo switch di rete del cluster B.
++
+*Cavo 100 GbE*
+
+
 
 image::../media/oie_cable100_gbe_qsfp28.png[Cavo da 100 GB]
 
