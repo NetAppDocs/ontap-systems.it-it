@@ -15,9 +15,9 @@ Riavviare i controller, verificare lo stato del sistema e restituire il componen
 
 
 
-== Fase 1: Avviare i controller e restituirli
+== Passaggio 1: avviare i controller ed eseguire il giveback
 
-Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
+Avviare ONTAP sui controller ed eseguire il giveback del controller per ripristinare la proprietà dello storage.
 
 .Fasi
 . Controllare l'output della console:
@@ -38,12 +38,7 @@ Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
 
 == Fase 2: Verifica dello stato del sistema di archiviazione
 
-Dopo che il controller ha restituito lo spazio di archiviazione, è necessario controllare lo stato generale con https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
-
-.Fasi
-. Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.
-. Correggere eventuali problemi riscontrati.
-
+Dopo aver completato la restituzione del controller, verificare lo stato del sistema utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .  Risolvere eventuali problemi riscontrati.
 
 
 

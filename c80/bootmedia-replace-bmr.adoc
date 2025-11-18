@@ -15,10 +15,18 @@ Il supporto di avvio del sistema di storage AFF C80 memorizza firmware e dati di
 
 Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
 
-Il supporto di avvio si trova all'interno del modulo di gestione del sistema ed è accessibile rimuovendo il modulo dal sistema.
+Sostituire il supporto di avvio, che si trova all'interno del modulo di gestione del sistema, nella parte posteriore del controller.
+
+.Prima di iniziare
+* È necessario disporre di un supporto di avvio sostitutivo.
+* Tenere a disposizione un tappetino antistatico per il modulo di gestione del sistema.
+
 
 .Fasi
-. Prima di procedere, verificare che la NVRAM sia stata completata. Quando il LED sul modulo NV è spento, il NVRAM viene rimosso. Se il LED lampeggia, attendere l'arresto del lampeggiamento. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+. Prima di procedere, verificare che la destage NVRAM sia stata completata.  Quando il LED sul modulo NV è spento, la NVRAM è disattivata.
++
+Se il LED lampeggia, attendere che smetta di lampeggiare.  Se il lampeggiamento continua per più di 5 minuti, contattare l'assistenza NetApp per ricevere assistenza.
+
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
 
@@ -40,26 +48,26 @@ image:../media/icon_round_2.png["Numero di didascalia 2"]
 LED di attenzione NVRAM
 
 |===
+. Andate nella parte posteriore del telaio e collegatevi correttamente a terra, se non lo avete già fatto.
+. Scollegare l'alimentazione dal controller:
 +
-** Se il LED NV è spento, passare alla fase successiva.
-** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+** Per gli alimentatori CA, scollegare i cavi di alimentazione dagli alimentatori.
+** Per gli alimentatori CC, scollegare il blocco di alimentazione dagli alimentatori.
 
 
-. Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare gli alimentatori del controller.
+. Rimuovere il modulo di gestione del sistema:
 +
-
-NOTE: Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
-
+.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Etichettare i cavi per identificare le porte corrette per la reinstallazione.
+.. Ruotare il braccio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati del braccio di gestione dei cavi.
+.. Premere il pulsante della camma di gestione del sistema.
 +
-.. Rimuovere tutti i cavi collegati al modulo di gestione del sistema. Assicurarsi di etichettare il punto in cui sono stati collegati i cavi, in modo da poterli collegare alle porte corrette quando si reinstalla il modulo.
-.. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
-.. Premere il pulsante della camma di gestione del sistema. La leva della camma si allontana dal telaio.
-.. Ruotare la leva della camma completamente verso il basso e rimuovere il modulo di gestione del sistema dal modulo controller.
-.. Posizionare il modulo di gestione del sistema su un tappetino antistatico, in modo che il supporto di avvio sia accessibile.
+La leva della camma si allontana dal telaio.
+
+.. Ruotare la leva della camma completamente verso il basso e rimuovere il modulo di gestione del sistema dal controller.
+.. Posizionare il modulo di gestione del sistema su un tappetino antistatico, tenendo il supporto di avvio accessibile.
 
 
-. Rimuovere il supporto di avvio dal modulo di gestione:
+. Rimuovere il supporto di avvio dal modulo Gestione sistema:
 +
 image::../media/drw_a70-90_boot_media_remove_replace_ieops-1367.svg[I supporti di avvio sostituiscono l'immagine]
 
@@ -90,28 +98,35 @@ Supporto di boot
 |===
 +
 .. Premere il pulsante di bloccaggio blu.
-.. Ruotare il supporto di avvio verso l'alto, farlo scorrere fuori dallo zoccolo e metterlo da parte.
+.. Ruotare il supporto di avvio verso l'alto, farlo scorrere fuori dal socket e metterlo da parte.
 
 
 . Installare il supporto di avvio sostitutivo nel modulo di gestione del sistema:
 +
 .. Allineare i bordi del supporto di avvio con l'alloggiamento dello zoccolo, quindi spingerlo delicatamente a squadra nello zoccolo.
 .. Ruotare il supporto di avvio verso il basso verso il pulsante di bloccaggio.
-.. Premere il pulsante di bloccaggio, ruotare completamente il supporto di avvio e rilasciare il pulsante di bloccaggio.
+.. Premere il pulsante di blocco, ruotare completamente il supporto di avvio, quindi rilasciare il pulsante di blocco.
 
 
 . Reinstallare il modulo di gestione del sistema:
 +
-.. Ruotare il vassoio di gestione dei cavi verso l'alto fino alla posizione di chiusura.
-.. Eseguire il richiamo del modulo Gestione del sistema.
+.. Allineare i bordi del modulo di gestione del sistema con l'apertura del telaio.
+.. Far scorrere delicatamente il modulo nello chassis finché il fermo a camma non inizia ad agganciarsi.
+.. Ruotare il fermo a camma completamente verso l'alto per bloccare il modulo in posizione.
+.. Ricollegare i cavi al modulo di gestione del sistema utilizzando le etichette create durante la rimozione.
+.. Ruotare il ARM di gestione dei cavi verso l'alto fino alla posizione di chiusura.
 
 
-. Collegare i cavi di alimentazione agli alimentatori. Il controller si riavvia non appena viene ripristinata l'alimentazione.
+. Ricollegare l'alimentazione al controller:
 +
+** Per gli alimentatori CA, collegare i cavi di alimentazione agli alimentatori.
+** Per gli alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
++
+Il controller si riavvia automaticamente quando l'alimentazione viene ripristinata.
 
-NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione agli alimentatori.
 
-. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
+
+. Interrompere il processo di avvio premendo `Ctrl-C` per fermarsi al prompt LOADER.
 
 
 .Cosa succederà

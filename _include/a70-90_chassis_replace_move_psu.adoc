@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Rimuovere le quattro PSU:
++
+.. Se non si è già collegati a terra, mettere a terra l'utente.
+.. Scollegare i cavi di alimentazione dall'alimentatore del modulo controller.
++
+Se il sistema è alimentato a corrente continua, scollegare il blocco di alimentazione dalle PSU.
+
+.. Rimuovere l'alimentatore dal controller ruotando la maniglia dell'alimentatore verso l'alto in modo da estrarre l'alimentatore, premere la linguetta di blocco dell'alimentatore, quindi estrarre l'alimentatore dal modulo controller.
++
+
+CAUTION: L'alimentatore è in corto. Utilizzare sempre due mani per sostenerlo durante la rimozione dal modulo controller in modo che non si sposti improvvisamente dal modulo controller e non causi lesioni.
+
++
+image::../media/drw_a70-90_psu_remove_replace_ieops-1368.svg[Sostituire la scheda PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguetta di bloccaggio PSU in terracotta
+
+|===
+.. Ripetere questi passaggi per le altre PSU.
+
+
+. Rimuovere i cavi:
++
+.. Scollegare i cavi di sistema e gli eventuali moduli SFP e QSFP (se necessario) dal modulo controller, ma lasciarli nel dispositivo di gestione dei cavi per mantenerli organizzati.
++
+
+NOTE: I cavi devono essere stati etichettati all'inizio di questa procedura.
+
+.. Rimuovere il dispositivo di gestione dei cavi dai moduli del controller e metterli da parte.
+
+
+

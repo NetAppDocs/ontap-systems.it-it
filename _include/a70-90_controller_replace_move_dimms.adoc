@@ -1,0 +1,63 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Aprire il condotto dell'aria della centralina sulla parte superiore della centralina.
++
+.. Inserire le dita nelle cavità alle estremità più lontane del condotto dell'aria.
+.. Sollevare il condotto dell'aria e ruotarlo verso l'alto fino in fondo.
+
+
+. Individuare i DIMM di sistema sulla scheda madre, utilizzando la mappa DIMM sulla parte superiore del condotto dell'aria.
++
+Le posizioni dei DIMM, in base al modello, sono elencate nella tabella seguente:
+
++
+[cols="1,4"]
+|===
+
+
+| Modello | Posizione dell'alloggiamento DIMM 
+
+
+ a| 
+FAS70
+| 3, 10, 19, 26 
+
+
+ a| 
+FAS90
+| 3, 7, 10, 14, 19, 23, 26, 30 
+|===
++
+image::../media/drw_a70_90_dimm_ieops-1513.svg[Mappa DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+| DIMM di sistema 
+|===
+. Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
+. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
+. Individuare lo slot sul modulo controller sostitutivo in cui si sta installando il DIMM.
+. Inserire il DIMM nello slot.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
+. Ripetere questa procedura per i DIMM rimanenti.
+. Chiudere il condotto dell'aria della centralina.
+

@@ -13,6 +13,8 @@ summary: 'Il supporto di avvio del sistema AFF C80 memorizza i dati essenziali d
 [role="lead"]
 Il supporto di avvio del sistema AFF C80 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo e il trasferimento manuale dell'immagine ONTAP sul supporto di avvio sostitutivo tramite un'unità flash USB.
 
+Se il sistema è in esecuzione in ONTAP 9.17.1 e versioni successive, utilizzare link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .
+
 
 
 == Fase 1: Sostituire il supporto di avvio

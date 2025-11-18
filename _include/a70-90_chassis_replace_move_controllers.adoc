@@ -1,0 +1,83 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Verificare che il LED di stato NVRAM color ambra situato nello slot 4/5 sul retro di ciascun modulo controller sia spento. Cercare l'icona NV.
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+LED di stato NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+LED di attenzione NVRAM
+
+|===
++
+** Se il LED NVRAM è spento, passare alla fase successiva.
+** Se il LED NVRAM lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare http://mysupport.netapp.com/["Sito di supporto NetApp"^] per assistenza.
+
+
+. Rimuovere i moduli controller:
++
+.. Premere verso il basso entrambi i fermi di bloccaggio sul controller, quindi ruotare entrambi i fermi contemporaneamente verso il basso.
++
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
+image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Immagine di rimozione della centralina]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermo di bloccaggio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Perno di bloccaggio
+
+|===
+.. Estrarre il modulo controller dal telaio con i dispositivi di bloccaggio e collocarlo su una superficie piana e stabile.
++
+Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+
+.. Ripetere questi passi per il secondo modulo controller.
+
+
+. Rimuovere i dischi:
++
+.. Rimuovere delicatamente il pannello frontale dal sistema.
+.. Premere il pulsante di rilascio nella parte superiore del supporto dell'unità, sotto i LED.
+.. Tirare la maniglia della camma in posizione completamente aperta per estrarre l'unità dalla scheda intermedia, quindi estrarre delicatamente l'unità dal telaio.
++
+L'unità deve disinnestarsi dallo chassis, in modo che possa scorrere liberamente dallo chassis.
+
++
+
+NOTE: I dischi sono fragili. Utilizzare sempre due mani per sostenere il peso della trasmissione durante la rimozione di un'unità per evitare di danneggiarli.
+
+.. Tenere traccia dell'alloggiamento in cui si trovava ciascuna unità e mettere da parte l'unità su un carrello o un tavolo privo di elettricità statica.
+.. Ripetere questa operazione per le unità rimanenti nello chassis.
+
+
+

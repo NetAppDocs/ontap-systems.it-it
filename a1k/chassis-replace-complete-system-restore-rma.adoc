@@ -15,9 +15,9 @@ Riavviare il controller, verificare lo stato del sistema e restituire la parte g
 
 
 
-== Fase 1: Avviare i controller e restituirli
+== Passaggio 1: avviare i controller e verificare lo stato del sistema
 
-Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
+Dopo il riavvio dei controller, avviare ONTAP, restituire i controller e verificare lo stato del sistema di storage.
 
 .Fasi
 . Controllare l'output della console:
@@ -34,21 +34,11 @@ Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
 .. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+. Dopo aver completato la restituzione, esegui https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] per verificare lo stato del sistema di archiviazione e correggere eventuali problemi riscontrati.
 
 
 
 
-== Fase 2: Verifica dello stato del sistema di archiviazione
-
-Dopo che il controller ha restituito lo spazio di archiviazione, è necessario controllare lo stato generale con https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
-
-.Fasi
-. Una volta completato il giveback, eseguire Active IQ Config Advisor per verificare lo stato di salute del sistema storage.
-. Correggere eventuali problemi riscontrati.
-
-
-
-
-== Fase 3: Restituire la parte guasta a NetApp
+== Fase 2: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

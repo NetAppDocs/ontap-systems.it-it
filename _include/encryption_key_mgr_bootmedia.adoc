@@ -1,0 +1,166 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Determinare quale gestore delle chiavi è abilitato sul proprio sistema:
++
+[cols="1a,2a"]
+|===
+| Versione di ONTAP | Eseguire questo comando 
+
+
+ a| 
+ONTAP 9.14.1 o versione successiva
+ a| 
+`security key-manager keystore show`
+
+** Se EKM è attivato, `EKM` viene elencato nell'output del comando.
+** Se OKM è attivato, `OKM` viene elencato nell'output del comando.
+** Se nessun gestore di chiavi è attivato, `No key manager keystores configured` viene elencato nell'output del comando.
+
+
+
+
+ a| 
+ONTAP 9.13.1 o versioni precedenti
+ a| 
+`security key-manager show-key-store`
+
+** Se EKM è attivato, `external` viene elencato nell'output del comando.
+** Se OKM è attivato, `onboard` viene elencato nell'output del comando.
+** Se nessun gestore di chiavi è attivato, `No key managers configured` viene elencato nell'output del comando.
+
+
+|===
+. A seconda che sul sistema sia configurato un gestore delle chiavi, procedere in uno dei seguenti modi:
++
+*Se non è configurato alcun gestore chiavi:*
+
++
+È possibile spegnere in sicurezza il controller danneggiato e procedere con la procedura di spegnimento.
+
++
+*Se è configurato un gestore delle chiavi (EKM o OKM):*
+
++
+.. Immettere il seguente comando di query per visualizzare lo stato delle chiavi di autenticazione nel gestore delle chiavi:
++
+`security key-manager key query`
+
+.. Rivedere l'output e controllare il valore nel `Restored` colonna.  Questa colonna indica se le chiavi di autenticazione per il gestore delle chiavi (EKM o OKM) sono state ripristinate correttamente.
+
+
+. Completare la procedura appropriata in base al tipo di responsabile delle chiavi:
++
+[role="tabbed-block"]
+====
+.Gestore chiavi esterno (EKM)
+--
+Completare questi passaggi in base al valore nel `Restored` colonna.
+
+*Se vengono visualizzate tutte le chiavi `true` nella colonna Ripristinato:*
+
+È possibile spegnere in sicurezza il controller danneggiato e procedere con la procedura di spegnimento.
+
+*Se una qualsiasi delle chiavi mostra un valore diverso da `true` nella colonna Ripristinato:*
+
+.. Ripristinare le chiavi di autenticazione della gestione delle chiavi esterne su tutti i nodi del cluster:
++
+`security key-manager external restore`
+
++
+Se il comando non riesce, contattare l'assistenza NetApp .
+
+.. Verificare che tutte le chiavi di autenticazione siano state ripristinate:
++
+`security key-manager key query`
+
++
+Confermare che il `Restored` display a colonna `true` per tutte le chiavi di autenticazione.
+
+.. Se tutte le chiavi vengono ripristinate, è possibile spegnere in sicurezza il controller danneggiato e procedere con la procedura di spegnimento.
+
+
+--
+.Onboard Key Manager (OKM)
+--
+Completare questi passaggi in base al valore nel `Restored` colonna.
+
+*Se vengono visualizzate tutte le chiavi `true` nella colonna Ripristinato:*
+
+.. Eseguire il backup delle informazioni OKM:
++
+... Passa alla modalità privilegio avanzata:
++
+`set -priv advanced`
+
++
+Entra `y` quando ti viene chiesto di continuare.
+
+... Visualizza le informazioni di backup della gestione delle chiavi:
++
+`security key-manager onboard show-backup`
+
+... Copiare le informazioni di backup in un file separato o nel file di registro.
++
+Queste informazioni di backup saranno necessarie se sarà necessario ripristinare manualmente OKM durante la procedura di sostituzione.
+
+... Torna alla modalità amministratore:
++
+`set -priv admin`
+
+
+
+.. È possibile spegnere in sicurezza il controller danneggiato e procedere con la procedura di spegnimento.
+
+
+*Se una qualsiasi delle chiavi mostra un valore diverso da `true` nella colonna Ripristinato:*
+
+.. Sincronizzare il gestore delle chiavi integrato:
++
+`security key-manager onboard sync`
+
++
+Quando richiesto, immettere la passphrase alfanumerica di 32 caratteri per la gestione delle chiavi integrate.
+
++
+
+NOTE: Questa è la passphrase per l'intero cluster creata durante la configurazione iniziale di Onboard Key Manager.  Se non si dispone di questa passphrase, contattare l'assistenza NetApp .
+
+.. Verificare che tutte le chiavi di autenticazione siano state ripristinate:
++
+`security key-manager key query`
+
++
+Confermare che il `Restored` display a colonna `true` per tutte le chiavi di autenticazione e `Key Manager` tipo spettacoli `onboard` .
+
+.. Eseguire il backup delle informazioni OKM:
++
+... Passa alla modalità privilegio avanzata:
++
+`set -priv advanced`
+
++
+Entra `y` quando ti viene chiesto di continuare.
+
+... Visualizza le informazioni di backup della gestione delle chiavi:
++
+`security key-manager onboard show-backup`
+
+... Copiare le informazioni di backup in un file separato o nel file di registro.
++
+Queste informazioni di backup saranno necessarie se sarà necessario ripristinare manualmente OKM durante la procedura di sostituzione.
+
+... Torna alla modalità amministratore:
++
+`set -priv admin`
+
+
+
+.. È possibile spegnere in sicurezza il controller danneggiato e procedere con la procedura di spegnimento.
+
+
+--
+====
+

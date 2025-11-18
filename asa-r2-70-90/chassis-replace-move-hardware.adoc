@@ -11,7 +11,7 @@ summary: 'Sostituire lo chassis del sistema ASA A70 o ASA A90 quando un guasto h
 
 
 [role="lead"]
-Sostituire lo chassis del sistema ASA A70 o ASA A90 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller e degli alimentatori, la rimozione delle unità, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.
+Sostituisci il telaio del tuo ASA A70 e ASA A90 quando un guasto hardware lo richiede.  Rimuovere i controller e gli alimentatori (PSU), rimuovere le unità, installare il telaio sostitutivo e reinstallare tutti i componenti.
 
 
 
@@ -149,9 +149,9 @@ NOTE: I dischi sono fragili. Utilizzare sempre due mani per sostenere il peso de
 
 
 
-== Fase 3: Sostituire il telaio danneggiato
+== Fase 3: sostituire il telaio e installare i componenti
 
-Rimuovere il telaio danneggiato e installare il telaio sostitutivo.
+Rimuovere il telaio danneggiato, installare il telaio sostitutivo e reinstallare tutti i componenti.
 
 .Fasi
 . Rimuovere il telaio danneggiato:
@@ -167,15 +167,6 @@ Rimuovere il telaio danneggiato e installare il telaio sostitutivo.
 .. Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dallo chassis compromesso.
 
 
-
-
-
-
-== Fase 4: Installare i componenti del telaio
-
-Una volta installato lo chassis sostitutivo, è necessario installare i moduli controller, correggerli, quindi reinstallare le unità e gli alimentatori.
-
-.Fasi
 . A partire dal modulo controller inferiore, installare i moduli controller nel telaio di ricambio:
 +
 .. Allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il controller completamente nel telaio.
@@ -217,4 +208,4 @@ I moduli controller iniziano ad avviarsi non appena l'alimentatore viene install
 
 
 .Quali sono le prossime novità?
-Dopo aver sostituito il telaio ASA A70 o ASA A90 danneggiato e aver reinstallato i componenti al suo interno, è necessario link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"].
+Dopo aver sostituito il telaio danneggiato e reinstallato i componenti,link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"] .

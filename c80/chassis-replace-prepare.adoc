@@ -11,57 +11,32 @@ summary: Prepararsi a sostituire lo chassis danneggiato del sistema C80 identifi
 
 
 [role="lead"]
-Prepararsi a sostituire lo chassis danneggiato nel sistema AFF A70 o AFF A90 identificando lo chassis danneggiato, verificando i componenti di ricambio ed etichettando i cavi e i moduli del controller.
-
-
-
-== Fase 1: Individuare e monitorare il sistema
-
-È necessario aprire una sessione della console e salvare i registri delle sessioni per riferimenti futuri, nonché attivare il LED di posizione del sistema per individuare il telaio danneggiato.
+Prepararsi a sostituire lo chassis danneggiato del sistema C80 identificando lo chassis danneggiato, verificando i componenti di ricambio ed etichettando i cavi e i moduli del controller.
 
 .Fasi
 . Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.
-. Individuare e accendere il LED di posizione del controller:
+. Accendere il LED di posizione del controller:
 +
 .. Utilizzare il `system controller location-led show` comando per visualizzare lo stato corrente del LED di posizione.
-.. Modificare lo stato del LED di posizione su "ON":
+.. Accendere il LED di posizione:
 +
-`system controller location-led modify -node _node1_ -state on`.
+`system controller location-led modify -node _node1_ -state on`
 
 +
 Il LED posizione rimane acceso per 30 minuti.
 
 
 
-
-
-
-
-== Fase 2: Verifica dei componenti sostitutivi
-
-È necessario verificare di aver ricevuto i componenti necessari, rimuoverli dalla confezione e conservarli.
-
-.Fasi
-. Prima di aprire la confezione, controllare l'etichetta della confezione e verificare:
+. Prima di aprire la confezione, esaminare l'etichetta sulla confezione e verificare quanto segue:
 +
-** Numero di parte del componente.
-** Descrizione della parte.
-** Quantità nella scatola.
+** Numero di parte del componente
+** Descrizione della parte
+** Quantità nella scatola
 
 
-. Rimuovere il contenuto dalla confezione e utilizzare la confezione per restituire il componente guasto a NetApp.
-
-
-
-
-== Fase 3: Etichettare i cavi e i moduli del controller
-
-È necessario etichettare i cavi e i moduli controller prima di rimuoverli dai moduli controller o dallo chassis.
-
-.Fasi
-. Etichettare tutti i cavi associati al sistema di archiviazione. Ciò aiuta a riabilitarlo più avanti in questa procedura.
-. Etichettare i moduli controller.
-. Se non siete già correttamente collegati a terra, mettetevi a terra.
+. Rimuovere il contenuto dalla confezione e conservare l'imballaggio per restituire il componente guasto a NetApp.
+. Etichettare tutti i cavi collegati al sistema di archiviazione.  Ciò garantisce un corretto cablaggio più avanti nella procedura.
+. Collegati alla terra se non lo sei già.
 
 
 .Quali sono le prossime novità?

@@ -11,11 +11,11 @@ summary: Inizia a sostituire il controller nel sistema di storage AFF A70 o AFF 
 
 
 [role="lead"]
-Inizia a sostituire il controller nel sistema di storage AFF A70 o AFF A90 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione di sistema e restituendo il controllo delle risorse di storage al controller sostitutivo.
+Sostituire il controller nel sistema di archiviazione AFF A70 o AFF A90 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e restituendo il controllo delle risorse di archiviazione al controller sostitutivo.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:controller-replace-requirements.html["Esaminare i requisiti per sostituire la centralina"]
 [role="quick-margin-para"]
-Per sostituire il modulo controller, è necessario soddisfare determinati requisiti.
+Esaminare i requisiti per la sostituzione del controller, tra cui la compatibilità del sistema, gli strumenti richiesti, le credenziali ONTAP e la verifica della funzionalità dei componenti.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:controller-replace-shutdown.html["Spegnere il controller compromesso"]
 [role="quick-margin-para"]
@@ -23,7 +23,7 @@ Spegnere o sostituire il controller danneggiato in modo che il controller integr
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:controller-replace-move-hardware.html["Sostituire la centralina"]
 [role="quick-margin-para"]
-La sostituzione del controller include la rimozione del controller danneggiato, lo spostamento dei componenti FRU nel modulo controller sostitutivo e l'installazione del modulo controller sostitutivo nel contenitore.
+Rimuovere il controller danneggiato, spostare i componenti FRU nel modulo controller sostitutivo e installare il modulo controller sostitutivo nell'alloggiamento.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:controller-replace-system-config-restore-and-verify.html["Ripristinare e verificare la configurazione del sistema"]
 [role="quick-margin-para"]
@@ -35,4 +35,4 @@ Possibilità di recuperare il controller e trasferire la proprietà delle risors
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:controller-replace-restore-system-rma.html["Sostituzione completa del controller"]
 [role="quick-margin-para"]
-Verifica le LIF, verifica lo stato di salute del cluster e restituisce la parte guasta a NetApp.
+Verifica le LIF, verifica lo stato di salute del cluster e restituisce il componente guasto a NetApp.

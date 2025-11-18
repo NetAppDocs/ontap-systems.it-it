@@ -13,55 +13,92 @@ summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare i
 [role="lead"]
 Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
 
-.Fasi
-. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
-+
-L'immagine viene scaricata dall'unità flash USB.
+.Prima di iniziare
+* Assicurati che la tua console sia collegata al controller non compatibile.
+* Verifica di avere un'unità flash USB con l'immagine di ripristino.
+* Determina se il tuo sistema utilizza la crittografia.  Sarà necessario selezionare l'opzione appropriata nel passaggio 3 a seconda che la crittografia sia abilitata o meno.
 
-. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
-. Ripristinare il file system var:
+
+.Fasi
+. Dal prompt LOADER sul controller danneggiato, avviare l'immagine di ripristino dall'unità flash USB:
++
+`boot_recovery`
+
++
+L'immagine di ripristino viene scaricata dall'unità flash USB.
+
+. Quando richiesto, immettere il nome dell'immagine o premere *Invio* per accettare l'immagine predefinita visualizzata tra parentesi.
+. Ripristinare il file system var utilizzando la procedura per la versione ONTAP in uso:
 +
 [role="tabbed-block"]
 ====
-.Opzione 1: ONTAP 9.16,0 o versione precedente
+.ONTAP 9.16.0 o versioni precedenti
 --
-.. Sul controller con problemi, premere `Y` quando viene visualizzato `Do you want to restore the backup configuration now?`
-.. Se richiesto sul controller danneggiato, premere `Y` per sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.
-.. Sul controller partner sano, impostare il controller con problemi sul livello di privilegi avanzato: `set -privilege advanced`.
-.. Sul controller partner integro, eseguire il comando di ripristino del backup: `system node restore-backup -node local -target-address impaired_node_IP_address`.
+Completare i seguenti passaggi sul controller non funzionante e sul controller partner:
+
+.. *Sul controller non compatibile:* Premere `Y` quando vedi `Do you want to restore the backup configuration now?`
+.. *Sul controller non compatibile:* Se richiesto, premere `Y` per sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.
+.. *Sul controller partner:* Imposta il controller non autorizzato al livello di privilegio avanzato:
 +
-*NOTA:* se viene visualizzato un messaggio diverso da un ripristino riuscito, contattare https://support.netapp.com["Supporto NetApp"].
+`set -privilege advanced`
 
-.. Sul controller partner sano, riportare il controller danneggiato al livello di amministratore: `set -privilege admin`.
-.. Sul controller con problemi, premere `Y` quando viene visualizzato `Was the restore backup procedure successful?`.
-.. Sul controller con problemi, premere `Y` quando viene visualizzato `...would you like to use this restored copy now?`.
-.. Sul controller danneggiato, premere `Y` quando richiesto per riavviare il controller danneggiato e premere `ctrl-c` per il menu di avvio.
-.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristino della crittografia"].
-
-
---
-.Opzione 2: ONTAP 9.16,1 o versione successiva
---
-.. Sul controller danneggiato, premere `Y` quando viene richiesto di ripristinare la configurazione di backup.
+.. *Sul controller partner:* eseguire il comando di ripristino del backup:
 +
-Una volta completata la procedura di ripristino, questo messaggio viene visualizzato sulla console - `syncflash_partner: Restore from partner complete`.
+`system node restore-backup -node local -target-address _impaired_node_IP_address_`
 
-.. Sul controller danneggiato, premere `Y` quando richiesto per confermare se il backup di ripristino è stato eseguito correttamente.
-.. Sul controller danneggiato, premere `Y` quando viene richiesto di utilizzare la configurazione ripristinata.
-.. Sul controller danneggiato, premere `Y` quando viene richiesto di riavviare il nodo.
-.. Sul controller danneggiato, premere `Y` quando richiesto per riavviare il controller danneggiato e premere `ctrl-c` per il menu di avvio.
-.. Se il sistema non utilizza la crittografia, selezionare _opzione 1 Avvio normale._, altrimenti andare a link:bootmedia-encryption-restore.html["Ripristino della crittografia"].
++
+
+NOTE: Se viene visualizzato un messaggio diverso da quello di ripristino riuscito, contattare l'assistenza NetApp .
+
+.. *Sul controller partner:* Torna al livello amministratore:
++
+`set -privilege admin`
+
+.. *Sul controller non compatibile:* Premere `Y` quando vedi `Was the restore backup procedure successful?`
+.. *Sul controller non compatibile:* Premere `Y` quando vedi `...would you like to use this restored copy now?`
+.. *Sul controller non compatibile:* Premere `Y` quando viene richiesto di riavviare, quindi premere `Ctrl-C` quando vedi il menu di avvio.
+.. *Sul controller con disabilità:* Eseguire una delle seguenti operazioni:
++
+*** Se il sistema non utilizza la crittografia, selezionare _Opzione 1 Avvio normale_ dal menu di avvio.
+*** Se il sistema utilizza la crittografia, vai alink:bootmedia-encryption-restore.html["Ripristino della crittografia"] .
+
+
+
+
+--
+.ONTAP 9.16.1 o successivo
+--
+Completare i seguenti passaggi sul controller non funzionante:
+
+.. Premere `Y` quando viene richiesto di ripristinare la configurazione di backup.
++
+Una volta completata correttamente la procedura di ripristino, viene visualizzato il seguente messaggio: `syncflash_partner: Restore from partner complete`
+
+.. Premere `Y` quando viene richiesto di confermare che il backup di ripristino è stato eseguito correttamente.
+.. Premere `Y` quando viene richiesto di utilizzare la configurazione ripristinata.
+.. Premere `Y` quando viene richiesto di riavviare il nodo.
+.. Premere `Y` quando viene richiesto di riavviare nuovamente, quindi premere `Ctrl-C` quando vedi il menu di avvio.
+.. Effettuare una delle seguenti operazioni:
++
+*** Se il sistema non utilizza la crittografia, selezionare _Opzione 1 Avvio normale_ dal menu di avvio.
+*** Se il sistema utilizza la crittografia, vai alink:bootmedia-encryption-restore.html["Ripristino della crittografia"] .
+
+
 
 
 --
 ====
-
-
 . Collegare il cavo della console al controller partner.
-. Restituire il controller utilizzando `storage failover giveback -fromnode local` comando.
-. Ripristinare il giveback automatico se è stato disattivato utilizzando `storage failover modify -node local -auto-giveback true` comando.
-. Se AutoSupport è abilitato, ripristinare/riattivare la creazione automatica dei casi utilizzando il `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Riportare il controller al funzionamento normale restituendo lo storage:
 +
-*NOTA:* se il processo non riesce, contattare https://support.netapp.com["Supporto NetApp"].
+`storage failover giveback -fromnode local`
+
+. Se hai disattivato la restituzione automatica, riattivala:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
 
 

@@ -5,10 +5,19 @@
 Prima di riportare in servizio il nodo sostitutivo, verifica che le interfacce logiche siano sulle porte home, verifica lo stato del cluster e ripristina il giveback automatico.
 
 .Fasi
-. Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
+. Verificare che le interfacce logiche segnalino il proprio server di origine e le porte:
 +
-Se alcune interfacce logiche sono elencate come false, riportarle alle porte principali: `network interface revert -vserver * -lif *`
+`network interface show -is-home false`
 
-. Controllare lo stato di salute del cluster. Per ulteriori informazioni, consultare l' https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"^] articolo della KB.
-. Se il giveback automatico è stato disattivato, riabilitarlo: `storage failover modify -node local -auto-giveback true`
++
+Se alcune interfacce logiche sono elencate come false, ripristinarle alle rispettive porte home:
+
++
+`network interface revert -vserver * -lif *`
+
+. Controlla lo stato del tuo cluster.  Vedi il https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Come eseguire un controllo dello stato del cluster con uno script in ONTAP"^] Articolo della Knowledge Base.
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`
+
 

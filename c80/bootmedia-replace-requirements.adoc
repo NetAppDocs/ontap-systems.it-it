@@ -13,6 +13,8 @@ summary: 'Prima di sostituire il supporto di avvio nel sistema AFF C80, assicura
 [role="lead"]
 Prima di sostituire il supporto di avvio nel sistema AFF C80, assicurarsi di soddisfare i requisiti necessari per una sostituzione corretta. È necessario assicurarsi di disporre di un'unità flash USB con la quantità di spazio di archiviazione appropriata e verificare di disporre della periferica di avvio sostitutiva corretta.
 
+Se il sistema è in esecuzione in ONTAP 9.17.1 e versioni successive, utilizzare link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .
+
 .Chiavetta USB
 * Assicurati di avere una chiavetta USB formattata in FAT32.
 * La chiavetta USB deve avere una capacità di archiviazione sufficiente per contenere il  `image_xxx.tgz` file.

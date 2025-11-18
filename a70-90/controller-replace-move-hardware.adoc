@@ -164,7 +164,7 @@ image::../media/icon_round_2.png[Numero di didascalia 2]
 Modulo della ventola
 
 |===
-. Spostare il modulo della ventola sul modulo controller sostitutivo, quindi installare il modulo della ventola allineandone i bordi con l'apertura nel modulo controller, quindi far scorrere il modulo della ventola nel modulo controller fino a quando i fermi di blocco non scattano in posizione.
+. Spostare il modulo ventola sul modulo controller sostitutivo, quindi installarlo allineandone i bordi con l'apertura nel modulo controller e facendolo scorrere finché i fermi di bloccaggio non scattano in posizione.
 . Ripetere questa procedura per i moduli ventola rimanenti.
 
 
@@ -283,8 +283,16 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 Spostare i moduli di i/o nel modulo controller sostitutivo.
 
+.Fasi
+. Scollegare eventuali cavi dal modulo i/o di destinazione.
++
+Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
+
+. Ruotare il ARM di gestione dei cavi verso il basso tirando i pulsanti all'interno del ARM di gestione dei cavi e ruotandolo verso il basso.
++
 image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Rimuovere il modulo di i/O.]
 
++
 [cols="1,4"]
 |===
 
@@ -293,12 +301,6 @@ image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Rimuovere il modulo 
 image::../media/icon_round_1.png[Numero di didascalia 1]
 | Leva camma modulo i/O. 
 |===
-.Fasi
-. Scollegare eventuali cavi dal modulo i/o di destinazione.
-+
-Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
-
-. Ruotare il ARM di gestione dei cavi verso il basso tirando i pulsanti all'interno del ARM di gestione dei cavi e ruotandolo verso il basso.
 . Rimuovere i moduli i/o dal modulo controller:
 +
 .. Premere il pulsante del dispositivo di chiusura a camma del modulo i/o di destinazione.
@@ -329,8 +331,12 @@ NOTE: Per spostare i moduli di i/o dagli slot 6 e 7, è necessario spostare il s
 
 Spostare il modulo di gestione del sistema nel modulo controller sostitutivo.
 
+.Fasi
+. Rimuovere il modulo di gestione del sistema dal modulo del controller danneggiato:
++
 image::../media/drw_70-90_sys-mgmt_remove_ieops-1817.svg[Spostare il modulo di gestione del sistema]
 
++
 [cols="1,4"]
 |===
 
@@ -341,8 +347,6 @@ image::../media/icon_round_1.png[Numero di didascalia 1]
 Dispositivo di chiusura della camma del modulo di gestione del sistema
 
 |===
-.Fasi
-. Rimuovere il modulo di gestione del sistema dal modulo del controller danneggiato:
 +
 .. Premere il pulsante della camma di gestione del sistema.
 .. Ruotare la leva della camma completamente verso il basso.
@@ -363,8 +367,12 @@ Dispositivo di chiusura della camma del modulo di gestione del sistema
 
 Spostare il modulo NVRAM sul modulo controller sostitutivo.
 
+.Fasi
+. Rimuovere il modulo NVRAM dal modulo controller danneggiato:
++
 image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Rimuovere il modulo NVRAM12 e i DIMM]
 
++
 [cols="1,4"]
 |===
 
@@ -382,8 +390,6 @@ image:../media/icon_round_2.png["Numero di didascalia 2"]
 Linguetta di blocco DIMM
 
 |===
-.Fasi
-. Rimuovere il modulo NVRAM dal modulo controller danneggiato:
 +
 .. Premere il pulsante del dispositivo di chiusura a camma.
 +
@@ -454,4 +460,4 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 
 
 .Quali sono le prossime novità?
-Dopo aver sostituito il controller AFF A70 o AFF A90 danneggiato, è necessario link:controller-replace-system-config-restore-and-verify.html["ripristinare la configurazione del sistema"].
+Dopo aver sostituito il controller AFF A70 o AFF A90 danneggiato, è necessariolink:controller-replace-system-config-restore-and-verify.html["ripristinare la configurazione del sistema"] .
