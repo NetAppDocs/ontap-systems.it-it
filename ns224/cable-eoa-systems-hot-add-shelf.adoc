@@ -102,7 +102,7 @@ NOTE: Questi passaggi secondari presuppongono che si stia iniziando il cablaggio
 .. Cavo NSM Porta A e0b a slot controller B porta b.
 .. Cavo NSM B porta e0a per lo slot B del controller 3 porta a.
 .. Cavo NSM B port e0b to controller A slot 7 port b.
-.. Se si sta aggiungendo a caldo un secondo shelf, completare i passaggi secondari "`Shelf 2`"; in caso contrario, passare al punto 3.
+.. Se si desidera aggiungere un secondo ripiano a caldo, completare i sotto-passaggi "`Ripiano 2`"; in caso contrario, passare al passaggio successivo.
 
 
 
@@ -117,7 +117,7 @@ NOTE: Questi passaggi secondari presuppongono che si stia iniziando il cablaggio
 .. Cavo NSM Porta A e0b a slot controller B porta 3 b.
 .. Cavo NSM porta B e0a per lo slot B del controller 7 porta a.
 .. Cavo NSM B port e0b to controller A slot 3 port b.
-.. Passare alla fase 3.
+.. Passare alla fase successiva.
 
 
 |===
@@ -174,6 +174,6 @@ Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 .Quali sono le prossime novità?
 Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco. Andare a link:complete-hot-add-shelf.html["Completare l'aggiunta a caldo"].
 
-In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.
+Altrimenti la procedura di aggiunta a caldo è terminata. ====//2025-11-17 ontap-systems-internal/issues/1391
 
 ====

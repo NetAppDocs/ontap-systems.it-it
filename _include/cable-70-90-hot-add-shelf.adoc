@@ -59,7 +59,7 @@ Ripiano 1
 .. Cavo dalla porta NSM A e0b allo slot controller B 8 porta b (e8b).
 .. Cavo dalla porta NSM B e0a allo slot controller B 11 porta a (e11a).
 .. Cavo NSM B port e0b al controller A slot 8 port b (e8b).
-.. Se si sta aggiungendo a caldo un secondo shelf, completare i passaggi secondari "`Shelf 2`"; in caso contrario, passare al punto 3.
+.. Se si desidera aggiungere un secondo ripiano a caldo, completare i sotto-passaggi "`Ripiano 2`"; in caso contrario, passare al passaggio successivo.
 
 
 L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
@@ -75,7 +75,7 @@ Shelf 2
 .. Cavo dalla porta NSM A e0b allo slot controller B 11 porta b (e11b).
 .. Cavo dalla porta NSM B e0a allo slot controller B 8 porta a (e8a).
 .. Cavo NSM B port e0b al controller A slot 11 port b (e11b).
-.. Passare alla fase 3.
+.. Passare alla fase successiva.
 
 
 L'illustrazione seguente mostra il cablaggio per due shelf a caldo che utilizzano due moduli i/o compatibili RoCE in ciascun modulo controller:

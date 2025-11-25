@@ -269,7 +269,7 @@ NOTE: Gli aggiornamenti del firmware possono richiedere fino a 30 minuti.
 È necessario assegnare manualmente la proprietà del disco se i dischi nello stack sono di proprietà di entrambi i controller in una coppia ha.
 
 +
-È possibile disattivare l'assegnazione automatica della proprietà dei dischi prima di collegare gli shelf di dischi aggiunti a caldo e, successivamente, nel passaggio 7, riattivarli dopo aver cablato gli shelf di dischi aggiunti a caldo.
+È necessario disattivare l'assegnazione automatica della proprietà del disco prima di cablare gli scaffali dei dischi aggiunti a caldo e riattivarla più avanti in questa procedura, dopo aver cablato gli scaffali dei dischi aggiunti a caldo.
 
 +
 .. Verificare se l'assegnazione automatica della proprietà del disco è abilitata:``storage disk option show``
@@ -285,7 +285,7 @@ Se l'assegnazione automatica della proprietà del disco è attivata, l'output mo
 
 
 
-. Se si sta aggiungendo a caldo uno stack di shelf di dischi direttamente a un controller, completare i seguenti passaggi secondari; in caso contrario, passare al punto 3.
+. Se si aggiunge a caldo una pila di shelf di dischi direttamente a un controller, completare i seguenti sotto-passaggi; in caso contrario, passare al passaggio successivo.
 +
 .. Se lo stack che si sta aggiungendo a caldo dispone di più shelf di dischi, cablare i collegamenti shelf-to-shelf; in caso contrario, passare al sottopase b.
 +

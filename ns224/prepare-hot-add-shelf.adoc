@@ -73,7 +73,7 @@ Quando le porte non dedicate non sono configurate per l'utilizzo dello storage, 
 
 . Se le porte non dedicate sono configurate per l'utilizzo dello storage, la procedura è terminata.
 +
-In caso contrario, è necessario configurare le porte completando i passaggi da 4 a 7.
+In caso contrario, è necessario configurare le porte completando i seguenti passaggi.
 
 . Configurare le porte non dedicate per l'utilizzo dello storage su uno dei controller:
 +
@@ -98,7 +98,7 @@ ONTAP 9.7
 `storage port enable -node _node_name_ -port _port_name_`
 
 |===
-. Ripetere il passo 4 per la seconda centralina.
+. Ripetere il passaggio precedente per il secondo controller.
 . Verificare che le porte non dedicate su entrambi i controller siano configurate per l'utilizzo dello storage: `storage port show`
 +
 ** Se la coppia ha utilizza ONTAP 9.8 o versione successiva, vengono visualizzate le porte non dedicate `storage` in `Mode` colonna.

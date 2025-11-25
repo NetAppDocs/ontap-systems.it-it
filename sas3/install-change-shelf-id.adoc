@@ -74,7 +74,7 @@ Questa volta consente a ONTAP di eliminare correttamente il vecchio indirizzo di
 
 
 . Sostituire il cappuccio terminale sinistro.
-. Ripetere i passaggi da 1 a 9 per ogni shelf di dischi aggiuntivo.
+. Ripetere i passaggi precedenti per ogni ripiano disco aggiuntivo.
 . Verificare che il sistema non disponga di shelf ID duplicati.
 +
 Quando due o più shelf di dischi hanno lo stesso ID, il sistema assegna al shelf di dischi duplicati un numero di ID soft uguale o superiore a 100. È necessario modificare il numero del soft ID (duplicato).

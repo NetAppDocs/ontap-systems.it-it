@@ -63,7 +63,7 @@ La crittografia non è installata sul sistema.
 +
 `storage failover giveback -ofnode _impaired_node_name_`
 
-.. Passare al passaggio 6 per riattivare la restituzione automatica se era stata disabilitata.
+.. Vai a <<reenable-auto-giveback,riattivazione della restituzione automatica>> se fosse disabilitato.
 
 
 
@@ -71,13 +71,16 @@ La crittografia non è installata sul sistema.
  a| 
 `key manager is configured.`
  a| 
-La crittografia è installata.  Passare al passaggio 4 per ripristinare il gestore delle chiavi.
+La crittografia è installata. Vai a<<restore-key-manager,ripristino del gestore delle chiavi>> .
 
 |===
 +
 
 NOTE: Se il sistema non riesce a identificare la configurazione del gestore delle chiavi, visualizza un messaggio di errore e chiede di confermare se il gestore delle chiavi è configurato e di che tipo (integrato o esterno).  Rispondi alle richieste per procedere.
 
+
+
+[[restore-key-manager]]
 . Ripristinare il gestore delle chiavi utilizzando la procedura appropriata per la propria configurazione:
 +
 [role="tabbed-block"]
@@ -138,7 +141,7 @@ Successfully recovered keymanager secrets.
 `security key-manager onboard sync`
 
 +
-Passare al passaggio 5 per riattivare la restituzione automatica se era stata disabilitata.
+Vai a <<reenable-auto-giveback,riattivazione della restituzione automatica>> se fosse disabilitato.
 
 
 
@@ -282,7 +285,7 @@ LOADER-B>
 `storage failover giveback -ofnode _impaired_node_name_`
 
 +
-Passare al passaggio 5 per riattivare la restituzione automatica se era stata disabilitata.
+Vai a <<reenable-auto-giveback,riattivazione della restituzione automatica>> se fosse disabilitato.
 
 
 
@@ -290,6 +293,7 @@ Passare al passaggio 5 per riattivare la restituzione automatica se era stata di
 ====
 
 
+[[reenable-auto-giveback]]
 . Se il giveback automatico è stato disattivato, riabilitarlo:
 +
 `storage failover modify -node local -auto-giveback true`
