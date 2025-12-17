@@ -11,14 +11,13 @@ summary: Verificare lo stato ha del telaio e restituire il componente guasto a N
 
 
 [role="lead"]
-Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+Riavviare i controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis ASA C800 .
 
 
 
 == Fase 1: Verificare e impostare lo stato ha del telaio
 
-È necessario verificare lo stato ha dello chassis e, se necessario, aggiornarlo in modo che corrisponda alla configurazione del sistema.
-
+.Fasi
 . In modalità Maintenance (manutenzione), da uno dei moduli controller, visualizzare lo stato ha del modulo controller locale e dello chassis: `ha-config show`
 +
 Lo stato ha deve essere lo stesso per tutti i componenti.
@@ -45,6 +44,12 @@ Il valore dello stato ha può essere uno dei seguenti:
 
 
 
-== Fase 2: Restituire il componente guasto a NetApp
+== Fase 2: Verifica dello stato del sistema di archiviazione
+
+Dopo aver completato la restituzione del controller, verificare lo stato del sistema utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .  Risolvere eventuali problemi riscontrati.
+
+
+
+== Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

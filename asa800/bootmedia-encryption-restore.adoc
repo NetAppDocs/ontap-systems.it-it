@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a800, post boot media replacement steps for okm, nse, and nve 
 summary: 'Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi che hanno attivato Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE).' 
 ---
-= Ripristinare OKM, NSE e NVE - ASA A800
+= Ripristina crittografia - ASA A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Ripristinare la crittografia sul supporto di avvio sostitutivo nel sistema ASA A800 per garantire una protezione continua dei dati. Il processo di sostituzione prevede la verifica della disponibilità della chiave, la riapplicazione delle impostazioni di crittografia e la conferma dell'accesso sicuro ai dati.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -432,3 +432,5 @@ Selection (1-11)? 1
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver ripristinato la crittografia sul supporto di avvio, è necessario link:bootmedia-complete-rma.html["Restituire la parte guasta a NetApp"].

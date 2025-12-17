@@ -20,11 +20,51 @@ Sostituire il controller nel sistema AFF C80 quando un guasto hardware lo richie
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
 .Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+.Video - Conferma del posto di guida
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Posizionare le unità]
 
-. Verificare che il LED di stato della NVRAM color ambra situato nello slot 4/5 sul retro del modulo controller danneggiato sia spento. Cercare l'icona NV.
+. Controllare le unità del controller in base allo stato del sistema:
++
+.. Sul controller funzionante, verificare se un gruppo RAID attivo è in stato degradato, in stato di errore o in entrambi i casi:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<Check-missing-drives,vai al sotto-passaggio successivo per verificare le unità mancanti>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Check-missing-drives]]Verifica la presenza di problemi di unità mancanti sia per il file system che per le unità di riserva:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<Check-the-amber-NVRAM,vai al passaggio successivo>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[Controlla-la- NVRAM-ambra]]Controlla la NVRAM ambra per verificare che il LED di stato situato nello slot 4/5 sul retro del modulo controller danneggiato sia spento.  Cerca l'icona NV.
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
 

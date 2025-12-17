@@ -11,7 +11,7 @@ summary: 'Una volta controllate le variabili di ambiente, è necessario completa
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Ripristinare la crittografia sul supporto di avvio sostitutivo del sistema AFF C800 per garantire una protezione continua dei dati. Il processo di sostituzione prevede la verifica della disponibilità della chiave, la riapplicazione delle impostazioni di crittografia e la conferma dell'accesso sicuro ai dati.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -432,3 +432,5 @@ Selection (1-11)? 1
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver ripristinato la crittografia sul supporto di avvio, è necessario link:bootmedia-complete-rma.html["Restituire la parte guasta a NetApp"].

@@ -11,7 +11,7 @@ summary: Per sostituire un modulo controller, è necessario rimuovere il control
 
 
 [role="lead"]
-Per sostituire il controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nello chassis, quindi avviare il sistema in modalità manutenzione.
+Sostituisci il controller del tuo sistema AFF C800 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il riavvio.
 
 
 
@@ -19,14 +19,53 @@ Per sostituire il controller, è necessario rimuovere il controller guasto, spos
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+.Video - Conferma del posto di guida
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Posizionare le unità]
 
-. Andare sul retro del telaio. Se non si è già collegati a terra, mettere a terra l'utente.
-. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
-. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
-. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
+. Controllare le unità del controller in base allo stato del sistema:
++
+.. Sul controller funzionante, verificare se un gruppo RAID attivo è in stato degradato, in stato di errore o in entrambi i casi:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<Check-missing-drives,vai al sotto-passaggio successivo per verificare le unità mancanti>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Check-missing-drives]]Verifica la presenza di problemi di unità mancanti sia per il file system che per le unità di riserva:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<remove-power-cables,vai al passaggio successivo>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remove-power-cables]]Rimuovere i fermacavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare la fascetta a strappo sul dispositivo di gestione dei cavi.  Scollegare i cavi di sistema e i moduli SFP/QSFP (se necessari) dal modulo controller.  Annotare la posizione di ciascun cavo.
 +
 Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
 
@@ -36,7 +75,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Rilasciare il modulo controller]
+image::../media/drw_a800_pcm_remove.png[Rimozione del modulo controller]
 
 +
 [cols="1,4"]
@@ -58,42 +97,7 @@ Perno di bloccaggio
 |===
 . Estrarre il modulo controller dallo chassis e posizionarlo su una superficie piana e stabile.
 +
-Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis. .
-
-. Posizionare il modulo controller su una superficie piana e stabile.
-. Aprire il condotto dell'aria del modulo controller:
-+
-.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
-.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
-+
-image::../media/drw_a800_open_air_duct.png[Aprire il condotto dell'aria]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
- a| 
-Linguette di bloccaggio del condotto dell'aria
-
-
-
- a| 
-image:../media/icon_round_2.png["Numero di didascalia 2"]
- a| 
-Far scorrere il condotto dell'aria verso i moduli delle ventole
-
-
-
- a| 
-image:../media/icon_round_3.png["Numero di didascalia 3"]
- a| 
-Ruotare il condotto dell'aria verso i moduli delle ventole
-
-|===
-
+Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuori dallo chassis.
 
 
 
@@ -101,8 +105,9 @@ Ruotare il condotto dell'aria verso i moduli delle ventole
 
 == Fase 2: Spostare gli alimentatori
 
-Quando si sostituisce un modulo controller, è necessario spostare gli alimentatori dal modulo controller guasto al modulo controller sostitutivo.
+Spostare gli alimentatori sul modulo controller sostitutivo.
 
+.Fasi
 . Ruotare la maniglia della camma in modo che possa essere utilizzata per estrarre l'alimentatore dal modulo controller premendo la linguetta di bloccaggio.
 +
 
@@ -144,8 +149,9 @@ NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza
 
 == Fase 3: Spostare le ventole
 
-Quando si sostituisce un modulo controller guasto, è necessario spostare le ventole dal modulo controller danneggiato al modulo sostitutivo.
+Spostare i moduli ventola sul modulo controller sostitutivo.
 
+.Fasi
 . Rimuovere il modulo della ventola stringendo le linguette di bloccaggio sul lato del modulo della ventola, quindi sollevare il modulo della ventola per estrarlo dal modulo del controller.
 +
 image::../media/drw_a800_replace_fan.png[Rimuovere la ventola]
@@ -176,8 +182,9 @@ Modulo della ventola
 
 == Fase 4: Spostare la batteria NVDIMM
 
-Quando si sostituisce il modulo controller, è necessario spostare la batteria NVRAM dal modulo controller guasto al modulo controller sostitutivo
+Spostare la batteria NVDIMM nel modulo controller sostitutivo.
 
+.Fasi
 . Aprire il coperchio del condotto dell'aria e individuare la batteria NVDIMM nel riser.
 +
 image::../media/drw_a800_nvdimm_battery_replace.png[Sostituire la batteria NVDIMM]
@@ -224,8 +231,9 @@ Batteria NVDIMM
 
 == Fase 5: Rimuovere i riser PCIe
 
-Nell'ambito del processo di sostituzione del controller, è necessario rimuovere i moduli PCIe dal modulo controller compromesso. È necessario installarli nella stessa posizione nel modulo controller sostitutivo una volta che i moduli NVDIMM e DIMM sono stati spostati nel modulo controller sostitutivo.
+Rimuovere i riser PCIe dal modulo controller danneggiato.
 
+.Fasi
 . Rimuovere il riser PCIe dal modulo controller:
 +
 .. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
@@ -265,8 +273,9 @@ Riser 1 (riser sinistro), riser 2 (riser centrale) e 3 (riser destro)
 
 == Fase 6: Spostare i DIMM di sistema
 
-Per spostare i moduli DIMM, individuarli e spostarli dal controller compromesso al controller sostitutivo e seguire la sequenza specifica dei passaggi.
+Spostare i DIMM del sistema nel modulo controller sostitutivo.
 
+.Fasi
 . Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
 . Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
 +
@@ -290,8 +299,9 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 == Fase 7: Spostamento dei moduli NVDIMM
 
-Per spostare i moduli NVDIMM, individuarli e spostarli dal controller compromesso al controller sostitutivo e seguire la sequenza specifica di passaggi.
+Spostare il modulo NVDIMMS nel modulo controller sostitutivo.
 
+.Fasi
 . Individuare i moduli NVDIMM sul modulo controller.
 +
 image::../media/drw_a800_no_risers_nvdimm_move.svg[Spostare le NVDIMM]
@@ -337,11 +347,10 @@ NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e 
 
 == Fase 8: Spostare il supporto di avvio
 
-È necessario spostare il dispositivo multimediale di avvio dal controller danneggiato e installarlo nel controller sostitutivo.
+Spostare il supporto di avvio nel modulo controller sostitutivo.
 
-Il supporto di avvio si trova sotto Riser 3.
-
-. Individuare il supporto di avvio:
+.Fasi
+. Individuare il supporto di avvio in Riser 3.
 +
 image::../media/drw_a800_pcm_replace_only_boot_media.png[Rimuovere il supporto di avvio]
 
@@ -406,8 +415,9 @@ Non serrare eccessivamente la vite per evitare di danneggiare il supporto di avv
 
 == Fase 9: Installare i riser PCIe
 
-I riser PCIe vengono installati nel modulo controller sostitutivo dopo aver spostato DIMM, NVDIMM e supporti di avvio.
+Installare i riser nel modulo controller sostitutivo.
 
+.Fasi
 . Installare il riser nel modulo controller sostitutivo:
 +
 .. Allineare il bordo del riser con la parte inferiore della lamiera del modulo controller.
@@ -426,45 +436,17 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 == Fase 10: Installare il modulo controller
 
-Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
+Reinstallare il modulo controller e riavviarlo.
 
-. In caso contrario, chiudere il condotto dell'aria:
-+
-.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
-.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
-.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
-+
-image::../media/drw_a800_close_air_duct.png[Chiudere il condotto dell'aria]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
- a| 
-Linguette di bloccaggio
-
-
-
- a| 
-image:../media/icon_round_2.png["Numero di didascalia 2"]
- a| 
-Far scorrere lo stantuffo
-
-|===
-
-
+.Fasi
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 
 NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
 
-. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
+. Ricable il sistema, come necessario.
 +
-
-NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
 
 . Completare la reinstallazione del modulo controller:
 +
@@ -477,15 +459,26 @@ I fermi di bloccaggio si sollevano quando il modulo controller è completamente 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
 .. Ruotare i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, quindi abbassarli in posizione di blocco.
-
-
-. Collegare i cavi di sistema e i moduli transceiver al modulo controller e reinstallare il dispositivo di gestione dei cavi.
-. Collegare i cavi di alimentazione agli alimentatori e reinstallare i fermi dei cavi di alimentazione.
+.. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
 +
-Il modulo controller inizia ad avviarsi non appena viene collegato all'alimentazione. Prepararsi ad interrompere il processo di avvio.
+Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimentazione. Prepararsi ad interrompere il processo di avvio.
 
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
 +
+`storage failover giveback -ofnode _impaired_node_name_`.
 
-NOTE: Se il sistema dispone di alimentatori CC, assicurarsi che le viti a testa zigrinata sul cavo di alimentazione siano serrate.
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il controller AFF C800 danneggiato, è necessariolink:controller-replace-system-config-restore-and-verify.html["ripristinare la configurazione del sistema"]

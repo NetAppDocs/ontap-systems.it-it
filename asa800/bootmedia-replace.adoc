@@ -11,7 +11,7 @@ summary: Individuare il supporto di avvio guasto nel modulo controller rimuovend
 
 
 [role="lead"]
-Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+Il supporto di avvio del sistema ASA A800 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo e il trasferimento manuale dell'immagine ONTAP sul supporto di avvio sostitutivo tramite un'unità flash USB.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -268,3 +268,6 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione per avviare la modalità di manutenzione, quindi arrestare il controller per avviare IL CARICATORE.
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il supporto di avvio, è necessario link:bootmedia-recovery-image-boot.html["avviare l'immagine di ripristino"].

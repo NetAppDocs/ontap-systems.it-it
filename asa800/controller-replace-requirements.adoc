@@ -1,0 +1,40 @@
+---
+permalink: asa800/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa a800, prerequisite, replace the controller module 
+summary: 'Prima di sostituire il controller del sistema ASA A800 , accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell"output della console del controller in un file di registro di testo.' 
+---
+= Requisiti per la sostituzione del controller - ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il controller del sistema ASA A800 , accertarsi di soddisfare i requisiti necessari per una sostituzione riuscita. Ciò include la verifica del corretto funzionamento di tutti gli altri componenti del sistema, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di registro di testo.
+
+Esaminare i requisiti per la sostituzione del modulo controller.
+
+* Tutti gli shelf di dischi devono funzionare correttamente.
+* Il controller sano deve essere in grado di subentrare al controller sostituito (definito in questa procedura come controller danneggiato).
+* Non utilizzare questa procedura per gli aggiornamenti del controller.  Fare riferimento a https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Scegliere la procedura di aggiornamento dell'hardware del controller"] per avere una guida.
+* Se il sistema è in una configurazione MetroCluster , rivedere https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Scelta della procedura di ripristino corretta"] per determinare se utilizzare questa procedura.
+* Sostituisci il componente guasto con l'unità sostituibile sul campo (FRU) ricevuta da NetApp.
+* Sostituire il modulo controller con un modulo controller dello stesso tipo di modello.  Non è possibile aggiornare il sistema sostituendo il modulo controller.
+* Non è possibile modificare le unità o gli scaffali delle unità durante questa procedura.
+* Il dispositivo di avvio si trova sul modulo System Management installato nella parte posteriore del sistema.  Non è necessario spostare il dispositivo di avvio quando si sostituisce un modulo controller.
+* Comprendere la terminologia del controller utilizzata in questa procedura:
++
+** Il controller _danneggiato_ è il controller che viene sostituito.
+** Il controller _sostitutivo_ è il nuovo controller che sostituisce quello difettoso.
+** Il controller _healthy_ è il controller sopravvissuto.
+
+
+* Cattura l'output della console del controller in un file di registro di testo.
++
+In questo modo si ottiene una registrazione della procedura per risolvere eventuali problemi durante il processo di sostituzione.
+
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il controller ASA A800 , è necessariolink:controller-replace-shutdown.html["spegnere il controller danneggiato"] .

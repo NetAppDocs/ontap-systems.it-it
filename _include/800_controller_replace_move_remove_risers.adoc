@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Rimuovere il riser PCIe dal modulo controller:
++
+.. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
+.. Ruotare verso l'alto e verso i moduli delle ventole il fermo di blocco del riser sul lato sinistro del riser.
++
+Il riser si solleva leggermente dal modulo controller.
+
+.. Sollevare il riser, spostarlo verso le ventole in modo che il bordo di lamiera del riser si allontani dal bordo del modulo controller, sollevare il riser ed estrarlo dal modulo controller, quindi posizionarlo su una superficie piana e stabile.
++
+image::../media/drw_a800_riser_2_3_remove.png[Rimuovere i montanti 2 e 3]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Condotto dell'aria
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Riser 1 (riser sinistro), riser 2 (riser centrale) e 3 (riser destro)
+
+|===
+
+
+. Ripetere il passo precedente per i riser rimanenti nel modulo controller guasto.
+. Ripetere i passaggi precedenti con i riser vuoti nel controller sostitutivo e riporli.
+

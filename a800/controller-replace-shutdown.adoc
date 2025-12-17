@@ -11,6 +11,8 @@ summary: Per spegnere il controller compromesso, è necessario determinare lo st
 
 
 [role="lead"]
+Spegnere il controller nel sistema di archiviazione AFF A800 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.
+
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -73,3 +75,6 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
 
+
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:controller-replace-move-hardware.html["sostituire la centralina"].

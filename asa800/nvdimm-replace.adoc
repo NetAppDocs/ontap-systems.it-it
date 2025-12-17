@@ -11,15 +11,18 @@ summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando 
 
 
 [role="lead"]
-È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema.
+Sostituire la NVDIMM nel sistema ASA A800 quando il sistema rileva che la durata della flash è quasi giunta al termine o che la NVDIMM identificata non è in buone condizioni generali; in caso contrario, si verifica un errore del sistema.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+.Prima di iniziare
+* Assicurati di avere il modulo NVDIMM sostitutivo ricevuto da NetApp e compatibile con il tuo sistema ASA A800 .
+* Assicurarsi che tutti gli altri componenti del sistema di storage funzionino correttamente; in caso contrario, contattare l'assistenza NetApp .
 
-È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
 
 
 == Fase 1: Spegnere il controller compromesso
+
+Spegnere o sostituire il controller compromesso.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -90,14 +93,53 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+.Video - Conferma del posto di guida
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Posizionare le unità]
 
-. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
-. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
-. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi.
+. Controllare le unità del controller in base allo stato del sistema:
++
+.. Sul controller funzionante, verificare se un gruppo RAID attivo è in stato degradato, in stato di errore o in entrambi i casi:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<Check-missing-drives,vai al sotto-passaggio successivo per verificare le unità mancanti>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Check-missing-drives]]Verifica la presenza di problemi di unità mancanti sia per il file system che per le unità di riserva:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<remove-power-cables,vai al passaggio successivo>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remove-power-cables]]Rimuovere i fermacavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare la fascetta a strappo sul dispositivo di gestione dei cavi.  Scollegare i cavi di sistema e i moduli SFP/QSFP (se necessari) dal modulo controller.  Annotare la posizione di ciascun cavo.
 +
 Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
 
@@ -107,7 +149,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Rilasciare il modulo controller]
+image::../media/drw_a800_pcm_remove.png[Rimozione del modulo controller]
 
 +
 [cols="1,4"]
@@ -127,53 +169,20 @@ image:../media/icon_round_2.png["Numero di didascalia 2"]
 Perno di bloccaggio
 
 |===
-. Estrarre il modulo controller dal telaio.
+. Estrarre il modulo controller dallo chassis e posizionarlo su una superficie piana e stabile.
 +
-Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuori dallo chassis.
 
-. Posizionare il modulo controller su una superficie piana e stabile, quindi aprire il condotto dell'aria:
-+
-.. Premere verso l'interno le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
-.. Far scorrere il condotto dell'aria verso i moduli delle ventole, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
-+
-image::../media/drw_a800_open_air_duct.png[Apertura del condotto dell'aria]
-
-
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
- a| 
-Linguette di bloccaggio del condotto dell'aria
-
-
-
- a| 
-image:../media/icon_round_2.png["Numero di didascalia 2"]
- a| 
-Far scorrere il condotto dell'aria verso i moduli delle ventole
-
-
-
- a| 
-image:../media/icon_round_3.png["Numero di didascalia 3"]
- a| 
-Ruotare il condotto dell'aria verso i moduli delle ventole
-
-|===
 
 
 
 
 == Fase 3: Sostituire il modulo NVDIMM
 
-Per sostituire il modulo NVDIMM, individuarlo nel modulo del controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi sostituirlo seguendo la sequenza specifica dei passaggi.
+Individuare l'NVDIMM nel modulo controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi riposizionarlo.
 
-. Se si rimuove o si sposta un NVDIMM, sbloccare il fermo di blocco sul riser, quindi rimuovere il riser applicabile.
+.Fasi
+. Per accedere al modulo NVDIMM, sbloccare il fermo di bloccaggio sul riser appropriato, quindi rimuovere il riser.
 +
 image::../media/drw_A800_nvdimm_replace_ieops-1953.svg[Sostituire un NVDIMM]
 
@@ -230,36 +239,9 @@ NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e 
 
 == Fase 4: Reinstallare il modulo controller e avviare il sistema
 
-Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.
+Reinstallare il modulo controller e riavviarlo.
 
-. In caso contrario, chiudere il condotto dell'aria:
-+
-.. Ruotare completamente il condotto dell'aria verso il basso fino al modulo controller.
-.. Far scorrere il condotto dell'aria verso i montanti fino a quando le linguette di bloccaggio non scattano in posizione.
-.. Ispezionare il condotto dell'aria per assicurarsi che sia posizionato correttamente e bloccato in posizione.
-+
-image::../media/drw_a700s_close_air_duct.png[Chiudere il condotto dell'aria]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Numero di didascalia 1"]
- a| 
-Linguette di bloccaggio
-
-
-
- a| 
-image:../media/icon_round_2.png["Numero di didascalia 2"]
- a| 
-Far scorrere lo stantuffo
-
-|===
-
-
+.Fasi
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 
@@ -287,10 +269,22 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
 
 
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
 
-== Fase 4: Restituire la parte guasta a NetApp
+
+== Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

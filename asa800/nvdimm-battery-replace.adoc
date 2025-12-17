@@ -11,13 +11,13 @@ summary: Per sostituire la batteria NVDIMM, rimuovere il modulo controller, rimu
 
 
 [role="lead"]
-Per sostituire la batteria NVDIMM, rimuovere il modulo controller, rimuovere la batteria, sostituire la batteria e reinstallare il modulo controller.
-
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Sostituisci la batteria NV del tuo sistema ASA A800 quando inizia a scaricarsi o si guasta, poiché è responsabile della conservazione dei dati critici del sistema durante le interruzioni di corrente. Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la rimozione del modulo controller, la sostituzione della batteria NV, la reinstallazione del modulo controller e la restituzione della parte guasta a NetApp.
 
 
 
-== Fase 1: Spegnere il controller compromesso
+== Passaggio 1: spegnere il controller non funzionante
+
+Spegnere o sostituire il controller compromesso.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
@@ -88,14 +88,53 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Azionamenti dei dischi del sedile]
+.Video - Conferma del posto di guida
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Posizionare le unità]
 
-. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
-. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
-. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i moduli SFP e QSFP (se necessario) dal modulo controller, tenendo traccia della posizione in cui sono stati collegati i cavi. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
+. Controllare le unità del controller in base allo stato del sistema:
++
+.. Sul controller funzionante, verificare se un gruppo RAID attivo è in stato degradato, in stato di errore o in entrambi i casi:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<Check-missing-drives,vai al sotto-passaggio successivo per verificare le unità mancanti>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Check-missing-drives]]Verifica la presenza di problemi di unità mancanti sia per il file system che per le unità di riserva:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se il comando ritorna `There are no entries matching your query.` continuare a<<remove-power-cables,vai al passaggio successivo>> .
+*** Se il comando restituisce altri risultati, raccogliere i dati AutoSupport da entrambi i controller e contattare il supporto NetApp per ulteriore assistenza.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remove-power-cables]]Rimuovere i fermacavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Allentare la fascetta a strappo sul dispositivo di gestione dei cavi.  Scollegare i cavi di sistema e i moduli SFP/QSFP (se necessari) dal modulo controller.  Annotare la posizione di ciascun cavo.
 +
 Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
 
@@ -105,7 +144,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 Il modulo controller si sposta leggermente fuori dallo chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Rilasciare il modulo controller]
+image::../media/drw_a800_pcm_remove.png[Rimozione del modulo controller]
 
 +
 [cols="1,4"]
@@ -125,19 +164,19 @@ image:../media/icon_round_2.png["Numero di didascalia 2"]
 Perno di bloccaggio
 
 |===
-. Estrarre il modulo controller dal telaio.
+. Estrarre il modulo controller dallo chassis e posizionarlo su una superficie piana e stabile.
 +
-Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
+Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuori dallo chassis.
 
-. Mettere da parte il modulo controller in un luogo sicuro.
 
 
 
 
 == Fase 3: Sostituire la batteria NVDIMM
 
-Per sostituire la batteria NVDIMM, rimuovere la batteria guasta dal modulo controller e installare la batteria sostitutiva nel modulo controller.
+Sostituire la batteria NVDIMM rimuovendo la batteria guasta dal modulo controller e installando la batteria sostitutiva nel modulo controller.
 
+.Fasi
 . Aprire il coperchio del condotto dell'aria e individuare la batteria NVDIMM nel riser.
 +
 image::../media/drw_a800_nvdimm_battery_replace.png[Sostituire la batteria NVDIMM]
@@ -188,10 +227,11 @@ Assicurarsi che la spina si blocchi nella presa.
 
 
 
-== Fase 4: Reinstallare il modulo controller e avviare il sistema
+== Fase 4: Reinstallare il modulo controller
 
-Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.
+Reinstallare il modulo controller e riavviarlo.
 
+.Fasi
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 
@@ -218,6 +258,18 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
 
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se il giveback automatico è stato disattivato, riabilitarlo:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

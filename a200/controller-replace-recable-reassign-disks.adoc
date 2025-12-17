@@ -17,17 +17,13 @@ Continuare la procedura di sostituzione ricollegando lo storage e confermando la
 
 == Fase 1: Ricollegare il sistema
 
-Verificare i collegamenti di storage e di rete del modulo controller.
+Verificare le connessioni di rete e di archiviazione del modulo controller utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
 
 .Fasi
-. Verificare che il cablaggio sia corretto utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
-+
-.. Scaricare e installare Config Advisor.
-.. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
-.. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
-.. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
-
-
+. Scaricare e installare Config Advisor.
+. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
+. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
+. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
 
 
 

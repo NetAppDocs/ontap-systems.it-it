@@ -11,12 +11,15 @@ summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo
 
 
 [role="lead"]
-Spostare gli alimentatori, i dischi rigidi e il modulo controller dallo chassis compromesso al nuovo chassis e sostituire lo chassis compromesso con quello nuovo dello stesso modello dello chassis compromesso.
+Sostituisci lo chassis del tuo sistema ASA A800 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller, lo spostamento delle unità nel telaio sostitutivo, la rimozione del telaio danneggiato, l'installazione del telaio sostitutivo e la reinstallazione dei componenti del telaio.
 
 
 
-== Fase 1: Rimuovere i moduli controller
+== Passaggio 1: rimuovere i moduli del controller dal vecchio telaio
 
+Rimuovere i moduli del controller dal vecchio telaio.
+
+.Fasi
 Per sostituire lo chassis, è necessario rimuovere i moduli controller dal vecchio chassis.
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -62,8 +65,9 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 == Fase 2: Spostare le unità nel nuovo chassis
 
-È necessario spostare le unità da ciascuna apertura del vecchio chassis allo stesso alloggiamento del nuovo chassis.
+Spostare le unità dal vecchio al nuovo chassis.
 
+.Fasi
 . Rimuovere delicatamente il pannello frontale dal sistema.
 . Rimuovere i dischi:
 +
@@ -98,8 +102,9 @@ Chiudere lentamente la maniglia della camma in modo che sia allineata correttame
 
 == Fase 3: Sostituire uno chassis all'interno del rack dell'apparecchiatura o dell'armadietto del sistema
 
-Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema.
+Sostituire lo chassis danneggiato nel rack dell'apparecchiatura o nell'armadio di sistema con il nuovo chassis.
 
+.Fasi
 . Rimuovere le viti dai punti di montaggio del telaio.
 . Con due persone, far scorrere il vecchio chassis dalle guide del rack in un cabinet di sistema o in un rack dell'apparecchiatura, quindi metterlo da parte.
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -111,12 +116,13 @@ Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis e
 
 
 
-== Fase 4: Installare i moduli controller
+== Fase 4: installare i moduli del controller nel nuovo telaio
 
 Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo.
 
 Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
 
+.Fasi
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 
@@ -144,3 +150,6 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 . Ripetere i passi precedenti per installare il secondo controller nel nuovo chassis.
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il telaio ASA A800 danneggiato e reinstallato i componenti, è necessariolink:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"]

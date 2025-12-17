@@ -55,28 +55,34 @@ entries:
   - title: Chassis
     pdf-filename: Chassis AFF C800
     entries:
-    - title: Panoramica
-      url: "/c800/chassis-replace-overview.html"
-    - title: Spegnere il controller compromesso
+    - title: Flusso di lavoro per la sostituzione dello chassis
+      url: "/c800/chassis-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/c800/chassis-replace-requirements.html"
+    - title: Prepararsi alla sostituzione
+      url: "/c800/chassis-replace-prepare.html"
+    - title: Spegnere i controller
       url: "/c800/chassis-replace-shutdown.html"
-    - title: Sostituire l'hardware
+    - title: Sostituire il telaio
       url: "/c800/chassis-replace-move-hardware.html"
-    - title: Sostituzione completa
+    - title: Sostituzione completa dello chassis
       url: "/c800/chassis-replace-complete-system-restore-rma.html"
   - title: Controller
     pdf-filename: Modulo controller AFF C800
     entries:
-    - title: Panoramica
-      url: "/c800/controller-replace-overview.html"
+    - title: Workflow di sostituzione del controller
+      url: "/c800/controller-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/c800/controller-replace-requirements.html"
     - title: Spegnere il controller compromesso
       url: "/c800/controller-replace-shutdown.html"
-    - title: Sostituire il modulo controller
+    - title: Sostituire il controller
       url: "/c800/controller-replace-move-hardware.html"
     - title: Ripristinare la configurazione del sistema
       url: "/c800/controller-replace-system-config-restore-and-verify.html"
     - title: Sistema ricable
       url: "/c800/controller-replace-recable-reassign-disks.html"
-    - title: Sostituzione completa
+    - title: Sostituzione completa del controller
       url: "/c800/controller-replace-restore-system-rma.html"
   - title: DIMM
     url: "/c800/dimm-replace.html"

@@ -11,6 +11,8 @@ summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione
 
 
 [role="lead"]
+Restituisci il controllo delle risorse di archiviazione al controller sostitutivo in modo che il sistema ASA A800 possa riprendere il normale funzionamento.  La procedura di restituzione varia in base al tipo di crittografia utilizzato dal sistema: nessuna crittografia o crittografia Onboard Key Manager (OKM).
+
 Dopo aver sostituito l'hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
 
 
@@ -68,3 +70,6 @@ Il valore dello stato ha può essere uno dei seguenti:
 . Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
 . Verificare che l'impostazione sia stata modificata: `ha-config show`
 
+
+.Quali sono le prossime novità?
+Dopo aver ritrasferito la proprietà delle risorse di storage al controller sostitutivo, occorre seguire link:controller-replace-restore-system-rma.html["completare la sostituzione della centralina"] la procedura.

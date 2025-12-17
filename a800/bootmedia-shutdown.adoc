@@ -11,7 +11,7 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+Arrestare il controller danneggiato nel sistema di archiviazione AFF A800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -107,3 +107,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 |===
 
+
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:bootmedia-replace.html["sostituire il supporto di avvio"].

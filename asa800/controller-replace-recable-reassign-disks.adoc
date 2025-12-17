@@ -11,23 +11,19 @@ summary: È necessario riassegnare lo storage e confermare la riassegnazione del
 
 
 [role="lead"]
-Continuare la procedura di sostituzione riassegnando lo storage e confermando la riassegnazione del disco.
+Restituisci il controllo delle risorse di archiviazione al controller sostitutivo in modo che il sistema ASA A800 possa riprendere il normale funzionamento.  La procedura di restituzione varia in base al tipo di crittografia utilizzato dal sistema: nessuna crittografia o crittografia Onboard Key Manager (OKM).
 
 
 
 == Fase 1: Ricable del sistema
 
-Verificare i collegamenti di storage e di rete del modulo controller.
+Verificare le connessioni di rete e di archiviazione del modulo controller utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
 
 .Fasi
-. Verificare che il cablaggio sia corretto utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
-+
-.. Scaricare e installare Config Advisor.
-.. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
-.. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
-.. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
-
-
+. Scaricare e installare Config Advisor.
+. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
+. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
+. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
 
 
 
@@ -36,8 +32,9 @@ Verificare i collegamenti di storage e di rete del modulo controller.
 
 Se il sistema di storage si trova in una coppia ha, l'ID di sistema del nuovo modulo controller viene assegnato automaticamente ai dischi quando il giveback si verifica al termine della procedura. È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
 
-Questa procedura si applica solo ai sistemi che eseguono ONTAP in una coppia ha.
+Questo passaggio si applica solo ai sistemi che eseguono ONTAP in una coppia HA.
 
+.Fasi
 . Se il controller _replacement_ è in modalità di manutenzione (che mostra il `*>` Uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
 . Dal prompt DEL CARICATORE sul controller _replacement_, avviare il controller, immettendo `y` Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema:``boot_ontap``
 . Attendere il `Waiting for giveback...` Viene visualizzato il messaggio sulla console del controller _replacement_ e quindi, dal controller integro, verificare che il nuovo ID di sistema del partner sia stato assegnato automaticamente: `storage failover show`
