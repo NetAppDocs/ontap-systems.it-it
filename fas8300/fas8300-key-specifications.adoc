@@ -23,7 +23,13 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS8
 * Fattore di forma: chassis 4U con 2 controller HA
 * Versione ONTAP : ONTAP: 9.16.1P2
 * Slot di espansione PCIe: 14
-* Versione minima ONTAP : ONTAP 9.7RC1 == Massimi di scalabilità
+* Versione minima ONTAP : ONTAP 9.7RC1
+
+
+
+
+== Massimi di scalabilità
+
 * Tipo: NAS; Coppie HA: 12; Capacità raw: 180,0 PB / 159,9 PiB; Memoria massima: 3072 GB
 * Tipo: SAN; Coppie HA: 6; Capacità grezza: 90,0 PB / 79,9 PiB; Memoria massima: 1536 GB
 * Tipo: coppia HA; capacità grezza: 15,0 PB / 13,3 PiB; memoria massima: 256,0000
@@ -84,14 +90,20 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS8
 * SMB 2.x
 * SMB 3.0
 * SMB 3.1
-* SMB 3.1.1 == Specifiche dell'ambiente di sistema
+* SMB 3.1.1
+
+
+
+
+== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 4024 BTU/ora
 * Potenza nel caso peggiore: 5017 BTU/ora
 * Peso: 108,5 libbre 49,2 kg
 * Altezza: 4U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità: 32,6" (34,7" con staffa per la gestione dei cavi)
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/altitudine/umidità di funzionamento: da 10°C a 35°C (da 50°F a 95°F) fino a 3048 m (10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
 * Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
 * Rumore acustico: Potenza sonora dichiarata (LwAd): 8,5 Pressione sonora (LpAm) (posizioni degli astanti): 67,2 dB
 

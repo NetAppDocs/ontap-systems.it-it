@@ -23,7 +23,13 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 * Fattore di forma: chassis 2U con 2 controller HA e 24 slot per unità
 * Versione ONTAP : ONTAP: 9.16.1P2
 * Slot di espansione PCIe: 8
-* Versione minima ONTAP : ONTAP 9.16.1 == Massimi di scalabilità
+* Versione minima ONTAP : ONTAP 9.16.1
+
+
+
+
+== Massimi di scalabilità
+
 * Tipo: NAS
 * Tipo: SAN; Coppie HA: 6; Capacità grezza: 11,0 PB / 9,8 PiB; Memoria massima: 1536 GB
 * Tipo: coppia HA; capacità grezza: 1,8 PB / 1,6 PiB; memoria massima: 256.0000
@@ -67,14 +73,20 @@ Nessun dato I/O integrato.
 * FC
 * iSCSI
 * NVMe/FC
-* NVMe/TCP == Specifiche dell'ambiente di sistema
+* NVMe/TCP
+
+
+
+
+== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 3076 BTU/ora
 * Potenza nel caso peggiore: 4860 BTU/ora
 * Peso: 60,7 libbre 27,5 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/altitudine/umidità di funzionamento: da 10°C a 35°C (da 50°F a 95°F) fino a 3048 m (10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
 * Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
 * Rumore acustico: Potenza sonora dichiarata (LwAd): 8,0 Pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
 

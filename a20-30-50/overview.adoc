@@ -123,13 +123,13 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 * Potenza tipica: 3076 BTU/ora
 * Potenza nel caso peggiore: 4860 BTU/ora
-* Peso: 60,7 libbre/27,5 kg
+* Peso: 60,7 libbre 27,5 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a 3048 m (da 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
-* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi)<br/>Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
-* Rumore acustico: Potenza sonora dichiarata (LwAd): 8,0;br/Pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
+* Temperatura/altitudine/umidità di funzionamento: da 10°C a 35°C (da 50°F a 95°F) fino a 3048 m (10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: potenza sonora dichiarata (LwAd): 8,0; pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
 
 
 
@@ -258,15 +258,15 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 === Specifiche dell'ambiente di sistema
 
-* Potenza tipica: 2489 BTU/ora
-* Potenza nel caso peggiore: 3890 BTU/ora
-* Peso: 60,7 libbre/27,5 kg
+* Potenza tipica: 2040 BTU/ora
+* Potenza nel caso peggiore: 2907 BTU/ora
+* Peso: 60,7 libbre 27,5 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a 3048 m (da 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
-* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi)<br/>Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
-* Rumore acustico: Potenza sonora dichiarata (LwAd): 8,0;br/Pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
+* Temperatura/altitudine/umidità di funzionamento: da 10°C a 35°C (da 50°F a 95°F) fino a 3048 m (10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: potenza sonora dichiarata (LwAd): 8,0; pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
 
 
 
@@ -286,11 +286,6 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 === Alta disponibilità
 
 Controller di gestione della scheda base (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS tramite connessioni SAS per ripiani esterni;
-
- [//] 2025-10-15 ontap-systems-internal/issues/1357
-
-
-== AFF A30
 
 
 
@@ -398,13 +393,13 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 * Potenza tipica: 2892 BTU/ora
 * Potenza nel caso peggiore: 4445 BTU/ora
-* Peso: 60,7 libbre/27,5 kg
+* Peso: 60,7 libbre 27,5 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a 3048 m (da 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
-* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi)<br/>Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
-* Rumore acustico: Potenza sonora dichiarata (LwAd): 8,0;br/Pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
+* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% al 80%, senza condensa
+* Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
+* Rumore acustico: potenza sonora dichiarata (LwAd): 8,0; pressione sonora (LpAm) (posizioni degli astanti): 70,5 dB
 
 
 

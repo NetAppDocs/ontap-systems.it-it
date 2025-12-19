@@ -11,7 +11,7 @@ summary: Specifiche chiave per il gruppo di piattaforme FAS2800
 
 
 [role="lead"]
-Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2820 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2820 in una singola coppia ad alta disponibilità. Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
 
 
 
@@ -23,7 +23,13 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 * Fattore di forma: chassis 2U con 2 controller HA e 12 slot per unità
 * Versione ONTAP : ONTAP: 9.16.1P2
 * Slot di espansione PCIe: 4
-* Versione minima ONTAP : ONTAP 9.13.1RC1 == Massimi di scalabilità
+* Versione minima ONTAP : ONTAP 9.13.1RC1
+
+
+
+
+== Massimi di scalabilità
+
 * Tipo: NAS; Coppie HA: 12; Capacità raw: 38,0 PB / 33,8 PiB; Memoria massima: 1536 GB
 * Tipo: SAN; Coppie HA: 6; Capacità grezza: 19,0 PB / 16,9 PiB; Memoria massima: 768 GB
 * Tipo: coppia HA; capacità grezza: 3,2 PB / 2,8 PiB; memoria massima: 128.0000
@@ -81,14 +87,20 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 * SMB 2.x
 * SMB 3.0
 * SMB 3.1
-* SMB 3.1.1 == Specifiche dell'ambiente di sistema
+* SMB 3.1.1
+
+
+
+
+== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 1815 BTU/ora
 * Potenza nel caso peggiore: 2339 BTU/ora
 * Peso: 57,2 libbre 25,9 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità: 20,0" (25,1" con staffa di gestione dei cavi)
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/altitudine/umidità di funzionamento: da 10°C a 35°C (da 50°F a 95°F) fino a 3048 m (10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
 * Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
 * Rumore acustico: Potenza sonora dichiarata (LwAd): 7,8 Pressione sonora (LpAm) (posizioni degli astanti): 68,4 dB
 
@@ -112,5 +124,5 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 * Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
 * Controller ridondanti sostituibili a caldo
 * Alimentatori ridondanti sostituibili a caldo
-* Gestione in banda SAS su connessioni SAS per scaffali esterni [//] 2025-10-15 ontap-systems-internal/issues/1357
+* Gestione in banda SAS su connessioni SAS per scaffali esterni
 

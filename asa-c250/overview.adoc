@@ -11,7 +11,7 @@ summary: Specifiche chiave per il gruppo di piattaforme ASA-C250
 
 
 [role="lead"]
-Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA C250 in una singola coppia ad alta disponibilità.  Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
+Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA C250 in una singola coppia ad alta disponibilità. Per le specifiche complete di questo sistema di storage, visitare NetApp Hardware Universe (HWU).
 
 
 
@@ -23,7 +23,13 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 * Fattore di forma: chassis 2U con 2 controller HA e 24 slot per unità
 * Versione ONTAP : ONTAP: 9.16.1P2
 * Slot di espansione PCIe: 4
-* Versione minima ONTAP : ONTAP 9.13.1P1 == Massimi di scalabilità
+* Versione minima ONTAP : ONTAP 9.13.1P1
+
+
+
+
+== Massimi di scalabilità
+
 * Tipo: NAS
 * Tipo: SAN; Coppie HA: 6; Capacità grezza: 8,8 PB / 7,9 PiB; Memoria massima: 768 GB
 * Tipo: coppia HA; capacità grezza: 1,5 PB / 1,3 PiB; memoria massima: 128.0000
@@ -68,14 +74,20 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 * FC
 * iSCSI
-* NVMe/FC == Specifiche dell'ambiente di sistema
+* NVMe/FC
+
+
+
+
+== Specifiche dell'ambiente di sistema
+
 * Potenza tipica: 2906 BTU/ora
 * Potenza nel caso peggiore: 3750 BTU/ora
 * Peso: 54,3 libbre 24,6 kg
 * Altezza: 2U
 * Larghezza: 19" conforme allo standard IEC per rack (17,6" 44,7 cm)
 * Profondità:
-* Temperatura/altitudine/umidità di esercizio: da 10°C a 35°C (da 50°F a 95°F) a = 3048 m = 10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
+* Temperatura/altitudine/umidità di funzionamento: da 10°C a 35°C (da 50°F a 95°F) fino a 3048 m (10000 piedi) di altitudine; umidità relativa dall'8% all'80%, senza condensa
 * Temperatura/umidità non operativa: da -40°C a 70°C (da -40°F a 158°F) fino a 12192 m (40000 piedi) Umidità relativa dal 10% al 95%, senza condensa, nel contenitore originale
 * Rumore acustico: Potenza sonora dichiarata (LwAd): 7,2 Pressione sonora (LpAm) (posizioni degli astanti): 69,1 dB
 
@@ -98,5 +110,5 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 * Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP
 * Controller ridondanti sostituibili a caldo
-* Alimentatori ridondanti sostituibili a caldo [//] 2025-10-15 ontap-systems-internal/issues/1357
+* Alimentatori ridondanti sostituibili a caldo
 
