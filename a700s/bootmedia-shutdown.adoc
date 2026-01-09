@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, completing, complete, nve, nse, shutdown, impair, controller, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+keywords: aff a700s, aff, a700s, completing, complete, nve, nse, shutdown, impair, controller, shut down the controller, manual, manual boot recovery 
+summary: Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700s . Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Spegnere il controller - AFF A700s
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
+Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700s . Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio.
+
+Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
 .Fasi

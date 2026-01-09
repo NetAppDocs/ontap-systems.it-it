@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: aff a320, aff, a320, procedure, boot, impair, node, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+keywords: aff a320, aff, a320, procedure, boot, impair, node, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image, manual, manual boot recovery 
+summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Avviare l'immagine di ripristino - AFF A320
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare i
 
 
 [role="lead"]
-È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
+È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 . Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
 +

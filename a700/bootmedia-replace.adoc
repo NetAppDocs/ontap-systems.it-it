@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, open, controller, module, system, access, component 
-summary: 'Per accedere ai componenti all"interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.' 
+keywords: aff a700, open, controller, module, system, access, component, manual, manual boot recovery 
+summary: Sostituire il supporto di avvio non riuscito su un modulo controller AFF A700 . Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Sostituire il supporto di avvio - AFF A700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 'Per accedere ai componenti all"interno del controller, rimuovere prima
 
 
 [role="lead"]
+Sostituire il supporto di avvio non riuscito su un modulo controller AFF A700 . Questa procedura include la rimozione del modulo controller dallo chassis, la sostituzione fisica del componente del supporto di avvio, il trasferimento dell'immagine di avvio sul supporto sostitutivo tramite un'unità flash USB e il ripristino del normale funzionamento del sistema.
+
+Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive 
-summary: Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario. 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive, manual, manual boot recovery 
+summary: 'Trasferire l"immagine di avvio sul supporto di avvio sostitutivo su un sistema AFF A700s utilizzando il supporto di avvio secondario o un"unità flash USB. Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Trasferire l'immagine di boot sul supporto di boot - AFF A700s
 :allow-uri-read: 
@@ -11,11 +11,13 @@ summary: Questa procedura deve essere utilizzata solo se il ripristino del suppo
 
 
 [role="lead"]
-È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine sul secondo supporto di avvio installato nel modulo controller, il metodo principale per ripristinare l'immagine di sistema, Oppure trasferendo l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB quando il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario.
+Trasferire l'immagine di avvio sul supporto di avvio sostitutivo su un sistema AFF A700s utilizzando il supporto di avvio secondario o un'unità flash USB. Questa procedura include il ripristino dall'immagine sul supporto di avvio secondario come metodo principale oppure l'utilizzo di un'unità flash USB se il ripristino dal supporto di avvio secondario non riesce o il file image.tgz risulta mancante.
+
+Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 
-== Opzione 1: Trasferimento dei file sul supporto di avvio utilizzando il backup recovery dal secondo supporto di avvio
+== Opzione 1: trasferire i file utilizzando il ripristino del backup dal secondo supporto di avvio
 
 È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine sul secondo supporto di avvio installato nel modulo controller. Questo è il metodo principale per trasferire i file dei supporti di avvio sui supporti di avvio sostitutivi nei sistemi con due supporti di avvio nel modulo controller.
 
@@ -84,7 +86,7 @@ L'immagine viene scaricata dal supporto di avvio secondario.
 
 
 
-== Opzione 2: Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB
+== Opzione 2: trasferire l'immagine di avvio tramite un'unità flash USB
 
 Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario.
 

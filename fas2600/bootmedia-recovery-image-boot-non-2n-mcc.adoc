@@ -1,8 +1,8 @@
 ---
 permalink: fas2600/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: fas2600, verify environment variables, image, boot the recovery image 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+keywords: fas2600, verify environment variables, image, boot the recovery image, manual, manual boot recovery 
+summary: 'Avviare l"immagine di ripristino ONTAP dall"unità USB su un sistema FAS2600 per ripristinare il supporto di avvio. Il sistema FAS2600 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Avviare l'immagine di ripristino - FAS2600
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare i
 
 
 [role="lead"]
-È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
+Avviare l'immagine di ripristino ONTAP dall'unità USB su un sistema FAS2600 per ripristinare il supporto di avvio. Questa procedura include l'avvio dall'unità flash USB, il ripristino del file system, la verifica delle variabili ambientali e il ripristino del normale funzionamento del controller dopo la sostituzione del supporto di avvio.
+
+Il sistema FAS2600 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 .Fasi
 . Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`

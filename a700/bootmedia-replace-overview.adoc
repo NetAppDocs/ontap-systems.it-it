@@ -1,16 +1,20 @@
 ---
 permalink: a700/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff a700, replace, boot, media, primary, secondary, image, disruptive, nondisruptive 
-summary: 'Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell"avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.' 
+keywords: aff a700, replace, boot, media, primary, secondary, image, disruptive, nondisruptive, manual, manual boot recovery 
+summary: Scopri come sostituire il supporto di avvio su un sistema AFF A700 e scopri i diversi metodi di sostituzione. Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
-= Panoramica della sostituzione dei supporti di avvio - AFF A700 e FAS9000
+= Panoramica sulla sostituzione del supporto di avvio - AFF A700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Scopri come sostituire il supporto di avvio su un sistema AFF A700 e scopri i diversi metodi di sostituzione. Il supporto di avvio memorizza i file immagine di avvio primari e secondari utilizzati dal sistema durante l'avvio. A seconda della configurazione della rete, è possibile eseguire una sostituzione non distruttiva (utilizzando la connessione e0S interna) oppure una sostituzione distruttiva (che richiede due riavvii).
+
+Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.
 
 È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz`.

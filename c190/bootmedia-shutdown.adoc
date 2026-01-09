@@ -1,8 +1,8 @@
 ---
 permalink: c190/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff c190, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+keywords: aff c190, shut down the controller, manual, manual boot recovery 
+summary: Dopo aver completato i controlli di crittografia, arrestare il controller non funzionante su un sistema AFF C190 . Il sistema AFF C190 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Spegnere il controller - AFF C190
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato i controlli di crittografia, arrestare il controller non funzionante su un sistema AFF C190 . Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio.
+
+Il sistema AFF C190 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 

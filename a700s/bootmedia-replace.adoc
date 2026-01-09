@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media 
-summary: È necessario individuare il supporto di avvio guasto nel modulo controller rimuovendo il modulo PCIe centrale sul modulo controller, individuare il supporto di avvio guasto tramite il LED acceso vicino al supporto di avvio, quindi sostituire il supporto di avvio. 
+keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media, manual, manual boot recovery 
+summary: Sostituire il supporto di avvio non riuscito su un modulo controller AFF A700s . Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Sostituire il supporto di avvio - AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: È necessario individuare il supporto di avvio guasto nel modulo contro
 
 
 [role="lead"]
-È necessario rimuovere il modulo controller dal telaio, aprirlo e sostituire il supporto di avvio guasto.
+Sostituire il supporto di avvio non riuscito su un modulo controller AFF A700s . Questa procedura include la rimozione del modulo controller dallo chassis, l'individuazione del supporto di avvio non funzionante tramite l'indicatore LED acceso, la sostituzione fisica del componente del supporto di avvio e il ripristino del normale funzionamento del sistema.
+
+Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 

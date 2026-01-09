@@ -1,8 +1,8 @@
 ---
 permalink: fas8200/bootmedia-recovery-image-boot-options.html 
 sidebar: sidebar 
-keywords: fas8200, boot the recovery image 
-summary: 'La procedura per avviare il controller compromesso dall"immagine di ripristino dipende dalla configurazione MetroCluster a due nodi del sistema.' 
+keywords: fas8200, boot the recovery image, manual, manual boot recovery 
+summary: 'Avviare l"immagine di ripristino ONTAP dall"unità USB su un sistema FAS8200 per ripristinare il supporto di avvio. Il sistema FAS8200 supporta solo procedure di ripristino manuale del supporto di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Avviare l'immagine di ripristino - FAS8200
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'La procedura per avviare il controller compromesso dall"immagine di ri
 
 
 [role="lead"]
-La procedura per avviare il controller compromesso dall'immagine di ripristino dipende dalla configurazione MetroCluster a due nodi del sistema.
+Avviare l'immagine di ripristino ONTAP dall'unità USB su un sistema FAS8200 per ripristinare il supporto di avvio. Questa procedura include l'avvio dall'unità flash USB, il ripristino del file system, la verifica delle variabili ambientali e il ripristino del controller al normale funzionamento, con passaggi specifici che variano a seconda che il sistema si trovi in ​​una configurazione MetroCluster a due nodi.
+
+Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 

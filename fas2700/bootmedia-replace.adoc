@@ -1,8 +1,8 @@
 ---
 permalink: fas2700/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, boot, media, controller, module, fru map 
-summary: Individuare il supporto di avvio nel controller e seguire le istruzioni per sostituirlo. 
+keywords: fas2700, aff a220, replace, boot, media, controller, module, fru map, manual, manual boot recovery 
+summary: Sostituire il supporto di avvio non riuscito su un modulo controller FAS2700. Il sistema FAS2700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Sostituire il supporto di avvio - FAS2700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: Individuare il supporto di avvio nel controller e seguire le istruzioni
 
 
 [role="lead"]
+Sostituire il supporto di avvio non riuscito su un modulo controller FAS2700. Questa procedura include la rimozione del modulo controller dallo chassis, la sostituzione fisica del componente del supporto di avvio, il trasferimento dell'immagine di avvio sul supporto sostitutivo tramite un'unità flash USB e il ripristino del normale funzionamento del sistema.
+
+Il sistema FAS2700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
 
 

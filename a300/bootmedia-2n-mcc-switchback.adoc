@@ -1,8 +1,8 @@
 ---
 permalink: a300/bootmedia-2n-mcc-switchback.html 
 sidebar: sidebar 
-keywords: aff a300, switch back aggregate in a two-node metrocluster configuration 
-summary: 'Una volta completata la sostituzione dell"unità FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l"operazione di switchback dell"unità MetroCluster. In questo modo, la configurazione torna al suo normale stato operativo, con le macchine virtuali dello storage di origine di sincronizzazione (SVM) sul sito precedentemente compromesso, ora attive e che forniscono dati dai pool di dischi locali.' 
+keywords: aff a300, switch back aggregate in a two-node metrocluster configuration, manual, manual boot recovery 
+summary: 'Dopo aver completato la sostituzione della FRU in una configurazione MetroCluster a due nodi, è possibile eseguire l"operazione di switchback MetroCluster . In questo modo la configurazione viene riportata al suo stato operativo normale, con le macchine virtuali di archiviazione di origine sincronizzata (SVM) sul sito precedentemente danneggiato ora attive e che forniscono dati dai pool di dischi locali. Il sistema AFF A300 supporta solo procedure di ripristino manuale tramite supporti di avvio.' 
 ---
 = Switch back aggregates in una configurazione MetroCluster a due nodi - AFF A300
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 'Una volta completata la sostituzione dell"unità FRU in una configuraz
 
 
 [role="lead"]
+Dopo aver completato la sostituzione del supporto di avvio, eseguire l'operazione di switchback MetroCluster . Il sistema AFF A300 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
 
 .Fasi

@@ -1,17 +1,19 @@
 ---
 permalink: fas2700/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback 
-summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+keywords: fas2700, aff a220, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback, manual, manual boot recovery 
+summary: Verificare il supporto e lo stato della chiave di crittografia prima di spegnere il controller danneggiato su un sistema FAS2700. Il sistema FAS2700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia - AFF A220 e FAS2700
+= Controllare il supporto e lo stato della chiave di crittografia - FAS2700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Verificare il supporto e lo stato della chiave di crittografia prima di spegnere il controller danneggiato su un sistema FAS2700. Questa procedura include la verifica della compatibilità della versione ONTAP con NetApp Volume Encryption (NVE), la verifica della configurazione del gestore delle chiavi e il backup delle informazioni di crittografia per garantire la sicurezza dei dati durante il ripristino del supporto di avvio.
+
+Il sistema FAS2700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 

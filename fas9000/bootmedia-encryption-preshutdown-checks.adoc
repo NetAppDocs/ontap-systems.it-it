@@ -1,8 +1,8 @@
 ---
 permalink: fas9000/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, shutdown, check, onboard, encryption, key 
-summary: Prima di spegnere il nodo con problemi e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del nodo con problemi, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+keywords: aff a700, fas9000, shutdown, check, onboard, encryption, key, manual, manual boot recovery 
+summary: Prima di arrestare il nodo danneggiato e verificare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del nodo danneggiato, disabilitare il giveback automatico e verificare quale versione di ONTAP è in esecuzione sul sistema. Il sistema FAS9000 supporta solo procedure di ripristino manuale tramite supporti di avvio. 
 ---
 = Controllare il supporto e lo stato della chiave di crittografia
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Prima di spegnere il nodo con problemi e controllare lo stato delle chi
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Per garantire la sicurezza dei dati sul sistema di archiviazione, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare se la versione ONTAP supporta NetApp Volume Encryption (NVE) e, prima di arrestare il controller, verificare che il gestore delle chiavi sia attivo. Il sistema FAS9000 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 

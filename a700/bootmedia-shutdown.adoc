@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, shut, down, impaired, controller, take, over 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+keywords: aff a700, shut, down, impaired, controller, take, over, manual, manual boot recovery 
+summary: Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700 . Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Spegnere il controller compromesso - AFF A700
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 
 [role="lead"]
-Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700 . Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio, con passaggi specifici che variano a seconda della configurazione del sistema.
+
+Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 

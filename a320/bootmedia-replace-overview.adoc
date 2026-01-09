@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff, a320, locate, boot, media, controller, module, direction, replace, replace the boot media 
-summary: Individuare il supporto di avvio nel modulo del controller e seguire le istruzioni per sostituirlo. 
+keywords: aff, a320, locate, boot, media, controller, module, direction, replace, replace the boot media, manual, manual boot recovery 
+summary: È necessario individuare il supporto di avvio nel modulo controller e quindi seguire le istruzioni per sostituirlo. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Panoramica della sostituzione dei supporti di avvio - AFF A320
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Individuare il supporto di avvio nel modulo del controller e seguire le
 
 
 [role="lead"]
+Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio.
+
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.
 
 È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.

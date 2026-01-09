@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive 
-summary: 'Il supporto di avvio sostitutivo installato non dispone di un"immagine di avvio, pertanto è necessario trasferire un"immagine di avvio utilizzando un"unità flash USB.' 
+keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
+summary: 'Il supporto di avvio sostitutivo installato non dispone di un"immagine di avvio, pertanto è necessario trasferire un"immagine di avvio tramite un"unità flash USB. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB - AFF A320
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Il supporto di avvio sostitutivo installato non dispone di un"immagine
 
 
 [role="lead"]
-Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.
+Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio tramite un'unità flash USB. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 * È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con almeno 4 GB di capacità
 * Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp

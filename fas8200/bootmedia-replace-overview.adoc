@@ -1,8 +1,8 @@
 ---
 permalink: fas8200/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: fas8200, replace the boot media 
-summary: 'Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell"avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.' 
+keywords: fas8200, replace the boot media, manual, manual boot recovery 
+summary: Scopri come sostituire il supporto di avvio su un sistema FAS8200 e i diversi metodi di sostituzione. Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Panoramica sulla sostituzione dei supporti di avvio - FAS8200
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 'Il supporto di avvio memorizza un set primario e secondario di file di
 
 
 [role="lead"]
+Scopri come sostituire il supporto di avvio su un sistema FAS8200 e i diversi metodi di sostituzione. Il supporto di avvio memorizza i file immagine di avvio primari e secondari utilizzati dal sistema durante l'avvio. A seconda della configurazione della rete, è possibile eseguire una sostituzione non distruttiva (coppia HA connessa alla rete) o una sostituzione distruttiva (richiede due riavvii).
+
+Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.
 
 È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.

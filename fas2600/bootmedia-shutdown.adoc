@@ -1,8 +1,8 @@
 ---
 permalink: fas2600/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas2600, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+keywords: fas2600, shut down the controller, manual, manual boot recovery 
+summary: Dopo aver completato i controlli di crittografia, arrestare il controller danneggiato su un sistema FAS2600. Il sistema FAS2600 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Spegnere il controller compromesso - FAS2600
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
+Dopo aver completato i controlli di crittografia, arrestare il controller danneggiato su un sistema FAS2600. Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio.
+
+Il sistema FAS2600 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
 .Fasi

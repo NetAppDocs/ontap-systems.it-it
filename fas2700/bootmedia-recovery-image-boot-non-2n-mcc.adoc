@@ -1,8 +1,8 @@
 ---
 permalink: fas2700/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: fas2700, aff 220, boot, recovery, image, restore, file, system, environmental, varible 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+keywords: fas2700, aff 220, boot, recovery, image, restore, file, system, environmental, varible, manual, manual boot recovery 
+summary: 'Avviare l"immagine di ripristino ONTAP dall"unità USB su un sistema FAS2700 per ripristinare il supporto di avvio. Il sistema FAS2700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Avviare l'immagine di ripristino - FAS2700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare i
 
 
 [role="lead"]
+Avviare l'immagine di ripristino ONTAP dall'unità USB su un sistema FAS2700 per ripristinare il supporto di avvio. Questa procedura include l'avvio dall'unità flash USB, il ripristino del file system, la verifica delle variabili ambientali e il ripristino del normale funzionamento del controller dopo la sostituzione del supporto di avvio.
+
+Il sistema FAS2700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
 .Fasi

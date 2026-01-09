@@ -1,16 +1,20 @@
 ---
 permalink: fas2700/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb 
-summary: 'Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell"avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.' 
+keywords: fas2700, aff a220, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb, manual, manual boot recovery 
+summary: 'Scopri come sostituire il supporto di avvio su un sistema FAS2700 e i diversi metodi di sostituzione. Il supporto di avvio memorizza i file immagine di avvio primari e secondari utilizzati dal sistema durante l"avvio. A seconda della configurazione della rete, è possibile eseguire una sostituzione non distruttiva (coppia HA connessa alla rete) o una sostituzione distruttiva (richiede due riavvii).' 
 ---
-= Panoramica sulla sostituzione dei supporti di avvio - AFF A220 e FAS2700
+= Panoramica sulla sostituzione del supporto di avvio - FAS2700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Scopri come sostituire il supporto di avvio su un sistema FAS2700 e i diversi metodi di sostituzione.
+
+Il supporto di avvio memorizza i file immagine di avvio primari e secondari utilizzati dal sistema durante l'avvio. A seconda della configurazione della rete, è possibile eseguire una sostituzione non distruttiva (coppia HA connessa alla rete) o una sostituzione distruttiva (richiede due riavvii).
+
 Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio. A seconda della configurazione di rete, è possibile eseguire una sostituzione senza interruzioni o senza interruzioni.
 
 È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere `image_xxx.tgz` file.

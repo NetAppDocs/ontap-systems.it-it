@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, ontap, pre-shutdown, pre-shutdown checks for onboard encyption keys 
-summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+keywords: aff a700s, aff, a700s, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, ontap, pre-shutdown, pre-shutdown checks for onboard encyption keys, manual, manual boot recovery 
+summary: Verificare il supporto e lo stato della chiave di crittografia prima di spegnere il controller danneggiato su un sistema AFF A700s . Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Verificare il supporto e lo stato della chiave di crittografia - AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Prima di spegnere il controller compromesso e controllare lo stato dell
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Verificare il supporto e lo stato della chiave di crittografia prima di spegnere il controller danneggiato su un sistema AFF A700s . Questa procedura include la verifica della compatibilità della versione ONTAP con NetApp Volume Encryption (NVE), la verifica della configurazione del gestore delle chiavi e il backup delle informazioni di crittografia per garantire la sicurezza dei dati durante il ripristino del supporto di avvio.
+
+Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 

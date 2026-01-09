@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, boot, media, store, primary, secondary, set, system, boot, image, file, replace, replace the boot media 
-summary: 'Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell"avvio.' 
+keywords: aff, a320, aff a320, boot, media, store, primary, secondary, set, system, boot, image, file, replace, replace the boot media, manual, manual boot recovery 
+summary: 'Il supporto di avvio memorizza un set primario e uno secondario di file immagine di avvio che il sistema utilizza all"avvio. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio.' 
 ---
 = Sostituire il supporto di avvio - AFF A320
 :allow-uri-read: 
@@ -10,15 +10,16 @@ summary: 'Il supporto di avvio memorizza un set primario e secondario di file di
 :imagesdir: ../media/
 
 
-Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller compromesso, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB.
+[role="lead"]
+Per sostituire il supporto di avvio, è necessario rimuovere il modulo controller danneggiato, installare il supporto di avvio sostitutivo e trasferire l'immagine di avvio su un'unità flash USB. Il sistema AFF A320 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 
 == Fase 1: Rimuovere il modulo controller
 
-[role="lead"]
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Scollegare l'alimentazione del modulo controller dalla fonte di alimentazione.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
@@ -51,6 +52,7 @@ Il gancio del meccanismo di chiusura deve essere quasi verticale e non deve esse
 
 Individuare il supporto di avvio nel modulo del controller e seguire le istruzioni per sostituirlo.
 
+.Fasi
 . Aprire il condotto dell'aria e individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo del controller:
 . Individuare e rimuovere il supporto di avvio dal modulo controller:
 +
@@ -80,7 +82,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
-== Fase 3: Trasferire l'immagine di avvio sul supporto di avvio utilizzando un'unità flash USB
+== Passaggio 3: trasferire l'immagine di avvio utilizzando un'unità flash USB
 
 Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.
 
@@ -93,11 +95,13 @@ Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio,
 
 * Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
 * Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+
+
+.Fasi
+. Scaricare e copiare l'immagine del servizio appropriata dal sito del supporto NetApp sull'unità flash USB.
 +
-.. Scaricare e copiare l'immagine del servizio appropriata dal sito del supporto NetApp sull'unità flash USB.
-+
-... Scarica l'immagine del servizio nel tuo spazio di lavoro sul laptop.
-... Decomprimere l'immagine del servizio.
+.. Scarica l'immagine del servizio nel tuo spazio di lavoro sul laptop.
+.. Decomprimere l'immagine del servizio.
 +
 
 NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare winzip per estrarre l'immagine netboot. Utilizzare un altro strumento di estrazione, ad esempio 7-zip o WinRAR.
@@ -106,11 +110,11 @@ NOTE: Se si stanno estraendo i contenuti utilizzando Windows, non utilizzare win
 Il file di immagine del servizio decompresso contiene due cartelle:
 
 +
-**** avviare
-**** efi
+*** avviare
+*** efi
 
 
-... Copiare la cartella efi nella directory principale dell'unità flash USB.
+.. Copiare la cartella efi nella directory principale dell'unità flash USB.
 +
 
 NOTE: Se l'immagine di servizio non dispone di una cartella efi, vedere link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["Cartella EFI mancante dal file di download dell'immagine di servizio utilizzato per il ripristino del dispositivo di avvio per i modelli FAS e AFF^"].
@@ -118,30 +122,30 @@ NOTE: Se l'immagine di servizio non dispone di una cartella efi, vedere link:htt
 +
 L'unità flash USB deve disporre della cartella efi e della stessa versione del BIOS (Service Image) del controller non funzionante.
 
-... Rimuovere l'unità flash USB dal computer portatile.
+.. Rimuovere l'unità flash USB dal computer portatile.
 
 
-.. In caso contrario, chiudere il condotto dell'aria.
-.. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
-.. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
+. In caso contrario, chiudere il condotto dell'aria.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Reinstallare il dispositivo di gestione dei cavi e rieseguire il sistema secondo necessità.
 +
 Quando si esegue la modifica, ricordarsi di reinstallare i convertitori multimediali (SFP o QSFP) se sono stati rimossi.
 
-.. Collegare il cavo di alimentazione all'alimentatore e reinstallare il fermo del cavo di alimentazione.
-.. Inserire l'unità flash USB nello slot USB del modulo controller.
+. Collegare il cavo di alimentazione all'alimentatore e reinstallare il fermo del cavo di alimentazione.
+. Inserire l'unità flash USB nello slot USB del modulo controller.
 +
 Assicurarsi di installare l'unità flash USB nello slot contrassegnato per i dispositivi USB e non nella porta della console USB.
 
-.. Completare la reinstallazione del modulo controller:
+. Completare la reinstallazione del modulo controller:
 +
-... Assicurarsi che i bracci del dispositivo di chiusura siano bloccati in posizione estesa.
-... Utilizzando i bracci del dispositivo di chiusura, spingere il modulo controller nell'alloggiamento dello chassis fino a quando non si arresta.
+.. Assicurarsi che i bracci del dispositivo di chiusura siano bloccati in posizione estesa.
+.. Utilizzando i bracci del dispositivo di chiusura, spingere il modulo controller nell'alloggiamento dello chassis fino a quando non si arresta.
 +
 
 NOTE: Non spingere verso il basso il meccanismo di chiusura sulla parte superiore dei bracci del dispositivo di chiusura. Per farlo, sollevare il meccanismo di blocco e impedire lo scorrimento del modulo controller nel telaio.
 
-... Tenere premuti le linguette arancioni sulla parte superiore del meccanismo di chiusura.
-... Spingere delicatamente il modulo controller nell'alloggiamento dello chassis fino a quando non è a filo con i bordi dello chassis.
+.. Tenere premuti le linguette arancioni sulla parte superiore del meccanismo di chiusura.
+.. Spingere delicatamente il modulo controller nell'alloggiamento dello chassis fino a quando non è a filo con i bordi dello chassis.
 +
 
 NOTE: I bracci del meccanismo di chiusura scorrono nel telaio.
@@ -149,42 +153,42 @@ NOTE: I bracci del meccanismo di chiusura scorrono nel telaio.
 +
 Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
 
-... Rilasciare i fermi per bloccare il modulo controller in posizione.
-... Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Rilasciare i fermi per bloccare il modulo controller in posizione.
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
 
 
-.. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
+. Interrompere il processo di avvio premendo Ctrl-C per interrompere il PROCESSO al prompt DEL CARICATORE.
 +
 Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzione di avvio in modalità manutenzione, quindi arrestare il nodo per avviare IL CARICATORE.
 
-.. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
+. Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB: `boot_recovery`
 +
 L'immagine viene scaricata dall'unità flash USB.
 
-.. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
-.. Una volta installata l'immagine, avviare il processo di ripristino:
+. Quando richiesto, inserire il nome dell'immagine o accettare l'immagine predefinita visualizzata tra parentesi sullo schermo.
+. Una volta installata l'immagine, avviare il processo di ripristino:
 +
-... Registrare l'indirizzo IP del nodo con problemi visualizzato sullo schermo.
-... Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
-... Premere `y` quando viene richiesto di sovrascrivere /etc/ssh/ssh_host_dsa_key.
+.. Registrare l'indirizzo IP del nodo con problemi visualizzato sullo schermo.
+.. Premere `y` quando viene richiesto di ripristinare la configurazione di backup.
+.. Premere `y` quando viene richiesto di sovrascrivere /etc/ssh/ssh_host_dsa_key.
 
 
-.. Dal nodo partner nel livello di privilegio avanzato, avviare la sincronizzazione della configurazione utilizzando l'indirizzo IP registrato nel passaggio precedente: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
-.. Se il ripristino ha esito positivo, premere `y` sul nodo non utilizzato quando viene richiesto di utilizzare la copia ripristinata?.
-.. Premere `y` quando viene visualizzato il messaggio confirm backup procedure was successful (conferma procedura di backup riuscita), quindi premere `y` quando viene richiesto di riavviare il nodo.
-.. Verificare che le variabili ambientali siano impostate come previsto.
+. Dal nodo partner nel livello di privilegio avanzato, avviare la sincronizzazione della configurazione utilizzando l'indirizzo IP registrato nel passaggio precedente: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+. Se il ripristino ha esito positivo, premere `y` sul nodo non utilizzato quando viene richiesto di utilizzare la copia ripristinata?.
+. Premere `y` quando viene visualizzato il messaggio confirm backup procedure was successful (conferma procedura di backup riuscita), quindi premere `y` quando viene richiesto di riavviare il nodo.
+. Verificare che le variabili ambientali siano impostate come previsto.
 +
-... Portare il nodo al prompt DEL CARICATORE.
+.. Portare il nodo al prompt DEL CARICATORE.
 +
 Dal prompt di ONTAP, è possibile eseguire il comando system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true.
 
-... Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
-... Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv __environment-variable-name__ __changed-value__` comando.
-... Salvare le modifiche utilizzando `savenv` comando.
-... Riavviare il nodo.
+.. Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
+.. Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv __environment-variable-name__ __changed-value__` comando.
+.. Salvare le modifiche utilizzando `savenv` comando.
+.. Riavviare il nodo.
 
 
-.. Con il nodo con problemi riavviati che visualizza `Waiting for giveback...` eseguire un giveback dal nodo integro:
+. Con il nodo con problemi riavviati che visualizza `Waiting for giveback...` eseguire un giveback dal nodo integro:
 +
 [cols="1,2"]
 |===
@@ -196,7 +200,7 @@ Una coppia ha
  a| 
 Dopo che il nodo non ha superato la visualizzazione di `Waiting for giveback...` eseguire un giveback dal nodo integro:
 
-... Dal nodo integro: `storage failover giveback -ofnode partner_node_name`
+.. Dal nodo integro: `storage failover giveback -ofnode partner_node_name`
 +
 Il nodo compromesso recupera lo storage, termina l'avvio, quindi si riavvia e viene nuovamente sostituito dal nodo integro.
 
@@ -207,13 +211,11 @@ NOTE: Se il giveback viene vetoed, puoi prendere in considerazione la possibilit
 +
 https://docs.netapp.com/us-en/ontap/high-availability/index.html["Gestione delle coppie HA"^]
 
-... Monitorare l'avanzamento dell'operazione di giveback utilizzando `storage failover show-giveback` comando.
-... Una volta completata l'operazione di giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover utilizzando `storage failover show` comando.
-... Ripristinare il giveback automatico se è stato disattivato utilizzando il comando di modifica del failover dello storage.
+.. Monitorare l'avanzamento dell'operazione di giveback utilizzando `storage failover show-giveback` comando.
+.. Una volta completata l'operazione di giveback, verificare che la coppia ha sia in buone condizioni e che sia possibile effettuare il takeover utilizzando `storage failover show` comando.
+.. Ripristinare il giveback automatico se è stato disattivato utilizzando il comando di modifica del failover dello storage.
 
 
 |===
-.. Uscire dal livello di privilegio avanzato sul nodo integro.
-
-
+. Uscire dal livello di privilegio avanzato sul nodo integro.
 

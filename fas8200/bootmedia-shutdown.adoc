@@ -1,8 +1,8 @@
 ---
 permalink: fas8200/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas8200, shut down the impaired controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+keywords: fas8200, shut down the impaired controller, manual, manual boot recovery 
+summary: Dopo aver completato i controlli di crittografia, arrestare il controller danneggiato su un sistema FAS8200 . Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Spegnere il controller compromesso - FAS8200
 :allow-uri-read: 
@@ -15,7 +15,15 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 == Opzione 1: La maggior parte dei sistemi
 
 [role="lead"]
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso. Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato i controlli di crittografia, arrestare il controller danneggiato su un sistema FAS8200 . Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio, con passaggi specifici che variano a seconda della configurazione del sistema.
+
+Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+
+
+
+== Opzione 1: La maggior parte dei sistemi
+
+Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
 .Fasi
 . Portare la centralina danneggiata al prompt DEL CARICATORE:

@@ -1,8 +1,8 @@
 ---
 permalink: fas9000/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, post, boot, media, replacement, steps, okm, nse, nve 
-summary: 'Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi con Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE) abilitati.' 
+keywords: aff a700, fas9000, post, boot, media, replacement, steps, okm, nse, nve, manual, manual boot recovery 
+summary: 'Una volta verificate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi in cui sono abilitati Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE). Il sistema FAS9000 supporta solo procedure di ripristino manuale tramite supporti di avvio.' 
 ---
 = Ripristina crittografia - FAS9000
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Una volta controllate le variabili di ambiente, è necessario completa
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Ripristinare la crittografia sul supporto di avvio sostitutivo. Il sistema FAS9000 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 Completare i passaggi appropriati per ripristinare la crittografia sul sistema in base al tipo di gestore delle chiavi.  Se non sei sicuro del gestore chiavi utilizzato dal tuo sistema, controlla le impostazioni acquisite all'inizio della procedura di sostituzione del supporto di avvio.
 

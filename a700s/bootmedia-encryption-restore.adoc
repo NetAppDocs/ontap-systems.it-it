@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, environment, variable, check, complete, onboard, key, manager, okm, netapp, storage, encryption, nse, volume, nve, enable, post, boot, replacement, post boot media replacement steps for okm nse and nve 
-summary: 'Una volta controllate le variabili di ambiente, è necessario completare i passaggi specifici per i sistemi che hanno attivato Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE).' 
+keywords: aff a700s, aff, a700s, environment, variable, check, complete, onboard, key, manager, okm, netapp, storage, encryption, nse, volume, nve, enable, post, boot, replacement, post boot media replacement steps for okm nse and nve, manual, manual boot recovery 
+summary: Ripristinare la configurazione di crittografia sul supporto di avvio sostitutivo per un sistema AFF A700s . Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
 = Ripristinare la crittografia - AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'Una volta controllate le variabili di ambiente, è necessario completa
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Ripristinare la configurazione di crittografia sul supporto di avvio sostitutivo per un sistema AFF A700s . Questa procedura include il completamento dei passaggi successivi alla sostituzione per i sistemi con Onboard Key Manager (OKM), NetApp Storage Encryption (NSE) o NetApp Volume Encryption (NVE) abilitati per garantire un accesso sicuro ai dati e il corretto funzionamento del sistema.
+
+Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 Completare i passaggi appropriati per ripristinare la crittografia sul sistema in base al tipo di gestore delle chiavi.  Se non sei sicuro del gestore chiavi utilizzato dal tuo sistema, controlla le impostazioni acquisite all'inizio della procedura di sostituzione del supporto di avvio.
 
