@@ -1,0 +1,85 @@
+= 
+:allow-uri-read: 
+
+
+Prepara il sistema storage e lo slot del modulo I/O in modo che sia sicuro rimuovere il modulo I/O guasto:
+
+.Fasi
+. Mettere a terra l'utente.
+. Etichetta i cavi per identificarne la provenienza, quindi scollega tutti i cavi dal modulo I/O di destinazione.
++
+[NOTE]
+====
+Il modulo I/O dovrebbe essere guasto (le porte dovrebbero essere nello stato di collegamento inattivo); tuttavia, se i collegamenti sono ancora attivi e contengono l'ultima porta cluster funzionante, scollegando i cavi si attiva un takeover automatico.
+
+Attendere cinque minuti dopo aver scollegato i cavi per assicurarsi che eventuali takeover o failover LIF siano completati prima di continuare con questa procedura.
+
+====
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Ad esempio, il seguente messaggio AutoSupport sopprime la creazione automatica dei casi per due ore:
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disabilitare il giveback automatico se il partner controller è stato preso in carico:
++
+[cols="1,2"]
+|===
+| Se... | Quindi... 
+
+
+ a| 
+Se uno dei due controller ha effettuato il takeover automatico del partner controller
+ a| 
+Disattiva la restituzione automatica:
+
+.. Immettere il seguente comando dalla console del controller che ha effettuato il takeover del partner controller:
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
+
+
+
+
+ a| 
+Entrambi i controller sono attivi e in esecuzione I/O (servendo dati)
+ a| 
+Passare alla fase successiva.
+
+|===
+. Prepara il modulo I/O guasto per la rimozione rimuovendolo dal servizio e spegnendolo:
++
+.. Immettere il seguente comando:
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
+.. Entra `y` quando vedi il messaggio _Vuoi continuare?_
++
+Ad esempio, il seguente comando prepara il modulo guasto nello slot 7 sul nodo 2 (il partner controller) per la rimozione e visualizza un messaggio che indica che è possibile rimuoverlo in sicurezza:
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 7
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 7 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+
+
+. Verificare che il modulo I/O guasto sia spento:
++
+`system controller slot module show`
+
++
+L'output dovrebbe mostrare  `_powered-off_` nella  `_status_` colonna per il modulo guasto e il suo numero di slot.
+
+

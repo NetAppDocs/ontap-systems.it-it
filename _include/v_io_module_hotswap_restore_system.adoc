@@ -7,30 +7,11 @@ Ripristina il tuo sistema storage al normale funzionamento restituendo lo storag
 .Fasi
 . A seconda della versione di ONTAP in esecuzione sul tuo sistema storage e dello stato dei controller, restituisci lo storage e ripristina il giveback automatico sul controller che è stato preso in carico:
 +
-[cols="1,2,3"]
+[cols="1,2"]
 |===
-| Versione di ONTAP | Se... | Quindi... 
+| Se... | Quindi... 
 
 
- a| 
-9.17.1 o 9.18.1RC
- a| 
-Se il controller compromesso ha effettuato il takeover automatico del controller sano
- a| 
-.. Ripristinare il normale funzionamento del controller sano restituendogli il suo storage:
-+
-`storage failover giveback -ofnode _healthy_node_name_`
-
-.. Ripristina il giveback automatico dalla console del controller non funzionante:
-+
-`storage failover modify -node local -auto-giveback _true_`
-
-
-
-
-
- a| 
-9.18.1GA o versioni successive
  a| 
 Se uno dei due controller ha effettuato il takeover automatico del partner controller
  a| 
@@ -47,14 +28,12 @@ Se uno dei due controller ha effettuato il takeover automatico del partner contr
 
 
  a| 
-9.18.1GA o versioni successive
- a| 
 Entrambi i controller sono attivi e in esecuzione I/O (servendo dati)
  a| 
 Passare alla fase successiva.
 
 |===
-. Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
+. Verificare che le interfacce logiche segnalino il proprio nodo home e le porte: `network interface show -is-home false`
 +
 Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert -vserver * -lif *`
 

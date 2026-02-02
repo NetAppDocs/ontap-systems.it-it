@@ -1,0 +1,432 @@
+---
+permalink: asa-r2-a20-30-50/io-module-hotswap.html 
+sidebar: sidebar 
+keywords: asa a20, asa a30, asa a50, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
+summary: È possibile effettuare lo swap a caldo di un modulo I/O Ethernet nel tuo sistema storage ASA A20, ASA A30 o ASA A50 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP. 
+---
+= Hot swap di un modulo I/O - ASA A20, ASA A30 e ASA A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile effettuare lo swap a caldo di un modulo I/O Ethernet nel tuo sistema storage ASA A20, ASA A30 o ASA A50 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP.
+
+Per eseguire lo swap a caldo di un modulo I/O, assicurati che il sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, esegui lo swap a caldo del modulo guasto, porta online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
+
+.A proposito di questa attività
+* La sostituzione a caldo del modulo I/O significa che non è necessario eseguire un takeover manuale prima di sostituire il modulo I/O guasto.
+* Applicare i comandi al controller corretto e allo slot I/O quando si esegue lo swap a caldo del modulo I/O:
++
+** Il _controller danneggiato_ è il controller su cui si esegue lo swap a caldo del modulo I/O.
+** Il _controllore sano_ è il partner HA del controllore compromesso.
+
+
+* È possibile accendere i LED (blu) di posizione del sistema storage per facilitare l'individuazione fisica del sistema storage. Accedere al BMC tramite SSH e immettere il comando  `system location-led _on_`.
++
+Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
+
++
+È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
+
+
+
+== Fase 1: assicurarsi che il sistema di archiviazione soddisfi i requisiti della procedura
+
+Per utilizzare questa procedura, il sistema storage deve eseguire ONTAP 9.17.1 o una versione successiva e il sistema storage deve soddisfare tutti i requisiti per la versione di ONTAP che il sistema storage sta eseguendo.
+
+
+NOTE: Se il sistema storage non esegue ONTAP 9.17.1 o una versione successiva, oppure non soddisfa tutti i requisiti per la versione di ONTAP in esecuzione sul sistema storage, non è possibile utilizzare questa procedura, è necessario utilizzare il link:io-module-replace.html["sostituire una procedura del modulo I/O"].
+
+[role="tabbed-block"]
+====
+.ONTAP 9.17.1 o 9.18.1RC
+--
+* Si sta eseguendo lo swap a caldo di un cluster guasto e di un modulo I/O HA nello slot 4 con un modulo I/O equivalente. Non è possibile modificare il tipo di modulo I/O.
+* Il controller con il cluster e il modulo I/O HA guasti (il controller danneggiato) deve aver già effettuato il takeover del partner controller. Il takeover dovrebbe essere avvenuto automaticamente se il modulo I/O si è guastato.
++
+Per i cluster a due nodi, il sistema storage non è in grado di distinguere quale controller abbia il modulo I/O guasto, quindi uno dei due controller potrebbe avviare il takeover. Lo swap a caldo è supportato solo quando il controller con il modulo I/O guasto (il controller compromesso) ha effettuato il takeover del controller funzionante. Lo swap a caldo del modulo I/O è l'unico modo per ripristinare senza interruzioni.
+
++
+È possibile verificare che il controller non funzionante abbia preso il controllo del controller sano immettendo  `storage failover show` comando.
+
++
+Se non si è sicuri di quale controller abbia il modulo I/O guasto, contattare  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] .
+
+* La configurazione del sistema di storage deve avere un solo cluster e modulo I/O HA nello slot 4, non due cluster e moduli I/O HA.
+* Il sistema di archiviazione deve essere una configurazione cluster a due nodi (switchless o switching).
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+
+--
+.ONTAP 9.18.1GA o versioni successive
+--
+* Si sta eseguendo lo swap a caldo di un modulo I/O Ethernet in uno slot con qualsiasi combinazione di porte utilizzate per cluster, HA e client con un modulo I/O equivalente. Non è possibile modificare il tipo di modulo I/O.
++
+I moduli I/O Ethernet con porte utilizzate per lo storage o MetroCluster non sono hot-swappable.
+
+* Il tuo sistema storage (configurazione cluster switchless o cluster commutato) può avere qualsiasi numero di nodi supportati per il tuo sistema storage.
+* Tutti i nodi del cluster devono eseguire la stessa versione di ONTAP (ONTAP 9.18.1GA o successiva) oppure diversi livelli di patch della stessa versione di ONTAP.
++
+Se i nodi del tuo cluster eseguono versioni di ONTAP diverse, questo è considerato un cluster a versioni miste e lo swap a caldo di un modulo I/O non è supportato.
+
+
+
+* I controller nel tuo sistema storage possono trovarsi in uno dei seguenti stati:
++
+** Entrambi i controller possono essere attivi e in esecuzione I/O (servendo dati).
+** Entrambi i controller possono trovarsi in uno stato di takeover se il takeover è stato causato dal modulo I/O guasto e i controller funzionano correttamente.
++
+In determinate situazioni, ONTAP può eseguire automaticamente un takeover di uno dei controller a causa del guasto del modulo I/O. Ad esempio, se il modulo I/O guasto conteneva tutte le porte del cluster (tutti i collegamenti del cluster su quel controller si interrompono), ONTAP esegue automaticamente un takeover.
+
+
+
+
+
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+
+--
+====
+
+
+== Fase 2: preparare il sistema storage e lo slot del modulo I/O
+
+Prepara il sistema storage e lo slot del modulo I/O in modo che sia sicuro rimuovere il modulo I/O guasto:
+
+.Fasi
+. Mettere a terra l'utente.
+. Scollegare i cavi dal modulo I/O guasto.
++
+Assicuratevi di etichettare i cavi in modo da poterli ricollegare alle stesse porte più avanti in questa procedura.
+
++
+[NOTE]
+====
+Il modulo I/O dovrebbe essere guasto (le porte dovrebbero essere nello stato di collegamento inattivo); tuttavia, se i collegamenti sono ancora attivi e contengono l'ultima porta cluster funzionante, scollegando i cavi si attiva un takeover automatico.
+
+Attendere cinque minuti dopo aver scollegato i cavi per assicurarsi che eventuali takeover o failover LIF siano completati prima di continuare con questa procedura.
+
+====
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Ad esempio, il seguente messaggio AutoSupport sopprime la creazione automatica dei casi per due ore:
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. A seconda della versione di ONTAP in esecuzione sul sistema storage e dello stato dei controller, disabilitare il giveback automatico:
++
+[cols="1,2,3"]
+|===
+| Versione di ONTAP | Se... | Quindi... 
+
+
+ a| 
+9.17.1 o 9.18.1RC
+ a| 
+Se il controller compromesso ha effettuato il takeover automatico del controller sano
+ a| 
+Disattiva la restituzione automatica:
+
+.. Immettere il seguente comando dalla console del controller non funzionante
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
+
+
+
+
+ a| 
+9.18.1GA o versioni successive
+ a| 
+Se uno dei due controller ha effettuato il takeover automatico del partner controller
+ a| 
+Disattiva la restituzione automatica:
+
+.. Immettere il seguente comando dalla console del controller che ha effettuato il takeover del partner controller:
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
+
+
+
+
+ a| 
+9.18.1GA o versioni successive
+ a| 
+Entrambi i controller sono attivi e in esecuzione I/O (servendo dati)
+ a| 
+Passare alla fase successiva.
+
+|===
+. Prepara il modulo I/O guasto per la rimozione rimuovendolo dal servizio e spegnendolo:
++
+.. Immettere il seguente comando:
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
+.. Entra `y` quando vedi il messaggio _Vuoi continuare?_
++
+Ad esempio, il seguente comando prepara il modulo guasto nello slot 4 sul nodo 2 (il controller danneggiato) per la rimozione e visualizza un messaggio che indica che è sicuro rimuoverlo:
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+
+
+. Verificare che il modulo I/O guasto sia spento:
++
+`system controller slot module show`
+
++
+L'output dovrebbe mostrare  `_powered-off_` nella  `_status_` colonna per il modulo guasto e il suo numero di slot.
+
+
+
+
+
+== Passaggio 3: swap a caldo del modulo I/O guasto
+
+Sostituisci a caldo il modulo I/O guasto con un modulo I/O equivalente:
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il modulo I/O guasto dal controller danneggiato:
++
+image::../media/drw_g_io_module_hotswap_slot4_ieops-2366.svg[cluster hotswap e modulo I/O ha nello slot 4]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Numero di didascalia 1]
+ a| 
+Ruotare la vite a testa zigrinata del modulo i/o in senso antiorario per allentarla.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Numero di didascalia 2]
+ a| 
+Estrarre il modulo I/O dal controller utilizzando la linguetta dell'etichetta della porta a sinistra e la vite a testa zigrinata a destra.
+
+|===
+. Installare il modulo I/O sostitutivo:
++
+.. Allineare il modulo i/o con i bordi dello slot.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi di inserirlo correttamente nel connettore.
++
+Per spingere all'interno il modulo I/O è possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata a destra.
+
+.. Ruotare la vite a testa zigrinata in senso orario per serrare.
+
+
+. Collegare il modulo I/O sostitutivo.
+
+
+
+
+== Fase 4: portare online il modulo I/O sostitutivo
+
+Portare online il modulo I/O sostitutivo, verificare che le porte del modulo I/O siano state inizializzate correttamente, verificare che lo slot sia acceso e quindi verificare che il modulo I/O sia online e riconosciuto.
+
+.A proposito di questa attività
+Dopo la sostituzione del modulo I/O e il ritorno delle porte a uno stato di funzionamento corretto, i LIF vengono ripristinati sul modulo I/O sostituito.
+
+.Fasi
+. Mettere online il modulo I/O sostitutivo:
++
+.. Immettere il seguente comando:
++
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_number_`
+
+.. Entra `y` quando vedi il messaggio _Vuoi continuare?_
++
+L'output dovrebbe confermare che il modulo I/O è stato portato online con successo (acceso, inizializzato e messo in servizio).
+
++
+Ad esempio, il seguente comando porta online lo slot 4 sul nodo 2 (il controller non funzionante) e visualizza un messaggio che indica che il processo è riuscito:
+
++
+[listing]
+----
+node2::> system controller slot module insert -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered on and initialized.
+
+Do you want to continue? {y|n}: `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+
+
+. Verificare che ogni porta sul modulo I/O sia stata inizializzata correttamente:
++
+.. Immettere il seguente comando dalla console del controller non funzionante:
++
+`event log show -event \*hotplug.init*`
+
++
+
+NOTE: Potrebbero essere necessari alcuni minuti per eventuali aggiornamenti del firmware e per l'inizializzazione delle porte.
+
++
+L'output dovrebbe mostrare uno o più eventi EMS hotplug.init.success che indicano che ciascuna porta sul modulo I/O è stata avviata correttamente.
+
++
+Ad esempio, il seguente output mostra che l'inizializzazione è riuscita per le porte I/O e4b ed e4a:
+
++
+[listing]
+----
+node2::> event log show -event *hotplug.init*
+
+Time                Node             Severity      Event
+
+------------------- ---------------- ------------- ---------------------------
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4b" in slot 4 succeeded
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4a" in slot 4 succeeded
+
+2 entries were displayed.
+----
+.. Se l'inizializzazione della porta non riesce, rivedere il registro EMS per i passaggi successivi da intraprendere.
+
+
+. Verificare che lo slot del modulo I/O sia acceso e pronto per il funzionamento:
++
+`system controller slot module show`
+
++
+L'output dovrebbe mostrare lo stato dello slot come  `_powered-on_` e quindi pronto per il funzionamento del modulo I/O.
+
+. Verificare che il modulo I/O sia online e riconosciuto.
++
+Inserire il comando dalla console del controller non abilitato:
+
++
+`system controller config show -node local -slot _slot_number_`
+
++
+Se il modulo I/O è stato portato online correttamente e viene riconosciuto, l'output mostra le informazioni sul modulo I/O, incluse le informazioni sulla porta per lo slot.
+
++
+Ad esempio, dovresti vedere un output simile al seguente per un modulo I/O nello slot 4:
+
++
+[listing]
+----
+node2::> system controller config show -node local -slot 4
+
+Node: node2
+Sub- Device/
+Slot slot Information
+---- ---- -----------------------------
+   4    - Dual 40G/100G Ethernet Controller CX6-DX
+                  e4a MAC Address: d0:39:ea:59:69:74 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2807GJFM-B
+                  e4b MAC Address: d0:39:ea:59:69:75 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2809G26F-A
+                  Device Type:        CX6-DX PSID(NAP0000000027)
+                  Firmware Version:   22.44.1700
+                  Part Number:        111-05341
+                  Hardware Revision:  20
+                  Serial Number:      032403001370
+----
+
+
+
+
+== Fase 5: Ripristinare il normale funzionamento del sistema di archiviazione
+
+Ripristina il tuo sistema storage al normale funzionamento restituendo lo storage al controller che era stato preso in carico (se necessario), ripristinando la restituzione automatica (se necessario), verificando che i LIF siano sulle loro porte home e riattivando la creazione automatica dei casi AutoSupport.
+
+.Fasi
+. A seconda della versione di ONTAP in esecuzione sul tuo sistema storage e dello stato dei controller, restituisci lo storage e ripristina il giveback automatico sul controller che è stato preso in carico:
++
+[cols="1,2,3"]
+|===
+| Versione di ONTAP | Se... | Quindi... 
+
+
+ a| 
+9.17.1 o 9.18.1RC
+ a| 
+Se il controller compromesso ha effettuato il takeover automatico del controller sano
+ a| 
+.. Ripristinare il normale funzionamento del controller sano restituendogli il suo storage:
++
+`storage failover giveback -ofnode _healthy_node_name_`
+
+.. Ripristina il giveback automatico dalla console del controller non funzionante:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+
+
+
+
+ a| 
+9.18.1GA o versioni successive
+ a| 
+Se uno dei due controller ha effettuato il takeover automatico del partner controller
+ a| 
+.. Ripristinare il normale funzionamento del controller che è stato sottoposto a takeover restituendone lo storage:
++
+`storage failover giveback -ofnode _controller that was taken over_name_`
+
+.. Ripristina il giveback automatico dalla console del controller che è stato preso in carico:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+
+
+
+
+ a| 
+9.18.1GA o versioni successive
+ a| 
+Entrambi i controller sono attivi e in esecuzione I/O (servendo dati)
+ a| 
+Passare alla fase successiva.
+
+|===
+. Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`
++
+Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network interface revert -vserver * -lif *`
+
+. Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+
+
+
+
+== Fase 6: Restituire la parte guasta a NetApp
+
+Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

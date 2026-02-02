@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+Per utilizzare questa procedura, il sistema storage deve eseguire ONTAP 9.18.1 GA o versione successiva e deve soddisfare tutti i requisiti.
+
+
+NOTE: Se il sistema storage non esegue ONTAP 9.18.1 GA o versione successiva, non è possibile utilizzare questa procedura, è necessario utilizzare il link:io-module-replace.html["sostituire una procedura del modulo I/O"].
+
+* Si sta eseguendo lo swap a caldo di un modulo I/O Ethernet in uno slot con qualsiasi combinazione di porte utilizzate per cluster, HA e client con un modulo I/O equivalente. Non è possibile modificare il tipo di modulo I/O.
++
+I moduli I/O Ethernet con porte utilizzate per lo storage o MetroCluster non sono hot-swappable.
+
+* Il tuo sistema storage (configurazione cluster switchless o cluster commutato) può avere qualsiasi numero di nodi supportati per il tuo sistema storage.
+* Tutti i nodi del cluster devono eseguire la stessa versione di ONTAP (ONTAP 9.18.1GA o successiva) oppure diversi livelli di patch della stessa versione di ONTAP.
++
+Se i nodi del tuo cluster eseguono versioni di ONTAP diverse, questo è considerato un cluster a versioni miste e lo swap a caldo di un modulo I/O non è supportato.
+
+
+
+* I controller nel tuo sistema storage possono trovarsi in uno dei seguenti stati:
++
+** Entrambi i controller possono essere attivi e in esecuzione I/O (servendo dati).
+** Entrambi i controller possono trovarsi in uno stato di takeover se il takeover è stato causato dal modulo I/O guasto e i nodi funzionano correttamente.
++
+In determinate situazioni, ONTAP può eseguire automaticamente un takeover di uno dei controller a causa del guasto del modulo I/O. Ad esempio, se il modulo I/O guasto conteneva tutte le porte del cluster (tutti i collegamenti del cluster su quel controller si interrompono), ONTAP esegue automaticamente un takeover.
+
+
+
+
+
+* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+

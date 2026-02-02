@@ -13,14 +13,18 @@ summary: Aggiungi un modulo i/o al sistema AFF A20, AFF A30 o AFF A50 per miglio
 [role="lead"]
 Aggiungi un modulo I/O al tuo sistema di archiviazione AFF A20, AFF A30 o AFF A50 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.
 
-È possibile aggiungere un modulo i/o ai sistemi di storage AFF A20, AFF A30 e AFF A50 quando sono disponibili slot o quando tutti gli slot sono completamente popolati.
+Il processo di aggiunta prevede lo spegnimento di un controller, l'aggiunta del nuovo modulo I/O, il riavvio del controller, lo spegnimento dell'altro controller, l'aggiunta del nuovo modulo I/O e il riavvio del controller.
 
 .A proposito di questa attività
-Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
-
+* È possibile aggiungere un modulo I/O ai sistemi storage quando ci sono slot disponibili o quando tutti gli slot sono completamente occupati.
+* Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
++
 Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
 
++
 È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+
+
 
 
 

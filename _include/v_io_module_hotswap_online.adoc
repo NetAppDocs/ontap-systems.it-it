@@ -1,0 +1,115 @@
+= 
+:allow-uri-read: 
+
+
+Portare online il modulo I/O sostitutivo, verificare che le porte del modulo I/O siano state inizializzate correttamente, verificare che lo slot sia acceso e quindi verificare che il modulo I/O sia online e riconosciuto.
+
+.A proposito di questa attività
+Dopo la sostituzione del modulo I/O e il ritorno delle porte a uno stato di funzionamento corretto, i LIF vengono ripristinati sul modulo I/O sostituito.
+
+.Fasi
+. Mettere online il modulo I/O sostitutivo:
++
+.. Immettere il seguente comando:
++
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_number_`
+
+.. Entra `y` quando vedi il messaggio _Vuoi continuare?_
++
+L'output dovrebbe confermare che il modulo I/O è stato portato online con successo (acceso, inizializzato e messo in servizio).
+
++
+Ad esempio, il seguente comando porta online lo slot 7 sul nodo 2 (il controller non funzionante) e visualizza un messaggio che indica che il processo è riuscito:
+
++
+[listing]
+----
+node2::> system controller slot module insert -node node2 -slot 7
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 7 of node node2 will be powered on and initialized.
+
+Do you want to continue? {y|n}: `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+
+
+. Verificare che ogni porta sul modulo I/O sia stata inizializzata correttamente:
++
+.. Immettere il seguente comando dalla console del controller non funzionante:
++
+`event log show -event \*hotplug.init*`
+
++
+
+NOTE: Potrebbero essere necessari alcuni minuti per eventuali aggiornamenti del firmware e per l'inizializzazione delle porte.
+
++
+L'output dovrebbe mostrare uno o più eventi EMS hotplug.init.success e  `_hotplug.init.success:_` nella  `_Event_` colonna, indicando che ciascuna porta sul modulo I/O è stata inizializzata correttamente.
+
++
+Ad esempio, il seguente output mostra che l'inizializzazione è riuscita per le porte I/O e7b ed e7a:
+
++
+[listing]
+----
+node2::> event log show -event *hotplug.init*
+
+Time                Node             Severity      Event
+
+------------------- ---------------- ------------- ---------------------------
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e7b" in slot 7 succeeded
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e7a" in slot 7 succeeded
+
+2 entries were displayed.
+----
+.. Se l'inizializzazione della porta non riesce, rivedere il registro EMS per i passaggi successivi da intraprendere.
+
+
+. Verificare che lo slot del modulo I/O sia acceso e pronto per il funzionamento:
++
+`system controller slot module show`
+
++
+L'output dovrebbe mostrare lo stato dello slot come  `_powered-on_` e quindi pronto per il funzionamento del modulo I/O.
+
+. Verificare che il modulo I/O sia online e riconosciuto.
++
+Inserire il comando dalla console del controller non abilitato:
+
++
+`system controller config show -node local -slot _slot_number_`
+
++
+Se il modulo I/O è stato portato online correttamente e viene riconosciuto, l'output mostra le informazioni sul modulo I/O, incluse le informazioni sulla porta per lo slot.
+
++
+Ad esempio, dovresti vedere un output simile al seguente per un modulo I/O nello slot 7:
+
++
+[listing]
+----
+node2::> system controller config show -node local -slot 7
+
+Node: node2
+Sub- Device/
+Slot slot Information
+---- ---- -----------------------------
+   7    - Dual 40G/100G Ethernet Controller CX6-DX
+                  e7a MAC Address: d0:39:ea:59:69:74 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2807GJFM-B
+                  e7b MAC Address: d0:39:ea:59:69:75 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2809G26F-A
+                  Device Type:        CX6-DX PSID(NAP0000000027)
+                  Firmware Version:   22.44.1700
+                  Part Number:        111-05341
+                  Hardware Revision:  20
+                  Serial Number:      032403001370
+----
+

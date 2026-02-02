@@ -19,9 +19,9 @@ I sistemi di storage AFF C30 e AFF C60 offrono flessibilità nell'espansione o n
 +
 L'aggiunta di ulteriori moduli di i/o può migliorare la ridondanza, contribuendo a garantire che il sistema di storage rimanga operativo anche in caso di guasto di un modulo di i/O.
 
-* link:io-module-hotswap-ha-slot4.html["Sostituzione a caldo di un cluster e di un modulo I/O HA"]
+* link:io-module-hotswap.html["Eseguire lo swap a caldo di un modulo I/O"]
 +
-La sostituzione a caldo di un cluster guasto e di un modulo I/O HA può ripristinare il sistema di storage al suo stato operativo ottimale. La sostituzione a caldo viene eseguita senza dover intervenire manualmente sul controller danneggiato.
+È possibile eseguire lo swap a caldo di determinati moduli I/O con un modulo I/O equivalente per ripristinare il sistema storage al suo stato operativo ottimale. Lo swap a caldo viene eseguito senza dover eseguire un takeover manuale.
 
 +
 Per utilizzare questa procedura, il sistema di archiviazione deve eseguire ONTAP 9.17.1 o versione successiva e soddisfare requisiti di sistema specifici.

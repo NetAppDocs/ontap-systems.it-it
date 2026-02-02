@@ -19,6 +19,14 @@ I sistemi AFF A70 e AFF A90 offrono la massima flessibilità nell'espansione o s
 +
 L'aggiunta di moduli aggiuntivi può migliorare la ridondanza, contribuendo a garantire che il sistema rimanga operativo anche in caso di guasto di un modulo.
 
+* link:io-module-hotswap.html["Eseguire lo swap a caldo di un modulo I/O"]
++
+È possibile eseguire lo swap a caldo di determinati moduli I/O con un modulo I/O equivalente per ripristinare il sistema storage al suo stato operativo ottimale. Lo swap a caldo viene eseguito senza dover eseguire un takeover manuale.
+
+
+
+Per utilizzare questa procedura, il sistema storage deve eseguire ONTAP 9.18.1 o versioni successive.
+
 * link:io-module-replace.html["Sostituire un modulo i/O."]
 +
 La sostituzione di un modulo i/o guasto può ripristinare il sistema allo stato operativo ottimale.
