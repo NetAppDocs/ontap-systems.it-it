@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a250, move the hardware components 
 summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il modulo controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio, quindi avviare il sistema in modalità manutenzione.' 
 ---
-= Sostituire l'hardware del modulo controller - AFF A250
+= Sostituire il controller - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Sostituisci il controller nel tuo sistema AFF A250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.
+
 Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
 
 
@@ -374,3 +376,6 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il controller A250 danneggiato, è necessario link:controller-replace-system-config-restore-and-verify.html["ripristina e verifica la configurazione del sistema"].

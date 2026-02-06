@@ -1,0 +1,29 @@
+---
+permalink: asa250/chassis-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa a250, replace the chassis 
+summary: Prima di sostituire lo chassis nel sistema ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di ricambio corretto e degli strumenti necessari. 
+---
+= Requisiti per la sostituzione del chassis - ASA A250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire lo chassis nel sistema ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di ricambio corretto e degli strumenti necessari.
+
+Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
+
+Esaminare i seguenti requisiti.
+
+* Verificare che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare per assistenza. http://mysupport.netapp.com/["Supporto NetApp"^]
+* Ottenere le credenziali di amministratore locale per ONTAP se non si dispone di tali credenziali.
+* Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
+* È possibile utilizzare la procedura di sostituzione dello chassis con tutte le versioni di ONTAP supportate dal sistema.
+* La procedura di sostituzione dello chassis viene scritta presupponendo che il pannello, i dischi NVMe e i moduli controller vengano spostati nel nuovo chassis e che lo chassis di ricambio sia un nuovo componente di NetApp.
+* La procedura di sostituzione dello chassis provoca interruzioni. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti,link:chassis-replace-prepare.html["prepararsi a sostituire il telaio"] .

@@ -1,0 +1,43 @@
+---
+permalink: fas50/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: fas50, replace the chassis 
+summary: Preparati a sostituire lo chassis guasto nel tuo sistema FAS50 identificando lo chassis guasto, verificando i componenti di ricambio ed etichettando i cavi e i moduli controller. 
+---
+= Prepararsi a sostituire il chassis - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Preparati a sostituire lo chassis guasto nel tuo sistema FAS50 identificando lo chassis guasto, verificando i componenti di ricambio ed etichettando i cavi e i moduli controller.
+
+.Fasi
+. Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.
+. Accendere il LED di posizione del controller:
++
+.. Utilizzare il `system controller location-led show` comando per visualizzare lo stato corrente del LED di posizione.
+.. Accendere il LED di posizione:
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+Il LED posizione rimane acceso per 30 minuti.
+
+
+
+. Prima di aprire la confezione, esaminare l'etichetta sulla confezione e verificare quanto segue:
++
+** Numero di parte del componente
+** Descrizione della parte
+** Quantità nella scatola
+
+
+. Rimuovere il contenuto dalla confezione e conservare l'imballaggio per restituire il componente guasto a NetApp.
+. Etichettare tutti i cavi collegati al sistema di archiviazione.  Ciò garantisce un corretto cablaggio più avanti nella procedura.
+. Collegati alla terra se non lo sei già.
+
+
+.Quali sono le prossime novità?
+Dopo esserti preparato a sostituire l'hardware del chassis FAS50, devi link:chassis-replace-shutdown.html["spegnere i controller"].

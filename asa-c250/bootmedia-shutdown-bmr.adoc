@@ -1,0 +1,82 @@
+---
+permalink: asa-c250/bootmedia-shutdown-bmr.html 
+sidebar: sidebar 
+keywords: asa c250, shut down the controller 
+summary: Arrestare il controller danneggiato nel sistema storage ASA C250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media. 
+---
+= Arrestare il controller per il ripristino automatico del boot media - ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Arresta il controller danneggiato nel tuo sistema storage ASA C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del supporto di boot.
+
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.18.1 e versioni successive. Se il sistema storage esegue una versione precedente di ONTAP, utilizzare il link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"].
+
+Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
+
+.A proposito di questa attività
+* Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento  `cluster kernel-service show`) per il blade SCSI del controller danneggiato. Il `cluster kernel-service show` comando (dalla modalità avanzata precedente) visualizza il nome del nodo, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["stato quorum"] di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.
++
+Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. Eventuali problemi devono essere risolti prima di procedere con la sostituzione.
+
+* Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].
+
+
+.Fasi
+. Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Disattiva la restituzione automatica:
++
+.. Immettere il seguente comando dalla console del controller funzionante:
++
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
+
+.. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
+
+
+. Portare la centralina danneggiata al prompt DEL CARICATORE:
++
+[cols="1,2"]
+|===
+| Se il controller non utilizzato visualizza... | Quindi... 
+
+
+ a| 
+Il prompt DEL CARICATORE
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+In attesa di un giveback...
+ a| 
+Premere Ctrl-C, quindi rispondere `y` quando richiesto.
+
+
+
+ a| 
+Prompt di sistema o prompt della password
+ a| 
+Assumere il controllo o arrestare il controller compromesso dal controller integro:
+
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
+
+|===
+
+
+.Cosa succederà
+Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].

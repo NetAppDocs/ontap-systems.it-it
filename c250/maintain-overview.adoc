@@ -1,8 +1,8 @@
 ---
 permalink: c250/maintain-overview.html 
 sidebar: sidebar 
-keywords: aff C250 maintenance, maintenance, repairing C250, repairing aff C250, replace aff C250 components, replace aff C250 components 
-summary: 'Manutenzione dell"hardware ASA C250' 
+keywords: aff c250 maintenance, maintenance, repairing c250, repairing aff c250, replace aff c250 components, replace aff c250 components 
+summary: 'Mantieni l"hardware AFF C250' 
 ---
 = Manutenzione dell'hardware AFF C250
 :allow-uri-read: 
@@ -11,64 +11,93 @@ summary: 'Manutenzione dell"hardware ASA C250'
 
 
 [role="lead"]
+Mantenete l'hardware del vostro sistema storage AFF C250 per garantirne l'affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, per prevenire tempi di inattività e perdite di dati.
+
+Le procedure di manutenzione presuppongono che il sistema storage AFF C250 sia già stato implementato come nodo di storage nell'ambiente ONTAP.
+
+
+
+== Componenti del sistema
+
 Per il sistema storage AFF C250, è possibile eseguire le procedure di manutenzione dei seguenti componenti.
 
+[cols="25,65"]
+|===
 
 
-== Supporto di boot
+ a| 
+link:bootmedia-replace-workflow-bmr.html["Supporto di avvio - ripristino automatico"]
+ a| 
+Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema storage utilizza per l'avvio. Durante il ripristino automatico, il sistema recupera l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di boot per installare l'immagine sul supporto di avvio sostitutivo. Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.18.1 e versioni successive. Se il sistema storage esegue una versione precedente di ONTAP, utilizzare il link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"].
 
-Il supporto di avvio memorizza un set primario e secondario di file immagine di avvio che il sistema utilizza al momento dell'avvio.
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Supporto di avvio - ripristino manuale"]
+ a| 
+Il supporto di avvio memorizza un set primario e uno secondario di file immagine ONTAP che il sistema storage utilizza per l'avvio. Durante il ripristino manuale, si avvia il sistema storage da un'unità USB e si ripristinano manualmente l'immagine e la configurazione del file system. Se il sistema storage esegue ONTAP 9.18.1 e versioni successive, utilizzare il link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"].
 
 
 
-== Chassis
-
+ a| 
+link:chassis-replace-workflow.html["Chassis"]
+ a| 
 Lo chassis è l'enclosure fisica in cui sono alloggiati tutti i componenti del controller, ad esempio l'unità controller/CPU, l'alimentatore e i/O.
 
 
 
-== Controller
-
+ a| 
+link:controller-replace-workflow.html["Controller"]
+ a| 
 Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni ONTAP.
 
 
 
-== DIMM
-
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
 È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
 
 
 
-== Disco
-
+ a| 
+link:drive-replace.html["Disco"]
+ a| 
 Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
 
 
 
-== Ventola
-
+ a| 
+link:fan-replace.html["Ventola"]
+ a| 
 La ventola raffredda il controller.
 
 
 
-== Scheda mezzanino
-
-Una scheda Mezzanine è una scheda a circuito stampato che si collega direttamente a un'altra scheda plug-in.
-
-
-
-== Batteria NVMEM
-
-Una batteria è inclusa nel controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+ a| 
+link:mezzanine-replace.html["Scheda mezzanino"]
+ a| 
+La scheda Mezzanine è un circuito stampato che si collega direttamente a un'altra scheda plug-in.
 
 
 
-== Alimentatore
+ a| 
+link:nvmem-nvram-battery-replace.html["Batteria NVMEM"]
+ a| 
+La batteria NVMEM è responsabile della conservazione dei dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
 
+
+
+ a| 
+link:power-supply-replace.html["Alimentatore"]
+ a| 
 Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
 
 
 
-== Batteria con orologio in tempo reale
-
+ a| 
+link:rtc-battery-replace.html["Batteria con orologio in tempo reale"]
+ a| 
 Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.
+
+|===

@@ -1,0 +1,173 @@
+---
+permalink: asa-c250/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: asa c250, replace the boot media 
+summary: 'Il boot media nel sistema ASA C250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del boot media danneggiato, l"installazione del boot media sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.' 
+---
+= Sostituire il boot media per il ripristino automatico dell'avvio - ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il boot media nel sistema ASA C250 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e quindi la reinstallazione del modulo controller.
+
+Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.18.1 e versioni successive. Se il sistema storage esegue una versione precedente di ONTAP, utilizzare il link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"].
+
+Il supporto di avvio si trova all'interno del modulo controller sotto il condotto dell'aria ed è accessibile rimuovendo il modulo controller dal sistema.
+
+
+
+== Fase 1: Rimuovere il modulo controller
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare gli alimentatori del modulo controller dalla fonte di alimentazione.
+. Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
+. Scollegare i cavi i/o dal modulo controller.
+. Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.
++
+
+NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare le dita di riferimento attraverso i fori all'interno (incrociando le braccia).
+
++
+image::../media/drw_a250_pcm_remove_install.png[Apertura del meccanismo di chiusura]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Leva
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Meccanismo di blocco
+
+|===
+. Con entrambe le mani, afferrare i lati del modulo controller ed estrarlo delicatamente dallo chassis e posizionare il modulo su una superficie piana e stabile.
+. Ruotare la vite a testa zigrinata sulla parte anteriore del modulo controller in senso antiorario e aprire il coperchio del modulo controller.
++
+image::../media/drw_a250_open_controller_module_cover.png[Apertura del coperchio del modulo controller]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Vite a testa zigrinata
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Coperchio del modulo controller.
+
+|===
+. Estrarre il coperchio del condotto dell'aria.
++
+image::../media/drw_a250_remove_airduct_cover.png[Sollevare il coperchio del condotto dell'aria]
+
+
+
+
+
+== Fase 2: Sostituire il supporto di avvio
+
+Per sostituire il supporto di avvio, è possibile utilizzare il seguente video o la procedura tabulare:
+
+.Animazione - sostituire il supporto di avvio
+video::7c2cad51-dd95-4b07-a903-ac5b015c1a6d[panopto]
+. Individua e sostituisci il supporto di avvio danneggiato dal modulo controller:
++
+
+NOTE: Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a croce magnetico n. 1. A causa dei limiti di spazio all'interno del modulo controller, è necessario disporre anche di un magnete per trasferire la vite in modo da non perderla.
+
++
+image::../media/drw_a250_replace_boot_media.png[Sostituzione del supporto di avvio]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Rimuovere la vite che fissa il supporto di avvio alla scheda madre nel modulo controller.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Estrarre il supporto di avvio dal modulo controller.
+
+|===
++
+.. Utilizzando il cacciavite magnetico n. 1, rimuovere la vite dal supporto di avvio compromesso e metterla da parte in modo sicuro sul magnete.
+.. Sollevare delicatamente il supporto di avvio compromesso direttamente dalla presa e metterlo da parte.
+.. Rimuovere il supporto di avvio sostitutivo dalla confezione antistatica e allinearlo in posizione sul modulo controller.
+.. Utilizzando il cacciavite magnetico n. 1, inserire e serrare la vite sul supporto di avvio.
++
+Non serrare eccessivamente la vite per evitare di danneggiare il supporto di avvio.
+
+.. Installare il condotto dell'aria.
++
+image::../media/drw_a250_install_airduct_cover.png[Installazione del condotto dell'aria]
+
+.. Chiudere il coperchio del modulo controller e serrare la vite a testa zigrinata.
++
+image::../media/drw_a250_close_controller_module_cover.png[Chiusura del coperchio del modulo controller]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Coperchio del modulo controller
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Vite a testa zigrinata
+
+|===
+
+
+. Installare il modulo controller:
++
+.. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
+.. Inserire completamente il modulo controller nello chassis:
+.. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
+.. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
++
+Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
+
+
+
+. Ricollegare i cavi i/o del modulo controller.
+. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
++
+Il modulo controller inizia l'avvio e si arresta al prompt LOADER.
+
+
+
+.Cosa succederà
+Dopo aver sostituito fisicamente i supporti di avvio danneggiati, link:bootmedia-recovery-image-boot-bmr.html["Ripristinare l'immagine ONTAP dal nodo partner"].

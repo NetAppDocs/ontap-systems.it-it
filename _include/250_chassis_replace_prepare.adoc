@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Collegare alla porta seriale della console per interfacciarsi con il sistema e monitorarlo.
+. Accendere il LED di posizione del controller:
++
+.. Utilizzare il `system controller location-led show` comando per visualizzare lo stato corrente del LED di posizione.
+.. Accendere il LED di posizione:
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+Il LED posizione rimane acceso per 30 minuti.
+
+
+
+. Prima di aprire la confezione, esaminare l'etichetta sulla confezione e verificare quanto segue:
++
+** Numero di parte del componente
+** Descrizione della parte
+** Quantità nella scatola
+
+
+. Rimuovere il contenuto dalla confezione e conservare l'imballaggio per restituire il componente guasto a NetApp.
+. Etichettare tutti i cavi collegati al sistema di archiviazione.  Ciò garantisce un corretto cablaggio più avanti nella procedura.
+. Collegati alla terra se non lo sei già.
+

@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c250, move hardware components, replace the chassis 
 summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.' 
 ---
-= Sostituire l'hardware - ASA C250
+= Sostituisci il chassis - ASA C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Sostituisci lo chassis nel tuo sistema ASA C250 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione dei dischi, l'installazione dello chassis di ricambio e la reinstallazione dei componenti dello chassis.
+
 Per sostituire lo chassis, spostare gli alimentatori, i dischi rigidi e il modulo controller dallo chassis guasto al nuovo chassis e sostituire lo chassis guasto con quello nuovo dello stesso modello dello chassis compromesso.
 
 
@@ -140,3 +142,6 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 . Ripetere i passi precedenti per installare il secondo controller nel nuovo chassis.
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il chassis ASA C250 e reinstallato i componenti, è necessario link:chassis-replace-complete-system-restore-rma.html["completare la sostituzione del telaio"]

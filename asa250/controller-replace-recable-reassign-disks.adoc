@@ -11,6 +11,8 @@ summary: È necessario riassegnare lo storage e confermare la riassegnazione del
 
 
 [role="lead"]
+Dopo aver completato il ripristino e la verifica della configurazione del sistema ASA A250, è necessario ricollegare il sistema e riassegnare i dischi.
+
 Continuare la procedura di sostituzione riassegnando lo storage e confermando la riassegnazione del disco.
 
 
@@ -144,3 +146,6 @@ dr-group-id            cluster node           configuration-state
 . Verificare che i volumi previsti siano presenti per ciascun controller: `vol show -node node-name`
 . Se al riavvio è stato disattivato il Takeover automatico, attivarlo dal controller integro: `storage failover modify -node replacement-node-name -onreboot true`
 
+
+.Quali sono le prossime novità?
+Dopo aver ricablato il sistema e riassegnato i dischi, è necessario link:controller-replace-restore-system-rma.html["completare la sostituzione della centralina"].

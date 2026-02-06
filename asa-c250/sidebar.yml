@@ -16,13 +16,30 @@ entries:
 - title: Mantenere
   pdf-filename: Manutenzione di ASA C250
   entries:
-  - title: Panoramica
+  - title: Panoramica della manutenzione
     url: "/asa-c250/maintain-overview.html"
-  - title: Supporto di boot
-    pdf-filename: Supporti di avvio di ASA C250
+  - title: Supporto di avvio - ripristino automatico
+    pdf-filename: ASA C250 Supporto di avvio automatico
     entries:
-    - title: Panoramica
-      url: "/asa-c250/bootmedia-replace-overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/asa-c250/bootmedia-replace-workflow-bmr.html"
+    - title: Verifica dei requisiti
+      url: "/asa-c250/bootmedia-replace-requirements-bmr.html"
+    - title: Arrestare il controller
+      url: "/asa-c250/bootmedia-shutdown-bmr.html"
+    - title: Sostituire il supporto di avvio
+      url: "/asa-c250/bootmedia-replace-bmr.html"
+    - title: Ripristinare l'immagine sul supporto di avvio
+      url: "/asa-c250/bootmedia-recovery-image-boot-bmr.html"
+    - title: Restituire la parte guasta a NetApp
+      url: "/asa-c250/bootmedia-complete-rma-bmr.html"
+  - title: Supporto di avvio - ripristino manuale
+    pdf-filename: Manuale Boot Media ASA C250
+    entries:
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/asa-c250/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa-c250/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
       url: "/asa-c250/bootmedia-encryption-preshutdown-checks.html"
     - title: Spegnere il controller compromesso
@@ -38,9 +55,13 @@ entries:
   - title: Chassis
     pdf-filename: Chassis ASA C250
     entries:
-    - title: Panoramica
-      url: "/asa-c250/chassis-replace-overview.html"
-    - title: Spegnere il controller compromesso
+    - title: Flusso di lavoro per la sostituzione dello chassis
+      url: "/asa-c250/chassis-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa-c250/chassis-replace-requirements.html"
+    - title: Prepararsi alla sostituzione
+      url: "/asa-c250/chassis-replace-prepare.html"
+    - title: Spegnere i controller
       url: "/asa-c250/chassis-replace-shutdown.html"
     - title: Sostituire il telaio
       url: "/asa-c250/chassis-replace-move-hardware.html"
@@ -49,8 +70,10 @@ entries:
   - title: Controller
     pdf-filename: Modulo controller ASA C250
     entries:
-    - title: Panoramica
-      url: "/asa-c250/controller-replace-overview.html"
+    - title: Workflow di sostituzione del controller
+      url: "/asa-c250/controller-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa-c250/controller-replace-requirements.html"
     - title: Spegnere il controller compromesso
       url: "/asa-c250/controller-replace-shutdown.html"
     - title: Sostituire il controller
@@ -59,7 +82,7 @@ entries:
       url: "/asa-c250/controller-replace-system-config-restore-and-verify.html"
     - title: Sistema ricable
       url: "/asa-c250/controller-replace-recable-reassign-disks.html"
-    - title: Ripristino completo del sistema
+    - title: Sostituzione completa del controller
       url: "/asa-c250/controller-replace-restore-system-rma.html"
   - title: DIMM
     url: "/asa-c250/dimm-replace.html"

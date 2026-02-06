@@ -11,6 +11,8 @@ summary: 'Dopo aver sostituito l"hardware e avviato la modalità di manutenzione
 
 
 [role="lead"]
+Dopo aver completato la sostituzione dell'hardware e aver avviato il sistema ASA C250 in modalità di manutenzione, è necessario verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
+
 Dopo aver sostituito l'hardware e avviato la modalità di manutenzione, verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.
 
 
@@ -68,3 +70,6 @@ Il valore dello stato ha può essere uno dei seguenti:
 . Se lo stato di sistema visualizzato del modulo controller non corrisponde alla configurazione di sistema, impostare `HA` stato del modulo controller: `ha-config modify controller ha-state`
 . Verificare che l'impostazione sia stata modificata: `ha-config show`
 
+
+.Quali sono le prossime novità?
+Dopo aver ripristinato e verificato la configurazione del sistema, è necessario link:controller-replace-recable-reassign-disks.html["ricollega il sistema e riassegna i dischi"].

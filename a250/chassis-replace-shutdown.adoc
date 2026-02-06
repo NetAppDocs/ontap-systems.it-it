@@ -11,6 +11,8 @@ summary: Per sostituire lo chassis, è necessario spegnere i controller.
 
 
 [role="lead"]
+Arresta i controller nel tuo sistema storage AFF A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.
+
 Questa procedura si applica ai sistemi con configurazioni a due nodi. Per ulteriori informazioni sull'arresto regolare durante la manutenzione di un cluster, vedere https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Shutdown anomalo e accendere il sistema storage System Resolution Guide - NetApp Knowledge base"].
 
 .Prima di iniziare
@@ -64,3 +66,6 @@ NOTE: Per i cluster che utilizzano SnapMirror Synchronous che operano in modalit
 
 . Attendere che ogni controller si arresti e visualizzi il prompt DEL CARICATORE.
 
+
+.Quali sono le prossime novità?
+Dopo aver spento i controller,link:chassis-replace-move-hardware.html["sostituire il telaio"] .

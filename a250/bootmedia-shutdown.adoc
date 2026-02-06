@@ -1,20 +1,24 @@
 ---
 permalink: a250/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a250, shutdown 
+keywords: aff a250, shut down the controller 
 summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
 ---
-= Spegnere il controller - AFF A250
+= Arrestare il controller per il ripristino manuale del boot media - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
+[role="lead"]
+Arresta il controller danneggiato nel tuo sistema storage AFF A250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del boot media.
+
+Se il sistema storage esegue ONTAP 9.18.1 o versione successiva, utilizzare link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"]. Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
+
 
 
 == Opzione 1: La maggior parte dei sistemi
 
-[role="lead"]
 Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
 
 .Fasi
@@ -56,9 +60,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 
 
 
-== Opzione 2: Sistemi in un MetroCluster
-
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+== Opzione 2: Il sistema è in un MetroCluster
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
@@ -105,3 +107,6 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 |===
 
+
+.Quali sono le prossime novità?
+Dopo aver spento il controller, è necessario link:bootmedia-replace.html["sostituire il supporto di avvio"].

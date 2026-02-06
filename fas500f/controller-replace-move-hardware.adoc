@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: fas500f, move the hardware components 
 summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il modulo controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio, quindi avviare il sistema in modalità manutenzione.' 
 ---
-= Sostituire l'hardware del modulo controller - FAS500f
+= Sostituire il controller - FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Sostituire il controller nel sistema FAS500f quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.
+
 Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
 
 
@@ -21,7 +23,7 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.
 
-Per sostituire un modulo controller, è possibile utilizzare il seguente video o la seguente tabella:
+Per sostituire un modulo controller, fare riferimento al seguente video o alla tabella:
 
 .Animazione - sostituire un modulo controller
 video::ab0ebe6b-e891-489c-aab4-ac5b015c8f01[panopto]
@@ -37,6 +39,7 @@ NOTE: In caso di difficoltà nella rimozione del modulo controller, posizionare 
 image::../media/drw_a250_pcm_remove_install.png[Apertura del meccanismo di chiusura]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -57,6 +60,7 @@ Meccanismo di blocco
 image::../media/drw_a250_open_controller_module_cover.png[Apertura del coperchio del modulo controller]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -92,9 +96,13 @@ Quando si sostituisce un modulo controller, è necessario spostare l'alimentator
 CAUTION: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
 
 +
+L'alimentazione è in corto. Utilizzare sempre due mani per sostenerlo durante la rimozione dal modulo controller in modo che non si sposti improvvisamente dal modulo controller e non causi lesioni.
+
++
 image::../media/drw_a250_replace_psu.png[Rimozione dell'alimentatore]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -116,7 +124,7 @@ Gli alimentatori si innestano correttamente solo con il connettore interno e si 
 
 +
 
-IMPORTANT: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema.
+CAUTION: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema.
 
 
 
@@ -131,6 +139,7 @@ Quando si sostituisce un modulo controller guasto, è necessario spostare le ven
 image::../media/drw_a250_replace_fan.png[Rimozione del modulo della ventola]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -146,15 +155,19 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 
 == Fase 4: Spostare il supporto di avvio
 
-Nel sistema AFF A250, sotto il condotto dell'aria nel modulo controller, è presente un dispositivo di avvio. È necessario spostarlo dal modulo controller compromesso al modulo controller sostitutivo.
+È necessario spostare il dispositivo multimediale di avvio dal modulo controller danneggiato al modulo controller sostitutivo.
 
 Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a croce magnetico n. 1. A causa dei limiti di spazio all'interno del modulo controller, è necessario disporre anche di un magnete per trasferire la vite in modo da non perderla.
 
 . Individuare e spostare il supporto di avvio dal modulo controller guasto al modulo controller sostitutivo.
 +
+Il supporto di avvio si trova sotto il coperchio del condotto dell'aria precedentemente rimosso in questa procedura.
+
++
 image::../media/drw_a250_replace_boot_media.png[Sostituzione del supporto di avvio]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -169,15 +182,12 @@ image:../media/icon_round_2.png["Numero di didascalia 2"]
 Estrarre il supporto di avvio dal modulo controller compromesso.
 
 |===
-+
-.. Utilizzando il cacciavite magnetico n. 1, rimuovere la vite dal supporto di avvio e metterla da parte in modo sicuro sul magnete.
-.. Sollevare delicatamente il supporto di avvio direttamente dallo zoccolo e allinearlo in posizione nel modulo controller sostitutivo.
-.. Utilizzando il cacciavite magnetico n. 1, inserire e serrare la vite sul supporto di avvio.
+. Utilizzando il cacciavite magnetico n. 1, rimuovere la vite dal supporto di avvio e metterla da parte in modo sicuro sul magnete.
+. Sollevare delicatamente il supporto di avvio direttamente dallo zoccolo e allinearlo in posizione nel modulo controller sostitutivo.
+. Utilizzando il cacciavite magnetico n. 1, inserire e serrare la vite sul supporto di avvio.
 +
 
 NOTE: Non esercitare forza durante il serraggio della vite sul supporto di avvio, poiché potrebbe rompersi.
-
-
 
 
 
@@ -190,12 +200,12 @@ Per spostare i moduli DIMM, individuarli e spostarli dal controller compromesso 
 image::../media/drw_a250_dimm_replace.png[Sostituzione dei moduli DIMM]
 
 
-IMPORTANT: Installare ciascun DIMM nello stesso slot occupato nel modulo controller guasto.
+NOTE: Installare ciascun DIMM nello stesso slot occupato nel modulo controller guasto.
 
 . Spingere lentamente le linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM ed estrarre il modulo DIMM dallo slot.
 +
 
-IMPORTANT: Tenere il modulo DIMM per i bordi per evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+NOTE: Tenere il modulo DIMM per i bordi per evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
 
 . Individuare lo slot DIMM corrispondente sul modulo controller sostitutivo.
 . Assicurarsi che le linguette di espulsione del DIMM sullo zoccolo DIMM siano aperte, quindi inserire il DIMM correttamente nello zoccolo.
@@ -217,6 +227,7 @@ Per spostare una scheda mezzanine, è necessario rimuovere il cablaggio e gli ev
 image::../media/drw_a250_replace_mezz_card.png[Rimozione della scheda mezzanine]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -269,6 +280,7 @@ Quando si sostituisce il modulo controller, è necessario spostare la batteria N
 image::../media/drw_a250_replace_nvmem_batt.png[Rimozione della batteria NVMEM]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -311,7 +323,7 @@ Estrarre la batteria dal supporto e dal modulo controller.
 
 Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
 
-Per installare il modulo controller sostitutivo nel telaio, utilizzare la seguente illustrazione o la procedura scritta.
+Per installare il modulo controller sostitutivo nel telaio, è possibile utilizzare le seguenti illustrazioni o i passaggi scritti.
 
 . Se non è già stato fatto, installare il condotto dell'aria.
 +
@@ -322,6 +334,7 @@ image::../media/drw_a250_install_airduct_cover.png[Installazione del condotto de
 image::../media/drw_a250_close_controller_module_cover.png[Chiusura del coperchio del modulo controller]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -346,16 +359,23 @@ NOTE: Non inserire completamente il modulo controller nel telaio fino a quando n
 
 NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
 
-. Inserire il modulo controller nel telaio.
-. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
-. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
-. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
-. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
-. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
+. Inserire il modulo controller nel telaio:
 +
-Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis. Prepararsi ad interrompere il processo di avvio.
-
+.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
+.. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
+.. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
+.. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
 +
 Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.
 
+.. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
++
+Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimentazione. Prepararsi ad interrompere il processo di avvio.
 
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il controller FAS500f danneggiato, è necessario link:controller-replace-system-config-restore-and-verify.html["ripristina e verifica la configurazione del sistema"].

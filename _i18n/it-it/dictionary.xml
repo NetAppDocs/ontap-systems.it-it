@@ -1548,7 +1548,6 @@
   <block id="3b1cae4630f47c8bafa2138c896b9e8d" category="list-text">Restituire il controller utilizzando<block ref="e23a9f1c6189f372292c98d844a0895f" prefix=" " category="inline-code"></block> comando</block>
   <block id="b2503ad254a75d9be517466a531e8187" category="open-title">Opzione 1: Sostituire l'SSD</block>
   <block id="3862a4353217fcdcd0118bfd4cc1c05a" category="open-title">Opzione 2: Sostituire il disco rigido</block>
-  <block id="094124db560bb515e3d41248ca00f18a" category="doc">Sostituire l'hardware - AFF C250</block>
   <block id="586424cb167133a0adfaf4650a20127e" category="paragraph">Per sostituire il telaio, utilizzare il video seguente o le istruzioni riportate in tabella; si presuppone la rimozione e la sostituzione del pannello frontale:</block>
   <block id="05abcf9139e29a0aa72cc49a536d1635" category="video-title">Animazione - Sostituzione del telaio</block>
   <block id="1f9529736c8bd4ae7629be26ea8da34d" category="list-text">Inserire l'indice nel meccanismo di blocco su entrambi i lati del modulo controller, premere la leva con il pollice ed estrarre delicatamente il controller dal telaio.</block>
@@ -1564,7 +1563,6 @@
   <block id="04dfd32abff05e80971ee43ebd97b0fe" category="list-text">Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.</block>
   <block id="004ff61696f63d2eb687e57371ce86bd" category="paragraph">Il modulo controller deve essere inserito completamente e a filo con i bordi dello chassis.</block>
   <block id="bcf7de048a0b400d784ce2434b8beffe" category="doc">Sostituire l'unità SSD - AFF C250</block>
-  <block id="3e56ae245ac8653052ca2cbe9766da4b" category="doc">Completare il processo di ripristino e sostituzione - AFF C250</block>
   <block id="9787dc0906e96e78e67df0b3f9dad9a0" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF C250</block>
   <block id="ba33da695ad96f17f79f8e49c2a7e76b" category="paragraph">È necessario rimuovere il modulo controller dallo chassis quando si sostituisce un componente all'interno del modulo controller.</block>
   <block id="334bb16405bcc7c9665f21826629b5b3" category="paragraph">Assicurarsi di etichettare i cavi in modo da conoscerne la provenienza.</block>
@@ -1698,9 +1696,7 @@
   <block id="9408ebdc06859be33efa1878274fea23" category="list-text">Far scorrere la batteria verso il basso lungo la parete laterale in lamiera fino a quando le linguette di supporto sulla parete laterale non si agganciano agli slot della batteria e il dispositivo di chiusura della batteria si aggancia e scatta nell'apertura sulla parete laterale.</block>
   <block id="c15d5bd70b2d2916c8a2d8529a1414bb" category="list-text">Premere con decisione la batteria per assicurarsi che sia bloccata in posizione.</block>
   <block id="1ce77f487e28076022ddc7ec80345c1a" category="paragraph">Per installare il modulo controller sostitutivo nel telaio, utilizzare la seguente illustrazione o la procedura scritta.</block>
-  <block id="bc845a0c4e457ee657740a9be626eafa" category="doc">Ripristino completo del sistema - AFF C250</block>
   <block id="2ac1e9cd887b50e321ead7a3e6beab55" category="summary">Per sostituire l'hardware del modulo controller, è necessario rimuovere il modulo controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio, quindi avviare il sistema in modalità manutenzione.</block>
-  <block id="094570163b0febbd13eb031d12659f04" category="doc">Sostituire l'hardware del modulo controller - AFF C250</block>
   <block id="8ebd201c2b1ccf04603b91e8657dad2b" category="paragraph">Per sostituire un modulo controller, fare riferimento al seguente video o alla tabella:</block>
   <block id="b1dcdb6adb57e57f0ddb5a9240cca41f" category="video-title">Animazione - sostituire un modulo controller</block>
   <block id="46dc7a6019d827f81ffce7b535eb038e" category="section-title">Fase 2: Spostare l'alimentatore</block>
@@ -1739,19 +1735,12 @@
   <block id="f46f944e351f8b92e40c3308318738a3" category="list-text">mcc</block>
   <block id="32b858596eeb9351eca27c2906a21da4" category="list-text">mccip</block>
   <block id="524b78f7770e94479dc70b1b445c5cf3" category="list-text">non ha</block>
-  <block id="528ac168c6accb2201fcbf9a5baff8a0" category="doc">Panoramica sulla sostituzione dei supporti di avvio - AFF C250</block>
-  <block id="d3756853c8e6da5920108eeb1441fe5d" category="paragraph">Il supporto di avvio memorizza un set primario e secondario di file di sistema (immagine di avvio) che il sistema utilizza al momento dell'avvio.</block>
-  <block id="78929efae941c9a4e2fc6993c4c10c4e" category="paragraph">È necessario disporre di un'unità flash USB, formattata in MBR/FAT32, con la quantità di storage appropriata per contenere<block ref="c70b112e1b022bd450e0790d8615c85a" prefix=" " category="inline-code"></block> file.</block>
-  <block id="6ecaf183574ece325cced3bb483dfdf9" category="list-text">Il nodo _alterato_ è il controller su cui si esegue la manutenzione.</block>
-  <block id="d5e5a42c3659480b5bd0d7fe962a3e0d" category="list-text">Il nodo _healthy_ è il partner ha del controller compromesso.</block>
   <block id="3801b936526098c0a13cec6739840593" category="doc">Possibilità di recuperare il sistema e riassegnare i dischi - AFF C250</block>
   <block id="d9d59ddb1bc0ff1000e4664413e713fe" category="list-text">Dal prompt DEL CARICATORE sul controller _replacement_, avviare il controller, immettendo<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema:</block>
   <block id="d667058635875eca097800e4379f58cd" category="doc">Passaggi rapidi - AFF C250</block>
   <block id="84918b89947f6a68e4b25fe4753c02bc" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF C250</block>
-  <block id="930fad66fb3a257a1d24f20ac59c003f" category="doc">Panoramica della sostituzione del modulo controller - AFF C250</block>
   <block id="bb948df5a06fd8fb2e2b9e9f99cc69d4" category="doc">Avviare l'immagine di ripristino - AFF C250</block>
   <block id="414efa7edc26a4a7b5a28ac4965ea178" category="list-text">Salvare le modifiche utilizzando<block ref="8d7578ebf6b1d6483a876337d887a337" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="ab8a572131275958428f9007945f684f" category="doc">Panoramica della sostituzione del telaio - AFF C250</block>
   <block id="7efc07dce9135b59eda99eab451a8d33" category="doc">Restituire il componente guasto a NetApp - AFF C250</block>
   <block id="dd33af940cfd986282d97dc9269783a9" category="summary">La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione del vecchio alimentatore e l'installazione del nuovo alimentatore, quindi il ricollegamento alla fonte di alimentazione.</block>
   <block id="1419ac825716a209020b33adb96907c3" category="video-title">Animazione - sostituire l'alimentatore</block>
@@ -1821,7 +1810,6 @@
   <block id="1e1eb097395dd5376d6e746987676ab9" category="doc">Sostituire una ventola - AFF A800</block>
   <block id="b8984f02e6cfd8c017d9d0f4737d0ac7" category="doc">Sostituire il telaio - AFF A800</block>
   <block id="2ee0c03cb33be156e12b5b33dbf8e422" category="doc">Sostituire la batteria NVDIMM - AFF A800</block>
-  <block id="fd1cff0abcf1ef0e075b330e2ee360fe" category="doc">Completare il processo di ripristino e sostituzione - AFF A800</block>
   <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">Passaggi rapidi - AFF A800</block>
   <block id="42e8099baf01da8bcc3b8362f29f317c" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF A800</block>
   <block id="9194957b9ba15b1fae65a0f5a08ad128" category="doc">Sostituire un modulo DIMM - AFF A800</block>
@@ -3048,7 +3036,6 @@
   <block id="6551c0f6e6caf0566c6eae152ecd7b38" category="doc">Sostituire il supporto di avvio - AFF A900</block>
   <block id="52ca5a52198c80398dfe6a706737b20e" category="paragraph">È necessario disporre di un'unità flash USB, formattata in FAT32, con la quantità di storage appropriata per contenere<block ref="c70b112e1b022bd450e0790d8615c85a" prefix=" " category="inline-code"></block>.</block>
   <block id="f7738a24d9355b95820a5116baee7814" category="list-text">Per la sostituzione senza interruzioni, la coppia ha non richiede la connessione a una rete per ripristinare<block ref="b2145aac704ce76dbe1ac7adac535b23" prefix=" " category="inline-code"></block> file system. La coppia ha in un singolo chassis ha una connessione e0S interna, che viene utilizzata per il trasferimento<block ref="b2145aac704ce76dbe1ac7adac535b23" prefix=" " category="inline-code"></block> configurare tra loro.</block>
-  <block id="46b673e11c982206be30f1a0d6d4bde7" category="doc">Ripristino completo del sistema - FAS500f</block>
   <block id="86dc7cd20630b2e611de506fafba9463" category="summary">Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema FAS500f.</block>
   <block id="591619e8839fdfc064f5e99d963dd15b" category="doc">Fasi dettagliate - FAS500f</block>
   <block id="3b92fecaa3772b0492ba3935a96dedea" category="paragraph">Per installare il sistema FAS500f, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
@@ -3060,16 +3047,12 @@
   <block id="fcc432315143968a857131ca40e0a000" category="list-text"><block ref="fcc432315143968a857131ca40e0a000" category="inline-link-macro-rx"></block></block>
   <block id="d800c7cb3b7de336c10f89f1d59719c6" category="list-text"><block ref="d800c7cb3b7de336c10f89f1d59719c6" category="inline-link-macro-rx"></block></block>
   <block id="9fb8ac9db9ddb949f108f678e1fa4b9d" category="doc">Spegnere i controller - FAS500f</block>
-  <block id="616af20769d44e43520152460f655603" category="doc">Spostare e sostituire l'hardware - FAS500f</block>
-  <block id="7c323e2eb49745018682c538529f7337" category="paragraph">Per sostituire lo chassis, è possibile utilizzare il seguente video o la procedura riportata in tabella; si presuppone la rimozione e la sostituzione del pannello:</block>
   <block id="bc6668cc9984ca2f625c085c1e7dbe6c" category="doc">Sostituire una ventola - FAS500f</block>
   <block id="95408ece8c23cd5f2a24760856f4819e" category="paragraph">In caso di guasto, sostituire una ventola con un nuovo modulo ventola.</block>
   <block id="20851709efa205bf63087d09e01725ff" category="paragraph">Per sostituire una ventola, è possibile utilizzare il seguente video o la procedura riportata in tabella:</block>
-  <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">Panoramica della sostituzione dello chassis - FAS500f</block>
   <block id="5bafa27d304da6702fac02a0b481992c" category="doc">Restituire la parte guasta a NetApp - FAS500f</block>
   <block id="2bf23db896fc6ece8a7fd4c8db50ab7d" category="doc">Panoramica della sostituzione del modulo controller - FAS500f</block>
   <block id="4ca27b7e1f4aad146e9ddc45f9af0410" category="doc">Spegnere il controller - FAS500f</block>
-  <block id="6730578f02ba32c4ccfb1acc3e8ab367" category="doc">Completare il processo di ripristino e sostituzione - FAS500f</block>
   <block id="bee4c56b42643842f4964906e7825545" category="summary">Questa sezione fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema.</block>
   <block id="a376b44668bb35ec353a3b762ae375c6" category="doc">Passaggi rapidi - FAS500f</block>
   <block id="139b85a2da5c2f7968fae24f14c3ed09" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di FAS500f</block>
@@ -3081,10 +3064,6 @@
   <block id="d7e9bb71d12c55787c7f0839a67057f4" category="paragraph">Per sostituire un modulo DIMM, è possibile utilizzare il seguente video o la seguente tabella:</block>
   <block id="f201ab41a4eb414e420e16dba34a7cfc" category="doc">Riscrivere il sistema e riassegnare i dischi - FAS500f</block>
   <block id="49cc582b0e041effb99494704c8f0963" category="doc">Ripristinare e verificare la configurazione di sistema - FAS500f</block>
-  <block id="609f905dd4d82082470b920d9a7de394" category="doc">Sostituire l'hardware del modulo controller - FAS500f</block>
-  <block id="2685cb32d91e3c7296420631a7066229" category="paragraph">Per sostituire un modulo controller, è possibile utilizzare il seguente video o la seguente tabella:</block>
-  <block id="631d48b6a978901aa9dd527f9e0c0de1" category="paragraph">Nel sistema AFF A250, sotto il condotto dell'aria nel modulo controller, è presente un dispositivo di avvio. È necessario spostarlo dal modulo controller compromesso al modulo controller sostitutivo.</block>
-  <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">Inserire il modulo controller nel telaio.</block>
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">Sostituire la batteria NVMEM - FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">Per sostituire la batteria NVMEM, è possibile utilizzare il seguente video o la procedura riportata in tabella:</block>
   <block id="44de44e43d612d76f985580ff643993b" category="video-title">Animazione - Installazione e configurazione di un FAS500f</block>
@@ -3096,8 +3075,6 @@
   <block id="a3bc8d1d2d48e5e2cb6973108ebf0e82" category="section-title">Opzione 1: Sostituzione di una scheda mezzanine:</block>
   <block id="5c38e69a6ad9d1c65e24e9ae13dbaa6e" category="section-title">Opzione 2: Installazione di una scheda mezzanine:</block>
   <block id="5d43aadf0265bbe861cd90a52514a118" category="list-text">Inserire il modulo controller nel telaio</block>
-  <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Sostituire il supporto di avvio - FAS500f</block>
-  <block id="67bbbac5bc6e3d667f32ac654b6a9d3a" category="paragraph">Per rimuovere la vite che tiene in posizione il supporto di avvio, è necessario un cacciavite a croce magnetico n. 1. A causa dei limiti di spazio all'interno del modulo controller, è necessario disporre anche di un magnete per trasferire la vite in modo da non allentarla.</block>
   <block id="0ce2a0e29499223b29490143e42e0e0e" category="list-text">Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione *Downloads* del sito di supporto NetApp</block>
   <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">Spegnere il controller compromesso - FAS500f</block>
   <block id="8ccd613e52111dc677242b19a2aa7a2e" category="paragraph">Per sostituire la batteria RTC, è possibile utilizzare il seguente video o la procedura riportata in tabella:</block>
@@ -3105,8 +3082,6 @@
   <block id="a81df2e570dc98493762bda80de1eb57" category="paragraph">Sollevare la batteria.</block>
   <block id="e7e4ada0a9c5f002ced547a8ce4c2ff5" category="admonition">Prendere nota della polarità della batteria.</block>
   <block id="3b9e3b1b2ab53b0241dc5867f9200f0f" category="section-title">Fase 5: Completare il processo di sostituzione</block>
-  <block id="00399cc3a07fad2f3aadfc84abd6ee65" category="doc">Panoramica sulla sostituzione dei supporti di avvio - FAS500f</block>
-  <block id="a2eee56e65b85ca98cf164fa99598b1b" category="doc">Avviare l'immagine di ripristino - FAS500f</block>
   <block id="26b459a4766f77a1bec60418a8e392d1" category="list-text">Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dall'unità flash USB:</block>
   <block id="75037510df4619ff0448fd0beadedb4d" category="paragraph"><block ref="39e68ba79c50d5de42f34bc6942ebbd3" prefix="" category="inline-code"></block></block>
   <block id="c1838f2c3da0bae81a7acbb7945a693d" category="paragraph">Cavo di rete da 10 GbE</block>
@@ -3514,37 +3489,24 @@
   <block id="e7d6ca5a4598f4102e93853e3167db4f" category="doc">Foglio di lavoro per la configurazione del cluster - FAS8200</block>
   <block id="13fa4776dd3902d644b4c8c6e4086d8d" category="doc">Sostituire la batteria dell'orologio in tempo reale - FAS8200</block>
   <block id="8351404e0633e21cf67cb22047391a59" category="doc">Panoramica sulla sostituzione dei supporti di avvio - FAS8200</block>
-  <block id="a73367a24d737b005906f745ac5c73c2" category="doc">Sostituire l'hardware - AFF A250</block>
   <block id="9f6a47c67bda21bca9bc7674dc5f2c67" category="doc">Sostituire l'unità SSD o HDD - AFF A250</block>
-  <block id="9abc3ad77a4002fd491b39b23515a992" category="doc">Completare il processo di ripristino e sostituzione - AFF A250</block>
   <block id="89df533077d1f80c319c0c00d4c58ed1" category="doc">Sostituire la batteria dell'orologio in tempo reale - AFF A250</block>
   <block id="aa180b05de0eee653f89c2d190680947" category="summary">Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema AFF A250.</block>
   <block id="ecdf5c8847c01f217fee685736ae0644" category="doc">Fasi dettagliate - AFF A250</block>
   <block id="bf34833ec8e983c1342c0fbebc12c347" category="paragraph">Per installare il sistema AFF A250, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
   <block id="233527e56f38be60ebacfaf00ed45f11" category="doc">Sostituire un modulo DIMM - AFF A250</block>
   <block id="378800f87f8ce5df58c49fa6bb4199e0" category="doc">Sostituire o installare una scheda mezzanine - AFF A250</block>
-  <block id="d23cbe6becf6b71df8e4c820a09aed00" category="doc">Sostituire il supporto di avvio - AFF A250</block>
   <block id="6b2635d59c8fd6836326288e507b4512" category="doc">Sostituire la batteria NVMEM - AFF A250</block>
-  <block id="1f684a558f672dca1e5cd104fa082470" category="doc">Ripristino completo del sistema - AFF A250</block>
-  <block id="9bd3c449bc91b7e2a90bbc21bfbd5dcb" category="doc">Sostituire l'hardware del modulo controller - AFF A250</block>
   <block id="a9e112cc517e6c981e497345e5bf1e91" category="doc">Ripristinare e verificare la configurazione del sistema - AFF A250</block>
-  <block id="fa0985de926ce301def780548b1def1b" category="doc">Panoramica sulla sostituzione dei supporti di avvio - AFF A250</block>
   <block id="bc79dc3537b9e69ed2f995a703258726" category="doc">Ricable the system and reassign disks - AFF A250</block>
   <block id="86f44362d6c66d2da3785180e12a0bd3" category="doc">Passaggi rapidi - AFF A250</block>
   <block id="687423a0d05ad428110ae922c0e5d086" category="inline-link-macro">Istruzioni per l'installazione e la configurazione di AFF A250</block>
-  <block id="7f7c331124950f9557fc856947e5c42f" category="doc">Panoramica della sostituzione del modulo controller - AFF A250</block>
-  <block id="5e6435d148cbdc8c0269f95c1ec7b442" category="doc">Avviare l'immagine di ripristino - AFF A250</block>
-  <block id="894589cfca213bee046082fa6b4377ea" category="doc">Panoramica della sostituzione dello chassis - AFF A250</block>
-  <block id="90c199012ac637bad1cb7c2a835f5acd" category="doc">Restituire il componente guasto a NetApp - AFF A250</block>
-  <block id="19a7bfc2c20931ac9f3593ce3f8c7632" category="paragraph">Per sostituire l'alimentatore, utilizzare il seguente video o la procedura indicata in tabella:</block>
-  <block id="a2528ca750816c5cbcc2ab1df78a8eb6" category="video-title">Animazione - sostituire l'alimentatore CA</block>
   <block id="965cc3fcca40fe72903f2bf567787bd9" category="list-text">Ricollegare il cavo di alimentazione all'alimentatore.</block>
   <block id="81118bbf4dc8e737a15cb33e309d5928" category="list-text">Svitare il connettore del cavo di alimentazione CC D-SUB utilizzando le viti a testa zigrinata sulla spina.</block>
   <block id="a11fffebed2ec4e6399a05866d830825" category="list-text">Scollegare il cavo di alimentazione dall'alimentatore e metterlo da parte.</block>
   <block id="1c64f1c5688ce9bb74294cc4d2c9a9f1" category="video-title">Animazione - Installazione e configurazione di un sistema AFF A250</block>
   <block id="b0a5349e52bfc1b486c0f4bb7f8c6b18" category="doc">Spegnere i controller - AFF A250</block>
   <block id="d79b377e4ffb63d9f7bc2cd5de1e04de" category="doc">Spegnere il modulo controller guasto - AFF A250</block>
-  <block id="a99f211848e0a3fa987df05f364dcc0b" category="doc">Spegnere il controller - AFF A250</block>
   <block id="9c352024a81fccd1d1663e4b4f18ac5b" category="list-text"><block ref="9c352024a81fccd1d1663e4b4f18ac5b" category="inline-link-macro-rx"></block></block>
   <block id="bbe3d192a877942589d158cec251063f" category="list-text"><block ref="bbe3d192a877942589d158cec251063f" category="inline-link-macro-rx"></block></block>
   <block id="b08dcca279bedeebb1e6f621d1a5afa2" category="list-text"><block ref="b08dcca279bedeebb1e6f621d1a5afa2" category="inline-link-macro-rx"></block></block>
@@ -5347,7 +5309,6 @@
   <block id="368d641430dae2b0a8c7c2bf6311587d" category="sidebar">Sistemi AFF C250</block>
   <block id="5f4343bc91f5884e913fac7fc5ef6879" category="sidebar">Installazione e configurazione di AFF C250</block>
   <block id="6ab6fba62ccec79ff36ba3c0657af4ae" category="sidebar">Manutenzione di AFF C250</block>
-  <block id="6d7295bb011b88dfff81fa24b83caee3" category="sidebar">Supporti di avvio AFF C250</block>
   <block id="c200941f98f365b1ea223e9b5017435c" category="sidebar">Chassis AFF C250</block>
   <block id="c9ce06c68e758edf256ecf0855912d40" category="sidebar">Modulo controller AFF C250</block>
   <block id="7990706983b7a68de799c5164d608a30" category="sidebar">Sistemi AFF A800</block>
@@ -5405,7 +5366,6 @@
   <block id="6068fc2d3e06aeff53e2c84fd7bd9e9e" category="sidebar">Sistemi FAS500f</block>
   <block id="d8763c6ad52728ece5b2ff77bdb94ed2" category="sidebar">Installazione e configurazione di FAS500f</block>
   <block id="5e2a7c08e7cea15db838b2247d53da3d" category="sidebar">Manutenzione di FAS500f</block>
-  <block id="99a0f2a0385a7c26466f0963e96a5e90" category="sidebar">FAS500f Boot Media</block>
   <block id="a4e277f1042cc621d82a2ce9d8c30a6a" category="sidebar">Chassis FAS500f</block>
   <block id="f3faf138ac95d5847a382cb22f207809" category="sidebar">Modulo controller FAS500f</block>
   <block id="af3b1c3faa9bccc5b975d147d144033d" category="sidebar">Sistemi FAS9000</block>
@@ -5433,7 +5393,6 @@
   <block id="e7fe78f29d2a12982128aa007f6851a6" category="sidebar">Sistemi AFF A250</block>
   <block id="0505c366cf2aa05ef59b3b78f4e74a9f" category="sidebar">Installazione e configurazione di AFF A250</block>
   <block id="18733d6bd4b969f880747fde25a787be" category="sidebar">Manutenzione di AFF A250</block>
-  <block id="3bae9e1248f1827df28a94293f7613f5" category="sidebar">Supporti per l'avvio AFF A250</block>
   <block id="7c4917c12bc64c4c22d36e1f3c4a8c83" category="sidebar">Chassis AFF A250</block>
   <block id="27e745fa8342230d66bb4e9be8316462" category="sidebar">Modulo controller A250 AFF</block>
   <block id="8f7cc2c7f8ea66405c4805e7ebc09f8f" category="sidebar">Sistemi AFF A150</block>
@@ -5980,35 +5939,28 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="cef403fe8ffcaa9e4b76963ad5fbdfd9" category="doc">Fasi dettagliate - ASA A250</block>
   <block id="ae1e0afe4c210d63eb5e26ded871bc01" category="paragraph">Questa pagina fornisce istruzioni dettagliate per l'installazione di un sistema ASA A250.</block>
   <block id="68fd5ab999461d243b31a922d1452997" category="paragraph">Per installare il sistema, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.</block>
-  <block id="ecb0c9eab141b978f65ad2401df5804b" category="doc">Sostituire il controller - ASA A250</block>
   <block id="2fe8ccbf6f953c42d3accff471020e04" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA A250</block>
   <block id="c7c6a415741d25a1278e3b2feb7ce81f" category="doc">Sostituire una ventola - ASA A250</block>
-  <block id="cfeadcdc6bfe2b6d3f60304f963848e7" category="doc">Panoramica della sostituzione dello chassis - ASA A250</block>
   <block id="657629aaa4f6eab92ab35b33457b8eb6" category="doc">Ricable the system and reassign disks - ASA A250</block>
   <block id="671f9966e0181f08744e85f7b6d01d05" category="summary">Manutenzione dell'hardware ASA A250</block>
   <block id="8e7a33c44e49f9b5c0e2db2d78219211" category="doc">Manutenzione dell'hardware ASA A250</block>
   <block id="63c77f3bd33a61dbe342def54e1aaf5b" category="paragraph">Per il sistema storage ASA A250, è possibile eseguire le procedure di manutenzione dei seguenti componenti.</block>
   <block id="84fba8bc1002a05a2e1bc0df39a0d311" category="section-title">Batteria NVEM</block>
-  <block id="290bd37a39561a18b23a42421cfcf3ee" category="doc">Panoramica della sostituzione del modulo controller - ASA A250</block>
   <block id="943cbde5eb2522f265b1edf4f60529fd" category="doc">Spegnere i controller - ASA A250</block>
   <block id="fa26ab686e2bca1aebda5034632821e5" category="doc">Sostituire la batteria NVMEM - ASA A250</block>
   <block id="b7a0d897933205e6e22755b6d3ed6203" category="list-text"><block ref="b7a0d897933205e6e22755b6d3ed6203" category="inline-link-macro-rx"></block></block>
   <block id="da918dba24d0605714c5840469413769" category="list-text"><block ref="da918dba24d0605714c5840469413769" category="inline-link-macro-rx"></block></block>
   <block id="2b55ecb41a48bac54ca526b7855130de" category="list-text"><block ref="2b55ecb41a48bac54ca526b7855130de" category="inline-link-macro-rx"></block></block>
   <block id="cd6cad2927af0a8738645aef0eddfef3" category="doc">Sostituire un modulo DIMM - ASA A250</block>
-  <block id="d649204274d2da7722da732bfeda71c3" category="doc">Panoramica e requisiti ASA A250</block>
   <block id="a73823d14db47bd43fd209723a8a0f78" category="doc">Ripristinare e verificare la configurazione del sistema - ASA A250</block>
   <block id="e6f6041e49a048399457259bb308d074" category="admonition">Il sistema ASA A250 utilizza la stessa procedura di installazione del sistema AFF A250.</block>
-  <block id="65874038049e4c1254e182578d50f9a6" category="doc">Ripristino completo del sistema - ASA A250</block>
   <block id="247ba1eaff46a863c502ad82319286c6" category="doc">Spegnere il controller - ASA A250</block>
   <block id="465964d20433e41566b91166a85bfb9b" category="doc">Sostituire o installare una scheda mezzanine - ASA A250</block>
   <block id="a39762cd74723b77dcf23c044ca6cfb1" category="doc">Sostituire l'unità SSD o HDD - ASA A250</block>
   <block id="e0510602c19834e8bc265ba7efeba84d" category="doc">Avviare l'immagine di ripristino - ASA A250</block>
   <block id="b02afbe9444685afbe9c40a3fc3c120a" category="doc">Restituire il componente guasto a NetApp - ASA A250</block>
-  <block id="87583399052bb43b32e2c2ad22bb4fa4" category="doc">Sostituire lo chassis - ASA A250</block>
   <block id="469cc6ed74facdc4a5f00ee2787d50a2" category="doc">Passaggi rapidi - ASA A250</block>
   <block id="af966cb104df88d3a5fee466b27600cb" category="paragraph">Questa pagina fornisce istruzioni grafiche per un'installazione tipica del sistema, dalla scaffalatura al cablaggio, fino alla visualizzazione iniziale del sistema. Utilizzare questa guida se si ha familiarità con l'installazione dei sistemi NetApp.</block>
-  <block id="8a1d49f42ab77901ac11f0fbf079fe20" category="doc">Completare il processo di ripristino e sostituzione - ASA A250</block>
   <block id="832db81167fd84efee6f2f1426f0d945" category="doc">Spegnere il modulo controller guasto - ASA A250</block>
   <block id="e31f48aed610f4dfc632dee37773ef46" category="section-title">Fase 7: Ripristinare il funzionamento del modulo controller</block>
   <block id="4de03bc95ff205a87859998054c21b43" category="paragraph">Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio.</block>
@@ -6378,7 +6330,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="04174ca16933f190c875156d1c865a6f" category="sidebar">Sistemi ASA A250</block>
   <block id="49cad51c2467ab7a48a5a714a6b702f9" category="sidebar">Installazione e configurazione di ASA A250</block>
   <block id="25bbddb4969df355fec42d7f4381dc50" category="sidebar">Manutenzione di ASA A250</block>
-  <block id="084056583ff04c6f735927c47a55242a" category="sidebar">Supporti per l'avvio ASA A250</block>
   <block id="b28accc3473c73d477b9844ebb9c7c59" category="sidebar">Chassis ASA A250</block>
   <block id="ddc6f1ed71d96b491a0e5bcf24219048" category="sidebar">Modulo controller A250 ASA</block>
   <block id="40b375b6007e5a697e97e419f1fb91c5" category="sidebar">Sostituzione completa del controller</block>
@@ -6568,23 +6519,16 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d86ad8650b661d28cc2d4ab2c5649c4a" category="doc">Restituire il componente guasto a NetApp - ASA C250</block>
   <block id="bcf1e5f5ec2f5fa0fb4df4081483cf5a" category="doc">Gestire l'hardware ASA C250</block>
   <block id="d856c63691d6118cb3531626f4c662b5" category="paragraph">Per il sistema di archiviazione ASA C250, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
-  <block id="778936817303ec79ea5a4c275ed17135" category="doc">Panoramica della sostituzione del telaio - ASA C250</block>
   <block id="706f40f792c3dab367a62e0d94e461ee" category="doc">Sostituire o installare una scheda mezzanine - ASA C250</block>
   <block id="8336f1f72044234f7e63ccadc716be3d" category="doc">Sostituire un modulo DIMM - ASA C250</block>
   <block id="bc2311b6a715da1a660ee0a9afd2016e" category="doc">Sostituire il supporto di avvio - ASA C250</block>
   <block id="7171d5f82a6b13d62d4f7f70326df021" category="doc">Spegnere il modulo controller danneggiato - ASA C250</block>
-  <block id="b4609e09d3094c196af6ccbdb8c9afbf" category="doc">Panoramica della sostituzione del modulo controller - ASA C250</block>
-  <block id="13a410359da23b13900f5c285e105e81" category="doc">Sostituire l'hardware del modulo controller - ASA C250</block>
   <block id="0c85f60a3a546be806bd89d1770b2cdb" category="doc">Sostituire l'unità SSD o l'unità HDD - ASA C250</block>
-  <block id="363dbb7bd38c3746663861884552a6ca" category="doc">Panoramica sulla sostituzione dei supporti di avvio - ASA C250</block>
-  <block id="43e2c8d81f6919e7565affdd6dcb959f" category="doc">Ripristino completo del sistema - ASA C250</block>
   <block id="d4990258d82ec1b42d1a3f07bbdd9d8c" category="doc">Spegnere il controller - ASA C250</block>
   <block id="e6b4abf5b92977063300e1d579857b79" category="doc">Possibilità di recuperare il sistema e di riassegnare i dischi - ASA C250</block>
-  <block id="12e315d8c52faa94677b1901adfb8eb4" category="doc">Sostituire l'hardware - ASA C250</block>
   <block id="e6d96f81a26c1a2a35065ae9c3793837" category="doc">Sostituire la batteria NVMEM - ASA C250</block>
   <block id="7382bde7f210f74c2e89d6849d2c853c" category="doc">Sostituire la batteria dell'orologio in tempo reale - ASA C250</block>
   <block id="d39ab7984d0a9959c51323b1566d39fd" category="doc">Ripristinare e verificare la configurazione di sistema - ASA C250</block>
-  <block id="4011a7882485055cdc06ec93e7092124" category="doc">Completare il processo di ripristino e sostituzione - ASA C250</block>
   <block id="65cdd5bec4dba0253649d58817a20251" category="summary">Questa sezione fornisce istruzioni dettagliate dettagliate per l'installazione di un sistema ASA C250.</block>
   <block id="96aa7639aa86f7fa2dc06bc23ab17535" category="doc">Procedura dettagliata - ASA C250</block>
   <block id="6f986992e70a8e97c82b44d5221b88bd" category="doc">Avviare l'immagine di ripristino - ASA C250</block>
@@ -6645,7 +6589,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="47bbce6e33bd7d62fd92094dd6a0818b" category="sidebar">Sistemi ASA C250</block>
   <block id="07b2916c602e93a800620d6a7f3da559" category="sidebar">Installazione e configurazione di ASA C250</block>
   <block id="1dd94b2bf84735727f2fca5364f3b083" category="sidebar">Manutenzione di ASA C250</block>
-  <block id="2353e9e67ec4eecfe39f1b7cc0ebfc1d" category="sidebar">Supporti di avvio di ASA C250</block>
   <block id="194ead111a8c6fa1777a5e82a7f91b2f" category="sidebar">Chassis ASA C250</block>
   <block id="f625798c697d484421b27bd2637a4a66" category="sidebar">Modulo controller ASA C250</block>
   <block id="f52cc0c002eb630b3aee28324fd8a0a0" category="sidebar">Sistemi ASA C800</block>
@@ -6831,9 +6774,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8c06a9afcd20cc8675f878a8e07e16ab" category="list-text">FAS8020, FAS8040, FAS8060, FAS8080</block>
   <block id="335755c0e7b53572be7e9a663d297e47" category="list-text">FAS2520, FAS2552, FAS2554</block>
   <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="cell">Switch</block>
-  <block id="e29dd9091577ef2b7d9c9828cd5407af" category="paragraph">Interruttore NetApp CN1610</block>
-  <block id="a8495ee8f8ba70ddce083c14b317a765" category="list-text">Cisco 5596UP</block>
-  <block id="4249daf52cc9869f5f0eb05a465153b6" category="list-text">Cisco 5596T</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">Informazioni correlate</block>
   <block id="23c35b2f23dd1a2d9d32a286f986b138" category="inline-link">Switch Ethernet Cisco supportati</block>
   <block id="01be3333cdb9fcee786cd82fd72188b1" category="list-text"><block ref="01be3333cdb9fcee786cd82fd72188b1" category="inline-link-rx"></block></block>
@@ -12812,7 +12752,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e09cb2a2e64a5d832ba5d49e4e865a30" category="list-text"><block ref="e09cb2a2e64a5d832ba5d49e4e865a30" category="inline-link-macro-rx"></block></block>
   <block id="ff4bfcae1e1da91372a5829a16edc994" category="list-text"><block ref="ff4bfcae1e1da91372a5829a16edc994" category="inline-link-macro-rx"></block></block>
   <block id="6d9a0b4c551443ef1617138b26975f75" category="list-text"><block ref="6d9a0b4c551443ef1617138b26975f75" category="inline-link-macro-rx"></block></block>
-  <block id="61d4fa9f3a7a7b48b899782661dcf10a" category="list-text"><block ref="61d4fa9f3a7a7b48b899782661dcf10a" category="inline-link-macro-rx"></block></block>
   <block id="e05ae7b3c1ea0c4153454992df283638" category="list-text"><block ref="e05ae7b3c1ea0c4153454992df283638" category="inline-link-macro-rx"></block></block>
   <block id="3323ee5bbd1e10d12ef056c6602c4368" category="list-text"><block ref="3323ee5bbd1e10d12ef056c6602c4368" category="inline-link-macro-rx"></block></block>
   <block id="0c8dcfc51fab6518904d4a9c8dd58ccd" category="list-text"><block ref="0c8dcfc51fab6518904d4a9c8dd58ccd" category="inline-link-macro-rx"></block></block>
@@ -12822,7 +12761,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="261215f462a5d4db139c818d7d5917e9" category="list-text"><block ref="261215f462a5d4db139c818d7d5917e9" category="inline-link-macro-rx"></block></block>
   <block id="bc8bddc504e3921f85730569fc161778" category="list-text"><block ref="bc8bddc504e3921f85730569fc161778" category="inline-link-macro-rx"></block></block>
   <block id="653f11558faddfa010a75c3ab3825624" category="list-text"><block ref="653f11558faddfa010a75c3ab3825624" category="inline-link-macro-rx"></block></block>
-  <block id="47d7aa17e769c611eaa49d50da1dab2d" category="list-text"><block ref="47d7aa17e769c611eaa49d50da1dab2d" category="inline-link-macro-rx"></block></block>
   <block id="79a9e4dde6ab9763d048b83654d43600" category="list-text"><block ref="79a9e4dde6ab9763d048b83654d43600" category="inline-link-macro-rx"></block></block>
   <block id="5f12d608dc53d64ec0714cf4d35d62ee" category="list-text"><block ref="5f12d608dc53d64ec0714cf4d35d62ee" category="inline-link-macro-rx"></block></block>
   <block id="23a041dd87a713dee9105dd99e3ba37a" category="list-text"><block ref="23a041dd87a713dee9105dd99e3ba37a" category="inline-link-macro-rx"></block></block>
@@ -12837,7 +12775,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9d36794c414563cecd35514d783b97ba" category="list-text"><block ref="9d36794c414563cecd35514d783b97ba" category="inline-link-macro-rx"></block></block>
   <block id="c456cee055923b032ad9ec4fdb29058e" category="list-text"><block ref="c456cee055923b032ad9ec4fdb29058e" category="inline-link-macro-rx"></block></block>
   <block id="c5eac2a8312a45e6735c3716fb38bd0c" category="list-text"><block ref="c5eac2a8312a45e6735c3716fb38bd0c" category="inline-link-macro-rx"></block></block>
-  <block id="7eec148129b3c6afbd4850759ee06de0" category="list-text"><block ref="7eec148129b3c6afbd4850759ee06de0" category="inline-link-macro-rx"></block></block>
   <block id="620c442cb997b38308433f2b9438c08c" category="list-text"><block ref="620c442cb997b38308433f2b9438c08c" category="inline-link-macro-rx"></block></block>
   <block id="13873f00f26fa5d25e8ead4cf6171737" category="list-text"><block ref="13873f00f26fa5d25e8ead4cf6171737" category="inline-link-macro-rx"></block></block>
   <block id="9ebeb8ef6223987543e3dfcc68e080c5" category="list-text"><block ref="9ebeb8ef6223987543e3dfcc68e080c5" category="inline-link-macro-rx"></block></block>
@@ -12850,7 +12787,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2522b6ccbd53098c083c8d98e0f9467b" category="list-text"><block ref="2522b6ccbd53098c083c8d98e0f9467b" category="inline-link-macro-rx"></block></block>
   <block id="dfd10f3473c656275329ec0e96e56c33" category="list-text"><block ref="dfd10f3473c656275329ec0e96e56c33" category="inline-link-macro-rx"></block></block>
   <block id="fb0137952b0317febe08d8e945d5fa7a" category="list-text"><block ref="fb0137952b0317febe08d8e945d5fa7a" category="inline-link-macro-rx"></block></block>
-  <block id="e2bf1f4d6c1514761eefe024f0750dc1" category="list-text"><block ref="e2bf1f4d6c1514761eefe024f0750dc1" category="inline-link-macro-rx"></block></block>
   <block id="3bbdda55ce1e81bc8f185ac07f194fd6" category="list-text"><block ref="3bbdda55ce1e81bc8f185ac07f194fd6" category="inline-link-macro-rx"></block></block>
   <block id="7998d34e9c49d8c01d4b66a5c277d37a" category="list-text"><block ref="7998d34e9c49d8c01d4b66a5c277d37a" category="inline-link-macro-rx"></block></block>
   <block id="562ba6baba5e9d2f0da008ad8de30e1d" category="list-text"><block ref="562ba6baba5e9d2f0da008ad8de30e1d" category="inline-link-macro-rx"></block></block>
@@ -12879,7 +12815,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="39af9e6c26414a032ade2fadf211af38" category="list-text"><block ref="39af9e6c26414a032ade2fadf211af38" category="inline-link-macro-rx"></block></block>
   <block id="61f84ee64f264820c014ce8c41c72fe8" category="list-text"><block ref="61f84ee64f264820c014ce8c41c72fe8" category="inline-link-macro-rx"></block></block>
   <block id="e89a4ca5833791765ec628c8949df314" category="list-text"><block ref="e89a4ca5833791765ec628c8949df314" category="inline-link-macro-rx"></block></block>
-  <block id="27d3e3ff12d4b178d0bc5d187a76cfe5" category="list-text"><block ref="27d3e3ff12d4b178d0bc5d187a76cfe5" category="inline-link-macro-rx"></block></block>
   <block id="275e238c8c488cd788182e16de8f8d18" category="list-text"><block ref="275e238c8c488cd788182e16de8f8d18" category="inline-link-macro-rx"></block></block>
   <block id="887671506984a347fc2bb90850eccac4" category="list-text"><block ref="887671506984a347fc2bb90850eccac4" category="inline-link-macro-rx"></block></block>
   <block id="f89fae77e712db915e5c4f5899f9dc90" category="list-text"><block ref="f89fae77e712db915e5c4f5899f9dc90" category="inline-link-macro-rx"></block></block>
@@ -12887,19 +12822,15 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="bcb3d11de31ace3af18f7f575560fad0" category="list-text"><block ref="bcb3d11de31ace3af18f7f575560fad0" category="inline-link-macro-rx"></block></block>
   <block id="4fb3a37ea6a8bf216a7a7ff9ed43a0bc" category="list-text"><block ref="4fb3a37ea6a8bf216a7a7ff9ed43a0bc" category="inline-link-macro-rx"></block></block>
   <block id="389571f23e645f55137b0c744a724b29" category="list-text"><block ref="389571f23e645f55137b0c744a724b29" category="inline-link-macro-rx"></block></block>
-  <block id="01fb5d600feb973e6df3173c64f3a198" category="list-text"><block ref="01fb5d600feb973e6df3173c64f3a198" category="inline-link-macro-rx"></block></block>
   <block id="6431f05b1242b5f32378ef62d266c798" category="list-text"><block ref="6431f05b1242b5f32378ef62d266c798" category="inline-link-macro-rx"></block></block>
   <block id="3021891faee4fde9067d94377729f785" category="list-text"><block ref="3021891faee4fde9067d94377729f785" category="inline-link-macro-rx"></block></block>
   <block id="0457c9709948ef27324c936bd420f69a" category="list-text"><block ref="0457c9709948ef27324c936bd420f69a" category="inline-link-macro-rx"></block></block>
   <block id="4703cf7610a24c32062a5258bc53ee8e" category="list-text"><block ref="4703cf7610a24c32062a5258bc53ee8e" category="inline-link-macro-rx"></block></block>
-  <block id="37bf7febe6d710ccb6b01eaa16d4abed" category="list-text"><block ref="37bf7febe6d710ccb6b01eaa16d4abed" category="inline-link-macro-rx"></block></block>
-  <block id="634a4b84bba737c2869a94edc155749b" category="list-text"><block ref="634a4b84bba737c2869a94edc155749b" category="inline-link-macro-rx"></block></block>
   <block id="2e1190705587bc5d69188be8d441c21a" category="list-text"><block ref="2e1190705587bc5d69188be8d441c21a" category="inline-link-macro-rx"></block></block>
   <block id="caac5e8e53dadcc0cf395f3fed6aa0d2" category="list-text"><block ref="caac5e8e53dadcc0cf395f3fed6aa0d2" category="inline-link-macro-rx"></block></block>
   <block id="bd5b1e86a29aef36e6e499c3e57069b9" category="list-text"><block ref="bd5b1e86a29aef36e6e499c3e57069b9" category="inline-link-macro-rx"></block></block>
   <block id="26618a408ce26e97bc2d109a161d3b80" category="list-text"><block ref="26618a408ce26e97bc2d109a161d3b80" category="inline-link-macro-rx"></block></block>
   <block id="7db41139e1008b4583c7fd13af1b0a19" category="list-text"><block ref="7db41139e1008b4583c7fd13af1b0a19" category="inline-link-macro-rx"></block></block>
-  <block id="4e289b7dfd9e57d60afa512d08a5b22c" category="list-text"><block ref="4e289b7dfd9e57d60afa512d08a5b22c" category="inline-link-macro-rx"></block></block>
   <block id="3e5eb04329f564a2e736e6e39826f7f0" category="list-text"><block ref="3e5eb04329f564a2e736e6e39826f7f0" category="inline-link-macro-rx"></block></block>
   <block id="e5340bb51df7255f8d917738c89e9ea2" category="list-text"><block ref="e5340bb51df7255f8d917738c89e9ea2" category="inline-link-macro-rx"></block></block>
   <block id="5f82ce451d0ee17094c1f6f2d3f735eb" category="list-text"><block ref="5f82ce451d0ee17094c1f6f2d3f735eb" category="inline-link-macro-rx"></block></block>
@@ -12914,7 +12845,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="34857cfe5244389bf54d3dfcd8de2578" category="list-text"><block ref="34857cfe5244389bf54d3dfcd8de2578" category="inline-link-macro-rx"></block></block>
   <block id="f4bfbdfae66e0a67d6b7d4225f7ac84f" category="list-text"><block ref="f4bfbdfae66e0a67d6b7d4225f7ac84f" category="inline-link-macro-rx"></block></block>
   <block id="5c47498d3e11ee9a57ddebd2baefb88d" category="list-text"><block ref="5c47498d3e11ee9a57ddebd2baefb88d" category="inline-link-macro-rx"></block></block>
-  <block id="2589ec0cb48b03e4582fd4e5930dd6af" category="list-text"><block ref="2589ec0cb48b03e4582fd4e5930dd6af" category="inline-link-macro-rx"></block></block>
   <block id="320b62021250ac3397d332e11199a626" category="list-text"><block ref="320b62021250ac3397d332e11199a626" category="inline-link-macro-rx"></block></block>
   <block id="891c5359e682529a1627e4999520d382" category="list-text"><block ref="891c5359e682529a1627e4999520d382" category="inline-link-macro-rx"></block></block>
   <block id="3bed913e05df4b686d188f0b1563edaf" category="list-text"><block ref="3bed913e05df4b686d188f0b1563edaf" category="inline-link-macro-rx"></block></block>
@@ -12923,15 +12853,12 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8c93358c335849a177a2b064d61fee49" category="list-text"><block ref="8c93358c335849a177a2b064d61fee49" category="inline-link-macro-rx"></block></block>
   <block id="fe7940c070c008b7384704652d68649d" category="list-text"><block ref="fe7940c070c008b7384704652d68649d" category="inline-link-macro-rx"></block></block>
   <block id="3126d2686507d95d694289ed10b84c81" category="list-text"><block ref="3126d2686507d95d694289ed10b84c81" category="inline-link-macro-rx"></block></block>
-  <block id="961e258e36c7c0498a4cd9ada2d70c28" category="list-text"><block ref="961e258e36c7c0498a4cd9ada2d70c28" category="inline-link-macro-rx"></block></block>
   <block id="22f46c8d8c23447b8b2d25ba99c89ea5" category="list-text"><block ref="22f46c8d8c23447b8b2d25ba99c89ea5" category="inline-link-macro-rx"></block></block>
   <block id="ac31af4b50ec3f45e426fed2d12a4579" category="list-text"><block ref="ac31af4b50ec3f45e426fed2d12a4579" category="inline-link-macro-rx"></block></block>
   <block id="efb4ef1a7e68e6464e2855d284715e8f" category="list-text"><block ref="efb4ef1a7e68e6464e2855d284715e8f" category="inline-link-macro-rx"></block></block>
   <block id="b9a5aa0dda2abe8c56433655233c5afe" category="list-text"><block ref="b9a5aa0dda2abe8c56433655233c5afe" category="inline-link-macro-rx"></block></block>
-  <block id="4617ca51af3e7539e1032042c8ad9ebb" category="list-text"><block ref="4617ca51af3e7539e1032042c8ad9ebb" category="inline-link-macro-rx"></block></block>
   <block id="09514b85ea6e4a26b271ee897526f719" category="list-text"><block ref="09514b85ea6e4a26b271ee897526f719" category="inline-link-macro-rx"></block></block>
   <block id="d667d10a2839d4d94c58c56f5c5f3632" category="list-text"><block ref="d667d10a2839d4d94c58c56f5c5f3632" category="inline-link-macro-rx"></block></block>
-  <block id="d363d6fa2d5b7d1a3acbba63d58ee5df" category="list-text"><block ref="d363d6fa2d5b7d1a3acbba63d58ee5df" category="inline-link-macro-rx"></block></block>
   <block id="25e9061afcbf32bd115473b789388d4a" category="list-text"><block ref="25e9061afcbf32bd115473b789388d4a" category="inline-link-macro-rx"></block></block>
   <block id="7934c4d942ff95cd60f23fa77b0f6248" category="list-text"><block ref="7934c4d942ff95cd60f23fa77b0f6248" category="inline-link-macro-rx"></block></block>
   <block id="ac8da8b52bd313ac221e71b1ea98d0fe" category="list-text"><block ref="ac8da8b52bd313ac221e71b1ea98d0fe" category="inline-link-macro-rx"></block></block>
@@ -12939,7 +12866,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="dfa7981aaa213042de69d18d113dbb70" category="list-text"><block ref="dfa7981aaa213042de69d18d113dbb70" category="inline-link-macro-rx"></block></block>
   <block id="b1c8613a464785e91bef89d1ccbd79af" category="list-text"><block ref="b1c8613a464785e91bef89d1ccbd79af" category="inline-link-macro-rx"></block></block>
   <block id="8353370ee687496a9e70ca73eadba195" category="list-text"><block ref="8353370ee687496a9e70ca73eadba195" category="inline-link-macro-rx"></block></block>
-  <block id="ec28e7e0b849b225d5bb392304d7e31c" category="list-text"><block ref="ec28e7e0b849b225d5bb392304d7e31c" category="inline-link-macro-rx"></block></block>
   <block id="f2e81baf5c47e710bdef3091d5df1390" category="list-text"><block ref="f2e81baf5c47e710bdef3091d5df1390" category="inline-link-macro-rx"></block></block>
   <block id="49c072d4a239128d83dc028820477cc2" category="list-text"><block ref="49c072d4a239128d83dc028820477cc2" category="inline-link-macro-rx"></block></block>
   <block id="3132e68710534e3087e9540fb5faecde" category="list-text"><block ref="3132e68710534e3087e9540fb5faecde" category="inline-link-macro-rx"></block></block>
@@ -13143,7 +13069,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="882d6906bbb976cfdfc65c1f27b96098" category="list-text"><block ref="882d6906bbb976cfdfc65c1f27b96098" category="inline-link-macro-rx"></block></block>
   <block id="1cf7aa1943c1b7a1ddfc0eeb8c996030" category="list-text"><block ref="1cf7aa1943c1b7a1ddfc0eeb8c996030" category="inline-link-macro-rx"></block></block>
   <block id="6dd2781f09a534f988ce250d63de5d5f" category="list-text"><block ref="6dd2781f09a534f988ce250d63de5d5f" category="inline-link-macro-rx"></block></block>
-  <block id="54dd679eba24c4709d997c50e604df73" category="list-text"><block ref="54dd679eba24c4709d997c50e604df73" category="inline-link-macro-rx"></block></block>
   <block id="3ad0b4d488ff9d235fa7d8fe35ab895a" category="list-text"><block ref="3ad0b4d488ff9d235fa7d8fe35ab895a" category="inline-link-macro-rx"></block></block>
   <block id="551c3848ca6ae1e3e23199f05a8c9122" category="list-text"><block ref="551c3848ca6ae1e3e23199f05a8c9122" category="inline-link-macro-rx"></block></block>
   <block id="c91af71b22cb5a28829ad559b294c51e" category="list-text"><block ref="c91af71b22cb5a28829ad559b294c51e" category="inline-link-macro-rx"></block></block>
@@ -13864,7 +13789,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="509770c8dda30e85db49f8642db6ca11" category="list-text">Attendi che venga visualizzato il prompt di accesso.</block>
   <block id="0e24346f9a92e6d04d57b5ccead814c3" category="list-text">Accedi al nodo e restituisci lo storage:</block>
   <block id="20d2bf4f3f943fcc1e340e99a4d368ba" category="admonition">Se il sistema non riesce a identificare la configurazione del gestore delle chiavi, visualizza un messaggio di errore e chiede di confermare se il gestore delle chiavi è configurato e di che tipo (integrato o esterno).  Rispondi alle richieste per procedere.</block>
-  <block id="4aac054c51ae042dd6c06bdad5d13845" category="list-text">Ripristinare il gestore delle chiavi utilizzando la procedura appropriata per la propria configurazione:</block>
   <block id="564c83534ce0095bf811b4f45e8a7587" category="paragraph">Il sistema visualizza il seguente messaggio e inizia a eseguire l'opzione BootMenu 10:</block>
   <block id="c08aad071fe1f1b764a8997cd71926c1" category="list-text">Entra<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> alla richiesta di conferma di voler avviare il processo di ripristino OKM.</block>
   <block id="63d61920b8c2f7b30cf281bdfa903c57" category="list-text">Quando richiesto, immettere la passphrase per la gestione delle chiavi integrate.</block>
@@ -14670,4 +14594,330 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="462bdaed9eace863845b41e01c3480e8" category="sidebar">Modulo I/O swap a caldo</block>
   <block id="db0a3be0ea02de25a3475124879fa44b" category="sidebar">Modulo I/O AFF A1K</block>
   <block id="912c10cfdcb4f2e697e3be725e084f23" category="sidebar">Modulo I/O swap a caldo</block>
+  <block id="a8d224655abd817de530e49bfb21cec6" category="list-text">Individua e sostituisci il supporto di avvio danneggiato dal modulo controller:</block>
+  <block id="ca1906230a46f1d0e81eac082609a776" category="list-text">Installare il condotto dell'aria.</block>
+  <block id="88d4161f8a471989e6046fbb53a54edf" category="paragraph">Per sostituire a caldo un alimentatore CA, completare i seguenti passaggi.</block>
+  <block id="610003c6a98d9993f11bcbf2c74ca951" category="list-text">[[restore-key-manager]] Ripristina il key manager utilizzando la procedura appropriata per la tua configurazione:</block>
+  <block id="680854b0510554aebecd63fa5251805c" category="list-text">[[reenable-auto-giveback]]Se il giveback automatico è stato disabilitato, riabilitalo:</block>
+  <block id="ca10834f81d97eaa4407b245fed970f3" category="doc">Restituire il supporto di avvio non riuscito a NetApp - AFF A250</block>
+  <block id="341bee79898d3cbfad5d9f17dd39b24a" category="paragraph">Se un componente nel tuo sistema AFF A250 si guasta, restituisci la parte guasta a NetApp. Consulta la <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="d6a90ed11a4dd029aaf77b6e107a87a8" category="paragraph">Se un componente nel tuo sistema storage AFF A250 si guasta, restituisci la parte guasta a NetApp. Consulta la <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="dfc5cfd29de70dfb5c8b24e81dfde2d3" category="paragraph">Per garantire la sicurezza dei dati sul sistema storage AFF A250, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare se la versione di ONTAP supporta NetApp Volume Encryption (NVE) e, prima di spegnere il controller, verificare che il key manager sia attivo.</block>
+  <block id="522fc4812be3ff376fd0a8d4a01a2235" category="paragraph">Se il sistema storage esegue ONTAP 9.18.1 o versione successiva, utilizzare <block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>. Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale all'avvio.</block>
+  <block id="72d6a283a9bf82ad6c28753db0fd0985" category="paragraph">Ripristina la crittografia sul supporto di avvio sostitutivo nel tuo sistema AFF A250 per garantire la protezione continua dei dati. Il processo di sostituzione prevede la verifica della disponibilità della chiave, la riapplicazione delle impostazioni di crittografia e la conferma dell’accesso sicuro ai tuoi dati.</block>
+  <block id="625aa03c8be2d3b8e1e24b44d7fece6b" category="paragraph">Se il sistema storage esegue ONTAP 9.18.1 o versione successiva, utilizzare <block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>. Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.</block>
+  <block id="38c243e1c2fb1072058d0a3e94458118" category="summary">Dopo aver installato il nuovo boot media device nel tuo sistema AFF A250, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner.</block>
+  <block id="df0e7d3d2b2dd8b8741c5be1dc7eb74f" category="doc">Ripristino automatico del boot media dal nodo partner - AFF A250</block>
+  <block id="b6cabea858cacf035b51ff7edc895ad5" category="paragraph">Dopo aver installato il nuovo boot media device nel tuo sistema AFF A250, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di key encryption in uso. Se la key encryption è abilitata, il sistema ti guida attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="1c7f9afb0f27a26eeaf8115ceb263557" category="paragraph">Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.18.1 e versioni successive. Se il sistema storage esegue una versione precedente di ONTAP, utilizzare il <block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block>.</block>
+  <block id="12ce7c942d23df67263bd780219c154a" category="doc">Ripristino manuale del supporto di boot da un'unità USB - AFF A250</block>
+  <block id="b0465c866eac76ecf40978268d804908" category="paragraph">Dopo aver installato il nuovo dispositivo di boot nel sistema AFF A250, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.</block>
+  <block id="55afce7ad2217b05af2e3c1417d0c19f" category="summary">Il boot media nel sistema AFF A250 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e quindi la reinstallazione del modulo controller.</block>
+  <block id="6bdea4cac96b9056d3766be019dd0c04" category="doc">Sostituire il supporto di boot per il ripristino automatico del boot - AFF A250</block>
+  <block id="dcdd396ac549fef92940892b5a2b01fc" category="paragraph">Il boot media nel sistema AFF A250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="af137cc243bd967eb74cbdfeb3d8a058" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF A250, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.</block>
+  <block id="ce7174c0096688f2e6a939ab564dad0a" category="doc">Requisiti per il ripristino automatico del boot media - AFF A250</block>
+  <block id="7eb02c4a939fd2a9816de75e45b43e50" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF A250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (e0M wrench) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) sono abilitati.</block>
+  <block id="011e4c638ab45244a5b99c14d9a4c9b4" category="summary">Prima di sostituire il supporto di boot nel tuo sistema AFF A250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include assicurarsi di avere un'unità flash USB con la quantità appropriata di storage e di verificare di avere il dispositivo di boot sostitutivo corretto.</block>
+  <block id="a39f03dd45e11afa398f41ce8db49057" category="doc">Requisiti per il ripristino manuale del boot media - AFF A250</block>
+  <block id="75cf7b5eb84fe5aff9ec690ff712a7d8" category="summary">Inizia a sostituire il boot media nel sistema storage AFF A250 esaminando i requisiti di sostituzione, spegnendo il controller, sostituendo il boot media, ripristinando l'immagine sul boot media e verificando la funzionalità del sistema.</block>
+  <block id="ae971224ba6e6b913e15b7f316a19b74" category="doc">Flusso di lavoro di ripristino automatico dei boot media - AFF A250</block>
+  <block id="046738295c062a0324677599f1c769da" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di boot. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema storage AFF A250.</block>
+  <block id="dbbe1592f2430c6ab4d716fa0dbbab21" category="summary">Inizia a sostituire il boot media nel tuo sistema storage AFF A250 esaminando i requisiti di sostituzione, controllando lo stato della crittografia, spegnendo il controller, sostituendo il boot media, avviando l'immagine di ripristino, ripristinando la crittografia e verificando la funzionalità del sistema.</block>
+  <block id="706763fe838ac358e0418eefc427df6e" category="doc">Flusso di lavoro di ripristino manuale del boot media - AFF A250</block>
+  <block id="fedfd185ee41d3ef362db6c2939eaaea" category="doc">Sostituire il boot media e prepararsi per il ripristino manuale del boot - AFF A250</block>
+  <block id="9f62f84b01a1ffac702af8ead9d2fbfd" category="paragraph">Il supporto di avvio nel tuo sistema AFF A250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo e quindi il trasferimento manuale dell'immagine di ONTAP sul supporto di avvio sostitutivo utilizzando un'unità flash USB.</block>
+  <block id="6ca138d645ffecd028316e958b066da4" category="summary">Arresta il controller danneggiato nel tuo sistema storage AFF A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media.</block>
+  <block id="7b955410b03bef3fcff17d3969065b7b" category="doc">Arrestare il controller per il ripristino automatico del boot media - AFF A250</block>
+  <block id="e3349f8840982c956a98a9b15fd8a817" category="paragraph">Arresta il controller danneggiato nel tuo sistema storage AFF A250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del boot media.</block>
+  <block id="15c64581bcfa6165556b3d7035d63227" category="doc">Arrestare il controller per il ripristino manuale del boot media - AFF A250</block>
+  <block id="8bd01d2fe37613151ebc277323c82824" category="doc">Completare la sostituzione dello chassis - AFF A250</block>
+  <block id="c3791e58d4fe79fed87533d250f9706d" category="paragraph">Riavviare i controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis AFF A250.</block>
+  <block id="39a3b1f17e8cc33119262178b12813bf" category="doc">Sostituire lo chassis - AFF A250</block>
+  <block id="6d294bfd40eed6bfaeeaaf1db8208a89" category="paragraph">Sostituisci lo chassis nel tuo sistema AFF A250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione dei dischi, l'installazione dello chassis di ricambio e la reinstallazione dei componenti dello chassis.</block>
+  <block id="96e72aaff65cb4f4750c609557e4dc82" category="paragraph">Dopo aver sostituito lo chassis AFF A250 e reinstallato i componenti, è necessario <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="6342be9698d80d1df1b56a890db6de1b" category="summary">Preparati a sostituire lo chassis guasto nel tuo sistema AFF A250 identificando lo chassis guasto, verificando i componenti di ricambio ed etichettando i cavi e i moduli controller.</block>
+  <block id="f2a9d3951f48f1533f94a3057d3a2aa2" category="doc">Preparati a sostituire il chassis - AFF A250</block>
+  <block id="a041a2132827860341b808531f1a8f51" category="paragraph">Dopo esserti preparato a sostituire l'hardware dello chassis AFF A250, devi <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="40dc60d0124c26c019ba0d93dec22b64" category="summary">Prima di sostituire lo chassis nel sistema AFF A250, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, il corretto chassis di ricambio e gli strumenti necessari.</block>
+  <block id="cf290623390ba30d275512e7663512dc" category="doc">Requisiti per la sostituzione del chassis - AFF A250</block>
+  <block id="ee94c7d16f8159f6fd15966537794cd8" category="paragraph">Arresta i controller nel tuo sistema storage AFF A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
+  <block id="f1e663b834ad70af6781e2aaf658b79b" category="summary">Inizia a sostituire lo chassis del sistema storage AFF A250 esaminando i requisiti di sostituzione, spegnendo i controller, sostituendo lo chassis e verificando il funzionamento del sistema.</block>
+  <block id="50b8277f64a0355fdb433fab171de4bf" category="doc">Flusso di lavoro per la sostituzione dello chassis - AFF A250</block>
+  <block id="90e8d9e6dd3b47cd71d3394041cb1b91" category="doc">Sostituire il controller - AFF A250</block>
+  <block id="8e261760551b84dea3911bed5aa2fcfb" category="paragraph">Sostituisci il controller nel tuo sistema AFF A250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.</block>
+  <block id="b482ea591d8b5b00850a5e22fa5a0a55" category="inline-link-macro">ripristina e verifica la configurazione del sistema</block>
+  <block id="eb539dd47c5a44c2e0cb481710197f8b" category="paragraph">Dopo aver sostituito il controller A250 danneggiato, è necessario <block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>.</block>
+  <block id="a37f8afc3ebcec16869d19f6f057705e" category="paragraph">Dopo aver completato il ripristino e la verifica della configurazione del sistema A250, è necessario ricollegare il sistema e riassegnare i dischi.</block>
+  <block id="f76cf839705d622caa8a1bdd213abf8b" category="paragraph">Dopo aver ricablato il sistema e riassegnato i dischi, è necessario <block ref="d6f5f08e0612b966d919b4ea0b494c53" category="inline-link-macro-rx"></block>.</block>
+  <block id="6f0444169c1c65d971f2ea700d03e218" category="doc">Requisiti per la sostituzione del controller - AFF A250</block>
+  <block id="ae3364883205d05f8204133deac12f44" category="paragraph">Prima di sostituire il controller nel sistema storage AFF A250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di log.</block>
+  <block id="e258eea4dc316cb207e580f7163d64c5" category="paragraph">Dopo aver esaminato i requisiti per sostituire il controller danneggiato, è necessario <block ref="049c9e44f3f84f6c7ce4b89629424c9c" category="inline-link-macro-rx"></block>.</block>
+  <block id="9b5129d7aeb50933c98be79d2b06db1e" category="doc">Sostituzione completa del controller - AFF A250</block>
+  <block id="b57cf1a41835d3be7a95fa27b6fa10a3" category="paragraph">Per completare la sostituzione del controller per il sistema AFF A250 e ripristinarne la piena operatività, è necessario ripristinare la configurazione di NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="b3ec477ff8d47dd50a2b1fa27b668fb9" category="paragraph">Spegnere il controller nel sistema storage AFF A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.</block>
+  <block id="1d91f99aa70ed0660c0982ca14f3f20d" category="paragraph">Dopo aver spento il controller, è necessario <block ref="1f759de80b41385676d2f1fe163eb0aa" category="inline-link-macro-rx"></block></block>
+  <block id="ad48037acdea8efc34f45ea9d9814fbe" category="paragraph">Dopo aver completato la sostituzione dell'hardware e aver avviato il sistema AFF A250 in modalità di manutenzione, è necessario verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="c822907acad2d1e75636dc09ef0d4efc" category="inline-link-macro">ricollega il sistema e riassegna i dischi</block>
+  <block id="1039e92749b91caba3ce16a6ff4690c2" category="paragraph">Dopo aver ripristinato e verificato la configurazione del sistema, è necessario <block ref="a27ede3ea5013ccc0cb1bb74355be7b2" category="inline-link-macro-rx"></block>.</block>
+  <block id="de4503aac4f6f7ed872d4d0d89d9fac3" category="summary">Inizia a sostituire il controller nel tuo sistema storage AFF A250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, riconfigurando le impostazioni di sistema e verificando le operazioni del sistema.</block>
+  <block id="fb84141f9417f9f83aaaeee27ad968e7" category="doc">Flusso di lavoro di sostituzione del controller - AFF A250</block>
+  <block id="27b9224034509b99ea4e64a90d2bffff" category="paragraph">Sostituisci il controller nel tuo sistema storage AFF A250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e restituendo il controllo delle risorse di storage al controller sostitutivo.</block>
+  <block id="d85f321345c5fbe823c6d0b3fc7c5545" category="summary">Mantieni l'hardware AFF A250</block>
+  <block id="c5076ac06e042709d64eed0f58e86e2b" category="paragraph">Mantenete l'hardware del vostro sistema storage AFF A250 per garantirne l'affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="a87a9232dc45d770f3f2fabda9e401f5" category="paragraph">Le procedure di manutenzione presuppongono che il sistema storage AFF A250 sia già stato implementato come nodo di storage nell'ambiente ONTAP.</block>
+  <block id="aa15210b554a5b84c35b00934e549eb9" category="paragraph">Il supporto di avvio memorizza un set primario e secondario di file immagine ONTAP che il sistema storage utilizza per l'avvio. Durante il ripristino automatico, il sistema recupera l'immagine di avvio dal nodo partner ed esegue automaticamente l'opzione appropriata del menu di boot per installare l'immagine sul supporto di avvio sostitutivo. Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.18.1 e versioni successive. Se il sistema storage esegue una versione precedente di ONTAP, utilizzare il <block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d324fe31fb35f91188b87e216268116" category="paragraph">Il supporto di avvio memorizza un set primario e uno secondario di file immagine ONTAP che il sistema storage utilizza per l'avvio. Durante il ripristino manuale, si avvia il sistema storage da un'unità USB e si ripristinano manualmente l'immagine e la configurazione del file system. Se il sistema storage esegue ONTAP 9.18.1 e versioni successive, utilizzare il <block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>.</block>
+  <block id="62a393871e6ebbad9a5a4a48f9dcad4e" category="paragraph"><block ref="62a393871e6ebbad9a5a4a48f9dcad4e" category="inline-link-macro-rx"></block></block>
+  <block id="4986d6400ae7bf8e3ebf5742affb5cac" category="paragraph">La scheda Mezzanine è un circuito stampato che si collega direttamente a un'altra scheda plug-in.</block>
+  <block id="dc6418e8893fd3efffcb054713535d8b" category="paragraph">La batteria NVMEM è responsabile della conservazione dei dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.</block>
+  <block id="42e082f0bba872b8266c00d5f1555afe" category="list-text">Profondità: 21.38" (54.3 cm)</block>
+  <block id="5f8dd6bacbcf27ac849a3bc90acb506e" category="doc">Completare la sostituzione dello chassis - AFF A800</block>
+  <block id="396780f0fa472db008ecffbf87cc332f" category="doc">Restituire il supporto di avvio non riuscito a NetApp - ASA C250</block>
+  <block id="c341f8917fc7755fa264acd38324b161" category="paragraph">Se un componente nel tuo sistema ASA C250 si guasta, restituisci la parte guasta a NetApp. Vedi la <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="a822bb67a7729405ea869500f6483769" category="summary">Dopo aver installato il nuovo dispositivo di boot media nel sistema ASA C250, è possibile avviare il processo di ripristino automatico del boot media per ripristinare la configurazione dal nodo partner.</block>
+  <block id="52705a4a551e9e78156268d3b722b640" category="doc">Ripristino automatico del supporto di boot dal nodo partner - ASA C250</block>
+  <block id="de168faff993343d07eab071fd8d31c2" category="paragraph">Dopo aver installato il nuovo boot media device nel sistema ASA C250, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di key encryption in uso. Se la key encryption è abilitata, il sistema ti guida attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="ecbed1b1911625de2c7d7fef54dd3a9e" category="summary">Il boot media nel sistema ASA C250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="fb319d4fcbcaebe65f129baa7d71cb8a" category="doc">Sostituire il boot media per il ripristino automatico dell'avvio - ASA C250</block>
+  <block id="3f7c598b8de926ed6f4ede96849867ae" category="paragraph">Il boot media nel sistema ASA C250 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e quindi la reinstallazione del modulo controller.</block>
+  <block id="ca511809cd8088dd2136eacfb38a9e80" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA C250, accertarsi di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="f9052d4f873e62ac3bbdcc8f796de6fe" category="doc">Requisiti per il ripristino automatico dei supporti di boot - ASA C250</block>
+  <block id="66a7a5e00dcd2fba43bdc509c4ce2960" category="paragraph">Prima di sostituire il boot media nel tuo ASA C250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di avere il boot media sostitutivo corretto, la conferma che la porta e0S (e0M wrench) sul controller guasto non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) siano abilitati.</block>
+  <block id="123aa1a0dc08eb892a6d0bd8c79861ea" category="summary">Prima di sostituire il supporto di boot nel sistema ASA C250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include assicurarsi di avere un'unità flash USB con la quantità appropriata di storage e di verificare di avere il dispositivo di boot sostitutivo corretto.</block>
+  <block id="dce50de748cfaaf3af716b1078129abb" category="doc">Requisiti per il ripristino manuale del boot media - ASA C250</block>
+  <block id="ddb2345e083a4893d1a6cb8651afa7e5" category="summary">Inizia a sostituire il boot media nel tuo sistema storage ASA C250 esaminando i requisiti di sostituzione, spegnendo il controller, sostituendo il boot media, ripristinando l'immagine sul boot media e verificando la funzionalità del sistema.</block>
+  <block id="6f4ba5ef05a927a10795b9c810c3a6a5" category="doc">Flusso di lavoro di ripristino automatico dei boot media - ASA C250</block>
+  <block id="aa3865a6290900fc1f2033a6c6d1e12e" category="paragraph">Il ripristino automatico dell'immagine di boot prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di boot. Utilizza l'immagine di boot sul nodo partner per reinstallare ONTAP sul supporto di boot sostitutivo nel sistema storage ASA C250.</block>
+  <block id="3a66de707baa55f8a7fa33524aa9a35c" category="summary">Inizia a sostituire il boot media nel tuo sistema storage ASA C250 esaminando i requisiti di sostituzione, controllando lo stato della crittografia, spegnendo il controller, sostituendo il boot media, avviando l'immagine di ripristino, ripristinando la crittografia e verificando la funzionalità del sistema.</block>
+  <block id="c28332fccbe33a8c9034057e249f0d32" category="doc">Flusso di lavoro di ripristino manuale del boot media - ASA C250</block>
+  <block id="3cc2dd62d8ac6c4411401388fa57c9ab" category="summary">Arrestare il controller danneggiato nel sistema storage ASA C250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media.</block>
+  <block id="1cac984cb7d084c785a724d6632a0463" category="doc">Arrestare il controller per il ripristino automatico del boot media - ASA C250</block>
+  <block id="69ab93a9fb12f2390b104b08978520df" category="paragraph">Arresta il controller danneggiato nel tuo sistema storage ASA C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del supporto di boot.</block>
+  <block id="f57ded7f5bec798dc3a039cb0eb78122" category="doc">Completare la sostituzione dello chassis - ASA C250</block>
+  <block id="3e984ad6768f8f3021b6ed192ff2b2ef" category="paragraph">Riavviare i controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale nella procedura di sostituzione dello chassis ASA C250.</block>
+  <block id="5ecdfb7a274674cf02767780bd60bcbc" category="doc">Sostituisci il chassis - ASA C250</block>
+  <block id="792843a068be7169f34d31081b123515" category="paragraph">Sostituisci lo chassis nel tuo sistema ASA C250 quando un guasto hardware lo richiede. Il processo di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione dei dischi, l'installazione dello chassis di ricambio e la reinstallazione dei componenti dello chassis.</block>
+  <block id="989a06f587925a250bb732e5019f499c" category="paragraph">Dopo aver sostituito il chassis ASA C250 e reinstallato i componenti, è necessario <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="6288479d232c0e416d5b4259b78f8db7" category="summary">Preparati a sostituire lo chassis guasto nel tuo sistema ASA C250 identificando lo chassis guasto, verificando i componenti di ricambio ed etichettando i cavi e i moduli del controller.</block>
+  <block id="48ddbb91687af1fffe6bebe212824365" category="doc">Preparati a sostituire il chassis - ASA C250</block>
+  <block id="0b1aa6d4391948c9fe65345954a6ad01" category="paragraph">Dopo esserti preparato a sostituire l'hardware dello chassis ASA C250, devi <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="790a536025cecbcd2961410b98ba8c64" category="summary">Prima di sostituire lo chassis nel sistema ASA C250, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di ricambio corretto e degli strumenti necessari.</block>
+  <block id="dc484f31059a039765fe1acac19999e5" category="doc">Requisiti per la sostituzione del chassis - ASA C250</block>
+  <block id="b9e69b0039d9ed83ff105f64d215c7d5" category="paragraph">Arresta i controller nel sistema storage AFF ASA C250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
+  <block id="7b6ed1b0e9a5ff30fb553d52444ed7e6" category="inline-link-macro">Spostare l'hardware sul nuovo chassis</block>
+  <block id="6e96729dba65c561ffc30b3a80695712" category="paragraph">Dopo aver spento il controller, è necessario <block ref="409096e21425936d7f115e7f07c0cad4" category="inline-link-macro-rx"></block></block>
+  <block id="bc49a9ce5dd17d1a86e01bf23c50018a" category="summary">Inizia a sostituire lo chassis del tuo sistema storage ASA C250 esaminando i requisiti di sostituzione, spegnendo i controller, sostituendo lo chassis e verificando il funzionamento del sistema.</block>
+  <block id="89dd27afe8dd86ca0004d67931f7e823" category="doc">Flusso di lavoro per la sostituzione dello chassis - ASA C250</block>
+  <block id="4817cb96bfcfa91f3fcf6c5029c68683" category="doc">Sostituire il controller - ASA C250</block>
+  <block id="2ae90478841e67e153829c367aa619e9" category="paragraph">Sostituisci il controller nel tuo sistema ASA C250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.</block>
+  <block id="0bba2cf5ba5f1c48592bb09d65803109" category="paragraph">Dopo aver sostituito il controller ASA C250 danneggiato, è necessario <block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>.</block>
+  <block id="39bf3460d01af785a1658113f3d329cd" category="paragraph">Dopo aver completato il ripristino e la verifica della configurazione del sistema ASA C250, è necessario ricollegare il sistema e riassegnare i dischi.</block>
+  <block id="b8735bf922a659dce881a6483ebfc66c" category="doc">Requisiti per la sostituzione del controller - ASA C250</block>
+  <block id="5c50f74c21bf045696862d9c913df741" category="paragraph">Prima di sostituire il controller nel sistema storage ASA C250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di log.</block>
+  <block id="703171cc918a89e3e3f4a32efc01142e" category="doc">Sostituzione completa del controller - ASA C250</block>
+  <block id="b1ba0b9d2770ab5ef378f594399540a0" category="paragraph">Per completare la sostituzione del controller per il sistema ASA C250 e ripristinarne la piena operatività, è necessario ripristinare la configurazione di NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="db1c3a4fe6a7e6f03d7b4c1c0b1a9619" category="paragraph">Spegnere il controller nel sistema storage ASA C250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.</block>
+  <block id="eae052008fde47e543ef49273851e2c4" category="paragraph">Dopo aver completato la sostituzione dell'hardware e aver avviato il sistema ASA C250 in modalità di manutenzione, è necessario verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="287d634f17792905ea112722385e2973" category="summary">Inizia a sostituire il controller nel tuo sistema storage ASA C250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, riconfigurando le impostazioni di sistema e verificando le operazioni del sistema.</block>
+  <block id="73a1f81203dbd0d6aad3b1c4280bd83c" category="doc">Flusso di lavoro di sostituzione del controller - ASA C250</block>
+  <block id="9fdedcbb8a005772b764ea92ee7d79fc" category="paragraph">Sostituire il controller nel sistema storage ASA C250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e restituendo il controllo delle risorse di storage al controller sostitutivo.</block>
+  <block id="447d58f42a93cb2d67a882a1972e7529" category="paragraph">Mantenete l'hardware del vostro sistema storage ASA C250 per garantirne l'affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="f8466e4302541aafa6280bb32bf6db40" category="paragraph">Le procedure di manutenzione presuppongono che il sistema storage ASA C250 sia già stato implementato come nodo di storage nell'ambiente ONTAP.</block>
+  <block id="799766eb97b1cb94033e6f826c918d27" category="doc">Restituire il supporto di avvio non riuscito a NetApp - ASA A250</block>
+  <block id="4113253bb433cd66aaf518403b05475f" category="paragraph">Se un componente nel tuo sistema ASA A250 si guasta, restituisci la parte guasta a NetApp. Consulta la <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="c8fe075e031ef0a229e1e5afae9b1203" category="summary">Dopo aver installato il nuovo boot media device nel sistema ASA A250, puoi avviare il processo di ripristino automatico del boot media per ripristinare la configurazione dal nodo partner.</block>
+  <block id="ff9481b37113ee1aeb5a96dc4e54a86b" category="doc">Ripristino automatico del boot media dal nodo partner - ASA A250</block>
+  <block id="2872b7e0fe56a74782408dce1646a321" category="paragraph">Dopo aver installato il nuovo boot media device nel sistema ASA A250, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di key encryption in uso. Se la key encryption è abilitata, il sistema ti guida attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="a8d175f3204f9bb52720e426d1349435" category="summary">Il boot media nel tuo sistema ASA A250 memorizza i dati essenziali del firmware e della configurazione. Il processo di sostituzione prevede la rimozione del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e quindi la reinstallazione del modulo controller.</block>
+  <block id="bc55bcacda60f533328a6222248bbf37" category="doc">Sostituire il boot media per il ripristino automatico dell'avvio - ASA A250</block>
+  <block id="000985094ab4f30d00eb2145d27eecd6" category="paragraph">Il boot media nel tuo sistema ASA A250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="0637ad0f27877cbd306977677e72313a" category="summary">Prima di sostituire il supporto di avvio nel sistema ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.</block>
+  <block id="afd5bb2660744d78b0a3d382830a9055" category="doc">Requisiti per il ripristino automatico del boot media - ASA A250</block>
+  <block id="5f3d724857c2a376f0960ca61dd0ed26" category="paragraph">Prima di sostituire il boot media nel tuo ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di avere il boot media di ricambio corretto, la conferma che la porta e0S (e0M wrench) sul controller guasto non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) sia abilitato.</block>
+  <block id="56264d0f45bc0deb9dd1dca3074322de" category="summary">Prima di sostituire il supporto di boot nel sistema ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include assicurarti di avere un'unità flash USB con la quantità appropriata di storage e di verificare di avere il dispositivo di boot sostitutivo corretto.</block>
+  <block id="a095bd7b1326362764a5df1b2419305e" category="doc">Requisiti per il ripristino manuale del boot media - ASA A250</block>
+  <block id="cea09916975c69f0f5e970a930689e6d" category="summary">Inizia a sostituire il boot media nel tuo sistema storage ASA A250 esaminando i requisiti di sostituzione, spegnendo il controller, sostituendo il boot media, ripristinando l'immagine sul boot media e verificando la funzionalità del sistema.</block>
+  <block id="798d6239610b9f5ef68cb5e017e86839" category="doc">Flusso di lavoro di ripristino automatico dei boot media - ASA A250</block>
+  <block id="95c7d6eae959628bc114c991879881f5" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di boot. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema storage ASA A250.</block>
+  <block id="dc3d40a7a29afef0c0e1a2f20acd4f2e" category="summary">Inizia a sostituire il boot media nel tuo sistema storage ASA A250 esaminando i requisiti di sostituzione, controllando lo stato della crittografia, spegnendo il controller, sostituendo il boot media, avviando l'immagine di ripristino, ripristinando la crittografia e verificando la funzionalità del sistema.</block>
+  <block id="fab636ff567990aa5318f44fcdd5644d" category="doc">Flusso di lavoro di ripristino manuale del boot media - ASA A250</block>
+  <block id="3794216268a5cc4ad66ae1ff68e560ea" category="summary">Arresta il controller danneggiato nel tuo sistema storage ASA A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media.</block>
+  <block id="d5744c93fd3a55565fec97370a901ab8" category="doc">Arrestare il controller per il ripristino automatico del boot media - ASA A250</block>
+  <block id="6fea684c8dea60e6699566bf667efcea" category="paragraph">Arresta il controller danneggiato nel tuo sistema storage ASA A250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del supporto di boot.</block>
+  <block id="6c335a47deaac2c0092f7bc6bcf11752" category="doc">Completare la sostituzione dello chassis - ASA A250</block>
+  <block id="7e8cd6c7e7f6e87b6e35c1f6695402d0" category="paragraph">Riavvia i controller, verifica lo stato del sistema e restituisci la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis ASA A250.</block>
+  <block id="89b26aa3c808ef16256b019e27fe2d0d" category="doc">Sostituire il chassis - ASA A250</block>
+  <block id="896786bae0c02090b0a1687150db97a2" category="paragraph">Sostituisci lo chassis nel tuo sistema ASA A250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione dei dischi, l'installazione dello chassis di ricambio e la reinstallazione dei componenti dello chassis.</block>
+  <block id="fc020abfd025083d50c9b9137502afaa" category="paragraph">Dopo aver sostituito il chassis ASA A250 e reinstallato i componenti, è necessario <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="800b2af8227e26b20a950dd21eaf4c57" category="summary">Preparatevi a sostituire lo chassis guasto nel vostro sistema ASA A250 identificando lo chassis guasto, verificando i componenti sostitutivi ed etichettando i cavi e i moduli controller.</block>
+  <block id="266d1ddad3ed91e9e45333640ea04f4c" category="doc">Preparati a sostituire il chassis - ASA A250</block>
+  <block id="0640ee4645298086aefc9ecc1b5df50f" category="paragraph">Dopo esserti preparato a sostituire l'hardware del chassis ASA A250, devi <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="3d3cd4ba529b9ac35ca56c5bb9c471c2" category="summary">Prima di sostituire lo chassis nel sistema ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di ricambio corretto e degli strumenti necessari.</block>
+  <block id="b18f9b0b9a11c1e7fa1f09d97327e90f" category="doc">Requisiti per la sostituzione del chassis - ASA A250</block>
+  <block id="32fb468cc57459e398e50b8c594d600c" category="paragraph">Spegni i controller nel tuo sistema storage ASA A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
+  <block id="1fbd60c89526d83a5931264032b81202" category="summary">Inizia a sostituire lo chassis del tuo sistema storage ASA A250 esaminando i requisiti di sostituzione, spegnendo i controller, sostituendo lo chassis e verificando le operazioni del sistema.</block>
+  <block id="6fd63cc179e9ba6a81f975839b4bd2fd" category="doc">Flusso di lavoro per la sostituzione dello chassis - ASA A250</block>
+  <block id="4b0bee536688e7115c8f84a702f19897" category="doc">Sostituire il controller - ASA A250</block>
+  <block id="a98273a710d608019bb11f234adcfa63" category="paragraph">Sostituisci il controller nel tuo sistema ASA A250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.</block>
+  <block id="3868cb70ed3aa682ee144827d555f8d2" category="paragraph">Dopo aver sostituito il controller ASA A250 danneggiato, è necessario <block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>.</block>
+  <block id="049f65e918dc2fd99a3d9ea6ad4fdfdf" category="paragraph">Dopo aver completato il ripristino e la verifica della configurazione del sistema ASA A250, è necessario ricollegare il sistema e riassegnare i dischi.</block>
+  <block id="3896f2781684716c2882a4b3d212ce75" category="doc">Requisiti per la sostituzione del controller - ASA A250</block>
+  <block id="350284e890e9fd28a958de3fd71643cf" category="paragraph">Prima di sostituire il controller nel sistema storage ASA A250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di log.</block>
+  <block id="9c29e3a28bb382ea5d8588ebb8bbe765" category="doc">Sostituzione completa del controller - ASA A250</block>
+  <block id="377811312d0644d8c78fe7f7531352d6" category="paragraph">Per completare la sostituzione del controller per il tuo sistema ASA A250 e ripristinarne la piena operatività, è necessario ripristinare la configurazione di NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="869768c23e95aa07dacfbeef759ddd03" category="paragraph">Spegnere il controller nel sistema storage ASA A250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.</block>
+  <block id="7e685b7b7062cbfdacbd3e4d08fc2096" category="paragraph">Dopo aver completato la sostituzione dell'hardware e aver avviato il sistema ASA A250 in modalità di manutenzione, è necessario verificare la configurazione di basso livello del sistema del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="dd2ca674906435762d38dd1e735e23ea" category="summary">Inizia a sostituire il controller nel tuo sistema storage ASA A250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, riconfigurando le impostazioni di sistema e verificando le operazioni del sistema.</block>
+  <block id="e2b96d9e304cd2630ac73d4e768c0dd5" category="doc">Flusso di lavoro sostituzione controller - ASA A250</block>
+  <block id="35f0eb77d868045d7301a3e051d0b836" category="paragraph">Sostituire il controller nel sistema storage ASA A250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e restituendo il controllo delle risorse di storage al controller sostitutivo.</block>
+  <block id="23f9e2dbaccd7bc93fa7098dc0224c8d" category="paragraph">Mantenete l'hardware del vostro sistema storage ASA A250 per garantirne l'affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="0799262b9ba99e27bd77815c3da8b1db" category="paragraph">Le procedure di manutenzione presuppongono che il sistema storage ASA A250 sia già stato implementato come nodo di storage nell'ambiente ONTAP.</block>
+  <block id="3d22cca033fcf1b506e060c7ed59c839" category="doc">Restituire il supporto di avvio non riuscito a NetApp - AFF C250</block>
+  <block id="1a08526a18dd5d0b81ec11d650a5ca96" category="paragraph">Se un componente nel tuo sistema AFF C250 si guasta, restituisci la parte guasta a NetApp. Vedi la <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="bc51aa890df7324adcd9ed9c8564f43e" category="summary">Dopo aver installato il nuovo dispositivo di boot media nel sistema AFF C250, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner.</block>
+  <block id="0908b349d34a3cae85f76e51e514005e" category="doc">Ripristino automatico del boot media dal nodo partner - AFF C250</block>
+  <block id="2c2bc1eda9ecb1d339908c11a8b9f06d" category="paragraph">Dopo aver installato il nuovo supporto di boot nel sistema AFF C250, puoi avviare il processo automatico di ripristino del supporto di boot per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di crittografia della chiave in uso. Se la crittografia della chiave è abilitata, il sistema ti guida attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="0a135d011f75358e7092ec3146ba9359" category="summary">Il supporto di avvio nel sistema AFF C250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e quindi la reinstallazione del modulo controller.</block>
+  <block id="8fda0ea89c747488ccba625c3d6982a5" category="doc">Sostituire il boot media per il ripristino automatico dell'avvio - AFF C250</block>
+  <block id="edb41673610f1a52427ce477b13b9e54" category="paragraph">Il supporto di avvio nel tuo sistema AFF C250 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="ec683f1c4bd824d8b4aa0efddd6a72ee" category="summary">Prima di sostituire il supporto di avvio nel sistema AFF C250, assicurati di soddisfare i requisiti necessari per una sostituzione riuscita.</block>
+  <block id="272a558c5e1170ae817bd70e71f39422" category="doc">Requisiti per il ripristino automatico del boot media - AFF C250</block>
+  <block id="fb91f1d2f329ed3e3268cc3d5d2d6cd9" category="paragraph">Prima di sostituire il supporto di avvio nel tuo AFF C250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0S (e0M wrench) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) sono abilitati.</block>
+  <block id="28de8c6d13290a0ef6c5ad0ffcc3b221" category="summary">Prima di sostituire il supporto di boot nel tuo sistema AFF C250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include assicurarsi di avere un'unità flash USB con la quantità di storage appropriata e di verificare di avere il dispositivo di boot sostitutivo corretto.</block>
+  <block id="8b60919014188311ae61c0aece538d5b" category="doc">Requisiti per il ripristino manuale del boot media - AFF C250</block>
+  <block id="465d022ea5128b78bccd6ab339466eea" category="summary">Inizia a sostituire il boot media nel tuo sistema storage AFF C250 esaminando i requisiti di sostituzione, spegnendo il controller, sostituendo il boot media, ripristinando l'immagine sul boot media e verificando la funzionalità del sistema.</block>
+  <block id="f47196de2ba40a7369a3169fa559c7fc" category="doc">Flusso di lavoro di ripristino automatico del boot media - AFF C250</block>
+  <block id="55ef5dd55c291ce2f0127481cff7710c" category="paragraph">Il ripristino automatico dell'immagine di boot prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di boot. Utilizza l'immagine di boot sul nodo partner per reinstallare ONTAP sul supporto di boot sostitutivo nel sistema storage AFF C250.</block>
+  <block id="e513b940c753310913380ea474ca3946" category="summary">Inizia a sostituire il supporto di boot nel sistema storage AFF C250 esaminando i requisiti di sostituzione, controllando lo stato della crittografia, spegnendo il controller, sostituendo il supporto di boot, avviando l'immagine di ripristino, ripristinando la crittografia e verificando la funzionalità del sistema.</block>
+  <block id="e806888ed2e106f197d248697b03e11c" category="doc">Flusso di lavoro di ripristino manuale del boot media - AFF C250</block>
+  <block id="8314e19a4d1bd1b5496486f9f5915a30" category="summary">Arresta il controller danneggiato nel tuo sistema storage AFF C250 per prevenire la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media.</block>
+  <block id="d590b9da7e1205b81e3d0a2f2413fd0b" category="doc">Arrestare il controller per il ripristino automatico del boot media - AFF C250</block>
+  <block id="e3168389b51cfbb3c2317c411aa836b0" category="paragraph">Arresta il controller danneggiato nel tuo sistema storage AFF C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del boot media.</block>
+  <block id="898c0c78fa2ca108537fd368fca0feec" category="doc">Completa la sostituzione dello chassis - AFF C250</block>
+  <block id="c1e9a1a75607a52ba007d751b3cff79c" category="paragraph">Riavvia i controller, verifica lo stato del sistema e restituisci la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione dello chassis AFF C250.</block>
+  <block id="10ab1c4143339c7d9c80f49cad9b84ee" category="doc">Sostituisci il chassis - AFF C250</block>
+  <block id="1dc04fe14e8e7ab67ddaefa993eff9d2" category="paragraph">Sostituisci lo chassis nel tuo sistema AFF C250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione dei dischi, l'installazione dello chassis di ricambio e la reinstallazione dei componenti dello chassis.</block>
+  <block id="24516d7cded2962a367482b09cad7d63" category="paragraph">Dopo aver sostituito il chassis AFF C250 e reinstallato i componenti, è necessario <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="def01e0e8240ffa44ef3d38d426521bc" category="summary">Preparatevi a sostituire lo chassis guasto nel vostro sistema AFF C250 identificando lo chassis guasto, verificando i componenti sostitutivi ed etichettando i cavi e i moduli del controller.</block>
+  <block id="89b718fa5321df6e6430f91569df7273" category="doc">Preparati a sostituire il chassis - AFF C250</block>
+  <block id="0d6871bc51cc04888e9c29497949cdb6" category="paragraph">Dopo esserti preparato a sostituire l'hardware dello chassis AFF C250, devi <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="e32b4784e58e6df4fc362307cdb9a2ae" category="summary">Prima di sostituire lo chassis nel sistema AFF C250, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, dello chassis di ricambio corretto e degli strumenti necessari.</block>
+  <block id="765896d2546ad8173a99fdb7b5aa9c1c" category="doc">Requisiti per la sostituzione del chassis - AFF C250</block>
+  <block id="5c7a883c6707cabbe1973443529f7510" category="paragraph">Arresta i controller nel tuo sistema storage AFF C250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
+  <block id="0fc8f7e266e479e53a46a0c65fea2d05" category="summary">Inizia a sostituire lo chassis del tuo sistema storage AFF C250 esaminando i requisiti di sostituzione, spegnendo i controller, sostituendo lo chassis e verificando le operazioni del sistema.</block>
+  <block id="4757af4ab579ac77b495af94dd44b50a" category="doc">Flusso di lavoro per la sostituzione dello chassis - AFF C250</block>
+  <block id="71a88a7b2fcb330f27238fa1118cbe56" category="doc">Sostituire il controller - AFF C250</block>
+  <block id="5e4d9d7c562831ad77b7826b33c84581" category="paragraph">Sostituisci il controller nel tuo sistema AFF C250 quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.</block>
+  <block id="a2ed05215dd0f6532b8bda5de18308e8" category="paragraph">Dopo aver sostituito il controller AFF C250 danneggiato, è necessario <block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>.</block>
+  <block id="93b32c4bd5d3568942c9565987fc888b" category="paragraph">Dopo aver completato il ripristino e la verifica della configurazione del sistema AFF C250, è necessario ricollegare il sistema e riassegnare i dischi.</block>
+  <block id="f4ec183a042e7b7cdeea5daf8d5ba62b" category="doc">Requisiti per la sostituzione del controller - AFF C250</block>
+  <block id="ebaa763438cb3dfa342ecbb4c0714ee1" category="paragraph">Prima di sostituire il controller nel sistema storage AFF C250, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di log.</block>
+  <block id="f1ce15b5f19f37e299829de6379665c4" category="doc">Sostituzione completa del controller - AFF C250</block>
+  <block id="aaded993df6fb29dbfbeebee1f3641fb" category="paragraph">Per completare la sostituzione del controller per il tuo sistema AFF C250 e ripristinarne la piena operatività, è necessario ripristinare la configurazione di NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="aff7751fa6765ac3c00a099da6c8e69d" category="paragraph">Spegnere il controller nel sistema storage AFF C250 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.</block>
+  <block id="b4a9631d8fbe3a931a8185ea5c2ce65e" category="paragraph">Dopo aver completato la sostituzione dell'hardware e aver avviato il sistema AFF C250 in modalità di manutenzione, è necessario verificare la configurazione di sistema di basso livello del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="e1265ce14088344e07db4afa9a54f0a2" category="summary">Inizia a sostituire il controller nel tuo sistema storage AFF C250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, riconfigurando le impostazioni di sistema e verificando le operazioni del sistema.</block>
+  <block id="ab17f711614db64be07dce91675bd8bb" category="doc">Flusso di lavoro per la sostituzione del controller - AFF C250</block>
+  <block id="c6e111ac745be862b4bf5f4f853dbff4" category="paragraph">Sostituire il controller nel sistema storage AFF C250 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e restituendo il controllo delle risorse di storage al controller sostitutivo.</block>
+  <block id="1ca77b2777ea29fd9e6f113829f2f359" category="summary">Mantieni l'hardware AFF C250</block>
+  <block id="5370447dcd53e366544473fe9ce67f7b" category="paragraph">Mantenete l'hardware del vostro sistema storage AFF C250 per garantirne l'affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="aa857f1fcaf6380b946a1dc363fefca9" category="paragraph">Le procedure di manutenzione presuppongono che il sistema storage AFF C250 sia già stato implementato come nodo di storage nell'ambiente ONTAP.</block>
+  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="paragraph">Cisco Nexus 3232C</block>
+  <block id="e48e73e576f724fd4213ab1eca7edb4a" category="paragraph">ONTAP 9.18.1</block>
+  <block id="1d8bdbbecd2a7992d9b2c5314cbc8da8" category="paragraph">Cisco Nexus 3132Q-V</block>
+  <block id="f8215ac1ab39569e2ede8f10c0a8405a" category="paragraph">Cisco Nexus 92300YC</block>
+  <block id="280107a5f53cc09efecfd6d30a3b7ebc" category="paragraph">NetApp CN1610</block>
+  <block id="0effdeffb425467d988456e0b00eae69" category="list-text">Cisco Nexus 5596UP</block>
+  <block id="ce89169afe5f44b11d42ea8fb935febd" category="list-text">Cisco Nexus 5596T</block>
+  <block id="6e6b3c059f21cf59109f565a691265e5" category="summary">Preparati a sostituire lo chassis guasto nel tuo sistema FAS50 identificando lo chassis guasto, verificando i componenti di ricambio ed etichettando i cavi e i moduli controller.</block>
+  <block id="2628fefc8eb3dd0daed369d6437b3be6" category="doc">Prepararsi a sostituire il chassis - FAS50</block>
+  <block id="184b19bc3f8626d1be1dd0cab08f9aa3" category="paragraph">Dopo esserti preparato a sostituire l'hardware del chassis FAS50, devi <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="f54b05d1af2a0983ed444a766408e617" category="doc">Restituire il supporto di avvio non riuscito a NetApp - FAS500f</block>
+  <block id="e8b2340387473ca634a0c91e66f4f20c" category="paragraph">Se un componente nel tuo sistema FAS500f si guasta, restituisci la parte guasta a NetApp. Vedi la <block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
+  <block id="338d700940ffa38b3fed1d0bb8fcb107" category="summary">Dopo aver installato il nuovo dispositivo di boot media nel sistema FAS500f, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner.</block>
+  <block id="cc77dbc4a0786e6482dd37059b56d1ae" category="doc">Ripristino automatico del supporto di boot dal nodo partner - FAS500f</block>
+  <block id="6f80872e95274437d20c37b20f6275b7" category="paragraph">Dopo aver installato il nuovo boot media device nel sistema FAS500f, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner. Durante il processo di ripristino, il sistema verifica se la crittografia è abilitata e determina il tipo di key encryption in uso. Se la key encryption è abilitata, il sistema ti guida attraverso i passaggi appropriati per ripristinarla.</block>
+  <block id="33f78cc27ad211499ab36f3caa22ee92" category="doc">Ripristino manuale del supporto di boot da un'unità USB - FAS500f</block>
+  <block id="912e44425d2365e6759211c156072906" category="paragraph">Dopo aver installato il nuovo boot media device nel sistema FAS500f, puoi avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.</block>
+  <block id="3d0ecb3cfaae2673edc296e355b5f4ef" category="summary">Il supporto di avvio nel sistema FAS500f memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="d93b5e11e53cd64b7b6b5555798fbfec" category="doc">Sostituire il boot media per il ripristino automatico dell'avvio - FAS500f</block>
+  <block id="aa5ffd2f7f856d23247a6b94149ef919" category="paragraph">Il boot media nel sistema FAS500f memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione e l'apertura del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo nel modulo controller e la successiva reinstallazione del modulo controller.</block>
+  <block id="de8c9fd98c422989c3b6a88d75384992" category="summary">Prima di sostituire il supporto di avvio nel sistema FAS500f, assicurati di soddisfare i requisiti necessari per una sostituzione corretta.</block>
+  <block id="f2ba5caa9843c7a941f1c7fa8a011cf2" category="doc">Requisiti per il ripristino automatico del boot media - FAS500f</block>
+  <block id="5bafb3b795c82f15fe31bdaf2b81c18f" category="paragraph">Prima di sostituire il boot media nel tuo FAS500f, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di avere il boot media sostitutivo corretto, la conferma che la porta e0S (e0M wrench) sul controller danneggiato non sia difettosa e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.</block>
+  <block id="0c841e91ee50f813a691f3ce0f0aeed9" category="summary">Prima di sostituire il supporto di avvio nel tuo sistema FAS500f, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include assicurarti di avere un'unità flash USB con la quantità di storage appropriata e di verificare di avere il dispositivo di avvio sostitutivo corretto.</block>
+  <block id="765741455a177e539f457d4b8ac92938" category="doc">Requisiti per il ripristino manuale del boot media - FAS500f</block>
+  <block id="ef29f0c33b434a133e08a2dd1467a67c" category="summary">Inizia a sostituire il boot media nel tuo sistema storage FAS500f esaminando i requisiti di sostituzione, spegnendo il controller, sostituendo il boot media, ripristinando l'immagine sul boot media e verificando la funzionalità del sistema.</block>
+  <block id="01c769803212ca7d51dee80b79c89436" category="doc">Flusso di lavoro di ripristino automatico dei boot media - FAS500f</block>
+  <block id="f3f65014bac7b909ad2f3ba02d3fea86" category="paragraph">Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di boot. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema storage FAS500f.</block>
+  <block id="f288b387072b372d1fd4441eaefb7179" category="summary">Inizia a sostituire il supporto di avvio nel tuo sistema storage FAS500f esaminando i requisiti di sostituzione, controllando lo stato della crittografia, arrestando il controller, sostituendo il supporto di avvio, avviando l'immagine di ripristino, ripristinando la crittografia e verificando la funzionalità del sistema.</block>
+  <block id="005f1abb3a6caacd59e17146466c81ec" category="doc">Flusso di lavoro di ripristino manuale del boot media - FAS500f</block>
+  <block id="1e90d25b5d4315fa0a353ed309da9a37" category="doc">Sostituire il supporto di boot e prepararsi per il ripristino manuale del boot - FAS500f</block>
+  <block id="c7fc64ee751d2702bf7363b95697096f" category="paragraph">Il supporto di avvio nel sistema FAS500f memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo di gestione del sistema, la rimozione del supporto di avvio danneggiato, l'installazione del supporto di avvio sostitutivo e quindi il trasferimento manuale dell'immagine ONTAP sul supporto di avvio sostitutivo utilizzando un'unità flash USB.</block>
+  <block id="ef69236d7ce6f17bdda64713c4fd98d0" category="summary">Arrestare il controller danneggiato nel sistema storage FAS500f per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media.</block>
+  <block id="1c031737411d6eac5a6c713b9d642d71" category="doc">Arrestare il controller per il ripristino automatico del boot media - FAS500f</block>
+  <block id="af65388f2d96e3610ab33e5fba1e4b02" category="paragraph">Arresta il controller danneggiato nel tuo sistema storage FAS500f per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del boot media.</block>
+  <block id="2e736e93e05c443839c21174c3cba766" category="doc">Completare la sostituzione dello chassis - FAS500f</block>
+  <block id="bb922797b51fa051ef0fa8b3c2345d34" category="paragraph">Riavviare i controller, verificare lo stato del sistema e restituire la parte guasta a NetApp per completare il passaggio finale nella procedura di sostituzione dello chassis FAS500f.</block>
+  <block id="6f379fd2db2934ddcd9565c6bf9195c8" category="doc">Sostituire il chassis - FAS500f</block>
+  <block id="312e721269336f6368a28bf97444c2fd" category="paragraph">Sostituisci lo chassis nel tuo sistema FAS500f quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione dei controller e delle unità di alimentazione (PSU), la rimozione dei dischi, l'installazione dello chassis di ricambio e la reinstallazione dei componenti dello chassis.</block>
+  <block id="31218be4fb4b9f62f1927ae5fddf75cb" category="paragraph">Dopo aver sostituito il chassis FAS500f e reinstallato i componenti, è necessario <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="614ad4b8e1c1cf5164b1bf4452447672" category="summary">Preparati a sostituire lo chassis guasto nel tuo sistema FAS500f identificando lo chassis guasto, verificando i componenti di ricambio ed etichettando i cavi e i moduli controller.</block>
+  <block id="e8a6642f5704a6db07f52a9945c49c20" category="doc">Prepararsi a sostituire il chassis - FAS500f</block>
+  <block id="af9360a6ec367ae3934fe5145773875a" category="paragraph">Dopo esserti preparato a sostituire l'hardware dello chassis FAS500f, devi <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
+  <block id="170cce1f0458446b0bb892c25abafcc8" category="summary">Prima di sostituire lo chassis nel sistema FAS500f, assicurati di soddisfare i requisiti necessari per una sostituzione di successo. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre delle credenziali di amministratore locale per ONTAP, del corretto chassis di ricambio e degli strumenti necessari.</block>
+  <block id="2a34ff76cba69770f6d729eb2bcec1e0" category="doc">Requisiti per la sostituzione del chassis - FAS500f</block>
+  <block id="c2e8017d38ede0b2a3f3b33db4dd3f66" category="paragraph">Arresta i controller nel tuo sistema storage FAS500f per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
+  <block id="976d99e773691725a33eedb1856c14b2" category="summary">Inizia a sostituire lo chassis del tuo sistema storage FAS500f esaminando i requisiti di sostituzione, spegnendo i controller, sostituendo lo chassis e verificando le operazioni del sistema.</block>
+  <block id="66fe1764bbfc62895e07c88d11f00b6c" category="doc">Flusso di lavoro per la sostituzione dello chassis - FAS500f</block>
+  <block id="5729d973fa3cbba37e09e85828263e44" category="doc">Sostituire il controller - FAS500f</block>
+  <block id="b6ab9b49a3bf96c46982eb4f27124ad7" category="paragraph">Sostituire il controller nel sistema FAS500f quando un guasto hardware lo richiede. La procedura di sostituzione prevede la rimozione del controller danneggiato, lo spostamento dei componenti sul controller sostitutivo, l'installazione del controller sostitutivo e il suo riavvio.</block>
+  <block id="52cb3e0984cc1188632637714db80976" category="paragraph">Dopo aver sostituito il controller FAS500f danneggiato, è necessario <block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>.</block>
+  <block id="aae6fbc2ac8ea637a50c84470ad4996d" category="paragraph">Dopo aver completato il ripristino e la verifica della configurazione del sistema FAS500f, è necessario ricollegare il sistema e riassegnare i dischi.</block>
+  <block id="e62c7bcbce6931f4e5cefec006529f67" category="doc">Requisiti per la sostituzione del controller - FAS500f</block>
+  <block id="769924d2fa42c6cbdd27cdb8aebf9b0e" category="paragraph">Prima di sostituire il controller nel sistema storage FAS500f, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica che tutti gli altri componenti del sistema funzionino correttamente, la verifica di disporre del controller sostitutivo corretto e il salvataggio dell'output della console del controller in un file di log di testo.</block>
+  <block id="a5c075ee8b2e6479b937fd24d4e7c131" category="doc">Sostituzione completa del controller - FAS500f</block>
+  <block id="f46bfaab99cc550e713d5fd4aa093739" category="paragraph">Per completare la sostituzione del controller per il tuo sistema FAS500f e ripristinarne la piena operatività, è necessario ripristinare la configurazione NetApp Storage Encryption (se necessario), installare le licenze per il nuovo controller e restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
+  <block id="996e977a28e981a0cfc20475b884ffa6" category="paragraph">Arrestare il controller nel sistema storage FAS500f per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.</block>
+  <block id="77efc27ea7cc7edd819709e60c98ffd0" category="paragraph">Dopo aver completato la sostituzione dell'hardware e aver avviato il sistema FAS500f in modalità di manutenzione, è necessario verificare la configurazione di basso livello del sistema del controller sostitutivo e riconfigurare le impostazioni di sistema secondo necessità.</block>
+  <block id="793741dbe21d9514b2e4f8bc559f8062" category="summary">Seguire questi passaggi del flusso di lavoro per sostituire il controller nel sistema storage FAS500f.</block>
+  <block id="02ddf1646130c87ede23c28b28b13476" category="doc">Flusso di lavoro di sostituzione del controller - FAS500f</block>
+  <block id="2910a393aa082421834d8d871b20a809" category="summary">Mantenere l'hardware FAS500f</block>
+  <block id="956194f104a0f38c3b230001087b4aec" category="paragraph">Mantenete l'hardware del vostro sistema storage FAS500f per garantirne l'affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, per prevenire tempi di inattività e perdite di dati.</block>
+  <block id="18b7fef27cfdab1c569268be6baf5f9d" category="paragraph">Le procedure di manutenzione presuppongono che il sistema storage FAS500f sia già stato implementato come nodo di storage nell'ambiente ONTAP.</block>
+  <block id="333d8c39f24915bdf4cd2a5cbb2c96c9" category="summary">Specifiche chiave per il sistema storage FAS500f</block>
+  <block id="9b2d40af21d64d80278ee173eee93493" category="doc">Specifiche chiave per FAS500f</block>
+  <block id="7971c747973f656fa0a258fe576a59ce" category="paragraph">Di seguito sono riportate alcune specifiche per il FAS500f. Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) per un elenco completo delle specifiche del FAS500f. Questa pagina si riferisce a una singola coppia ad alta disponibilità.</block>
+  <block id="2993484ef64a91db7d4ffb4091f706d0" category="paragraph">Configurazione della piattaforma: FAS500f coppia HA a chassis singolo</block>
+  <block id="9301497e894d25c1a5d8e0997da7a7eb" category="paragraph">Versione ONTAP: 9.16.1P2</block>
+  <block id="5a4e86e80e1a2b65d5e11606283fa0e6" category="inline-link-macro">AFF A250 (Recupero automatico)</block>
+  <block id="48f357e077fea73ea971448bfba251ef" category="list-text"><block ref="48f357e077fea73ea971448bfba251ef" category="inline-link-macro-rx"></block></block>
+  <block id="2c196d8c70003da4749b8a9477ed6300" category="inline-link-macro">AFF A250 (Recupero manuale)</block>
+  <block id="22f299d5f453aed209543d8d0bdadd53" category="list-text"><block ref="22f299d5f453aed209543d8d0bdadd53" category="inline-link-macro-rx"></block></block>
+  <block id="d9d3712e829421ad7450868d004f7f9a" category="list-text"><block ref="d9d3712e829421ad7450868d004f7f9a" category="inline-link-macro-rx"></block></block>
+  <block id="19f18a98450d557bdd5e993eeb0ca24a" category="list-text"><block ref="19f18a98450d557bdd5e993eeb0ca24a" category="inline-link-macro-rx"></block></block>
+  <block id="53d0a5cb3983747c67239f70946676ba" category="list-text"><block ref="53d0a5cb3983747c67239f70946676ba" category="inline-link-macro-rx"></block></block>
+  <block id="a5694d2a6f21dd1104537fe22c5ce095" category="list-text"><block ref="a5694d2a6f21dd1104537fe22c5ce095" category="inline-link-macro-rx"></block></block>
+  <block id="162c0aef515204afbd5f02d1715a1552" category="list-text"><block ref="162c0aef515204afbd5f02d1715a1552" category="inline-link-macro-rx"></block></block>
+  <block id="b53703a68aca47bc2d34413fc12b9686" category="list-text"><block ref="b53703a68aca47bc2d34413fc12b9686" category="inline-link-macro-rx"></block></block>
+  <block id="0e9127c21baccecba06d1965e12a9204" category="list-text"><block ref="0e9127c21baccecba06d1965e12a9204" category="inline-link-macro-rx"></block></block>
+  <block id="415f402a8be75f17ebca770ae274bee9" category="list-text"><block ref="415f402a8be75f17ebca770ae274bee9" category="inline-link-macro-rx"></block></block>
+  <block id="190e802ec51e4c06fc00287a967312b1" category="list-text"><block ref="190e802ec51e4c06fc00287a967312b1" category="inline-link-macro-rx"></block></block>
+  <block id="437e5a076f6c0b623e07ea8121a21ffa" category="list-text"><block ref="437e5a076f6c0b623e07ea8121a21ffa" category="inline-link-macro-rx"></block></block>
+  <block id="398fa7c0f807189fcfa3626c249969ed" category="list-text"><block ref="398fa7c0f807189fcfa3626c249969ed" category="inline-link-macro-rx"></block></block>
+  <block id="39fdf33f750bc59fc55e896f9553db72" category="list-text"><block ref="39fdf33f750bc59fc55e896f9553db72" category="inline-link-macro-rx"></block></block>
+  <block id="c6c1810cf11c6e5e45dbc0f652eeb82e" category="list-text"><block ref="c6c1810cf11c6e5e45dbc0f652eeb82e" category="inline-link-macro-rx"></block></block>
+  <block id="d4d95752430d31953462bea2ed080c82" category="list-text"><block ref="d4d95752430d31953462bea2ed080c82" category="inline-link-macro-rx"></block></block>
+  <block id="ef92df4448144dc5b04fa658bba46a3e" category="sidebar">AFF A250 Boot Media Automated</block>
+  <block id="73c710838fb73a6d0bb29f50f91574d0" category="sidebar">Manuale del supporto di avvio AFF 250</block>
+  <block id="073d73c28f8d5787bc7ce23c0bad392e" category="sidebar">ASA C250 Supporto di avvio automatico</block>
+  <block id="42a46a847699d28a60c3a7e1b4f233b1" category="sidebar">Manuale Boot Media ASA C250</block>
+  <block id="6ec648d108530e0f13c0944e1618f1c1" category="sidebar">ASA A250 Supporto di avvio automatico</block>
+  <block id="2b201f616d84718137f5c5a701acb0c1" category="sidebar">Manuale del supporto di avvio ASA A250</block>
+  <block id="8523343b69c75903dcc986fdb4a1cbcf" category="sidebar">AFF C250 Boot Media Automated</block>
+  <block id="6364a5589d3ac8e79045b3275dc3846d" category="sidebar">Manuale del supporto di avvio AFF C250</block>
+  <block id="028a5f76f5ae8b0784cb7f71dcacb0ac" category="sidebar">Prepararsi alla sostituzione dello chassis</block>
+  <block id="3857caf5489220ee3ad8ce823746d7d7" category="sidebar">FAS500f Supporto di avvio automatizzato</block>
+  <block id="e97e37b3736f4796b4922c33c509044e" category="sidebar">Manuale del supporto di avvio FAS500f</block>
 </blocks>

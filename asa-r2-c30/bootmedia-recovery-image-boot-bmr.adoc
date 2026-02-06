@@ -78,10 +78,7 @@ La crittografia è installata. Vai a<<restore-key-manager,ripristino del gestore
 
 NOTE: Se il sistema non riesce a identificare la configurazione del gestore delle chiavi, visualizza un messaggio di errore e chiede di confermare se il gestore delle chiavi è configurato e di che tipo (integrato o esterno).  Rispondi alle richieste per procedere.
 
-
-
-[[restore-key-manager]]
-. Ripristinare il gestore delle chiavi utilizzando la procedura appropriata per la propria configurazione:
+. [[restore-key-manager]] Ripristina il key manager utilizzando la procedura appropriata per la tua configurazione:
 +
 [role="tabbed-block"]
 ====
@@ -293,8 +290,7 @@ Vai a <<reenable-auto-giveback,riattivazione della restituzione automatica>> se 
 ====
 
 
-[[reenable-auto-giveback]]
-. Se il giveback automatico è stato disattivato, riabilitarlo:
+. [[reenable-auto-giveback]]Se il giveback automatico è stato disabilitato, riabilitalo:
 +
 `storage failover modify -node local -auto-giveback true`
 
