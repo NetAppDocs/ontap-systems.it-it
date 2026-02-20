@@ -162,7 +162,10 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 == Passo 2: Sostituire il modulo NVRAM o il modulo DIMM NVRAM
 
-Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropriata riportata di seguito.
+Sostituire il modulo NVRAM o i DIMM NVRAM utilizzando l'opzione appropriata.
+
+
+CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.
 
 [role="tabbed-block"]
 ====
@@ -170,7 +173,6 @@ Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropria
 --
 Per sostituire il modulo NVRAM, posizionarlo nello slot 4/5 del telaio e seguire la sequenza specifica di passi.
 
-. Se non si è già collegati a terra, mettere a terra l'utente.
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
 +
 .Video - Conferma del posto di guida

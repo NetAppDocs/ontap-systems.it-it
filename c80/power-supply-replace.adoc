@@ -16,12 +16,13 @@ Sostituire un'unità di alimentazione CA o CC (PSU) nel sistema AFF C80 in caso 
 Gli alimentatori sono ridondanti e sostituibili a caldo. Non è necessario spegnere il controller per sostituire un alimentatore.
 
 .A proposito di questa attività
-Questa procedura è stata scritta per la sostituzione di una PSU alla volta.
+Questa procedura è scritta per sostituire un alimentatore alla volta. Utilizzare la procedura appropriata per il tipo di PSU: AC o DC.
 
 
 IMPORTANT: Non combinare PSU con diversi livelli di efficienza o tipi di input diversi. Sostituire sempre come per come.
 
-Utilizzare la procedura appropriata per il tipo di alimentatore in uso: CA o CC.
+
+CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.
 
 [role="tabbed-block"]
 ====
@@ -30,7 +31,6 @@ Utilizzare la procedura appropriata per il tipo di alimentatore in uso: CA o CC.
 Per sostituire un alimentatore CA, attenersi alla seguente procedura.
 
 .Fasi
-. Se non si è già collegati a terra, mettere a terra l'utente.
 . Identificare la PSU che si desidera sostituire, in base ai messaggi di errore della console o tramite il LED di errore rosso sull'alimentatore.
 . Scollegare l'alimentatore:
 +

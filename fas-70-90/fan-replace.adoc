@@ -13,8 +13,10 @@ summary: 'Sostituire un modulo della ventola nel sistema FAS70 o FAS90 quando un
 [role="lead"]
 Sostituire un modulo della ventola nel sistema FAS70 o FAS90 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
+
+CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.
+
 .Fasi
-. Se non si è già collegati a terra, mettere a terra l'utente.
 . Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
 . Identificare il modulo della ventola da sostituire controllando i messaggi di errore della console e il LED Attention (attenzione) su ciascun modulo della ventola.
 +

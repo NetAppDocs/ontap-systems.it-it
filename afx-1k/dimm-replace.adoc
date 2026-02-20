@@ -13,6 +13,9 @@ summary: Sostituire un modulo DIMM nel sistema di archiviazione AFX 1K se vengon
 [role="lead"]
 Sostituire un modulo DIMM nel sistema di archiviazione AFX 1K se vengono rilevati troppi errori di memoria correggibili o non correggibili. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
+
+CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.
+
 .Prima di iniziare
 * Assicurati di avere il componente sostitutivo ricevuto da NetApp.
 * Assicurarsi di sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
@@ -148,7 +151,9 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si e
 
 È necessario sostituire un DIMM quando il sistema segnala una condizione di errore permanente per tale DIMM.
 
-. Se non si è già collegati a terra, mettere a terra l'utente.
+
+CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.
+
 . Aprire il condotto dell'aria della centralina sulla parte superiore della centralina.
 +
 .. Inserire le dita nelle cavità alle estremità più lontane del condotto dell'aria.
