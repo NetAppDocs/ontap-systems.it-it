@@ -21,7 +21,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 Spegnere o sostituire il controller compromesso.
 
-Per arrestare il controller danneggiato, è necessario determinarne lo stato e, se necessario, eseguire un failover di archiviazione del controller in modo che il controller funzionante continui a elaborare i dati dall'archiviazione del controller danneggiato.
+Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
 .A proposito di questa attività
 * Se si dispone di un cluster con più di quattro nodi, è necessario che sia raggiunto il quorum.  Per visualizzare le informazioni del cluster sui nodi, utilizzare `cluster show` comando.  Per maggiori informazioni sul `cluster show` comando, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["Visualizza i dettagli a livello di nodo in un cluster ONTAP"^] .

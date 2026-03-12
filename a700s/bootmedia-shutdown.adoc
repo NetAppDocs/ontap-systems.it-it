@@ -15,7 +15,7 @@ Dopo aver completato i controlli di crittografia, spegnere il controller non fun
 
 Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Completare l'arresto del controller danneggiato arrestandolo al prompt LOADER e acquisendo le variabili di ambiente di avvio. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire il supporto di avvio.
 
 .Fasi
 . Portare la centralina danneggiata al prompt DEL CARICATORE:
