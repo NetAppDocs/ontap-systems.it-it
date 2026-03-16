@@ -239,7 +239,7 @@ In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
 
 NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
 
-. Se i collegamenti interconnessi HA sono stati interrotti, ripristinarli:
+. Se i collegamenti di interconnessione HA sono stati interrotti, riattivali:
 +
 `system ha interconnect link on -node healthy-node -link 0`
 
