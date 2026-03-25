@@ -17,17 +17,10 @@ Questa procedura si applica ai sistemi con configurazioni a due nodi. Per ulteri
 * Assicurarsi di disporre delle autorizzazioni e delle credenziali necessarie:
 +
 ** Credenziali dell'amministratore locale per ONTAP.
-** Accessibilità BMC per ciascun controller.
+** Accessibilità del BMC per ciascun controller.
 
 
 * Assicurarsi di disporre degli strumenti e delle attrezzature necessarie per la sostituzione.
-* Come Best practice prima dello spegnimento, è necessario:
-+
-** Eseguire ulteriori operazioni https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["controlli dello stato del sistema"].
-** Aggiornare ONTAP a una versione consigliata per il sistema.
-** Risolvere qualsiasi https://activeiq.netapp.com/["Avvisi e rischi relativi al benessere Active IQ"]. Annotare eventuali guasti presenti nel sistema, ad esempio i LED sui componenti del sistema.
-
-
 
 
 .Fasi
@@ -46,9 +39,11 @@ Questa procedura si applica ai sistemi con configurazioni a due nodi. Per ulteri
 +
 `exit`
 
-. Accedere a SP/BMC tramite SSH utilizzando l'indirizzo IP di uno dei nodi elencati nell'output del passaggio precedente per monitorare l'avanzamento.
+. Accedere allo SP/BMC di ciascun controller utilizzando l'indirizzo IP identificato nel passaggio precedente:
 +
-Se stai utilizzando una console/laptop, accedi al controller usando le stesse credenziali di amministratore del cluster.
+** Se si accede dal BMC tramite SSH, connettersi utilizzando l'indirizzo SP/BMC (ad esempio, `ssh admin@<SP/BMC_address>`), quindi immettere il comando `system console` e autenticarsi.
+** Se si utilizza una console locale o un laptop collegato direttamente al controller, accedere utilizzando le stesse credenziali dell'amministratore del cluster.
+
 
 . Arrestare i due nodi situati nel telaio danneggiato:
 +

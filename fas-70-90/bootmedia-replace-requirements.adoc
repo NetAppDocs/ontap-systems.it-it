@@ -21,6 +21,8 @@ Prima di sostituire il supporto di avvio nel sistema FAS70 o FAS90, assicurarsi 
 .Preparazione del file
 Copia il  `image_xxx.tgz` file sull'unità flash USB. Questo file verrà utilizzato quando si trasferisce l'immagine ONTAP tramite l'unità flash USB.
 
+Dall'immagine ONTAP estratta, copia la  `EFI` cartella nella directory principale dell'unità flash USB.
+
 .Sostituzione dei componenti
 Sostituire il componente guasto con il componente sostitutivo fornito da NetApp.
 
