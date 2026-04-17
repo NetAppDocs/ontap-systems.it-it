@@ -2,7 +2,7 @@
 permalink: asa-r2-c30/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: asa c30, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Per completare la sostituzione del controller per il sistema di storage ASA C30, ripristinare prima la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze richieste sul nuovo controller. Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registrare il numero di serie della nuova centralina e restituire la parte guasta a NetApp.' 
+summary: Per completare la sostituzione del controller per il sistema storage ASA C30, ripristina innanzitutto la configurazione di NetApp Storage Encryption, se necessario, e installa le licenze richieste sul nuovo controller. Successivamente, conferma che le interfacce logiche stiano riportando alle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, registra il numero di serie del nuovo controller e poi restituisci la parte guasta a NetApp. 
 ---
 = Sostituzione completa della centralina - ASA C30
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: a150/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a150, a150, aff, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, module, filed, part, aggregates, 
-summary: 'È necessario sostituire un modulo DIMM nel modulo controller quando il sistema registra un numero crescente di codici di correzione degli errori correggibili (ECC); in caso contrario, si verifica un errore di sistema.' 
+summary: È necessario sostituire un DIMM nel controller quando il sistema storage riscontra errori quali un numero eccessivo di errori CECC basati sugli avvisi di Health Monitor o errori ECC non correggibili, in genere causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP. 
 ---
 = Sostituire un modulo DIMM - AFF A150
 :allow-uri-read: 

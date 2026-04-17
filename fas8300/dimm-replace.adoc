@@ -2,7 +2,7 @@
 permalink: fas8300/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, replace, dimm, shut, down, impaired, controller, module, reinstall,  system, controller, aggregates, metrocluster, replacement 
-summary: 'È necessario sostituire un modulo DIMM nel modulo controller quando il sistema registra un numero crescente di codici di correzione degli errori correggibili (ECC); in caso contrario, si verifica un errore di sistema.' 
+summary: 'È necessario sostituire un DIMM nel controller quando il sistema storage riscontra errori come un numero eccessivo di codici di correzione degli errori correggibili o errori non correggibili, in genere causati dal guasto di un singolo DIMM che impedisce al sistema storage l"avvio di ONTAP.' 
 ---
 = Sostituire un DIMM - FAS8300 e FAS8700
 :allow-uri-read: 

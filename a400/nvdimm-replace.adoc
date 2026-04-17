@@ -2,7 +2,7 @@
 permalink: a400/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: aff a400, aff, a400, replace, nvdimm, controller, module, system, register, flash, lifetime, healthy, system, panic, shut, down, impair, two-node, metrocluster, complete, replacement, process, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
-summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema. 
+summary: Sostituire il modulo NVDIMM nel controller AFF A400 quando il sistema rileva che la durata della memoria flash sta per terminare o che il modulo NVDIMM identificato non è integro. La mancata sostituzione di un modulo NVDIMM difettoso può causare un system panic. 
 ---
 = Sostituire un modulo NVDIMM - AFF A400
 :allow-uri-read: 

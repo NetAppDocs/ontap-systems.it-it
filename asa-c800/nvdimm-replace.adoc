@@ -2,7 +2,7 @@
 permalink: asa-c800/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: asa c800, replace an nvdimm 
-summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema. 
+summary: È necessario sostituire il modulo NVDIMM nel controller quando il sistema rileva che la durata della memoria flash sta per terminare o che il modulo NVDIMM identificato non è integro. In caso contrario, si verifica un panic di sistema. 
 ---
 = Sostituire un NVDIMM - ASA C800
 :allow-uri-read: 

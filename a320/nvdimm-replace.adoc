@@ -2,7 +2,7 @@
 permalink: a320/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: aff, a320, aff a320, replace, nvdimm, controller, module, system, register, flash, lifetime, identified, idenify, nvdimm, healthy, general, failure, system, panic, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation,complete the replacement process 
-summary: È necessario sostituire il modulo NVDIMM nel modulo controller quando il sistema registra che la durata della memoria flash è quasi terminata o che il modulo NVDIMM identificato non funziona in generale; in caso contrario, si verifica un errore di sistema. 
+summary: Sostituire il NVDIMM nel modulo controller AFF A320 quando il sistema rileva che la durata della memoria flash sta per terminare o che il NVDIMM identificato non è integro. La mancata sostituzione di un NVDIMM difettoso può causare un system panic. 
 ---
 = Sostituire un modulo NVDIMM - AFF A320
 :allow-uri-read: 
