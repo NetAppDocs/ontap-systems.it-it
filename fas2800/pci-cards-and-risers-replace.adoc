@@ -11,10 +11,13 @@ summary: Per sostituire una scheda PCIe o mezzanino, scollegare i cavi e i modul
 
 
 [role="lead"]
-Sostituire la scheda mezzanine scollegando i cavi e i moduli SFP e QSFP dalla scheda, sostituire la scheda mezzanine guasta, quindi riposizionarla.
+Sostituire la scheda mezzanine nel sistema FAS2820 se la scheda si guasta o aggiornarla a un protocollo diverso installando una nuova scheda.
 
-* È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Utilizzare questa procedura con qualsiasi versione di ONTAP supportata dal sistema.
+* Sostituire la scheda mezzanine con una dello stesso tipo o con una di tipo diverso.
+* Annota le informazioni relative a ifgrp e VLAN prima di spegnere il controller.
+* Se si modificano i tipi di schede mezzanine, modificare le impostazioni LIF e delle porte dopo il riavvio del controller.
+* Verifica che tutti gli altri componenti del sistema funzionino correttamente. Se il problema persiste, contatta il supporto tecnico.
 
 
 .Animazione - sostituire la scheda mezzanino
@@ -22,6 +25,16 @@ video::a8ec891d-f6f6-4479-9ca2-af47017254ff[panopto]
 
 
 == Fase 1: Spegnere il controller compromesso
+
+.Prima di iniziare
+* Se si modificano i tipi di schede mezzanine, acquisire le informazioni relative a ifgrp e VLAN del nodo compromesso.
++
+[source, cli]
+----
+network port vlan show -node _impaired_node_name_
+network port ifgrp show -node _impaired_node_name_
+----
+
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
@@ -68,23 +81,23 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 == Fase 2: Rimuovere il modulo controller
 
-Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
+Rimuovere il modulo di controllo e il relativo coperchio.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
+. Allenta la fascetta a strappo, prendi nota di dove sono collegati i cavi e quindi scollega i cavi di sistema e gli SFP (se necessario).
 +
-Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+Lascia i cavi all'interno del dispositivo di gestione dei cavi per tenerli in ordine.
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del modulo controller.
-. Premere il dispositivo di chiusura sulla maniglia della camma fino al rilascio, aprire completamente la maniglia della camma per rilasciare il modulo controller dalla scheda intermedia, quindi estrarre il modulo controller dallo chassis con due mani.
+. Sbloccare la maniglia a camma, aprirla completamente ed estrarre il modulo di controllo dal chassis.
 +
 image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Rimuovere il controller]
 
-. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
-. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
+. Capovolgi il controller e posizionalo su una superficie piana e stabile.
+. Premere i pulsanti blu sui lati del modulo di controllo per sbloccare il coperchio. Ruotare il coperchio verso l'alto e rimuoverlo dal modulo di controllo.
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Apri il controller]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Aprire il controller]
 
 
 
@@ -128,7 +141,7 @@ Scheda mezzanine PCIe
 
 |===
 +
-.. Rimuovere la piastra io facendola scorrere verso l'esterno dal modulo controller.
+.. Rimuovere la piastra io facendola scorrere fuori dal modulo controller.
 .. Allentare le viti a testa zigrinata sulla scheda mezzanine e sollevare la scheda mezzanine.
 +
 
@@ -138,36 +151,35 @@ NOTE: È possibile allentare le viti a testa zigrinata con le dita o con un cacc
 
 . Reinstallare la scheda mezzanine:
 +
-.. Allineare lo zoccolo della spina della scheda mezzanine sostitutiva con lo zoccolo della scheda madre, quindi inserire delicatamente la scheda nello zoccolo.
+.. Allineare il connettore della scheda mezzanine di ricambio con lo zoccolo sulla scheda madre, quindi inserire delicatamente la scheda nello zoccolo.
 .. Serrare le tre viti a testa zigrinata sulla scheda mezzanino.
 .. Rimontare la piastra io.
 
 
-. Reinstallare il coperchio del modulo controller e bloccarlo in posizione.
+. Rimetti il ​​coperchio del modulo controller e bloccalo.
 
 
 
 
-== Fase 4: Installare il modulo controller
+== Passaggio 4: Installare e riavviare il modulo controller
 
-Reinstallare il modulo controller.
+Reinstallare e riavviare il modulo controller.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Se non è già stato fatto, riposizionare il coperchio sul modulo controller.
 . Capovolgere il modulo controller e allineare l'estremità con l'apertura dello chassis.
-. Spingere delicatamente il modulo controller a metà nel sistema.allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Spingere delicatamente il modulo controller a metà all'interno dello chassis.
 +
 
 NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
 
-. Ricable il sistema, come necessario.
+. Ricollegare i cavi di sistema, se necessario.
 +
 Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
 
 . Completare la reinstallazione del modulo controller:
 +
-.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.
+.. Con la maniglia a camma aperta, spingere con decisione il modulo di controllo fino a quando non è completamente inserito. Chiudere la maniglia a camma per bloccare.
 +
 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
@@ -176,16 +188,58 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 Il controller inizia ad avviarsi non appena viene inserito nello chassis.
 
 .. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
-.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+.. Fissare i cavi al dispositivo di gestione dei cavi con la fascetta a strappo. == Passaggio 5: Riconfigurare la scheda mezzanine (se il tipo è stato modificato)
 
 
-. Riportare il controller al funzionamento normale restituendo lo storage: `storage failover giveback -ofnode _impaired_node_name_`
+
+
+Dopo il riavvio del controller, modifica le impostazioni della scheda mezzanine in modo che corrispondano alla nuova scheda se l'hai sostituita con un tipo diverso.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Scheda mezzanine Fibre Channel a Ethernet
+--
+Configura la scheda mezzanine di sostituzione Ethernet aggiornando i LIF e le impostazioni delle porte secondo necessità.
+
+.Fasi
+. Utilizzare il  `network port show` comando per confermare i nuovi nomi delle porte e lo stato dei collegamenti.
+. Ricreare tutti gli ifgrp e le VLAN sulle nuove porte Ethernet mezzanine.
+. Assegna le nuove porte, o le porte ifgrp/VLAN, ai domini di broadcast e agli IPspaces corretti e imposta i valori MTU.
+. Aggiornare la porta home e le impostazioni di failover interessate.
+. Elimina le LIF non più necessarie.
+
+
+Vedere link:https://docs.netapp.com/us-en/ontap/networking/configure_network_ports_cluster_administrators_only_overview.html["Scopri la configurazione delle porte di rete ONTAP"] per informazioni più dettagliate sulla configurazione Ethernet in ONTAP.
+
+--
+.Opzione 2: scheda mezzanine da Ethernet a Fibre Channel
+--
+Configurare la scheda mezzanine FC sostitutiva aggiornando i LIF e le impostazioni delle porte secondo necessità.
+
+.Fasi
+. Abilita FCP sugli SVM pertinenti. Crea nuovi LIF di dati.
+. Aggiornare la configurazione delle zone fabric e i percorsi host. Aggiornare portset, igroup e le mappature LUN secondo necessità.
+. Verificare il multipath dell'host. Confermare che non vi siano percorsi obsoleti e che i percorsi siano bilanciati tra percorsi ottimizzati e non ottimizzati.
+. Verificare che non vi siano LIF configurati sulle porte Ethernet rimosse, che tutti i LIF FC siano attivi e funzionino correttamente per l'I/O e che il monitoraggio AutoSupport rifletta la nuova configurazione.
+
+
+Vedere link:https://docs.netapp.com/us-en/ontap/san-admin/index.html["Panoramica sulla gestione SAN"] per informazioni più dettagliate sulla configurazione di Fibre Channel in ONTAP.
+
+--
+====
+
+
+== Passaggio 6: Riportare il controller al normale funzionamento
+
+Restituisci lo storage al controller danneggiato, ripristina la restituzione automatica e termina la finestra di manutenzione AutoSupport.
+
+. Dal controller funzionante o da un prompt di amministrazione del cluster, riportare il controller al normale funzionamento ripristinandone lo storage: `storage failover giveback -ofnode _impaired_node_name_`
 . Ripristinare il giveback automatico utilizzando `storage failover modify -node local -auto-giveback true` comando.
 . Se è stata attivata una finestra di manutenzione AutoSupport, terminarla utilizzando `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 
 
 
 
-== Fase 5: Restituire il componente guasto a NetApp
+== Fase 7: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

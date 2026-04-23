@@ -5609,15 +5609,11 @@ Controllare il supporto di avvio per assicurarsi che sia inserito correttamente 
 Vedere<block ref="087e4d006962c8ba6c4d8fdb71ff8e38" category="inline-link-rx"></block> per ulteriori dettagli.</block>
   <block id="0f844d6324319ebe9b4aabd24f1b88dd" category="list-text">Installare il modulo controller:</block>
   <block id="6bfde1459ef866428e3532004887b3b8" category="list-text">Ricable del modulo controller.</block>
-  <block id="db5c04ca6cb958f296ff071cf8420f54" category="paragraph">Sostituire la scheda mezzanine scollegando i cavi e i moduli SFP e QSFP dalla scheda, sostituire la scheda mezzanine guasta, quindi riposizionarla.</block>
-  <block id="783de30113379b15fc6135387f11b7e6" category="video-title">Animazione - sostituire la scheda mezzanino</block>
   <block id="a0ff1a6d16d908c33e10409aed0ac623" category="paragraph">Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.</block>
   <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">Fase 3: Sostituire la scheda mezzanine</block>
   <block id="6918dd1d1ecfa7a18a047a925c4f30ee" category="paragraph">Sostituire la scheda mezzanine.</block>
   <block id="83b54898f0ac014b1e217ee413643205" category="paragraph">Scheda mezzanine PCIe</block>
   <block id="64016c063cf6b470fdcccc5a97f852b1" category="list-text">Allentare le viti a testa zigrinata sulla scheda mezzanine e sollevare la scheda mezzanine.</block>
-  <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">Allineare lo zoccolo della spina della scheda mezzanine sostitutiva con lo zoccolo della scheda madre, quindi inserire delicatamente la scheda nello zoccolo.</block>
-  <block id="f2972968e044e6666c42c0182107b4f6" category="paragraph">Reinstallare il modulo controller.</block>
   <block id="f36f34bd21dc87823e156cd47c7d7440" category="list-text">Capovolgere il modulo controller e allineare l'estremità con l'apertura dello chassis.</block>
   <block id="3ab31ac30e2ad91e2f7e6a9ecd045f6e" category="list-text">Spingere delicatamente il modulo controller a metà nel sistema.allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il modulo controller a metà nel sistema.</block>
   <block id="d32890221c5529cefc96a956073d9844" category="list-text">Ripristinare il giveback automatico utilizzando<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> comando.</block>
@@ -10896,7 +10892,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="56632d1795a7d32b89a455a3b633b7f5" category="list-text">Attivare l'alimentazione dello scaffale e impostare gli ID dello scaffale utilizzando l'animazione all'inizio di questo passaggio.</block>
   <block id="6a3ffb8f58252e034e90b5eb7a9cc233" category="list-text">Attivare l'alimentazione dello scaffale e impostare gli ID dello scaffale utilizzando l'animazione all'inizio di questo passaggio.</block>
   <block id="cb102c5c1eccde9b442d1de001f76cc3" category="image-alt">Rimuovere il coperchio del controller</block>
-  <block id="8fca7d700183532fd08f68b674a86c60" category="image-alt">Apri il controller</block>
   <block id="6abebf9335209d6b986ad1d41e48f43b" category="image-alt">Sostituisci una carta mezzanino</block>
   <block id="9f8a96e46f0e86179108737100c29b9d" category="list-text">Reinstallare il coperchio del controller.</block>
   <block id="627450f7182bd50247300c6db6f17129" category="image-alt">Rimuovere un modulo PCI</block>
@@ -15016,4 +15011,48 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="284f3d864e67ec64454ad1382833e490" category="summary">Trova le procedure di sostituzione dei moduli shelf NVMe per il tuo shelf di storage NetApp, organizzate per modello di shelf. Questo riferimento fornisce collegamenti diretti ai workflow passo-passo di sostituzione NSM per i shelf NS224 e NX224, per aiutarti a individuare rapidamente la procedura corretta per il tuo specifico modello di shelf.</block>
   <block id="a461d5a3ec6eff00835d5b1479552285" category="doc">Procedure di sostituzione della batteria NVMEM o NVRAM in base alla famiglia di piattaforme</block>
   <block id="66439d0b114daf635ee9ba53d5e8d568" category="summary">L'armadio di sistema supporta diversi tipi di Power Distribution Unit (PDU). Le PDU sono conformi a NEMA o IEC.</block>
+  <block id="bb67cf9a22f6bca036da3944f082f70d" category="admonition">Prima di chiudere il coperchio del controller danneggiato, assicurarsi che le linguette di espulsione di tutti gli slot DIMM vuoti siano completamente riportate in posizione di blocco.</block>
+  <block id="669e934b15627ccb89dc33fcabeddbfb" category="paragraph">Sostituire la scheda mezzanine nel sistema FAS2820 se la scheda si guasta o aggiornarla a un protocollo diverso installando una nuova scheda.</block>
+  <block id="188325fb14c01076ac7986e006024318" category="list-text">Utilizzare questa procedura con qualsiasi versione di ONTAP supportata dal sistema.</block>
+  <block id="ac252143999e21b283146112dd2be869" category="list-text">Sostituire la scheda mezzanine con una dello stesso tipo o con una di tipo diverso.</block>
+  <block id="fe8724291ba433d10b4fcf50b8fb75e8" category="list-text">Annota le informazioni relative a ifgrp e VLAN prima di spegnere il controller.</block>
+  <block id="f161beffd589a67ef92732e9b253cdd7" category="list-text">Se si modificano i tipi di schede mezzanine, modificare le impostazioni LIF e delle porte dopo il riavvio del controller.</block>
+  <block id="449e834456e7e68b70b454418fba97ab" category="list-text">Verifica che tutti gli altri componenti del sistema funzionino correttamente. Se il problema persiste, contatta il supporto tecnico.</block>
+  <block id="5bff8c12368fa11b6a921de13c7b88c4" category="list-text">Se si modificano i tipi di schede mezzanine, acquisire le informazioni relative a ifgrp e VLAN del nodo compromesso.</block>
+  <block id="f8d7ee81ae11933d89c54b63f5fadf14" category="paragraph">Rimuovere il modulo di controllo e il relativo coperchio.</block>
+  <block id="209665c3ca401651aef828199962e8e6" category="list-text">Allenta la fascetta a strappo, prendi nota di dove sono collegati i cavi e quindi scollega i cavi di sistema e gli SFP (se necessario).</block>
+  <block id="3cd42af34b01ed058f7c2cd55e0996dd" category="paragraph">Lascia i cavi all'interno del dispositivo di gestione dei cavi per tenerli in ordine.</block>
+  <block id="7b0ea8fe43bfe3b98d824632eff95227" category="list-text">Sbloccare la maniglia a camma, aprirla completamente ed estrarre il modulo di controllo dal chassis.</block>
+  <block id="98218aa7f65c228232e406628bf68c52" category="list-text">Capovolgi il controller e posizionalo su una superficie piana e stabile.</block>
+  <block id="c423597c377723410ddff79391c30184" category="list-text">Premere i pulsanti blu sui lati del modulo di controllo per sbloccare il coperchio. Ruotare il coperchio verso l'alto e rimuoverlo dal modulo di controllo.</block>
+  <block id="049bcfe9f533b1ce55e8c569103ad005" category="list-text">Allineare il connettore della scheda mezzanine di ricambio con lo zoccolo sulla scheda madre, quindi inserire delicatamente la scheda nello zoccolo.</block>
+  <block id="9995c7de2e4f28bd5897f9cddbfb7fe2" category="list-text">Rimetti il ​​coperchio del modulo controller e bloccalo.</block>
+  <block id="8b9e2d3291c598b800be072b8afefa3b" category="section-title">Passaggio 4: Installare e riavviare il modulo controller</block>
+  <block id="df34b20e74975704c940ac43d85db1a0" category="paragraph">Reinstallare e riavviare il modulo controller.</block>
+  <block id="aa8d1cbe476192b8bca04b6db3820a20" category="list-text">Spingere delicatamente il modulo controller a metà all'interno dello chassis.</block>
+  <block id="f537a6f2f3860f6a3385b2dba60ee50d" category="list-text">Ricollegare i cavi di sistema, se necessario.</block>
+  <block id="f44818abfdb464a54383bded154be7a6" category="list-text">Con la maniglia a camma aperta, spingere con decisione il modulo di controllo fino a quando non è completamente inserito. Chiudere la maniglia a camma per bloccare.</block>
+  <block id="3caa3f6c101dc917e6e89ed7e891e2e7" category="list-text">Fissare i cavi al dispositivo di gestione dei cavi con la fascetta a strappo. == Passaggio 5: Riconfigurare la scheda mezzanine (se il tipo è stato modificato)</block>
+  <block id="e705f3e2e1683e9fdc37c829b76df435" category="paragraph">Dopo il riavvio del controller, modifica le impostazioni della scheda mezzanine in modo che corrispondano alla nuova scheda se l'hai sostituita con un tipo diverso.</block>
+  <block id="4a75ad40a6302b2865f475233d3fb5e5" category="open-title">Opzione 1: Scheda mezzanine Fibre Channel a Ethernet</block>
+  <block id="3eab4e5e3f38a487e4c0ff8986b53620" category="paragraph">Configura la scheda mezzanine di sostituzione Ethernet aggiornando i LIF e le impostazioni delle porte secondo necessità.</block>
+  <block id="5f0a91ebda5419c9dae2884b55adbe74" category="list-text">Utilizzare il <block ref="838c4deb1e9c47dcd4c44b6e40276467" prefix=" " category="inline-code"></block> comando per confermare i nuovi nomi delle porte e lo stato dei collegamenti.</block>
+  <block id="3efcada16cb2f3e01caddea484618416" category="list-text">Ricreare tutti gli ifgrp e le VLAN sulle nuove porte Ethernet mezzanine.</block>
+  <block id="6e2960cee1a644afd90e3d3b838fd123" category="list-text">Assegna le nuove porte, o le porte ifgrp/VLAN, ai domini di broadcast e agli IPspaces corretti e imposta i valori MTU.</block>
+  <block id="4c56c513928e3bd961610cfdc822c8d9" category="list-text">Aggiornare la porta home e le impostazioni di failover interessate.</block>
+  <block id="a795d709ecd423b1744a5ef88448d471" category="list-text">Elimina le LIF non più necessarie.</block>
+  <block id="2379f006c7634c9a3930eb53207e352b" category="inline-link-macro">Scopri la configurazione delle porte di rete ONTAP</block>
+  <block id="b98137e3a1d1b6f4b29e605a6485919a" category="paragraph">Vedere <block ref="cb17047b6380f83ae8de9ed3ea1a53d8" category="inline-link-macro-rx"></block> per informazioni più dettagliate sulla configurazione Ethernet in ONTAP.</block>
+  <block id="52a696c40ad570403490bdec6c48e094" category="open-title">Opzione 2: scheda mezzanine da Ethernet a Fibre Channel</block>
+  <block id="e9e71980f309166c903d0c3d71389741" category="paragraph">Configurare la scheda mezzanine FC sostitutiva aggiornando i LIF e le impostazioni delle porte secondo necessità.</block>
+  <block id="fea1b58373a99298346b2ee3c42f7a8e" category="list-text">Abilita FCP sugli SVM pertinenti. Crea nuovi LIF di dati.</block>
+  <block id="da9bb3b5a73b19eb3674470b3621051d" category="list-text">Aggiornare la configurazione delle zone fabric e i percorsi host. Aggiornare portset, igroup e le mappature LUN secondo necessità.</block>
+  <block id="87160066c3c44a03aee7080e00432c64" category="list-text">Verificare il multipath dell'host. Confermare che non vi siano percorsi obsoleti e che i percorsi siano bilanciati tra percorsi ottimizzati e non ottimizzati.</block>
+  <block id="062a9fa0f81c39da805029b15f680004" category="list-text">Verificare che non vi siano LIF configurati sulle porte Ethernet rimosse, che tutti i LIF FC siano attivi e funzionino correttamente per l'I/O e che il monitoraggio AutoSupport rifletta la nuova configurazione.</block>
+  <block id="563c6fa09f1e284ce85546393fc8feb8" category="inline-link-macro">Panoramica sulla gestione SAN</block>
+  <block id="63018430f374d831226e536d0e46ce53" category="paragraph">Vedere <block ref="02b029a61c3a3a6905adcb1c22e947fd" category="inline-link-macro-rx"></block> per informazioni più dettagliate sulla configurazione di Fibre Channel in ONTAP.</block>
+  <block id="b677c618703db10bec968500a7722ccc" category="section-title">Passaggio 6: Riportare il controller al normale funzionamento</block>
+  <block id="21eb4ba3e07d5691bb2ca2aeeaea8fca" category="paragraph">Restituisci lo storage al controller danneggiato, ripristina la restituzione automatica e termina la finestra di manutenzione AutoSupport.</block>
+  <block id="b0cf17c34e1e13a80699938c1fb9a3a1" category="list-text">Dal controller funzionante o da un prompt di amministrazione del cluster, riportare il controller al normale funzionamento ripristinandone lo storage:<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block></block>
+  <block id="5a1c9794f830d65f2a212554cf798ab8" category="admonition">Prima di chiudere il coperchio NSM danneggiato, assicurarsi che le linguette di espulsione di tutti gli slot DIMM vuoti siano completamente riportate in posizione di blocco.</block>
 </blocks>
