@@ -21,7 +21,10 @@ Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. E
 .Fasi
 . Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Ciò impedisce l'apertura automatica di richieste di assistenza durante la finestra di manutenzione. La durata massima della soppressione è di 72 ore. Se la manutenzione termina prima del termine, è possibile riattivare la creazione di richieste di assistenza richiamando un AutoSupport messaggio con  `MAINT=END`. Per ulteriori informazioni, consultare  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Come disabilitare la creazione automatica di casi durante le finestre di manutenzione programmate"^].
 
 +
 Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:

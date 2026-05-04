@@ -11,11 +11,17 @@ summary: Aggiungi un modulo I/O al tuo sistema storage AFF C30 o AFF C60 per mig
 
 
 [role="lead"]
-Aggiungi un modulo I/O al tuo sistema di archiviazione AFF C30 o AFF C60 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.
+Aggiungete un modulo I/O al vostro sistema storage AFF C30 o AFF C60 per migliorare la connettività di rete ed espandere la capacità del sistema di gestire il traffico dati. Potete utilizzare questa procedura per aggiungere un modulo I/O a un controller operativo come aggiornamento pianificato oppure a un controller danneggiato durante la manutenzione.
 
 È possibile aggiungere un modulo i/o ai sistemi di storage AFF C30 e AFF C60 quando sono disponibili slot o quando tutti gli slot sono completamente popolati.
 
 .A proposito di questa attività
+È possibile eseguire questa procedura su uno qualsiasi dei controller della coppia HA, indipendentemente dal fatto che il controller sia attualmente operativo o non funzionante. Poiché non è possibile aggiungere un modulo I/O a un controller in esecuzione, il controller di destinazione deve essere arrestato prima dell'installazione del modulo. Il partner HA assume il controllo delle operazioni di storage durante la procedura, in modo che i dati rimangano disponibili per i client.
+
+* Se il controller di destinazione è *operativo* (aggiunta pianificata), seguire i passaggi di arresto come descritto, trattando il controller di destinazione come il controller "impaired" in quel contenuto.
+* Se il controller di destinazione è *danneggiato*, seguire i passaggi di spegnimento come descritto.
+
+
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
 
 Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
@@ -24,7 +30,9 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
-== Fase 1: Arrestare il modulo controller danneggiato
+== Passaggio 1: Spegnere il modulo controller di destinazione
+
+Assumi il controllo e spegni il modulo controller di destinazione in modo che il suo partner HA continui a fornire dati mentre aggiungi il modulo I/O. I passaggi collegati si riferiscono al controller che viene spento come controller "danneggiato"; gli stessi passaggi si applicano sia che tu stia assumendo il controllo di un controller operativo per un'aggiunta pianificata sia che tu stia spegnendo un controller già danneggiato.
 
 [role="tabbed-block"]
 ====
@@ -43,7 +51,10 @@ Ogni processo SCSI-blade deve essere in quorum con gli altri nodi del cluster. E
 .Fasi
 . Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Ciò impedisce l'apertura automatica di richieste di assistenza durante la finestra di manutenzione. La durata massima della soppressione è di 72 ore. Se la manutenzione termina prima del termine, è possibile riattivare la creazione di richieste di assistenza richiamando un AutoSupport messaggio con  `MAINT=END`. Per ulteriori informazioni, consultare  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Come disabilitare la creazione automatica di casi durante le finestre di manutenzione programmate"^].
 
 +
 Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:
@@ -108,7 +119,10 @@ Prendere il controllo e arrestare il controller non funzionante in modo che il c
 .Fasi
 . Se AutoSupport è attivato, eliminare la creazione automatica del caso richiamando un messaggio AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Ciò impedisce l'apertura automatica di richieste di assistenza durante la finestra di manutenzione. La durata massima della soppressione è di 72 ore. Se la manutenzione termina prima del termine, è possibile riattivare la creazione di richieste di assistenza richiamando un AutoSupport messaggio con  `MAINT=END`. Per ulteriori informazioni, consultare  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Come disabilitare la creazione automatica di casi durante le finestre di manutenzione programmate"^].
 
 +
 Il seguente messaggio AutoSupport elimina la creazione automatica del caso per due ore:

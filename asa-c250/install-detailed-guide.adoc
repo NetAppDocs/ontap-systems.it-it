@@ -191,9 +191,9 @@ Utilizzare l'animazione o i passaggi in tabella per completare il cablaggio tra 
 .Animazione - cluster senza switch a due nodi via cavo
 video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
 .Fasi
-. Utilizzare il cavo di interconnessione del cluster da 25 GbE per collegare le porte di interconnessione del cluster e0c a e0c e e0d a e0d.
+. Utilizzare il cavo di interconnessione cluster 25 GbE per collegare le porte di interconnessione cluster e0c a e0c e e0d a e0d.
 +
-image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]:
+image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]
 
 +
 image:../media/drw_affa250_tnsc_cabling.png["Cablaggio di interconnessione in cluster in un cluster senza switch a due nodi"]
@@ -249,7 +249,7 @@ image::../media/drw_affa250_mgmt_cabling.png[Cablaggio delle porte di gestione]
 Si dispone di un cablaggio opzionale dipendente dalla configurazione per le reti host Fibre Channel o iSCSI o lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile disporre di un cablaggio a una rete host e a uno storage.
 
 
-NOTE: link:https://hwu.netapp.com["NetApp Hardware Universe"^] La priorità dello slot per le schede di rete host (Fibre Channel o 25GbE) è lo slot 2. Tuttavia, se si dispone di entrambe le schede, la scheda Fibre Channel va nello slot 2 e la scheda 25GbE va nello slot 1 (come illustrato nelle opzioni seguenti). Se si dispone di uno scaffale esterno, la scheda di memoria si inserisce nello slot 1, l'unico slot supportato per gli scaffali.
+NOTE: link:https://hwu.netapp.com["NetApp Hardware Universe"^] La priorità degli slot per le schede di rete host (Fibre Channel o 25 GbE) è lo slot 2. Tuttavia, se si dispone di entrambe le schede, la scheda Fibre Channel va nello slot 2 e la scheda 25 GbE va nello slot 1 (come mostrato nelle opzioni seguenti). Se si dispone di uno shelf esterno, la scheda di storage va nello slot 1, l'unico slot supportato per gli shelf.
 
 [role="tabbed-block"]
 ====
@@ -280,9 +280,9 @@ image:../media/drw_affa250_fc_host_cabling.png["Cablaggio host Fibre Channel"]
 
 
 --
-.Opzione 2: Collegamento via cavo a una rete host o dati da 25 GbE
+.Opzione 2: Cavo per rete dati o host 25 GbE
 --
-Le porte da 25 GbE sui controller sono collegate a switch di rete host o dati da 25 GbE.
+Le porte 25 GbE sui controller sono collegate a switch di rete dati o host 25 GbE.
 
 .Prima di iniziare
 * Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.

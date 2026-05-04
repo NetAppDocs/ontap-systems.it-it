@@ -15,6 +15,15 @@ Prima di sostituire il controller del sistema AFF A800 , accertarsi di soddisfar
 
 Esaminare i requisiti per la sostituzione del modulo controller.
 
+[NOTE]
+====
+NetApp raccomanda vivamente di abilitare la registrazione della console sui dispositivi con cui si sta lavorando e di adottare le seguenti misure durante l'esecuzione di questa procedura:
+
+* Lascia AutoSupport abilitato durante la manutenzione. Questo consente al supporto NetApp di ricevere informazioni diagnostiche in caso di problemi.
+* Abilita la registrazione delle sessioni per tutte le sessioni CLI. Questo crea una registrazione completa di tutti i comandi e dell'output di sistema durante l'attività di manutenzione. Per istruzioni su come abilitare la registrazione delle sessioni, vedere  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Come configurare PuTTY per una connettività ottimale ai sistemi ONTAP"^].
+
+
+====
 * Tutti gli shelf di dischi devono funzionare correttamente.
 * Il controller sano deve essere in grado di subentrare al controller sostituito (definito in questa procedura come controller danneggiato).
 * Non utilizzare questa procedura per gli aggiornamenti del controller.  Fare riferimento a https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Scegliere la procedura di aggiornamento dell'hardware del controller"] per avere una guida.
@@ -29,10 +38,6 @@ Esaminare i requisiti per la sostituzione del modulo controller.
 ** Il controller _sostitutivo_ è il nuovo controller che sostituisce quello difettoso.
 ** Il controller _healthy_ è il controller sopravvissuto.
 
-
-* Cattura l'output della console del controller in un file di registro di testo.
-+
-In questo modo si ottiene una registrazione della procedura per risolvere eventuali problemi durante il processo di sostituzione.
 
 
 

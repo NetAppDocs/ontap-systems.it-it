@@ -15,6 +15,15 @@ Prima di sostituire il controller nel sistema di archiviazione ASA C30, accertar
 
 È necessario rivedere i requisiti e le considerazioni per la procedura di sostituzione della centralina.
 
+[NOTE]
+====
+NetApp raccomanda vivamente di abilitare la registrazione della console sui dispositivi con cui si sta lavorando e di adottare le seguenti misure durante l'esecuzione di questa procedura:
+
+* Lascia AutoSupport abilitato durante la manutenzione. Questo consente al supporto NetApp di ricevere informazioni diagnostiche in caso di problemi.
+* Abilita la registrazione delle sessioni per tutte le sessioni CLI. Questo crea una registrazione completa di tutti i comandi e dell'output di sistema durante l'attività di manutenzione. Per istruzioni su come abilitare la registrazione delle sessioni, vedere  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Come configurare PuTTY per una connettività ottimale ai sistemi ONTAP"^].
+
+
+====
 
 
 == Requisiti
@@ -23,10 +32,6 @@ Prima di sostituire il controller nel sistema di archiviazione ASA C30, accertar
 * Il controller integro deve essere in grado di assumere il controllo del controller da sostituire (indicato in questa procedura come "`controller alterato`").
 * È necessario sostituire un controller con un controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il controller.
 * Non è possibile sostituire dischi o shelf nell'ambito di questa procedura.
-* È sempre necessario acquisire l'output della console del controller in un file di registro di testo.
-+
-L'output della console fornisce una registrazione della procedura che è possibile utilizzare per risolvere i problemi che potrebbero verificarsi durante il processo di sostituzione.
-
 
 
 

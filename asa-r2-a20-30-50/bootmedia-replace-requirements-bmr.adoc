@@ -15,8 +15,17 @@ Prima di sostituire il supporto di avvio nel sistema di storage ASA A20, ASA A30
 
 Esaminare i seguenti requisiti.
 
+[NOTE]
+====
+NetApp raccomanda vivamente di abilitare la registrazione della console sui dispositivi con cui si sta lavorando e di adottare le seguenti misure durante l'esecuzione di questa procedura:
+
+* Lascia AutoSupport abilitato durante la manutenzione. Questo consente al supporto NetApp di ricevere informazioni diagnostiche in caso di problemi.
+* Abilita la registrazione delle sessioni per tutte le sessioni CLI. Questo crea una registrazione completa di tutti i comandi e dell'output di sistema durante l'attività di manutenzione. Per istruzioni su come abilitare la registrazione delle sessioni, vedere  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Come configurare PuTTY per una connettività ottimale ai sistemi ONTAP"^].
+
+
+====
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo della stessa capacità ricevuta da NetApp.
-* Verificare che la porta e0M (chiave inglese) sul controller danneggiato sia collegata e non sia difettosa.
+* Verificare che l'interfaccia e0S (porta chiave e0M) sul controller difettoso non sia guasta.
 +
 La porta e0M viene utilizzata per comunicare tra i due controller durante il processo di ripristino automatico dell'avvio.
 
