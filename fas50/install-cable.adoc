@@ -44,48 +44,41 @@ Se la configurazione non viene visualizzata qui, visitare il sito Web link:https
 ====
 .Cablaggio cluster senza switch
 --
+Utilizzare questa opzione di cablaggio quando i due controller sono collegati direttamente tra loro senza utilizzare switch di rete cluster.
+
 .FAS50 con un modulo i/o 40/100 GbE a 2 porte
-[%collapsible]
-=====
-.Fasi
-. Collegare le connessioni di interconnessione cluster/ha:
-+
+Collegare le porte di interconnessione cluster/HA sul modulo I/O nello slot 4.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 40/100 GbE.
 
-+
-.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
-.. Porta e4b Del controller del cavo A alla porta e4b del controller B.
-+
+.Fasi
+. Porta e4a Del controller del cavo A alla porta e4a del controller B.
+. Porta e4b Del controller del cavo A alla porta e4b del controller B.
+
+
 *100 cavi di interconnessione cluster/ha GbE*
 
-+
 image::../media/oie_cable100_gbe_qsfp28.png[Cavo ha 100 GbE cluster]
 
-+
 image::../media/drw_isi_fas50_switchless_2p_100gbe_cabling_ieops-1937.svg[diagramma di cablaggio del cluster senza switch fas50 utilizzando un modulo io 100gbe]
 
-
-
-
-
-=====
 --
 .Cablaggio del cluster con switch
 --
+Utilizzare questa opzione di cablaggio quando i controller si connettono agli switch di rete del cluster anziché essere collegati direttamente tra loro.
+
 .FAS50 con un modulo i/o 40/100 GbE a 2 porte
-[%collapsible]
-=====
-. Collegare i controller agli switch di rete cluster:
-+
+Collegare le porte di interconnessione cluster/HA del modulo I/O nello slot 4 agli switch di rete del cluster.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 40/100 GbE.
 
-+
-.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
-.. Collegare la porta e4b del controller A allo switch di rete del cluster B.
-.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
-.. Collegare la porta e4b del controller B allo switch di rete del cluster B.
+.Fasi
+. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+. Collegare la porta e4b del controller A allo switch di rete del cluster B.
+. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+. Collegare la porta e4b del controller B allo switch di rete del cluster B.
 +
 *40/100 cavi di interconnessione cluster/ha GbE*
 
@@ -97,9 +90,6 @@ image:../media/drw_isi_fas50_2p_100gbe_switched_cluster_cabling_ieops-1936.svg["
 
 
 
-
-
-=====
 --
 ====
 
@@ -119,62 +109,44 @@ Se la configurazione non viene visualizzata qui, visitare il sito Web link:https
 ====
 .Cablaggio host Ethernet
 --
+Collega i controller alla rete host Ethernet utilizzando le porte appropriate in base alla configurazione del modulo I/O.
+
 .FAS50 con un modulo i/o 10/25 GbE a 4 porte
-[%collapsible]
-=====
-.Fasi
-. Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
-+
+Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
+
 *Cavi 10/25 GbE*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame, larghezza=100px"]
 
-+
 image::../media/drw_isi_fas50_4p_25gbe_optional_cabling_ieops-1934.svg[Collega FAS50 agli switch di rete host Ethernet 10/25 GbE]
 
-
-
-=====
 --
 .Cablaggio host FC
 --
+Collega i controller alla tua rete host Fibre Channel utilizzando il modulo FC I/O presente nel tuo sistema.
+
 .FAS50 con un modulo i/o FC a 4 porte da 64 GB/s.
-[%collapsible]
-=====
-.Fasi
-. Su ciascun controller, collegare le porte 2a, 2b, 2c e 2d agli switch di rete host FC.
-+
+Su ciascun controller, collegare le porte 2a, 2b, 2c e 2d agli switch di rete host FC.
+
 *Cavi FC da 64 GB/s*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB, larghezza=100px"]
 
-+
 image::../media/drw_isi_fas50_4p_64gb_fc_optional_cabling_ieops-1935.svg[Cavo per 64GB switch di rete host fc]
 
-
-
-=====
 --
 ====
 
 
 == Fase 3: Collegare i collegamenti della rete di gestione
 
-Collegare i controller alla rete di gestione.
+Collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
 
-. Collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
-+
 *CAVI RJ-45 1000BASE-T.
 
-+
 image::../media/oie_cable_rj45.png[Cavi RJ-45]
 
-+
 image::../media/drw_isi_fas50_wrench_cabling_ieops-1938.svg[Connettersi alla rete di gestione]
-
-
 
 
 IMPORTANT: Non collegare ancora i cavi di alimentazione.
@@ -201,26 +173,20 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cavo mini-SAS HD]
 
 
 
-[role="tabbed-block"]
-====
-.Opzione 1: Uno shelf DS460C
---
+
+
+=== Un shelf DS460C
+
 Collegare ciascun controller a ciascun modulo IOM12 sullo shelf DS460C.
 
 .Fasi
-. Collegare il controller del cavo A allo shelf:
-+
-.. Collegare la porta 3a del controller A alla porta IOMA 1.
-.. Porta 3D Del controller del cavo A alla porta IOMB 3.
+. Collegare la porta 3a del controller A alla porta IOMA 1.
+. Porta 3D Del controller del cavo A alla porta IOMB 3.
 +
 image:../media/drw_isi_fas50_1_ds460c_controller_a_cabling_ieops-2167.svg["Porte 3a e 3D del controller A cablate su uno shelf DS460C"]
 
-
-
-. Collegare il controller del cavo B allo shelf:
-+
-.. Porta del controller del cavo B 3a alla porta IOMB 1.
-.. Collegare la porta 3D del controller del cavo B alla porta IOMA 3.
+. Porta del controller del cavo B 3a alla porta IOMB 1.
+. Collegare la porta 3D del controller del cavo B alla porta IOMA 3.
 +
 image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["Porte 3a e 3D del controller B collegate a uno shelf DS460C"]
 
@@ -228,41 +194,26 @@ image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["Porte
 
 
 
---
-.Opzione 2: Due shelf DS460C
---
+=== Due shelf DS460C
+
 Collegare ogni controller ai moduli IOM12 su entrambi gli shelf DS460C.
 
-. Collegare i collegamenti da shelf a shelf:
-+
-.. Shelf di cavi 1 porta IOMA 3 a porta IOMA 2 1.
-.. Ripiano per cavi 1 porta IOMB 3 a ripiano 2 porta IOMB 1.
+. Shelf di cavi 1 porta IOMA 3 a porta IOMA 2 1.
+. Ripiano per cavi 1 porta IOMB 3 a ripiano 2 porta IOMB 1.
 +
 image:../media/drw_isi_fas50_2_ds460c_shelf_to_shelf_ieops-2172.svg["connessioni da shelf per cavi a shelf"]
 
-
-
-. Collegare il controller dei cavi A agli shelf:
-+
-.. Collegare il controller via cavo alla porta A 3a e alla porta IOMA 1 1.
-.. Cavo controller A porta 3D a shelf 2 porta IOMB 3.
+. Collegare il controller via cavo alla porta A 3a e alla porta IOMA 1 1.
+. Cavo controller A porta 3D a shelf 2 porta IOMB 3.
 +
 image:../media/drw_isi_fas50_2_ds460c_controller_a_cabling_ieops-2170.svg["Porte 3a e 3D del controller A collegate a due shelf DS460C"]
 
-
-
-. Collegare il controller dei cavi B agli shelf:
-+
-.. Cavo controller B porta 3a a shelf 1 porta IOMB 1.
-.. Cavo controller B porta 3D a shelf 2 porta IOMA 3.
+. Cavo controller B porta 3a a shelf 1 porta IOMB 1.
+. Cavo controller B porta 3D a shelf 2 porta IOMA 3.
 +
 image:../media/drw_isi_fas50_2_ds460c_controller_b_cabling_ieops-2171.svg["Porte 3a e 3D del controller B collegate a due ripiani DS460C"]
 
 
 
-
-
---
-====
 .Quali sono le prossime novità?
 Dopo aver collegato l'hardware al sistema di storage, si link:install-power-hardware.html["accendere il sistema di archiviazione"].

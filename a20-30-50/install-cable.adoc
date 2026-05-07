@@ -44,18 +44,17 @@ Se la configurazione non viene visualizzata qui, visitare il sito Web link:https
 ====
 .Cablaggio cluster senza switch
 --
+Utilizzare questa opzione di cablaggio quando i due controller sono collegati direttamente tra loro senza utilizzare switch di rete cluster.
+
 .AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
-[%collapsible]
-=====
-.Fasi
-. Collegare le connessioni di interconnessione cluster/ha:
-+
+Collegare le porte di interconnessione cluster/HA sui moduli I/O negli slot 2 e 4.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sui moduli i/o negli slot 2 e 4). Le porte sono 40/100 GbE.
 
-+
-.. Porta E2A Del controller del cavo A alla porta E2A del controller B.
-.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
+.Fasi
+. Porta E2A Del controller del cavo A alla porta E2A del controller B.
+. Porta e4a Del controller del cavo A alla porta e4a del controller B.
 +
 
 NOTE: Le porte dei moduli i/o E2B e e4b non sono utilizzate e sono disponibili per la connettività di rete host.
@@ -71,21 +70,15 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg
 
 
 
-
-
-=====
 .AFF A30 o AFF A50 con un modulo i/o GbE a 2 porte da 40/100 GB
-[%collapsible]
-=====
-.Fasi
-. Collegare le connessioni di interconnessione cluster/ha:
-+
+Collegare le porte di interconnessione cluster/HA sul modulo I/O nello slot 4.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 40/100 GbE.
 
-+
-.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
-.. Porta e4b Del controller del cavo A alla porta e4b del controller B.
+.Fasi
+. Porta e4a Del controller del cavo A alla porta e4a del controller B.
+. Porta e4b Del controller del cavo A alla porta e4b del controller B.
 +
 *100 cavi di interconnessione cluster/ha GbE*
 
@@ -97,21 +90,15 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg
 
 
 
-
-
-=====
 .AFF A20 con un modulo i/o GbE a 2 porte da 10/25 GB
-[%collapsible]
-=====
-.Fasi
-. Collegare le connessioni di interconnessione cluster/ha:
-+
+Collegare le porte di interconnessione cluster/HA sul modulo I/O nello slot 4.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 10/25 GbE.
 
-+
-.. Porta e4a Del controller del cavo A alla porta e4a del controller B.
-.. Porta e4b Del controller del cavo A alla porta e4b del controller B.
+.Fasi
+. Porta e4a Del controller del cavo A alla porta e4a del controller B.
+. Porta e4b Del controller del cavo A alla porta e4b del controller B.
 +
 *25 cavi di interconnessione cluster/ha GbE*
 
@@ -123,26 +110,22 @@ image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagramma
 
 
 
-
-
-=====
 --
 .Cablaggio del cluster con switch
 --
+Utilizzare questa opzione di cablaggio quando i controller si connettono agli switch di rete del cluster anziché essere collegati direttamente tra loro.
+
 .AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
-[%collapsible]
-=====
-.Fasi
-. Collegare le connessioni di interconnessione cluster/ha:
-+
+Collegare le porte di interconnessione cluster/HA dei moduli I/O negli slot 2 e 4 agli switch di rete del cluster.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sui moduli i/o negli slot 2 e 4). Le porte sono 40/100 GbE.
 
-+
-.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
-.. Collegare la porta E2A del controller A allo switch di rete del cluster B.
-.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
-.. Collegare la porta E2A del controller B allo switch di rete del cluster B.
+.Fasi
+. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+. Collegare la porta E2A del controller A allo switch di rete del cluster B.
+. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+. Collegare la porta E2A del controller B allo switch di rete del cluster B.
 +
 
 NOTE: Le porte dei moduli i/o E2B e e4b non sono utilizzate e sono disponibili per la connettività di rete host.
@@ -158,23 +141,17 @@ image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[s
 
 
 
-
-
-=====
 .AFF A30 o AFF A50 con un modulo i/o GbE a 2 porte da 40/100 GB
-[%collapsible]
-=====
-.Fasi
-. Collegare i controller agli switch di rete cluster:
-+
+Collegare le porte di interconnessione cluster/HA del modulo I/O nello slot 4 agli switch di rete del cluster.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 40/100 GbE.
 
-+
-.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
-.. Collegare la porta e4b del controller A allo switch di rete del cluster B.
-.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
-.. Collegare la porta e4b del controller B allo switch di rete del cluster B.
+.Fasi
+. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+. Collegare la porta e4b del controller A allo switch di rete del cluster B.
+. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+. Collegare la porta e4b del controller B allo switch di rete del cluster B.
 +
 *40/100 cavi di interconnessione cluster/ha GbE*
 
@@ -186,22 +163,17 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 
 
 
-
-
-=====
 .AFF A20 con un modulo i/o GbE a 2 porte da 10/25 GB
-[%collapsible]
-=====
-. Collegare i controller agli switch di rete cluster:
-+
+Collegare le porte di interconnessione cluster/HA del modulo I/O nello slot 4 agli switch di rete del cluster.
+
 
 NOTE: Il traffico di cluster Interconnect e il traffico ha condividono le stesse porte fisiche (sul modulo i/o nello slot 4). Le porte sono 10/25 GbE.
 
-+
-.. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
-.. Collegare la porta e4b del controller A allo switch di rete del cluster B.
-.. Porta e4a del controller del cavo B allo switch di rete del cluster A.
-.. Collegare la porta e4b del controller B allo switch di rete del cluster B.
+.Fasi
+. Collegare il controller via cavo A alla porta e4a dello switch di rete cluster A.
+. Collegare la porta e4b del controller A allo switch di rete del cluster B.
+. Porta e4a del controller del cavo B allo switch di rete del cluster A.
+. Collegare la porta e4b del controller B allo switch di rete del cluster B.
 +
 *10/25 cavi di interconnessione cluster/ha GbE*
 
@@ -213,9 +185,6 @@ image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["schema di c
 
 
 
-
-
-=====
 --
 ====
 
@@ -235,83 +204,56 @@ Se la configurazione non viene visualizzata qui, visitare il sito Web link:https
 ====
 .Cablaggio host Ethernet
 --
+Collega i controller alla rete host Ethernet utilizzando le porte appropriate in base alla configurazione del modulo I/O.
+
 .AFF A30 o AFF A50 con due moduli i/o GbE a 2 porte da 40/100 GB
-[%collapsible]
-=====
-.Fasi
-. Su ciascun controller, collegare le porte E2B e e4b agli switch di rete host Ethernet.
-+
+Su ciascun controller, collegare le porte E2B e e4b agli switch di rete host Ethernet.
+
 
 NOTE: Le porte sui moduli i/o negli slot 2 e 4 sono 40/100 GbE (la connettività host è 40/100 GbE).
 
-+
 *Cavi 40/100 GbE*
 
-+
 image::../media/oie_cable_sfp_gbe_copper.png[Cavo da 40/100 GB]
 
-+
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Collegare gli switch di rete host ethernet 40/100GbE]
 
+.AFF A20, AFF A30 o AFF A50 con un modulo I/O 10/25 GbE a 4 porte
+Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
 
-
-=====
-.AFF A20, A30 o AFF A50 con un modulo i/o GbE a 4 porte da 10/25 GB
-[%collapsible]
-=====
-.Fasi
-. Su ciascun controller, collegare le porte E2A, E2B, e2c e e2d agli switch di rete host Ethernet.
-+
 *Cavi 10/25 GbE*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Connettore GbE SFP in rame"]
 
-+
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Collegare gli switch di rete host ethernet 40/100GbE]
 
-
-
-=====
 --
 .Cablaggio host FC
 --
-.AFF A20, A30 o AFF A50 con un modulo i/o FC a 4 porte da 64 GB/s.
-[%collapsible]
-=====
-.Fasi
-. Su ciascun controller, collegare le porte 2a, 2b, 2c e 2d agli switch di rete host FC.
-+
+Collega i controller alla tua rete host Fibre Channel utilizzando il modulo FC I/O presente nel tuo sistema.
+
+.AFF A20, AFF A30 o AFF A50 con un modulo I/O FC a 4 porte da 64 Gb/s
+Su ciascun controller, collegare le porte 2a, 2b, 2c e 2d agli switch di rete host FC.
+
 *Cavi FC da 64 GB/s*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Cavo fc da 64 GB"]
 
-+
 image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cavo per 64GB switch di rete host fc]
 
-
-
-=====
 --
 ====
 
 
 == Fase 3: Collegare i collegamenti della rete di gestione
 
-Collegare i controller alla rete di gestione.
+Collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
 
-. Collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
-+
 *CAVI RJ-45 1000BASE-T.
 
-+
 image::../media/oie_cable_rj45.png[Cavi RJ-45]
 
-+
 image::../media/drw_isi_g_wrench_cabling_ieops-1928.svg[Connettersi alla rete di gestione]
-
-
 
 
 IMPORTANT: Non collegare ancora i cavi di alimentazione.
@@ -341,23 +283,15 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 
 
 .Fasi
-. Collegare il controller del cavo A allo shelf:
-+
-.. Porta e3a Del controller del cavo A alla porta NSM A E1a.
-.. Porta del controller del cavo A E3B alla porta NSM B e1b.
+. Porta e3a Del controller del cavo A alla porta NSM A E1a.
+. Porta del controller del cavo A E3B alla porta NSM B e1b.
 +
 image:../media/drw_isi_g_1_ns224_controller_a_cabling_ieops-1945.svg["Porte e3a e E3B del controller A cablate su uno shelf NS224"]
 
-
-
-. Collegare il controller del cavo B allo shelf:
-+
-.. Dalla porta e3a del controller del cavo B alla porta E1a NSM B.
-.. Porta E3B del controller del cavo B alla porta NSM A e1b.
+. Dalla porta e3a del controller del cavo B alla porta E1a NSM B.
+. Porta E3B del controller del cavo B alla porta NSM A e1b.
 +
 image:../media/drw_isi_g_1_ns224_controller_b_cabling_ieops-1946.svg["Porte e3a e E3B del controller B collegate a uno shelf NS224"]
-
-
 
 
 
