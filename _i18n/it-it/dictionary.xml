@@ -8306,12 +8306,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9e4b32259f721cc54024969657de5534" category="paragraph">Puoi aggiungere a caldo fino a due shelf NS224 in una coppia ha ASA A70 o ASA A90 quando è necessario ulteriore storage (nello shelf interno).</block>
   <block id="55ec693931401ff7a634100e33ff8cfd" category="doc">Novità dei sistemi hardware ONTAP</block>
   <block id="ec6e72d1c4bb7dccdc62b6caf35c95f7" category="sidebar">Documentazione sui sistemi hardware ONTAP</block>
-  <block id="64f78e10c5d8a4db6f25299bf9a418cd" category="sidebar">I sistemi AFF A-Series e C-Series sono stati progettati per consentire alle organizzazioni di accelerare la trasformazione della propria infrastruttura e alimentare le strategie basate sui dati.</block>
-  <block id="d186b8a54af216bfae7a9573dc3dfd54" category="sidebar">La documentazione dei sistemi AFF descrive come installare, configurare e gestire i sistemi AFF A-Series e C-Series.</block>
-  <block id="8b4ad289620e7b0611000ddd6fa583c3" category="sidebar">Installare e configurare sistemi A-Series</block>
-  <block id="c91d48fe9284f4d299615b787ff7c882" category="sidebar">Installare e configurare i sistemi C-Series</block>
-  <block id="d82b198ed12fecd580981b34c4959490" category="sidebar">Gestisci i sistemi A-Series</block>
-  <block id="e32ee65ffedbf05873ffce177cee51b5" category="sidebar">Gestisci i sistemi C-Series</block>
   <block id="9c2e760711833288658335a04261b16a" category="sidebar">La documentazione del sistema di storage ASA R2 consente di installare, configurare ed eseguire la manutenzione del sistema ASA R2.</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="sidebar">Informazioni sui sistemi di storage ASA R2</block>
   <block id="aa0dbb314a1c2c27148345705facc55c" category="sidebar">Installazione e manutenzione dei sistemi ASA R2</block>
@@ -8328,8 +8322,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="2a2dfadb84e98697260fabd8a1ba63ea" category="sidebar">Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. In questa sezione sono riportate le procedure specifiche per la manutenzione dei componenti del sistema ASA r2.</block>
   <block id="9823a9d702614ebe046cb789d32b241d" category="sidebar">Scopri come gestire al meglio i tuoi sistemi ASA R2.</block>
   <block id="8cf7baf96983d1c70a286576ddcd0ca1" category="sidebar">ASA A70 e ASA A90</block>
-  <block id="91be56ff709f018bb7b1a4c33c68d316" category="sidebar">Sistemi a-Series</block>
-  <block id="078c4b575f196efdc8ec79e58f26db9f" category="sidebar">Sistemi C-Series</block>
   <block id="2d0e9a7694bf5bc701c3af145a6bba71" category="sidebar">Verifica dei requisiti</block>
   <block id="f76aaf3aaa7b30238e7a3e2b1a04493b" category="sidebar">Preparazione all'installazione</block>
   <block id="03f15d4e5abe2379224af55ea714e8fd" category="sidebar">Sistemi ASA A70 e ASA A90</block>
@@ -9781,7 +9773,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="38ae227cf94e3775806bccfd95814d4b" category="paragraph"><block ref="035b082bfaf23bf2d7b95c3ef597d380" prefix="" category="inline-code"></block></block>
   <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="list-text">Queste procedure mostrano le configurazioni comuni. Il cablaggio specifico dipende dai componenti ordinati per il sistema di storage in uso. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>.</block>
   <block id="e5f780ef73bd41c1dd64af7a1a1a31ac" category="paragraph">Collegare i controller al cluster ONTAP. Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.</block>
-  <block id="0990249c3bba6596b74be9af46837266" category="list-text">Collegare la porta e7a del controller A alla porta E1a del controller B.</block>
   <block id="18695b824b22d82a916970e4903bf31d" category="paragraph">Utilizzare il cavo 100 GbE per collegare le porte da E1a a E1a e le porte da e7a a e7a.</block>
   <block id="3b29102e499249644dff327644d96081" category="list-text">Collegare le porte e9a e e9b allo switch di rete dati Ethernet.</block>
   <block id="c7900e3ee1f4eb935f449465b57ad5c1" category="paragraph">Utilizzare i cavi 1000BASE-T RJ-45 per collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.</block>
@@ -9812,7 +9803,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8019bdcaff5849ab8015533c8674f305" category="paragraph">Collegare ciascun controller ai moduli NSM su entrambi i ripiani NS224. La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
   <block id="546125971d4fce23d0f562118f0ce95f" category="open-title">Opzione 3: Due shelf DS460C</block>
   <block id="8994222dc8e3118b755e00531cef6a1c" category="paragraph">Collegare ciascun controller ai moduli IOM su entrambi i ripiani DS460C. La grafica mostra il cablaggio del controller A in blu e il cablaggio del controller B in giallo.</block>
-  <block id="d42c87e93d80bf28fffc01d7bb494eb2" category="list-text"><block ref="d42c87e93d80bf28fffc01d7bb494eb2" category="inline-link-macro-rx"></block></block>
   <block id="98aab8017242eea1d6e23ba928b20ae5" category="list-text"><block ref="98aab8017242eea1d6e23ba928b20ae5" category="inline-link-macro-rx"></block></block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepararsi alla sostituzione</block>
@@ -15048,4 +15038,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="6b7f864bd91be16ace313bfe44f12e71" category="section-title">Due shelf DS460C</block>
   <block id="b62281acd6d6f68b211c9c140acb1de6" category="summary">Ricollegare i cavi del sistema e riassegnare i dischi.</block>
   <block id="c7585f11abe7b6b5267f9b01ab8db3d3" category="summary">Sostituire la batteria dell'orologio in tempo reale nel modulo controller.</block>
+  <block id="4e219191285e6b026a35828fa008670f" category="list-text"><block ref="4e219191285e6b026a35828fa008670f" category="inline-link-macro-rx"></block></block>
+  <block id="f907c55a04055c61d778510e17a75874" category="list-text"><block ref="f907c55a04055c61d778510e17a75874" category="inline-link-macro-rx"></block></block>
 </blocks>
