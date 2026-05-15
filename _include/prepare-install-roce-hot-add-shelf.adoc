@@ -1,0 +1,18 @@
+= 
+:allow-uri-read: 
+
+
+Se il sistema supporta l'uso di schede PCIe o moduli I/O compatibili con RoCE, la coppia HA deve disporre di un numero sufficiente di porte Ethernet compatibili con RoCE per supportare il numero di shelf che si stanno aggiungendo a caldo.
+
+.Fasi
+. Per ogni shelf che stai aggiungendo a caldo, verifica che esistano due porte compatibili con RoCE su ogni controller.
++
+Queste porte possono essere integrate nei controller, su schede PCIe compatibili con RoCE, in una combinazione di entrambe, oppure su moduli I/O compatibili con RoCE, come supportato dal sistema.
+
+. Se la coppia HA non dispone di un numero sufficiente di porte compatibili con RoCE, installa le schede PCIe o i moduli I/O aggiuntivi negli slot del controller corretti, come supportato dal tuo sistema.
++
+.. Identifica gli slot del controller corretti per il tuo sistema. Vedi  https://hwu.netapp.com["NetApp Hardware Universe"^].
+.. Consulta la documentazione del tuo sistema per le istruzioni di installazione della scheda PCIe o del modulo I/O.
+
+
+

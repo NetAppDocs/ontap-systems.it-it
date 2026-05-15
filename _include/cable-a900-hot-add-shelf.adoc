@@ -2,12 +2,6 @@
 :allow-uri-read: 
 
 
-.Prima di iniziare
-* È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
-* È necessario aver completato le procedure applicabili in link:prepare-hot-add-shelf.html["Preparare l'aggiunta a caldo di uno shelf"].
-* È necessario aver installato gli scaffali, acceso e impostato gli ID degli scaffali come descritto in link:prepare-hot-add-shelf.html["Installare uno shelf per un'aggiunta a caldo"].
-
-
 .A proposito di questa attività
 * Questa procedura presuppone che la coppia ha abbia almeno uno shelf NS224 esistente e che si stiano aggiungendo a caldo fino a tre shelf aggiuntivi.
 * Se la coppia ha dispone di un solo shelf NS224, questa procedura presuppone che lo shelf sia cablato su due moduli i/o 100GbE compatibili con RoCE su ciascun controller.
@@ -70,8 +64,3 @@ image::../media/drw_ns224_a900_4shelves.png[Cablaggio per un AFF/ASA A900 con qu
 Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 
 
-
-.Quali sono le prossime novità?
-Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco. Andare a link:complete-hot-add-shelf.html["Completare l'aggiunta a caldo"].
-
-In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

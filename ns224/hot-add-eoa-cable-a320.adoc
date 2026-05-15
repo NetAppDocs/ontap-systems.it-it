@@ -1,0 +1,39 @@
+---
+permalink: ns224/hot-add-eoa-cable-a320.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff a320, cable, end-of-availability 
+summary: Collega il tuo shelf NS224 al sistema AFF A320 in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA. 
+---
+= Collega uno shelf NS224 al tuo sistema AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Collega il tuo shelf NS224 al sistema AFF A320 in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA.
+
+Puoi aggiungere a caldo un secondo shelf a una coppia ha esistente quando è necessario storage aggiuntivo.
+
+.Fasi
+. Collegare il ripiano ai controller.
++
+.. Cavo NSM A porta e0a per controller A porta e0e.
+.. Cavo NSM Porta A e0b alla porta controller B e0b.
+.. Cavo NSM B porta e0a al controller B porta e0e.
+.. Cavo NSM B porta e0b alla porta a del controller e0b. + la seguente illustrazione mostra i cavi per lo shelf aggiunto a caldo (shelf 2):
++
+image::../media/drw_ns224_a320_2shelves_direct_attached.png[Cablaggio per un AFF A320 con due shelf NS224 e tre set di porte integrate]
+
+
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+.Cosa succederà
+Se hai disabilitato l'assegnazione automatica delle unità durante la preparazione di questa procedura, devi assegnare manualmente la proprietà dell'unità e quindi riattivare l'assegnazione automatica delle unità, se necessario. Vai a link:hot-add-eoa-complete.html["Completare l'aggiunta a caldo"].
+
+In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

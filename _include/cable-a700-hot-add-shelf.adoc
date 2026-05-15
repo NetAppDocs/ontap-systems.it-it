@@ -1,0 +1,81 @@
+= 
+:allow-uri-read: 
+
+
+.Prima di iniziare
+Se stai aggiungendo a caldo lo shelf NS224 iniziale (non esiste shelf NS224 nella coppia ha), devi installare un modulo core dump (X9170A GB, SSD NVMe 1TB) in ogni controller per supportare i core dump (memorizzare i file core).
+
++ Vedi link:../fas9000/caching-module-and-core-dump-module-replace.html["Sostituire il modulo di caching o aggiungere/sostituire un modulo core dump -- AFF A700 e FAS9000"^].
+
+.A proposito di questa attività
+La modalità di cavo di uno shelf NS224 a una coppia ha AFF A700 dipende dal numero di shelf che si stanno aggiungendo a caldo e dal numero di set di porte compatibili RoCE (uno o due) che si stanno utilizzando sui controller.
+
+.Fasi
+. Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (un modulo i/o compatibile RoCE) su ciascun controller, essendo l'unico shelf NS224 della coppia ha, completa i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+
+NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 3, invece dello slot 7, su ciascun controller.
+
++
+.. Shelf di cavi NSM Porta E0a per controller A slot 3 porta a.
+.. Shelf per cavi porta NSM A e0b a slot controller B 3 porta b.
+.. Porta NSM B del ripiano dei cavi e0a dello slot B del controller 3 porta a.
+.. Porta NSM B per shelf di cavi e0b per lo slot a del controller 3 porta b.
++
+L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza un modulo i/o compatibile RoCE in ciascun controller:
+
++
+image::../media/drw_ns224_a700_1shelf.png[Cablaggio per un AFF A700 con uno shelf NS224 e un set di porte per moduli io]
+
+
+
+. Se si aggiungono a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (due moduli i/o compatibili RoCE) in ciascun controller, completare la relativa procedura secondaria.
++
+[cols="1,3"]
+|===
+| Shelf | Cablaggio 
+
+
+ a| 
+Ripiano 1
+ a| 
+
+NOTE: Questi passaggi secondari presuppongono che si stia iniziando il cablaggio collegando la porta dello shelf e0a al modulo i/o compatibile con RoCE nello slot 3, invece dello slot 7.
+
+.. Cavo NSM A port e0a per controller A slot 3 port a.
+.. Cavo NSM Porta A e0b a slot controller B porta b.
+.. Cavo NSM B porta e0a per lo slot B del controller 3 porta a.
+.. Cavo NSM B port e0b to controller A slot 7 port b.
+.. Se si desidera aggiungere un secondo ripiano a caldo, completare i sotto-passaggi "`Ripiano 2`"; in caso contrario, passare al passaggio successivo.
+
+
+
+
+ a| 
+Shelf 2
+ a| 
+
+NOTE: Questi passaggi secondari presuppongono che si stia iniziando il cablaggio collegando la porta dello shelf e0a al modulo i/o compatibile con RoCE nello slot 7, invece dello slot 3 (che è correlato ai passaggi secondari del cablaggio per lo shelf 1).
+
+.. Cavo NSM A port e0a per controller A slot 7 port a.
+.. Cavo NSM Porta A e0b a slot controller B porta 3 b.
+.. Cavo NSM porta B e0a per lo slot B del controller 7 porta a.
+.. Cavo NSM B port e0b to controller A slot 3 port b.
+.. Passare alla fase successiva.
+
+
+|===
++
+La seguente illustrazione mostra i cavi per il primo e il secondo shelf aggiunto a caldo:
+
++
+image::../media/drw_ns224_a700_2shelves.png[Cablaggio per un AFF A700 con due shelf NS224 e due set di porte per moduli io]
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

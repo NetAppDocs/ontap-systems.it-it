@@ -1,0 +1,28 @@
+---
+permalink: ns224/hot-add-aff-prepare.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, preparation 
+summary: 'Preparatevi ad aggiungere a caldo uno shelf NS224 al vostro sistema AFF installando schede PCIe o moduli I/O compatibili con RoCE, configurando le porte, ricablando gli shelf esistenti e disabilitando l"assegnazione automatica dei dischi, se necessario.' 
+---
+= Panoramica della procedura per aggiungere a caldo un shelf NS224 al sistema AFF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Preparatevi ad aggiungere a caldo gli shelf NS224 al vostro sistema AFF assicurandovi di disporre di un numero sufficiente di porte di storage compatibili con RoCE, configurandole per l'utilizzo di storage e ottimizzando la configurazione esistente per il nuovo shelf.
+
+
+
+== Cosa preparare
+
+La preparazione per l'aggiunta a caldo di shelf NS224 al sistema AFF prevede la verifica e la configurazione dell'infrastruttura di connettività di storage prima dell'installazione fisica dei nuovi shelf. Queste operazioni garantiscono che la coppia HA disponga delle porte Ethernet compatibili con RoCE necessarie e che il sistema sia configurato per supportare una maggiore capacità di storage.
+
+Le specifiche operazioni di preparazione da completare dipendono dal modello della piattaforma, dalla configurazione attuale e dal numero di shelf che si desidera aggiungere:
+
+Installare schede PCIe o moduli i/o compatibili con RoCE:: Verificate che il vostro sistema disponga di un numero sufficiente di porte Ethernet compatibili con RoCE (due per shelf su ciascun controller). Se sono necessarie porte aggiuntive, installate schede PCIe o moduli I/O compatibili con RoCE negli slot del controller appropriati.
+Configurare le porte compatibili con RoCE per l'utilizzo dello storage:: Se si utilizzano porte non dedicate compatibili con RoCE per connettere lo shelf NS224, configurare tali porte per l'utilizzo con lo storage anziché con la rete. Questa è una procedura senza interruzioni.
+Possibilità di recuperare gli scaffali esistenti:: Per alcuni modelli di piattaforma, potrebbe essere necessario ricablare uno shelf esistente su due serie di porte in slot diversi per garantire la resilienza contro i guasti degli slot dopo l'installazione di schede PCIe o moduli I/O aggiuntivi compatibili con RoCE.
+Disattivare l'assegnazione automatica della guida:: Se si intende assegnare manualmente la proprietà delle unità, disabilitare l'assegnazione automatica delle unità prima di aggiungere a caldo gli shelf.
+

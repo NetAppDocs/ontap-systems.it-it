@@ -1,10 +1,10 @@
 ---
-permalink: ns224/complete-hot-add-shelf.html 
+permalink: ns224/hot-add-eoa-complete.html 
 sidebar: sidebar 
-keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, complete, drive, hot-add an ns224 drive shelf 
-summary: 'Se l"assegnazione automatica dei dischi è stata disattivata durante la preparazione dell"aggiunta a caldo dello shelf di dischi NS224, è necessario assegnare manualmente la proprietà dei dischi e, se necessario, riabilitare l"assegnazione automatica dei dischi.' 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, eoa systems, end-of-availability, complete, drive 
+summary: 'Se hai disabilitato l"assegnazione automatica delle unità, assegna manualmente la proprietà delle unità e riattiva l"assegnazione automatica delle unità per il tuo sistema end-of-availability.' 
 ---
-= Completa l'aggiunta a caldo - NS224 ripiani
+= Completa l'aggiunta a caldo dello shelf NS224 al tuo sistema di fine disponibilità
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Se l"assegnazione automatica dei dischi è stata disattivata durante l
 Se hai disattivato l'assegnazione automatica dei dischi come parte della preparazione per l'aggiunta a caldo dello shelf NS224, devi assegnare manualmente la proprietà dei dischi e riattivare l'assegnazione automatica dei dischi, se necessario.
 
 .Prima di iniziare
-È necessario aver già collegato lo shelf come indicato per la coppia ha. Vedere link:cable-overview-hot-add-shelf.html["Panoramica del cablaggio per un hot-add"].
+Devi aver già cablato la mensola come indicato nelle istruzioni per la tua coppia HA.
 
 .Fasi
 . Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`

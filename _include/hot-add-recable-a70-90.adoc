@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+Quando si aggiunge a caldo un secondo ripiano a una coppia HA A70 o A90, è necessario ricablare il primo ripiano attraverso i moduli I/O compatibili con RoCE negli slot 11 e slot 8 di ciascun controller.
+
+La procedura presuppone che lo shelf esistente sia cablato a un modulo I/O compatibile con RoCE nello slot 11 di ciascun controller.
+
+.Fasi
+. Ricollegare i cavi del primo ripiano attraverso i moduli I/O compatibili con RoCE negli slot 11 e slot 8 di ciascun controller.
++
+.. Sul controller A, spostare il cavo dallo slot 11 porta b (e11b) allo slot 8 porta b (e8b).
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+. Verificare che il ripiano cablato sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

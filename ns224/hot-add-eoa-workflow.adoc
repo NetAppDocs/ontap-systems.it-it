@@ -1,0 +1,39 @@
+---
+permalink: ns224/hot-add-eoa-workflow.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, eoa systems, end-of-availability, workflow 
+summary: Segui questi passaggi del flusso di lavoro per aggiungere a caldo un ripiano NS224 al tuo sistema end-of-availability. 
+---
+= Aggiungi a caldo un ripiano NS224 al tuo sistema di fine disponibilità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Segui questi passaggi del flusso di lavoro per aggiungere a caldo un ripiano NS224 al tuo sistema end-of-availability.
+
+.Prima di iniziare
+* Questa procedura si applica solo alle unità di archiviazione collegate direttamente. Per visualizzare le istruzioni relative alle unità di archiviazione collegate tramite switch, consultare link:cable-as-switch-attached.html["guida del cablaggio collegata allo switch"].
+* Per aggiungere a caldo un ripiano NS224, la coppia HA deve soddisfare determinati requisiti. Esaminare la link:hot-add-eoa-requirements.html["requisiti e best practice aggiuntivi a caldo"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:hot-add-eoa-requirements.html["Rivedere i requisiti per l'aggiunta a caldo"]
+[role="quick-margin-para"]
+Verificate che il vostro sistema fuori produzione soddisfi i requisiti per l'aggiunta a caldo di uno shelf NS224, inclusi il supporto della versione di ONTAP, il numero di shelf e i requisiti di cablaggio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:hot-add-eoa-prepare-overview.html["Preparati ad aggiungere a caldo il tuo shelf"]
+[role="quick-margin-para"]
+A seconda del modello della piattaforma, potrebbe essere necessario installare schede PCIe o moduli I/O aggiuntivi compatibili con RoCE, configurare le porte Ethernet non dedicate compatibili con RoCE per l'utilizzo con lo storage e disabilitare l'assegnazione automatica delle unità se si assegna manualmente la proprietà delle unità.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:hot-add-eoa-install.html["Installare lo shelf"]
+[role="quick-margin-para"]
+Installa il kit di binari per il ripiano, installa e fissa il ripiano nel rack o nell'armadio per telecomunicazioni, collega i cavi di alimentazione per alimentare il ripiano e assegna un ID univoco al ripiano per garantire che sia distinto all'interno della coppia HA.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:hot-add-eoa-cable-overview.html["Collegare lo shelf"]
+[role="quick-margin-para"]
+Collega lo shelf che stai aggiungendo a caldo in modo da avere due connessioni a ogni controller nella coppia ha.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:hot-add-eoa-complete.html["Completare l'aggiunta a caldo"]
+[role="quick-margin-para"]
+Se è stata disattivata l'assegnazione automatica delle unità come parte della preparazione per l'aggiunta a caldo, è necessario assegnare manualmente la proprietà delle unità e riabilitare l'assegnazione automatica delle unità, se necessario.

@@ -1,0 +1,33 @@
+---
+permalink: ns224/hot-add-aff-cable-overview.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, cable 
+summary: Collega il tuo shelf NS224 al sistema AFF tramite cavo per fornire una connettività a doppio percorso che garantisca ridondanza dello storage e alta disponibilità per la coppia HA. 
+---
+= Collega un shelf NS224 al tuo sistema AFF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Collega il tuo shelf NS224 al sistema AFF tramite cavo per fornire una connettività a doppio percorso che garantisca ridondanza dello storage e alta disponibilità per la coppia HA.
+
+
+
+== Panoramica del cablaggio per i sistemi AFF
+
+Il cablaggio varia a seconda del modello della piattaforma AFF, poiché ogni sistema presenta assegnazioni di porte e configurazioni di moduli I/O uniche.
+
+Durante la procedura di cablaggio a caldo, si collega ogni shelf NS224 a entrambi i controller della coppia HA:
+
+* Ciascun modulo NSM per ripiano si collega a una porta storage dedicata su ciascun controller, creando due percorsi per ripiano (uno tramite NSM A, uno tramite NSM B).
+* Questa configurazione a doppio percorso offre ridondanza dello storage e garantisce l'accesso continuo ai dati anche in caso di guasto di un singolo percorso.
+* I cavi collegano le porte NSM e0a/e0b (NSM100) o e1a/e1b (NSM100B) dello shelf alle porte storage compatibili con RoCE sui controller.
+
+
+
+
+== Risorse aggiuntive
+
+Il sistema hardware potrebbe essere compatibile sia con gli shelf NS224 con moduli NSM100 che con gli shelf NS224 con moduli NSM100B. Per i nomi completi delle porte e i dettagli di configurazione, consultare  https://hwu.netapp.com["NetApp Hardware Universe"^].

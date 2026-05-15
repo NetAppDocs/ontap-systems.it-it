@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.A proposito di questa attività
+Vista dal retro dello chassis della piattaforma, la porta della scheda compatibile con RoCE a sinistra è la porta "a" (e1a) e la porta a destra è la porta "b" (e1b).
+
+.Fasi
+. Cablare i collegamenti dello shelf:
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a (e1a).
+.. Porta NSM A del ripiano per cavi e0b allo slot controller B 1 porta b (e1b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B 1 porta a (e1a).
+.. Porta NSM B del ripiano per cavi e0b allo slot a del controller 1 porta b (e1b). + la seguente illustrazione mostra il cablaggio dello shelf una volta completato.
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cablaggio per FAS500f AFF A250 o AFF C250 con uno shelf NS224 e un set di porte]
+
+
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

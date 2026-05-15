@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+Quando si aggiunge a caldo un secondo ripiano a una coppia HA A800 o C800, è necessario ricablare il primo ripiano attraverso le due serie di porte compatibili con RoCE negli slot 5 e slot 3 di ciascun controller.
+
+La procedura presuppone che lo shelf esistente sia cablato a schede PCIe compatibili con RoCE nello slot 5 di ciascun controller.
+
+.Fasi
+. Ricollegare il primo ripiano attraverso i due gruppi di porte compatibili con RoCE nello slot 5 e nello slot 3 di ciascun controller.
++
+.. Sul controller A, spostare il cavo dalla porta b (e5b) dello slot 5 alla porta b (e3b) dello slot 3.
+.. Ripetere lo stesso cavo per spostare il controller B.
+
+
+. Verificare che il ripiano cablato sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

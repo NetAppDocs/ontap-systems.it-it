@@ -1,0 +1,99 @@
+---
+permalink: ns224/hot-add-asa-cable-a1k.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa a1k, cable 
+summary: Collega il tuo shelf NS224 al sistema ASA A1K in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA. 
+---
+= Collega uno shelf NS224 al tuo sistema ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Collega il tuo shelf NS224 al sistema ASA A1K in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA.
+
+È possibile aggiungere fino a tre shelf aggiuntivi da NS224 (per un totale di quattro shelf) a una coppia ha di ASA A1K.
+
+.A proposito di questa attività
+* Questa procedura presuppone che la coppia ha disponga di almeno uno shelf NS224 esistente.
+* Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
++
+** Aggiunta a caldo di un secondo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller. (È stato installato un secondo modulo i/o e il primo shelf è stato collegato a entrambi i moduli i/o oppure il primo shelf è già collegato a due moduli i/O. Collegare il secondo shelf a entrambi i moduli di i/O.
+** Aggiunta a caldo di un terzo shelf a una coppia ha con tre moduli i/o RoCE in ciascun controller. (È stato installato un terzo modulo i/o e il terzo ripiano verrà collegato solo al terzo modulo i/o).
+** Aggiunta a caldo di un terzo shelf a una coppia ha con quattro moduli i/o RoCE in ciascun controller. (È stato installato un terzo e quarto modulo i/o e il terzo ripiano verrà collegato al terzo e quarto modulo i/o).
+** Aggiunta a caldo di un quarto shelf a una coppia ha con quattro moduli i/o RoCE in ciascun controller. (Hai installato un quarto modulo i/o e collegato il terzo shelf al terzo e quarto modulo i/o o già avevi il terzo shelf collegato al terzo e quarto modulo i/o). Collegare il quarto ripiano al terzo e al quarto modulo i/o).
+
+
+
+
+.Fasi
+. Se lo shelf NS224 che si sta aggiungendo a caldo sarà il secondo shelf NS224 della coppia ha, completare i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+.. Ripiano per cavi NSM Porta A e0a per controller Slot A porta a 10 (e10a).
+.. Shelf per cavi, porta NSM A e0b allo slot B del controller, porta b 11 (e11b).
+.. Porta NSM B del ripiano per cavi e0a dello slot B del controller 10 porta a (e10a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller porta b 11 (e11b).
++
+L'illustrazione seguente evidenzia il cablaggio del secondo shelf nella coppia ha con due moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cablaggio per AFF/ASA A1K con due shelf e due moduli io]
+
+
+
+. Se lo shelf NS224 che stai aggiungendo a caldo sarà il terzo shelf NS224 nella coppia ha con tre moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari. In caso contrario, passare alla fase successiva.
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 9 (e9a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 9 porte b (e9b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 9 (e9a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 9 porta b (e9b).
++
+La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con tre moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cablaggio per AFF/ASA A1K con tre shelf e tre moduli io]
+
+
+
+. Se lo shelf NS224 che stai aggiungendo a caldo sarà il terzo shelf NS224 nella coppia ha con quattro moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari. In caso contrario, passare alla fase successiva.
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 9 (e9a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 8 porte b (e8b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 9 (e9a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 8 porta b (e8b).
++
+La seguente illustrazione evidenzia il cablaggio per il terzo shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cablaggio per AFF/ASA A1K con tre shelf e quattro moduli io]
+
+
+
+. Se lo shelf NS224 che stai aggiungendo a caldo sarà il quarto shelf NS224 nella coppia ha con quattro moduli i/o RoCE in ciascun controller, completa i seguenti passaggi secondari.
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 8 (e8a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 9 porte b (e9b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 8 (e8a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 9 porta b (e9b).
++
+La seguente illustrazione evidenzia il cablaggio per il quarto shelf nella coppia ha con quattro moduli i/o compatibili RoCE in ogni controller:
+
++
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cablaggio per AFF/ASA A1K con quattro shelf e quattro moduli io]
+
+
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+.Cosa succederà
+Se hai disabilitato l'assegnazione automatica delle unità durante la preparazione di questa procedura, devi assegnare manualmente la proprietà dell'unità e quindi riattivare l'assegnazione automatica delle unità, se necessario. Vai a link:hot-add-asa-complete.html["Completare l'aggiunta a caldo"].
+
+In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

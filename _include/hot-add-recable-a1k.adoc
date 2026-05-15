@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+Quando si aggiungono a caldo degli shelf a una coppia HA A1K, è necessario ricablare gli shelf esistenti per bilanciare la connettività tra più moduli I/O compatibili con RoCE.
+
+* Se si aggiunge un secondo ripiano a caldo, il primo ripiano deve essere ricablato tra gli slot 11 e 10. Per un secondo ripiano, la procedura presuppone che il ripiano esistente sia cablato a un modulo I/O compatibile con RoCE nello slot 11 di ciascun controller.
+* Se si aggiunge un quarto ripiano a caldo, il terzo ripiano deve essere ricablato tra gli slot 9 e 8. Per un quarto ripiano, la procedura presuppone che il terzo ripiano sia cablato allo slot 9 di ciascun controller.
+* Se si aggiunge a caldo un terzo ripiano e si installa un terzo o un quarto modulo I/O compatibile con RoCE in ciascun controller, il terzo ripiano va cablato solo al terzo o al terzo e quarto modulo I/O. Non è necessario ricablare i ripiani esistenti, quindi è possibile saltare questa procedura.
+
+
+.Fasi
+. Fai una delle seguenti operazioni se stai aggiungendo a caldo un secondo ripiano o un quarto ripiano.
++
+** Se si sta aggiungendo a caldo un secondo shelf, è possibile riciclare il primo shelf attraverso i moduli i/o compatibili con RoCE nello slot 11 e nello slot 10 di ciascun controller.
++
+... Sul controller A, spostare il cavo dallo slot 11 porta b (e11b) allo slot 10 porta b (e10b).
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+** Se si sta aggiungendo a caldo un quarto shelf, è possibile riciclare il terzo shelf attraverso i moduli i/o compatibili con RoCE nello slot 9 e nello slot 8 di ciascun controller.
++
+... Sul controller A, spostare il cavo dallo slot 9 porta b (e9b) allo slot 8 porta b (e8b).
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+. Verificare che il ripiano cablato sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

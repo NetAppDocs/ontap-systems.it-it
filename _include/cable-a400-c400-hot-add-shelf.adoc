@@ -1,16 +1,12 @@
-= 
+= Collega la shelf a una coppia HA A400
 :allow-uri-read: 
 
 
-.Prima di iniziare
-* È necessario aver esaminato il link:requirements-hot-add-shelf.html["requisiti e best practice aggiuntivi a caldo"].
-* È necessario aver completato le procedure applicabili in link:prepare-hot-add-shelf.html["Preparare l'aggiunta a caldo di uno shelf"].
-* È necessario aver installato gli scaffali, acceso e impostato gli ID degli scaffali come descritto in link:prepare-hot-add-shelf.html["Installare uno shelf per un'aggiunta a caldo"].
 
 
-*Da ripiano per cavi a una coppia AFF A400 ha*
+== Collega la shelf a una coppia HA A400
 
-Per una coppia ha di AFF A400, puoi aggiungere a caldo fino a due shelf e utilizzare le porte integrate e0c/e0d e le porte nello slot 5, in base alle esigenze.
+Per una coppia HA A400, è possibile aggiungere a caldo fino a due shelf e utilizzare le porte integrate e0c/e0d e le porte nello slot 5 secondo necessità.
 
 .Fasi
 . Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili con RoCE (porte integrate compatibili con RoCE) su ciascun controller, essendo l'unico shelf NS224 della coppia ha, completa i seguenti passaggi secondari.
@@ -70,15 +66,13 @@ image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cablaggio per /ASA A400 co
 +
 Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 
-. Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e riabilitare l'assegnazione automatica del disco, se necessario. Vedere link:complete-hot-add-shelf.html["Completare l'aggiunta a caldo"].
-+
-In caso contrario, la procedura viene completata.
 
 
 
-*Da ripiano per cavi a una coppia AFF C400 ha*
 
-Per una coppia ha di AFF C400, puoi aggiungere a caldo fino a due shelf e utilizzare le porte negli slot 4 e 5 in base alle necessità.
+== Collega la shelf a una coppia HA C400
+
+Per una coppia HA C400, è possibile aggiungere a caldo fino a due shelf e utilizzare le porte negli slot 4 e 5 secondo necessità.
 
 .Fasi
 . Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili con RoCE su ogni controller e questo è l'unico shelf NS224 nella coppia ha, completa i seguenti passaggi secondari.
@@ -139,8 +133,3 @@ image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cablaggio per un AFF/ASA C
 Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 
 
-
-.Quali sono le prossime novità?
-Se l'assegnazione automatica del disco è stata disattivata durante la preparazione di questa procedura, è necessario assegnare manualmente la proprietà del disco e, se necessario, riabilitare l'assegnazione automatica del disco. Andare a link:complete-hot-add-shelf.html["Completare l'aggiunta a caldo"].
-
-In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

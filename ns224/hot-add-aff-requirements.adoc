@@ -1,0 +1,44 @@
+---
+permalink: ns224/hot-add-aff-requirements.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, requirement 
+summary: Prima di aggiungere a caldo uno shelf NS224 al sistema AFF, esaminare i requisiti e le best practice. 
+---
+= Requisiti e procedure consigliate per aggiungere a caldo uno shelf NS224 al sistema AFF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verificare che il sistema AFF soddisfi i requisiti di versione di ONTAP, capacità dello shelf e cablaggio prima di aggiungere a caldo uno shelf NS224. Consultare le best practice per il firmware e la configurazione per garantire che la procedura di aggiunta a caldo venga completata correttamente e senza errori.
+
+
+
+== Requisiti
+
+La coppia HA deve soddisfare i seguenti requisiti per poter aggiungere a caldo uno shelf NS224.
+
+versione di ONTAP supportata:: Il modello della piattaforma e la versione di ONTAP devono supportare lo shelf NS224 e le unità che si stanno aggiungendo a caldo. Vedere  https://hwu.netapp.com["NetApp Hardware Universe"^].
+Numero di shelf:: La coppia HA deve supportare almeno un ripiano aggiuntivo oltre al numero attualmente installato. Dopo aver aggiunto ripiani a caldo, non è possibile superare il numero massimo di ripiani supportati dalla coppia HA. Vedere  https://hwu.netapp.com["NetApp Hardware Universe"^].
+Cablaggio:: È necessario disporre del numero e del tipo di cavi corretti per collegare lo shelf. Se si aggiunge uno shelf a caldo a una coppia HA che include già uno shelf NS224, la coppia HA deve essere cablata in modalità HA multipath senza errori di cablaggio dello storage.
++
+--
+Eseguire  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] per visualizzare eventuali messaggi di errore relativi al cablaggio dello storage e le relative azioni correttive. Vedere  https://hwu.netapp.com["NetApp Hardware Universe"^] per i requisiti dei cavi.
+
+--
+
+
+
+
+== Best practice
+
+Prima di aggiungere a caldo uno shelf NS224, familiarizzare con le seguenti Best practice.
+
+Pacchetto di Disk Qualification:: Installa la versione corrente del  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Pacchetto di Disk Qualification"^]DQP prima di aggiungere a caldo uno shelf. Avere il DQP aggiornato installato consente al sistema di riconoscere e utilizzare le unità appena qualificate, impedisce la visualizzazione di messaggi di evento di sistema relativi a informazioni su unità non correnti ed evita errori di partizionamento causati da unità non riconosciute. Il DQP ti notifica anche la presenza di firmware delle unità non aggiornato.
+Active IQ Config Advisor:: Eseguire  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] prima e dopo l'aggiunta a caldo di uno shelf. L'esecuzione prima dell'aggiunta a caldo fornisce un'istantanea della connettività Ethernet degli shelf esistenti, verifica le versioni del firmware NSM e identifica eventuali ID shelf già in uso. L'esecuzione dopo l'aggiunta a caldo verifica che gli shelf siano cablati correttamente e che gli ID shelf siano univoci all'interno della coppia HA.
+NSM e firmware dei dischi:: Installa le versioni più recenti di  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Firmware NVMe Shelf Module (NSM)"^] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["firmware del disco"^] sul tuo sistema storage prima di aggiungere un nuovo shelf. Non ripristinare il firmware a una versione che non supporta il tuo shelf e i suoi componenti.
+
+
+.Cosa succederà
+Dopo aver esaminato i requisiti, link:hot-add-aff-prepare.html["preparatevi ad aggiungere a caldo il vostro shelf"].

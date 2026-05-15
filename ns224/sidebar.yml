@@ -2,28 +2,124 @@
 section: ns224
 title: Shelf NS224
 entries:
-- title: Shelf hot-add
+- title: Ripiano ad aggiunta a caldo per sistemi AFF
   entries:
   - title: Workflow con aggiunta a caldo
-    url: "/ns224/hot-add-shelf-overview.html"
+    url: "/ns224/hot-add-aff-workflow.html"
   - title: Requisiti e Best practice
-    url: "/ns224/requirements-hot-add-shelf.html"
+    url: "/ns224/hot-add-aff-requirements.html"
   - title: Preparare l'aggiunta a caldo
-    url: "/ns224/prepare-hot-add-shelf.html"
-  - title: Installare lo shelf per l'aggiunta a caldo
-    url: "/ns224/install-hot-add-shelf.html"
-  - title: Ripiano per cavi per aggiunta a caldo
+    entries:
+    - title: Panoramica della preparazione hot-add
+      url: "/ns224/hot-add-aff-prepare.html"
+    - title: AFF A1K
+      url: "/ns224/hot-add-aff-prepare-a1k.html"
+    - title: AFF A70, A90 e C80
+      url: "/ns224/hot-add-aff-prepare-a70-90-c80.html"
+    - title: AFF A800 e C800
+      url: "/ns224/hot-add-aff-prepare-a800-c800.html"
+    - title: AFF A400 e C400
+      url: "/ns224/hot-add-aff-prepare-a400-c400.html"
+    - title: AFF A900
+      url: "/ns224/hot-add-aff-prepare-a900.html"
+    - title: AFF A30, A50, C30 e C60
+      url: "/ns224/hot-add-aff-prepare-a30-50-60.html"
+  - title: Installare la mensola
+    url: "/ns224/hot-add-aff-install.html"
+  - title: Collega i sistemi AFF
     entries:
     - title: Panoramica dei cavi
-      url: "/ns224/cable-overview-hot-add-shelf.html"
-    - title: Sistemi AFF
-      url: "/ns224/cable-aff-systems-hot-add-shelf.html"
-    - title: Sistemi ASA
-      url: "/ns224/cable-asa-systems-hot-add-shelf.html"
-    - title: Sistemi di fine disponibilità
-      url: "/ns224/cable-eoa-systems-hot-add-shelf.html"
+      url: "/ns224/hot-add-aff-cable-overview.html"
+    - title: AFF A1K
+      url: "/ns224/hot-add-aff-cable-a1k.html"
+    - title: AFF A20
+      url: "/ns224/hot-add-aff-cable-a20.html"
+    - title: AFF A30, A50, C30 e C60
+      url: "/ns224/hot-add-aff-cable-a30-50-60.html"
+    - title: AFF A70, A90 e C80
+      url: "/ns224/hot-add-aff-cable-a70-90-c80.html"
+    - title: AFF A250 e C250
+      url: "/ns224/hot-add-aff-cable-a250-c250.html"
+    - title: AFF A400 e C400
+      url: "/ns224/hot-add-aff-cable-a400-c400.html"
+    - title: AFF A800 e C800
+      url: "/ns224/hot-add-aff-cable-a800-c800.html"
+    - title: AFF A900
+      url: "/ns224/hot-add-aff-cable-a900.html"
   - title: Aggiunta a caldo completa
-    url: "/ns224/complete-hot-add-shelf.html"
+    url: "/ns224/hot-add-aff-complete.html"
+- title: Ripiano ad aggiunta a caldo per sistemi ASA
+  entries:
+  - title: Workflow con aggiunta a caldo
+    url: "/ns224/hot-add-asa-workflow.html"
+  - title: Requisiti e Best practice
+    url: "/ns224/hot-add-asa-requirements.html"
+  - title: Preparare l'aggiunta a caldo
+    entries:
+    - title: Panoramica della preparazione hot-add
+      url: "/ns224/hot-add-asa-prepare.html"
+    - title: ASA A1K
+      url: "/ns224/hot-add-asa-prepare-a1k.html"
+    - title: ASA A70 o A90
+      url: "/ns224/hot-add-asa-prepare-a70-90.html"
+    - title: ASA A800 o C800
+      url: "/ns224/hot-add-asa-prepare-a800-c800.html"
+    - title: ASA A400 o C400
+      url: "/ns224/hot-add-asa-prepare-a400-c400.html"
+    - title: ASA A900
+      url: "/ns224/hot-add-asa-prepare-a900.html"
+    - title: ASA A30 o A50
+      url: "/ns224/hot-add-asa-prepare-a30-50.html"
+  - title: Installare la mensola
+    url: "/ns224/hot-add-asa-install.html"
+  - title: Collega i sistemi ASA
+    entries:
+    - title: Panoramica dei cavi
+      url: "/ns224/hot-add-asa-cable-overview.html"
+    - title: ASA A1K
+      url: "/ns224/hot-add-asa-cable-a1k.html"
+    - title: ASA A20
+      url: "/ns224/hot-add-asa-cable-a20.html"
+    - title: ASA A30 o A50
+      url: "/ns224/hot-add-asa-cable-a30-50.html"
+    - title: ASA A70 o A90
+      url: "/ns224/hot-add-asa-cable-a70-90.html"
+    - title: ASA A250
+      url: "/ns224/hot-add-asa-cable-a250.html"
+    - title: ASA A400 o C400
+      url: "/ns224/hot-add-asa-cable-a400-c400.html"
+    - title: ASA A800 o C800
+      url: "/ns224/hot-add-asa-cable-a800-c800.html"
+    - title: ASA A900
+      url: "/ns224/hot-add-asa-cable-a900.html"
+  - title: Aggiunta a caldo completa
+    url: "/ns224/hot-add-asa-complete.html"
+- title: Ripiano ad aggiunta a caldo per sistemi EOA
+  entries:
+  - title: Workflow con aggiunta a caldo
+    url: "/ns224/hot-add-eoa-workflow.html"
+  - title: Requisiti e Best practice
+    url: "/ns224/hot-add-eoa-requirements.html"
+  - title: Preparare l'aggiunta a caldo
+    entries:
+    - title: Panoramica della preparazione hot-add
+      url: "/ns224/hot-add-eoa-prepare-overview.html"
+    - title: Sistemi EOA
+      url: "/ns224/hot-add-eoa-prepare-systems.html"
+  - title: Installare la mensola
+    url: "/ns224/hot-add-eoa-install.html"
+  - title: Sistemi di fine disponibilità dei cavi
+    entries:
+    - title: Panoramica dei cavi
+      url: "/ns224/hot-add-eoa-cable-overview.html"
+    - title: AFF A320
+      url: "/ns224/hot-add-eoa-cable-a320.html"
+    - title: AFF A700
+      url: "/ns224/hot-add-eoa-cable-a700.html"
+    - title: FAS500f
+      url: "/ns224/hot-add-eoa-cable-fas500f.html"
+  - title: Aggiunta a caldo completa
+    url: "/ns224/hot-add-eoa-complete.html"
 - title: Modificare l'ID dello shelf
   url: "/ns224/change-shelf-id.html"
 - title: Shelf di cavi come storage collegato allo switch

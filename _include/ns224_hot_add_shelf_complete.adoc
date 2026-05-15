@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.Prima di iniziare
+Devi aver già cablato la mensola come indicato nelle istruzioni per la tua coppia HA.
+
+.Fasi
+. Visualizzare tutti i dischi non posseduti: `storage disk show -container-type unassigned`
++
+È possibile immettere il comando su uno dei controller.
+
+. Assegnare ciascun disco: `storage disk assign -disk _disk_name_ -owner _owner_name_`
++
+È possibile immettere il comando su uno dei controller.
+
++
+È possibile utilizzare il carattere jolly per assegnare più di un disco alla volta.
+
+. Se necessario, riabilitare l'assegnazione automatica del disco: `storage disk option modify -node _node_name_ -autoassign on`
++
+È necessario riattivare l'assegnazione automatica della guida su entrambi i controller.
+
+

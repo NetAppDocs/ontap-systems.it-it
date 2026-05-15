@@ -1,0 +1,93 @@
+---
+permalink: ns224/hot-add-asa-cable-a800-c800.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa a800, asa c800, cable 
+summary: Collega il tuo shelf NS224 al sistema ASA A800 o ASA C800 in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA. 
+---
+= Collega uno shelf NS224 al tuo sistema ASA A800 o ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Collega il tuo shelf NS224 al sistema ASA A800 o ASA C800 in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA.
+
+.Fasi
+. Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (una scheda PCIe compatibile RoCE) su ciascun controller, essendo l'unico shelf NS224 della coppia ha, completa i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+
+NOTE: Questa fase presuppone l'installazione della scheda PCIe compatibile con RoCE nello slot 5.
+
++
+.. Shelf di cavi NSM Porta A e0a per controller Slot A porta a 5 (e5a).
+.. Shelf per cavi dalla porta NSM A e0b allo slot controller B, 5 porte b (e5b).
+.. Porta NSM B dello shelf per cavi e0a allo slot controller B porta a 5 (e5a).
+.. Porta NSM B dello shelf per cavi e0b allo slot a del controller 5 porta b (e5b).
++
+L'illustrazione seguente mostra il cablaggio di uno shelf a caldo utilizzando una scheda PCIe compatibile RoCE su ciascun controller:
+
++
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cablaggio per AFF/ASA A800 o AFF/ASA C800 con uno shelf NS224 e una scheda PCIe]
+
+
+
+. Se stai aggiungendo a caldo uno o due shelf utilizzando due set di porte compatibili con RoCE (due schede PCIe compatibili RoCE) su ciascun controller, completa le relative istruzioni secondarie.
++
+
+NOTE: Questa fase presuppone l'installazione delle schede PCIe compatibili con RoCE negli slot 5 e 3.
+
++
+[cols="1,3"]
+|===
+| Shelf | Cablaggio 
+
+
+ a| 
+Ripiano 1
+ a| 
+
+NOTE: Questi passaggi secondari presuppongono che si stia iniziando il cablaggio collegando la porta dello shelf e0a alla scheda PCIe compatibile con RoCE nello slot 5, invece dello slot 3.
+
+.. Cavo NSM Porta A e0a per controller slot A porta a 5 (e5a).
+.. Cavo dalla porta NSM A e0b allo slot controller B, 3 porta b (e3b).
+.. Cavo dalla porta NSM B e0a allo slot controller B 5 porta a (e5a).
+.. Cavo NSM B porta e0b allo slot a del controller 3 porta b (e3b).
+.. Se si desidera aggiungere un secondo ripiano a caldo, completare i sotto-passaggi "`Ripiano 2`"; in caso contrario, passare al passaggio successivo.
+
+
+
+
+ a| 
+Shelf 2
+ a| 
+
+NOTE: Questi passaggi secondari presuppongono che si stia iniziando il cablaggio collegando la porta dello shelf e0a alla scheda PCIe compatibile con RoCE nello slot 3, invece dello slot 5 (che è correlato alle fasi secondarie del cablaggio per lo shelf 1).
+
+.. Cavo NSM Porta A e0a per controller slot A porta a 3 (e3a).
+.. Cavo dalla porta NSM A e0b allo slot controller B 5 porta b (e5b).
+.. Cavo dalla porta NSM B e0a allo slot controller B 3 porta a (e3a).
+.. Cavo NSM B port e0b al controller A slot 5 port b (e5b).
+.. Passare alla fase successiva.
+
+
+|===
++
+La seguente illustrazione mostra il cablaggio per due shelf aggiunti a caldo:
+
++
+image::../media/drw_ns224_a800_c800_2shelves_IEOPS-966.svg[Drw ns224 a800 c800 2 shelf IEOPS 966]
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+.Cosa succederà
+Se hai disabilitato l'assegnazione automatica delle unità durante la preparazione di questa procedura, devi assegnare manualmente la proprietà dell'unità e quindi riattivare l'assegnazione automatica delle unità, se necessario. Vai a link:hot-add-asa-complete.html["Completare l'aggiunta a caldo"].
+
+In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

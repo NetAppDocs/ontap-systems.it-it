@@ -1,0 +1,38 @@
+= 
+:allow-uri-read: 
+
+
+Quando si aggiunge a caldo un secondo shelf a una coppia HA A400 o C400, è necessario ricablare il primo shelf attraverso due set di porte compatibili con RoCE su ciascun controller.
+
+* Per l'A400, la procedura presuppone che lo shelf esistente sia cablato alle porte onboard e0c/e0d compatibili con RoCE su ciascun controller e che il ricablaggio venga effettuato tra le porte onboard e0c/e0d e lo slot 5.
+* Per il C400, la procedura presuppone che lo shelf esistente sia cablato a porte compatibili con RoCE nello slot 4 di ciascun controller e che il cablaggio venga effettuato tra slot 4 e slot 5.
+
+
+.Fasi
+. A seconda del sistema in uso, procedi in uno dei seguenti modi:
++
+** Sulla A400:
++
+È possibile recuperare il primo shelf attraverso i due set di porte compatibili RoCE, integrate e0c/e0d e nello slot 5, su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dalla porta e0d allo slot 5 porta b (e5b).
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+** Sul C400:
++
+Possibilità di recuperare il primo shelf sui due set di porte compatibili con RoCE negli slot 4 e 5, su ciascun controller.
+
++
+... Sul controller A, spostare il cavo dallo slot 4 porta a (e4a) allo slot 5 porta b (e5b).
+... Ripetere lo stesso cavo per spostare il controller B.
+
+
+
+
+. Verificare che il ripiano cablato sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+

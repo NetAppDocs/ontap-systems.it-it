@@ -1,0 +1,97 @@
+---
+permalink: ns224/hot-add-aff-cable-a20.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff a20, cable 
+summary: Collega il shelf NS224 al sistema AFF A20 in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA. 
+---
+= Collega uno shelf NS224 al tuo sistema AFF A20
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Collega il shelf NS224 al sistema AFF A20 in modo che ogni shelf abbia due connessioni a ciascun controller della coppia HA.
+
+Puoi aggiungere a caldo uno shelf NS224 a una coppia ha AFF A20 quando è necessario aggiungere storage (allo shelf interno).
+
+.A proposito di questa attività
+* Questa procedura presuppone che la coppia ha disponga solo di storage interno (non di shelf esterni) e che venga aggiunta a caldo fino a un shelf aggiuntivo.
+* Questa procedura riguarda i seguenti scenari di aggiunta a caldo:
++
+** Aggiunta a caldo del primo shelf a una coppia ha con un modulo i/o compatibile RoCE in ciascun controller.
+** Aggiunta a caldo del primo shelf a una coppia ha con due moduli i/o RoCE in ciascun controller.
+
+
+* Questi sistemi sono compatibili con NS224 shelf con NSM100 moduli e NS224 shelf con NSM100B moduli. Per assicurarsi di collegare i controller alle porte corrette, sostituire la "X" in ogni schema con il numero di porta corretto per il modulo:
++
+[cols="1,4"]
+|===
+| Tipo di modulo | Etichettatura delle porte 
+
+
+ a| 
+NSM100
+ a| 
+"0"
+
+es. e0a
+
+
+
+ a| 
+NSM100B
+ a| 
+"1"
+
+es. e1a
+
+|===
+
+
+.Fasi
+. Se stai aggiungendo a caldo uno shelf utilizzando un set di porte compatibili RoCE (un modulo i/o compatibile RoCE) in ogni modulo controller, e questo è l'unico shelf NS224 nella coppia ha, completa i seguenti passaggi secondari.
++
+In caso contrario, passare alla fase successiva.
+
++
+
+NOTE: Questa fase presuppone che sia stato installato il modulo i/o compatibile con RoCE nello slot 3.
+
++
+.. Ripiano per cavi NSM A porta EXA per il controllo A slot 3 porta a (e3a).
+.. Ripiano per cavi porta NSM A EXB a slot controller B 3 porta b (E3B).
+.. Ripiano per cavi porta NSM B EXA a slot controller B 3 porta a (e3a).
+.. Ripiano per cavi NSM B porta EXB a controller A slot 3 porta b (E3B).
++
+La seguente illustrazione mostra il cablaggio di uno shelf aggiunto a caldo utilizzando un modulo i/o compatibile con RoCE in ciascun modulo controller:
+
++
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cablaggio per AFF/ASA A20 con uno shelf e un modulo io]
+
+
+
+. Se si sta aggiungendo a caldo uno shelf utilizzando due set di porte compatibili RoCE (due moduli i/o compatibili RoCE) in ciascun modulo controller, completare i seguenti passaggi secondari.
++
+.. Cavo NSM A porta EXA al controller A slot 3 porta a (e3a).
+.. Cavo NSM A porta EXB a controller B slot 1 porta b (e1b).
+.. Cavo NSM B porta EXA a controller B slot 3 porta a (e3a).
+.. Cavo NSM B porta EXB a controller A slot 1 porta b (e1b).
+
+
+
+
+L'illustrazione seguente mostra il cablaggio per uno shelf a caldo che utilizza due moduli i/o compatibili RoCE in ciascun modulo controller:
+
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cablaggio per AFF/ASA A20 con uno shelf e due moduli io]
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
+
+.Cosa succederà
+Se hai disabilitato l'assegnazione automatica delle unità durante la preparazione di questa procedura, devi assegnare manualmente la proprietà dell'unità e quindi riattivare l'assegnazione automatica delle unità, se necessario. Vai a link:hot-add-aff-complete.html["Completare l'aggiunta a caldo"].
+
+In caso contrario, la procedura di aggiunta a caldo dello shelf è terminata.

@@ -1,0 +1,21 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Collegare il ripiano ai controller.
++
+.. Cavo NSM A porta e0a per controller A porta e0e.
+.. Cavo NSM Porta A e0b alla porta controller B e0b.
+.. Cavo NSM B porta e0a al controller B porta e0e.
+.. Cavo NSM B porta e0b alla porta a del controller e0b. + la seguente illustrazione mostra i cavi per lo shelf aggiunto a caldo (shelf 2):
++
+image::../media/drw_ns224_a320_2shelves_direct_attached.png[Cablaggio per un AFF A320 con due shelf NS224 e tre set di porte integrate]
+
+
+
+. Verificare che il ripiano aggiunto a caldo sia collegato correttamente utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
++
+Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
+
+
