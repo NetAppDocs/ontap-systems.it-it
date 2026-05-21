@@ -53,17 +53,21 @@ image:../media/icon_round_4.png["Numero di didascalia 4"]
 LED di stato
 
 |===
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rimuovere il pannello (se necessario) con due mani, afferrando le aperture su ciascun lato del pannello, quindi tirandolo verso di sé fino a quando non si sgancia dai perni sferici sul telaio.
 . Identificare il modulo della ventola da sostituire controllando i messaggi di errore della console e il LED Attention (attenzione) su ciascun modulo della ventola.
++
+Utilizzare il messaggio BMC o il LED di attenzione per identificare il modulo ventola da sostituire. BMC mappa i moduli ventola come Fan#_#, dove il primo numero indica lo slot e il secondo la riga (1=superiore, 2=inferiore); ad esempio, slot 1, seconda riga = Fan1_2.
+
 . Premere verso il basso il fermo di rilascio sulla maniglia della camma del modulo ventola, quindi ruotare la maniglia della camma verso il basso.
 +
-Il modulo della ventola si allontana leggermente dallo chassis.
+Il modulo della ventola si allontana leggermente dal chassis.
 
 . Estrarre il modulo della ventola dal telaio, assicurandosi di sostenerlo con la mano libera in modo che non ruoti fuori dal telaio.
 +
 
-NOTE: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
+CAUTION: I moduli della ventola sono corti. Sostenere sempre la parte inferiore del modulo della ventola con la mano libera in modo che non cada improvvisamente dal telaio e non causi lesioni.
 
 . Mettere da parte il modulo della ventola.
 . Inserire il modulo della ventola di ricambio nel telaio allineandolo con l'apertura, quindi farlo scorrere nel telaio.
@@ -73,7 +77,7 @@ La maniglia della camma si solleva leggermente quando il modulo della ventola è
 
 . Ruotare la maniglia della camma verso l'alto nella posizione di chiusura, assicurandosi che il fermo di rilascio della maniglia della camma scatti nella posizione di blocco.
 +
-Il LED Attention (attenzione) non deve essere acceso dopo che la ventola è stata inserita e ha portato la ventola alla velocità di funzionamento.
+Il LED di attenzione si spegne dopo che la ventola si è posizionata correttamente e ha raggiunto la velocità operativa.
 
 . Allineare il pannello con i perni a sfera, quindi spingere delicatamente il pannello sui perni a sfera.
 . Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"^] pagina per ulteriori informazioni.

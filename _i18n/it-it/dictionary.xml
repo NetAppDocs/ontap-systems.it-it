@@ -2229,10 +2229,7 @@
   <block id="fda53941888fba701f57352c8efaee65" category="section-title">Fase 11: Installare il modulo controller</block>
   <block id="3da447ebdb632dcafa2eee47ac09d128" category="paragraph">Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.</block>
   <block id="07c4e79c1eed9787f0716b4d65f147b2" category="list-text">Interrompere il processo di avvio premendo<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>.</block>
-  <block id="3ceabec6c24f4b298d5024f17ef30a0b" category="summary">Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario.</block>
   <block id="05dffff712f4aca6f86af6c7c42a9991" category="doc">Trasferire l'immagine di boot sul supporto di boot - AFF A700s</block>
-  <block id="f2517f7437e31c22e8ebbe3208bc1f18" category="paragraph">È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine sul secondo supporto di avvio installato nel modulo controller. Questo è il metodo principale per trasferire i file dei supporti di avvio sui supporti di avvio sostitutivi nei sistemi con due supporti di avvio nel modulo controller.</block>
-  <block id="c74fc698f6085001fa8e634011afdd6d" category="paragraph">L'immagine sul supporto di avvio secondario deve contenere un<block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> file e non devono riportare errori. Se il file image.tgz non è presente o il supporto di avvio segnala errori, non è possibile utilizzare questa procedura. È necessario trasferire l'immagine di avvio sul supporto di avvio sostitutivo utilizzando la procedura di sostituzione dell'unità flash USB.</block>
   <block id="9a31048ac5a99c8ed4056d3af461b406" category="list-text">Dal prompt DEL CARICATORE, avviare l'immagine di ripristino dal supporto di avvio secondario:<block ref="ec44bfe32a6d575f528cbdeeb29c9942" prefix=" " category="inline-code"></block></block>
   <block id="e640ac5f7f5b30fe8c1918548c6df741" category="paragraph">L'immagine viene scaricata dal supporto di avvio secondario.</block>
   <block id="af645d133cdcbcc30956c0bb802a4d34" category="list-text">Registrare l'indirizzo IP del controller che ha subito problemi visualizzato sullo schermo.</block>
@@ -2241,7 +2238,6 @@
   <block id="bc8660c5f3569dff11062aab0e8487d1" category="list-text">Una volta completata la sincronizzazione della configurazione senza errori, premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di confermare che la procedura di backup è stata eseguita correttamente.</block>
   <block id="499f2b4faaecf09ce2df725ed89b18e0" category="list-text">Premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto se si desidera utilizzare la copia ripristinata, quindi premere<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando viene richiesto di riavviare il controller.</block>
   <block id="3228093fe4dbdd24659a9a88f379aa09" category="list-text">Uscire dal livello di privilegio avanzato sul controller integro.</block>
-  <block id="018ed71ecc770af5fd2b70a8cffb7032" category="paragraph">Dal prompt di ONTAP, puoi eseguire il comando 'System node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true'.</block>
   <block id="7f5d701a64318868c16d00d43b911d93" category="list-text">Riavviare il controller.</block>
   <block id="dc2fb67295c2f173a720e03d73f0e627" category="list-text">Con il controller riavviato per problemi che visualizza<block ref="fd66c964768074eb90f4f1426229bf3e" prefix=" " category="inline-code"></block> eseguire un giveback dal controller integro:</block>
   <block id="ff02ca9b372ecd5e7de683ed182d26e4" category="paragraph">Una volta visualizzato il<block ref="fd66c964768074eb90f4f1426229bf3e" prefix=" " category="inline-code"></block> eseguire un giveback dal controller integro:</block>
@@ -13149,9 +13145,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="0d9cb84ca4d1b976611c703d55106b16" category="image-alt">Cambia ID scaffale NX224</block>
   <block id="c3248ba61632476b6423842b95414f99" category="paragraph">Accesso tramite pulsante ID scaffale</block>
   <block id="f6b50513ccb0458f52042b169361dd21" category="list-text">Se ONTAP è in esecuzione (i controller sono disponibili per fornire dati) e tutte le unità nello shelf sono di riserva, non di proprietà, attendere almeno 180 secondi.</block>
-  <block id="9daf77d9d23bfd6b9091a7cc689fc060" category="doc">Aggiunta di un'unità a caldo - Scaffali NX224</block>
   <block id="6297d133d06242a84ced78f25874e3a3" category="summary">È possibile aggiungere a caldo uno shelf di unità NX224 dopo che il cluster AFX soddisfa determinati requisiti e dopo aver completato le attività di preparazione applicabili al cluster AFX.</block>
-  <block id="21fcbf0345b3dd3b3ef04dc5e417d6f9" category="doc">Aggiungi uno scaffale a caldo - Scaffali NX224</block>
   <block id="a65fc212542af95abeff48e08e593cf1" category="paragraph">È possibile espandere le capacità di archiviazione aggiungendo a caldo uno scaffale NX224 alla configurazione del cluster AFX esistente.</block>
   <block id="ea76371559e3b84b90531685bb2cc925" category="list-text">Dopo aver cablato uno scaffale aggiunto a caldo, ONTAP riconosce lo scaffale.  Se necessario, il firmware dello scaffale NSM e il firmware dell'unità dovrebbero essere aggiornati automaticamente.</block>
   <block id="0449258a59d5f091984e585ac1700de0" category="list-text">Prima di aggiungere un ripiano a caldo, assicurati di avere:</block>
@@ -13187,9 +13181,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c73a63da4aa2a55331dc580e3f7a6058" category="paragraph">L'illustrazione seguente evidenzia il cablaggio per l'aggiunta a caldo di un ripiano supplementare a una configurazione di switch.  Per aggiungere ulteriori ripiani, seguire la stessa metodologia di cablaggio basata sullo switch.</block>
   <block id="b05d02c2614c4a2d2b2a26a857851df5" category="image-alt">Cablaggio dello switch NX224 per AFX A1K</block>
   <block id="6556efde934a1b635008a5645f522b81" category="summary">Panoramica sulla manutenzione degli scaffali NX224.</block>
-  <block id="aea5557e47a25549577bff88a217d584" category="doc">Panoramica della manutenzione degli scaffali - Scaffali NX224</block>
   <block id="993a8298922e1e33c5d4cd26d00918db" category="paragraph">Per mantenere in efficienza il tuo scaffale NX224 puoi adottare le seguenti misure:</block>
-  <block id="fd707bab34d37e3b52a981059bad8f48" category="doc">LED per ripiani di supporto monitor - ripiani NX224</block>
   <block id="25a6c9168ed620e1583de103c9a0feda" category="paragraph">È possibile monitorare lo stato di salute del proprio scaffale conoscendo la posizione e le condizioni di stato dei LED sui componenti dello scaffale dell'unità.</block>
   <block id="beab8079a8da60c183b5d6654c926a74" category="list-text">I LED di posizione (blu) sul pannello di visualizzazione dell'operatore (ODP) di uno scaffale e su entrambi i moduli scaffale NVMe (NSM) possono essere attivati per aiutare a individuare fisicamente lo scaffale che necessita di manutenzione:<block ref="d6bcc7ed2edc5b8ad7e7188bba8189eb" prefix=" " category="inline-code"></block></block>
   <block id="7162be5b0165c245b74c633ca80cf635" category="image-alt">Modulo LED NX224 NSM140</block>
@@ -13199,7 +13191,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="5d6dfe5ed734a2782721caf18e0b4c2c" category="paragraph">Nessuna alimentazione CA all'alimentatore</block>
   <block id="bcf3b498a47e3fa766dac31a45cbe289" category="paragraph">Alimentazione CA attiva, ma l'alimentatore non è nel contenitore</block>
   <block id="025f8295430770e736e984e6794d5d23" category="summary">È possibile sostituire un supporto di avvio non riuscito in uno scaffale NX224.  La sostituzione del supporto di avvio può essere effettuata senza interruzioni, mentre lo scaffale è acceso e l'I/O è in corso.</block>
-  <block id="332b9527a936c07781bf0cadb44287ea" category="doc">Sostituire il supporto di avvio - ripiani NX224</block>
   <block id="eb5f70737199e249936ef82aa6ae88c5" category="list-text">L'NSM partner dello scaffale deve essere attivo e funzionante e cablato correttamente, in modo che lo scaffale mantenga la connettività quando si rimuove l'NSM con la FRU guasta (NSM di destinazione).  Puoi verificare lo stato del partner NSM tramite<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block> .</block>
   <block id="901f0035fc2e222a5f2556710312ea92" category="list-text">Scollegare il cavo di alimentazione dall'alimentatore aprendo il fermo del cavo di alimentazione e quindi scollegando il cavo di alimentazione dall'alimentatore.</block>
   <block id="49c7a6cf6e0ed8a4a54247d9cd7587a2" category="list-text">Ricollegare il cablaggio di archiviazione alle stesse otto porte NSM.</block>
@@ -13207,7 +13198,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="3c562e952688339fa635b0286f963d4f" category="inline-link">esecuzione di Active IQ Config Advisor</block>
   <block id="1da3eefc08ef3fe26013bf7d8153fa76" category="list-text">Verificare che l'NSM sia cablato correttamente,<block ref="634f3ece8b47f8abdb5020d54bf495f5" category="inline-link-rx"></block> .</block>
   <block id="c9e888f57f6411c65b9b5e2979bef85d" category="summary">È possibile sostituire un DIMM difettoso senza interrompere l'operazione in un supporto per unità NX224 acceso e mentre è in corso un'operazione di I/O.</block>
-  <block id="475128cdfcd3d32fe12f61f1c5c81913" category="doc">Sostituire un DIMM - ripiani NX224</block>
   <block id="49386f77e99642fe7af5b51a113e488e" category="list-text">*Migliore pratica:* la migliore pratica è quella di avere le versioni aggiornate del firmware del modulo NVMe shelf (NSM) e del firmware dell'unità sul sistema prima di sostituire i componenti FRU. È possibile visitare il sito di supporto NetApp per <block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block> E <block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> .</block>
   <block id="cd8dd115df9bdca0ec5fbe812575893b" category="list-text">L'NSM partner dello scaffale deve essere attivo e funzionante e cablato correttamente, in modo che lo scaffale mantenga la connettività quando si rimuove l'NSM con la FRU guasta (NSM di destinazione).  Puoi verificare lo stato del partner NSM tramite<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block> .</block>
   <block id="6c1921d7df069dd1505980207b7ea2f4" category="list-text">Tutti gli altri componenti del sistema, compresi gli altri tre DIMM, devono funzionare correttamente.</block>
@@ -13215,7 +13205,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="c642de7f35cea37f108d6c93586ba109" category="inline-link">esecuzione di Config Advisor</block>
   <block id="0051f60b031fe2ab0d81803f9509c124" category="list-text">Verificare che l'NSM sia cablato correttamente,<block ref="a1776ed37448018544fe80631966bcd7" category="inline-link-rx"></block> .</block>
   <block id="275d34ff75df0b93dbba7bdb3db9f37c" category="summary">È possibile sostituire un'unità guasta senza interrompere l'alimentazione in uno scaffale NX224 acceso e mentre è in corso un'operazione di I/O.</block>
-  <block id="7a87bb303f4254003a5ab0d31a1ed9fb" category="doc">Sostituzione a caldo di un'unità - Scaffali NX224</block>
   <block id="cf2ae209b31955517ebee51c6c982859" category="list-text">L'unità che si sta installando deve essere supportata dallo scaffale NX224.  Puoi verificare le unità compatibili del tuo scaffale in<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> .</block>
   <block id="94f21a41afb0bb0d980e0970f99f7d57" category="inline-link">Panoramica della crittografia NetApp con la documentazione CLI</block>
   <block id="8fa5eb38a5f3ec0d799934def134e531" category="paragraph">È possibile visualizzare i passaggi aggiuntivi che devono essere completati prima e dopo la sostituzione di un SED in<block ref="a45663e4b664b1d312b1973da8ba3d7f" category="inline-link-rx"></block> .</block>
@@ -13223,17 +13212,14 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="7e2123141c266fa24d4f529172a4b541" category="list-text">*Migliore pratica:* assicurati che il tuo sistema possa riconoscere e utilizzare le unità appena qualificate<block ref="3d50ed979df83d97dd20b0cc2c8bc3a9" category="inline-link-rx"></block> .</block>
   <block id="c9ebef258f2f12def066b21415a56382" category="paragraph">In questo modo si evitano messaggi di eventi di sistema relativi alla presenza di informazioni sull'unità non aggiornate e si impedisce il partizionamento dell'unità perché le unità non vengono riconosciute.  Il DQP ti avvisa anche della presenza di firmware dell'unità non aggiornato.</block>
   <block id="9552387a009f53c2998cb220cd16067e" category="summary">È possibile sostituire una ventola guasta senza interrompere l'alimentazione in uno scaffale NX224 acceso e mentre è in corso un'operazione di I/O.</block>
-  <block id="57d682160e2237bd5f87944217c26dcf" category="doc">Sostituire un modulo ventola - ripiani NX224</block>
   <block id="89f2ef4ce5077162c93e2010696841ef" category="paragraph">Se una o entrambe le ventole del modulo ventola si guastano, è possibile sostituire il modulo ventola.  Questa procedura può essere completata senza interruzioni in uno scaffale NX224 acceso con I/O in corso.</block>
   <block id="392ec912e5e56a755ba6aec50131adae" category="list-text">*Migliore pratica:* la migliore pratica è quella di avere le versioni aggiornate del firmware NSM e del firmware dell'unità sul sistema prima di sostituire i componenti FRU. È possibile visitare il sito di supporto NetApp per <block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block> E <block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> .</block>
   <block id="37a8affe1fa106032de554c062e9e1cd" category="list-text">Scollegare il cablaggio dello scaffale dalle porte NSM.</block>
   <block id="df72294c1d47e46ba433ddee498c7caa" category="list-text">Ricollegare il cablaggio dello scaffale alle stesse otto porte NSM.</block>
   <block id="795e5b2d8dd6ace5605e89211abdf341" category="summary">È possibile sostituire un modulo I/O Ethernet guasto senza interrompere l'alimentazione in uno scaffale NX224 acceso e mentre l'I/O è in corso.</block>
-  <block id="56c6680038919ffea816b0106b2ef69f" category="doc">Sostituire il modulo I/O Ethernet - ripiani NX224</block>
   <block id="bcbb78790793c3b3a6c4cc3de0f22bc6" category="list-text">Il NSM partner dello scaffale deve essere attivo e funzionante e cablato correttamente, in modo che lo scaffale mantenga la connettività quando si rimuove l'NSM guasto.  Puoi verificare lo stato del partner NSM tramite<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block> .</block>
   <block id="8b9a79e838c879494b6ec6a4dd9f83d7" category="list-text">Ricollegare il NSM:</block>
   <block id="2ddc2541950d2b7cf5fa865af0c30811" category="list-text">Verificare che i LED di attenzione (ambra) sull'NSM contenente il modulo I/O guasto e sul pannello di visualizzazione dell'operatore dello scaffale non siano più illuminati.</block>
-  <block id="868dffc494c85c09a39784a568ce58c4" category="doc">Sostituire un NSM - ripiani NX224</block>
   <block id="8caf14bc08677c718cf235d44b23051c" category="paragraph">È possibile sostituire un modulo NVMe shelf (NSM) danneggiato senza interruzioni in uno shelf di unità NX224 acceso e mentre è in corso un'operazione di I/O.</block>
   <block id="1ca26d4850e86adaada89afb267eaf6f" category="list-text">La sostituzione dell'NSM comporta lo spostamento dei moduli DIMM, delle ventole, del supporto di avvio, del modulo I/O e dell'alimentatore dall'NSM danneggiato all'NSM sostitutivo.</block>
   <block id="580caa7b67645719e0a4c78df2b4ea6a" category="paragraph">Non spostare la batteria dell'orologio in tempo reale (RTC).  Viene preinstallato nel NSM sostitutivo.</block>
@@ -13249,8 +13235,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="5b1662852c865a6bd771638b5db9e862" category="list-text">Con il pollice, premere la linguetta in terracotta sull'alimentatore per sbloccare il meccanismo di bloccaggio.</block>
   <block id="1b4028b0424fade1bdb82356997b35c2" category="list-text">Ruotare la maniglia dell'alimentatore verso il basso, in modo che non intralci le normali operazioni.</block>
   <block id="c772043a43cbf70f178bc60e9c2bb650" category="summary">È possibile sostituire un alimentatore guasto senza interrompere l'alimentazione in uno scaffale NX224 acceso e mentre è in corso un'operazione di I/O.</block>
-  <block id="d50fc1b8ef2aa32e52f173d19ecc37c2" category="doc">Sostituzione a caldo di un alimentatore - ripiani NX224</block>
-  <block id="8cd7ffd76d7b4b46c49c984da4cc21cf" category="doc">Sostituire la batteria dell'orologio in tempo reale - Scaffali NX224</block>
   <block id="504ce12704134674e6c4f4d48826e550" category="paragraph">È possibile sostituire una batteria dell'orologio in tempo reale (RTC) guasta senza interrompere l'alimentazione in uno scaffale NX224 acceso e mentre è in corso un'operazione di I/O.</block>
   <block id="99dfa28920a40a7be0858c50f989a3e5" category="section-title">Ottobre 2025</block>
   <block id="f48884bca72e8c9a2c859cce9d6c2275" category="section-title">Sistema di archiviazione AFX</block>
@@ -13997,8 +13981,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="045d601ea55137d06367b4e5c07294cb" category="summary">Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700s . Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.</block>
   <block id="1cde608d6fe62f56bdc3a29ae9eafc3b" category="paragraph">Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700s . Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio.</block>
   <block id="7ff709ab33d28508eabb142a3db7ae80" category="summary">Trasferire l'immagine di avvio sul supporto di avvio sostitutivo su un sistema AFF A700s utilizzando il supporto di avvio secondario o un'unità flash USB. Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.</block>
-  <block id="6827ba78ed93529d56c15a33eb4ff531" category="paragraph">Trasferire l'immagine di avvio sul supporto di avvio sostitutivo su un sistema AFF A700s utilizzando il supporto di avvio secondario o un'unità flash USB. Questa procedura include il ripristino dall'immagine sul supporto di avvio secondario come metodo principale oppure l'utilizzo di un'unità flash USB se il ripristino dal supporto di avvio secondario non riesce o il file image.tgz risulta mancante.</block>
-  <block id="b3e6f6b7e4e5a440cfc3f9e0993cee92" category="section-title">Opzione 1: trasferire i file utilizzando il ripristino del backup dal secondo supporto di avvio</block>
   <block id="e4e6847403baa34b19d3eda275449b4b" category="section-title">Opzione 2: trasferire l'immagine di avvio tramite un'unità flash USB</block>
   <block id="a9ada9881e4356b94c8f1b22d5de3285" category="summary">Dopo aver sostituito il componente, è possibile restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Il sistema AFF C190 supporta solo procedure di ripristino manuale tramite supporti di avvio.</block>
   <block id="16938aed6aaf31d064148061342cc4bf" category="paragraph">Restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedi il<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> pagina per ulteriori informazioni. Il sistema AFF C190 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.</block>
@@ -15138,4 +15120,28 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8d5e7895e7572495b322b60ec1134d14" category="sidebar">Collega i sistemi ASA</block>
   <block id="91d95e6e15279946ba73922f805b7916" category="sidebar">Sistemi EOA</block>
   <block id="9d0dcbcd43b2c01863b0888b33784f20" category="sidebar">Sistemi di fine disponibilità dei cavi</block>
+  <block id="63dd54bdbae041eaa0355a49c82ac7f1" category="paragraph">Utilizzare il messaggio BMC o il LED di attenzione per identificare il modulo ventola da sostituire. BMC mappa i moduli ventola come Fan#_#, dove il primo numero indica lo slot e il secondo la riga (1=superiore, 2=inferiore); ad esempio, slot 1, seconda riga = Fan1_2.</block>
+  <block id="f6f03e6d93cc09c3d00cfa6485d8a770" category="paragraph">Il modulo della ventola si allontana leggermente dal chassis.</block>
+  <block id="c06f099c5d6289bd8592143ef4a8371d" category="paragraph">Il LED di attenzione si spegne dopo che la ventola si è posizionata correttamente e ha raggiunto la velocità operativa.</block>
+  <block id="3c046249b91ec9e1b6e20b1dca03357b" category="paragraph">Trasferire l'immagine di avvio sul supporto di avvio sostitutivo di un AFF A700s utilizzando il supporto di avvio secondario (metodo principale) o un'unità flash USB (se il ripristino del supporto di avvio secondario non riesce o il <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> file è mancante).</block>
+  <block id="1c8d763a92bd021dd060e8e7d9ac1731" category="section-title">Opzione 1: Trasferire l'immagine di sistema utilizzando il ripristino di backup dal secondo supporto di avvio</block>
+  <block id="d5a720bc38c4a4820ccca7cd1812ddeb" category="paragraph">È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine presente sul secondo supporto di avvio nel modulo controller. Questo è il metodo principale per i sistemi con due supporti di avvio nel modulo controller.</block>
+  <block id="2b749bec4e587e3e4467be27bd35ee54" category="paragraph">L'immagine sul supporto di avvio secondario deve contenere un <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> file e non deve segnalare errori. Se il <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> file è mancante o il supporto di avvio segnala errori, non è possibile utilizzare questa procedura. Utilizzare <block ref="480fd3d07776d9101453634e69c396f9" category="inline-xref-macro-rx"></block> invece.</block>
+  <block id="7d4f9a8194d67a25499f31dd2c3c5474" category="paragraph">Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il<block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> file non viene trovato sul supporto di avvio secondario.</block>
+  <block id="a5c386e3a25844e2b0970f41423bd18b" category="list-text">Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller difettoso. È possibile scaricare l'immagine appropriata dalla sezione Download del NetApp Support Site.</block>
+  <block id="b59e3c20d440ebde2a51c9f98270768b" category="list-text">Salva le variabili d'ambiente che hai modificato con il comando <block ref="c1a29cc79fbc441f23fa8d5d10961fd8" prefix=" " category="inline-code"></block>.</block>
+  <block id="746e6404fb3c214cba42a49e00f4cdbc" category="list-text">Verificare che le variabili d'ambiente siano impostate come previsto.</block>
+  <block id="769810d91f37a33448f782804afe8b15" category="doc">Modificare l'ID dello shelf di dischi NX224</block>
+  <block id="9462a81bfda8f9b77a3fb2f9e1f1d3fa" category="doc">Aggiungere a caldo un'unità a uno shelf NX224</block>
+  <block id="7a327b955d36fb9e8769c059837e905f" category="doc">Aggiungere a caldo uno shelf NX224 a un cluster AFX</block>
+  <block id="9cbcc0cd643835114561467f05ae3a12" category="doc">manutenzione shelf NX224</block>
+  <block id="35ec49663bb0d725792ecfd7cdfd35d8" category="doc">Monitorare i LED dello shelf NX224</block>
+  <block id="ff0b8412ab1e2c3c52a16bb8d94e3beb" category="doc">Sostituire il supporto di avvio in uno shelf NX224</block>
+  <block id="cb0d0b8199238de6776631ac4982ab88" category="doc">Sostituisci un modulo DIMM in uno shelf NX224</block>
+  <block id="8571f926f0e56c390aab9e784e5aa2a8" category="doc">Sostituisci a caldo un drive in uno shelf NX224</block>
+  <block id="4f770573b4054149d0e3f5d188ae4e4f" category="doc">Sostituire un modulo ventola in uno shelf NX224</block>
+  <block id="a2faab4698e67845fc0fbe185cc98fd9" category="doc">Sostituire il modulo I/O Ethernet in uno shelf NX224</block>
+  <block id="8f58e61d50af420886f01cc38be3cf6a" category="doc">Sostituire un NSM in uno shelf NX224</block>
+  <block id="5154a7eeeb6eb7c914e9aa6ac86007e6" category="doc">Sostituire un alimentatore in uno shelf NX224</block>
+  <block id="7b0bd118308264295dfa730998f7251f" category="doc">Sostituire la batteria RTC in uno shelf NX224</block>
 </blocks>

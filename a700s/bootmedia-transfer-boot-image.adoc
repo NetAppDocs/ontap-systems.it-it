@@ -1,7 +1,7 @@
 ---
 permalink: a700s/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive, manual, manual boot recovery 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
 summary: 'Trasferire l"immagine di avvio sul supporto di avvio sostitutivo su un sistema AFF A700s utilizzando il supporto di avvio secondario o un"unità flash USB. Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
 = Trasferire l'immagine di boot sul supporto di boot - AFF A700s
@@ -11,17 +11,17 @@ summary: 'Trasferire l"immagine di avvio sul supporto di avvio sostitutivo su un
 
 
 [role="lead"]
-Trasferire l'immagine di avvio sul supporto di avvio sostitutivo su un sistema AFF A700s utilizzando il supporto di avvio secondario o un'unità flash USB. Questa procedura include il ripristino dall'immagine sul supporto di avvio secondario come metodo principale oppure l'utilizzo di un'unità flash USB se il ripristino dal supporto di avvio secondario non riesce o il file image.tgz risulta mancante.
+Trasferire l'immagine di avvio sul supporto di avvio sostitutivo di un AFF A700s utilizzando il supporto di avvio secondario (metodo principale) o un'unità flash USB (se il ripristino del supporto di avvio secondario non riesce o il  `image.tgz` file è mancante).
 
 Il sistema AFF A700s supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
 
 
-== Opzione 1: trasferire i file utilizzando il ripristino del backup dal secondo supporto di avvio
+== Opzione 1: Trasferire l'immagine di sistema utilizzando il ripristino di backup dal secondo supporto di avvio
 
-È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine sul secondo supporto di avvio installato nel modulo controller. Questo è il metodo principale per trasferire i file dei supporti di avvio sui supporti di avvio sostitutivi nei sistemi con due supporti di avvio nel modulo controller.
+È possibile installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando l'immagine presente sul secondo supporto di avvio nel modulo controller. Questo è il metodo principale per i sistemi con due supporti di avvio nel modulo controller.
 
-L'immagine sul supporto di avvio secondario deve contenere un `image.tgz` file e non devono riportare errori. Se il file image.tgz non è presente o il supporto di avvio segnala errori, non è possibile utilizzare questa procedura. È necessario trasferire l'immagine di avvio sul supporto di avvio sostitutivo utilizzando la procedura di sostituzione dell'unità flash USB.
+L'immagine sul supporto di avvio secondario deve contenere un  `image.tgz` file e non deve segnalare errori. Se il  `image.tgz` file è mancante o il supporto di avvio segnala errori, non è possibile utilizzare questa procedura. Utilizzare <<Opzione 2: trasferire l'immagine di avvio tramite un'unità flash USB>> invece.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -88,10 +88,10 @@ L'immagine viene scaricata dal supporto di avvio secondario.
 
 == Opzione 2: trasferire l'immagine di avvio tramite un'unità flash USB
 
-Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il file image.tgz non viene trovato sul supporto di avvio secondario.
+Questa procedura deve essere utilizzata solo se il ripristino del supporto di avvio secondario non è riuscito o se il `image.tgz` file non viene trovato sul supporto di avvio secondario.
 
 * È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
-* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
+* Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller difettoso. È possibile scaricare l'immagine appropriata dalla sezione Download del NetApp Support Site.
 +
 ** Se NVE è attivato, scaricare l'immagine con NetApp Volume Encryption, come indicato nel pulsante download.
 ** Se NVE non è attivato, scaricare l'immagine senza NetApp Volume Encryption, come indicato nel pulsante download.
@@ -176,7 +176,7 @@ Se non viene visualizzato questo messaggio, premere Ctrl-C, selezionare l'opzion
 *** `bootarg.onboard_keymanager <value>`
 
 
-.. Salvare le variabili di ambiente modificate con `savenv` comando
+.. Salva le variabili d'ambiente che hai modificato con il comando  `savenv`.
 .. Confermare le modifiche utilizzando `printenv _variable-name_` comando.
 
 
@@ -195,12 +195,11 @@ L'immagine viene scaricata dall'unità flash USB.
 . Premere `y` quando viene richiesto se si desidera utilizzare la copia ripristinata, quindi premere `y` quando viene richiesto di riavviare il controller.
 . Dal controller partner nel livello di privilegio avanzato, avviare la sincronizzazione della configurazione utilizzando l'indirizzo IP registrato nel passaggio precedente: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
 . Una volta completata la sincronizzazione della configurazione senza errori, premere `y` quando viene richiesto di confermare che la procedura di backup è stata eseguita correttamente.
-. Premere `y` quando viene richiesto se si desidera utilizzare la copia ripristinata, quindi premere `y` quando viene richiesto di riavviare il controller.
-. Verificare che le variabili ambientali siano impostate come previsto.
+. Verificare che le variabili d'ambiente siano impostate come previsto.
 +
 .. Portare il controller al prompt DEL CARICATORE.
 +
-Dal prompt di ONTAP, puoi eseguire il comando 'System node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true'.
+Dal prompt di ONTAP, è possibile eseguire il comando `system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`.
 
 .. Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
 .. Se una variabile di ambiente non è impostata come previsto, modificarla con `setenv __environment-variable-name__ __changed-value__` comando.
