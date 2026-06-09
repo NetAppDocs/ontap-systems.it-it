@@ -15,7 +15,7 @@ Ripristina il controllo delle risorse di storage sul controller sostitutivo, in 
 
 [role="tabbed-block"]
 ====
-.Nessuna crittografia
+.Nessuna crittografia o gestore di chiavi esterno (EKM)
 --
 Riportare il controller danneggiato al normale funzionamento restituendo il relativo spazio di archiviazione.
 
@@ -35,11 +35,25 @@ Riportare il controller danneggiato al normale funzionamento restituendo il rela
 --
 .Crittografia integrata (OKM)
 --
-Reimpostare la crittografia integrata e riportare il controller al normale funzionamento.
+Ripristinare e sigillare le chiavi di crittografia integrate per OKM e riportare il controller al normale funzionamento.
+
+.Prima di iniziare
+Prima di iniziare, rivedi  https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-show-backup.html["security key-manager onboard show-backup"]o contatta il supporto NetApp.
 
 .Fasi
-. Dal prompt DI Loader, immettere `boot_ontap maint`.
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
+. Recupera e verifica la passphrase a livello di cluster dal controller funzionante.
++
+.. Eseguire il seguente comando per recuperare la passphrase a livello di cluster:
++
+`security key-manager onboard show-backup`
+
+.. Verifica la passphrase a livello di cluster utilizzando il seguente comando:
++
+`security key-manager onboard verify-backup`
+
+
+
 . Immettere la passphrase OKM.
 +
 
@@ -63,9 +77,9 @@ NOTE: La passphrase viene richiesta due volte.
 
 NOTE: Viene richiesta la passphrase a livello di cluster di OKM per il cluster.
 
-.. Verificare lo stato dei tasti: `security key-manager key query -restored _false_`
+.. Verificare lo stato delle chiavi: `security key-manager key query -restored false`
 +
-Quando la sincronizzazione è corretta, l'output non dovrebbe mostrare alcun risultato.
+L'output non dovrebbe mostrare alcun risultato se la sincronizzazione è corretta.
 
 +
 Se l'output mostra i risultati (gli ID chiave delle chiavi che non sono presenti nella tabella delle chiavi interna del sistema), contattare https://support.netapp.com["Supporto NetApp"].
@@ -74,6 +88,10 @@ Se l'output mostra i risultati (gli ID chiave delle chiavi che non sono presenti
 
 . Riportare la centralina guasta al normale funzionamento restituendo la memoria: `storage failover giveback -ofnode _impaired_node_name_`
 . Se lo sconto automatico è stato disattivato, riattivarlo: `storage failover modify -node local -auto-giveback _true_`
++
+
+NOTE: Non ignorare il veto sulla restituzione per chiavi mancanti. Contatta il Supporto NetApp.
+
 . Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`
 
 

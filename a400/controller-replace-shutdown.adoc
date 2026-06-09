@@ -1,8 +1,8 @@
 ---
 permalink: a400/controller-replace-shutdown.html 
 sidebar: sidebar 
-keywords: aff a400, shut down the impair controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+keywords: aff a400, shut down the impaired controller 
+summary: Spegnere il controller nel sistema storage AFF A400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller. 
 ---
 = Spegnere il controller non utilizzato - AFF A400
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 
 [role="lead"]
-Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+Spegnere il controller nel sistema storage AFF A400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.
+
+Arrestare il modulo controller utilizzando una delle seguenti opzioni.
 
 [role="tabbed-block"]
 ====
@@ -179,3 +181,5 @@ mcc1A::> metrocluster operation show
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver spento il controller AFF A400, è necessario link:controller-replace-move-hardware.html["sostituire la centralina"].

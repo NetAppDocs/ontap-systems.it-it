@@ -51,7 +51,7 @@ NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e in
 
 == Fase 2: Verifica dei LIF e registrazione del numero di serie
 
-Prima di riportare il nodo _replacement_ in servizio, verificare che i AutoSupport si trovino sulle rispettive porte home, registrare il numero di serie del nodo _replacement_, se abilitato, e ripristinare il giveback automatico.
+Prima di rimettere in servizio il nodo _sostitutivo_, è necessario verificare che i LIF siano sulle rispettive porte principali, registrare il numero di serie del nodo _sostitutivo_ se AutoSupport è abilitato, controllare lo stato di salute del cluster, chiudere eventuali finestre di manutenzione e reimpostare il ripristino automatico.
 
 .Fasi
 . Verificare che le interfacce logiche stiano segnalando al server principale e alle porte: `network interface show -is-home false`

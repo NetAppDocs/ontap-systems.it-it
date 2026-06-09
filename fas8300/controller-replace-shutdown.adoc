@@ -1,8 +1,8 @@
 ---
 permalink: fas8300/controller-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas8300, fas8700, shut down the impair controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+keywords: fas8300, fas8700, shut down the impaired controller 
+summary: Arresta il controller nel tuo sistema storage FAS8300 e FAS8700 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller. 
 ---
 = Spegnere il controller compromesso - FAS8300 e FAS8700
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 
 [role="lead"]
-È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
+Arresta il controller nel tuo sistema storage FAS8300 e FAS8700 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.
+
+Arrestare il modulo controller utilizzando una delle seguenti opzioni.
 
 [role="tabbed-block"]
 ====
@@ -179,3 +181,5 @@ mcc1A::> metrocluster operation show
 
 --
 ====
+.Quali sono le prossime novità?
+Dopo aver spento i controller FAS8300 e FAS8700, è necessario link:controller-replace-move-hardware.html["sostituire la centralina"].

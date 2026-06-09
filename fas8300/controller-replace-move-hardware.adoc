@@ -2,16 +2,16 @@
 permalink: fas8300/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, move the controller module hardware 
-summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
+summary: Sostituire il controller nel sistema FAS8300 o FAS8700 quando un guasto hardware lo richiede. Rimuovere il controller guasto, trasferire i suoi componenti sul controller di ricambio, installare il nuovo controller e riavviarlo. 
 ---
-= Sostituire l'hardware del modulo controller - FAS8300 e FAS8700
+= Sostituire il controller - FAS8300 e FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire l'hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
+Sostituire il controller nel sistema FAS8300 o FAS8700 quando un guasto hardware lo richiede. Rimuovere il controller guasto, trasferire i suoi componenti sul controller di ricambio, installare il nuovo controller e riavviarlo.
 
 
 NOTE: Il modulo controller Ver2 dispone di un solo socket per modulo di caching (slot 6) nel FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.
@@ -20,12 +20,15 @@ NOTE: Il modulo controller Ver2 dispone di un solo socket per modulo di caching 
 
 == Fase 1: Rimuovere il modulo controller
 
+È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
+
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
 Per rimuovere il modulo controller dal telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
 
 .Animazione - rimuovere il modulo controller
-video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
@@ -35,11 +38,29 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 . Rimuovere il dispositivo di gestione dei cavi dal modulo controller e metterlo da parte.
 . Premere verso il basso entrambi i fermi di bloccaggio, quindi ruotare entrambi i fermi verso il basso contemporaneamente.
 +
+Il modulo controller si sposta leggermente fuori dallo chassis.
+
++
 image::../media/drw_A400_Remove_controller.png[Rilasciare il modulo controller]
 
 +
-Il modulo controller si sposta leggermente fuori dallo chassis.
+[cols="10a,90a"]
+|===
 
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermi di bloccaggio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Il controller si sposta leggermente fuori dallo chassis
+
+|===
 . Estrarre il modulo controller dal telaio.
 +
 Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si sposta fuori dallo chassis.
@@ -47,12 +68,22 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 . Posizionare il modulo controller su una superficie piana e stabile.
 . Sul modulo controller sostitutivo, aprire il condotto dell'aria e rimuovere i montanti vuoti dal modulo controller utilizzando l'animazione, l'illustrazione o i passaggi scritti:
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=49053752-e813-4c15-a917-ab190147fa6e["Rimozione dei riser vuoti dal modulo controller sostitutivo"]
+.Animazione - rimuovere i riser vuoti dal modulo controller sostitutivo
+video::49053752-e813-4c15-a917-ab190147fa6e[panopto]
 
 
+image::../media/drw_a400_empty_riser_remove.png[Rimuovere il riser vuoto]
 
-image::../media/drw_8300_empty_riser_remove.png[Rimuovere il riser vuoto]
+[cols="10,90"]
+|===
 
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermi di rilascio del montante
+
+|===
 . Premere le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
 . Far scorrere il condotto dell'aria verso la parte posteriore del modulo controller, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
 . Ruotare il fermo di bloccaggio del riser sul lato sinistro del riser 1 verso l'alto e verso il condotto dell'aria, sollevare il riser e metterlo da parte.
@@ -63,15 +94,37 @@ image::../media/drw_8300_empty_riser_remove.png[Rimuovere il riser vuoto]
 
 == Fase 2: Spostare gli alimentatori
 
+Spostare gli alimentatori sul modulo controller sostitutivo.
+
 Quando si sostituisce un modulo controller, è necessario spostare l'alimentatore dal modulo controller guasto al modulo controller sostitutivo.
 
 Per spostare gli alimentatori nel modulo controller sostitutivo, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
 
 .Animazione - spostare gli alimentatori
 video::92060115-1967-475b-b517-aad9012f130c[panopto]
+.Fasi
+. Rimuovere l'alimentatore:
++
 image::../media/drw_A400_psu.png[Sostituire l'alimentatore]
 
-. Rimuovere l'alimentatore:
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguetta di bloccaggio dell'alimentatore
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Fermo del cavo di alimentazione
+
+|===
 +
 .. Ruotare la maniglia della camma in modo che possa essere utilizzata per estrarre l'alimentatore dallo chassis.
 .. Premere la linguetta blu di blocco per rilasciare l'alimentatore dallo chassis.
@@ -94,12 +147,41 @@ NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza
 
 == Fase 3: Spostare la batteria NVDIMM
 
+Spostare la batteria NVDIMM nel modulo controller sostitutivo.
+
 Per spostare la batteria NVDIMM dal modulo controller guasto al modulo controller sostitutivo, è necessario eseguire una sequenza specifica di operazioni.
 
 Per spostare la batteria NVDIMM dal modulo del controller guasto al modulo del controller sostitutivo, è possibile utilizzare l'animazione, l'illustrazione o la procedura scritta riportate di seguito.
 
 .Animazione - spostare la batteria NVDIMM
 video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
+image::../media/drw_A400_nvdimm-batt.png[Rimuovere la batteria NVDIMM]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Connettore della batteria NVDIMM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Linguetta di blocco della batteria NVDIMM
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Batteria NVDIMM
+
+|===
+.Fasi
 . Aprire il condotto dell'aria:
 +
 .. Premere le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
@@ -107,14 +189,10 @@ video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
 
 
 . Individuare la batteria NVDIMM nel modulo del controller.
-
-
-image::../media/drw_A400_nvdimm-batt.png[Rimuovere la batteria NVDIMM]
-
 . Individuare la spina della batteria e premere il fermaglio sulla parte anteriore della spina per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
 . Afferrare la batteria e premere la linguetta di bloccaggio blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller.
 . Spostare la batteria nel modulo controller sostitutivo.
-. Allineare il modulo batteria con l'apertura della batteria, quindi spingere delicatamente la batteria nello slot fino a bloccarla in posizione.
+. Allineare il modulo batteria con l'apertura per la batteria, quindi spingere delicatamente la batteria nello slot fino a quando non si blocca in posizione.
 +
 
 NOTE: Non ricollegare il cavo della batteria alla scheda madre fino a quando non viene richiesto.
@@ -125,6 +203,8 @@ NOTE: Non ricollegare il cavo della batteria alla scheda madre fino a quando non
 
 == Fase 4: Spostare il supporto di avvio
 
+Spostare il supporto di avvio nel modulo controller sostitutivo.
+
 Individuare il supporto di avvio, quindi seguire le istruzioni per rimuoverlo dal modulo controller compromesso e inserirlo nel modulo controller sostitutivo.
 
 È possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito per spostare il supporto di avvio dal modulo controller compromesso al modulo controller sostitutivo.
@@ -133,6 +213,24 @@ Individuare il supporto di avvio, quindi seguire le istruzioni per rimuoverlo da
 video::2a14099c-85de-4a84-867c-aad9012efac8[panopto]
 image::../media/drw_A400_Replace-boot_media.png[Rimuovere il supporto di avvio]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguetta di blocco dei supporti di avvio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Supporto di boot
+
+|===
+.Fasi
 . Individuare e rimuovere il supporto di avvio dal modulo controller:
 +
 .. Premere il tasto blu alla fine del supporto di avvio fino a quando il labbro sul supporto di avvio non scompare dal pulsante blu.
@@ -148,7 +246,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 +
 .. Ruotare il supporto di avvio verso il basso verso la scheda madre.
 .. Premere il pulsante di bloccaggio blu in modo che si trovi in posizione aperta.
-.. Posizionando le dita alla fine del supporto di avvio tramite il pulsante blu, premere con decisione verso il basso l'estremità del supporto di avvio per inserire il pulsante di blocco blu.
+.. Posiziona le dita all'estremità del supporto di avvio in corrispondenza del pulsante blu e premi con decisione verso il basso l'estremità del supporto di avvio per attivare il pulsante di blocco blu.
 
 
 
@@ -157,25 +255,54 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 == Fase 5: Spostare i riser PCIe e la scheda mezzanine
 
+Spostare i riser PCIe e la scheda mezzanine sul modulo controller di ricambio.
+
 Nell'ambito del processo di sostituzione del controller, è necessario spostare i riser PCIe e la scheda mezzanine dal modulo controller compromesso al modulo controller sostitutivo.
 
-È possibile utilizzare le seguenti animazioni, illustrazioni, la mappa FUR sul sistema o i passaggi scritti per spostare i riser PCIe e la scheda mezzanine dal modulo controller danneggiato al modulo controller sostitutivo.
-
-
-NOTE: Non è necessario rimuovere le schede PCIe dai riser. Trasferire i riser, con le schede PCIe ancora installate, al modulo controller sostitutivo.
+È possibile utilizzare le seguenti animazioni, illustrazioni o istruzioni scritte per spostare i riser PCIe e la scheda mezzanine dal modulo controller compromesso al modulo controller sostitutivo.
 
 Spostamento dei riser PCIe 1 e 2 (riser sinistro e centrale):
 
 .Animazione - spostamento dei riser PCI 1 e 2
 video::f4ee1d4d-6029-4fe6-a063-aad9012f170b[panopto]
-image::../media/drw_A400_Replace-PCIe-cards.png[Rimuovere le schede PCIe]
-
 Spostamento della scheda mezzanine e del riser 3 (riser destro):
 
 .Animazione - spostare la scheda mezzanine e il riser 3
 video::b0c3b575-3434-4e00-a421-aad9012f2e9e[panopto]
-image::../media/drw_A400_Replace-mezz-card.png[Rimuovere la scheda mezzanine]
+image::../media/drw_A400_Replace-PCIe-cards.png[Rimuovere le schede PCIe]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermo di bloccaggio del riser
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Dispositivo di blocco della scheda PCI
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Piastra di bloccaggio PCI
+
+
+
+ a| 
+image:../media/icon_round_4.png["Numero di didascalia 4"]
+ a| 
+Scheda PCI
+
+|===
+.Fasi
 . Spostare i riser PCIe uno e due dal modulo controller guasto al modulo controller sostitutivo:
 +
 .. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
@@ -205,9 +332,11 @@ Il riser si solleva leggermente dal modulo controller.
 
 
 
-== Fase 6: Spostare i moduli di caching
+== Passaggio 6: Spostare il modulo cache
 
-Quando si sostituisce un modulo controller, è necessario spostare i moduli di caching dai moduli controller non adeguati al modulo controller sostitutivo.
+Spostare il modulo cache sul modulo controller sostitutivo.
+
+Quando si sostituisce un modulo controller, è necessario spostare il modulo di caching dal modulo controller danneggiato al modulo controller sostitutivo.
 
 
 NOTE: Il modulo controller Ver2 dispone di un solo socket per modulo di caching nel modello FAS8300. FAS8700 non dispone di un modulo controller ver2. La funzionalità del modulo di caching non è influenzata dalla rimozione del socket.
@@ -216,8 +345,9 @@ Per spostare i moduli di caching nel nuovo modulo controller, è possibile utili
 
 .Animazione - spostare i moduli di caching
 video::d6a43902-0e78-40c3-a2bd-aad9012f5b94[panopto]
-image::../media/drw_A400_Replace-flashcache.png[Rimuovere e sostituire il modulo di caching]
+image::../media/drw_8300_Replace-flashcache.png[Rimuovere e sostituire il modulo di caching]
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Spostare i moduli di caching dal modulo controller compromesso al modulo controller sostitutivo:
 +
@@ -234,6 +364,8 @@ image::../media/drw_A400_Replace-flashcache.png[Rimuovere e sostituire il modulo
 
 == Fase 7: Spostare i DIMM
 
+Spostare i moduli DIMM nel modulo controller sostitutivo.
+
 È necessario individuare i DIMM e spostarli dal modulo controller guasto al modulo controller sostitutivo.
 
 Il nuovo modulo controller deve essere pronto in modo da poter spostare i DIMM direttamente dal modulo controller guasto agli slot corrispondenti del modulo controller sostitutivo.
@@ -244,13 +376,38 @@ Il nuovo modulo controller deve essere pronto in modo da poter spostare i DIMM d
 video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
 image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Spostare i DIMM]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguette di bloccaggio DIMM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+DIMM
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Socket DIMM
+
+|===
+.Fasi
 . Individuare i DIMM sul modulo controller.
 . Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
 . Verificare che la batteria NVDIMM non sia collegata al nuovo modulo controller.
 . Spostare i DIMM dal modulo controller guasto al modulo controller sostitutivo:
 +
 
-NOTE: Assicurarsi di installare ciascun DIMM nello stesso slot occupato nel modulo controller guasto.
+NOTE: Assicurati di installare ciascun modulo DIMM nello stesso slot che occupava nel modulo controller danneggiato.
 
 +
 .. Estrarre il modulo DIMM dal relativo slot spingendo lentamente le linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
@@ -277,14 +434,34 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 
 == Fase 8: Installare il modulo controller
 
+Reinstallare il modulo controller e riavviarlo.
+
 Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
 
 Per installare il modulo controller sostitutivo nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
 
 .Animazione - Installazione del modulo controller
-video::9249fdb8-1522-437d-9280-aae10007c97b[panopto]
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
 image::../media/drw_A400_Install_controller_source.png[Montare la centralina]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Modulo controller
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Dispositivi di bloccaggio della centralina
+
+|===
+.Fasi
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
@@ -322,3 +499,6 @@ Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL
 
 
 
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il controller FAS8300 o FAS8700 danneggiato, è necessario link:controller-replace-system-config-restore-and-verify.html["ripristinare la configurazione del sistema"].

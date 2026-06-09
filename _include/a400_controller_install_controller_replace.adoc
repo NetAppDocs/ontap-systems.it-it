@@ -1,0 +1,67 @@
+= 
+:allow-uri-read: 
+
+
+Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.
+
+Per installare il modulo controller sostitutivo nel telaio, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
+
+.Animazione - Installazione del modulo controller
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[Montare la centralina]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Modulo controller
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Dispositivi di bloccaggio della centralina
+
+|===
+.Fasi
+. In caso contrario, chiudere il condotto dell'aria.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
++
+
+NOTE: Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
+
+. Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
++
+
+NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+
+. Completare l'installazione del modulo controller:
++
+.. Utilizzando i fermi di bloccaggio, spingere con decisione il modulo controller nel telaio fino a quando i fermi di bloccaggio non iniziano a sollevarsi.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
+
+.. Inserire completamente il modulo controller nel telaio ruotando i fermi di bloccaggio verso l'alto, inclinandoli in modo da liberare i perni di bloccaggio, spingere delicatamente il controller fino in fondo, quindi abbassare i fermi di bloccaggio in posizione di blocco.
+.. Inserire i cavi di alimentazione negli alimentatori, reinstallare il collare di bloccaggio del cavo di alimentazione, quindi collegare gli alimentatori alla fonte di alimentazione.
++
+Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimentazione. Prepararsi ad interrompere il processo di avvio.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Interrompere il normale processo di avvio e avviare IL CARICATORE premendo `Ctrl-C`.
++
+
+NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
+
+.. Al prompt DEL CARICATORE, immettere `bye` Per reinizializzare le schede PCIe e altri componenti.
+.. Interrompere il processo di avvio e avviare il CARICATORE premendo `Ctrl-C`.
++
+Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avviare IL CARICATORE.
+
+
+
+

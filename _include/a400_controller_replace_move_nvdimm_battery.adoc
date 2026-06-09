@@ -1,0 +1,53 @@
+= 
+:allow-uri-read: 
+
+
+Per spostare la batteria NVDIMM dal modulo controller guasto al modulo controller sostitutivo, è necessario eseguire una sequenza specifica di operazioni.
+
+Per spostare la batteria NVDIMM dal modulo del controller guasto al modulo del controller sostitutivo, è possibile utilizzare l'animazione, l'illustrazione o la procedura scritta riportate di seguito.
+
+.Animazione - spostare la batteria NVDIMM
+video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
+image::../media/drw_A400_nvdimm-batt.png[Rimuovere la batteria NVDIMM]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Connettore della batteria NVDIMM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Linguetta di blocco della batteria NVDIMM
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Batteria NVDIMM
+
+|===
+.Fasi
+. Aprire il condotto dell'aria:
++
+.. Premere le linguette di bloccaggio sui lati del condotto dell'aria verso il centro del modulo controller.
+.. Far scorrere il condotto dell'aria verso la parte posteriore del modulo controller, quindi ruotarlo verso l'alto fino a portarlo in posizione completamente aperta.
+
+
+. Individuare la batteria NVDIMM nel modulo del controller.
+. Individuare la spina della batteria e premere il fermaglio sulla parte anteriore della spina per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
+. Afferrare la batteria e premere la linguetta di bloccaggio blu contrassegnata CON PUSH, quindi estrarre la batteria dal supporto e dal modulo del controller.
+. Spostare la batteria nel modulo controller sostitutivo.
+. Allineare il modulo batteria con l'apertura per la batteria, quindi spingere delicatamente la batteria nello slot fino a quando non si blocca in posizione.
++
+
+NOTE: Non ricollegare il cavo della batteria alla scheda madre fino a quando non viene richiesto.
+
+

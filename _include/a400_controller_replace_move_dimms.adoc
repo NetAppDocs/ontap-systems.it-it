@@ -1,0 +1,67 @@
+= 
+:allow-uri-read: 
+
+
+È necessario individuare i DIMM e spostarli dal modulo controller guasto al modulo controller sostitutivo.
+
+Il nuovo modulo controller deve essere pronto in modo da poter spostare i DIMM direttamente dal modulo controller guasto agli slot corrispondenti del modulo controller sostitutivo.
+
+È possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito per spostare i moduli DIMM dal modulo del controller guasto al modulo del controller sostitutivo.
+
+.Animazione - spostare i DIMM
+video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Spostare i DIMM]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Linguette di bloccaggio DIMM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+DIMM
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Socket DIMM
+
+|===
+.Fasi
+. Individuare i DIMM sul modulo controller.
+. Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM nel modulo controller sostitutivo con l'orientamento corretto.
+. Verificare che la batteria NVDIMM non sia collegata al nuovo modulo controller.
+. Spostare i DIMM dal modulo controller guasto al modulo controller sostitutivo:
++
+
+NOTE: Assicurati di installare ciascun modulo DIMM nello stesso slot che occupava nel modulo controller danneggiato.
+
++
+.. Estrarre il modulo DIMM dal relativo slot spingendo lentamente le linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
+.. Individuare lo slot DIMM corrispondente sul modulo controller sostitutivo.
+.. Assicurarsi che le linguette di espulsione del DIMM sullo zoccolo DIMM siano aperte, quindi inserire il DIMM correttamente nello zoccolo.
++
+I DIMM si inseriscono saldamente nello zoccolo, ma devono essere inseriti facilmente. In caso contrario, riallineare il DIMM con lo zoccolo e reinserirlo.
+
+.. Esaminare visivamente il modulo DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello zoccolo.
+.. Ripetere questi passaggi secondari per i DIMM rimanenti.
+
+
+. Collegare la batteria NVDIMM alla scheda madre.
++
+Assicurarsi che la spina si blocchi sul modulo controller.
+
+

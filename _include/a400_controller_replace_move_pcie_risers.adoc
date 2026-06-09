@@ -1,0 +1,76 @@
+= 
+:allow-uri-read: 
+
+
+Nell'ambito del processo di sostituzione del controller, è necessario spostare i riser PCIe e la scheda mezzanine dal modulo controller compromesso al modulo controller sostitutivo.
+
+È possibile utilizzare le seguenti animazioni, illustrazioni o istruzioni scritte per spostare i riser PCIe e la scheda mezzanine dal modulo controller compromesso al modulo controller sostitutivo.
+
+Spostamento dei riser PCIe 1 e 2 (riser sinistro e centrale):
+
+.Animazione - spostamento dei riser PCI 1 e 2
+video::f4ee1d4d-6029-4fe6-a063-aad9012f170b[panopto]
+Spostamento della scheda mezzanine e del riser 3 (riser destro):
+
+.Animazione - spostare la scheda mezzanine e il riser 3
+video::b0c3b575-3434-4e00-a421-aad9012f2e9e[panopto]
+image::../media/drw_A400_Replace-PCIe-cards.png[Rimuovere le schede PCIe]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+Fermo di bloccaggio del riser
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+Dispositivo di blocco della scheda PCI
+
+
+
+ a| 
+image:../media/icon_round_3.png["Numero di didascalia 3"]
+ a| 
+Piastra di bloccaggio PCI
+
+
+
+ a| 
+image:../media/icon_round_4.png["Numero di didascalia 4"]
+ a| 
+Scheda PCI
+
+|===
+.Fasi
+. Spostare i riser PCIe uno e due dal modulo controller guasto al modulo controller sostitutivo:
++
+.. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
+.. Ruotare il fermo di bloccaggio del riser sul lato sinistro del riser verso l'alto e verso il condotto dell'aria.
++
+Il riser si solleva leggermente dal modulo controller.
+
+.. Sollevare il riser, quindi spostarlo nel modulo controller sostitutivo.
+.. Allineare il riser con i piedini sul lato dello zoccolo del riser, abbassare il riser sui piedini, spingere il riser perpendicolarmente nello zoccolo della scheda madre, quindi ruotare il dispositivo di chiusura a filo con la lamiera del riser.
+.. Ripetere questo passaggio per il riser numero 2.
+
+
+. Rimuovere il riser numero 3, rimuovere la scheda mezzanine e installarle entrambe nel modulo controller sostitutivo:
++
+.. Rimuovere eventuali moduli SFP o QSFP presenti nelle schede PCIe.
+.. Ruotare il fermo di bloccaggio del riser sul lato sinistro del riser verso l'alto e verso il condotto dell'aria.
++
+Il riser si solleva leggermente dal modulo controller.
+
+.. Sollevare il riser, quindi metterlo da parte su una superficie piana e stabile.
+.. Allentare le viti a testa zigrinata sulla scheda mezzanine, quindi sollevare la scheda direttamente dallo zoccolo e spostarla nel modulo controller sostitutivo.
+.. Installare il mezzanino nel controller sostitutivo e fissarlo con le viti a testa zigrinata.
+.. Installare il terzo riser nel modulo controller sostitutivo.
+
+
+
