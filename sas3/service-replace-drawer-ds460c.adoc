@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-replace-drawer-ds460c.html 
 sidebar: sidebar 
-keywords: I O activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
-summary: 'La sostituzione di un cassetto di dischi in uno shelf richiede l"arresto dell"intero sistema storage (coppia ha), che consente di mantenere gli aggregati di dati sullo shelf, oppure la possibilità di mantenere la coppia ha in funzione, ciò richiede lo spostamento di tutti i dati dagli aggregati di dati che risiedono sui dischi, la offline e l"eliminazione degli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato root, è necessario arrestare la coppia ha.' 
+keywords: shelf, sas, replace, drive, drawer, disk, dcm2, dcm, ds460c 
+summary: 'Quando sostituisci un cassetto per unità disco in uno shelf, puoi arrestare l"intero sistema storage (coppia HA) oppure mantenere la coppia HA attiva e funzionante.' 
 ---
-= Sostituire un cassetto dell'unità - DS460C
+= Sostituisci un cassetto dischi DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 'La sostituzione di un cassetto di dischi in uno shelf richiede l"arres
 [role="lead"]
 Per sostituire un cassetto unità in uno scaffale, è possibile arrestare l'intero sistema di storage (coppia HA), il che consente di mantenere gli aggregati di dati sullo scaffale. In alternativa, è possibile mantenere la coppia HA attiva e funzionante, il che richiede di spostare tutti i dati dagli aggregati di dati sulle unità disco dello scaffale e quindi di portarli offline, eliminandoli. Se lo scaffale contiene un aggregato radice, è necessario arrestare la coppia HA.
 
-Questa procedura si applica agli scaffali con moduli IOM12 o IOM12B.
+Questa procedura si applica agli shelf con moduli IOM12, IOM12B o IOM12C.
 
 .Prima di iniziare
 Per questa procedura sono necessari i seguenti elementi:
@@ -29,7 +29,7 @@ NOTE: *Possibili danni all'hardware:* per evitare danni da scariche elettrostati
 
 
 .A proposito di questa attività
-* Questa procedura si applica ai ripiani dotati di cassetti per unità DCM e/o cassetti per unità DCM2 o DCM3. (I ripiani avranno anche due moduli IOM12 o due moduli IOM12B.)
+* Questa procedura si applica agli shelf dotati di cassetti con unità DCM e/o cassetti con unità DCM2 o DCM3. (Gli shelf avranno anche due moduli IOM12, due moduli IOM12B o due moduli IOM12C.)
 +
 Quando un cassetto unità DCM, DCM2 o DCM3 si guasta, riceverai un cassetto unità DCM, DCM2 o DCM3 per sostituirlo.
 
@@ -37,9 +37,9 @@ Quando un cassetto unità DCM, DCM2 o DCM3 si guasta, riceverai un cassetto unit
 
 [NOTE]
 ====
-Quando si sostituisce un cassetto unità guasto con un cassetto unità DCM2 o DCM3 più recente, assicurarsi che il software ONTAP e il firmware del modulo IOM12 o IOM12B eseguano le versioni minime richieste per supportare i cassetti DCM2 o DCM3.
+Quando sostituisci un cassetto unità guasto con un cassetto unità DCM2 o DCM3 più recente, assicurati che il software ONTAP e il firmware del modulo IOM12, IOM12B o IOM12C stiano eseguendo le versioni minime richieste per supportare i cassetti DCM2 o DCM3.
 
-L'aggiornamento IOM12 FW può essere eseguito prima o dopo la sostituzione di un cassetto unità. Questa procedura consente di aggiornare il firmware come parte della preparazione per la procedura di sostituzione del cassetto.
+L'aggiornamento del firmware IOM12, IOM12B o IOM12C può essere eseguito prima o dopo la sostituzione di un drive drawer. Questa procedura prevede l'aggiornamento del firmware come parte della preparazione per la sostituzione del drive drawer.
 
 ====
 * I cassetti delle unità DCM, DCM2 e DCM3 possono essere distinti in base al loro aspetto:
@@ -81,7 +81,7 @@ Prima di sostituire un cassetto unità, è necessario assicurarsi di aggiornare 
 +
 Se necessario, puoi visitare il sito del supporto NetApp per  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["scarica le versioni correnti del firmware dello scaffale del disco"]. procedere al passaggio successivo.
 
-. Se il tuo scaffale avrà una combinazione di moduli IOM12 o IOM12B con un numero qualsiasi di cassetti per unità DCM3, il tuo sistema deve eseguire le seguenti versioni minime di ONTAP:
+. Se il tuo shelf avrà una combinazione di moduli IOM12, IOM12B o IOM12C con un qualsiasi numero di cassetti DCM3, il tuo sistema deve eseguire le seguenti versioni minime di ONTAP:
 +
 ** ONTAP 9.17.1RC1
 ** ONTAP 9.16.1P3

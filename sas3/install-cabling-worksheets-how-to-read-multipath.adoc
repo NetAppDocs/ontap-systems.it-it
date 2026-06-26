@@ -1,17 +1,17 @@
 ---
 permalink: sas3/install-cabling-worksheets-how-to-read-multipath.html 
 sidebar: sidebar 
-keywords: example, guide, read, apply, complete, worksheet, cable, controller-to-stack, connection, disk, shelves, shelf, iom12, multipathed, connectivity, hot to read a worksheet to cable controller-to-stack connections for multipathed connectivity 
-summary: È possibile utilizzare questo esempio per fornire istruzioni su come leggere e applicare un foglio di lavoro completo ai collegamenti controller-to-stack via cavo per shelf di dischi con moduli IOM12 per la connettività multipath. 
+keywords: cable, controller, stack, connection, disk, shelves, shelf, iom12, multipathed, connectivity, ds212c, ds224c, ds460c 
+summary: Utilizza questo esempio come guida per leggere e applicare un foglio di lavoro completato per cablare i collegamenti controller-to-stack per shelf di dischi per la connettività multipath. 
 ---
-= Come leggere un foglio di lavoro per cablare le connessioni controller-stack per la connettività multipercorso - DS212C, DS224C o DS460C
+= Leggi una scheda di cablaggio per le connessioni multipath controller-stack DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile utilizzare questo esempio per fornire istruzioni su come leggere e applicare un foglio di lavoro completo ai collegamenti controller-to-stack via cavo per shelf di dischi con moduli IOM12/IOM12B per la connettività multipath.
+Puoi usare questo esempio come guida per leggere e applicare un foglio di lavoro compilato per cablare i collegamenti controller-to-stack per shelf di dischi con moduli IOM12, IOM12B o IOM12C per la connettività multipath.
 
 .Prima di iniziare
 Se si dispone di una piattaforma con storage interno, utilizzare il seguente foglio di lavoro:
@@ -21,7 +21,7 @@ link:install-cabling-worksheets-examples-fas2600.html["Schede di lavoro per il c
 .A proposito di questa attività
 * Questa procedura fa riferimento al seguente foglio di lavoro e all'esempio di cablaggio per dimostrare come leggere un foglio di lavoro per collegare le connessioni controller-to-stack.
 +
-La configurazione utilizzata in questo esempio è una configurazione ha multipath con due HBA SAS a quattro porte (otto porte SAS) su ciascun controller e due stack di shelf di dischi con moduli IOM12/IOM12B. Le coppie di porte vengono cablate saltando ogni altra coppia di porte nel foglio di lavoro.
+La configurazione utilizzata in questo esempio è una configurazione HA multipath con due HBA SAS a quattro porte (otto porte SAS) su ciascun controller e due gruppi di unità disco con moduli IOM12, IOM12B o IOM12C. Le coppie di porte vengono cablate saltando ogni altra coppia di porte nel foglio di lavoro.
 
 +
 

@@ -1,17 +1,17 @@
 ---
 permalink: sas3/install-cabling-worksheet-template-quadpath.html 
 sidebar: sidebar 
-keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, shelf, iom12, quad-pathed, connectivity, ha, pair, controller-to-stack, controller-to-stack cabling worksheet template for quad-pathed connectivity 
-summary: Completando il modello del foglio di lavoro, è possibile definire le coppie di porte SAS del controller che è possibile utilizzare per collegare i controller a stack di shelf di dischi con i moduli IOM12/IOM12B per ottenere una connettività a quattro percorsi in una configurazione a coppia ha o a singolo controller. È inoltre possibile utilizzare il foglio di lavoro completo per esaminare il cablaggio delle connessioni a quattro percorsi per la configurazione. 
+keywords: controller, sas, port, pair, cable, disk, shelf, iom12, quad-pathed, connectivity, ha, stack, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Definisci le coppie di porte SAS del controller che puoi utilizzare per collegare i controller agli stack di shelf di dischi per la connettività a quattro percorsi in una coppia HA o in una configurazione a singolo controller. 
 ---
-= Foglio di lavoro per il cablaggio per connettività a quattro percorsi: DS212C, DS224C o DS460C
+= Schema di cablaggio per la connettività quad-path di DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Completando il modello del foglio di lavoro, è possibile definire le coppie di porte SAS del controller che è possibile utilizzare per collegare i controller a stack di shelf di dischi con i moduli IOM12/IOM12B per ottenere una connettività a quattro percorsi in una configurazione a coppia ha o a singolo controller. È inoltre possibile utilizzare il foglio di lavoro completo per esaminare il cablaggio delle connessioni a quattro percorsi per la configurazione.
+Puoi usare un foglio di lavoro per il cablaggio per definire le coppie di porte SAS del controller che puoi usare per collegare i controller a stack di shelf di dischi con moduli IOM12, IOM12B o IOM12C, per ottenere una connettività a quattro percorsi in una coppia HA o in una configurazione a singolo controller. Puoi anche usare il foglio di lavoro compilato per guidarti nel cablaggio delle connessioni a quattro percorsi per la tua configurazione.
 
 .A proposito di questa attività
 * Questa procedura e il modello di foglio di lavoro sono applicabili al cablaggio della connettività quad-path per una configurazione quad-path ha o quad-path con uno o più stack.
@@ -19,7 +19,7 @@ Completando il modello del foglio di lavoro, è possibile definire le coppie di 
 Vengono forniti esempi di fogli di lavoro completi per le configurazioni quad-path ha e quad-path.
 
 +
-Per gli esempi dei fogli di lavoro viene utilizzata una configurazione con due HBA SAS a quattro porte e due stack di shelf di dischi con moduli IOM12/IOM12B.
+Per gli esempi del foglio di lavoro viene utilizzata una configurazione con due HBA SAS a quattro porte e due stack di shelf di dischi con moduli IOM12, IOM12B o IOM12C.
 
 * Il modello di foglio di lavoro consente di aggiungere fino a due stack; se necessario, è necessario aggiungere altre colonne.
 * La connettività quad-path per le connessioni controller-to-stack è costituita da due set di cavi multipath: Il primo set di cavi viene definito "`mpercorso completo`"; il secondo set di cavi viene definito "`percorso quadruplo`".

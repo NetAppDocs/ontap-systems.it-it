@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-new-system.html 
 sidebar: sidebar 
-keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: Se il tuo nuovo sistema - configurazione a coppia ha o a controller singolo - non è stato installato in un cabinet, devi installare e cablare gli shelf di dischi in un rack. 
+keywords: install, cable, disk, shelf, iom12, module, system, ha, pair, single-controller, configuration, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Se il nuovo sistema non è stato fornito già installato in un armadio, devi installare e cablare gli shelf dei dischi in un rack. 
 ---
-= Installazione e cablaggio di ripiani - DS212C, DS224C o DS460C
+= Installa e collega uno shelf DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Se il tuo nuovo sistema - configurazione a coppia ha o a controller sin
 Se il tuo nuovo sistema - configurazione a coppia ha o a controller singolo - non è stato installato in un cabinet, puoi installare e cablare gli shelf di dischi in un rack.
 
 .A proposito di questa attività
-* Gli shelf di dischi con moduli IOM12/IOM12B vengono forniti con ID shelf preimpostati a 00.
+* Gli alloggiamenti per dischi con moduli IOM12, IOM12B o IOM12C vengono spediti con ID alloggiamento preimpostati su 00.
 +
 
 NOTE: Se si dispone di una coppia ha con almeno due stack, lo shelf di dischi contenente gli aggregati root per il secondo stack ha l'ID shelf preimpostato su 10.
@@ -26,7 +26,7 @@ NOTE: Se si dispone di una coppia ha con almeno due stack, lo shelf di dischi co
 +
 Le etichette indicano il numero dello stack, ad esempio *Loop o Stack n.: 1* e *Loop o Stack n.: 2*. Gli shelf di dischi che non contengono gli aggregati root mostrano solo il numero di serie dello shelf di dischi sulle etichette.
 
-* Se durante l'installazione e la configurazione del sistema non si configura il sistema per l'assegnazione automatica della proprietà del disco, è necessario assegnare manualmente la proprietà del disco.
+* Se non configuri il sistema per utilizzare l'assegnazione automatica della proprietà dei dischi durante l'installazione e la configurazione del sistema, dovrai assegnare manualmente la proprietà dei dischi.
 * IBACP (in-band Alternate Control Path) viene attivato automaticamente.
 +
 IBACP non è supportato nelle configurazioni ha a percorso singolo o a percorso singolo.

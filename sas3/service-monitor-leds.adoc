@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-monitor-leds.html 
 sidebar: sidebar 
-keywords: monitor, health, disk, shelf, location, status, condition, led, component, operator, display, panel, iom12, power, supply, fan, ds460c, shelves, drive, monitor disk shelf leds, operator display panel leds, iom12 module leds, power supply leds, fan leds on ds460c disk shelves, disk drive leds 
+keywords: monitor, health, disk, shelf, location, status, led, iom12, iom12b, iom12c, drive, ds212c, ds224c, ds460c 
 summary: È possibile monitorare lo stato dello shelf di dischi conoscendo la posizione e le condizioni di stato dei LED sui componenti dello shelf di dischi. 
 ---
-= LED per ripiano monitor: DS212C, DS224C o DS460C
+= Monitora i LED dello shelf DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,7 +40,7 @@ Uno o più alimentatori alimentano lo shelf di dischi.
 .2+| image:../media/drw_sas_fault_icon.svg["Icona attenzione, larghezza=5px"] .2+| Attenzione  a| 
 Ambra fisso
  a| 
-Si è verificato un errore con la funzione di una delle FRU: Shelf di dischi, dischi, moduli IOM12/IOM12B o alimentatori.
+Si è verificato un errore nel funzionamento di uno o più FRU: il disk shelf, le unità disco, i moduli IOM12, IOM12B o IOM12C oppure gli alimentatori.
 
 Controllare i messaggi di evento per determinare l'azione correttiva da intraprendere.
 
@@ -64,7 +64,7 @@ Blu fisso
  a| 
 L'amministratore di sistema ha attivato questa funzione LED per facilitare l'individuazione fisica dello shelf di dischi che richiede assistenza.
 
-Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12/IOM12B si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
+Il LED di posizione sul pannello di controllo dell'operatore e su entrambi i moduli IOM12, IOM12B o IOM12C si illumina quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
 
 |===
 A seconda del modello di shelf di dischi in uso, il display dell'operatore ha un aspetto diverso; tuttavia, i tre LED sono disposti allo stesso modo.
@@ -75,13 +75,13 @@ image::../media/drw_opd.gif[Display operatore con tappo terminale]
 
 
 
-== LED del modulo IOM12/IOM12B
+== LED del modulo IOM12, IOM12B o IOM12C
 
-I LED sul modulo IOM12/IOM12B indicano se il modulo funziona correttamente, se è pronto per il traffico i/o e se ci sono problemi con l'hardware.
+I LED presenti sui moduli IOM12, IOM12B o IOM12C indicano se il modulo funziona correttamente, se è pronto per il traffico I/O e se sono presenti problemi hardware.
 
-La seguente tabella descrive i LED del modulo IOM12/IOM12B associati alla funzione del modulo e alla funzione di ciascuna porta SAS del modulo.
+La tabella seguente descrive i LED dei moduli IOM12, IOM12B o IOM12C associati alla funzione del modulo e alla funzione di ciascuna porta SAS sul modulo.
 
-Il modulo IOM12/IOM12B viene utilizzato negli shelf di dischi DS460C, DS224C e DS212C.
+Il modulo IOM12, IOM12B o IOM12C viene utilizzato negli shelf di dischi DS460C, DS224C e DS212C.
 
 [cols="4*"]
 |===
@@ -95,7 +95,7 @@ Attenzione
  a| 
 Ambra fisso
  a| 
-Funzione del modulo IOM12/IOM12B: Si è verificato un errore nella funzione del modulo IOM12/IOM12B.
+Funzione del modulo IOM12, IOM12B o IOM12C: si è verificato un errore nella funzione del modulo IOM12, IOM12B o IOM12C.
 
 Funzione porta SAS: Meno di tutte e quattro le corsie SAS hanno stabilito un collegamento (con un adattatore o un altro shelf di dischi).
 
@@ -121,18 +121,22 @@ Posizione
  a| 
 Blu fisso
  a| 
-L'amministratore di sistema ha attivato questa funzione LED per facilitare il posizionamento fisico dello shelf di dischi con il modulo IOM12/IOM12B guasto.
+Il system administrator ha attivato questa funzione LED per aiutarti a individuare fisicamente il disk shelf con il modulo IOM12, IOM12B o IOM12C guasto.
 
-Il LED di posizione sul display dell'operatore ed entrambi i moduli IOM12/IOM12B si illuminano quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
+Il LED di posizione sul pannello di controllo dell'operatore e su entrambi i moduli IOM12, IOM12B o IOM12C si illumina quando questa funzione LED è attivata. I LED di posizione si spengono automaticamente dopo 30 minuti.
 
 |===
 La seguente illustrazione si intende per un modulo IOM12:
 
-image::../media/drw_iom12.gif[IOM12 moduli]
+image::../media/drw_iom12.gif[IOM12 moduli,828px,147px]
 
 I moduli IOM12B sono caratterizzati da una striscia blu e da un'etichetta "IOM12B":
 
-image::../media/iom12b.png[IOM12B moduli]
+image::../media/iom12b.png[IOM12B moduli,828px,147px]
+
+I moduli IOM12C si distinguono per una striscia blu e grigia e per l'etichetta "IOM12C":
+
+image::../media/drw_iom12c_ieops-2175.svg[Modulo IOM12C,828px,147px]
 
 
 

@@ -1,17 +1,19 @@
 ---
 permalink: sas3/hot-remove-shelf.html 
 sidebar: sidebar 
-keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, I O, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: 'È possibile rimuovere a caldo uno shelf di dischi con i moduli IOM12 (rimuovere senza interruzioni uno shelf di dischi da un sistema acceso e i/o in corso) quando è necessario spostare o sostituire lo shelf di dischi. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all"interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.' 
+keywords: hot-remove, remove, disk, shelf, sas3, iom12, iom12b, iom12c, stack, ds460c, transport, move, ds212c, ds224c 
+summary: Puoi rimuovere a caldo uno shelf di dischi quando deve essere rimosso o sostituito da un sistema acceso e con I/O in corso. 
 ---
-= Rimozione a caldo di un ripiano: DS212C, DS224C e DS460C
+= Rimuovi a caldo uno shelf DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile rimuovere a caldo uno shelf di dischi con moduli IOM12 o IOM12B (rimuovendo in modo non invasivo uno shelf di dischi da un sistema acceso e con operazioni di I/O in corso) quando è necessario spostarlo o sostituirlo. È possibile rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi o rimuovere una pila di shelf di dischi.
+Puoi rimuovere a caldo uno shelf di dischi quando deve essere rimosso o sostituito da un sistema acceso e mentre è in corso I/O. Puoi rimuovere a caldo uno o più shelf di dischi da qualsiasi punto all'interno di una pila di shelf di dischi oppure rimuovere un'intera pila di shelf di dischi.
+
+Questa procedura si applica agli shelf con moduli IOM12, IOM12B o IOM12C.
 
 .A proposito di questa attività
 * Se si rimuove a caldo uno shelf di dischi da uno stack (ma si mantiene lo stack), è possibile recuperare e verificare un percorso alla volta (percorso A e percorso B) per bypassare lo shelf di dischi che si sta rimuovendo in modo da mantenere sempre la connettività a percorso singolo dai controller allo stack.
@@ -175,7 +177,7 @@ Uno shelf di dischi dal centro dello stack Uno shelf di dischi al centro di uno 
 Per la rimozione di uno shelf di dischi da un'estremità di uno stack o dal centro di uno stack, fare riferimento ai seguenti esempi di cablaggio. Prendere nota degli esempi di cablaggio riportati di seguito:
 
 +
-** I moduli IOM12/IOM12B sono disposti affiancati come in uno shelf di dischi DS224C o DS212C; se si dispone di DS460C, i moduli IOM12/IOM12B sono disposti uno sopra l'altro.
+** I moduli IOM12, IOM12B o IOM12C sono disposti uno accanto all'altro come in un alloggiamento per dischi DS224C o DS212C; se hai un DS460C, i moduli IOM12, IOM12B o IOM12C sono disposti uno sopra l'altro.
 ** Lo stack in ogni esempio è cablato con cablaggio standard shelf-to-shelf, utilizzato negli stack cablati con connettività ha multipath, ha trio-path o multipath.
 +
 È possibile dedurre la ricablaggio se lo stack è cablato con connettività ha quad-path o quad-path, che utilizza un cablaggio shelf-to-shelf doppio-wide.

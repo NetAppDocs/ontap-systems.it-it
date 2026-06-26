@@ -1,17 +1,19 @@
 ---
 permalink: sas3/install-change-shelf-id.html 
 sidebar: sidebar 
-keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
-summary: 'È possibile modificare l"ID di uno shelf in un sistema quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima di essere collegato al sistema. È inoltre possibile modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per fornire dati) e tutti i dischi nello shelf sono di proprietà, parti di ricambio o parte di aggregati non allineati.' 
+keywords: change, shelf, id, system, ontap, controller, module, ds212c, ds224c, ds460c 
+summary: 'Cambia l"ID di uno shelf in un sistema quando ONTAP non è ancora in esecuzione, quando aggiungi uno shelf a caldo prima che venga collegato al sistema, oppure quando ONTAP è attivo e tutte le unità nello shelf non sono di proprietà, sono spare o fanno parte di aggregati offline.' 
 ---
-= Modificare un ID scaffale: DS212C, DS224C o DS460C
+= Cambia l'ID dello shelf DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile modificare un ID shelf in un sistema con moduli IOM12/IOM12B quando ONTAP non è ancora in esecuzione o quando si aggiunge a caldo uno shelf prima che venga cablato al sistema. È inoltre possibile modificare un ID shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per la gestione dei dati) e tutte le unità nello shelf sono di proprietà, di riserva o fanno parte di aggregati offline.
+Puoi cambiare l'ID di uno shelf DS212C, DS224C o DS460C quando ONTAP non è ancora in esecuzione o quando aggiungi uno shelf a caldo prima che venga collegato al sistema. Puoi anche cambiare l'ID di uno shelf quando ONTAP è attivo e in esecuzione (i moduli controller sono disponibili per servire i dati) e tutti i dischi nello shelf sono non assegnati, spare o parte di aggregati offline.
+
+Questa procedura si applica agli shelf con moduli IOM12, IOM12B o IOM12C.
 
 .A proposito di questa attività
 * Un ID shelf valido va da 00 a 99.

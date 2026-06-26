@@ -1,22 +1,24 @@
 ---
 permalink: sas3/install-hot-add-shelf.html 
 sidebar: sidebar 
-keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: È possibile aggiungere a caldo uno o più shelf di dischi con moduli IOM12/IOM12B a uno stack esistente di shelf di dischi con moduli IOM12/IOM12B o aggiungere a caldo uno stack di uno o più shelf di dischi con moduli IOM12/IOM12B direttamente a un HBA SAS o a una porta SAS integrata sul controller. 
+keywords: hot-add, add, disk, shelf, iom12, stack, sas, hba, port, controller, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Puoi aggiungere a caldo uno o più shelf di dischi a una pila esistente di shelf di dischi oppure aggiungere a caldo una pila di uno o più shelf di dischi direttamente a un SAS HBA o a una porta SAS integrata sul controller. 
 ---
-= Ripiani ad aggiunta rapida: DS212C, DS224C o DS460C
+= Aggiungi a caldo uno shelf DS212C, DS224C o DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile aggiungere a caldo uno o più shelf di dischi con moduli IOM12/IOM12B a uno stack esistente di shelf di dischi con moduli IOM12/IOM12B o aggiungere a caldo uno stack di uno o più shelf di dischi con moduli IOM12/IOM12B direttamente a un HBA SAS o a una porta SAS integrata sul controller.
+Puoi aggiungere a caldo uno o più shelf di dischi a una pila esistente di shelf di dischi oppure aggiungere a caldo una pila di uno o più shelf di dischi direttamente a un SAS HBA o a una porta SAS integrata sul controller.
+
+Questa procedura si applica agli shelf con moduli IOM12, IOM12B o IOM12C.
 
 .Prima di iniziare
 Prima di aggiungere a caldo gli shelf di dischi, è necessario soddisfare determinati requisiti e acquisire familiarità con le best practice e le considerazioni relative a questa procedura.
 
-* Prima di aggiungere a caldo gli shelf di dischi con moduli IOM12/IOM12B, assicurarsi che il sistema soddisfi determinati requisiti:
+* Assicurati che il tuo sistema soddisfi determinati requisiti prima di aggiungere a caldo unità disco con moduli IOM12, IOM12B o IOM12C:
 +
 ** Il sistema e la versione di ONTAP devono supportare gli shelf di dischi che si desidera aggiungere a caldo, inclusi IOM, unità disco e cavi SAS. È possibile visualizzare la versione di ONTAP necessaria per i propri shelf nel  https://hwu.netapp.com["NetApp Hardware Universe"^] .
 ** Il sistema deve avere un numero inferiore al numero massimo di dischi supportati, almeno del numero di shelf di dischi che si intende aggiungere a caldo.
@@ -52,11 +54,11 @@ Dopo aver aggiunto a caldo lo shelf di dischi, è necessario sostituire i cavi d
 
 * Familiarizzare con le considerazioni generali per completare questa procedura:
 +
-** Se si aggiunge a caldo uno shelf di dischi con moduli IOM12/IOM12B a uno stack esistente (di shelf di dischi con moduli IOM12/IOM12B), è possibile aggiungere a caldo lo shelf di dischi a entrambe le estremità, ovvero il primo o l'ultimo shelf logico dello stack.
+** Se aggiungi a caldo uno shelf di dischi con moduli IOM12, IOM12B o IOM12C a uno stack esistente (di shelf di dischi con moduli IOM12, IOM12B o IOM12C), puoi aggiungere a caldo lo shelf di dischi a una delle due estremità—la prima o l'ultima shelf di dischi logica—dello stack.
 +
 Per le configurazioni ha a percorso singolo e singolo, come applicabile ai sistemi AFF A200, AFF A220, FAS2600 e FAS2700, è possibile aggiungere a caldo shelf di dischi alla fine dello stack che non dispongono di connessioni controller.
 
-** Gli scaffali dei dischi con moduli IOM12/IOM12B devono trovarsi nel proprio stack univoco.
+** Gli alloggiamenti per dischi con moduli IOM12, IOM12B o IOM12C devono essere in uno stack unico.
 ** Questa procedura presuppone che la configurazione utilizzi ACP in-band.
 +
 Per le configurazioni con ACP in-band attivato, ACP in-band viene attivato automaticamente sugli shelf di dischi aggiunti a caldo. Per le configurazioni in cui ACP in-band non è abilitato, gli shelf di dischi aggiunti a caldo funzionano senza alcuna funzionalità ACP.
