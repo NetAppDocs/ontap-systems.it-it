@@ -262,7 +262,7 @@ LOADER-B>
 
 . Se il giveback automatico è stato disattivato, riabilitarlo:
 +
-`storage failover modify -node local auto-giveback-of true`
+`storage failover modify -node local -auto-giveback-of true`
 
 . Se AutoSupport è attivato, ripristinare la creazione automatica dei casi:
 +

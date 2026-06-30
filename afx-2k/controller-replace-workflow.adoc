@@ -1,0 +1,38 @@
+---
+permalink: afx-2k/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: afx 2k, replace the controller 
+summary: Inizia a sostituire il controller nel tuo sistema storage afx 2k spegnendo il controller guasto, rimuovendo e sostituendo il controller, riconfigurando le impostazioni del sistema e verificando il funzionamento del sistema. 
+---
+= Flusso di lavoro sostituzione controller - AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Inizia a sostituire il controller nel tuo sistema storage AFX 2K spegnendo il controller guasto, rimuovendo e sostituendo il controller, ripristinando la configurazione del sistema e verificando il funzionamento del sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:controller-replace-requirements.html["Esaminare i requisiti per sostituire la centralina"]
+[role="quick-margin-para"]
+Per sostituire il modulo controller, è necessario soddisfare determinati requisiti.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:controller-replace-shutdown.html["Spegnere il controller compromesso"]
+[role="quick-margin-para"]
+Spegnere o sostituire il controller danneggiato in modo che il controller integro continui a erogare dati dallo storage del controller danneggiato.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:controller-replace-move-hardware.html["Sostituire la centralina"]
+[role="quick-margin-para"]
+Sostituire il controller rimuovendo quello danneggiato, spostando i componenti FRU nel modulo sostitutivo e installando il modulo sostitutivo nell'alloggiamento.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:controller-replace-system-config-restore-and-verify.html["Ripristinare e verificare la configurazione del sistema"]
+[role="quick-margin-para"]
+Verificare la configurazione di sistema di basso livello del controller sostitutivo e aggiornare le impostazioni di sistema, se necessario.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:controller-replace-recable-reassign-disks.html["Restituire il controller"]
+[role="quick-margin-para"]
+Trasferire nuovamente la proprietà delle risorse di storage al controller sostitutivo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:controller-replace-restore-system-rma.html["Sostituzione completa del controller"]
+[role="quick-margin-para"]
+Verificare le interfacce logiche (LIF), controllare lo stato del cluster e restituire la parte non riuscita a NetApp.

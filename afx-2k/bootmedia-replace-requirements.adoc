@@ -1,0 +1,38 @@
+---
+permalink: afx-2k/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 2k, replace the boot media 
+summary: Prima di sostituire il supporto di avvio nel tuo sistema storage afx 2k, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di avere il supporto di avvio sostitutivo corretto, la conferma che non ci siano porte cluster difettose sul controller e la verifica se Onboard Key Manager o External Key Manager sono abilitati. 
+---
+= Requisiti per la sostituzione del supporto di avvio - AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il supporto di avvio nel tuo sistema storage AFX 2K, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di avere il supporto di avvio sostitutivo corretto, la conferma che non ci siano porte cluster difettose sul controller e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) sono abilitati.
+
+Prima di sostituire il supporto di avvio, verificare i seguenti requisiti.
+
+[NOTE]
+====
+NetApp raccomanda vivamente di abilitare la registrazione della console sui dispositivi con cui si sta lavorando e di adottare le seguenti misure durante l'esecuzione di questa procedura:
+
+* Lascia AutoSupport abilitato durante la manutenzione. Questo consente al supporto NetApp di ricevere informazioni diagnostiche in caso di problemi.
+* Abilita la registrazione delle sessioni per tutte le sessioni CLI. Questo crea una registrazione completa di tutti i comandi e dell'output di sistema durante l'attività di manutenzione. Per istruzioni su come abilitare la registrazione delle sessioni, vedere  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Come configurare PuTTY per una connettività ottimale ai sistemi ONTAP"^].
+
+
+====
+* È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
+* È importante applicare i comandi descritti di seguito al controller corretto:
++
+** Il controller _alterato_ è il controller su cui si esegue la manutenzione.
+** Il controller _healthy_ è il partner ha del controller compromesso.
+
+
+* Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.
+
+
+.Quali sono le prossime novità?
+Dopo aver esaminato i requisiti per sostituire il supporto di avvio, è necessariolink:bootmedia-shutdown.html["spegnere il controller"] .

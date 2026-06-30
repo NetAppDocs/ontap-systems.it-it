@@ -273,7 +273,7 @@ L'output di `storage failover show` Il comando non deve includere l'ID di sistem
 
 NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
 
-. Se i collegamenti interconnessi HA sono stati interrotti, ripristinarli:
+. Se i collegamenti di interconnessione HA sono stati interrotti, riattivali:
 +
 `system ha interconnect link on -node healthy-node -link 0`
 
