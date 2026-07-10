@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[key-specifications-for-fas2820]]
 == Specifiche chiave per FAS2820
 
 * Configurazione della piattaforma: coppia HA a chassis singolo FAS2820
@@ -28,6 +29,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[scaleout-maximums]]
 == Massimi di scalabilità
 
 * Tipo: NAS; Coppie HA: 12; Capacità raw: 38,0 PB / 33,8 PiB; Memoria massima: 1536 GB
@@ -37,10 +39,12 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[io]]
 == I/O
 
 
 
+[[onboard-io]]
 === I/O integrato
 
 * Protocollo: Ethernet 25 Gbps; Porte: 4
@@ -49,6 +53,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[total-io]]
 === Totale I/O
 
 * Protocollo: Ethernet 25 Gbps; Porte: 12
@@ -61,6 +66,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[management-ports]]
 === Porte di gestione
 
 * Protocollo: Ethernet 1 Gbps; Porte: 2
@@ -70,6 +76,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[storage-networking-supported]]
 == Rete di archiviazione supportata
 
 * CIFS
@@ -92,6 +99,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[system-environment-specifications]]
 == Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 1815 BTU/ora
@@ -107,6 +115,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[compliance]]
 == Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -119,6 +128,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione FAS2
 
 
 
+[[high-availability]]
 == Alta disponibilità
 
 * Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP

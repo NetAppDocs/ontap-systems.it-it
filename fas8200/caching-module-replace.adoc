@@ -30,6 +30,7 @@ NOTE: Esegui il `system controller flash-cache show` comando se non conosci l'ID
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
@@ -202,6 +203,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-open-the-controller-module]]
 == Fase 2: Aprire il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -245,6 +247,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 
 
+[[step-3-replace-or-add-a-caching-module]]
 == Fase 3: Sostituire o aggiungere un modulo di caching
 
 Per sostituire o aggiungere un modulo di caching denominato scheda M.2 PCIe sull'etichetta del controller, individuare gli slot all'interno del controller e seguire la sequenza specifica di passaggi.
@@ -281,6 +284,7 @@ Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
 
 
 
+[[step-4-reinstall-the-controller]]
 == Fase 4: Reinstallare il controller
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema.
@@ -313,6 +317,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -369,6 +374,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-6-complete-the-replacement-process]]
 == Fase 6: Completare il processo di sostituzione
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

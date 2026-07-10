@@ -19,6 +19,7 @@ Se si dispone di una configurazione MetroCluster, utilizzare https://docs.netapp
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema AFF A150, creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -159,6 +160,7 @@ Accensione del sistema
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 Il sistema viene installato in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -182,6 +184,7 @@ image::../media/drw_cable_management_arm_install.png[Collegamento dei dispositiv
 
 
 
+[[step-3-cable-controllers-to-network]]
 == Fase 3: Collegare i controller alla rete
 
 È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo cluster con switch.
@@ -320,6 +323,7 @@ IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
 Collegare i controller agli shelf utilizzando le porte di storage integrate. NetApp consiglia il cablaggio MP-ha per i sistemi con storage esterno.
@@ -371,6 +375,7 @@ Per ulteriori informazioni sul cablaggio, vedere link:../sas3/install-new-system
 
 
 
+[[step-5-complete-system-setup]]
 == Fase 5: Completare la configurazione del sistema
 
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.

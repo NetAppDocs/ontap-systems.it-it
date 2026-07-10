@@ -6,6 +6,7 @@ Dopo aver sostituito l'hardware e avviato la modalità di manutenzione, verifica
 
 
 
+[[step-1-set-and-verify-system-time-after-replacing-the-controller]]
 == Fase 1: Impostare e verificare l'ora di sistema dopo la sostituzione del controller
 
 È necessario controllare l'ora e la data sul modulo controller sostitutivo rispetto al modulo controller integro in una coppia ha o rispetto a un server di riferimento orario affidabile in una configurazione standalone. Se l'ora e la data non corrispondono, è necessario ripristinarli sul modulo controller sostitutivo per evitare possibili interruzioni dei client dovute a differenze di tempo.
@@ -37,6 +38,7 @@ La data e l'ora sono indicate in GMT.
 
 
 
+[[step-2-verify-and-set-the-ha-state-of-the-controller-module]]
 == Fase 2: Verificare e impostare lo stato ha del modulo controller
 
 Verificare `HA` stato del modulo controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema.

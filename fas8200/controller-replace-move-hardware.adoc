@@ -15,6 +15,7 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 
 
+[[step-1-open-the-controller-module]]
 == Fase 1: Aprire il modulo controller
 
 Per sostituire il modulo controller, è necessario prima rimuovere il vecchio modulo controller dal telaio.
@@ -59,6 +60,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 
 
+[[step-2-move-the-boot-device]]
 == Fase 2: Spostare il dispositivo di avvio
 
 Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecchio controller e inserirlo nel nuovo controller.
@@ -82,6 +84,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-3-move-the-nvmem-battery]]
 == Fase 3: Spostare la batteria NVMEM
 
 Per spostare la batteria NVMEM dal vecchio modulo controller al nuovo modulo controller, è necessario eseguire una sequenza specifica di passaggi.
@@ -135,6 +138,7 @@ Batteria NVMEM
 
 
 
+[[step-4-move-the-dimms]]
 == Fase 4: Spostamento dei DIMM
 
 Per spostare i moduli DIMM, individuarli e spostarli dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
@@ -171,6 +175,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 
 
+[[step-5-move-a-pcie-card]]
 == Fase 5: Spostamento di una scheda PCIe
 
 Per spostare le schede PCIe, individuarle e spostarle dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
@@ -215,6 +220,7 @@ Assicurarsi di allineare correttamente la scheda nello slot ed esercitare una pr
 
 
 
+[[step-6-move-a-caching-module]]
 == Fase 6: Spostare un modulo di caching
 
 Quando si sostituisce un modulo controller, è necessario spostare i moduli di caching dai moduli controller non adeguati al modulo controller sostitutivo.
@@ -239,6 +245,7 @@ image::../media/drw_rxl_fcache.png[Rimuovere e sostituire il modulo di caching]
 
 
 
+[[step-7-install-the-controller]]
 == Fase 7: Installare il controller
 
 Dopo aver installato i componenti del vecchio modulo controller nel nuovo modulo controller, è necessario installare il nuovo modulo controller nel telaio del sistema e avviare il sistema operativo.

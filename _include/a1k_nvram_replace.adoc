@@ -11,6 +11,7 @@ Il modulo NVRAM è composto da hardware NVRAM12 e DIMM sostituibili sul campo. �
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -157,6 +158,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 ====
 
 
+[[step-2-replace-the-nvram-module-or-nvram-dimm]]
 == Passo 2: Sostituire il modulo NVRAM o il modulo DIMM NVRAM
 
 Sostituire il modulo NVRAM o i moduli DIMM NVRAM utilizzando l'opzione appropriata riportata di seguito.
@@ -262,6 +264,7 @@ NOTE: Consultare l'etichetta della mappa FRU sul lato del modulo NVRAM per deter
 ====
 
 
+[[step-3-reboot-the-controller]]
 == Fase 3: Riavviare il controller
 
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller ricollegando i cavi di alimentazione all'alimentatore.
@@ -279,6 +282,7 @@ Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.
 
 
 
+[[step-4-reassign-disks]]
 == Fase 4: Riassegnare i dischi
 
 È necessario confermare la modifica dell'ID di sistema all'avvio del controller e verificare che la modifica sia stata implementata.
@@ -382,6 +386,7 @@ dr-group-id            cluster node           configuration-state
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -30,6 +30,7 @@ Evitare di discostarsi dalle regole; le deviazioni potrebbero ridurre affidabili
 
 
 
+[[configuration-rules]]
 == Regole di configurazione
 
 Gli alloggiamenti per dischi con moduli IOM12, IOM12B o IOM12C sono supportati su specifici tipi di coppia HA e configurazioni a singolo controller.
@@ -71,6 +72,7 @@ Poiché lo storage interno utilizza la connettività a percorso singolo, ONTAP e
 
 
 
+[[controller-slot-numbering-rules]]
 == Regole di numerazione degli slot del controller
 
 Allo scopo di applicare le regole di cablaggio a tutte le coppie ha supportate e alle configurazioni a controller singolo, viene utilizzata una convenzione di numerazione degli slot del controller.
@@ -95,12 +97,14 @@ image::../media/slot0_rules.png[slot e slot [convocazioni porta]
 
 
 
+[[shelf-to-shelf-connection-rules]]
 == Regole di connessione shelf-to-shelf
 
 Quando si dispone di più shelf di dischi in uno stack di shelf di dischi, questi si collegano tra loro attraverso ciascun dominio SAS (IOM A e IOM B) utilizzando il cablaggio shelf-to-shelf "`standard`" o "`dDouble-wide`" applicabile. L'utilizzo del cablaggio shelf-to-shelf "`standard`" o "`dDouble-wide`" dipende dalla configurazione in uso.
 
 
 
+[[standard-shelf-to-shelf-connectivity]]
 === Connettività standard shelf-to-shelf
 
 * La connettività standard shelf-to-shelf viene utilizzata in qualsiasi stack di shelf di dischi con più shelf di dischi.
@@ -117,6 +121,7 @@ image::../media/drw_shelf_to_shelf_standard.gif[connettività standard da shelf 
 
 
 
+[[double-wide-shelf-to-shelf-connectivity]]
 === Doppia connettività shelf-to-shelf
 
 * La connettività shelf-to-shelf double-wide viene utilizzata nelle configurazioni quad-path (ha quad-path e quad-path).
@@ -133,12 +138,14 @@ image::../media/drw_shelf_to_shelf_double_wide.gif[connettività da shelf a shel
 
 
 
+[[controller-to-stack-connection-rules]]
 == Regole di connessione controller-to-stack
 
 È possibile collegare correttamente le connessioni SAS da ciascun controller a ogni stack in una coppia ha o in una configurazione a controller singolo, comprendendo che gli shelf di dischi SAS utilizzano la proprietà dei dischi basata su software, il modo in cui le porte a/C e B/D dei controller sono collegate agli stack, Come le porte a/C e B/D dei controller sono organizzate in coppie di porte e come le piattaforme con storage interno hanno le porte dei controller collegate agli stack.
 
 
 
+[[sas-disk-shelf-software-based-disk-ownership-rule]]
 === Regola di proprietà dei dischi basata su software per shelf di dischi SAS
 
 Gli shelf di dischi SAS utilizzano la proprietà dei dischi basata su software (non la proprietà dei dischi basata su hardware). Ciò significa che la proprietà del disco viene memorizzata sul disco piuttosto che essere determinata dalla topologia delle connessioni fisiche del sistema di storage (come per la proprietà del disco basata su hardware). In particolare, la proprietà del disco viene assegnata da ONTAP (automaticamente o tramite comandi CLI), non da come si collegano le connessioni controller-to-stack.
@@ -147,6 +154,7 @@ Gli shelf di dischi SAS non devono mai essere cablati utilizzando lo schema di p
 
 
 
+[[controller-a-and-c-port-connection-rules-for-platforms-without-internal-storage]]
 === Regole di connessione delle porte controller A e C (per piattaforme senza storage interno)
 
 * Le porte a e C sono sempre i percorsi primari verso uno stack.
@@ -165,6 +173,7 @@ image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[Regole d
 
 
 
+[[controller-b-and-d-port-connection-rules-for-platforms-without-internal-storage]]
 === Regole di connessione delle porte B e D del controller (per piattaforme senza storage interno)
 
 * Le porte B e D sono sempre i percorsi secondari verso uno stack.
@@ -184,6 +193,7 @@ image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[Regole d
 
 
 
+[[port-pair-connection-rules-for-platforms-without-internal-storage]]
 === Regole di connessione delle coppie di porte (per piattaforme senza storage interno)
 
 Le porte SAS a, B, C e D del controller sono organizzate in coppie di porte utilizzando un metodo che sfrutta tutte le porte SAS per garantire la resilienza e la coerenza del sistema durante il cablaggio delle connessioni controller-to-stack nelle configurazioni a coppia ha e controller singolo.
@@ -255,6 +265,7 @@ link:install-cabling-worksheet-template-quadpath.html["Modello di foglio di lavo
 
 
 
+[[controller-0b0b1-and-0a-port-connection-rules-for-platforms-with-internal-storage]]
 === Regole di connessione delle porte del controller 0b/0b1 e 0a per piattaforme con storage interno
 
 Le piattaforme con storage interno dispongono di un insieme univoco di regole di connessione, in quanto ciascun controller deve mantenere la stessa connettività di dominio tra lo storage interno (porta 0b/0b1) e lo stack. Ciò significa che quando un controller si trova nello slot A dello chassis (controller 1) si trova nel dominio A (IOM A) e quindi la porta 0b/0b1 deve connettersi a IOM A nello stack. Quando un controller si trova nello slot B dello chassis (controller 2), si trova nel dominio B (IOM B) e pertanto la porta 0b/0b1 deve connettersi all'IOM B nello stack.
@@ -291,6 +302,7 @@ image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[Connettività dom
 
 
 
+[[tri-path-ha-connectivity]]
 === Connettività ha tri-path
 
 La connettività ha Tri-path è disponibile sulle coppie ha FAS2820. La connettività ha Tri-path ha tre percorsi da ciascun controller agli shelf interni (IOM12G) ed esterni:
@@ -319,6 +331,7 @@ Gli esempi di cablaggio delle coppie ha di FAS2820 sono reperibili nella link:in
 
 
 
+[[mini-sas-hd-sas-optical-cable-rules]]
 == Regole per i cavi ottici SAS mini-SAS HD
 
 È possibile utilizzare cavi ottici SAS mini-SAS HD--cavi ottici attivi multimodali (AOC) con connettori HD mini-SAS-mini-SAS e cavi di breakout multimode (OM4) con connettori mini-SAS HD-to-LC--per ottenere connettività SAS a lunga distanza per alcune configurazioni che dispongono di shelf di dischi con moduli IOM12.

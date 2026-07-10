@@ -15,6 +15,7 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 
 
+[[step-1-remove-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 Per sostituire il modulo controller, è necessario prima rimuovere il vecchio modulo controller dal telaio.
@@ -42,6 +43,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo co
 
 
 
+[[step-2-move-the-nvmem-battery]]
 == Fase 2: Spostare la batteria NVMEM
 
 Per spostare la batteria NVMEM dal vecchio modulo controller al nuovo modulo controller, è necessario eseguire una sequenza specifica di passaggi.
@@ -81,6 +83,7 @@ image::../media/drw_2600_nvmem_battery_move_animated_gif.png[Sostituzione della 
 
 
 
+[[step-3-move-the-boot-media]]
 == Fase 3: Spostare il supporto di avvio
 
 Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecchio modulo controller e inserirlo nel nuovo modulo controller.
@@ -104,6 +107,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-4-move-the-dimms]]
 == Fase 4: Spostamento dei DIMM
 
 Per spostare i DIMM, seguire le istruzioni per individuarli e spostarli dal vecchio modulo controller al modulo controller sostitutivo.
@@ -146,6 +150,7 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 
 
 
+[[step-5-move-a-caching-module-if-present]]
 == Fase 5: Spostare un modulo di caching, se presente
 
 Se il sistema AFF A220 o FAS2700 dispone di un modulo di caching, è necessario spostare il modulo di caching dal vecchio modulo controller al modulo controller sostitutivo. Il modulo di caching viene indicato come "`M scheda PCIe.2`" sull'etichetta del modulo controller.
@@ -173,6 +178,7 @@ Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
 
 
 
+[[step-6-install-the-controller]]
 == Fase 6: Installare il controller
 
 Dopo aver installato i componenti del vecchio modulo controller nel nuovo modulo controller, è necessario installare il nuovo modulo controller nel telaio del sistema e avviare il sistema operativo.

@@ -24,6 +24,7 @@ Un sistema di storage presenta due LED di posizione, uno su ciascun controller. 
 
 
 
+[[step-1-shut-down-the-impaired-controller-module]]
 == Fase 1: Arrestare il modulo controller danneggiato
 
 Spegnere o sostituire il modulo controller danneggiato.
@@ -96,6 +97,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-add-the-new-io-module]]
 == Fase 2: Aggiungere il nuovo modulo i/O.
 
 Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.

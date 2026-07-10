@@ -19,6 +19,7 @@ Per sostituire una scheda PCIe, scollegare i cavi dalle schede nel riser, rimuov
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -73,6 +74,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -151,6 +153,7 @@ Condotto dell'aria
 
 
 
+[[step-3-replace-a-pcie-card]]
 == Fase 3: Sostituire una scheda PCIe
 
 Per sostituire una scheda PCIe, è necessario rimuovere il cablaggio e gli eventuali SFP dalle porte delle schede PCIe nel riser di destinazione, rimuovere il riser dal modulo controller, rimuovere e sostituire la scheda PCIe, reinstallare il riser e recuperarla.
@@ -233,6 +236,7 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema e avviarlo.
@@ -304,6 +308,7 @@ NOTE: Assicurarsi di uscire dalla modalità di manutenzione dopo aver completato
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

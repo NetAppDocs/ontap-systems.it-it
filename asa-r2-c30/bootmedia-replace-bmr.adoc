@@ -15,6 +15,7 @@ Il supporto di avvio del sistema di archiviazione ASA C30 memorizza i dati essen
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 Se necessario, è possibile attivare i LED di posizione del telaio della piattaforma (blu) per facilitare l'individuazione fisica della piattaforma interessata. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -25,6 +26,7 @@ Un telaio della piattaforma ha tre LED di posizione: Uno sul pannello del displa
 
 
 
+[[step-1-remove-the-controller]]
 == Fase 1: Rimuovere il controller
 
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
@@ -137,6 +139,7 @@ Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguett
 
 
 
+[[step-2-replace-the-boot-media]]
 == Fase 2: Sostituire il supporto di avvio
 
 Per sostituire il supporto di avvio, individuarlo all'interno del controller e seguire la sequenza specifica di passi.
@@ -191,6 +194,7 @@ Estrarre delicatamente l'estremità sinistra del supporto di avvio dal relativo 
 
 
 
+[[step-3-reinstall-the-controller]]
 == Fase 3: Reinstallare il controller
 
 Reinstallare il controller nel telaio e riavviarlo.

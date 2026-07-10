@@ -11,6 +11,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -147,6 +148,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -201,6 +203,7 @@ Pulsante di bloccaggio del coperchio del modulo controller
 
 
 
+[[step-3-replace-the-dimms]]
 == Fase 3: Sostituire i DIMM
 
 Per sostituire i moduli DIMM, individuarli all'interno del controller e seguire la sequenza di passaggi specifica.
@@ -260,6 +263,7 @@ IMPORTANT: Esaminare visivamente il DIMM per verificare che sia allineato in mod
 
 
 
+[[step-4-install-the-controller]]
 == Fase 4: Installare il controller
 
 Dopo aver installato i componenti nel modulo controller, è necessario installare nuovamente il modulo controller nel telaio del sistema e avviare il sistema operativo.
@@ -339,6 +343,7 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 
 
+[[step-5-run-system-level-diagnostics]]
 == Fase 5: Eseguire la diagnostica a livello di sistema
 
 Dopo aver installato un nuovo DIMM, eseguire la diagnostica.
@@ -445,6 +450,7 @@ Dopo aver inviato il comando, attendere che il sistema si arresti al prompt DEL 
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

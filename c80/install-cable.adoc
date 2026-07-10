@@ -34,6 +34,7 @@ image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[Esempio di orientame
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == Fase 1: Collegare i collegamenti cluster/ha
 
 Collegare i controller al cluster ONTAP. Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.
@@ -82,6 +83,7 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Connessioni cl
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == Fase 2: Collegare i cavi delle connessioni di rete host
 
 Collegare le porte del modulo Ethernet alla rete host.
@@ -117,6 +119,7 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cavo alla rete Etherne
 
 
 
+[[step-3-cable-the-management-network-connections]]
 == Fase 3: Collegare i collegamenti della rete di gestione
 
 Utilizzare i cavi 1000BASE-T RJ-45 per collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
@@ -132,6 +135,7 @@ IMPORTANT: Non collegare ancora i cavi di alimentazione.
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == Fase 4: Collegare i collegamenti dei ripiani
 
 Le seguenti procedure di cablaggio mostrano come collegare i controller a uno shelf di archiviazione. Scegliere una delle seguenti opzioni di cablaggio che corrisponda alla propria configurazione.

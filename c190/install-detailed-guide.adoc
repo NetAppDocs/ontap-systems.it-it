@@ -15,6 +15,7 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema AFF C190, creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -135,6 +136,7 @@ Accensione del sistema
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 Installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -158,6 +160,7 @@ image::../media/drw_cable_management_arm_install.png[Collegamento dei dispositiv
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Fase 3: Collegare i controller alla rete
 
 Collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione cluster.
@@ -327,6 +330,7 @@ IMPORTANT: NON collegare i cavi di alimentazione a questo punto.
 ====
 
 
+[[step-4-complete-system-setup]]
 == Fase 4: Completare la configurazione del sistema
 
 Completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.

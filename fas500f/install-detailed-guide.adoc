@@ -15,6 +15,7 @@ Questa sezione fornisce istruzioni dettagliate per l'installazione di un sistema
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema FAS500f, è necessario creare un account e registrare il sistema. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -138,6 +139,7 @@ Accensione del sistema
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -158,12 +160,14 @@ image::../media/drw_affa250_weight_caution.png[Avvertenza sollevamento a due per
 
 
 
+[[step-3-cable-controllers]]
 == Fase 3: Controller dei cavi
 
 È necessario il cablaggio per il cluster della piattaforma utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione del cluster. È disponibile un cablaggio opzionale per le reti host Fibre Channel o iSCSI o per lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile utilizzare il cavo per una rete host e uno storage.
 
 
 
+[[required-cabling-cable-controllers-to-a-cluster]]
 === Cablaggio richiesto: Collegare i controller a un cluster
 
 Collegare i controller a un cluster utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
@@ -280,6 +284,7 @@ Per completare la configurazione del sistema, vedere link:install-detailed-guide
 
 
 
+[[optional-cabling-cable-configuration-dependent-options]]
 === Cablaggio opzionale: Opzioni dipendenti dalla configurazione dei cavi
 
 Si dispone di un cablaggio opzionale dipendente dalla configurazione per le reti host Fibre Channel o iSCSI o lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile disporre di un cablaggio a una rete host e a uno storage.
@@ -417,12 +422,14 @@ Per completare la configurazione del sistema, vedere link:install-detailed-guide
 
 
 
+[[step-4-complete-system-setup-and-configuration]]
 == Fase 4: Completare l'installazione e la configurazione del sistema
 
 Completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
 
 
+[[option-1-complete-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opzione 1: Completare la configurazione e la configurazione del sistema se è attivato il rilevamento della rete
 
 Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l'installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
@@ -462,6 +469,7 @@ Viene visualizzato Gestione sistema.
 
 
 
+[[option-2-complete-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opzione 2: Completare la configurazione e la configurazione del sistema se il rilevamento della rete non è attivato
 
 Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.

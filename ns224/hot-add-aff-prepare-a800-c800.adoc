@@ -15,6 +15,7 @@ Prepara il tuo sistema AFF A800 o C800 per l'aggiunta a caldo di uno shelf NS224
 
 
 
+[[install-roce-capable-pcie-cards]]
 == Installare schede PCIe compatibili con RoCE
 
 Se il sistema supporta l'uso di schede PCIe o moduli I/O compatibili con RoCE, la coppia HA deve disporre di un numero sufficiente di porte Ethernet compatibili con RoCE per supportare il numero di shelf che si stanno aggiungendo a caldo.
@@ -34,6 +35,7 @@ Queste porte possono essere integrate nei controller, su schede PCIe compatibili
 
 
 
+[[configure-roce-capable-ports-for-storage-use]]
 == Configurare le porte compatibili con RoCE per l'utilizzo dello storage
 
 Su alcuni sistemi, le porte compatibili con RoCE vengono automaticamente impostate per l'utilizzo storage quando si installa una scheda PCIe o un modulo I/O compatibile con RoCE in uno slot controller supportato. Tuttavia, è consigliabile completare questa procedura per verificare che le porte siano configurate correttamente per l'utilizzo storage.
@@ -89,6 +91,7 @@ L'output del comando varia a seconda della versione di ONTAP:
 
 
 
+[[recable-existing-shelves]]
 == Possibilità di recuperare gli scaffali esistenti
 
 Quando si aggiunge a caldo un secondo ripiano a una coppia HA A800 o C800, è necessario ricablare il primo ripiano attraverso le due serie di porte compatibili con RoCE negli slot 5 e slot 3 di ciascun controller.
@@ -110,6 +113,7 @@ Se vengono generati errori di cablaggio, seguire le azioni correttive fornite.
 
 
 
+[[disable-automatic-drive-assignment]]
 == Disattivare l'assegnazione automatica della guida
 
 Se non si è certi della necessità di assegnare manualmente la proprietà delle unità o se si desidera comprendere l'assegnazione automatica dei criteri di proprietà delle unità per il sistema di storage in uso, visitare il sito Web all'indirizzo https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Informazioni sull'assegnazione automatica della proprietà del disco"^].

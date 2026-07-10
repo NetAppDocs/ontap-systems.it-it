@@ -12,6 +12,7 @@ Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo control
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
@@ -184,6 +185,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
@@ -229,6 +231,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == Fase 3: Sostituire la batteria RTC
 
 È necessario individuare la batteria RTC all'interno del modulo del controller, quindi seguire la sequenza specifica di passaggi. Consultare la mappa FRU all'interno del modulo controller per individuare la posizione della batteria RTC.
@@ -288,6 +291,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 
 
+[[step-4-reinstall-the-controller-module-and-setting-timedate-after-rtc-battery-replacement]]
 == Fase 4: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
@@ -340,6 +344,7 @@ NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avvi
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -396,6 +401,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -6,6 +6,7 @@ La procedura per avviare il nodo con problemi dall'immagine di ripristino dipend
 
 
 
+[[option-1-boot-the-recovery-image-in-most-systems]]
 == Opzione 1: Avviare l'immagine di ripristino nella maggior parte dei sistemi
 
 È necessario avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
@@ -123,6 +124,7 @@ Se le interfacce sono elencate come "false", ripristinarle alla porta home utili
 
 
 
+[[option-2-boot-the-recovery-image-in-a-two-node-metrocluster-configuration]]
 == Opzione 2: Avviare l'immagine di ripristino in una configurazione MetroCluster a due nodi
 
 È necessario avviare l'immagine ONTAP dall'unità USB e verificare le variabili ambientali.

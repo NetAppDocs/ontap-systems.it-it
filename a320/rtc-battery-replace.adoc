@@ -19,6 +19,7 @@ Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo control
 
 
 
+[[step-1-shut-down-the-controller]]
 == Fase 1: Spegnere il controller
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -89,12 +90,14 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-replace-the-rtc-battery]]
 == Fase 2: Sostituire la batteria RTC
 
 È necessario individuare la batteria RTC all'interno del modulo del controller, quindi seguire la sequenza specifica di passaggi.
 
 
 
+[[step-3-remove-the-controller-module]]
 == Fase 3: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
@@ -127,6 +130,7 @@ Il gancio del meccanismo di chiusura deve essere quasi verticale e non deve esse
 
 
 
+[[step-4-replace-the-rtc-battery]]
 == Fase 4: Sostituire la batteria RTC
 
 image::../media/drw_a320_rtc_batt_replace_animated_gif.png[Sostituire la batteria RTC]
@@ -156,6 +160,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 
 
+[[step-5-reinstall-the-controller-module-and-setting-timedate-after-rtc-battery-replacement]]
 == Fase 5: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
@@ -208,6 +213,7 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

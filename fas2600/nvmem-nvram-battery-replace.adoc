@@ -19,6 +19,7 @@ link:https://youtu.be/dgEMcYxya5M["Video sulla sostituzione della batteria NVMEM
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
@@ -76,6 +77,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -102,6 +104,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo co
 
 
 
+[[step-3-replace-the-nvmem-battery]]
 == Fase 3: Sostituire la batteria NVMEM
 
 Per sostituire la batteria NVMEM nel sistema, rimuovere la batteria NVMEM guasta dal sistema e sostituirla con una nuova.
@@ -142,6 +145,7 @@ image::../media/drw_2600_nvmem_batt_repl_animated_gif.png[Sostituzione della bat
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito i componenti del modulo controller, reinstallarlo nel telaio.
@@ -200,6 +204,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

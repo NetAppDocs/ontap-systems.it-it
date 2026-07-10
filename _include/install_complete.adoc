@@ -4,6 +4,7 @@
 
 
 
+[[step-1-gather-cluster-information]]
 == Fase 1: Raccogliere le informazioni sul cluster
 
 Se non lo si è già fatto, raccogliere le informazioni necessarie per configurare il cluster, come la porta dell'interfaccia di gestione del cluster e l'indirizzo IP.
@@ -12,6 +13,7 @@ Utilizzare https://docs.netapp.com/us-en/ontap/software_setup/index.html["foglio
 
 
 
+[[step-2-discover-your-cluster-network]]
 == Passaggio 2: Individuazione della rete cluster
 
 Il processo di rilevamento consente di rilevare i controller dei sistemi storage sulla rete.
@@ -86,6 +88,7 @@ Il nodo viene avviato, quindi viene avviata la procedura guidata di installazion
 ====
 
 
+[[step-3-configure-your-cluster]]
 == Passaggio 3: Configurare il cluster
 
 NetApp consiglia di utilizzare System Manager per configurare nuovi cluster. Vedere https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Configurare ONTAP su un nuovo cluster con Gestione di sistema"^] per le istruzioni di installazione.

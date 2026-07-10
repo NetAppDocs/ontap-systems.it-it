@@ -15,6 +15,7 @@ Verifica che la configurazione ha del controller sia attiva e funzioni correttam
 
 
 
+[[step-1-verify-ha-config-settings]]
 == Fase 1: Verificare le impostazioni di configurazione ha
 
 È necessario verificare `HA` lo stato del controller e, se necessario, aggiornare lo stato in modo che corrisponda alla configurazione del sistema di archiviazione.
@@ -65,6 +66,7 @@ Il valore dello stato ha può essere uno dei seguenti:
 
 
 
+[[step-2-verify-disk-list]]
 == Passo 2: Verifica dell'elenco dei dischi
 
 . Verificare che la scheda di rete elenchi i percorsi per tutti i dischi:

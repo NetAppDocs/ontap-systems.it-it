@@ -22,6 +22,7 @@ Sostituisci o aggiungi un modulo I/O nel tuo sistema ASA C800 quando il modulo s
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -94,6 +95,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -182,6 +184,7 @@ Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuor
 
 
 
+[[step-3-replace-the-pcie-card]]
 == Passaggio 3: sostituire la scheda PCIe
 
 Sostituire una scheda PCIe rimuovendo il cablaggio e tutti i QSFP e SFP dalle porte sulle schede PCIe nel riser di destinazione, rimuovendo il riser dal modulo controller, rimuovendo e sostituendo la scheda PCIe, reinstallando il riser e tutti i QSFP e SFP sulle porte e ricablando le porte.
@@ -331,6 +334,7 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller e riavviarlo.
@@ -379,6 +383,7 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

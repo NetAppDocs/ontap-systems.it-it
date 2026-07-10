@@ -18,6 +18,7 @@ summary: È necessario sostituire il modulo di caching nel modulo controller qua
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
@@ -86,6 +87,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -120,6 +122,7 @@ Pulsante di rilascio del coperchio del modulo controller
 |===
 
 
+[[step-3-replace-a-caching-module]]
 == Fase 3: Sostituire un modulo di caching
 
 Individuare il modulo di caching all'interno del controller, rimuovere il modulo di caching guasto e sostituirlo.
@@ -166,6 +169,7 @@ Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller nel telaio.
@@ -201,6 +205,7 @@ Il controller inizia ad avviarsi non appena viene inserito completamente nello c
 
 
 
+[[step-5-restore-automatic-giveback-and-autosupport]]
 == Fase 5: Ripristinare il giveback automatico e AutoSupport
 
 Ripristina giveback automatico e AutoSupport se sono stati disattivati.
@@ -211,6 +216,7 @@ Ripristina giveback automatico e AutoSupport se sono stati disattivati.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

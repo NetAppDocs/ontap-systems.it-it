@@ -29,6 +29,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direzione della ling
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == Fase 1: Collegare i collegamenti cluster/ha
 
 Creare connessioni al cluster ONTAP. Per i cluster senza switch, collegare i controller l'uno all'altro. Per i cluster commutati, collegare i controller agli switch di rete del cluster.
@@ -94,6 +95,7 @@ image:../media/drw_isi_fas50_2p_100gbe_switched_cluster_cabling_ieops-1936.svg["
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == Fase 2: Collegare i cavi delle connessioni di rete host
 
 Collegare i controller alla rete host Ethernet o FC.
@@ -138,6 +140,7 @@ image::../media/drw_isi_fas50_4p_64gb_fc_optional_cabling_ieops-1935.svg[Cavo pe
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == Fase 3: Collegare i collegamenti della rete di gestione
 
 Collegare le porte di gestione (chiave inglese) di ciascun controller agli switch di rete di gestione.
@@ -153,6 +156,7 @@ IMPORTANT: Non collegare ancora i cavi di alimentazione.
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == Fase 4: Collegare i collegamenti dei ripiani
 
 Le seguenti procedure mostrano come collegare i controller a uno o due ripiani DS460C.
@@ -175,6 +179,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cavo mini-SAS HD]
 
 
 
+[[one-ds460c-shelf]]
 === Un shelf DS460C
 
 Collegare ciascun controller a ciascun modulo IOM12 sullo shelf DS460C.
@@ -194,6 +199,7 @@ image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["Porte
 
 
 
+[[two-ds460c-shelves]]
 === Due shelf DS460C
 
 Collegare ogni controller ai moduli IOM12 su entrambi gli shelf DS460C.

@@ -15,6 +15,7 @@ Verifica che le interfacce logiche (LIF) stiano riportando alla loro porta home,
 
 
 
+[[step-1-verify-lifs-and-check-cluster-health]]
 == Fase 1: Verifica delle LIF e verifica dello stato del cluster
 
 Prima di rimettere in servizio il nodo sostitutivo, assicurarsi che le interfacce logiche siano sulle loro porte home, controllare lo stato del cluster e reimpostare il giveback automatico.
@@ -35,6 +36,7 @@ Se alcune interfacce logiche sono elencate come false, riportale alle loro porte
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Fase 2: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

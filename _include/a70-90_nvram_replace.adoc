@@ -7,6 +7,9 @@ Sostituire il modulo NVRAM o i DIMM NVRAM utilizzando l'opzione appropriata.
 
 CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.
 
+
+WARNING: Il modulo NVRAM non è hot-swappable. Prima di sostituirlo, reinserisci le unità, spegni il nodo, scollega l'alimentazione del controller ed estrai il controller di qualche centimetro dallo chassis.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Sostituire il modulo NVRAM
@@ -130,7 +133,7 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 --
 .Opzione 2: Sostituire il modulo DIMM NVRAM
 --
-Per sostituire i moduli DIMM NVRAM nel modulo NVRAM, è necessario rimuovere prima il modulo NVRAM e poi sostituire il modulo DIMM di destinazione.
+Per sostituire i DIMM NVRAM nel modulo NVRAM, prima devi rimuovere il modulo NVRAM e poi sostituire il DIMM di destinazione.
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
@@ -202,7 +205,9 @@ image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Rimuovere il mo
 
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Pulsante di bloccaggio della camma 
+ a| 
+Pulsante di bloccaggio della camma
+
 
 
  a| 
@@ -254,6 +259,7 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 ====
 
 
+[[step-3-reassign-disks]]
 == Fase 3: Riassegnare i dischi
 
 È necessario confermare la modifica dell'ID di sistema all'avvio del controller e verificare che la modifica sia stata implementata.
@@ -287,8 +293,10 @@ node2             node1             -            Waiting for giveback (HA mailbo
 ----
 . Restituire il controller:
 +
-.. Dal controller sano, restituisci la memoria del controller sostituito: +
+.. Dal controller funzionante, restituisci lo storage del controller sostituito:
++
 `storage failover giveback -ofnode replacement_node_name`
+
 +
 Il controller recupera lo storage e completa l'avvio.
 

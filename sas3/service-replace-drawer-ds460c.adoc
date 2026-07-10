@@ -65,6 +65,8 @@ image::../media/drw_dcm3_ieops-2176.svg[Vista frontale di un ripiano per unità 
 
 
 
+[[step-1-prepare-to-replace-a-drive-drawer]]
+[[prepare_to_replace_drive_drawer]]
 == Fase 1: Prepararsi a sostituire un cassetto dell'unità
 
 Prima di sostituire un cassetto unità, è necessario assicurarsi di aggiornare il firmware IOM e ONTAP , se necessario, e di arrestare la coppia HA, il che consente di mantenere gli aggregati di dati sullo shelf, oppure di mantenerla attiva e funzionante, il che richiede di spostare tutti i dati dagli aggregati di dati residenti sulle unità disco. È quindi necessario disattivare l'accesso offline ed eliminare gli aggregati di dati. Tuttavia, se lo shelf contiene un aggregato radice, è necessario arrestare la coppia HA. Infine, è necessario spegnere lo shelf.
@@ -143,6 +145,8 @@ NOTE: Se nello shelf sono presenti dischi guasti, `broken` viene visualizzato in
 
 
 
+[[step-2-remove-the-cable-chains]]
+[[remove_cable_chains]]
 == Fase 2: rimuovere le catene portacavi
 
 Le catene di cavi sinistra e destra per ciascun cassetto del disco nello shelf del disco DS460C consentono ai cassetti di scorrere verso l'interno e verso l'esterno. Prima di poter rimuovere un cassetto dell'unità, è necessario rimuovere entrambe le catene di cavi.
@@ -291,6 +295,7 @@ La figura mostra l'anello arancione sulla staffa orizzontale che viene spinto ve
 
 
 
+[[step-3-remove-a-drive-drawer]]
 == Passaggio 3: rimuovere un cassetto dell'unità
 
 Dopo aver rimosso le catene di destra e sinistra, è possibile rimuovere il cassetto dell'unità dallo shelf dell'unità. La rimozione di un cassetto dell'unità comporta l'estrazione della parte del cassetto, la rimozione delle unità e la rimozione del cassetto dell'unità.
@@ -346,6 +351,7 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 
 
 
+[[step-4-install-a-drive-drawer]]
 == Passaggio 4: installare un cassetto per unità
 
 L'installazione di un cassetto per dischi in uno shelf implica lo scorrimento del cassetto nello slot vuoto, l'installazione delle unità e la sostituzione del pannello anteriore.
@@ -442,6 +448,7 @@ NOTE: *Rischio di malfunzionamento dell'apparecchiatura:* assicurarsi di chiuder
 
 
 
+[[step-5-attach-the-cable-chains]]
 == Fase 5: Fissare le catene portacavi
 
 L'ultima fase dell'installazione di un cassetto dell'unità consiste nel fissare le catene di cavi sinistra e destra sostitutive allo shelf dell'unità. Quando si collega una catena di cavi, invertire l'ordine utilizzato per scollegare la catena di cavi. Inserire il connettore orizzontale della catena nella staffa orizzontale del contenitore prima di inserire il connettore verticale della catena nella staffa verticale del contenitore.

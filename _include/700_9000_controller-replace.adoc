@@ -6,6 +6,7 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il nodo
 
 
 
+[[step-1-remove-the-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -57,6 +58,7 @@ Pulsante di bloccaggio del coperchio del modulo controller
 |===
 
 
+[[step-2-move-the-boot-media]]
 == Fase 2: Spostare il supporto di avvio
 
 Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecchio controller e inserirlo nel nuovo controller.
@@ -99,6 +101,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-3-move-the-system-dimms]]
 == Fase 3: Spostare i DIMM di sistema
 
 Per spostare i moduli DIMM, individuarli e spostarli dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
@@ -156,6 +159,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 
 
+[[step-4-install-the-controller]]
 == Fase 4: Installare il controller
 
 Dopo aver installato i componenti nel modulo controller, è necessario installare nuovamente il modulo controller nel telaio del sistema e avviare il sistema operativo.

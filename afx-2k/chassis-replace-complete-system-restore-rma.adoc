@@ -15,6 +15,7 @@ Riavvia il controller, verifica l'integrità del sistema e restituisci il compon
 
 
 
+[[step-1-boot-the-controllers-and-give-back-the-controllers]]
 == Fase 1: Avviare i controller e restituirli
 
 Dopo il riavvio dei controller, avviare ONTAP e restituire i controller.
@@ -66,6 +67,7 @@ NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalit�
 
 
 
+[[step-2-verify-storage-system-health]]
 == Fase 2: Verifica dello stato del sistema di archiviazione
 
 Dopo che il controller restituisce l'archiviazione, controlla lo stato di salute utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
@@ -77,6 +79,7 @@ Dopo che il controller restituisce l'archiviazione, controlla lo stato di salute
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -20,6 +20,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == Fase 1: Spegnere il nodo compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -90,6 +91,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -145,6 +147,7 @@ Pulsante di bloccaggio del coperchio del modulo controller
 
 
 
+[[step-3-replace-the-dimms]]
 == Fase 3: Sostituire i DIMM
 
 Per sostituire i moduli DIMM, individuarli all'interno del controller e seguire la sequenza di passaggi specifica.
@@ -205,6 +208,7 @@ IMPORTANT: Esaminare visivamente il DIMM per verificare che sia allineato in mod
 
 
 
+[[step-4-install-the-controller]]
 == Fase 4: Installare il controller
 
 Dopo aver installato i componenti nel modulo controller, è necessario installare nuovamente il modulo controller nel telaio del sistema e avviare il sistema operativo.
@@ -283,6 +287,7 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

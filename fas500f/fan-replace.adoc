@@ -15,6 +15,7 @@ In caso di guasto, sostituire una ventola con un nuovo modulo ventola.
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -85,6 +86,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Quando si sostituisce un modulo ventola, è necessario rimuovere il modulo controller dal telaio.
@@ -141,6 +143,7 @@ Coperchio del modulo controller
 
 
 
+[[step-3-replace-a-fan]]
 == Fase 3: Sostituire una ventola
 
 Per sostituire una ventola, rimuovere il modulo della ventola guasto e sostituirlo con un nuovo modulo della ventola.
@@ -167,6 +170,7 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema e avviarlo.
@@ -212,6 +216,7 @@ Il modulo controller deve essere inserito completamente e a filo con i bordi del
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

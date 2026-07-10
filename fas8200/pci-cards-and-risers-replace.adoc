@@ -19,6 +19,7 @@ Per sostituire una scheda PCIe, è necessario eseguire una sequenza specifica di
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
@@ -191,6 +192,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-open-the-controller-module]]
 == Fase 2: Aprire il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -232,6 +234,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 
 
+[[step-3-replace-a-pcie-card]]
 == Fase 3: Sostituire una scheda PCIe
 
 Per sostituire una scheda PCIe, individuarla all'interno del controller e seguire la sequenza di passaggi specifica.
@@ -271,6 +274,7 @@ NOTE: Se si sta installando una scheda nello slot inferiore e non si riesce a ve
 
 
 
+[[step-4-reinstall-the-controller]]
 == Fase 4: Reinstallare il controller
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema e avviarlo.
@@ -354,6 +358,7 @@ Passare alla fase successiva. La procedura di switchback MetroCluster viene eseg
 
 
 
+[[step-5-two-node-metrocluster-only-switch-back-aggregate]]
 == Fase 5 (solo MetroCluster a due nodi): Switch back aggregate
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -410,6 +415,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -24,6 +24,7 @@ Sostituire la scheda mezzanine nel sistema FAS2820 se la scheda si guasta o aggi
 video::a8ec891d-f6f6-4479-9ca2-af47017254ff[panopto]
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 .Prima di iniziare
@@ -88,6 +89,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Rimuovere il modulo di controllo e il relativo coperchio.
@@ -122,6 +124,7 @@ Pulsante di rilascio del coperchio del modulo controller
 |===
 
 
+[[step-3-replace-the-mezzanine-card]]
 == Fase 3: Sostituire la scheda mezzanine
 
 Sostituire la scheda mezzanine.
@@ -170,6 +173,7 @@ NOTE: È possibile allentare le viti a testa zigrinata con le dita o con un cacc
 
 
 
+[[step-4-install-and-reboot-the-controller-module]]
 == Passaggio 4: Installare e riavviare il modulo controller
 
 Reinstallare e riavviare il modulo controller.
@@ -238,6 +242,7 @@ Vedere link:https://docs.netapp.com/us-en/ontap/san-admin/index.html["Panoramica
 ====
 
 
+[[step-6-return-the-controller-to-normal-operation]]
 == Passaggio 6: Riportare il controller al normale funzionamento
 
 Restituisci lo storage al controller danneggiato, ripristina la restituzione automatica e termina la finestra di manutenzione AutoSupport.
@@ -249,6 +254,7 @@ Restituisci lo storage al controller danneggiato, ripristina la restituzione aut
 
 
 
+[[step-7-return-the-failed-part-to-netapp]]
 == Fase 7: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

@@ -15,6 +15,7 @@
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
@@ -187,6 +188,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-replace-or-add-a-caching-module]]
 == Fase 2: Sostituire o aggiungere un modulo di caching
 
 I moduli SSD Flash cache NVMe (Flash cache o moduli di caching) sono moduli separati. Si trovano nella parte anteriore del modulo NVRAM. Per sostituire o aggiungere un modulo di caching, posizionarlo sul retro del sistema sullo slot 6, quindi seguire la sequenza specifica di passaggi per sostituirlo.
@@ -247,6 +249,7 @@ Assicurarsi di supportare il modulo di caching durante la rimozione dal modulo N
 
 
 
+[[step-3-add-or-replace-an-x9170a-core-dump-module]]
 == Fase 3: Aggiunta o sostituzione di un modulo dump core X9170A
 
 Il core dump della cache da 1 TB, X9170A, viene utilizzato solo nei sistemi AFF A700. Il modulo core dump non può essere sostituito a caldo. Il modulo core dump si trova generalmente nella parte anteriore del modulo NVRAM nello slot 6-1 nella parte posteriore del sistema. Per sostituire o aggiungere il modulo core dump, individuare lo slot 6-1, quindi seguire la sequenza specifica di passaggi per aggiungerlo o sostituirlo.
@@ -305,6 +308,7 @@ Assicurarsi di supportare il modulo core dump mentre viene rimosso dal modulo NV
 
 
 
+[[step-4-reboot-the-controller-after-fru-replacement]]
 == Fase 4: Riavviare il controller dopo la sostituzione della FRU
 
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
@@ -315,6 +319,7 @@ Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -371,6 +376,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

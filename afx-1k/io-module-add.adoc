@@ -17,6 +17,7 @@ Aggiungi un modulo I/O al tuo sistema di archiviazione AFX 1K per migliorare la 
 
 
 
+[[step-1-shut-down-the-impaired-controller-module]]
 == Fase 1: Arrestare il modulo controller danneggiato
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -77,6 +78,7 @@ IL `-halt true` Il parametro ti porta al prompt LOADER.
 
 
 
+[[step-2-add-the-new-io-module]]
 == Fase 2: Aggiungere il nuovo modulo i/O.
 
 Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.

@@ -8,6 +8,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -79,6 +80,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -103,6 +105,7 @@ image::../media/drw_2240_x_opening_cam_latch.png[Apertura del dispositivo di chi
 
 
 
+[[step-3-replace-the-nvmem-battery]]
 == Fase 3: Sostituire la batteria NVMEM
 
 Per sostituire la batteria NVMEM nel sistema, rimuovere la batteria NVMEM guasta dal sistema e sostituirla con una nuova.
@@ -145,6 +148,7 @@ image::../media/drw_2600_nvmem_batt_repl_animated_gif.png[Sostituzione della bat
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito i componenti del modulo controller, reinstallarlo nel telaio.
@@ -205,6 +209,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -261,6 +266,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

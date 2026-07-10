@@ -15,6 +15,7 @@ Questo articolo fornisce istruzioni dettagliate per l'installazione di un sistem
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema, è necessario creare un account sul NetApp Support Site, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -170,6 +171,7 @@ Accensione del sistema
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -196,6 +198,7 @@ image::../media/drw_a900_controller_in_chassis_ID_IEOPS-856.svg[Configurazione t
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Fase 3: Collegare i controller alla rete
 
 È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
@@ -387,6 +390,7 @@ image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Collegamenti di alimen
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
 Collegare un singolo shelf di dischi NS224 o due shelf di dischi NS224 ai controller.
@@ -515,6 +519,7 @@ Cavo da 100 GbE
 ====
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Fase 5: Completare l'installazione e la configurazione del sistema
 
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.

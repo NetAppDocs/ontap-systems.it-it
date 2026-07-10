@@ -24,12 +24,14 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
+[[option-1-add-io-modules-to-a-storage-system-with-available-slots]]
 == Opzione 1: Aggiungere moduli i/o a un sistema di storage con slot disponibili
 
 È possibile aggiungere un modulo i/o in uno slot disponibile in ogni controller.
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 === Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -161,6 +163,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
+[[step-2-add-io-modules-to-available-slots]]
 === Fase 2: Aggiungere moduli i/o agli slot disponibili
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
@@ -215,6 +218,7 @@ In questo modo, vengono reinizializzati i dispositivi PCIe e altri componenti e 
 
 
 
+[[option-2-add-io-modules-in-a-storage-system-with-unavailable-slots]]
 == Opzione 2: Aggiungere moduli i/o in un sistema storage con slot non disponibili
 
 È possibile aggiungere moduli i/o a un sistema di storage completamente popolato rimuovendo i moduli i/o esistenti e sostituendoli con diversi moduli i/O.
@@ -250,6 +254,7 @@ Utilizzare System Manager per migrare in modo permanente i file LIF su diverse p
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 === Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -381,6 +386,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
+[[step-2-add-io-modules-to-unavailable-slots]]
 === Fase 2: Aggiungere moduli i/o agli slot non disponibili
 
 . Se non si è già collegati a terra, mettere a terra l'utente.

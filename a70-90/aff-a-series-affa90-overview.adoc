@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche selezionate per l' AFF A90.  Visita 
 
 
 
+[[key-specifications-for-aff-a90]]
 === Specifiche chiave per AFF A90
 
 Configurazione della piattaforma: coppia HA a telaio singolo AFF A90
@@ -33,6 +34,7 @@ Versione minima ONTAP : ONTAP 9.15.1RC2
 
 
 
+[[scaleout-maximums]]
 === Massimi di scalabilità
 
 * NAS: 12 coppie HA, capacità raw 79,3 PB / 70,4 PiB, memoria massima 24576 GB
@@ -42,6 +44,7 @@ Versione minima ONTAP : ONTAP 9.15.1RC2
 
 
 
+[[io]]
 === Io
 
 
@@ -74,12 +77,14 @@ Nessun dato IO a bordo.
 
 
 
+[[storage-networking-supported]]
 === Rete di archiviazione supportata
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; NVMe/FC; NVMe/TCP; S3; S3 con NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 8304 BTU/ora
@@ -95,6 +100,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 
 
 
+[[compliance]]
 === Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -107,6 +113,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 
 
 
+[[high-availability]]
 === Alta disponibilità
 
 Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS su connessioni SAS per ripiani esterni; [//] 2025-10-15 ontap-systems-internal/issues/1357

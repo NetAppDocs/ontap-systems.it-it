@@ -14,10 +14,11 @@ summary: Sostituisci la batteria NV nel tuo sistema storage afx 2k quando la bat
 Sostituisci la batteria NV nel tuo sistema storage AFX 2K quando la batteria inizia a scaricarsi o si guasta, poiché è responsabile della conservazione dei dati di sistema critici durante le interruzioni di corrente. La procedura di sostituzione prevede lo spegnimento del controller danneggiato, la rimozione del modulo controller, la sostituzione della batteria NV, la reinstallazione del modulo controller e la restituzione del componente guasto a NetApp.
 
 .A proposito di questa attività
-Questa procedura si applica alla sostituzione di una batteria NV guasta per il modulo NVRAM negli slot 4 e 5 del controller AFX 2K. Per informazioni su come sostituire la batteria NV per il modulo NVRAM12-EX negli slot 6 e 7 del controller AFX 2K, fai riferimento a link:../install-setup/nv12l-replace.html#step-2-replace-the-nvram12-ex-module-nvram-dimm-or-nvram-battery["Sostituisci la batteria NV per la NVRAM12-EX"].
+Questa procedura si applica alla sostituzione di una batteria NV guasta per il modulo NVRAM negli slot 4 e 5 del controller AFX 2K. Per informazioni su come sostituire la batteria NV per il modulo NVRAM12-EX negli slot 6 e 7 del controller AFX 2K, consulta link:nv12l-replace.html#step-2-replace-the-nvram12-ex-module-nvram-dimm-or-nvram-battery["Sostituisci la batteria NV per la NVRAM12-EX"].
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -75,6 +76,7 @@ Il parametro _-halt true_ porta il nodo danneggiato al prompt LOADER.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -159,6 +161,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si e
 
 
 
+[[step-3-replace-the-nv-battery]]
 == Fase 3: Sostituire la batteria NV
 
 Rimuovere la batteria NV guasta dal modulo centralina e installare la batteria NV sostitutiva.
@@ -201,6 +204,7 @@ Assicurarsi che la spina si blocchi nella presa.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller e avviarlo.
@@ -260,6 +264,7 @@ NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalit�
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

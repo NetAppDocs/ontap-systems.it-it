@@ -45,6 +45,7 @@ Questa procedura utilizza la seguente terminologia:
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -115,6 +116,7 @@ Il parametro _-halt true_ porta il nodo danneggiato al prompt LOADER.
 
 
 
+[[step-2-replace-the-impaired-system-management-module]]
 == Fase 2: Sostituire il modulo di gestione del sistema danneggiato
 
 Sostituire il modulo di gestione del sistema danneggiato.
@@ -202,6 +204,7 @@ Supporto di boot
 
 
 
+[[step-3-reboot-the-controller-module]]
 == Passo 3: Riavviare il modulo controller
 
 Riavviare il modulo controller.
@@ -253,6 +256,7 @@ NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalit�
 
 
 
+[[step-4-install-licenses-and-register-serial-number]]
 == Passaggio 4: Installare le licenze e registrare il numero seriale
 
 Quando si sostituisce il modulo di gestione del sistema, il numero di serie del sistema (SSN) del controller cambia.  È necessario installare nuove licenze per il nodo se il nodo danneggiato utilizzava funzionalità ONTAP che richiedono una licenza standard (bloccata sul nodo).  Per le funzionalità con licenze standard, ogni nodo del cluster deve avere la propria chiave per la funzionalità.
@@ -294,6 +298,7 @@ Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/ontap/
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

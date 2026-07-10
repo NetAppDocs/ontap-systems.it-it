@@ -42,19 +42,19 @@ Prima di iniziare, rivedi  https://docs.netapp.com/us-en/ontap-cli/security-key-
 
 .Fasi
 . Avviare il menu ONTAP dal prompt di Loader `boot_ontap menu` e selezionare l'opzione 10.
-. Recupera e verifica la passphrase a livello di cluster dal controller funzionante.
+. Visualizza le informazioni di backup della gestione delle chiavi per il cluster.
 +
-.. Eseguire il seguente comando per recuperare la passphrase a livello di cluster:
+.. Esegui il seguente comando per visualizzare le informazioni di backup della gestione delle chiavi per il cluster:
 +
 `security key-manager onboard show-backup`
 
-.. Verifica la passphrase a livello di cluster utilizzando il seguente comando:
+.. Esegui il seguente comando per verificare il backup del key manager integrato:
 +
 `security key-manager onboard verify-backup`
 
 
 
-. Immettere la passphrase OKM.
+. Inserisci la passphrase OKM e conferma l'avvenuta verifica.
 +
 
 NOTE: La passphrase viene richiesta due volte.

@@ -15,6 +15,7 @@ Continuare la procedura di sostituzione riassegnando lo storage e confermando la
 
 
 
+[[step-1-recable-the-system]]
 == Fase 1: Ricable del sistema
 
 Verificare le connessioni di rete e di archiviazione del modulo controller utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
@@ -28,12 +29,14 @@ Verificare le connessioni di rete e di archiviazione del modulo controller utili
 
 
 
+[[step-2-reassign-disks]]
 == Fase 2: Riassegnare i dischi
 
 Se il sistema di storage si trova in una coppia ha, l'ID di sistema del nuovo modulo controller viene assegnato automaticamente ai dischi quando il giveback si verifica al termine della procedura. È necessario utilizzare la procedura corretta per la configurazione.
 
 
 
+[[option-1-verify-the-system-id-change-on-an-ha-system]]
 === Opzione 1: Verificare la modifica dell'ID di sistema su un sistema ha
 
 È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
@@ -123,6 +126,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[option-2-manually-reassign-the-system-id-on-systems-in-a-two-node-metrocluster-configuration]]
 === Opzione 2: Riassegnare manualmente l'ID di sistema sui sistemi in una configurazione MetroCluster a due nodi
 
 In una configurazione MetroCluster a due nodi che esegue ONTAP, è necessario riassegnare manualmente i dischi all'ID di sistema del nuovo controller prima di riportare il sistema alla normale condizione operativa.

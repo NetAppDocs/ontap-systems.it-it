@@ -12,6 +12,7 @@ summary: Dopo aver completato i controlli di crittografia, arrestare il controll
 
 
 
+[[option-1-most-systems]]
 == Opzione 1: La maggior parte dei sistemi
 
 [role="lead"]
@@ -21,6 +22,7 @@ Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite support
 
 
 
+[[option-1-most-systems]]
 == Opzione 1: La maggior parte dei sistemi
 
 Completare l'arresto del controller danneggiato arrestandolo al prompt LOADER e acquisendo le variabili di ambiente di avvio. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire il supporto di avvio.
@@ -64,6 +66,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 
 
 
+[[option-2-controller-is-in-a-metrocluster-configuration]]
 == Opzione 2: Il controller è in una configurazione MetroCluster
 
 
@@ -123,6 +126,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opzione 3: Controller in un MetroCluster a due nodi
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.

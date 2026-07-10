@@ -30,6 +30,7 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
+[[step-1-shut-down-the-target-controller-module]]
 == Passaggio 1: Spegnere il modulo controller di destinazione
 
 Assumi il controllo e spegni il modulo controller di destinazione in modo che il suo partner HA continui a fornire dati mentre aggiungi il modulo I/O. I passaggi collegati si riferiscono al controller che viene spento come controller "danneggiato"; gli stessi passaggi si applicano sia che tu stia assumendo il controllo di un controller operativo per un'aggiunta pianificata sia che tu stia spegnendo un controller già danneggiato.
@@ -176,6 +177,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 ====
 
 
+[[step-2-add-the-new-io-module]]
 == Fase 2: Aggiungere il nuovo modulo i/O.
 
 Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.

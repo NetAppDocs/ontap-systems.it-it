@@ -6,6 +6,7 @@ Continuare la procedura di sostituzione ricablando le connessioni di rete e di s
 
 
 
+[[step-1-recable-the-system]]
 == Fase 1: Ricable del sistema
 
 È necessario recuperare le connessioni di rete e di storage del modulo controller.
@@ -27,6 +28,7 @@ NOTE: L'ID di sistema e le informazioni sull'assegnazione dei dischi risiedono n
 
 
 
+[[step-2-reassign-disks]]
 == Fase 2: Riassegnare i dischi
 
 Se il sistema di storage si trova in una coppia ha, l'ID di sistema del nuovo modulo controller viene assegnato automaticamente ai dischi quando il giveback si verifica al termine della procedura. È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.

@@ -20,6 +20,7 @@ Sostituire la NVDIMM nel sistema AFF C800 quando il sistema rileva che la durata
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -92,6 +93,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -180,6 +182,7 @@ Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuor
 
 
 
+[[step-3-replace-the-nvdimm]]
 == Fase 3: Sostituire il modulo NVDIMM
 
 Individuare l'NVDIMM nel modulo controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi riposizionarlo.
@@ -240,6 +243,7 @@ NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e 
 
 
 
+[[step-4-reinstall-the-controller-module-and-booting-the-system]]
 == Fase 4: Reinstallare il modulo controller e avviare il sistema
 
 Reinstallare il modulo controller e riavviarlo.
@@ -288,6 +292,7 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

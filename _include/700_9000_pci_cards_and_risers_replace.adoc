@@ -10,6 +10,7 @@ Per sostituire un modulo i/o, è necessario eseguire una sequenza specifica di a
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
@@ -182,6 +183,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-replace-io-modules]]
 == Fase 2: Sostituire i moduli i/O.
 
 Per sostituire un modulo i/o, individuarlo all'interno dello chassis e seguire la sequenza specifica dei passaggi.
@@ -236,6 +238,7 @@ Fermo i/o Cam completamente sbloccato
 
 
 
+[[step-3-reboot-the-controller-after-io-module-replacement]]
 == Fase 3: Riavviare il controller dopo la sostituzione del modulo i/O.
 
 Dopo aver sostituito un modulo i/o, è necessario riavviare il modulo controller.
@@ -271,6 +274,7 @@ NOTE: Se il sistema si trova in una configurazione MetroCluster a due nodi, è n
 
 
 
+[[step-4-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 4: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -327,6 +331,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

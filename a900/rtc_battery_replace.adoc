@@ -21,6 +21,7 @@ Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo control
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -157,6 +158,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
+[[step-2-remove-the-controller]]
 == Fase 2: Rimuovere il controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -209,6 +211,7 @@ Pulsante di bloccaggio del coperchio del modulo controller
 |===
 
 
+[[step-3-replace-the-rtc-battery]]
 == Fase 3: Sostituire la batteria RTC
 
 Per sostituire la batteria RTC, individuare la batteria guasta nel modulo controller, rimuoverla dal supporto, quindi installare la batteria sostitutiva nel supporto.
@@ -253,6 +256,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 
 
+[[step-4-reinstall-the-controller-module-and-set-timedate]]
 == Fase 4: Reinstallare il modulo controller e impostare data/ora
 
 Dopo aver sostituito la batteria RTC, è necessario reinstallare il modulo controller. Se la batteria RTC è stata lasciata fuori dal modulo controller per più di 10 minuti, potrebbe essere necessario reimpostare la data e l'ora.
@@ -301,6 +305,7 @@ NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione "Reboot 
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

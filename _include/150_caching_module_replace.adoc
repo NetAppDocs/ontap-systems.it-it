@@ -8,6 +8,7 @@ Sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal p
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 [role="lead"]
@@ -68,6 +69,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 [role="lead"]
@@ -96,6 +98,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo co
 
 
 
+[[step-3-replace-a-caching-module]]
 == Fase 3: Sostituire un modulo di caching
 
 [role="lead"]
@@ -131,6 +134,7 @@ Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 [role="lead"]
@@ -192,6 +196,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 5: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 [role="lead"]
@@ -249,6 +254,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 [role="lead"]

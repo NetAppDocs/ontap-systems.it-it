@@ -17,6 +17,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -71,6 +72,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-and-open-the-controller-module]]
 == Fase 2: Rimuovere e aprire il modulo controller
 
 Rimuovere e aprire il modulo controller.
@@ -107,6 +109,7 @@ NOTE: Il LED NV verde sulla mascherina inizia a lampeggiare quando l'alimentazio
 
 
 
+[[step-3-replace-the-nvmem-battery]]
 == Fase 3: Sostituire la batteria NVMEM
 
 Rimuovere la batteria NVMEM guasta dal sistema e sostituirla con una nuova.
@@ -167,6 +170,7 @@ Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda ma
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito i componenti del modulo controller, reinstallarlo nel telaio.
@@ -212,6 +216,7 @@ NOTE: Durante il processo di avvio, potrebbero essere visualizzati i seguenti pr
 
 
 
+[[step-5-restore-automatic-giveback-and-autsupport]]
 == Fase 5: Ripristino del giveback automatico e del supporto automatico
 
 Ripristina giveback automatico e AutoSupport se sono stati disattivati.
@@ -222,6 +227,7 @@ Ripristina giveback automatico e AutoSupport se sono stati disattivati.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

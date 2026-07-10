@@ -16,6 +16,7 @@ Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utiliz
 
 
 
+[[step-1-remove-the-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 [role="lead"]
@@ -67,6 +68,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 
 
 
+[[step-2-replace-the-boot-media]]
 == Fase 2: Sostituire il supporto di avvio
 
 Individuare il supporto di avvio nel modulo controller (vedere la mappa FRU sul modulo controller), quindi seguire le istruzioni per sostituirlo.
@@ -160,6 +162,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-3-transfer-the-boot-image-to-the-boot-media]]
 == Fase 3: Trasferire l'immagine di avvio sul supporto di avvio
 
 Il supporto di avvio sostitutivo installato non dispone di un'immagine di avvio, pertanto è necessario trasferire un'immagine di avvio utilizzando un'unità flash USB.

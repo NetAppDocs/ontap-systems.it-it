@@ -15,6 +15,7 @@ Per completare la sostituzione del controller per il sistema di storage ASA A20,
 
 
 
+[[step-1-install-licenses-for-the-replacement-controller-in-ontap]]
 == Fase 1: Installare le licenze per il controller sostitutivo in ONTAP
 
 È necessario installare nuove licenze per il nodo _replacement_ se il nodo compromesso utilizzava funzioni ONTAP che richiedono una licenza standard (bloccata da nodo). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
@@ -48,6 +49,7 @@ NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e in
 
 
 
+[[step-2-verify-lifs-register-the-serial-number-and-check-cluster-health]]
 == Fase 2: Verifica delle LIF, registrazione del numero di serie e controllo dello stato del cluster
 
 Prima di rimettere in servizio il nodo _sostitutivo_, è necessario verificare che i LIF siano sulle rispettive porte principali, registrare il numero di serie del nodo _sostitutivo_ se AutoSupport è abilitato, controllare lo stato di salute del cluster, chiudere eventuali finestre di manutenzione e reimpostare il ripristino automatico.
@@ -70,6 +72,7 @@ Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network 
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

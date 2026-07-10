@@ -15,6 +15,7 @@ Questa procedura fornisce istruzioni dettagliate per l'installazione di un tipic
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 .Prima di iniziare
@@ -167,6 +168,7 @@ Cavo di rete FC aggiuntivo
 |===
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 Installare il sistema di storage in un rack per telecomunicazioni o in un cabinet del sistema di storage NetApp, a seconda dei casi.
@@ -190,6 +192,7 @@ image::../media/drw_cable_management_arm_install.svg[Installare il ARM di gestio
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Fase 3: Collegare i controller alla rete
 
 Collegare i controller alla rete come cluster senza switch a due nodi o come cluster con switch.
@@ -390,6 +393,7 @@ IMPORTANT: NON collegare i cavi di alimentazione.
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
 Collegare i controller allo storage esterno.
@@ -471,6 +475,7 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Collegamento del c
 
 
 
+[[step-5-complete-storage-system-setup-and-configuration]]
 == Fase 5: Completare la configurazione e la configurazione del sistema di archiviazione
 
 Completare l'installazione e la configurazione del sistema di storage utilizzando l'opzione 1: Se la funzione di rilevamento della rete è attivata o l'opzione 2: Se la funzione di rilevamento della rete non è attivata.

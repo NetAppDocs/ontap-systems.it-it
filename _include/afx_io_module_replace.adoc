@@ -11,6 +11,7 @@ Puoi utilizzare questa procedura con tutte le versioni di ONTAP supportate dal t
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == Fase 1: Spegnere il nodo compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -81,6 +82,7 @@ Il parametro _-halt true_ porta il nodo danneggiato al prompt LOADER.
 
 
 
+[[step-2-replace-a-failed-io-module]]
 == Fase 2: Sostituire un modulo i/o guasto
 
 Per sostituire un modulo i/o, individuarlo all'interno del contenitore e seguire la sequenza specifica di passi.
@@ -138,6 +140,7 @@ Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 
 
 
+[[step-3-reboot-the-controller]]
 == Fase 3: Riavviare il controller
 
 Dopo aver sostituito un modulo i/o, è necessario riavviare il controller.
@@ -202,6 +205,7 @@ NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalit�
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Fase 4: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

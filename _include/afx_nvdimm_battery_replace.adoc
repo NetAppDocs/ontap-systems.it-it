@@ -6,6 +6,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -76,6 +77,7 @@ Il parametro _-halt true_ porta il nodo danneggiato al prompt LOADER.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -133,6 +135,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si e
 
 
 
+[[step-3-replace-the-nv-battery]]
 == Fase 3: Sostituire la batteria NV
 
 Rimuovere la batteria NV guasta dal modulo centralina e installare la batteria NV sostitutiva.
@@ -175,6 +178,7 @@ Assicurarsi che la spina si blocchi nella presa.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller e avviarlo.
@@ -241,6 +245,7 @@ NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalit�
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

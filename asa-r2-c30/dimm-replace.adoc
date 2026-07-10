@@ -29,6 +29,7 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -99,6 +100,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller]]
 == Fase 2: Rimuovere il controller
 
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
@@ -210,6 +212,7 @@ Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguett
 
 
 
+[[step-3-replace-a-dimm]]
 == Fase 3: Sostituire un DIMM
 
 Per sostituire un modulo DIMM, individuare il modulo DIMM difettoso all'interno del controller e seguire la sequenza specifica di passi.
@@ -279,6 +282,7 @@ Una volta inserito correttamente, il DIMM si inserisce facilmente ma si inserisc
 
 
 
+[[step-4-reinstall-the-controller]]
 == Fase 4: Reinstallare il controller
 
 Reinstallare il controller nel telaio e riavviarlo.
@@ -385,6 +389,7 @@ ALIMENTATORE CC
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

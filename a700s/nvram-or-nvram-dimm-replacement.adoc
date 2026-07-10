@@ -29,6 +29,7 @@ Per sostituire una scheda NVRAM guasta, rimuovere il riser NVRAM, il riser 1, da
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 .Fasi
@@ -91,6 +92,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guida al
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -169,6 +171,7 @@ Condotto dell'aria
 
 
 
+[[step-3-remove-the-nvram-card]]
 == Fase 3: Rimuovere la scheda NVRAM
 
 La sostituzione della NVRAM consiste nella rimozione del riser NVRAM, Riser 1, dal modulo controller, nello scollegamento della batteria NVRAM dalla scheda NVRAM, nella rimozione della scheda NVRAM guasta e nell'installazione della scheda NVRAM sostitutiva, quindi nella reinstallazione del riser NVRAM nel modulo controller.
@@ -260,6 +263,7 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 
 
+[[step-4-reinstall-the-controller-module-and-booting-the-system]]
 == Fase 4: Reinstallare il modulo controller e avviare il sistema
 
 Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.
@@ -300,6 +304,7 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 
 
+[[step-5-verify-the-system-id-change-on-an-ha-system]]
 == Fase 5: Verificare la modifica dell'ID di sistema su un sistema ha
 
 È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
@@ -382,6 +387,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

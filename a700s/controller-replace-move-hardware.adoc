@@ -15,6 +15,7 @@ Per sostituire l'hardware del modulo controller, è necessario rimuovere il cont
 
 
 
+[[step-1-remove-the-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -93,6 +94,7 @@ Condotto dell'aria
 
 
 
+[[step-2-move-the-nvram-card]]
 == Fase 2: Spostare la scheda NVRAM
 
 Come parte del processo di sostituzione del controller, è necessario rimuovere la scheda NVRAM dal riser 1 nel modulo controller compromesso e installare la scheda nel riser 1 del modulo controller sostitutivo. Reinstallare il riser 1 nel modulo controller sostitutivo solo dopo aver spostato i DIMM dal modulo controller guasto al modulo controller sostitutivo.
@@ -173,6 +175,7 @@ NOTE: Assicurarsi che la scheda sia inserita correttamente nella presa del riser
 
 
 
+[[step-3-move-pcie-cards]]
 == Fase 3: Spostare le schede PCIe
 
 Come parte del processo di sostituzione del controller, è necessario rimuovere entrambi i moduli riser PCIe, Riser 2 (riser centrale) e Riser 3 (riser all'estrema destra) dal modulo controller compromesso, rimuovere le schede PCIe dai moduli riser, e installare le schede negli stessi moduli riser nel modulo controller sostitutivo. I moduli riser verranno installati nel modulo controller sostitutivo una volta spostati i DIMM nel modulo controller sostitutivo.
@@ -248,6 +251,7 @@ Assicurarsi che la scheda sia inserita correttamente nella presa del riser.
 
 
 
+[[step-4-move-the-boot-media]]
 == Fase 4: Spostare il supporto di avvio
 
 Nel sistema AFF A700s sono presenti due dispositivi multimediali di avvio, uno primario e uno secondario o un supporto di avvio di backup. È necessario spostarli dal controller compromesso al controller _replacement_ e installarli nei rispettivi slot del controller _replacement_.
@@ -319,6 +323,7 @@ Non serrare eccessivamente la vite per evitare di danneggiare il supporto di avv
 
 
 
+[[step-5-move-the-fans]]
 == Fase 5: Spostare le ventole
 
 Quando si sostituisce un modulo controller guasto, è necessario spostare le ventole dal modulo controller danneggiato al modulo sostitutivo.
@@ -351,6 +356,7 @@ Modulo della ventola
 
 
 
+[[step-6-move-system-dimms]]
 == Fase 6: Spostare i DIMM di sistema
 
 Per spostare i moduli DIMM, individuarli e spostarli dal controller compromesso al controller sostitutivo e seguire la sequenza specifica dei passaggi.
@@ -412,6 +418,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 
 
+[[step-7-install-the-nvram-module]]
 == Fase 7: Installazione del modulo NVRAM
 
 Per installare il modulo NVRAM, seguire la sequenza di passaggi specifica.
@@ -431,6 +438,7 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 
 
+[[step-8-move-the-nvram-battery]]
 == Fase 8: Spostare la batteria NVRAM
 
 Quando si sostituisce il modulo controller, è necessario spostare la batteria NVRAM dal modulo controller guasto al modulo controller sostitutivo
@@ -470,6 +478,7 @@ Linguetta blu di blocco della batteria NVRAM
 
 
 
+[[step-9-install-a-pcie-riser]]
 == Fase 9: Installare un riser PCIe
 
 Per installare un riser PCIe, seguire una sequenza specifica di passaggi.
@@ -491,6 +500,7 @@ Una volta bloccato, il fermo di bloccaggio è a filo con la parte superiore del 
 
 
 
+[[step-10-move-the-power-supply]]
 == Fase 10: Spostare l'alimentatore
 
 Quando si sostituisce un modulo controller, è necessario spostare l'alimentatore e l'alimentatore vuoti dal modulo controller guasto al modulo controller sostitutivo.
@@ -536,6 +546,7 @@ NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza
 
 
 
+[[step-11-install-the-controller-module]]
 == Fase 11: Installare il modulo controller
 
 Dopo aver spostato tutti i componenti dal modulo controller guasto al modulo controller sostitutivo, è necessario installare il modulo controller sostitutivo nel telaio e avviarlo in modalità manutenzione.

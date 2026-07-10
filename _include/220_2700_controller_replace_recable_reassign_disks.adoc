@@ -6,6 +6,7 @@ Per completare la procedura di sostituzione e ripristinare il funzionamento comp
 
 
 
+[[step-1-recable-the-system]]
 == Fase 1: Ricable del sistema
 
 Verificare le connessioni di rete e di archiviazione del modulo controller utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
@@ -19,6 +20,7 @@ Verificare le connessioni di rete e di archiviazione del modulo controller utili
 
 
 
+[[step-2-reassign-disks]]
 == Fase 2: Riassegnare i dischi
 
 Se il sistema di storage si trova in una coppia ha, l'ID di sistema del nuovo modulo controller viene assegnato automaticamente ai dischi quando il giveback si verifica al termine della procedura. In un sistema standalone, è necessario riassegnare manualmente l'ID ai dischi.
@@ -52,6 +54,7 @@ Configurazione MetroCluster a due nodi
 |===
 
 
+[[option-1-verify-the-system-id-change-on-an-ha-system]]
 === Opzione 1: Verificare la modifica dell'ID di sistema su un sistema ha
 
 È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
@@ -138,6 +141,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[option-2-manually-reassign-the-system-id-on-a-stand-alone-system-in-ontap]]
 === Opzione 2: Riassegnare manualmente l'ID di sistema su un sistema standalone in ONTAP
 
 In un sistema standalone, è necessario riassegnare manualmente i dischi all'ID di sistema del nuovo controller prima di riportare il sistema alle normali condizioni operative.
@@ -200,6 +204,7 @@ disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
 
 
 
+[[option-3-manually-reassign-the-system-id-on-systems-in-a-two-node-metrocluster-configuration]]
 === Opzione 3: Riassegnare manualmente l'ID di sistema sui sistemi in una configurazione MetroCluster a due nodi
 
 In una configurazione MetroCluster a due nodi che esegue ONTAP, è necessario riassegnare manualmente i dischi all'ID di sistema del nuovo controller prima di riportare il sistema alla normale condizione operativa.

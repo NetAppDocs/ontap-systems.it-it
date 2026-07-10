@@ -34,6 +34,7 @@ Poiché l'ID di sistema deriva dal modulo NVRAM, in caso di sostituzione del mod
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -170,6 +171,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
+[[step-2-replace-the-nvram-module]]
 == Fase 2: Sostituire il modulo NVRAM
 
 Per sostituire il modulo NVRAM, posizionarlo nello slot 6 dello chassis e seguire la sequenza di passaggi specifica.
@@ -246,6 +248,7 @@ Schede di espulsione DIMM e DIMM
 
 
 
+[[step-3-replace-a-nvram-dimm]]
 == Fase 3: Sostituire un DIMM NVRAM
 
 Per sostituire i DIMM NVRAM nel modulo NVRAM, rimuovere il modulo NVRAM, aprire il modulo e sostituire il DIMM di destinazione.
@@ -323,6 +326,7 @@ Schede di espulsione DIMM e DIMM
 
 
 
+[[step-4-reboot-the-controller]]
 == Fase 4: Riavviare il controller
 
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
@@ -332,6 +336,7 @@ Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
 
 
 
+[[step-5-reassign-disks]]
 == Fase 5: Riassegnare i dischi
 
 È necessario confermare la modifica dell'ID di sistema al momento dell'avvio del controller sostitutivo e verificare che la modifica sia stata implementata.
@@ -434,6 +439,7 @@ dr-group-id            cluster node           configuration-state
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

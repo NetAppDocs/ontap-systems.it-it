@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 
 
+[[aff-a50-specifications-at-a-glance]]
 == Specifiche AFF A50 in sintesi
 
 * Configurazione della piattaforma: coppia HA a telaio singolo AFF A50
@@ -28,6 +29,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 
 
+[[scaleout-maximums]]
 == Massimi di scalabilità
 
 * Tipo: NAS; Coppie HA: 12; Capacità raw: 48,5 PB / 43,0 PiB; Memoria massima: 3072 GB
@@ -37,16 +39,19 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 
 
+[[io]]
 == I/O
 
 
 
+[[onboard-io]]
 === I/O integrato
 
 Nessun dato I/O integrato.
 
 
 
+[[total-io]]
 === Totale I/O
 
 * Protocollo: Ethernet 100 Gbps; Porte: 16
@@ -60,6 +65,7 @@ Nessun dato I/O integrato.
 
 
 
+[[management-ports]]
 === Porte di gestione
 
 * Protocollo: Ethernet 1 Gbps; Porte: 2
@@ -69,6 +75,7 @@ Nessun dato I/O integrato.
 
 
 
+[[storage-networking-supported]]
 == Rete di archiviazione supportata
 
 * CIFS
@@ -92,6 +99,7 @@ Nessun dato I/O integrato.
 
 
 
+[[system-environment-specifications]]
 == Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 3076 BTU/ora
@@ -107,6 +115,7 @@ Nessun dato I/O integrato.
 
 
 
+[[compliance]]
 == Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -119,6 +128,7 @@ Nessun dato I/O integrato.
 
 
 
+[[high-availability]]
 == Alta disponibilità
 
 * Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP

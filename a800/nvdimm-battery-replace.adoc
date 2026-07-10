@@ -15,6 +15,7 @@ Sostituisci la batteria NV del tuo sistema AFF A800 quando inizia a scaricarsi o
 
 
 
+[[step-1-shutdown-the-impaired-controller]]
 == Passaggio 1: spegnere il controller non funzionante
 
 Spegnere o sostituire il controller compromesso.
@@ -87,6 +88,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -175,6 +177,7 @@ Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuor
 
 
 
+[[step-3-replace-the-nvdimm-battery]]
 == Fase 3: Sostituire la batteria NVDIMM
 
 Sostituire la batteria NVDIMM rimuovendo la batteria guasta dal modulo controller e installando la batteria sostitutiva nel modulo controller.
@@ -230,6 +233,7 @@ Assicurarsi che la spina si blocchi nella presa.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller e riavviarlo.
@@ -278,6 +282,7 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

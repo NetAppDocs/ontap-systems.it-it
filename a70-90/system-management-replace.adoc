@@ -30,6 +30,7 @@ Questa procedura utilizza la seguente terminologia:
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -176,9 +177,13 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 ====
 
 
+[[step-2-replace-the-system-management-module]]
 == Passaggio 2: sostituire il modulo di gestione del sistema
 
 Sostituire il modulo di gestione del sistema danneggiato.
+
+
+WARNING: Il modulo di gestione del sistema non è hot-swappable. Prima di sostituirlo, reinserisci le unità, spegni il nodo, scollega l'alimentazione del controller ed estrai il controller di qualche centimetro dallo chassis.
 
 .Fasi
 . Assicurarsi che tutte le unità nello chassis siano saldamente posizionate contro il midplane, utilizzando i pollici per spingere ciascuna unità fino a quando non si avverte un arresto positivo.
@@ -313,6 +318,7 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 
 
 
+[[step-3-reboot-the-controller]]
 == Fase 3: Riavviare il controller
 
 Riavviare il modulo controller.
@@ -335,6 +341,7 @@ Riavviare il modulo controller.
 
 
 
+[[step-4-install-licenses-and-register-serial-number]]
 == Passaggio 4: Installare le licenze e registrare il numero seriale
 
 È necessario installare nuove licenze per il nodo se il nodo danneggiato stava utilizzando le funzioni ONTAP che richiedono una licenza standard (con blocco dei nodi). Per le funzionalità con licenze standard, ogni nodo del cluster deve disporre di una propria chiave per la funzionalità.
@@ -373,6 +380,7 @@ NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e in
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

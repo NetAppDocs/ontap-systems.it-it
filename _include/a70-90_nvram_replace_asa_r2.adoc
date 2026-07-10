@@ -4,6 +4,9 @@
 
 Sostituire il modulo NVRAM o i DIMM NVRAM utilizzando l'opzione appropriata.
 
+
+WARNING: Il modulo NVRAM non è hot-swappable. Prima di sostituirlo, reinserisci le unità, spegni il nodo, scollega l'alimentazione del controller ed estrai il controller di qualche centimetro dallo chassis.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Sostituire il modulo NVRAM
@@ -169,6 +172,7 @@ NOTE: Se si dispone di alimentatori CC, ricollegare il blocco di alimentazione a
 ====
 
 
+[[step-3-verify-controller-state]]
 == Fase 3: Verifica dello stato del controller
 
 All'avvio del controller, è necessario confermare lo stato del controller collegato al pool di dischi.

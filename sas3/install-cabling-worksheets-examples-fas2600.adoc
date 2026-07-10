@@ -26,6 +26,7 @@ image::../media/drw_fas2600_cable_color_key.png[Chiave colore cavo per piattafor
 
 
 
+[[fas2820-platform-in-a-multipath-ha-configuration-with-no-external-shelves]]
 == Piattaforma FAS2820 in una configurazione ha multipath senza shelf esterni
 
 L'esempio seguente mostra che non è necessario alcun cablaggio per la connettività ha multipath:
@@ -34,6 +35,7 @@ image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[FAS2820 ha multipath senz
 
 
 
+[[fas2820-platform-in-a-tri-path-ha-configuration-with-no-external-shelves]]
 == Piattaforma FAS2820 in configurazione ha a tre percorsi senza shelf esterni
 
 Il seguente esempio di cablaggio mostra il cablaggio necessario tra i due controller per ottenere la connettività a tre percorsi:
@@ -42,6 +44,7 @@ image::../media/drw_fas2800_noshelf_tpha_IEOPS-955.svg[Esempio di cablaggio ha T
 
 
 
+[[fas2820-platform-in-a-tri-path-ha-configuration-with-one-multi-shelf-stack]]
 == Piattaforma FAS2820 in una configurazione ha a tre percorsi con uno stack multi-shelf
 
 Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b1:
@@ -52,6 +55,7 @@ image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[Esempio di cablaggio 
 
 
 
+[[platforms-with-internal-storage-in-a-multipath-ha-configuration-with-one-multi-shelf-stack]]
 == Piattaforme con storage interno in una configurazione ha multipath con uno stack multi-shelf
 
 Il seguente foglio di lavoro e l'esempio di cablaggio utilizza la coppia di porte 0a/0b:

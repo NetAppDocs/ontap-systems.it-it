@@ -15,6 +15,7 @@ Il supporto di avvio del sistema AFF A70 o AFF A90 memorizza i dati essenziali d
 
 
 
+[[step-1-replace-the-boot-media]]
 == Fase 1: Sostituire il supporto di avvio
 
 Il supporto di avvio si trova all'interno del modulo di gestione del sistema ed è accessibile rimuovendo il modulo dal sistema.
@@ -88,6 +89,7 @@ Supporto di boot
 
 
 
+[[step-2-transfer-the-boot-image-to-the-boot-media]]
 == Fase 2: Trasferire l'immagine di avvio sul supporto di avvio
 
 Il supporto di avvio sostitutivo installato non è dotato di un'immagine ONTAP. È possibile trasferire l'immagine ONTAP sul supporto di avvio sostitutivo scaricando l'immagine di servizio ONTAP appropriata da https://mysupport.netapp.com/["Sito di supporto NetApp"] a un'unità flash USB e quindi al supporto di avvio sostitutivo.

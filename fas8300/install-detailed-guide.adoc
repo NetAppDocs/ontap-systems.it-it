@@ -15,6 +15,7 @@ Questa guida fornisce istruzioni dettagliate e dettagliate per l'installazione d
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema, è necessario creare un account, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -163,6 +164,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla config
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -186,6 +188,7 @@ image::../media/drw_a320_cable_management_arms.png[Rimozione o installazione dei
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Fase 3: Collegare i controller alla rete
 
 È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
@@ -195,6 +198,7 @@ NOTE: Se le etichette delle porte sulla scheda non sono visibili, controllare l'
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster]]
 === Opzione 1: Collegare un cluster senza switch a due nodi
 
 Le porte dati opzionali, le schede NIC opzionali e le porte di gestione dei moduli controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate su entrambi i moduli controller.
@@ -223,6 +227,7 @@ image::../media/drw_fas8300_TNSC_network_cabling.png[Schema di cablaggio del clu
 
 
 
+[[option-2-cable-a-switched-cluster]]
 === Opzione 2: Cavo a del cluster con switch
 
 Le porte dati opzionali, le schede NIC opzionali, le schede mezzanine e le porte di gestione dei moduli controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate al cluster/switch ha.
@@ -251,10 +256,12 @@ image::../media/drw_fas8300_switched_network_cabling.png[Schema del cablaggio di
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
 
 
+[[option-1-cable-the-controllers-to-sas-drive-shelves]]
 === Opzione 1: Collegare i controller agli shelf di dischi SAS
 
 È necessario collegare ciascun controller ai moduli IOM su entrambi gli shelf di dischi SAS.
@@ -279,12 +286,14 @@ image::../media/drw_fas8300_three-ds224c_shelves.png[Diagramma di cablaggio dei 
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Fase 5: Completare l'installazione e la configurazione del sistema
 
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opzione 1: Completamento della configurazione e della configurazione del sistema se è attivato il rilevamento della rete
 
 Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l'installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
@@ -346,6 +355,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Downlo
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opzione 2: Completamento della configurazione e della configurazione del sistema se il rilevamento della rete non è attivato
 
 Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.

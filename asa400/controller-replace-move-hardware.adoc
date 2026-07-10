@@ -15,6 +15,7 @@ Sostituisci il controller nel tuo sistema ASA A400 quando un guasto hardware lo 
 
 
 
+[[step-1-remove-the-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -89,6 +90,7 @@ Fermi di rilascio del montante
 
 
 
+[[step-2-move-the-power-supplies]]
 == Fase 2: Spostare gli alimentatori
 
 Spostare gli alimentatori sul modulo controller sostitutivo.
@@ -142,6 +144,7 @@ NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza
 
 
 
+[[step-3-move-the-nvdimm-battery]]
 == Fase 3: Spostare la batteria NVDIMM
 
 Spostare la batteria NVDIMM nel modulo controller sostitutivo.
@@ -198,6 +201,7 @@ NOTE: Non ricollegare il cavo della batteria alla scheda madre fino a quando non
 
 
 
+[[step-4-move-the-boot-media]]
 == Fase 4: Spostare il supporto di avvio
 
 Spostare il supporto di avvio nel modulo controller sostitutivo.
@@ -250,6 +254,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-5-move-the-pcie-risers-and-mezzanine-card]]
 == Fase 5: Spostare i riser PCIe e la scheda mezzanine
 
 Spostare i riser PCIe e la scheda mezzanine sul modulo controller di ricambio.
@@ -329,6 +334,7 @@ Il riser si solleva leggermente dal modulo controller.
 
 
 
+[[step-6-move-the-dimms]]
 == Fase 6: Spostare i DIMM
 
 Spostare i moduli DIMM nel modulo controller sostitutivo.
@@ -399,6 +405,7 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 
 
 
+[[step-7-install-the-controller-module]]
 == Fase 7: Installare il modulo controller
 
 Reinstallare il modulo controller e riavviarlo.

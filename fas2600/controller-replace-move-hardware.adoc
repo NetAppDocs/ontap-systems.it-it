@@ -17,6 +17,7 @@ link:https://youtu.be/2_uWRt_iJqk["Video sulla sostituzione del controller AFF F
 
 
 
+[[step-1-remove-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 Per sostituire il modulo controller, è necessario prima rimuovere il vecchio modulo controller dal telaio.
@@ -45,6 +46,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo co
 
 
 
+[[step-2-move-the-boot-media]]
 == Fase 2: Spostare il supporto di avvio
 
 Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecchio modulo controller e inserirlo nel nuovo modulo controller.
@@ -69,6 +71,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-3-move-the-nvmem-battery]]
 == Fase 3: Spostare la batteria NVMEM
 
 Per spostare la batteria NVMEM dal vecchio modulo controller al nuovo modulo controller, è necessario eseguire una sequenza specifica di passaggi.
@@ -109,6 +112,7 @@ image::../media/drw_2600_nvmem_battery_move_animated_gif.png[Sostituzione della 
 
 
 
+[[step-4-move-the-dimms]]
 == Fase 4: Spostamento dei DIMM
 
 Per spostare i DIMM, seguire le istruzioni per individuarli e spostarli dal vecchio modulo controller al modulo controller sostitutivo.
@@ -152,6 +156,7 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 
 
 
+[[step-5-move-the-caching-module]]
 == Fase 5: Spostare il modulo di caching
 
 Per spostare un modulo di caching denominato scheda M.2 PCIe sull'etichetta del controller, individuarlo e spostarlo dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
@@ -180,6 +185,7 @@ Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
 
 
 
+[[step-6-install-the-controller]]
 == Fase 6: Installare il controller
 
 Dopo aver installato i componenti del vecchio modulo controller nel nuovo modulo controller, è necessario installare il nuovo modulo controller nel telaio del sistema e avviare il sistema operativo.

@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche selezionate per il FAS9500.  Visita 
 
 
 
+[[key-specifications-for-fas9500]]
 === Specifiche chiave per FAS9500
 
 Configurazione della piattaforma: coppia HA a telaio singolo FAS9500
@@ -33,6 +34,7 @@ Versione minima ONTAP : ONTAP 9.10.1P3
 
 
 
+[[scaleout-maximums]]
 === Massimi di scalabilità
 
 |===
@@ -51,6 +53,7 @@ Versione minima ONTAP : ONTAP 9.10.1P3
 |===
 
 
+[[io]]
 === Io
 
 
@@ -109,12 +112,14 @@ Nessun dato IO a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rete di archiviazione supportata
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 con NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 8004 BTU/ora
@@ -130,6 +135,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -142,6 +148,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilità
 
 Controller di gestione della scheda base (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS tramite connessioni SAS per ripiani esterni;

@@ -15,6 +15,7 @@ Sostituisci il controller nel tuo sistema di archiviazione ASA A20, ASA A30 o AS
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -25,6 +26,7 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
+[[step-1-remove-the-controller]]
 == Fase 1: Rimuovere il controller
 
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
@@ -136,6 +138,7 @@ Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguett
 
 
 
+[[step-2-move-the-power-supply]]
 == Fase 2: Spostare l'alimentatore
 
 Spostare l'alimentatore (PSU) sul controller sostitutivo.
@@ -273,6 +276,7 @@ NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza
 ====
 
 
+[[step-3-move-the-fans]]
 == Fase 3: Spostare le ventole
 
 Spostare le ventole sul controller sostitutivo.
@@ -301,6 +305,7 @@ image::../media/icon_round_2.png[Numero di didascalia 2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Fase 4: Spostare la batteria NV
 
 Spostare la batteria NV sulla centralina di ricambio.
@@ -353,6 +358,7 @@ La batteria NV deve essere posizionata a filo nel relativo vano.
 
 
 
+[[step-5-move-system-dimms]]
 == Fase 5: Spostare i DIMM di sistema
 
 Spostare i moduli DIMM nel controller sostitutivo.
@@ -420,6 +426,7 @@ CAUTION: Prima di chiudere il coperchio del controller danneggiato, assicurarsi 
 
 
 
+[[step-6-move-the-boot-media]]
 == Fase 6: Spostare il supporto di avvio
 
 Spostare il supporto di avvio sul controller sostitutivo.
@@ -470,6 +477,7 @@ Estrarre delicatamente l'estremità sinistra del supporto di avvio dal relativo 
 
 
 
+[[step-7-move-the-io-modules]]
 == Fase 7: Spostare i moduli i/O.
 
 Spostare i moduli di i/o ed eventuali moduli di chiusura di i/o sul controller sostitutivo.
@@ -521,6 +529,7 @@ Estrarre il modulo i/o dal controller utilizzando la linguetta dell'etichetta de
 
 
 
+[[step-8-install-the-controller]]
 == Fase 8: Installare il controller
 
 Reinstallare il controller nel telaio e riavviarlo.

@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche selezionate per l' ASA A400.  Visita
 
 
 
+[[key-specifications-for-asa-a400]]
 === Specifiche chiave per ASA A400
 
 Configurazione della piattaforma: coppia HA a chassis singolo ASA A400 , bundle Ethernet
@@ -33,6 +34,7 @@ Versione minima ONTAP : ONTAP 9.13.1
 
 
 
+[[scaleout-maximums]]
 === Massimi di scalabilità
 
 |===
@@ -51,6 +53,7 @@ Versione minima ONTAP : ONTAP 9.13.1
 |===
 
 
+[[io]]
 === Io
 
 
@@ -121,12 +124,14 @@ Versione minima ONTAP : ONTAP 9.13.1
 |===
 
 
+[[storage-networking-supported]]
 === Rete di archiviazione supportata
 
 FC; iSCSI; NVMe/FC ; NVMe/TCP;
 
 
 
+[[system-environment-specifications]]
 === Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 4209 BTU/ora
@@ -142,6 +147,7 @@ FC; iSCSI; NVMe/FC ; NVMe/TCP;
 
 
 
+[[compliance]]
 === Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -154,6 +160,7 @@ FC; iSCSI; NVMe/FC ; NVMe/TCP;
 
 
 
+[[high-availability]]
 === Alta disponibilità
 
 Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS tramite connessioni SAS;

@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[key-specifications-for-asa-c400]]
 == Specifiche chiave per ASA C400
 
 * Configurazione della piattaforma: coppia HA a chassis singolo ASA C400A, bundle Ethernet
@@ -28,6 +29,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[scaleout-maximums]]
 == Massimi di scalabilità
 
 * Tipo: NAS
@@ -37,10 +39,12 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[io]]
 == I/O
 
 
 
+[[onboard-io]]
 === I/O integrato
 
 * Protocollo: Ethernet 100 Gbps; Porte: 4
@@ -49,6 +53,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[total-io]]
 === Totale I/O
 
 * Protocollo: Ethernet 100 Gbps; Porte: 24
@@ -61,6 +66,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[management-ports]]
 === Porte di gestione
 
 * Protocollo: Ethernet 1 Gbps; Porte: 2
@@ -70,6 +76,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[storage-networking-supported]]
 == Rete di archiviazione supportata
 
 * FC
@@ -79,6 +86,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[system-environment-specifications]]
 == Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 4209 BTU/ora
@@ -94,6 +102,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[compliance]]
 == Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -106,6 +115,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione ASA 
 
 
 
+[[high-availability]]
 == Alta disponibilità
 
 * Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP

@@ -15,6 +15,7 @@ Per garantire la sicurezza dei dati sul sistema di archiviazione, è necessario 
 
 
 
+[[step-1-check-nve-support-and-download-the-correct-ontap-image]]
 == Passaggio 1: verificare il supporto NVE e scaricare l'immagine ONTAP corretta
 
 Determina se la tua versione ONTAP supporta NetApp Volume Encryption (NVE), in modo da poter scaricare l'immagine ONTAP corretta per la sostituzione del supporto di avvio.
@@ -41,6 +42,7 @@ NOTE: Scarica l'immagine ONTAP dal sito di supporto NetApp sul tuo server HTTP o
 
 
 
+[[step-2-verify-key-manager-status-and-back-up-configuration]]
 == Passaggio 2: verificare lo stato del gestore delle chiavi ed eseguire il backup della configurazione
 
 Prima di spegnere il controller danneggiato, verificare la configurazione del gestore delle chiavi ed eseguire il backup delle informazioni necessarie.

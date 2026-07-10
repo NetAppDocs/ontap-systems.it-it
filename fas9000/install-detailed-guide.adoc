@@ -15,6 +15,7 @@ Questa guida fornisce istruzioni dettagliate e dettagliate per l'installazione d
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema, è necessario creare un account sul NetApp Support Site, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -178,6 +179,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla config
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -205,12 +207,14 @@ image::../media/drw_9000_cable_management_arms.png[Collegare i bracci di gestion
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Fase 3: Collegare i controller alla rete
 
 È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
 
 
 
+[[option-1-two-node-switchless-cluster]]
 === Opzione 1: Cluster senza switch a due nodi
 
 La rete di gestione, la rete dati e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.
@@ -237,6 +241,7 @@ image::../media/drw_9000_TNSC_composite_cabling.png[Schema di cablaggio composit
 
 
 
+[[option-2-switched-cluster]]
 === Opzione 2: Cluster con switch
 
 La rete di gestione, la rete dati e le porte di gestione dei controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate al cluster/switch ha.
@@ -263,12 +268,14 @@ image:../media/drw_9000_switched_cluster_cabling.png["Schema di cablaggio compos
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
 È possibile collegare il nuovo sistema agli shelf DS212C, DS224C o NS224, a seconda che si tratti di un sistema AFF o FAS.
 
 
 
+[[option-1-cable-the-controllers-to-ds212c-or-ds224c-drive-shelves]]
 === Opzione 1: Collegare i controller agli shelf di dischi DS212C o DS224C
 
 È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi DS212C o DS224C.
@@ -320,6 +327,7 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png["Cablaggio del sistema
 
 
 
+[[option-2-cable-the-controllers-to-a-single-ns224-drive-shelf-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opzione 2: Collegare i controller a un singolo shelf di dischi NS224 solo nei sistemi ASA AFF A700 con ONTAP 9.8 e versioni successive
 
 È necessario collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224 su un AFF A700 o ASA AFF A700 con sistema ONTAP 9.8 o successivo.
@@ -355,6 +363,7 @@ image::../media/single_NS224_shelf.png[Cablaggio a shelf singolo]
 
 
 
+[[option-3-cable-the-controllers-to-two-ns224-drive-shelves-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opzione 3: Collegare i controller a due shelf di dischi NS224 nei sistemi ASA AFF A700 che eseguono solo ONTAP 9.8 e versioni successive
 
 È necessario collegare ciascun controller ai moduli NSM sugli shelf di dischi NS224 su un AFF A700 o ASA AFF A700 con sistema ONTAP 9.8 o successivo.
@@ -390,12 +399,14 @@ image::../media/two_NS224_shelves.png[Cablaggio a doppio shelf]
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Fase 5: Completare l'installazione e la configurazione del sistema
 
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opzione 1: Completamento della configurazione e della configurazione del sistema se è attivato il rilevamento della rete
 
 Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l'installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
@@ -468,6 +479,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Downlo
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opzione 2: Completamento della configurazione e della configurazione del sistema se il rilevamento della rete non è attivato
 
 Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.

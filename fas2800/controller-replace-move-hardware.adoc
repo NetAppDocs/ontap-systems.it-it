@@ -17,6 +17,7 @@ Sostituire l'hardware del modulo controller guasto rimuovendo il controller guas
 video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
 
 
+[[step-1-remove-controller-module]]
 == Fase 1: Rimuovere il modulo controller
 
 Rimuovere il modulo controller guasto dal telaio.
@@ -51,6 +52,7 @@ Pulsante di rilascio del coperchio del modulo controller
 |===
 
 
+[[step-2-move-the-nvmem-battery]]
 == Fase 2: Spostare la batteria NVMEM
 
 Rimuovere la batteria NVMEM dal modulo controller guasto e installarla nel modulo controller sostitutivo.
@@ -98,6 +100,7 @@ NOTE: Non collegare ancora la batteria.  La si collega una volta spostati i comp
 
 
 
+[[step-3-remove-the-mezzanine-card]]
 == Fase 3: Rimuovere la scheda mezzanine
 
 Rimuovere la piastra di i/o e la scheda mezzanine PCIe dal modulo controller danneggiato.
@@ -132,6 +135,7 @@ NOTE: È possibile allentare le viti a testa zigrinata con le dita o con un cacc
 
 
 
+[[step-4-move-the-boot-media]]
 == Fase 4: Spostare il supporto di avvio
 
 Rimuovere il supporto di avvio dal modulo controller guasto e installarlo nel modulo controller sostitutivo.
@@ -175,6 +179,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 
+[[step-5-install-the-mezzanine-card-in-the-replacement-controller]]
 == Fase 5: Installare la scheda mezzanine nel controller sostitutivo
 
 Installare la scheda mezzanine nel modulo controller sostitutivo.
@@ -191,6 +196,7 @@ Installare la scheda mezzanine nel modulo controller sostitutivo.
 
 
 
+[[step-6-move-the-dimms]]
 == Fase 6: Spostare i DIMM
 
 Rimuovere i DIMM dal modulo controller guasto e installarli nel modulo controller sostitutivo.
@@ -250,6 +256,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 
 
+[[step-7-move-a-caching-module]]
 == Fase 7: Spostare un modulo di caching
 
 Rimuovere il modulo di caching dal modulo controller compromesso, installarlo nel modulo controller sostitutivo.
@@ -295,6 +302,7 @@ NOTE: Se il collegamento della batteria risulta difficoltoso, rimuovere la batte
 
 
 
+[[step-8-install-the-nv-battery]]
 == Fase 8: Installare la batteria NV
 
 Installare la batteria NV nel modulo controller sostitutivo.
@@ -310,6 +318,7 @@ Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda ma
 
 
 
+[[step-9-install-the-controller]]
 == Fase 9: Installare il controller
 
 Installare il modulo controller sostitutivo nello chassis del sistema e avviare il ONTAP.

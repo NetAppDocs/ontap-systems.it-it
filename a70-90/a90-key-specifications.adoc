@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 
 
+[[aff-a90-specifications-at-a-glance]]
 == Specifiche AFF A90 in sintesi
 
 * Configurazione della piattaforma: coppia HA a telaio singolo AFF A90
@@ -28,6 +29,7 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 
 
+[[scaleout-maximums]]
 == Massimi di scalabilità
 
 * Tipo: NAS; Coppie HA: 12; Capacità raw: 79,3 PB / 70,4 PiB; Memoria massima: 24576 GB
@@ -37,16 +39,19 @@ Di seguito sono riportate alcune specifiche per il sistema di archiviazione AFF 
 
 
 
+[[io]]
 == I/O
 
 
 
+[[onboard-io]]
 === I/O integrato
 
 Nessun dato I/O integrato.
 
 
 
+[[total-io]]
 === Totale I/O
 
 * Protocollo: Ethernet 200 Gbps; Porte: 24
@@ -61,6 +66,7 @@ Nessun dato I/O integrato.
 
 
 
+[[management-ports]]
 === Porte di gestione
 
 * Protocollo: Ethernet 1 Gbps; Porte: 2
@@ -70,6 +76,7 @@ Nessun dato I/O integrato.
 
 
 
+[[storage-networking-supported]]
 == Rete di archiviazione supportata
 
 * CIFS
@@ -95,6 +102,7 @@ Nessun dato I/O integrato.
 
 
 
+[[system-environment-specifications]]
 == Specifiche dell'ambiente di sistema
 
 * Potenza tipica: 8304 BTU/ora
@@ -110,6 +118,7 @@ Nessun dato I/O integrato.
 
 
 
+[[compliance]]
 == Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -122,6 +131,7 @@ Nessun dato I/O integrato.
 
 
 
+[[high-availability]]
 == Alta disponibilità
 
 * Controller di gestione della scheda madre basato su Ethernet (BMC) e interfaccia di gestione ONTAP

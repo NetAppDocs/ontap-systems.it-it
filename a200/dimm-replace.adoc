@@ -20,6 +20,7 @@ summary: È necessario sostituire un DIMM nel controller quando il sistema stora
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -75,6 +76,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[step-2-remove-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del controller, rimuovere prima il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -101,6 +103,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo co
 
 
 
+[[step-3-replace-the-dimms]]
 == Fase 3: Sostituire i DIMM
 
 Per sostituire i moduli DIMM, individuarli all'interno del controller e seguire la sequenza di passaggi specifica.
@@ -167,6 +170,7 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Dopo aver sostituito i componenti del modulo controller, reinstallarlo nel telaio.
@@ -225,6 +229,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 |===
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

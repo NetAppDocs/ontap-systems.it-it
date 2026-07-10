@@ -15,6 +15,7 @@ NOTE: Prima di sostituire il modulo NVRAM12-EX, assicurati di spegnere il contro
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Spegnere o sostituire il controller compromesso.
@@ -72,6 +73,7 @@ Il parametro _-halt true_ porta il nodo danneggiato al prompt LOADER.
 
 
 
+[[step-2-replace-the-nvram12-ex-module-nvram-dimm-or-nvram-battery]]
 == Passaggio 2: Sostituisci il modulo NVRAM12-EX, il DIMM NVRAM o la batteria NVRAM
 
 Sostituisci il modulo NVRAM12-EX, i DIMM NVRAM o la batteria NVRAM utilizzando le seguenti opzioni.
@@ -476,6 +478,7 @@ image:../media/icon_round_1.png["Numero di didascalia 1"]
 ====
 
 
+[[step-3-reboot-the-controller]]
 == Fase 3: Riavviare il controller
 
 Dopo aver sostituito la FRU, è necessario riavviare il modulo controller.
@@ -489,6 +492,7 @@ Il sistema inizierà a riavviarsi, in genere al prompt del CARICATORE.
 
 
 
+[[step-4-complete-nvram12-ex-replacement]]
 == Passaggio 4: Completa la sostituzione della NVRAM12-EX
 
 Esegui i seguenti passaggi per completare la sostituzione della NVRAM12-EX.
@@ -558,6 +562,7 @@ NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalit�
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

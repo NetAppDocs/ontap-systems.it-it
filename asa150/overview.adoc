@@ -15,6 +15,7 @@ Di seguito sono riportate alcune specifiche selezionate per l' ASA A150.  Visita
 
 
 
+[[key-specifications-for-asa-a150]]
 === Specifiche chiave per ASA A150
 
 Configurazione della piattaforma: ASA A150 UTA2 Single Chassis HA Pair
@@ -33,6 +34,7 @@ Versione minima ONTAP : ONTAP 9.13.1
 
 
 
+[[scaleout-maximums]]
 === Massimi di scalabilità
 
 |===
@@ -51,6 +53,7 @@ Versione minima ONTAP : ONTAP 9.13.1
 |===
 
 
+[[io]]
 === Io
 
 
@@ -109,18 +112,21 @@ Versione minima ONTAP : ONTAP 9.13.1
 |===
 
 
+[[storage-networking-supported]]
 === Rete di archiviazione supportata
 
 FC; iSCSI; NVMe/TCP;
 
 
 
+[[system-environment-specifications]]
 === Specifiche dell'ambiente di sistema
 
 Nessun dato ambientale disponibile.
 
 
 
+[[compliance]]
 === Conformità
 
 * Certificazioni EMC/EMI: AMCA, FCC, ICES, KC, Marocco, VCCI
@@ -133,6 +139,7 @@ Nessun dato ambientale disponibile.
 
 
 
+[[high-availability]]
 === Alta disponibilità
 
 Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS tramite connessioni SAS;

@@ -15,6 +15,7 @@ Questa pagina fornisce istruzioni dettagliate per l'installazione di un sistema 
 
 
 
+[[step-1-prepare-for-installation]]
 == Fase 1: Preparazione per l'installazione
 
 Per installare il sistema AFF A220, è necessario creare un account sul sito del supporto NetApp, registrare il sistema e ottenere le chiavi di licenza. È inoltre necessario inventariare il numero e il tipo di cavi appropriati per il sistema e raccogliere informazioni di rete specifiche.
@@ -167,6 +168,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Foglio di lavoro 
 
 
 
+[[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
 È necessario installare il sistema in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
@@ -190,12 +192,14 @@ image::../media/drw_cable_management_arm_install.png[Collegamento dei dispositiv
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Fase 3: Collegare i controller alla rete
 
 È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster-unified-network-configuration]]
 === Opzione 1: Collegamento via cavo a un cluster senza switch a due nodi, configurazione di rete unificata
 
 La rete di gestione, la rete dati UTA2 e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.
@@ -272,6 +276,7 @@ NON collegare i cavi di alimentazione a questo punto.
 
 
 
+[[option-2-cable-a-switched-cluster-unified-network-configuration]]
 === Opzione 2: Collegamento via cavo a a un cluster con switch, configurazione di rete unificata
 
 La rete di gestione, la rete dati UTA2 e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate agli switch di interconnessione del cluster.
@@ -349,6 +354,7 @@ NON collegare i cavi di alimentazione a questo punto.
 
 
 
+[[option-3-cable-a-two-node-switchless-cluster-ethernet-network-configuration]]
 === Opzione 3: Collegare un cluster senza switch a due nodi, configurazione di rete Ethernet
 
 La rete di gestione, la rete dati Ethernet e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.
@@ -413,6 +419,7 @@ NON collegare i cavi di alimentazione a questo punto.
 
 
 
+[[option-4-cable-a-switched-cluster-ethernet-network-configuration]]
 === Opzione 4: Cluster con switch via cavo a, configurazione di rete Ethernet
 
 La rete di gestione, la rete dati Ethernet e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate agli switch di interconnessione del cluster.
@@ -475,12 +482,14 @@ NON collegare i cavi di alimentazione a questo punto.
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
 È necessario collegare i controller agli shelf utilizzando le porte di storage integrate. NetApp consiglia il cablaggio MP-ha per i sistemi con storage esterno. Se si dispone di un'unità a nastro SAS, è possibile utilizzare il cablaggio a percorso singolo. Se non si dispone di shelf esterni, il cablaggio MP-ha alle unità interne è opzionale (non mostrato) se i cavi SAS vengono ordinati con il sistema.
 
 
 
+[[option-1-cable-storage-on-an-ha-pair-with-external-drive-shelves]]
 === Opzione 1: Storage via cavo su una coppia ha con shelf di dischi esterni
 
 È necessario collegare i collegamenti shelf-to-shelf, quindi collegare entrambi i controller agli shelf di dischi.
@@ -551,12 +560,14 @@ Se si dispone di più shelf di dischi, consultare la _Guida all'installazione e 
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Fase 5: Completare l'installazione e la configurazione del sistema
 
 È possibile completare l'installazione e la configurazione del sistema utilizzando il rilevamento del cluster solo con una connessione allo switch e al laptop oppure collegandosi direttamente a un controller del sistema e quindi allo switch di gestione.
 
 
 
+[[option-1-complete-system-setup-if-network-discovery-is-enabled]]
 === Opzione 1: Completare la configurazione del sistema se è attivato il rilevamento della rete
 
 Se sul laptop è attivata la funzione di rilevamento della rete, è possibile completare l'installazione e la configurazione del sistema utilizzando la funzione di rilevamento automatico del cluster.
@@ -610,6 +621,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla config
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opzione 2: Completamento della configurazione e della configurazione del sistema se il rilevamento della rete non è attivato
 
 Se il rilevamento della rete non è abilitato sul laptop, è necessario completare la configurazione e la configurazione utilizzando questa attività.

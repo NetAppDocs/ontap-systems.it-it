@@ -15,6 +15,7 @@ Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, co
 
 
 
+[[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == Fase 1: Verificare e impostare lo stato ha del telaio
 
 È necessario verificare lo stato ha dello chassis e, se necessario, aggiornarlo in modo che corrisponda alla configurazione del sistema.
@@ -50,6 +51,7 @@ Viene visualizzato il prompt DEL CARICATORE.
 
 
 
+[[step-2-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Fase 2: Switch back aggregates in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
@@ -106,6 +108,7 @@ Se il completamento di uno switchback richiede molto tempo, è possibile verific
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Fase 3: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

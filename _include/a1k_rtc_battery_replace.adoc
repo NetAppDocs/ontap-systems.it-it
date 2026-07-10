@@ -11,6 +11,7 @@
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -157,6 +158,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal contenitore quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -216,6 +218,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si e
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == Fase 3: Sostituire la batteria RTC
 
 Rimuovere la batteria RTC guasta e installare la batteria RTC di ricambio.
@@ -252,6 +255,7 @@ NOTE: Prestare attenzione alla polarità della batteria quando la si rimuove dal
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller e avviarlo.
@@ -277,6 +281,7 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 
 
+[[step-5-reset-the-time-and-date-on-the-controller]]
 == Passaggio 5: Reimpostare l'ora e la data sul controller
 
 
@@ -303,6 +308,7 @@ NOTE: Se il sistema si arresta al menu di avvio, selezionare l'opzione per  `Reb
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

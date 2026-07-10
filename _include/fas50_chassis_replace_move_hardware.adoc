@@ -4,6 +4,7 @@
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -14,6 +15,7 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
+[[step-1-remove-the-controller]]
 == Fase 1: Rimuovere il controller
 
 È necessario rimuovere il controller dal telaio quando si sostituisce il controller o un componente all'interno del controller.
@@ -125,6 +127,7 @@ Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguett
 
 
 
+[[step-2-remove-the-caching-modules-from-the-impaired-chassis]]
 == Passaggio 2: Rimuovere i moduli di caching dal telaio danneggiato
 
 È necessario rimuovere eventuali moduli di caching e alloggiamenti delle unità dallo chassis danneggiato in modo da poterli installare nello chassis di sostituzione in un secondo momento della procedura.
@@ -170,6 +173,7 @@ Quando si rimuove un modulo di caching, utilizzare sempre due mani per sostenern
 
 
 
+[[step-3-replace-the-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == Fase 3: Sostituire lo chassis dall'interno del rack dell'apparecchiatura o dell'armadio del sistema
 
 Rimuovere lo chassis danneggiato dal rack dell'apparecchiatura o dall'armadietto del sistema, installare lo chassis sostitutivo, installare i controller, installare i moduli di caching e i contenitori per unità, quindi installare il pannello frontale.
@@ -189,6 +193,7 @@ NOTE: Se il sistema di archiviazione viene fornito in un cabinet del sistema Net
 
 
 
+[[step-4-install-the-controllers]]
 == Fase 4: Installare i controller
 
 Installare i controller nel telaio sostitutivo e riavviarli.

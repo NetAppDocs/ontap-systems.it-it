@@ -34,6 +34,7 @@ Il sistema storage include tre LED di posizione: uno sul pannello di visualizzaz
 
 
 
+[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
 == Fase 1: assicurarsi che il sistema di archiviazione soddisfi i requisiti della procedura
 
 Per utilizzare questa procedura, il sistema storage deve eseguire ONTAP 9.18.1 GA o versione successiva e deve soddisfare tutti i requisiti.
@@ -68,6 +69,7 @@ In determinate situazioni, ONTAP può eseguire automaticamente un takeover di un
 
 
 
+[[step-2-prepare-the-storage-system-and-io-module-slot]]
 == Fase 2: preparare il sistema storage e lo slot del modulo I/O
 
 Prepara il sistema storage e lo slot del modulo I/O in modo che sia sicuro rimuovere il modulo I/O guasto:
@@ -154,6 +156,7 @@ L'output dovrebbe mostrare  `_powered-off_` nella  `_status_` colonna per il mod
 
 
 
+[[step-3-hot-swap-the-failed-io-module]]
 == Passaggio 3: swap a caldo del modulo I/O guasto
 
 Sostituire a caldo il modulo I/O guasto con un modulo I/O equivalente.
@@ -204,6 +207,7 @@ Tieni traccia di quale slot si trovava il modulo I/O.
 
 
 
+[[step-4-bring-the-replacement-io-module-online]]
 == Fase 4: portare online il modulo I/O sostitutivo
 
 Portare online il modulo I/O sostitutivo, verificare che le porte del modulo I/O siano state inizializzate correttamente, verificare che lo slot sia acceso e quindi verificare che il modulo I/O sia online e riconosciuto.
@@ -320,6 +324,7 @@ Slot slot Information
 
 
 
+[[step-5-restore-the-storage-system-to-normal-operation]]
 == Fase 5: Ripristinare il normale funzionamento del sistema di archiviazione
 
 Ripristina il tuo sistema storage al normale funzionamento restituendo lo storage al controller che era stato preso in carico (se necessario), ripristinando la restituzione automatica (se necessario), verificando che i LIF siano sulle loro porte home e riattivando la creazione automatica dei casi AutoSupport.
@@ -365,6 +370,7 @@ Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network 
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

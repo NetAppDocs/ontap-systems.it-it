@@ -10,6 +10,7 @@ Per sostituire un modulo i/o, è necessario eseguire una sequenza specifica di a
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == Fase 1: Spegnere il nodo compromesso
 
 Arrestare o sostituire il controller compromesso utilizzando una delle seguenti opzioni.
@@ -141,6 +142,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 ====
 
 
+[[step-2-replace-io-modules]]
 == Fase 2: Sostituire i moduli i/O.
 
 Per sostituire un modulo i/o, individuarlo all'interno dello chassis e seguire la sequenza specifica dei passaggi.
@@ -197,6 +199,7 @@ Fermo i/o Cam completamente sbloccato
 
 
 
+[[step-3-reboot-the-controller]]
 == Fase 3: Riavviare il controller
 
 Dopo aver sostituito un modulo i/o, è necessario riavviare il modulo controller.
@@ -227,6 +230,7 @@ NOTE: Assicurarsi di uscire dalla modalità di manutenzione dopo aver completato
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Fase 4: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

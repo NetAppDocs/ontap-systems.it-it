@@ -19,6 +19,7 @@ Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo control
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -89,6 +90,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Rimuovere il modulo controller dal sistema, quindi rimuovere il coperchio sul modulo controller.
@@ -112,6 +114,7 @@ image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Rimuovere il
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == Fase 3: Sostituire la batteria RTC
 
 Sostituire la batteria RTC individuandola all'interno del controller e seguire la sequenza specifica di passaggi.
@@ -136,6 +139,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
 Reinstallare il modulo controller e avviarlo al prompt DEL CARICATORE.
@@ -171,6 +175,7 @@ Il controller inizia ad avviarsi non appena viene inserito nello chassis.
 
 
 
+[[step-5-set-timedate-after-rtc-battery-replacement]]
 == Fase 5: Impostare la data e l'ora dopo la sostituzione della batteria RTC
 
 . Ripristinare l'ora e la data sul controller:
@@ -190,6 +195,7 @@ Il controller inizia ad avviarsi non appena viene inserito nello chassis.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

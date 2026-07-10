@@ -19,6 +19,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, assumere il controllo del controller in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
@@ -62,6 +63,7 @@ Quando viene visualizzato il controller alterato `Waiting for giveback...`, Prem
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 È necessario rimuovere il modulo controller dal telaio quando si sostituisce il modulo controller o un componente all'interno del modulo controller.
@@ -139,6 +141,7 @@ Condotto dell'aria
 
 
 
+[[step-3-replace-a-dimm]]
 == Fase 3: Sostituire un DIMM
 
 Per sostituire un modulo DIMM, è necessario individuarlo nel modulo controller utilizzando la mappa DIMM all'interno del modulo controller, quindi sostituirlo seguendo la sequenza di passaggi specifica.
@@ -214,6 +217,7 @@ Se è stato rimosso il riser NVRAM, Riser 1, assicurarsi di collegare la batteri
 
 
 
+[[step-4-reinstall-the-controller-module-and-boot-the-system]]
 == Fase 4: Reinstallare il modulo controller e avviare il sistema
 
 Dopo aver sostituito una FRU nel modulo controller, è necessario reinstallare il modulo controller e riavviarlo.
@@ -252,6 +256,7 @@ Il modulo controller inizia ad avviarsi non appena viene ripristinata l'alimenta
 
 
 
+[[step-5return-the-failed-part-to-netapp]]
 == Fase 5: Restituire il componente guasto a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.

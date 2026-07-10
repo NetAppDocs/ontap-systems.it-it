@@ -15,6 +15,7 @@ Arrestare o riprendere il controllo del controller danneggiato utilizzando la pr
 
 
 
+[[option-1-most-systems]]
 == Opzione 1: La maggior parte dei sistemi
 
 Completare l'arresto del controller danneggiato arrestandolo al prompt LOADER e acquisendo le variabili di ambiente di avvio. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire il supporto di avvio.
@@ -58,6 +59,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 
 
 
+[[option-2-controller-is-in-a-metrocluster]]
 === Opzione 2: Controller in un MetroCluster
 
 Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso. NOTA: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
@@ -116,6 +118,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 
 
 
+[[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opzione 3: Controller in un MetroCluster a due nodi
 
 Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.

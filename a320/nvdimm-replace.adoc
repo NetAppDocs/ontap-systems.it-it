@@ -19,6 +19,7 @@ Tutti gli altri componenti del sistema devono funzionare correttamente; in caso 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
@@ -89,6 +90,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
@@ -121,6 +123,7 @@ Il gancio del meccanismo di chiusura deve essere quasi verticale e non deve esse
 
 
 
+[[step-3-replace-the-nvdimm]]
 == Fase 3: Sostituire il modulo NVDIMM
 
 Per sostituire il modulo NVDIMM, individuarlo nel modulo del controller utilizzando l'etichetta della mappa NVDIMM sulla parte superiore del condotto dell'aria, quindi sostituirlo seguendo la sequenza specifica dei passaggi.
@@ -157,6 +160,7 @@ NOTE: Esaminare visivamente il modulo NVDIMM per verificare che sia allineato e 
 
 
 
+[[step-4-install-the-controller-module]]
 == Fase 4: Installare il modulo controller
 
 Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio.
@@ -194,6 +198,7 @@ Il modulo controller inizia ad avviarsi non appena viene inserito completamente 
 
 
 
+[[step-5-restore-the-controller-module-to-operation]]
 == Fase 5: Ripristinare il funzionamento del modulo controller
 
 È necessario recuperare il sistema, restituire il modulo controller e riabilitare il giveback automatico.
@@ -208,6 +213,7 @@ Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di re
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Fase 6: Restituire la parte guasta a NetApp
 
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione delle parti"] pagina per ulteriori informazioni.
