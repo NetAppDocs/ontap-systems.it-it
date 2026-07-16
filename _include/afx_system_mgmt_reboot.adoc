@@ -1,0 +1,51 @@
+= 
+:allow-uri-read: 
+
+
+Dopo aver sostituito il modulo di gestione del sistema, riavvia il controller per ripristinare il normale funzionamento della coppia HA. Devi accendere il controller, eseguire un giveback parziale per avviare l'aggregato root e poi completare il giveback completo per rimettere in servizio il controller guasto.
+
+.Fasi
+. Ricollegare i cavi di alimentazione all'alimentatore.
++
+Il sistema si riavvia, in genere al prompt LOADER.
+
+. Immettere _bye_ al prompt del CARICATORE.
+. Premere <enter> quando i messaggi della console si interrompono.
++
+** Se viene visualizzato il prompt _login_, procedere al passaggio successivo.
+** Se non vedi il prompt di accesso, accedi al nodo partner.
+
+
+. Restituisci solo la radice con l'opzione override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.  Per ulteriori informazioni sui livelli di privilegio, vederelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Comprendere i livelli di privilegio per i comandi CLI ONTAP"^] .
+
++
+In caso di errori, contattare https://support.netapp.com["Supporto NetApp"].
+
+. Attendi 5 minuti dopo il completamento del report di restituzione, quindi controlla gli stati di failover e restituzione:
++
+`storage failover show`E `storage failover show-giveback`
+
++
+
+NOTE: Il seguente comando è disponibile solo nel livello di privilegio Modalità diagnostica.
+
+. Se i collegamenti di interconnessione HA sono stati interrotti, riattivali:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Riportare la centralina guasta al normale funzionamento restituendo la memoria:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Se la restituzione automatica è stata disabilitata, riabilitarla: `storage failover modify -node local -auto-giveback-of true` .
+. Se AutoSupport è attivato, ripristinare/riattivare la creazione automatica dei casi: `system node autosupport invoke -node * -type all -message MAINT=END`.
+

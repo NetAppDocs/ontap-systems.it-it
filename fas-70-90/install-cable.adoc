@@ -90,13 +90,13 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Connessioni clus
 
 Collegare le porte del modulo Ethernet alla rete host.
 
-Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
+Di seguito sono riportati alcuni esempi tipici di cablaggio di rete host. Vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema.
 
 .Fasi
 . Collegare le porte e9a e e9b allo switch di rete dati Ethernet.
 +
 
-NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Utilizzare una scheda host separata.
+NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Usa una scheda host separata.
 
 +
 *Cavo 100 GbE*
@@ -147,7 +147,7 @@ Per il numero massimo di ripiani supportati per il sistema di storage e per tutt
 Per ulteriori istruzioni sul cablaggio degli shelf SAS, vedere link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html["Regole e concetti di cablaggio SAS - shelf con moduli IOM12/IOM12B"].
 
 .A proposito di questa attività
-I sistemi di archiviazione FAS70 e FAS90 supportano gli scaffali DS212C, DS224C, DS460C e NS224 con il modulo NSM100 o NSM100B.
+I sistemi storage FAS70 e FAS90 supportano shelf DS212C, DS224C, DS460C e NS224 con modulo NSM100 o NSM100B.
 
 Le principali differenze tra i moduli NS224 sono:
 
@@ -171,7 +171,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 . Sul controller A, collegare le seguenti porte:
 +
 .. Collegare la porta e11a alla porta NSM A e0a.
-.. Collegare la porta e11b alla porta NSM B e0b.
+.. Collegare la porta e11b alla porta e0b di NSM B.
 +
 image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg["Controller A e11a e e11b su un singolo shelf NS224"]
 
@@ -201,24 +201,24 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 . Sul controller A, collegare le seguenti porte:
 +
 .. Collegare la porta e11a alla porta e0a NSM A dello shelf 1.
-.. Collegare la porta e11b alla porta NSM B e0b dello shelf 2.
-.. Collegare la porta E10A alla porta e0a NSM A dello shelf 2.
 .. Collegare la porta e10b alla porta e0b dello shelf 1 NSM B.
-
-
+.. Collegare la porta E10A alla porta e0a NSM A dello shelf 2.
+.. Collegare la porta e11b alla porta NSM B e0b dello shelf 2.
 +
 image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["Collegare le porte e11a e11b E10A e e10b del controller A a due shelf NS224"]
+
+
 
 . Sul controller B, collegare le seguenti porte:
 +
 .. Collegare la porta e11a alla porta NSM B e0a dello shelf 1.
-.. Collegare la porta e11b alla porta e0b NSM A dello shelf 2.
-.. Collegare la porta E10A alla porta NSM B e0a dello shelf 2.
 .. Collegare la porta e10b alla porta e0b NSM A dello shelf 1.
-
-
+.. Collegare la porta E10A alla porta NSM B e0a dello shelf 2.
+.. Collegare la porta e11b alla porta e0b NSM A dello shelf 2.
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg["Collegare le porte e11a e11b E10A e e10b del controller B a due ripiani NS224"]
+
+
 
 
 

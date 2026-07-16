@@ -13,7 +13,7 @@ summary: 'Sostituire il modulo di gestione del sistema nel sistema di archiviazi
 [role="lead"]
 Sostituire il modulo di gestione del sistema nel sistema di archiviazione AFX 1K quando diventa difettoso o il suo firmware è danneggiato.  Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo di gestione del sistema guasto, il riavvio del controller, l'aggiornamento delle chiavi di licenza e la restituzione della parte guasta a NetApp.
 
-Il modulo di gestione del sistema, situato sul retro del controller a sinistra dello slot 8, contiene componenti integrati per la gestione del sistema, nonché porte per la gestione esterna.  Per sostituire un modulo di gestione del sistema danneggiato o sostituire il supporto di avvio, è necessario arrestare e spegnere il controller di destinazione.
+Il modulo di gestione del sistema, situato sul retro del controller a sinistra dello slot 8, contiene componenti integrati per la gestione del sistema, nonché porte per la gestione esterna. Il controller di destinazione deve essere spento e disattivato per sostituire un modulo di gestione del sistema danneggiato o sostituire il supporto di avvio.
 
 Il modulo di gestione del sistema è dotato dei seguenti componenti integrati:
 
@@ -47,8 +47,6 @@ Questa procedura utilizza la seguente terminologia:
 
 [[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
-
-Spegnere o sostituire il controller compromesso.
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
@@ -119,12 +117,13 @@ Il parametro _-halt true_ porta il nodo danneggiato al prompt LOADER.
 [[step-2-replace-the-impaired-system-management-module]]
 == Fase 2: Sostituire il modulo di gestione del sistema danneggiato
 
-Sostituire il modulo di gestione del sistema danneggiato.
+Il modulo di gestione del sistema contiene il supporto di avvio e fornisce le funzioni di gestione del sistema. Devi rimuovere il modulo di gestione del sistema danneggiato, trasferire il supporto di avvio sul modulo sostitutivo e reinstallare il modulo sostitutivo nell'alloggiamento.
 
+.Fasi
 . Rimuovere il modulo di gestione del sistema:
 +
 
-NOTE: Prima di procedere, verificare che la NVRAM sia stata completata. Quando il LED sul modulo NV è spento, il NVRAM viene rimosso. Se il LED lampeggia, attendere l'arresto del lampeggiamento. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+NOTE: Assicurati che il destage della NVRAM sia completato prima di procedere. Quando il LED sul modulo NV è spento, la NVRAM è stata destaggiata. Se il LED lampeggia, aspetta che smetta di lampeggiare. Se il lampeggio continua per più di 5 minuti, contatta il supporto tecnico per assistenza.
 
 +
 image::../media/drw_a1k_sys-mgmt_remove_ieops-1384.svg[Sostituire il modulo di gestione del sistema]
@@ -207,8 +206,9 @@ Supporto di boot
 [[step-3-reboot-the-controller-module]]
 == Passo 3: Riavviare il modulo controller
 
-Riavviare il modulo controller.
+Dopo aver sostituito il modulo di gestione del sistema, riavvia il controller per ripristinare il normale funzionamento della coppia HA. Devi accendere il controller, eseguire un giveback parziale per avviare l'aggregato root e poi completare il giveback completo per rimettere in servizio il controller guasto.
 
+.Fasi
 . Ricollegare i cavi di alimentazione all'alimentatore.
 +
 Il sistema si riavvia, in genere al prompt LOADER.

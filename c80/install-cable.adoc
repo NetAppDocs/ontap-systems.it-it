@@ -1,7 +1,7 @@
 ---
 permalink: c80/install-cable.html 
 sidebar: sidebar 
-keywords: aff c80, prepare installation 
+keywords: aff c80, prepare installation, cable the hardware 
 summary: Le porte di rete di gestione sui controller sono collegate agli switch. Le porte di interconnessione ha e di interconnessione cluster sono cablate su entrambi i controller. I moduli controller sono collegati a un dispositivo di archiviazione esterno, se ordinato. 
 ---
 = Collegare l'hardware - AFF C80
@@ -58,7 +58,7 @@ Utilizzare il cavo di interconnessione Cluster/ha per collegare le porte da E1a 
 image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cavo ha del cluster]
 
 +
-image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Schema di cablaggio del cluster senza switch a due nodi]
+image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Schema di cablaggio del cluster senza switch a due nodi]
 
 
 
@@ -73,9 +73,10 @@ Utilizzare il cavo 100 GbE per collegare le porte e1a ed e7a dei controller A e 
 +
 *Cavo 100 GbE*
 
-
-
++
 image::../media/oie_cable100_gbe_qsfp28.png[Cavo da 100 GB]
+
+
 
 image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Connessioni cluster via cavo alla rete cluster]
 
@@ -88,13 +89,13 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Connessioni cl
 
 Collegare le porte del modulo Ethernet alla rete host.
 
-Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
+Di seguito sono riportati alcuni esempi tipici di cablaggio di rete host. Vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema.
 
 .Fasi
 . Collegare le porte e9a e e9b allo switch di rete dati Ethernet.
 +
 
-NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Utilizzare una scheda host separata.
+NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Usa una scheda host separata.
 
 +
 *Cavo 100 GbE*
@@ -105,7 +106,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[100GB cavo Ethernet]
 +
 image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cavo alla rete Ethernet 100GB]
 
-. Collegare gli switch di rete host 10/25 GbE.
+. Collega le tue schede 10/25 GbE agli switch della rete host.
 +
 *4 porte, 10/25 GbE host*
 
@@ -142,6 +143,15 @@ Le seguenti procedure di cablaggio mostrano come collegare i controller a uno sh
 
 Per il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
 
+.A proposito di questa attività
+Il sistema storage AFF C80 supporta gli shelf NS224 con il modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:
+
+* I moduli shelf NSM100 utilizzano le porte integrate e0a ed e0b.
+* I moduli shelf NSM100B utilizzano le porte e1a ed e1b nello slot 1.
+
+
+Il seguente esempio di cablaggio mostra i moduli NSM100 negli scaffali NS224 quando si fa riferimento alle porte dei moduli sugli scaffali.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Uno shelf storage NS224
@@ -154,7 +164,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 
 .Fasi
 . Collegare la porta e11a del controller A alla porta NSM A e0a.
-. Collegare la porta e11b del controller A alla porta NSM B e0b.
+. Collegare la porta e11b del controller A alla porta e0b dell'NSM B.
 +
 image:../media/drw_a70-90_1shelf_cabling_a_ieops-1731.svg["Controller A e11a e e11b su un singolo shelf NS224"]
 
@@ -178,9 +188,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 . Sul controller A, collegare le seguenti porte:
 +
 .. Collegare la porta e11a allo shelf 1, la porta NSM A e0a.
-.. Collegare la porta e11b allo shelf 2, la porta NSM B e0b.
-.. Collegare la porta E8a allo shelf 2, la porta NSM A e0a.
 .. Collegare la porta e8b allo shelf 1, la porta NSM B e0b.
+.. Collegare la porta E8a allo shelf 2, la porta NSM A e0a.
+.. Collegare la porta e11b allo shelf 2, la porta NSM B e0b.
 +
 image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Connessioni da controller a shelf per il controller A"]
 
@@ -189,9 +199,9 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Connessioni da contro
 . Sul controller B, collegare le seguenti porte:
 +
 .. Collegare la porta e11a allo shelf 1, la porta NSM B e0a.
-.. Collegare la porta e11b allo shelf 2, la porta NSM A e0b.
-.. Collegare la porta E8a allo shelf 2, la porta NSM B e0a.
 .. Collegare la porta e8b allo shelf 1, la porta NSM A e0b.
+.. Collegare la porta E8a allo shelf 2, la porta NSM B e0a.
+.. Collega la porta e11b allo shelf 2, porta e0b dell'NSM A.
 +
 image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["Connessioni da controller a shelf per il controller B"]
 

@@ -1,7 +1,7 @@
 ---
 permalink: a70-90/install-cable.html 
 sidebar: sidebar 
-keywords: aff a70, aff a90, prepare installation 
+keywords: aff a70, aff a90, prepare installation, cable the hardware 
 summary: 'Dopo aver installato l"hardware rack per il sistema di storage AFF A70 o AFF A90, installare i cavi di rete per i controller e collegare i cavi tra i controller e gli shelf di storage.' 
 ---
 = Collegare l'hardware - AFF A70 e AFF A90
@@ -20,7 +20,7 @@ Contattare l'amministratore di rete per informazioni sulla connessione del siste
 * Queste procedure mostrano le configurazioni comuni. Il cablaggio specifico dipende dai componenti ordinati per il sistema di storage in uso. Per informazioni dettagliate sulla configurazione e la priorità degli slot, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
 * Gli slot i/o dei controller AFF A70 e AFF A90 sono numerati da 1 a 11.
 +
-image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numerazione degli slot sui controller FAS70 e FAS90]
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numerazione degli slot sui controller AFF A70 e AFF A90]
 
 * Le immagini dei cavi hanno icone a freccia che mostrano l'orientamento corretto (verso l'alto o verso il basso) della linguetta di estrazione del connettore del cavo quando si inserisce un connettore in una porta.
 +
@@ -34,8 +34,8 @@ image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[Esempio di orientame
 
 
 
-[[step-1-connect-the-storage-controllers-to-your-network]]
-== Fase 1: Collegare i controller di archiviazione alla rete
+[[step-1-cable-the-clusterha-connections]]
+== Fase 1: Collegare i collegamenti cluster/ha
 
 Collegare i controller al cluster ONTAP. Questa procedura varia in base al modello del sistema di storage in uso e alla configurazione del modulo i/O.
 
@@ -90,13 +90,13 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Connessioni cl
 
 Collegare le porte del modulo Ethernet alla rete host.
 
-Di seguito sono riportati alcuni esempi tipici di cablaggio della rete host. Per informazioni sulla configurazione specifica del sistema, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] .
+Di seguito sono riportati alcuni esempi tipici di cablaggio di rete host. Vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^] per la configurazione specifica del sistema.
 
 .Fasi
 . Collegare le porte e9a e e9b allo switch di rete dati Ethernet.
 +
 
-NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Utilizzare una scheda host separata.
+NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Usa una scheda host separata.
 
 +
 *Cavo 100 GbE*
@@ -105,9 +105,9 @@ NOTE: Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Utiliz
 image::../media/oie_cable_sfp_gbe_copper.png[100GB cavo Ethernet]
 
 +
-image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cavo alla rete Ethernet da 100 GB]
+image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cavo alla rete Ethernet 100GB]
 
-. Collegare gli switch di rete host 10/25 GbE.
+. Collega le tue schede 10/25 GbE agli switch della rete host.
 +
 *4 porte, 10/25 GbE host*
 
@@ -115,7 +115,7 @@ image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cavo alla rete Etherne
 image::../media/oie_cable_sfp_gbe_copper.png[Cavo da 10/25 GB]
 
 +
-image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cavo alla rete Ethernet 100GB]
+image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cavo alla rete Ethernet 10/25GB]
 
 
 
@@ -145,7 +145,7 @@ Le seguenti procedure di cablaggio mostrano come collegare i controller a uno sh
 Per il numero massimo di ripiani supportati per il sistema di storage e per tutte le opzioni di cablaggio, vedere link:https://hwu.netapp.com["NetApp Hardware Universe"^].
 
 .A proposito di questa attività
-I sistemi di archiviazione AFF A70 e 90 supportano ripiani NS224 con il modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:
+I sistemi di storage AFF A70 e AFF A90 supportano gli shelf NS224 con il modulo NSM100 o NSM100B. Le principali differenze tra i moduli sono:
 
 * I moduli shelf NSM100 utilizzano le porte integrate e0a ed e0b.
 * I moduli shelf NSM100B utilizzano le porte e1a ed e1b nello slot 1.
@@ -165,7 +165,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 
 .Fasi
 . Collegare la porta e11a del controller A alla porta NSM A e0a.
-. Collegare la porta e11b del controller A alla porta NSM B e0b.
+. Collegare la porta e11b del controller A alla porta e0b dell'NSM B.
 +
 image:../media/drw_a70-90_1shelf_cabling_a_ieops-1731.svg["Controller A e11a e e11b su un singolo shelf NS224"]
 
@@ -189,9 +189,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cavo in rame da 100 GbE QSFP28]
 . Sul controller A, collegare le seguenti porte:
 +
 .. Collegare la porta e11a allo shelf 1, la porta NSM A e0a.
-.. Collegare la porta e11b allo shelf 2, la porta NSM B e0b.
-.. Collegare la porta E8a allo shelf 2, la porta NSM A e0a.
 .. Collegare la porta e8b allo shelf 1, la porta NSM B e0b.
+.. Collegare la porta E8a allo shelf 2, la porta NSM A e0a.
+.. Collegare la porta e11b allo shelf 2, la porta NSM B e0b.
 +
 image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Connessioni da controller a shelf per il controller A"]
 
@@ -200,9 +200,9 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Connessioni da contro
 . Sul controller B, collegare le seguenti porte:
 +
 .. Collegare la porta e11a allo shelf 1, la porta NSM B e0a.
-.. Collegare la porta e11b allo shelf 2, la porta NSM A e0b.
-.. Collegare la porta E8a allo shelf 2, la porta NSM B e0a.
 .. Collegare la porta e8b allo shelf 1, la porta NSM A e0b.
+.. Collegare la porta E8a allo shelf 2, la porta NSM B e0a.
+.. Collega la porta e11b allo shelf 2, porta e0b dell'NSM A.
 +
 image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["Connessioni da controller a shelf per il controller B"]
 
@@ -213,4 +213,4 @@ image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["Connessioni da contro
 --
 ====
 .Quali sono le prossime novità?
-Dopo aver collegato l'hardware per il sistema AFF A70 o AFF A90, si link:install-power-hardware.html["Accendere il sistema di archiviazione AFF A70 o AFF A90"].
+Dopo che hai collegato l'hardware per il tuo sistema AFF A70 o AFF A90, link:install-power-hardware.html["Accendere il sistema di archiviazione AFF A70 o AFF A90"].
