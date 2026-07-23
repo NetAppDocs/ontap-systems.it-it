@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a250, shut down the controller 
 summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
 ---
-= Arrestare il controller per il ripristino manuale del boot media - AFF A250
+= Spegni il controller nel tuo sistema AFF A250 durante il processo di ripristino manuale dell'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Arresta il controller danneggiato nel tuo sistema storage AFF A250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del boot media.
+Arresta il controller danneggiato nel tuo sistema storage AFF A250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di avvio.
 
 Se il sistema storage esegue ONTAP 9.18.1 o versione successiva, utilizzare link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"]. Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a400, aff, a400, environment, variable, complete, system, onboard, key, manager, okm, storage, volume, netapp, encryption, post, boot, media, replacement, post boot media replacement stpes for okm nse and nve 
 summary: Ripristina la crittografia sul supporto di avvio sostitutivo. Completa i passaggi specifici per i sistemi che hanno Onboard Key Manager, NetApp Storage Encryption o NetApp Volume Encryption abilitati. 
 ---
-= Ripristinare la crittografia - AFF A400
+= Ripristina la crittografia sul supporto di avvio nel tuo sistema AFF A400 dopo la procedura di ripristino manuale dell'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Ripristina la crittografia sul supporto di avvio sostitutivo nel tuo sistema AFF A400 per garantire la protezione continua dei dati. Il processo di sostituzione prevede la verifica della disponibilità della chiave, la riapplicazione delle impostazioni di crittografia e la conferma dell’accesso sicuro ai tuoi dati.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 

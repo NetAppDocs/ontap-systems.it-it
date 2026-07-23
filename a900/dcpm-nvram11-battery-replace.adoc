@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: AFF A900 
 summary: Per sostituire a caldo un modulo di alimentazione del controller di destaging, che contiene la batteria NVRAM11, individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo. 
 ---
-= Sostituire il modulo di alimentazione del controllo di emergenza contenente la batteria NVRAM11 - AFF A900
+= Sostituisci il modulo DCPM contenente la batteria NVRAM11 nel tuo sistema AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Sostituisci a caldo il modulo di alimentazione del controller di destage (DCPM) nel tuo sistema AFF A900 quando si guasta. Il DCPM contiene la batteria NVRAM11 e deve essere sostituito entro cinque minuti dalla rimozione per evitare la perdita della protezione dei dati.
+
 Per sostituire a caldo un modulo di alimentazione del controller di destinazione (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.
 
 È necessario disporre di un modulo DCPM sostitutivo prima di rimuovere il modulo guasto dal telaio e sostituirlo entro cinque minuti dalla rimozione. Una volta rimosso il modulo DCPM dallo chassis, non esiste alcuna protezione per lo shutdown per il modulo controller proprietario del modulo DCPM, ad eccezione del failover verso l'altro modulo controller.

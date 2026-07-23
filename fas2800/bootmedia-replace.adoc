@@ -115,7 +115,7 @@ Installare l'immagine di sistema sul supporto di avvio sostitutivo utilizzando u
 .Fasi
 . Scaricare la versione dell'immagine appropriata di ONTAP sull'unità flash USB formattata:
 +
-.. Utilizzare https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_determine_if_the_running_ONTAP_version_supports_NetApp_Volume_Encryption_(NVE)["Come determinare se la versione di ONTAP in esecuzione supporta la crittografia dei volumi NetApp (NVE)"^] per determinare se la crittografia del volume è attualmente supportata.
+.. Usa  https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/How_to_determine_if_the_running_ONTAP_version_supports_Data_At_Rest_Encryption["Come determinare se la tua versione di ONTAP supporta la NetApp Volume Encryption (NVE)"^] per determinare se la crittografia del volume è attualmente supportata.
 +
 *** Se NVE è supportato sul cluster, scaricare l'immagine con crittografia volume NetApp.
 *** Se NVE non è supportato sul cluster, scaricare l'immagine senza crittografia volume NetApp.

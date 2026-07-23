@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: AFF A900, replace, boot, media, controller, directions, replace boot media, transfer image 
 summary: 'È necessario rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l"immagine sul supporto di avvio sostitutivo.' 
 ---
-= Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - AFF A900
+= Sostituisci il supporto di avvio nel tuo sistema AFF A900 utilizzando la procedura di ripristino manuale dell'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario scollegare il modulo controller, rimuovere e aprire il modulo controller, individuare e sostituire il supporto di avvio nel controller, quindi trasferire l'immagine sul supporto di avvio sostitutivo.
+Il boot media nel tuo sistema AFF A900 memorizza i dati essenziali del firmware e della configurazione. La procedura di sostituzione prevede la rimozione del modulo controller, la rimozione del boot media danneggiato, l'installazione del boot media sostitutivo e quindi il trasferimento dell'immagine ONTAP sul boot media sostitutivo utilizzando una chiavetta USB.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 

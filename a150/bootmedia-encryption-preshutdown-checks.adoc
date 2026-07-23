@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback 
 summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia - AFF A150
+= Verifica il supporto di crittografia sul supporto di avvio nel tuo sistema AFF A150
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Per garantire la sicurezza dei dati sul sistema storage AFF A150, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare se la versione di ONTAP supporta NetApp Volume Encryption (NVE) e, prima di spegnere il controller, verificare che il key manager sia attivo.
 
 
 

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a400, replace the boot media 
 summary: 'Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A400 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, spegnere il controller, sostituire il supporto di avvio, avviare l"immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.' 
 ---
-= Flusso di lavoro per il ripristino manuale del supporto di avvio - AFF A400
+= Flusso di lavoro per la sostituzione del supporto di avvio AFF A400 utilizzando il processo di ripristino manuale dell'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Il ripristino automatico dell'immagine di avvio prevede che il sistema identifichi e selezioni automaticamente l'opzione appropriata del menu di avvio. Utilizza l'immagine di avvio sul nodo partner per reinstallare ONTAP sul supporto di avvio sostitutivo nel sistema di archiviazione AFF A400 .
+Inizia a sostituire il supporto di avvio nel tuo sistema AFF A400 utilizzando il processo di ripristino manuale dell'avvio. Devi scaricare l'immagine di ripristino ONTAP appropriata dal NetApp Support Site e copiarla su un'unità USB per eseguire il ripristino e riportare il sistema allo stato operativo.
 
 Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
 

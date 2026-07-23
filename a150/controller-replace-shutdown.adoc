@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, shut down the impaired controller 
 summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
 ---
-= Spegnere il controller non utilizzato - AFF A150
+= Spegni il controller nel tuo sistema AFF A150 prima di sostituirlo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Spegni il controller guasto nel tuo sistema storage AFF A150 per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il controller.
+
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
 .A proposito di questa attività
