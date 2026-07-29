@@ -22,14 +22,12 @@ Per sostituire una scheda PCIe o mezzanino, scollegare i cavi e i moduli SFP e Q
 [[step-1-shut-down-the-impaired-controller]]
 == Fase 1: Spegnere il controller compromesso
 
-[role="lead"]
 È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage.
 
 [role="tabbed-block"]
 ====
 .Opzione 1: La maggior parte delle configurazioni
 --
-[role="lead"]
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
 .A proposito di questa attività
@@ -99,7 +97,6 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 --
 .Opzione 2: Controller in un MetroCluster a due nodi
 --
-[role="lead"]
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 
 .A proposito di questa attività
@@ -198,9 +195,9 @@ mcc1A::> metrocluster operation show
 [[step-2-remove-the-controller-module]]
 == Fase 2: Rimuovere il modulo controller
 
-[role="lead"]
 Per accedere ai componenti all'interno del modulo controller, è necessario rimuovere il modulo controller dallo chassis.
 
+.Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rilasciare i fermi dei cavi di alimentazione, quindi scollegare i cavi dagli alimentatori.
 . Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e gli SFP (se necessario) dal modulo controller, tenendo traccia del punto in cui sono stati collegati i cavi.
@@ -245,7 +242,6 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 [[step-3-replace-a-pcie-card]]
 == Fase 3: Sostituire una scheda PCIe
 
-[role="lead"]
 Per sostituire una scheda PCIe, individuare la scheda PCIe guasta, rimuovere il riser che contiene la scheda dal modulo controller, sostituire la scheda, quindi reinstallare il riser PCIe nel modulo controller.
 
 Per sostituire una scheda PCIe, è possibile utilizzare la seguente animazione, illustrazione o procedura scritta.
@@ -285,6 +281,7 @@ image:../media/icon_round_4.png["Numero di didascalia 4"]
 Scheda PCI
 
 |===
+.Fasi
 . Rimuovere il riser contenente la scheda da sostituire:
 +
 .. Aprire il condotto dell'aria premendo le linguette di bloccaggio sui lati del condotto dell'aria, farlo scorrere verso la parte posteriore del modulo controller, quindi ruotarlo in posizione completamente aperta.
@@ -326,7 +323,6 @@ NOTE: Se si sta installando una scheda nello slot inferiore e non si riesce a ve
 [[step-4-replace-the-mezzanine-card]]
 == Fase 4: Sostituire la scheda mezzanine
 
-[role="lead"]
 La scheda mezzanine si trova sotto il riser numero 3 (slot 4 e 5). Rimuovere il riser per accedere alla scheda mezzanine, sostituire la scheda mezzanine, quindi reinstallare il riser numero 3. Per ulteriori informazioni, vedere la mappa FRU sul modulo controller.
 
 Per sostituire la scheda mezzanine, è possibile utilizzare l'animazione, l'illustrazione o i passaggi scritti riportati di seguito.
@@ -359,6 +355,7 @@ image:../media/icon_round_3.png["Numero di didascalia 3"]
 Scheda di montaggio
 
 |===
+.Fasi
 . Rimuovere il riser numero 3 (slot 4 e 5):
 +
 .. Aprire il condotto dell'aria premendo le linguette di bloccaggio sui lati del condotto dell'aria, farlo scorrere verso la parte posteriore del modulo controller, quindi ruotarlo in posizione completamente aperta.
@@ -398,6 +395,7 @@ NOTE: Serrare completamente le viti a testa zigrinata della scheda mezzanine. Se
 
 Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo in modalità manutenzione.
 
+.Fasi
 . In caso contrario, chiudere il condotto dell'aria.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
@@ -443,6 +441,7 @@ NOTE: Se il sistema si arresta nel menu di avvio, selezionare l'opzione per avvi
 
 Per ripristinare il controller, è necessario recuperare il sistema, restituire il modulo controller e riattivare il giveback automatico.
 
+.Fasi
 . Ricable il sistema, come necessario.
 +
 Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.

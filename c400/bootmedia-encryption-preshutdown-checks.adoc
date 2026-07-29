@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: aff c400, aff, c400, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
 summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
 ---
-= Verificare il supporto e lo stato della chiave di crittografia - AFF C400
+= Verifica il supporto di crittografia sul supporto di avvio nel tuo sistema storage AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Verifica il supporto della crittografia sul supporto di avvio del tuo sistema storage AFF C400 prima di spegnere il controller guasto. Questo include la verifica della compatibilità della versione di ONTAP con NetApp Volume Encryption (NVE) e la conferma della configurazione del key manager.
 
-Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"]
+Se il sistema storage esegue ONTAP 9.17.1 o versione successiva, utilizzare link:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"].
 
 
 
