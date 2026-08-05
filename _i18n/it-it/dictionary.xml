@@ -7006,7 +7006,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="d17bb023ab45bd18aad4108bff14bf1e" category="list-text">Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere la<block ref="672892c7f98df9ad95d0024f72bc4b95" category="inline-link-rx"></block> pagina per ulteriori informazioni.</block>
   <block id="66a35db4b6d963b540c6a3d31a9d39e6" category="paragraph">Spegnere o sostituire il modulo controller danneggiato.</block>
   <block id="011b6189f470beb455ff657e2d7f7a63" category="list-text">Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.</block>
-  <block id="2e8e8fd780cc78a14b825cad663b2611" category="paragraph">ONTAP 9.16.0 o versioni precedenti</block>
   <block id="54d6f7773c4a60500d049c396202a23d" category="list-text">Premere il pulsante della camma di gestione del sistema.</block>
   <block id="e3f95753aace3276fa0375074c45c988" category="list-text">Non devono essere presenti porte del quadro strumenti difettose sulla centralina guasta.</block>
   <block id="9a55c0fdded61a1e549c1b9afbfc5023" category="list-text"><block ref="32b858596eeb9351eca27c2906a21da4" prefix="" category="inline-code"></block> (Non supportato nei sistemi ASA)</block>
@@ -10233,7 +10232,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="f56ae7fd8ac660d55ee476cc2b6b6715" category="paragraph">Capacità massima grezza: 0,5472 PB</block>
   <block id="2ce22d99495ad1d67f2afd59b9d15465" category="paragraph">Memoria: 64.0000 GB</block>
   <block id="eab43815aa6ddac6523fe001702557fd" category="paragraph">Fattore di forma: chassis 2U con 2 controller HA e 24 slot per unità</block>
-  <block id="dce6354c7432d233d30699f4fa1dab1b" category="paragraph">Versione ONTAP : b_startONTAP: 9.16.1P2b_end</block>
   <block id="2b13b0d1b04399d702b8569a3b81c7fb" category="paragraph">Slot di espansione PCIe:</block>
   <block id="467c14d27cfd498baa41b5de62cbe35b" category="paragraph">Versione minima ONTAP : ONTAP 9.10.1P12</block>
   <block id="4d15157e07692c77bdeff6cb8bc45844" category="section-title">Massimi di scalabilità</block>
@@ -10281,7 +10279,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="810944644ddbd9a71f9a53ebcd73f51d" category="list-text">Standard EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835</block>
   <block id="9b3b75c67a53d54bba73c70cd1786aed" category="list-text">Standard di sicurezza: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 n. 60950-1, CAN/CSA C22.2 n. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)</block>
   <block id="520b661a272c9e6f55f469cc9c24193d" category="section-title">Alta disponibilità</block>
-  <block id="f5046e4779952c40dda2055325e842f6" category="list-text">Versione ONTAP : ONTAP: 9.16.1P2</block>
   <block id="014e996a6a164aaf40b8b3e72704fc2e" category="section-title">I/O</block>
   <block id="c9517cd5cbe4fac6d0c526d61f3fcc39" category="section-title">I/O integrato</block>
   <block id="81754037ddc5b97d9b806acad96f8815" category="list-text">Protocollo: Ethernet 10 Gbps; Porte: 12</block>
@@ -11688,8 +11685,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="27b8025bf920b2fdec95f4719d7e3772" category="paragraph">Gli alimentatori sono ridondanti e sostituibili a caldo. Non è necessario spegnere il controller per sostituire un alimentatore.</block>
   <block id="41221ad2b8f379d044b6e4c034575270" category="list-text">Individuare i numeri di serie del sistema (SSN) per ogni controller installato.</block>
   <block id="5ea0f09670f21c71300695e92b2cd256" category="admonition">Non utilizzare le porte e1b ed e7b per le connessioni di rete host. Utilizzare una scheda host separata.</block>
-  <block id="e0c35bf779836a3b5e187a211457a2b9" category="list-text">Gestione in banda SAS su connessioni SAS per scaffali esterni [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
-  <block id="30432b9617d110e91bb55e0ee6592cdb" category="paragraph">Controller di gestione della scheda madre (BMC) basato su Ethernet e interfaccia di gestione ONTAP ; Controller ridondanti sostituibili a caldo; Alimentatori ridondanti sostituibili a caldo; Gestione in banda SAS su connessioni SAS per ripiani esterni; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="bb9a46a830b86006c64c8c357fbcb73c" category="doc">Sostituzione a caldo di un alimentatore - FAS70 e FAS90</block>
   <block id="c0fb977424a2b5bca01ac503e2f1b009" category="doc">Sostituzione a caldo di un alimentatore - FAS2700</block>
   <block id="58c298876292ce3ccb07434a6eb98ee8" category="doc">Sostituzione a caldo di un alimentatore - FAS500f</block>
@@ -11811,7 +11806,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9fa7c02bb45265f34f4f69d65e4ba585" category="paragraph"><block ref="ec44bfe32a6d575f528cbdeeb29c9942" prefix="" category="inline-code"></block></block>
   <block id="1a68286f23d4e481b013070b3fb1b2c5" category="paragraph">L'immagine di ripristino viene scaricata dall'unità flash USB.</block>
   <block id="0e99a276251e3e975397503d3c6c3d07" category="list-text">Quando richiesto, immettere il nome dell'immagine o premere *Invio* per accettare l'immagine predefinita visualizzata tra parentesi.</block>
-  <block id="c9e381b8fb72130d3dfe11557316b5b4" category="list-text">Ripristinare il file system var utilizzando la procedura per la versione ONTAP in uso:</block>
   <block id="510eb69f55221f0ff4cc891c4ba7a6d9" category="paragraph">Completare i seguenti passaggi sul controller non funzionante e sul controller partner:</block>
   <block id="268c64a36efe2137fa47de3437bd4bd0" category="list-text">*Sul controller non compatibile:* Premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando vedi<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
   <block id="9cf62becb6c08190789fafc5e01382fe" category="list-text">*Sul controller non compatibile:* Se richiesto, premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> per sovrascrivere _/etc/ssh/ssh_host_ecdsa_key_.</block>
@@ -11828,7 +11822,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="88c59cc215089054320add9ac5600ce2" category="list-text">*Sul controller con disabilità:* Eseguire una delle seguenti operazioni:</block>
   <block id="c15238078a77edc2ef4bd593196971b8" category="list-text">Se il sistema non utilizza la crittografia, selezionare _Opzione 1 Avvio normale_ dal menu di avvio.</block>
   <block id="99ae95872c3913a9ded71370c70a8cc7" category="list-text">Se il sistema utilizza la crittografia, vai a<block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block> .</block>
-  <block id="fe96aa95930d10c2f5829bc437157a9c" category="open-title">ONTAP 9.16.1 o successivo</block>
   <block id="f9dbd529813df9b97e2450323ae00565" category="paragraph">Completare i seguenti passaggi sul controller non funzionante:</block>
   <block id="3b554643290ff3791f79c55bfc5ead66" category="paragraph">Una volta completata correttamente la procedura di ripristino, viene visualizzato il seguente messaggio:<block ref="92080c75f9b065e263d7fea155b1d733" prefix=" " category="inline-code"></block></block>
   <block id="ea673c9d0e265c7c75644bc9baaa8689" category="list-text">Premere<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando viene richiesto di confermare che il backup di ripristino è stato eseguito correttamente.</block>
@@ -12740,7 +12733,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="9b2d40af21d64d80278ee173eee93493" category="doc">Specifiche chiave per FAS500f</block>
   <block id="7971c747973f656fa0a258fe576a59ce" category="paragraph">Di seguito sono riportate alcune specifiche per il FAS500f. Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) per un elenco completo delle specifiche del FAS500f. Questa pagina si riferisce a una singola coppia ad alta disponibilità.</block>
   <block id="2993484ef64a91db7d4ffb4091f706d0" category="paragraph">Configurazione della piattaforma: FAS500f coppia HA a chassis singolo</block>
-  <block id="9301497e894d25c1a5d8e0997da7a7eb" category="paragraph">Versione ONTAP: 9.16.1P2</block>
   <block id="5a4e86e80e1a2b65d5e11606283fa0e6" category="inline-link-macro">AFF A250 (Recupero automatico)</block>
   <block id="48f357e077fea73ea971448bfba251ef" category="list-text"><block ref="48f357e077fea73ea971448bfba251ef" category="inline-link-macro-rx"></block></block>
   <block id="2c196d8c70003da4749b8a9477ed6300" category="inline-link-macro">AFF A250 (Recupero manuale)</block>
@@ -15335,4 +15327,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="75f43aac1b3f7478f7dd28c21285aa4f" category="sidebar">I nuovi sistemi ONTAP ASA r2 (ASA A1K, ASA A70, ASA A90, ASA A20, ASA A30 e ASA A50) offrono una soluzione hardware e software unificata che crea un'esperienza semplificata specifica per le esigenze dei clienti che utilizzano solo SAN.</block>
   <block id="2f1ec7862d30d363bcd985b98d0405ea" category="sidebar">sistemi ONTAP ASA r2</block>
   <block id="e39a75fc031fe75db1eb9bd7bb630df0" category="sidebar">La documentazione del sistema storage ONTAP ASA r2 ti permette di installare, configurare e mantenere il tuo sistema ASA r2.</block>
+  <block id="b17965ed7656eaefd5896d5e8bc8220f" category="paragraph">Una connessione di rete ed è in esecuzione ONTAP 9.16.0 o precedente</block>
+  <block id="3db85ee708765a863ca7bcba163f6a4e" category="paragraph">Una connessione di rete e ONTAP 9.16.1 o versioni successive in esecuzione</block>
+  <block id="e77843037570fc2dc04cabc4bbe0c856" category="list-text">Premi <block ref="8d9c307cb7f3c4a32822a51922d1ceaa" prefix=" " category="inline-code"></block> quando ti viene chiesto di ripristinare la configurazione del backup.</block>
+  <block id="20c74d497df9de076409b88163fc27bf" category="paragraph">Se ti viene chiesto di continuare con l'aggiornamento, premi <block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>.</block>
+  <block id="9ada4cfd3f8a4a843a3a72db74213052" category="list-text">Premi <block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>quando vedi il Boot Menu.</block>
 </blocks>
