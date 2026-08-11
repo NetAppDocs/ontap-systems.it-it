@@ -2,16 +2,16 @@
 permalink: fas50/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: fas50, replace the boot media 
-summary: 'Prima di sostituire il supporto di avvio nel sistema di storage FAS50, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0M (chiave inglese) sul controller danneggiato funzioni correttamente e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.' 
+summary: 'Prima di sostituire il supporto di avvio nel tuo sistema storage FAS50, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di avere il supporto di avvio sostitutivo corretto, la conferma che la porta e0M (chiave inglese) sul controller guasto funzioni correttamente e la verifica se Onboard Key Manager (OKM) o External Key Manager (EKM) siano abilitati.' 
 ---
-= Requisiti per il ripristino automatico dei supporti di avvio - FAS50
+= Esamina i requisiti per il ripristino automatico del supporto di boot nel tuo sistema FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Prima di sostituire il supporto di avvio nel sistema di storage FAS50, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Ciò include la verifica di disporre del supporto di avvio sostitutivo corretto, la conferma che la porta e0M (chiave inglese) sul controller danneggiato funzioni correttamente e la determinazione se Onboard Key Manager (OKM) o External Key Manager (EKM) è abilitato.
+Prima di sostituire il supporto di avvio nel tuo sistema storage FAS50, assicurati di soddisfare i requisiti necessari per una sostituzione corretta. Questo include la verifica di avere il supporto di avvio sostitutivo corretto, la conferma che la porta e0M (chiave inglese) sul controller guasto funzioni correttamente e la verifica se Onboard Key Manager (OKM) o External Key Manager (EKM) siano abilitati.
 
 Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
 

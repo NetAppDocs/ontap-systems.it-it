@@ -1,21 +1,21 @@
 ---
 permalink: fas2800/chassis-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+keywords: fas2820, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: Per sostituire lo chassis nel tuo sistema FAS2820, devi spostare gli alimentatori, i dischi rigidi e il modulo o i moduli controller dallo chassis guasto al nuovo chassis dello stesso modello. 
 ---
-= Panoramica della sostituzione dello chassis - FAS2820
+= Verifica i requisiti prima di sostituire lo chassis nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire lo chassis, è necessario spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis con problemi al nuovo chassis e sostituire lo chassis con problemi dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis con problemi.
+Per sostituire lo chassis nel tuo sistema FAS2820, sposta gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis. Poi, rimuovi lo chassis guasto dal rack dell'attrezzatura o dall'armadio di sistema e installa il nuovo chassis dello stesso modello al suo posto.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Tutti gli altri componenti del sistema devono funzionare correttamente. Se non è così, contatta il supporto tecnico.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
 * Questa procedura si basa sul presupposto che si stiano spostando tutti i dischi e i moduli controller nel nuovo chassis e che lo chassis sia un nuovo componente di NetApp.
-* Questa procedura ha un'interruzione. Per un cluster a due controller, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* Questa procedura è invasiva. Per un cluster a due controller, questa procedura causa un'interruzione completa del servizio e un'interruzione parziale in un cluster multi-nodo.
 

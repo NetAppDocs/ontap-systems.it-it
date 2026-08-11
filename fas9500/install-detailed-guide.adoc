@@ -2,16 +2,16 @@
 permalink: fas9500/install-detailed-guide.html 
 sidebar: sidebar 
 keywords: FAS9500 
-summary: 'La presente a fornisce istruzioni dettagliate e dettagliate per l"installazione di un sistema NetApp tipico.' 
+summary: Questa pagina fornisce istruzioni dettagliate passo passo per installare il tuo sistema FAS9500. 
 ---
-= Fasi dettagliate - FAS9500
+= Installa il tuo sistema FAS9500 seguendo le istruzioni dettagliate
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Questo articolo fornisce istruzioni dettagliate per l'installazione di un sistema NetApp tipico. Per istruzioni di installazione più dettagliate, consulta questo articolo.
+Questa pagina fornisce istruzioni dettagliate passo passo per installare il tuo sistema FAS9500. Usa queste istruzioni se vuoi istruzioni di installazione più dettagliate.
 
 
 
@@ -279,7 +279,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Connettore GbE SFP in rame]
 
 Switch di rete host 40 GbE:
 
-Collegare le porte host‐lato b dello slot A4 e B4 (e4b) e gli slot A8 e B8 (e8b) allo switch host.
+Collega le porte b lato host negli slot A4 e B4 (e4b) e negli slot A8 e B8 (e8b) allo switch host.
 
 image::../media/oie_cable100_gbe_qsfp28.png[Connettore QSFP 100 GbE]
 
@@ -300,7 +300,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Connettore GbE SFP in rame]
 image::../media/icon_square_5_grey.png[Icona didascalia 4]
  a| 
 ** Fissare i cavi ai bracci di gestione dei cavi (non mostrati).
-** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
+** Collega i cavi di alimentazione agli alimentatori e connettili a diverse fonti di alimentazione (non mostrate). PSU1 e PSU3 forniscono alimentazione a tutti i componenti del lato A, mentre PSU2 e PSU4 forniscono alimentazione a tutti i componenti del lato B.
 
 
 image::../media/oie_cable_power.png[Cavi di alimentazione]
@@ -372,7 +372,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Connettore GbE SFP in rame]
 
 Switch di rete host 40 GbE:
 
-Collegare le porte host‐lato b dello slot A4 e B4 (e4b) e gli slot A8 e B8 (e8b) allo switch host.
+Collega le porte b lato host negli slot A4 e B4 (e4b) e negli slot A8 e B8 (e8b) allo switch host.
 
 image::../media/oie_cable100_gbe_qsfp28.png[Connettore QSFP 100 GbE]
 
@@ -393,7 +393,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Connettore 100 GbE in rame]
 image::../media/icon_square_4_red.png[Icona didascalia 4]
  a| 
 ** Fissare i cavi ai bracci di gestione dei cavi (non mostrati).
-** Collegare i cavi di alimentazione alle PSU e a diverse fonti di alimentazione (non mostrate). Gli alimentatori 1 e 3 forniscono alimentazione a tutti i componenti lato A, mentre gli alimentatori PSU2 e PSU4 forniscono alimentazione a tutti i componenti lato B.
+** Collega i cavi di alimentazione agli alimentatori e connettili a diverse fonti di alimentazione (non mostrate). PSU1 e PSU3 forniscono alimentazione a tutti i componenti del lato A, mentre PSU2 e PSU4 forniscono alimentazione a tutti i componenti del lato B.
 
 
 image::../media/oie_cable_power.png[Cavi di alimentazione]
@@ -417,7 +417,7 @@ NOTE: Per ulteriori informazioni sul cablaggio SAS e fogli di lavoro, vedere lin
 
 .Prima di iniziare
 * Completare la scheda di lavoro relativa al cablaggio SAS del sistema. Vedere link:../sas3/overview-cabling-rules-examples.html["Panoramica su regole di cablaggio SAS, fogli di lavoro ed esempi: Shelf con moduli IOM12"].
-* Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
+* Assicurati di controllare la freccia nell'illustrazione per il corretto orientamento della linguetta di estrazione del connettore del cavo. La linguetta di estrazione del cavo per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sui shelf sono rivolte verso il basso.
 
 
 image::../media/oie_cable_pull_tab_up.png[Direzione della linguetta di estrazione del cavo]
@@ -428,7 +428,7 @@ image::../media/oie_cable_pull_tab_down.png[Direzione della linguetta di estrazi
 NOTE: Quando si inserisce il connettore, si dovrebbe avvertire uno scatto in posizione; se non si sente uno scatto, rimuoverlo, capovolgere e riprovare.
 
 .Fasi
-. Utilizza l'animazione o i disegni seguenti per collegare i controller a tre shelf di dischi DS224C (1 stack di uno shelf di dischi e uno stack di due shelf di dischi).
+. Usa la seguente animazione o i seguenti schemi per collegare i tuoi controller a tre shelf di dischi DS224C (uno stack con uno shelf di dischi e uno stack con due shelf di dischi).
 +
 .Animazione Collega i tuoi scaffali di unità
 video::c958aae6-9d08-4d3d-a213-ae7c017040cd[panopto]

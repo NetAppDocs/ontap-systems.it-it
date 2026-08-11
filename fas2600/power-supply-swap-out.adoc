@@ -2,24 +2,24 @@
 permalink: fas2600/power-supply-swap-out.html 
 sidebar: sidebar 
 keywords: fas2600, power supply replacement 
-summary: 'Lo scambio di un alimentatore comporta lo spegnimento, lo scollegamento e la rimozione del vecchio alimentatore, l"installazione, il collegamento e l"accensione dell"alimentatore sostitutivo.' 
+summary: 'Per sostituire a caldo un alimentatore nel tuo sistema FAS2600, spegni, scollega e rimuovi l"unità guasta, poi installa e ricollega quella di ricambio.' 
 ---
-= Sostituire un alimentatore - FAS2600
+= Sostituisci a caldo un alimentatore nel sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Lo scambio di un alimentatore comporta lo spegnimento, lo scollegamento e la rimozione del vecchio alimentatore, l'installazione, il collegamento e l'accensione dell'alimentatore sostitutivo.
+Sostituisci a caldo un alimentatore nel tuo sistema FAS2600 spegnendo, scollegando e rimuovendo il vecchio alimentatore, poi installando, collegando e accendendo il nuovo alimentatore.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Se altri componenti del sistema non funzionano correttamente, contatta il supporto tecnico.
 
 * Gli alimentatori sono ridondanti e sostituibili a caldo.
 * Questa procedura è stata scritta per la sostituzione di un alimentatore alla volta.
 +
 
-NOTE: Il raffreddamento è integrato con l'alimentatore, pertanto è necessario sostituire l'alimentatore entro due minuti dalla rimozione per evitare il surriscaldamento dovuto alla riduzione del flusso d'aria. Poiché lo chassis fornisce una configurazione di raffreddamento condivisa per i due nodi ha, un ritardo superiore a due minuti spegnerà tutti i moduli controller nello chassis. Se entrambi i moduli controller si spengono, assicurarsi che entrambi gli alimentatori siano inseriti, spegnere entrambi per 30 secondi, quindi riaccenderlo.
+NOTE: Il sistema di raffreddamento è integrato con l'alimentatore, quindi devi sostituire l'alimentatore entro due minuti dalla rimozione per evitare il surriscaldamento dovuto alla riduzione del flusso d'aria. Poiché lo chassis offre una configurazione di raffreddamento condivisa per i due nodi HA, un ritardo superiore a due minuti spegne tutti i moduli controller nello chassis. Se entrambi i moduli controller si spengono, assicurati che entrambi gli alimentatori siano inseriti, spegnili entrambi per 30 secondi e poi riaccendili.
 
 * Il numero di alimentatori nel sistema dipende dal modello.
 * Gli alimentatori sono a portata automatica.
@@ -62,7 +62,7 @@ NOTE: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel 
 
 
 +
-Una volta ripristinata l'alimentazione, il LED di stato deve essere verde.
+Dopo che l'alimentazione è stata ripristinata all'alimentatore, il LED di stato dovrebbe essere verde.
 
 . Accendere il nuovo alimentatore, quindi verificare il funzionamento dei LED di attività dell'alimentatore.
 +

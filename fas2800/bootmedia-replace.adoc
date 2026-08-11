@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, boot, media, controller, module, fru map 
-summary: Individuare il supporto di avvio nel controller e seguire le istruzioni per sostituirlo. 
+keywords: fas2820, replace, boot, media, controller, module, fru map 
+summary: 'Il boot media nel tuo sistema FAS2820 memorizza i dati essenziali del firmware e della configurazione. Per sostituirlo, devi rimuovere e aprire il modulo controller danneggiato, individuare e sostituire il boot media, trasferire l"immagine di boot su una chiavetta USB e poi avviare il controller.' 
 ---
-= Sostituisci il supporto di avvio e preparati per il ripristino manuale dell'avvio - FAS2820
+= Sostituisci il supporto di boot nel tuo sistema FAS2820 utilizzando la procedura di ripristino manuale del boot
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario rimuovere e aprire il modulo controller danneggiato, individuare e sostituire il supporto di avvio nel controller, trasferire l'immagine di avvio su un'unità USB, inserire l'unità USB nel controller e quindi avviare il controller.
+Il boot media nel tuo sistema FAS2820 memorizza i dati essenziali del firmware e della configurazione. Per sostituirlo, devi rimuovere e aprire il modulo controller danneggiato, individuare e sostituire il boot media, trasferire l'immagine di boot su una chiavetta USB, inserire la chiavetta USB nel controller e poi avviare il controller.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -51,7 +51,7 @@ Pulsante di rilascio del coperchio del modulo controller
 [[step-2-replace-the-boot-media]]
 == Fase 2: Sostituire il supporto di avvio
 
-Individuare il supporto di avvio nel modulo controller, situato sotto la scheda mezzanine e seguire le istruzioni per sostituirlo.
+Individua il supporto di avvio, che si trova sotto la scheda mezzanine nel modulo controller, e segui le istruzioni per sostituirlo.
 
 image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["Sostituire il supporto di avvio"]
 
@@ -69,7 +69,7 @@ Linguetta di blocco dei supporti di avvio
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Rimuovere la scheda mezzanine utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
 +
-.. Rimuovere la piastra io facendola scorrere verso l'esterno dal modulo controller.
+.. Rimuovere la piastra io facendola scorrere fuori dal modulo controller.
 .. Allentare le viti a testa zigrinata sulla scheda mezzanino.
 +
 

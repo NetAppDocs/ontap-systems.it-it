@@ -2,22 +2,22 @@
 permalink: fas2600/chassis-replace-overview.html 
 sidebar: sidebar 
 keywords: fas2600, replace the chassis 
-summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+summary: 'Prima di sostituire lo chassis del sistema FAS2600, verifica i requisiti per spostare i componenti nel nuovo chassis e per installarlo nello spazio rack o nell"armadio di sistema.' 
 ---
-= Panoramica della sostituzione dello chassis - FAS2600
+= Verifica i requisiti prima di sostituire lo chassis FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire lo chassis, è necessario spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis con problemi al nuovo chassis e sostituire lo chassis con problemi dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis con problemi.
+Prima di sostituire lo chassis nel tuo sistema FAS2600, controlla i requisiti per spostare gli alimentatori, i dischi rigidi e il modulo o i moduli controller dallo chassis guasto al nuovo chassis, e per sostituire lo chassis guasto nello spazio rack o nell'armadio di sistema con quello nuovo dello stesso modello.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Tutti gli altri componenti del sistema devono funzionare correttamente. Se non è così, contatta il supporto tecnico.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
 * Questa procedura si basa sul presupposto che si stiano spostando tutti i dischi e i moduli controller nel nuovo chassis e che lo chassis sia un nuovo componente di NetApp.
-* Questa procedura ha un'interruzione. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* Questa procedura è invasiva. Per un cluster a due nodi, hai un'interruzione completa del servizio, e per un cluster multi-nodo hai un'interruzione parziale.
 
 
 video::FcitUi3YEyI[youtube]

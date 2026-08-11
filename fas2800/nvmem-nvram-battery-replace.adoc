@@ -1,19 +1,19 @@
 ---
 permalink: fas2800/nvmem-nvram-battery-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
-summary: Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller. 
+keywords: fas2820, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
+summary: Per sostituire una batteria NVMEM nel tuo sistema FAS2820, devi rimuovere il modulo controller, aprirlo, sostituire la batteria, quindi richiudere e reinstallare il modulo controller. 
 ---
-= Sostituire la batteria NVMEM - FAS2820
+= Sostituisci la batteria NVMEM nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller.
+Per sostituire una batteria NVMEM nel tuo sistema FAS2820, devi rimuovere il modulo controller, aprirlo, sostituire la batteria, quindi richiudere e reinstallare il modulo controller.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, è necessario contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
+Se altri componenti del sistema non funzionano correttamente, contatta  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
 
 
 
@@ -94,15 +94,15 @@ image::../media/drw_hw_nvram_icon.svg[Icona NV]
 
 +
 
-NOTE: Il LED NV verde sulla mascherina inizia a lampeggiare quando l'alimentazione viene rimossa dal controller se il sistema si trovava nello stato "in attesa di giveback" o se il sistema non è stato preso in consegna o arrestato correttamente (dati non impegnati).  Se il modulo controller non funziona correttamente, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"]
+NOTE: Il LED verde NV sul pannello frontale inizia a lampeggiare quando l'alimentazione viene interrotta se il sistema era nello stato "in attesa di giveback" o se il sistema non è stato sottoposto a takeover o arrestato correttamente (dati non confermati). Se il modulo controller danneggiato non è stato sottoposto correttamente a takeover dal partner controller, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"]
 
 +
 ** Se il LED di stato NV verde inizia a lampeggiare quando il modulo controller viene rimosso dal telaio:
 +
-*** Confermare che il controller ha avuto un'acquisizione pulita da parte del modulo controller partner o che il controller danneggiato mostra _in attesa di giveback_, il LED lampeggiante può essere ignorato ed è possibile completare la rimozione del controller danneggiato dallo chassis.
+*** Conferma che il controller abbia subito un takeover pulito dal partner controller, oppure che il controller danneggiato mostri _waiting for giveback_. Se è così, puoi ignorare il LED lampeggiante e continuare a rimuovere il controller danneggiato dallo chassis.
 
 
-** Se il LED NV verde è spento, è possibile completare la rimozione del controller danneggiato dal telaio.
+** Se il LED verde NV è spento, puoi completare la rimozione del controller difettoso dallo chassis.
 
 
 
@@ -116,7 +116,7 @@ Rimuovere la batteria NVMEM guasta dal sistema e sostituirla con una nuova.
 
 .Fasi
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Rimuovere il modulo di comando dal telaio.
+. Rimuovi il modulo controller dallo chassis.
 . Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
 . Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del modulo controller.
 +
@@ -155,13 +155,13 @@ Connettore di alimentazione della batteria
 
 
 . Rimuovere la batteria sostitutiva dalla confezione.
-Installare la batteria sostitutiva:
+. Installa la batteria di ricambio:
 +
 .. Ricollegare la spina della batteria alla presa del modulo controller.
 +
 Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
 
-.. Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
 .. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
 
 
@@ -216,8 +216,8 @@ NOTE: Durante il processo di avvio, potrebbero essere visualizzati i seguenti pr
 
 
 
-[[step-5-restore-automatic-giveback-and-autsupport]]
-== Fase 5: Ripristino del giveback automatico e del supporto automatico
+[[step-5-restore-automatic-giveback-and-autosupport]]
+== Fase 5: Ripristinare il giveback automatico e AutoSupport
 
 Ripristina giveback automatico e AutoSupport se sono stati disattivati.
 

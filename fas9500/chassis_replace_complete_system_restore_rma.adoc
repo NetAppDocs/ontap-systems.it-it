@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff fas9500, verify and set HA state, complete the replacement process 
 summary: Verificare lo stato ha del telaio e restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. 
 ---
-= Ripristinare e verificare la configurazione - FAS9500
+= Completa la sostituzione dello chassis del tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per completare la sostituzione dello chassis, è necessario completare attività specifiche.
+Per completare la sostituzione dello chassis nel tuo sistema FAS9500, devi verificare e impostare lo stato HA dello chassis, riavviare il sistema e restituire lo chassis a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
 
 
 
@@ -47,9 +47,9 @@ Il valore dello stato ha può essere uno dei seguenti:
 == Fase 2: Richiamare il sistema
 
 . In caso contrario, ricollegare i cavi di alimentazione alle PSU.
-. Accendere le PSU portando il selettore su *ON* e attendere che i controller si accendano completamente.
+. Accendi gli alimentatori spostando l'interruttore a bilanciere su *ON* e aspetta che i controller si avviino completamente.
 . Dopo l'accensione, controllare la parte anteriore e posteriore dello chassis e dei controller per verificare l'eventuale presenza di spie di guasto.
-. Connettersi all'indirizzo IP SP o BMC dei nodi tramite SSH. Questo sarà lo stesso indirizzo utilizzato per arrestare i nodi.
+. Connettiti all'indirizzo IP dello SP o del BMC dei nodi tramite SSH. Questo è lo stesso indirizzo utilizzato per arrestare i nodi.
 . Eseguire ulteriori controlli dello stato di salute come descritto in https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["How_to_Perform_a_cluster_Health_check_with_a_script_in_ONTAP"^]
 . Riattivare AutoSupport (terminare il messaggio della finestra di manutenzione):
 `system node autosupport invoke -node * -type all -message MAINT=end`

@@ -1,16 +1,18 @@
 ---
 permalink: fas2700/controller-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, shut down the impaired controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+keywords: fas2700, shut down the impaired controller 
+summary: Arresta il controller danneggiato nel tuo sistema FAS2700 prima della sostituzione, prendendone il controllo e portandolo al prompt LOADER. 
 ---
-= Spegnere il controller compromesso - FAS2700
+= Spegni il controller difettoso nel tuo sistema FAS2700 prima della sostituzione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Arresta il controller danneggiato nel tuo sistema FAS2700 prima della sostituzione, prendendone il controllo e portandolo al prompt LOADER.
+
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
 .A proposito di questa attività

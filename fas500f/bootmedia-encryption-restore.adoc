@@ -2,16 +2,16 @@
 permalink: fas500f/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: fas500f, post boot media replacement steps for okm, nse, and nve 
-summary: 'Una volta verificate le variabili d"ambiente, è necessario completare i passaggi specifici per i sistemi che hanno Onboard Key Manager OKM, NetApp Storage Encryption NSE o NetApp Volume Encryption NVE abilitati.' 
+summary: 'Dopo aver verificato le variabili d"ambiente, devi completare i passaggi specifici per i sistemi che hanno Onboard Key Manager OKM, NetApp Storage Encryption NSE o NetApp Volume Encryption NVE abilitati.' 
 ---
-= Ripristina crittografia - FAS500f
+= Ripristina la crittografia sul supporto di avvio nel tuo sistema FAS500f dopo la procedura di ripristino manuale dell'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Ripristinare la crittografia sul supporto di avvio sostitutivo.
+Dopo aver sostituito il boot media, ripristina la crittografia se il tuo sistema FAS500f utilizza Onboard Key Manager, NetApp Storage Encryption o NetApp Volume Encryption per proteggere i tuoi dati.
 
 Completare i passaggi appropriati per ripristinare la crittografia sul sistema in base al tipo di gestore delle chiavi.  Se non sei sicuro del gestore chiavi utilizzato dal tuo sistema, controlla le impostazioni acquisite all'inizio della procedura di sostituzione del supporto di avvio.
 

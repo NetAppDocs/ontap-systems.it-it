@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, boot the recovery image, manual, manual boot recovery 
 summary: 'Avviare l"immagine di ripristino ONTAP dall"unità USB su un sistema FAS8200 per ripristinare il supporto di avvio. Il sistema FAS8200 supporta solo procedure di ripristino manuale del supporto di avvio. Il ripristino automatico del supporto di avvio non è supportato.' 
 ---
-= Avviare l'immagine di ripristino - FAS8200
+= Avvia l'immagine di ripristino sul tuo sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,7 +62,7 @@ Se viene richiesto di continuare con l'aggiornamento, premere `y`.
 
 
 |===
-. Assicurarsi che le variabili ambientali siano impostate come previsto:
+. Verifica che le variabili ambientali siano impostate come previsto:
 +
 .. Portare il controller al prompt DEL CARICATORE.
 .. Controllare le impostazioni delle variabili di ambiente con `printenv` comando.
@@ -70,7 +70,7 @@ Se viene richiesto di continuare con l'aggiornamento, premere `y`.
 .. Salvare le modifiche utilizzando `savenv` comando.
 
 
-. Il successivo dipende dalla configurazione del sistema:
+. La fase successiva dipende dalla configurazione del sistema:
 +
 ** Se il sistema dispone di onboard keymanager, NSE o NVE configurati, visitare il sito xref:bootmedia-encryption-restore.adoc[Ripristinare OKM, NSE e NVE secondo necessità]
 ** Se il sistema non dispone di onboard keymanager, NSE o NVE configurati, completare la procedura descritta in questa sezione.

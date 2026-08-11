@@ -4,16 +4,18 @@ sidebar: sidebar
 keywords: fas9500, replace nvram 
 summary: 'Il modulo NVRAM è costituito da NVRAM11 GB e DIMM e fino a due moduli Flash cache SSD NVMe (moduli Flash cache o di caching) per modulo NVRAM.' 
 ---
-= Sostituire il modulo NVRAM e/o i DIMM NVRAM - FAS9500
+= Sostituisci il modulo NVRAM o il DIMM NVRAM nel tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Il modulo NVRAM è composto da NVRAM11 e DIMM. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM. Per sostituire un modulo NVRAM guasto, rimuoverlo dallo chassis, spostare i DIMM nel modulo sostitutivo e installare il modulo NVRAM sostitutivo nello chassis.
+Il modulo NVRAM nel tuo sistema FAS9500 è composto da NVRAM11 e DIMM. Puoi sostituire un modulo NVRAM guasto o un DIMM NVRAM per mantenere il normale funzionamento del sistema.
 
-Per sostituire e la NVRAM DIMM, è necessario rimuovere il modulo NVRAM dal telaio, sostituire il modulo DIMM guasto nel modulo, quindi reinstallare il modulo NVRAM.
+Per sostituire un modulo NVRAM guasto, devi rimuoverlo dallo chassis, spostare i DIMM sul modulo sostitutivo e installare il modulo NVRAM sostitutivo nello chassis.
+
+Per sostituire un DIMM NVRAM, devi rimuovere il modulo NVRAM dallo chassis, sostituire il DIMM guasto nel modulo e poi reinstallare il modulo NVRAM.
 
 .A proposito di questa attività
 Poiché l'ID di sistema deriva dal modulo NVRAM, in caso di sostituzione del modulo, i dischi appartenenti al sistema vengono riassegnati a un nuovo ID di sistema.
@@ -266,10 +268,10 @@ Per avviare ONTAP dal prompt DEL CARICATORE, immettere `bye`.
 
 
 
-[[step-5-reassigning-disks]]
-== Fase 5: Riassegnazione dei dischi
+[[step-5-reassign-disks]]
+== Fase 5: Riassegnare i dischi
 
-È necessario confermare la modifica dell'ID di sistema al momento dell'avvio del controller sostitutivo e verificare che la modifica sia stata implementata.
+Devi confermare la modifica dell'ID di sistema quando avvii il controller sostitutivo e poi verificare che la modifica sia corretta.
 
 
 CAUTION: La riassegnazione del disco è necessaria solo quando si sostituisce il modulo NVRAM e non si applica alla sostituzione del DIMM NVRAM.
@@ -333,7 +335,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 ----
 . Se il sistema si trova in una configurazione MetroCluster, monitorare lo stato del controller: `metrocluster node show`
 +
-La configurazione MetroCluster impiega alcuni minuti dopo la sostituzione per tornare a uno stato normale, in cui ogni controller mostra uno stato configurato, con mirroring DR abilitato e una modalità normale. Il `metrocluster node show -fields node-systemid` L'output del comando visualizza il vecchio ID di sistema fino a quando la configurazione MetroCluster non torna allo stato normale.
+La configurazione MetroCluster impiega alcuni minuti dopo la sostituzione per tornare allo stato normale, momento in cui ogni controller mostra uno stato configurato, con DR Mirroring abilitato e modalità normale. L'output del comando  `metrocluster node show -fields node-systemid` visualizza il vecchio ID di sistema finché la configurazione MetroCluster non torna allo stato normale.
 
 . Se il controller si trova in una configurazione MetroCluster, a seconda dello stato MetroCluster, verificare che il campo DR home ID (ID origine DR) indichi il proprietario originale del disco se il proprietario originale è un controller nel sito di emergenza.
 +

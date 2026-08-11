@@ -2,9 +2,9 @@
 permalink: fas8200/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: fas8200, replace the rtc battery 
-summary: È necessario sostituire la batteria del real-time clock nel modulo controller affinché i servizi e le applicazioni del sistema che dipendono da una sincronizzazione oraria precisa continuino a funzionare. 
+summary: Sostituisci la batteria del real-time clock nel modulo controller così che i tuoi servizi e le applicazioni che dipendono da una sincronizzazione oraria precisa continuino a funzionare. 
 ---
-= Sostituire la batteria dell'orologio in tempo reale - FAS8200
+= Sostituisci la batteria dell'orologio in tempo reale nel tuo sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: È necessario sostituire la batteria del real-time clock nel modulo con
 Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, devi contattare il supporto tecnico.
 
 
 
@@ -259,8 +259,8 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 
 
 
-[[step-4-reinstall-the-controller-module-and-setting-timedate-after-rtc-battery-replacement]]
-== Fase 4: Reinstallare il modulo controller e impostare la data e l'ora dopo la sostituzione della batteria RTC
+[[step-4-reinstall-the-controller-module-and-reset-the-time-and-date-after-rtc-battery-replacement]]
+== Passaggio 4: Reinstalla il modulo controller e reimposta l'ora e la data dopo la sostituzione della batteria RTC
 
 Dopo aver sostituito un componente all'interno del modulo controller, è necessario reinstallare il modulo controller nello chassis del sistema, reimpostare l'ora e la data sul controller, quindi avviarlo.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, shut, down, impaired, controller, take, over, manual, manual boot recovery 
 summary: È possibile arrestare o riprendere il controllo del controller danneggiato utilizzando procedure diverse, a seconda della configurazione hardware del sistema di archiviazione. Il sistema FAS9000 supporta solo procedure di ripristino manuale tramite supporti di avvio. 
 ---
-= Spegnere il controller compromesso - FAS9000
+= Arresta il controller danneggiato nel tuo sistema FAS9000 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,7 +62,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 [[option-2-controller-is-in-a-metrocluster]]
 === Opzione 2: Controller in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso. NOTA: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
+Dopo aver completato le attività NVE o NSE, arresta il nodo danneggiato. NOTA: non usare questa procedura se il tuo sistema è in una configurazione MetroCluster a due nodi.
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
@@ -121,7 +121,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 [[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opzione 3: Controller in un MetroCluster a due nodi
 
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.
+Dopo aver completato le attività NVE o NSE, spegni il nodo danneggiato.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

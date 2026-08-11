@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FAS9500 
 summary: Per eseguire lo swap a caldo di un modulo di alimentazione del controller di destage DCPM, che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo. 
 ---
-= Sostituire il modulo di alimentazione Destage Control contenente la batteria NVRAM11 - FAS9500
+= Sostituisci il modulo DCPM e la batteria NVRAM11 nel tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Per eseguire lo swap a caldo di un modulo di alimentazione del controll
 [role="lead"]
 Per sostituire a caldo un modulo di alimentazione del controller di destinazione (DCPM), che contiene la batteria NVRAM11, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.
 
-È necessario disporre di un modulo DCPM sostitutivo prima di rimuovere il modulo guasto dal telaio e sostituirlo entro cinque minuti dalla rimozione. Una volta rimosso il modulo DCPM dallo chassis, non esiste alcuna protezione per lo shutdown per il modulo controller proprietario del modulo DCPM, ad eccezione del failover verso l'altro modulo controller.
+Devi avere a disposizione un modulo DCPM sostitutivo prima di rimuovere il modulo guasto dallo chassis. Devi sostituirlo entro cinque minuti dalla rimozione. Dopo la rimozione del modulo DCPM dallo chassis, non c'è alcuna protezione contro l'arresto per il modulo controller che possiede il modulo DCPM, se non il failover sull'altro modulo controller.
 
 
 
@@ -26,7 +26,7 @@ Per sostituire il modulo DCPM nel sistema, è necessario rimuovere il modulo DCP
 . Rimuovere il pannello anteriore del sistema e metterlo da parte.
 . Individuare il modulo DCPM guasto nella parte anteriore del sistema cercando il LED di attenzione sul modulo.
 +
-Se il modulo è guasto, il LED diventa ambra fisso.
+Il LED è fisso ambra se il modulo è difettoso.
 
 +
 

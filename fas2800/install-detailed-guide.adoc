@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/install-detailed-guide.html 
 sidebar: sidebar 
-keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
-summary: 'Questo procurement fornisce istruzioni dettagliate e dettagliate per l"installazione di un tipico sistema di storage NetApp.' 
+keywords: fas2820, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
+summary: Questa procedura fornisce istruzioni dettagliate e passo passo per installare il tuo sistema storage FAS2820. 
 ---
-= Fasi dettagliate - FAS2820
+= Installa il tuo sistema FAS2820 seguendo le istruzioni dettagliate
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Questa procedura fornisce istruzioni dettagliate per l'installazione di un tipico sistema di storage NetApp. Utilizzare questa procedura se si desidera ottenere istruzioni di installazione più dettagliate.
+Questa procedura fornisce istruzioni dettagliate e passo passo per la preparazione, l'installazione, il cablaggio e l'accensione del sistema storage FAS2820. Usa questi passaggi se preferisci spiegazioni approfondite invece della guida rapida abbreviata.
 
 
 
@@ -45,8 +45,8 @@ IMPORTANT: I clienti con requisiti di alimentazione specifici devono verificare 
 
 . Accedere a. https://docs.netapp.com/us-en/ontap/task_configure_ontap.html#assign-a-node-management-ip-address["Configurare ONTAP su un nuovo cluster con Gestione di sistema"^]
 +
-.. Rivedere i requisiti della procedura amd.
-.. Raccogliere informazioni sul proprio sistema di storage completando la https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Foglio di lavoro di installazione^ (è necessario l'URL del foglio di lavoro)"].
+.. Esamina i requisiti e le fasi della procedura.
+.. Raccogli informazioni sul tuo sistema storage compilando il foglio di configurazione.
 .. Registrare il numero di serie del sistema storage dalle unità di controllo.
 +
 image::../media/drw_ssn_label.svg[Esempio di numero di serie del sistema]
@@ -478,7 +478,7 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Collegamento del c
 [[step-5-complete-storage-system-setup-and-configuration]]
 == Fase 5: Completare la configurazione e la configurazione del sistema di archiviazione
 
-Completare l'installazione e la configurazione del sistema di storage utilizzando l'opzione 1: Se la funzione di rilevamento della rete è attivata o l'opzione 2: Se la funzione di rilevamento della rete non è attivata.
+Completa la configurazione del sistema storage utilizzando l'Opzione 1: se il rilevamento di rete è abilitato, oppure l'Opzione 2: se il rilevamento di rete non è abilitato.
 
 Utilizzare la seguente animazione in entrambe le opzioni in cui è richiesta l'impostazione dell'ID scaffale:
 
@@ -488,17 +488,17 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 ====
 .Opzione 1: Se la funzione di rilevamento della rete è attivata
 --
-Se sul portatile è abilitata la funzione di rilevamento della rete, completare la configurazione e la configurazione del sistema storage utilizzando la funzione di rilevamento automatico del cluster.
+Se la rilevazione della rete è abilitata sul tuo laptop, completa la configurazione del sistema storage utilizzando la rilevazione automatica del cluster.
 
 .Fasi
-. Attivare l'alimentazione dello scaffale e impostare gli ID dello scaffale utilizzando l'animazione all'inizio di questo passaggio.
+. Accendi l'alimentazione dei ripiani e imposta gli ID dei ripiani utilizzando l'animazione all'inizio di questo passaggio.
 . Accendere i controller
 +
 .. Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 .. Accendere gli interruttori di alimentazione su entrambi i nodi.
 +
 
-NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+NOTE: L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 +
 image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[Accendere l'unità]
@@ -510,13 +510,13 @@ image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[Accendere l'unità]
 Per ulteriori informazioni, consultare la guida in linea del portatile.
 
 . Collegare il laptop allo switch di gestione.
-. Utilizza l'immagine o le procedure per rilevare il nodo del sistema storage da configurare:
+. Usa la figura o i passaggi per individuare il nodo del sistema storage da configurare:
 +
 image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Sistema di rilevamento automatico]
 
 +
 .. Aprire file Explorer.
-.. Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.
+.. Fai clic con il pulsante destro del mouse su *Network* nel riquadro di sinistra e seleziona *refresh*.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 
@@ -530,8 +530,8 @@ Viene visualizzato Gestione sistema.
 . Utilizzare la configurazione guidata di System Manager per configurare il sistema storage utilizzando i dati raccolti in <<Fase 1: Preparazione per l'installazione>>.
 . Crea un account o accedi al tuo account.
 +
-.. Fare clic su https://mysupport.netapp.com["mysupport.netapp.com"]
-.. Fai clic su _Crea account_ se devi creare un account o accedere al tuo account.
+.. Seleziona https://mysupport.netapp.com["mysupport.netapp.com"]
+.. Seleziona _Crea account_ se devi creare un account o accedere al tuo account.
 
 
 . Scaricare e installare https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]
@@ -571,7 +571,7 @@ image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[Accendere l'unità]
 
 +
 
-NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+NOTE: L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 . Assegnare un indirizzo IP di gestione del nodo iniziale a uno dei nodi.
 +
@@ -606,13 +606,13 @@ NOTE: Se non si sa come configurare PuTTY, consultare la guida in linea del port
 
 NOTE: Il formato dell'indirizzo è +https://x.x.x.x.+
 
-.. Configurare il sistema di archiviazione utilizzando i dati raccolti in <<Fase 1: Preparazione per l'installazione>>..
+.. Configura il sistema storage utilizzando i dati raccolti in <<Fase 1: Preparazione per l'installazione>>.
 
 
 . Crea un account o accedi al tuo account.
 +
-.. Fare clic su https://mysupport.netapp.com["mysupport.netapp.com"]
-.. Fai clic su _Crea account_ se devi creare un account o accedere al tuo account.
+.. Seleziona https://mysupport.netapp.com["mysupport.netapp.com"]
+.. Seleziona _Crea account_ se devi creare un account o accedere al tuo account.
 
 
 . Scaricare e installare https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]

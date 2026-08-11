@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, boot the recovery image 
 summary: Dopo aver installato il nuovo dispositivo di boot media nel sistema FAS500f, puoi avviare il processo automatico di ripristino del boot media per ripristinare la configurazione dal nodo partner. 
 ---
-= Ripristino automatico del supporto di boot dal nodo partner - FAS500f
+= Ripristina l'immagine di boot sul tuo sistema FAS500f usando il processo di ripristino automatico del boot
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -301,4 +301,4 @@ Vai a <<reenable-auto-giveback,riattivazione della restituzione automatica>> se 
 
 
 .Cosa succederà
-Dopo aver ripristinato l'immagine ONTAP e dopo aver attivato e distribuito i dati, si link:bootmedia-complete-rma-bmr.html["Restituire la parte guasta a NetApp"].
+Dopo aver ripristinato l'immagine ONTAP e dopo che il nodo è attivo e fornisce dati, link:bootmedia-complete-rma-bmr.html["Restituire la parte guasta a NetApp"].

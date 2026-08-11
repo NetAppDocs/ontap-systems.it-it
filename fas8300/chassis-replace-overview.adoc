@@ -4,15 +4,15 @@ sidebar: sidebar
 keywords: fas8300, fas8700, shut, chassis, controller, replace, remove, swap, verify, install, power, supply, metrocluster, aggregates, replacement, process, equipment, rack, ha, state, system 
 summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
 ---
-= Panoramica della sostituzione dello chassis - FAS8300 e FAS8700
+= Verifica i requisiti prima di sostituire lo chassis FAS8300 o FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Prima di sostituire lo chassis nel tuo sistema FAS8300 o FAS8700, tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, devi contattare il supporto tecnico. Questa procedura è supportata su tutte le versioni di ONTAP, ma causa un'interruzione completa del servizio in un cluster a due controller e un'interruzione parziale in un cluster multi-nodo.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
-* Questa procedura ha un'interruzione. Per un cluster a due controller, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* Questa procedura è problematica: un cluster a due controller subisce un'interruzione completa del servizio, mentre un cluster multi-nodo subisce un'interruzione parziale.
 

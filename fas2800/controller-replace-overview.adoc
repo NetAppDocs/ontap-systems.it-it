@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/controller-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2800, prerequisite, replace the controller module 
-summary: È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso. 
+keywords: fas2820, prerequisite, replace the controller module 
+summary: Prima di sostituire il controller nel tuo sistema FAS2820, devi verificare i prerequisiti per la procedura di sostituzione e selezionare quella corretta per la tua versione di ONTAP. 
 ---
-= Panoramica della sostituzione del modulo controller - FAS2820
+= Verifica i requisiti prima di sostituire il controller nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso.
+Prima di sostituire il controller nel tuo sistema FAS2820, devi verificare i prerequisiti per la procedura di sostituzione e selezionare quella corretta per la tua versione di ONTAP.
 
 [NOTE]
 ====
@@ -29,9 +29,9 @@ NetApp raccomanda vivamente di abilitare la registrazione della console sui disp
 Eseguire la riassegnazione del disco come indicato nella procedura.
 
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
-* È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
+* Devi sostituire il modulo controller con un modulo controller dello stesso modello. Non puoi aggiornare il sistema semplicemente sostituendo il modulo controller.
 * Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
-* In questa procedura, il dispositivo di boot viene spostato dal controller guasto al controller _replacement_ in modo che il controller _replacement_ si avvii nella stessa versione di ONTAP del vecchio modulo controller.
+* In questa procedura, il dispositivo di boot viene spostato dal controller danneggiato al controller _sostitutivo_ in modo che il controller _sostitutivo_ si avvii con la stessa versione di ONTAP del vecchio modulo controller.
 * È importante applicare i comandi descritti di seguito ai sistemi corretti:
 +
 ** Il controller _alterato_ è il controller che viene sostituito.

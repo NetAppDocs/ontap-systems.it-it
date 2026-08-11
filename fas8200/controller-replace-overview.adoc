@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, prerequisite, replace the controller module 
 summary: È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso. 
 ---
-= Panoramica della sostituzione del modulo controller - FAS8200
+= Verifica i requisiti prima di sostituire il controller nel tuo sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,7 +36,7 @@ Eseguire la riassegnazione del disco come indicato nella procedura.
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 * È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
 * Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
-* In questa procedura, il dispositivo di boot viene spostato dal controller guasto al controller _replacement_ in modo che il controller _replacement_ si avvii nella stessa versione di ONTAP del vecchio modulo controller.
+* In questa procedura, il dispositivo di boot viene spostato dal controller danneggiato al controller _sostitutivo_ in modo che il controller _sostitutivo_ si avvii con la stessa versione di ONTAP del vecchio modulo controller.
 * Tutte le schede PCIe spostate dal vecchio modulo controller al nuovo modulo controller o aggiunte dall'inventario esistente del sito del cliente devono essere supportate dal modulo controller sostitutivo.
 +
 https://hwu.netapp.com["NetApp Hardware Universe"]

@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
-keywords: fas2800, how to recable the system, how to reassign disks 
-summary: È necessario riassegnare lo storage e confermare la riassegnazione del disco. 
+keywords: fas2820, how to recable the system, how to reassign disks 
+summary: 'Per completare la sostituzione del controller e ripristinare il sistema FAS2820 al pieno funzionamento, devi ricablare lo storage, confermare la riassegnazione dei dischi, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller.' 
 ---
-= Riscrivere il sistema e riassegnare i dischi - FAS2820
+= Restituisci il controller nel tuo sistema FAS2820 per riprendere il normale funzionamento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, è necessario rieseguire lo storage, confermare la riassegnazione del disco, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller. È necessario completare una serie di attività prima di ripristinare il funzionamento completo del sistema.
+Per completare la procedura di sostituzione e ripristinare il tuo sistema FAS2820 al pieno funzionamento, devi ricablare lo storage, confermare la riassegnazione dei dischi, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller.
 
 
 
@@ -34,7 +34,7 @@ Verificare le connessioni di rete e di archiviazione del modulo controller utili
 
 È necessario confermare la modifica dell'ID di sistema quando si avvia il controller _replacement_ e verificare che la modifica sia stata implementata.
 
-. Se il controller _replacement_ è in modalità di manutenzione (che mostra il `*>` Uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
+. Se il controller _replacement_ è in modalità di manutenzione (che mostra il `*>` Prompt), uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
 . Dal prompt DEL CARICATORE sul controller _replacement_, avviare il controller, immettendo `y` Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema:``boot_ontap``
 . Attendere il `Waiting for giveback...` Viene visualizzato il messaggio sulla console del controller _replacement_ e quindi, dal controller integro, verificare che il nuovo ID di sistema del partner sia stato assegnato automaticamente: `storage failover show`
 +

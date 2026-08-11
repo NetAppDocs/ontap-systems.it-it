@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, complete the replacement process 
 summary: 'Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, è necessario recuperare lo storage, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller.' 
 ---
-= Ripristino completo del sistema - FAS9500
+= Completa la sostituzione del controller per il tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,8 +50,8 @@ NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e in
 
 
 
-[[step-2-verify-lifs-and-registering-the-serial-number]]
-== Fase 2: Verifica dei LIF e registrazione del numero di serie
+[[step-2-verify-lifs-and-register-the-serial-number]]
+== Fase 2: Verificare i file LIF e registrare il numero di serie
 
 Prima di rimettere in servizio il nodo _sostitutivo_, è necessario verificare che i LIF siano sulle rispettive porte principali, registrare il numero di serie del nodo _sostitutivo_ se AutoSupport è abilitato, controllare lo stato di salute del cluster, chiudere eventuali finestre di manutenzione e reimpostare il ripristino automatico.
 

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, recable the system, reassign disks 
 summary: Ricollegare i cavi del sistema e riassegnare i dischi. 
 ---
-= Riciclare il sistema - FAS9500
+= Restituisci il controller nel tuo sistema FAS9500 per riprendere il normale funzionamento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Continuare la procedura di sostituzione ricablando le connessioni di rete e di storage.
+Restituisci il controllo delle risorse di storage al controller sostitutivo così il tuo sistema FAS9500 può riprendere il normale funzionamento.
 
 
 
@@ -25,27 +25,27 @@ Continuare la procedura di sostituzione ricablando le connessioni di rete e di s
 . Verificare che il cablaggio sia corretto utilizzando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^].
 +
 .. Scaricare e installare Config Advisor.
-.. Inserire le informazioni relative al sistema di destinazione, quindi fare clic su Collect Data (Raccogli dati).
-.. Fare clic sulla scheda Cabling (cablaggio), quindi esaminare l'output. Assicurarsi che tutti gli shelf di dischi siano visualizzati e che tutti i dischi appaiano nell'output, correggendo eventuali problemi di cablaggio rilevati.
-.. Controllare gli altri cavi facendo clic sulla scheda appropriata, quindi esaminare l'output di Config Advisor.
+.. Inserisci le informazioni relative al sistema di destinazione, quindi seleziona Raccogli dati.
+.. Seleziona la scheda Cablaggio, quindi esamina l'output. Assicurati che vengano visualizzati tutti gli alloggiamenti per i dischi e che tutti i dischi siano presenti nell'output, correggendo eventuali problemi di cablaggio che trovi.
+.. Verifica gli altri cablaggi selezionando la scheda appropriata e poi esaminando l'output di Config Advisor.
 
 
 
 
 
-NOTE: L'ID di sistema e le informazioni sull'assegnazione dei dischi risiedono nel modulo NVRAM, che si trova in un modulo separato dal modulo controller e non influenzato dalla sostituzione del modulo controller.
+NOTE: L'ID di sistema e le informazioni di assegnazione del disco risiedono nel modulo NVRAM, che si trova in un modulo separato dal modulo controller e non viene influenzato dalla sostituzione del modulo controller.
 
 
 
 [[step-2-reassign-disks]]
 == Fase 2: Riassegnare i dischi
 
-Se il sistema di storage si trova in una coppia ha, l'ID di sistema del nuovo modulo controller viene assegnato automaticamente ai dischi quando il giveback si verifica al termine della procedura. È necessario confermare la modifica dell'ID di sistema quando si avvia il nodo _replacement_ e verificare che la modifica sia stata implementata.
+Se il sistema storage è in una coppia HA, l'ID di sistema del nuovo modulo controller viene assegnato automaticamente ai dischi quando avviene il giveback al termine della procedura. Devi confermare la modifica dell'ID di sistema quando avvii il nodo di _sostituzione_ e poi verificare che la modifica sia corretta.
 
 Questa procedura si applica solo ai sistemi che eseguono ONTAP in una coppia ha.
 
 . Se il nodo _replacement_ è in modalità manutenzione (che mostra il `*>` Prompt), uscire dalla modalità di manutenzione e passare al prompt DEL CARICATORE: `halt`
-. Dal prompt DEL CARICATORE sul nodo _replacement_, avviare il nodo, immettendo `y` Se viene richiesto di ignorare l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema.``boot_ontap``
+. Dal prompt LOADER sul nodo _sostitutivo_, avvia il nodo, inserendo  `y` se ti viene richiesto di sovrascrivere l'ID di sistema a causa di una mancata corrispondenza dell'ID di sistema: `boot_ontap`
 . Attendere il `Waiting for giveback...` Viene visualizzato sulla console del nodo _replacement_ e quindi, dal nodo integro, verificare che il nuovo ID di sistema del partner sia stato assegnato automaticamente: Visualizzazione del failover dello storage
 +
 Nell'output del comando, viene visualizzato un messaggio che indica che l'ID del sistema è stato modificato sul nodo con problemi, mostrando i vecchi e i nuovi ID corretti. Nell'esempio seguente, il node2 è stato sostituito e ha un nuovo ID di sistema pari a 151759706.

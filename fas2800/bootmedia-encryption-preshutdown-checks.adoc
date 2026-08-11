@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: fas2800, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback 
-summary: Prima di spegnere il controller compromesso e controllare lo stato delle chiavi di crittografia integrate, è necessario controllare lo stato del controller compromesso, disattivare il giveback automatico e verificare la versione di ONTAP in esecuzione nel sistema. 
+keywords: fas2820, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback 
+summary: Per garantire la sicurezza dei dati sul sistema storage FAS2820, devi verificare il supporto e lo stato della chiave di crittografia sul supporto di boot. Controlla se la versione di ONTAP supporta NetApp Volume Encryption e, prima di spegnere il controller, verifica che il key manager sia attivo. 
 ---
-= Controllare il supporto e lo stato della chiave di crittografia - FAS2820
+= Verifica il supporto di crittografia sul supporto di avvio nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati nel sistema di storage, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Per garantire la sicurezza dei dati sul tuo sistema storage FAS2820, verifica il supporto e lo stato della chiave di crittografia sul supporto di boot. Controlla se la versione di ONTAP supporta NetApp Volume Encryption (NVE). Prima di spegnere il controller, controlla se il key manager è attivo.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 

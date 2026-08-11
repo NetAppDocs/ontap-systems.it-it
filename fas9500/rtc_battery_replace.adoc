@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, replace the real-time clock battery 
 summary: 'Sostituire la batteria dell"orologio in tempo reale nel modulo controller.' 
 ---
-= Sostituire la batteria dell'orologio in tempo reale - FAS9500
+= Sostituisci la batteria dell'orologio in real-time nel tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Sostituire la batteria dell"orologio in tempo reale nel modulo control
 Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, devi contattare il supporto tecnico.
 
 
 
@@ -196,7 +196,7 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 [[step-4-reinstall-the-controller-module-and-set-timedate]]
 == Fase 4: Reinstallare il modulo controller e impostare data/ora
 
-Dopo aver sostituito la batteria RTC, è necessario reinstallare il modulo controller. Se la batteria RTC è stata lasciata fuori dal modulo controller per più di 10 minuti, potrebbe essere necessario reimpostare la data e l'ora.
+Dopo aver sostituito la batteria RTC, devi reinstallare il modulo controller. Se la batteria RTC è rimasta fuori dal modulo controller per più di 10 minuti, potresti dover reimpostare l'ora e la data.
 
 .Fasi
 . Se non è già stato fatto, chiudere il condotto dell'aria o il coperchio del modulo controller.

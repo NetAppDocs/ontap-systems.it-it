@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
-keywords: fas2800, boot, recovery, image, restore, file, system, environmental, varible 
-summary: 'È necessario avviare l"immagine ONTAP dall"unità USB, ripristinare il file system e verificare le variabili ambientali.' 
+keywords: fas2820, boot, recovery, image, restore, file, system, environmental, varible 
+summary: 'Dopo aver installato il nuovo dispositivo di boot nel tuo sistema FAS2820, puoi avviare manualmente l"immagine di ripristino da un"unità USB per ripristinare la configurazione dal nodo partner.' 
 ---
-= Ripristino manuale del supporto di avvio da un'unità USB - FAS2820
+= Avvia l'immagine di ripristino sul tuo sistema FAS2820 utilizzando la procedura di ripristino manuale di boot
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Dopo aver installato il nuovo dispositivo multimediale di avvio nel sistema, è possibile avviare l'immagine di ripristino da un'unità USB e ripristinare la configurazione dal nodo partner.
+Dopo aver installato il nuovo dispositivo di boot nel tuo sistema FAS2820, puoi avviare manualmente l'immagine di ripristino da un'unità USB per ripristinare la configurazione dal nodo partner.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 

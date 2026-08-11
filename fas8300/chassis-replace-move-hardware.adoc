@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, shut, chassis, controller, replace, remove, swap, verify, install, power, supply, metrocluster, aggregates, replacement, process, equipment, rack, ha, state, system 
 summary: 'Spostare le ventole, i dischi rigidi e il modulo controller o i moduli dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis compromesso dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.' 
 ---
-= Spostare e sostituire l'hardware - FAS8300 e FAS8700
+= Sostituisci lo chassis nel tuo sistema FAS8300 o FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -80,7 +80,7 @@ Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis e
 . Rimuovere le viti dai punti di montaggio del telaio.
 . Con due persone, far scorrere il vecchio chassis dalle guide del rack in un cabinet di sistema o in un rack dell'apparecchiatura, quindi metterlo da parte.
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Con l'aiuto di due persone, installare lo chassis sostitutivo nel rack dell'apparecchiatura o nell'armadietto del sistema guidandolo sulle guide del rack in un cabinet del sistema o in un rack dell'apparecchiatura.
+. Con l'aiuto di due persone, installa il chassis nel rack delle apparecchiature o nell'armadio di sistema guidando il chassis sulle guide del rack nel sistema cabinet o nel rack delle apparecchiature.
 . Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
 . Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dal vecchio chassis.
 . Se non è già stato fatto, installare il pannello.
@@ -93,7 +93,7 @@ Prima di installare lo chassis sostitutivo, è necessario rimuovere lo chassis e
 
 Dopo aver installato i moduli controller nel nuovo chassis, è necessario avviarlo.
 
-Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+Per le coppie HA con due moduli controller nello stesso chassis, installa i moduli controller nella sequenza corretta. Ogni controller tenta di riavviarsi non appena è completamente inserito nello chassis.
 
 .Fasi
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.

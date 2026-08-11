@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, locate, boot, media, controller, direction, replace, manual, manual boot recovery 
 summary: Sostituire il supporto di avvio non riuscito su un modulo controller FAS2600. Il sistema FAS2600 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
-= Sostituire il supporto di avvio - FAS2600
+= Sostituisci il supporto di avvio nel tuo sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -81,7 +81,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 
 
 * Se il sistema è una coppia ha, è necessario disporre di una connessione di rete.
-* Se il sistema è autonomo, non è necessaria una connessione di rete, ma è necessario eseguire un ulteriore riavvio durante il ripristino del file system var.
+* Se il tuo sistema è un sistema autonomo, non hai bisogno di una connessione di rete, ma devi eseguire un riavvio aggiuntivo quando ripristini il file system var.
 
 
 .Fasi
@@ -111,7 +111,7 @@ Il sistema inizia ad avviarsi e si arresta al prompt DEL CARICATORE.
 ** Se si sta configurando DHCP: `ifconfig e0a -auto`
 +
 
-NOTE: La porta di destinazione configurata è la porta di destinazione utilizzata per comunicare con il controller compromesso dal controller integro durante il ripristino del file system var con una connessione di rete. È anche possibile utilizzare la porta e0M in questo comando.
+NOTE: La porta di destinazione che configuri è la porta che usi per comunicare con il controller danneggiato dal controller funzionante durante il ripristino del file system var tramite una connessione di rete. Puoi anche usare la porta e0M in questo comando.
 
 ** Se si configurano connessioni manuali: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
 +

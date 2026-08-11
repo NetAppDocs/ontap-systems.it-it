@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas70, fas90, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Verificare che le interfacce logiche LIF stiano segnalando alla loro porta home, eseguire un controllo dello stato del cluster e quindi restituire la parte guasta a NetApp per completare il passaggio finale della procedura di sostituzione del controller FAS70 o FAS90. 
 ---
-= Sostituzione completa della centralina - FAS70 e FAS90
+= Completa la sostituzione del controller per il tuo sistema FAS70 o FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per completare la sostituzione del controller del sistema AFF A1K, ripristinare innanzitutto la configurazione di NetApp Storage Encryption (se necessario). Quindi, conferma che le interfacce logiche (LIF) stanno eseguendo un reporting sulle rispettive porte home ed esegui un controllo dello stato di salute del cluster. Infine, restituire il componente guasto a NetApp.
+Per completare la sostituzione del controller per il tuo sistema FAS70 o FAS90, prima ripristina la configurazione di NetApp Storage Encryption (se necessario). Successivamente, conferma che le interfacce logiche (LIF) stiano riportando alle loro porte home ed esegui un controllo dello stato del cluster. Infine, restituisci la parte guasta a NetApp.
 
 
 

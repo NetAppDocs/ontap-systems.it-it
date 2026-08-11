@@ -1,16 +1,18 @@
 ---
 permalink: fas2800/controller-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas2800, shut down the impaired controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+keywords: fas2820, shut down the impaired controller 
+summary: Arresta il controller difettoso nel tuo sistema FAS2820 prima di sostituirlo. La procedura che usi dipende dalla configurazione hardware del tuo sistema storage. 
 ---
-= Spegnere il controller compromesso - FAS2820
+= Spegni il controller guasto nel tuo sistema FAS2820 prima della sostituzione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Arresta il controller difettoso nel tuo sistema FAS2820 prima di sostituirlo. La procedura che usi dipende dalla configurazione hardware del tuo sistema storage.
+
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
 Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso; vedere link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^].

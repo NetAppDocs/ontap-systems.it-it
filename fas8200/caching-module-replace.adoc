@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace caching module 
 summary: È necessario sostituire il modulo di caching nel modulo controller quando il sistema registra un singolo messaggio AutoSupport che indica che il modulo è andato offline. In caso contrario, si verifica un peggioramento delle performance. 
 ---
-= Sostituire il modulo di caching - FAS8200
+= Sostituisci il modulo di caching nel tuo sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -256,7 +256,7 @@ Il sistema storage deve soddisfare determinati criteri a seconda della situazion
 
 * Deve disporre del sistema operativo appropriato per il modulo di caching che si sta installando.
 * Deve supportare la capacità di caching.
-* Tutti gli altri componenti del sistema di storage devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema storage devono funzionare correttamente; in caso contrario, contatta il supporto tecnico.
 +
 .. Individuare il modulo di caching sul retro del modulo controller e rimuoverlo.
 +
@@ -300,7 +300,7 @@ Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di re
 
 . Completare la reinstallazione del modulo controller:
 +
-Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis
+Il modulo controller inizia ad avviarsi non appena viene inserito completamente nello chassis.
 
 +
 .. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.

@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: fas9500, add io module 
 summary: È possibile aggiungere un modulo i/o al sistema sostituendo un modulo i/o esistente con un nuovo modulo i/o in un sistema completamente popolato oppure aggiungendo un nuovo modulo i/o in uno slot vuoto nello chassis. 
 ---
-= Aggiunta di un modulo i/o - FAS9500
+= Aggiungi un modulo I/O al tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile aggiungere un modulo i/o al sistema sostituendo una scheda NIC o un adattatore di storage con una nuova scheda in un sistema completamente popolato oppure aggiungendo una nuova scheda NIC o un adattatore di storage in uno slot vuoto dello chassis del sistema.
+Puoi aggiungere un modulo I/O al tuo sistema FAS9500 sostituendo una NIC o un adattatore di storage con uno nuovo in un sistema completamente popolato, oppure aggiungendo una nuova NIC o un nuovo adattatore di storage in uno slot chassis vuoto.
 
 .Prima di iniziare
 * Controllare https://hwu.netapp.com/["NetApp Hardware Universe"] Per assicurarsi che il nuovo modulo i/o sia compatibile con il sistema e la versione di ONTAP in uso.
-* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"] E utilizza il miglior modulo di i/O.
+* Se sono disponibili più slot, controlla le priorità degli slot in  https://hwu.netapp.com/["NetApp Hardware Universe"] e usa quella migliore disponibile per il tuo modulo I/O.
 * Per aggiungere senza interruzioni un modulo i/o, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione o rimuovere un modulo i/o esistente, aggiungere il modulo i/o nuovo o sostitutivo e restituire il controller di destinazione.
 * Assicurarsi che tutti gli altri componenti funzionino correttamente.
 
@@ -184,7 +184,7 @@ Se il sistema di archiviazione dispone di slot vuoti, installare il nuovo modulo
 . Se il modulo i/o sostitutivo è una scheda NIC, collegare il modulo agli switch dati.
 +
 
-NOTE: Assicurarsi che tutti gli slot i/o inutilizzati siano dotati di spazi vuoti per evitare possibili problemi di temperatura.
+NOTE: Assicurati di installare dei tappi di chiusura negli slot I/O non utilizzati per prevenire possibili problemi termici.
 
 . Riavviare il controller dal prompt DEL CARICATORE: _Bye_
 +
@@ -193,7 +193,7 @@ NOTE: In questo modo, le schede PCIe e gli altri componenti vengono reinizializz
 
 . Restituire il nodo dal nodo partner. `storage failover giveback -ofnode target_node_name`
 . Abilitare il giveback automatico se è stato disattivato: `storage failover modify -node local -auto-giveback true`
-. Se si utilizzano gli slot 3 e/o 7 per il collegamento in rete, utilizzare `storage port modify -node __<node name>__ -port __<port name>__ -mode network` comando per convertire lo slot per l'utilizzo in rete.
+. Se usi lo slot 3 o 7 per il networking, usa il comando  `storage port modify -node __<node name>__ -port __<port name>__ -mode network` per convertire lo slot per l'uso di networking.
 . Ripetere questi passi per il controller B.
 . Se è stato installato un modulo i/o di storage, installare e collegare gli shelf SAS, come descritto in link:../sas3/install-hot-add-shelf.html["Aggiunta a caldo di uno shelf SAS"].
 

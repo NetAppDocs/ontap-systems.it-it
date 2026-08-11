@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700, fas9000, detailed, guide, prepare, install, hardware, two, node, switchless, cluster, cable, controller, ds212c, ds224c, ns224, drive, shelf, complete, system, setup, configuration, network, discovery 
 summary: 'Questa guida fornisce istruzioni dettagliate e dettagliate per l"installazione di un sistema NetApp tipico.' 
 ---
-= Guida dettagliata - FAS9000
+= Installa il tuo sistema FAS9000 seguendo le istruzioni dettagliate
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Questa guida fornisce istruzioni dettagliate e dettagliate per l'installazione di un sistema NetApp tipico. Utilizzare questa guida per ottenere istruzioni di installazione più dettagliate.
+Queste istruzioni dettagliate, passo passo, ti guidano nell'installazione del tuo sistema FAS9000, dal montaggio in rack e cablaggio fino alla configurazione iniziale. Usa questi passaggi se vuoi una guida all'installazione più approfondita rispetto ai passaggi rapidi.
 
 
 
@@ -171,7 +171,7 @@ image:../media/oie_cable_power.png["Cavi di alimentazione"]
 Accensione del sistema
 
 |===
-. Consulta la _Guida alla confidenziazione di NetApp ONTAP_ e raccogli le informazioni richieste elencate in tale guida.
+. Consultare la _Guida alla configurazione di NetApp ONTAP_ e raccogliere le informazioni richieste elencate in tale guida.
 +
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guida alla configurazione di ONTAP"]
 
@@ -219,7 +219,7 @@ image::../media/drw_9000_cable_management_arms.png[Collegare i bracci di gestion
 
 La rete di gestione, la rete dati e le porte di gestione dei controller sono collegate agli switch. Le porte di interconnessione del cluster sono cablate su entrambi i controller.
 
-Per informazioni sulla connessione del sistema agli switch, contattare l'amministratore di rete.
+Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
@@ -246,7 +246,7 @@ image::../media/drw_9000_TNSC_composite_cabling.png[Schema di cablaggio composit
 
 La rete di gestione, la rete dati e le porte di gestione dei controller sono collegate agli switch. L'interconnessione del cluster e le porte ha sono cablate al cluster/switch ha.
 
-Per informazioni sulla connessione del sistema agli switch, contattare l'amministratore di rete.
+Per informazioni sulla connessione del sistema agli switch, rivolgersi all'amministratore di rete.
 
 Verificare la direzione delle linguette dei cavi quando si inseriscono i cavi nelle porte. Le linguette di estrazione dei cavi sono rivolte verso l'alto per tutte le porte dei moduli di rete.
 
@@ -271,7 +271,7 @@ image:../media/drw_9000_switched_cluster_cabling.png["Schema di cablaggio compos
 [[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
-È possibile collegare il nuovo sistema agli shelf DS212C, DS224C o NS224, a seconda che si tratti di un sistema AFF o FAS.
+Puoi collegare il nuovo sistema ai moduli DS212C, DS224C o NS224, a seconda che si tratti di un sistema AFF o FAS.
 
 
 
@@ -330,10 +330,10 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png["Cablaggio del sistema
 [[option-2-cable-the-controllers-to-a-single-ns224-drive-shelf-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opzione 2: Collegare i controller a un singolo shelf di dischi NS224 solo nei sistemi ASA AFF A700 con ONTAP 9.8 e versioni successive
 
-È necessario collegare ciascun controller ai moduli NSM sullo shelf di dischi NS224 su un AFF A700 o ASA AFF A700 con sistema ONTAP 9.8 o successivo.
+Devi collegare ogni controller ai moduli NSM sullo shelf di dischi NS224 su un sistema AFF A700 o ASA AFF A700 che esegue ONTAP 9.8 o versioni successive.
 
 * Questa attività si applica solo a ASA AFF A700 con ONTAP 9.8 o versione successiva.
-* I sistemi devono avere almeno un modulo X91148A installato negli slot 3 e/o 7 per ciascun controller. L'animazione o le illustrazioni mostrano questo modulo installato in entrambi gli slot 3 e 7.
+* I sistemi devono avere almeno un modulo X91148A installato nello slot 3 o 7 per ciascun controller. L'animazione o le illustrazioni mostrano questo modulo installato in entrambi gli slot 3 e 7.
 * Verificare che la freccia dell'illustrazione sia orientata correttamente con la linguetta di estrazione del connettore del cavo. La linguetta di estrazione dei cavi per i moduli di storage è rivolta verso l'alto, mentre le linguette di estrazione sugli scaffali sono rivolte verso il basso.
 +
 image::../media/oie_cable_pull_tab_up.png[Connettore per cavo con linguetta di estrazione sulla parte superiore]
@@ -366,7 +366,7 @@ image::../media/single_NS224_shelf.png[Cablaggio a shelf singolo]
 [[option-3-cable-the-controllers-to-two-ns224-drive-shelves-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opzione 3: Collegare i controller a due shelf di dischi NS224 nei sistemi ASA AFF A700 che eseguono solo ONTAP 9.8 e versioni successive
 
-È necessario collegare ciascun controller ai moduli NSM sugli shelf di dischi NS224 su un AFF A700 o ASA AFF A700 con sistema ONTAP 9.8 o successivo.
+Devi collegare ciascun controller ai moduli NSM sugli shelf di dischi NS224 su un sistema AFF A700 o ASA AFF A700 con ONTAP 9.8 o versioni successive.
 
 * Questa attività si applica solo a ASA AFF A700 con ONTAP 9.8 o versione successiva.
 * I sistemi devono avere due moduli X91148A, per controller, installati negli slot 3 e 7.
@@ -414,7 +414,7 @@ Se sul laptop è attivata la funzione di rilevamento della rete, è possibile co
 .Fasi
 . Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi:
 +
-Se il sistema dispone di shelf di dischi NS224, gli shelf sono preimpostati su shelf ID 00 e 01. Se si desidera modificare gli ID dello shelf, è necessario creare uno strumento da inserire nel foro in cui si trova il pulsante.
+Se il sistema dispone di alloggiamenti per unità NS224, questi sono preimpostati con gli ID 00 e 01. Se vuoi modificare gli ID degli alloggiamenti, devi creare uno strumento da inserire nel foro in cui si trova il pulsante.
 
 +
 .Animazione - impostare gli ID degli shelf di dischi SAS o NVMe
@@ -426,7 +426,7 @@ video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 video::bb04eb23-aa0c-4821-a87d-ab2300477f8b[panopto]
 +
 
-NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+NOTE: L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 . Assicurarsi che il rilevamento della rete sia attivato sul laptop.
 +
@@ -442,11 +442,11 @@ image::../media/drw_autodiscovery_controler_select.png[Selezionare un'icona ONTA
 
 +
 .. Aprire file Explorer.
-.. Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.
+.. Seleziona *Network* nel riquadro a sinistra, fai clic con il pulsante destro del mouse su *Network* e poi seleziona *Refresh*.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 
-NOTE: XXXXX è il numero di serie del sistema per il nodo di destinazione.
+NOTE: Il valore visualizzato è il numero di serie del sistema per il nodo di destinazione.
 
 +
 Viene visualizzato Gestione sistema.
@@ -501,7 +501,7 @@ image::../media/drw_9000_cable_console_switch_controller.png[Cablaggio della con
 
 . Utilizzare la seguente animazione per impostare uno o più ID shelf di dischi:
 +
-Se il sistema dispone di shelf di dischi NS224, gli shelf sono preimpostati su shelf ID 00 e 01. Se si desidera modificare gli ID dello shelf, è necessario creare uno strumento da inserire nel foro in cui si trova il pulsante.
+Se il sistema dispone di alloggiamenti per unità NS224, questi sono preimpostati con gli ID 00 e 01. Se vuoi modificare gli ID degli alloggiamenti, devi creare uno strumento da inserire nel foro in cui si trova il pulsante.
 
 +
 .Animazione - impostare gli ID degli shelf di dischi SAS o NVMe
@@ -513,7 +513,7 @@ video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 video::bb04eb23-aa0c-4821-a87d-ab2300477f8b[panopto]
 +
 
-NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+NOTE: L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 . Assegnare un indirizzo IP di gestione del nodo iniziale a uno dei nodi.
 +

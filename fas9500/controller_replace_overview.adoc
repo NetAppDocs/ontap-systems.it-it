@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FAS9500 
 summary: È necessario esaminare i prerequisiti per la procedura di sostituzione e selezionare quello corretto per la versione del sistema operativo ONTAP in uso. 
 ---
-= Sostituire il modulo controller - FAS9500
+= Verifica i requisiti prima di sostituire il controller nel tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ Se si tratta della procedura da utilizzare, tenere presente che la procedura di 
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 * È necessario sostituire un modulo controller con un modulo controller dello stesso tipo di modello. Non è possibile aggiornare il sistema semplicemente sostituendo il modulo controller.
 * Non è possibile modificare dischi o shelf di dischi come parte di questa procedura.
-* In questa procedura, il dispositivo di boot viene spostato dal nodo compromesso al nodo sostitutivo in modo che il nodo sostitutivo si avvii nella stessa versione di ONTAP del vecchio modulo controller.
+* In questa procedura, il dispositivo di boot viene spostato dal nodo danneggiato al nodo sostitutivo in modo che quest'ultimo si avvii con la stessa versione di ONTAP del vecchio modulo controller.
 * È importante applicare i comandi descritti di seguito ai sistemi corretti:
 +
 ** Il nodo compromesso è il nodo che viene sostituito.

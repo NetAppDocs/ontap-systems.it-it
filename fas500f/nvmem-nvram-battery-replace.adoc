@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace nvmem battery, replace nvmem nvram battery 
 summary: Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller. 
 ---
-= Sostituire la batteria NVMEM - FAS500f
+= Sostituisci la batteria NVMEM nel tuo sistema FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere 
 [role="lead"]
 Per sostituire una batteria NVMEM nel sistema, è necessario rimuovere il modulo controller dal sistema, aprirlo, sostituire la batteria, chiudere e sostituire il modulo controller.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Tutti gli altri componenti del sistema devono funzionare correttamente. Se non è così, contatta il supporto tecnico.
 
 
 
@@ -204,7 +204,7 @@ Estrarre la batteria dal supporto e dal modulo controller.
 [[step-4-install-the-controller-module]]
 == Fase 4: Installare il modulo controller
 
-Dopo aver sostituito il componente nel modulo controller, è necessario reinstallare il modulo controller nel telaio e avviarlo.
+Dopo aver sostituito il componente nel modulo controller, devi reinstallare il modulo controller nello chassis e poi avviarlo.
 
 Per installare il modulo controller sostitutivo nel telaio, utilizzare la seguente illustrazione o la procedura scritta.
 
@@ -229,7 +229,7 @@ Vite a testa zigrinata
 |===
 . Inserire il modulo controller nel telaio:
 +
-.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Verifica che i bracci del meccanismo di bloccaggio siano bloccati nella posizione completamente estesa.
 .. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
 .. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
 .. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
@@ -245,7 +245,7 @@ Il modulo controller deve essere inserito completamente e a filo con i bordi del
 . Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
 +
 
-NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+NOTE: Colleghi il resto dei cavi al modulo di controllo più avanti in questa procedura.
 
 
 

@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/controller-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: fas2800, move the controller module hardware 
-summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
+keywords: fas2820, move the controller module hardware 
+summary: 'Nel tuo sistema FAS2820, sostituisci l"hardware del modulo controller danneggiato rimuovendo il controller danneggiato, trasferendo i componenti FRU sul modulo controller sostitutivo, installando il modulo controller sostitutivo nello chassis e poi avviando il modulo controller sostitutivo.' 
 ---
-= Sostituire l'hardware del modulo controller - FAS2820
+= Sostituisci il controller nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sostituire l'hardware del modulo controller guasto rimuovendo il controller guasto, spostando i componenti FRU nel modulo controller sostitutivo, installando il modulo controller sostitutivo nello chassis e avviando il modulo controller sostitutivo.
+Nel tuo sistema FAS2820, sostituisci l'hardware del modulo controller danneggiato rimuovendo il controller danneggiato, trasferendo i componenti FRU sul modulo controller sostitutivo, installando il modulo controller sostitutivo nello chassis e poi avviando il modulo controller sostitutivo.
 
 .Animazione - sostituire un modulo controller
 video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
@@ -88,11 +88,11 @@ Spina della batteria NVMEM
 
 . Spostare la batteria nel modulo controller sostitutivo e installarlo:
 +
-.. Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
 .. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
 +
 
-NOTE: Non collegare ancora la batteria.  La si collega una volta spostati i componenti restanti nel modulo controller sostitutivo.
+NOTE: Non collegare ancora la batteria. La collegherai dopo aver spostato tutti gli altri componenti nel modulo controller sostitutivo.
 
 
 
@@ -165,7 +165,7 @@ NOTE: Non attorcigliare o tirare il supporto di avvio verso l'alto, in quanto po
 
 
 
-. Installare il supporto di avvio sul modulo controller sostitutivo:
+. Installa il supporto di boot nel modulo controller sostitutivo:
 +
 .. Allineare i bordi del supporto di avvio sostitutivo con lo zoccolo del supporto di avvio, quindi spingerlo delicatamente nello zoccolo.
 .. Verificare che il supporto di avvio sia inserito correttamente e completamente nella presa.
@@ -243,7 +243,7 @@ NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressio
 +
 .. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
 +
-Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+Il modulo DIMM si inserisce saldamente nello slot, ma dovrebbe entrare facilmente. Se non entra, riallinea il modulo DIMM con lo slot e reinseriscilo.
 
 +
 
@@ -259,7 +259,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 [[step-7-move-a-caching-module]]
 == Fase 7: Spostare un modulo di caching
 
-Rimuovere il modulo di caching dal modulo controller compromesso, installarlo nel modulo controller sostitutivo.
+Rimuovi il modulo di caching dal modulo controller danneggiato e installalo nel modulo controller sostitutivo.
 
 image::../media/drw_2850_replace_caching module_IEOPS-697.svg[Sposta il modulo di memorizzazione nella cache]
 
@@ -311,7 +311,7 @@ Installare la batteria NV nel modulo controller sostitutivo.
 +
 Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
 
-. Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.
+. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
 . Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
 . Reinstallare il coperchio del modulo controller e bloccarlo in posizione.
 
@@ -328,7 +328,7 @@ NOTE: Il sistema potrebbe aggiornare il firmware di sistema all'avvio. Non inter
 
 . Se non si è già collegati a terra, mettere a terra l'utente.
 . Se non è già stato fatto, riposizionare il coperchio sul modulo controller.
-. Ruotare il modulo controller.
+. Capovolgi il modulo di controllo.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 

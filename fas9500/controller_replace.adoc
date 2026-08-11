@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FAS9500, open controller, download service image to USB drive, transfer boot image, USB drive, service image 
 summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il nodo compromesso, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
 ---
-= Sostituire l'hardware del modulo controller - FAS9500
+= Sostituisci il controller nel tuo sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -158,15 +158,7 @@ DIMM
 . Individuare lo slot in cui si desidera installare il DIMM.
 . Assicurarsi che le linguette di espulsione del modulo DIMM sul connettore siano aperte, quindi inserire il modulo DIMM correttamente nello slot.
 +
-Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
-
-+
-
-IMPORTANT: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
-
-. Inserire il DIMM nello slot.
-+
-Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+Il modulo DIMM si inserisce saldamente nello slot, ma dovrebbe entrare facilmente. Se non entra, riallinea il modulo DIMM con lo slot e reinseriscilo.
 
 +
 
@@ -223,7 +215,7 @@ NOTE: Non inserire completamente il modulo controller nel telaio fino a quando n
 . Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
 +
 
-NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+NOTE: Colleghi il resto dei cavi al modulo di controllo più avanti in questa procedura.
 
 . Completare la reinstallazione del modulo controller:
 +

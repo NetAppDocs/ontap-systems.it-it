@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, pcie, mezzanine, card, controller, metrocluster, reinstall, controller, aggregate, reinstall, controller 
 summary: Per sostituire una scheda PCIe o mezzanino, scollegare i cavi e i moduli SFP e QSFP dalle schede, sostituire la scheda PCIe o mezzanino guasta e quindi rieseguire le schede. 
 ---
-= Sostituire una scheda PCIe o mezzanine - FAS8300 e FAS8700
+= Sostituisci una scheda PCIe o mezzanine nel tuo sistema FAS8300 o FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Per sostituire una scheda PCIe o mezzanino, scollegare i cavi e i modul
 Per sostituire una scheda PCIe o mezzanino, scollegare i cavi e i moduli SFP e QSFP dalle schede, sostituire la scheda PCIe o mezzanino guasta e quindi rieseguire le schede.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema devono funzionare correttamente. In caso contrario, devi contattare il supporto tecnico.
 
 
 
@@ -244,7 +244,7 @@ image:../media/drw_A400_Replace-PCIe-cards.png["Rimozione delle schede PCIe"]
 +
 Il riser si solleva leggermente dal modulo controller.
 
-.. Sollevare il riser e metterlo da parte su una superficie piana e stabile.
+.. Solleva il supporto verticalmente e mettilo da parte su una superficie stabile e piana.
 
 
 . Rimuovere la scheda PCIe dal riser:
@@ -255,7 +255,7 @@ Il riser si solleva leggermente dal modulo controller.
 .. Rimuovere la scheda PCIe dal riser spingendo delicatamente verso l'alto la staffa e sollevarla per estrarla dallo zoccolo.
 
 
-. Installare la scheda PCIe sostitutiva nel riser allineandola allo zoccolo, premere la scheda nello zoccolo e chiudere il pannello laterale del riser, se presente.
+. Installa la scheda PCIe sostitutiva nel riser allineando la scheda con lo zoccolo, premendo la scheda nello zoccolo e poi chiudendo il pannello laterale del riser, se presente.
 +
 Assicurarsi di allineare correttamente la scheda nello slot ed esercitare una pressione uniforme sulla scheda quando viene inserita nello slot. La scheda PCIe deve essere inserita correttamente nello slot.
 

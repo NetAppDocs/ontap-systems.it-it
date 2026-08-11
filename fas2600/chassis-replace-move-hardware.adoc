@@ -2,16 +2,16 @@
 permalink: fas2600/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas2600, move hardware components, replace the chassis 
-summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell"apparecchiatura o dall"armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.' 
+summary: 'Trasferisci gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto allo chassis di ricambio nel tuo sistema FAS2600, quindi sostituisci il vecchio chassis nello spazio rack o nell"armadio di sistema con quello nuovo dello stesso modello.' 
 ---
-= Spostare e sostituire l'hardware - FAS2600
+= Sostituisci lo chassis nel tuo sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto al nuovo chassis, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis compromesso.
+Trasferisci gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto allo chassis di ricambio nel tuo sistema FAS2600, quindi sostituisci il vecchio chassis nello spazio rack o nell'armadio di sistema con quello nuovo dello stesso modello.
 
 
 
@@ -133,7 +133,7 @@ Rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto d
 
 Dopo aver installato il modulo controller e gli altri componenti nel nuovo chassis, avviarlo.
 
-Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+Per le configurazioni HA con due moduli controller nello stesso chassis, l'ordine di installazione è importante perché ogni controller si riavvia non appena è completamente inserito nello chassis.
 
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +

@@ -1,20 +1,20 @@
 ---
 permalink: fas2800/rtc-battery-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, real, time, clock, battery, impaired, controller, shut, down, controller, system, rtc, date, time, controller, module, reinstall, replace, open 
-summary: Sostituire la batteria real-time clock RTC nel modulo controller affinché i servizi e le applicazioni del sistema che dipendono da una sincronizzazione oraria precisa continuino a funzionare. 
+keywords: fas2820, replace, real, time, clock, battery, impaired, controller, shut, down, controller, system, rtc, date, time, controller, module, reinstall, replace, open 
+summary: Sostituisci la batteria del real-time clock nel modulo controller del tuo sistema FAS2820 così che i servizi e le applicazioni che dipendono da una sincronizzazione oraria precisa continuino a funzionare. 
 ---
-= Sostituire la batteria dell'orologio in tempo reale - FAS2820
+= Sostituisci la batteria dell'orologio in tempo reale nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
+Sostituisci la batteria del real-time clock (RTC) nel modulo controller del tuo sistema FAS2820, così i servizi e le applicazioni che dipendono da una sincronizzazione oraria precisa continuano a funzionare.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema devono funzionare correttamente. Se non è così, contatta il supporto tecnico.
 
 
 
@@ -117,7 +117,7 @@ image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Rimuovere il
 [[step-3-replace-the-rtc-battery]]
 == Fase 3: Sostituire la batteria RTC
 
-Sostituire la batteria RTC individuandola all'interno del controller e seguire la sequenza specifica di passaggi.
+Sostituisci la batteria RTC individuandola all'interno del controller e seguendo la sequenza specifica di passaggi.
 
 .Animazione - sostituire la batteria RTC
 video::7420d100-23b1-4213-a8da-af4701725622[panopto]
@@ -142,10 +142,10 @@ NOTE: Prendere nota della polarità della batteria mentre viene rimossa dal supp
 [[step-4-reinstall-the-controller-module]]
 == Fase 4: Reinstallare il modulo controller
 
-Reinstallare il modulo controller e avviarlo al prompt DEL CARICATORE.
+Reinstalla il modulo controller e avvialo fino al prompt LOADER.
 
 . Capovolgere il modulo controller e allineare l'estremità con l'apertura dello chassis.
-. Spingere delicatamente il modulo controller a metà nel sistema.allineare l'estremità del modulo controller con l'apertura nel telaio, quindi spingere delicatamente il modulo controller a metà nel sistema.
+. Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 +
 Non inserire completamente il modulo controller nel telaio fino a quando non viene richiesto.
 

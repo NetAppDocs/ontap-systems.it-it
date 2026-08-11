@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: fas500f, replace dimms 
 summary: È necessario sostituire un modulo DIMM nel controller module quando il sistema registra un numero crescente di codici di correzione degli errori correggibili. In caso contrario, si verifica un panic di sistema. 
 ---
-= Sostituire un DIMM - FAS500f
+= Sostituisci un modulo DIMM nel tuo sistema FAS500f per risolvere gli errori di memoria
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario sostituire un modulo DIMM nel controller quando il sistema di archiviazione rileva errori quali la presenza di un numero eccessivo di codici di correzione degli errori CECC (Correctable Error Correction Codes) basati su avvisi di Health Monitor o errori ECC non correggibili, in genere causati da un singolo errore del modulo DIMM che impedisce al sistema di archiviazione di avviare ONTAP.
+Devi sostituire un DIMM nel controller quando il tuo sistema storage riscontra errori come un numero eccessivo di errori CECC (Correctable Error Correction Codes) basati sugli avvisi di Health Monitor, oppure errori ECC non correggibili. Questi errori sono generalmente causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Se altri componenti del sistema non funzionano correttamente, contatta il supporto tecnico.
 
 È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
@@ -123,7 +123,7 @@ image:../media/icon_round_2.png["Numero di didascalia 2"]
 Meccanismo di blocco
 
 |===
-. Con entrambe le mani, afferrare i lati del modulo controller ed estrarlo delicatamente dallo chassis e posizionare il modulo su una superficie piana e stabile.
+. Afferra il modulo di controllo con entrambe le mani ed estrailo delicatamente dallo chassis, poi posizionalo su una superficie piana e stabile.
 . Ruotare la vite a testa zigrinata sulla parte anteriore del modulo controller in senso antiorario e aprire il coperchio del modulo controller.
 +
 image::../media/drw_a250_open_controller_module_cover.png[Apertura del coperchio del modulo controller]
@@ -177,7 +177,7 @@ NOTE: Tenere il modulo DIMM per i bordi per evitare di esercitare pressione sui 
 
 . Inserire il modulo DIMM di ricambio nello slot.
 +
-I DIMM sono inseriti saldamente nello zoccolo. In caso contrario, reinserire il DIMM per riallinearlo con lo zoccolo.
+I moduli DIMM devono essere inseriti saldamente nello zoccolo. Se un modulo DIMM non è inserito saldamente, reinseriscilo per riallinearlo con lo zoccolo.
 
 . Esaminare visivamente il modulo DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello zoccolo.
 
@@ -216,8 +216,8 @@ Vite a testa zigrinata
 |===
 . Inserire il modulo controller nel telaio:
 +
-.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
-.. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
+.. Verifica che i bracci del meccanismo di bloccaggio siano bloccati nella posizione completamente estesa.
+.. Con entrambe le mani, allinea e fai scorrere delicatamente il modulo di controllo nei bracci del meccanismo di bloccaggio fino a quando si ferma.
 .. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
 .. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.
 .. Rilasciare i pollici dalla parte superiore dei meccanismi di blocco e continuare a spingere fino a quando i meccanismi di blocco non scattano in posizione.
@@ -232,7 +232,7 @@ Il modulo controller deve essere inserito completamente e a filo con i bordi del
 . Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
 +
 
-NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+NOTE: Colleghi il resto dei cavi al modulo di controllo più avanti in questa procedura.
 
 
 

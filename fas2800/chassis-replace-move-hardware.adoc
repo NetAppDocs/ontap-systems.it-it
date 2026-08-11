@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/chassis-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: 'Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto allo chassis sostitutivo, quindi sostituire lo chassis guasto dal rack dell"apparecchiatura o dall"armadietto del sistema con lo chassis sostitutivo dello stesso modello dello chassis guasto.' 
+keywords: fas2820, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: 'Nel tuo sistema FAS2820, sposta gli alimentatori, i dischi rigidi e il modulo o i moduli controller dallo chassis guasto al nuovo chassis, e sostituisci lo chassis guasto nel rack delle apparecchiature o nell"armadio di sistema con il nuovo chassis dello stesso modello dello chassis guasto.' 
 ---
-= Spostare e sostituire l'hardware - FAS2820
+= Sostituisci lo chassis nel tuo sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Spostare gli alimentatori, i dischi rigidi e i moduli controller dallo chassis guasto allo chassis sostitutivo, quindi sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con lo chassis sostitutivo dello stesso modello dello chassis guasto.
+Nel tuo sistema FAS2820, sposta gli alimentatori, i dischi rigidi e il modulo o i moduli controller dallo chassis guasto al nuovo chassis, e sostituisci lo chassis guasto nel rack delle apparecchiature o nell'armadio di sistema con il nuovo chassis dello stesso modello dello chassis guasto.
 
 
 
@@ -35,7 +35,7 @@ Lo spostamento di un alimentatore durante la sostituzione di uno chassis comport
 CAUTION: Quando si rimuove un alimentatore, utilizzare sempre due mani per sostenerne il peso.
 
 . Ripetere i passi precedenti per tutti gli alimentatori rimanenti.
-. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis del sistema, quindi spingere delicatamente l'alimentatore nello chassis utilizzando la maniglia della camma.
+. Sostieni e allinea i bordi dell'alimentatore con l'apertura nello chassis usando entrambe le mani, quindi spingi delicatamente l'alimentatore nello chassis utilizzando la maniglia a camma.
 +
 Gli alimentatori sono dotati di chiavi e possono essere installati in un solo modo.
 
@@ -116,9 +116,9 @@ Chiudere lentamente la maniglia della camma in modo che sia allineata correttame
 Rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto del sistema e installarlo nel rack dell'apparecchiatura o nell'armadietto del sistema.
 
 . Rimuovere le viti dai punti di montaggio del telaio.
-. Con l'aiuto di due o tre persone, far scorrere lo chassis compromesso dalle guide del rack in un cabinet di sistema o dalle staffe _L_ in un rack dell'apparecchiatura, quindi metterlo da parte.
+. Con l'aiuto di due o tre persone, fai scivolare lo chassis danneggiato fuori dalle guide del rack in un armadio di sistema o dalle staffe a L in un rack per apparecchiature, quindi mettilo da parte.
 . Se non si è già collegati a terra, mettere a terra l'utente.
-. Utilizzando due o tre persone, installare lo chassis sostitutivo nel rack dell'apparecchiatura o nell'armadietto del sistema guidandolo sulle guide del rack in un cabinet del sistema o sulle staffe _L_ in un rack dell'apparecchiatura.
+. Installa il chassis di ricambio nel rack delle apparecchiature o nell'armadio di sistema con l'aiuto di due o tre persone, guidando il chassis sulle guide del rack in un armadio di sistema o sulle staffe a L in un rack delle apparecchiature.
 . Far scorrere lo chassis completamente nel rack dell'apparecchiatura o nell'armadietto del sistema.
 . Fissare la parte anteriore dello chassis al rack dell'apparecchiatura o all'armadietto del sistema, utilizzando le viti rimosse dallo chassis compromesso.
 . Se non è già stato fatto, installare il pannello.
@@ -129,7 +129,7 @@ Rimuovere lo chassis esistente dal rack dell'apparecchiatura o dall'armadietto d
 [[step-5-install-the-controller]]
 == Fase 5: Installare il controller
 
-Installare il modulo controller e gli altri componenti nel telaio sostitutivo, avviarlo in modalità manutenzione.
+Installa il modulo controller e tutti gli altri componenti nel chassis, poi avvialo in modalità Maintenance.
 
 Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
 
@@ -155,7 +155,7 @@ NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo control
 . Collegare e accendere gli alimentatori a diverse fonti di alimentazione.
 . Avviare ciascun controller in modalità di manutenzione:
 +
-.. Quando ciascun controller avvia l'avvio, premere `Ctrl-C` per interrompere il processo di avvio quando viene visualizzato il messaggio `Press Ctrl-C for Boot Menu`.
+.. Quando ogni controller inizia l'avvio, premi  `Ctrl-C` per interrompere il processo di avvio quando vedi il messaggio  `Press Ctrl-C for Boot Menu`.
 +
 
 NOTE: Se il prompt non viene visualizzato e i moduli controller avviano ONTAP, immettere `halt`, Quindi, al prompt DEL CARICATORE, immettere `boot_ontap`, premere `Ctrl-C` quando richiesto, quindi ripetere questo passaggio.

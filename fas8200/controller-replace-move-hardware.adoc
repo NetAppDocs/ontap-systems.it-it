@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, move the controller module hardware 
 summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
 ---
-= Sostituire l'hardware del modulo controller - FAS8200
+= Sostituisci il controller nel tuo sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,7 +67,7 @@ Individuare il supporto di avvio e seguire le istruzioni per rimuoverlo dal vecc
 
 . Individuare il supporto di avvio utilizzando la seguente illustrazione o la mappa FRU sul modulo controller:
 +
-image::../media/drw_rxl_boot_media.png[Rimozione del supporto di avvio hte]
+image::../media/drw_rxl_boot_media.png[Rimozione del supporto di avvio]
 
 . Premere il pulsante blu sull'alloggiamento del supporto di avvio per rilasciare il supporto di avvio dall'alloggiamento, quindi estrarlo delicatamente dalla presa del supporto di avvio.
 +
@@ -162,7 +162,7 @@ image::../media/drw_rxl_dimms.png[Sostituzione dei moduli DIMM]
 . Individuare lo slot in cui si desidera installare il DIMM.
 . Assicurarsi che le linguette di espulsione del modulo DIMM sul connettore siano aperte, quindi inserire il modulo DIMM correttamente nello slot.
 +
-Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+Il modulo DIMM si inserisce saldamente nello slot, ma dovrebbe entrare facilmente. Se non entra, riallinea il modulo DIMM con lo slot e reinseriscilo.
 
 +
 
@@ -265,7 +265,7 @@ NOTE: Non inserire completamente il modulo controller nel telaio fino a quando n
 . Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
 +
 
-NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+NOTE: Colleghi il resto dei cavi al modulo di controllo più avanti in questa procedura.
 
 . Completare la reinstallazione del modulo controller:
 +
@@ -278,7 +278,7 @@ NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in qu
 Una coppia ha
  a| 
  The controller module begins to boot as soon as it is fully seated in the chassis. Be prepared to interrupt the boot process.
-.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
+.. Con la maniglia a camma in posizione aperta, spingi con decisione il modulo controller fino a quando non incontra il midplane ed è completamente inserito, quindi chiudi la maniglia a camma in posizione di blocco. Stringi la vite a testa zigrinata sulla maniglia a camma sul retro del modulo controller.
 +
 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.
@@ -301,7 +301,7 @@ NOTE: Se il prompt non viene visualizzato e il modulo controller viene avviato i
  a| 
 Una configurazione standalone
  a| 
-.. Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco. Serrare la vite a testa zigrinata sulla maniglia della camma sul retro del modulo controller.
+.. Con la maniglia a camma in posizione aperta, spingi con decisione il modulo controller fino a quando non incontra il midplane ed è completamente inserito, quindi chiudi la maniglia a camma in posizione di blocco. Stringi la vite a testa zigrinata sulla maniglia a camma sul retro del modulo controller.
 +
 
 NOTE: Non esercitare una forza eccessiva quando si fa scorrere il modulo controller nel telaio per evitare di danneggiare i connettori.

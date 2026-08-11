@@ -4,19 +4,19 @@ sidebar: sidebar
 keywords: fas9500, replace the chassis 
 summary: Per sostituire lo chassis, è necessario rimuovere gli alimentatori, le ventole, i moduli controller, i moduli I/O, i moduli DCPM e il modulo LED USB dallo chassis guasto e installarli nello chassis di ricambio. 
 ---
-= Sostituire il telaio - FAS9500
+= Verifica i requisiti prima di sostituire lo chassis FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
-.Prima di iniziare
 [role="lead"]
 Per sostituire lo chassis, è necessario rimuovere gli alimentatori, le ventole, i moduli controller, i moduli i/o, i moduli DCPM, E il modulo LED USB dallo chassis guasto, rimuovere lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema, installare lo chassis sostitutivo al suo posto, quindi installare i componenti nello chassis sostitutivo.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+.Prima di iniziare
+Tutti gli altri componenti del sistema devono funzionare correttamente; se non lo fanno, contatta il supporto tecnico.
 
 .A proposito di questa attività
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
-* Questa procedura ha un'interruzione. Per un cluster a due nodi, si avrà un'interruzione completa del servizio e un'interruzione parziale in un cluster a più nodi.
+* Questa procedura è invasiva. Per un cluster a due nodi, hai un'interruzione completa del servizio e un'interruzione parziale in un cluster multi-nodo.
 

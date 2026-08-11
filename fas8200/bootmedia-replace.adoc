@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace the boot media, manual, manual boot recovery 
 summary: Sostituire il supporto di avvio non riuscito su un modulo controller FAS8200 . Il sistema FAS8200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
 ---
-= Sostituire il supporto di avvio - FAS8200
+= Sostituisci il boot media nel tuo sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -100,7 +100,7 @@ Se necessario, rimuovere il supporto di avvio e reinserirlo nella presa.
 * È necessario disporre di un'unità flash USB, formattata con FAT32, con almeno 4 GB di capacità.
 +
 
-NOTE: Il file tar.gz deve essere collocato in una partizione formattata con FAT32 di almeno 4 GB. Mentre le partizioni FAT32 possono essere grandi fino a 2 TB, i tool integrati di Windows (ad esempio diskpart) non possono formattare partizioni FAT32 di dimensioni superiori a 32 GB.
+NOTE: Il file tar.gz deve essere posizionato su una partizione formattata in FAT32 di almeno 4GB. Sebbene le partizioni FAT32 possano essere grandi fino a 2TB, gli strumenti integrati di Windows (ad esempio, DiskPart) non possono formattare partizioni FAT32 più grandi di 32GB.
 
 * Una copia della stessa versione dell'immagine di ONTAP utilizzata dal controller compromesso. È possibile scaricare l'immagine appropriata dalla sezione Download sul sito del supporto NetApp
 +
@@ -167,6 +167,6 @@ NOTE: Potrebbero essere necessari altri parametri per l'interfaccia. È possibil
 
 
 +
-Le modifiche verranno implementate all'avvio del sistema.
+Il sistema implementa le modifiche quando si avvia.
 
 

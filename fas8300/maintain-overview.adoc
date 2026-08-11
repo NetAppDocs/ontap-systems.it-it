@@ -1,17 +1,17 @@
 ---
 permalink: fas8300/maintain-overview.html 
 sidebar: sidebar 
-keywords: fas8300 maintenance, maintenance, repairing, repairing fas8300, replace fas8300 components, replace fas8300 components 
-summary: 'Esegui la manutenzione dell"hardware del tuo sistema di archiviazione FAS8300 e FAS8700 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.' 
+keywords: fas8300 maintenance, fas8700 maintenance, maintenance, repairing fas8300, repairing fas8700, replace fas8300 components, replace fas8700 components 
+summary: 'Mantieni l"hardware del tuo sistema storage FAS8300 o FAS8700 per garantire affidabilità a lungo termine e prestazioni ottimali. Esegui regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, perché questo aiuta a prevenire downtime e perdita di dati.' 
 ---
-= Manutenzione dell'hardware FAS8300 e FAS8700
+= Scopri come effettuare la manutenzione del tuo sistema storage FAS8300 o FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esegui la manutenzione dell'hardware del tuo sistema di archiviazione FAS8300 e FAS8700 per garantire affidabilità a lungo termine e prestazioni ottimali. Eseguite regolarmente attività di manutenzione, come la sostituzione di componenti difettosi, per prevenire tempi di inattività e perdite di dati.
+Mantieni l'hardware del tuo sistema storage FAS8300 o FAS8700 per garantire affidabilità a lungo termine e prestazioni ottimali. Esegui regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, perché questo aiuta a prevenire downtime e perdita di dati.
 
 Le procedure di manutenzione presuppongono che il sistema di archiviazione FAS8300 e FAS8700 sia già stato distribuito come nodo di archiviazione nell'ambiente ONTAP .
 
@@ -85,7 +85,7 @@ Il modulo NVDIMM (Dual in-line memory module non volatile) gestisce il trasferim
  a| 
 link:nvdimm-battery-replace.html["Batteria NVDIMM"]
  a| 
-La batteria NVDIMM mantiene l'alimentazione del modulo NVDIMM.
+La batteria NVDIMM è responsabile del mantenimento dell'alimentazione al modulo NVDIMM.
 
 
 
@@ -106,6 +106,6 @@ Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di c
  a| 
 link:rtc-battery-replace.html["Batteria con orologio in tempo reale"]
  a| 
-Una batteria con orologio in tempo reale conserva le informazioni di data e ora del sistema se l'alimentazione è spenta.
+Una batteria dell'orologio in tempo reale conserva le informazioni relative alla data e all'ora del sistema se l'alimentazione è spenta.
 
 |===

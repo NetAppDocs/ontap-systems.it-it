@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace the boot media 
 summary: 'Inizia a sostituire il supporto di avvio nel tuo sistema storage FAS500f esaminando i requisiti di sostituzione, controllando lo stato della crittografia, arrestando il controller, sostituendo il supporto di avvio, avviando l"immagine di ripristino, ripristinando la crittografia e verificando la funzionalità del sistema.' 
 ---
-= Flusso di lavoro di ripristino manuale del boot media - FAS500f
+= Procedura di sostituzione del boot media FAS500f usando il processo di ripristino manuale del boot
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,7 +37,7 @@ Avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verifica
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:bootmedia-encryption-restore.html["Ripristino della crittografia"]
 [role="quick-margin-para"]
-Ripristinare la configurazione del gestore chiavi integrato o del gestore chiavi esterno dal menu di avvio ONATP .
+Ripristinare la configurazione del gestore chiavi integrato o del gestore chiavi esterno dal menu di avvio ONTAP .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sette"]link:bootmedia-complete-rma.html["Restituire la parte guasta a NetApp"]
 [role="quick-margin-para"]

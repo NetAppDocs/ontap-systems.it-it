@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace real-time clock battery 
 summary: È necessario sostituire la batteria del real-time clock nel modulo controller affinché i servizi e le applicazioni del sistema che dipendono da una sincronizzazione oraria precisa continuino a funzionare. 
 ---
-= Sostituire la batteria dell'orologio in tempo reale
+= Sostituisci la batteria real-time nel tuo sistema FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: È necessario sostituire la batteria del real-time clock nel modulo con
 Si sostituisce la batteria dell'orologio in tempo reale (RTC) nel modulo controller in modo che i servizi e le applicazioni del sistema che dipendono dalla sincronizzazione dell'ora accurata continuino a funzionare.
 
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+* Tutti gli altri componenti del sistema devono funzionare correttamente. In caso contrario, contatta il supporto tecnico.
 
 
 
@@ -190,7 +190,7 @@ La batteria deve essere espulsa.
 
 |===
 +
-La batteria viene espulsa.
+La batteria si espelle.
 
 . Rimuovere la batteria di ricambio dalla confezione antistatica per la spedizione.
 . Individuare il supporto della batteria RTC tra il dissipatore di calore e la scheda intermedia e inserirlo esattamente come mostrato nella figura.
@@ -203,7 +203,7 @@ image::../media/drw_a250_install_rtc_batt.png[Installazione della batteria RTC]
 
  a| 
 image:../media/icon_round_1.png["Numero di didascalia 1"]
-| Con la polarità positiva rivolta verso l'alto, far scorrere la batteria sotto la linguetta dell'alloggiamento della batteria. 
+| Fai scorrere la batteria sotto la linguetta dell'alloggiamento della batteria con la polarità positiva rivolta verso l'alto. 
 
 
  a| 
@@ -238,7 +238,7 @@ Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di re
 . Se gli alimentatori sono stati scollegati, ricollegarli e reinstallare i fermi dei cavi di alimentazione.
 . Inserire il modulo controller nel telaio:
 +
-.. Assicurarsi che i bracci del meccanismo di chiusura siano bloccati in posizione completamente estesa.
+.. Verifica che i bracci del meccanismo di bloccaggio siano bloccati nella posizione completamente estesa.
 .. Con entrambe le mani, allineare e far scorrere delicatamente il modulo controller nei bracci del meccanismo di chiusura fino a quando non si arresta.
 .. Posizionare le dita di riferimento attraverso i fori per le dita dall'interno del meccanismo di blocco.
 .. Premere i pollici verso il basso sulle linguette arancioni sulla parte superiore del meccanismo di blocco e spingere delicatamente il modulo controller oltre il fermo.

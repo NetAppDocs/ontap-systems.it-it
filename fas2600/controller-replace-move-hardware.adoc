@@ -2,16 +2,16 @@
 permalink: fas2600/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas2600, move the components 
-summary: 'Per sostituire l"hardware del modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.' 
+summary: Sostituisci il controller nel tuo sistema FAS2600 rimuovendo il controller danneggiato, trasferendo i componenti FRU sul modulo controller di ricambio, installandolo nello chassis e avviando il sistema in modalità Maintenance. 
 ---
-= Sostituire l'hardware del modulo controller - FAS2600
+= Sostituisci il controller nel tuo sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire il modulo controller, è necessario rimuovere il controller guasto, spostare i componenti FRU nel modulo controller sostitutivo, installare il modulo controller sostitutivo nel telaio e avviare il sistema in modalità manutenzione.
+Sostituisci il controller nel tuo sistema FAS2600 rimuovendo il controller danneggiato, spostando i componenti FRU sul modulo controller di ricambio, installando il modulo controller di ricambio nello chassis e poi avviando il sistema in modalità manutenzione.
 
 link:https://youtu.be/2_uWRt_iJqk["Video sulla sostituzione del controller AFF FAS2600"]
 
@@ -141,7 +141,7 @@ image::../media/drw_2600_dimms.png[Posizione dei DIMM di sistema]
 . Individuare lo slot in cui si desidera installare il DIMM.
 . Assicurarsi che le linguette di espulsione del modulo DIMM sul connettore siano aperte, quindi inserire il modulo DIMM correttamente nello slot.
 +
-Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+Il modulo DIMM si inserisce saldamente nello slot, ma dovrebbe entrare facilmente. Se non entra, riallinea il modulo DIMM con lo slot e reinseriscilo.
 
 +
 
@@ -159,9 +159,9 @@ Assicurarsi che la spina si blocchi sul modulo controller.
 [[step-5-move-the-caching-module]]
 == Fase 5: Spostare il modulo di caching
 
-Per spostare un modulo di caching denominato scheda M.2 PCIe sull'etichetta del controller, individuarlo e spostarlo dal vecchio controller al controller sostitutivo e seguire la sequenza di passaggi specifica.
+Per spostare il modulo di caching, indicato come scheda M.2 PCIe sull'etichetta del controller, dal vecchio modulo controller al modulo controller sostitutivo, segui questa sequenza di passaggi.
 
-Il nuovo modulo controller deve essere pronto in modo da poter spostare il modulo di caching direttamente dal vecchio modulo controller allo slot corrispondente del nuovo. Tutti gli altri componenti del sistema di storage devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Devi avere pronto il nuovo modulo controller così puoi spostare il modulo di caching direttamente dal vecchio modulo controller allo slot corrispondente nel nuovo. Tutti gli altri componenti del sistema storage devono funzionare correttamente. Se non è così, contatta il supporto tecnico.
 
 .Fasi
 . Individuare il modulo di caching sul retro del modulo controller e rimuoverlo.
@@ -190,7 +190,7 @@ Se necessario, rimuovere il modulo di caching e reinserirlo nel socket.
 
 Dopo aver installato i componenti del vecchio modulo controller nel nuovo modulo controller, è necessario installare il nuovo modulo controller nel telaio del sistema e avviare il sistema operativo.
 
-Per le coppie ha con due moduli controller nello stesso chassis, la sequenza in cui si installa il modulo controller è particolarmente importante perché tenta di riavviarsi non appena lo si installa completamente nello chassis.
+Per le coppie HA con due moduli controller nello stesso chassis, l'ordine in cui installi i moduli controller è particolarmente importante perché un modulo controller tenta di riavviarsi non appena è completamente inserito nello chassis.
 
 
 NOTE: Il sistema potrebbe aggiornare il firmware di sistema all'avvio. Non interrompere questo processo. La procedura richiede di interrompere il processo di avvio, che in genere può essere eseguito in qualsiasi momento dopo la richiesta. Tuttavia, se il sistema aggiorna il firmware del sistema all'avvio, è necessario attendere il completamento dell'aggiornamento prima di interrompere il processo di avvio.
@@ -206,7 +206,7 @@ NOTE: Non inserire completamente il modulo controller nel telaio fino a quando n
 . Cablare solo le porte di gestione e console, in modo da poter accedere al sistema per eseguire le attività descritte nelle sezioni seguenti.
 +
 
-NOTE: I cavi rimanenti verranno collegati al modulo controller più avanti in questa procedura.
+NOTE: Colleghi il resto dei cavi al modulo di controllo più avanti in questa procedura.
 
 . Completare la reinstallazione del modulo controller:
 +

@@ -2,18 +2,18 @@
 permalink: fas2600/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas2600, replace dimm 
-summary: È necessario sostituire un DIMM nel controller quando il sistema storage riscontra errori come un numero eccessivo di errori ECC correggibili basati sugli avvisi di Health Monitor o errori ECC non correggibili, in genere causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP. 
+summary: 'Sostituisci un DIMM nel tuo sistema FAS2600 quando il sistema storage rileva un numero eccessivo di errori ECC correggibili in base agli avvisi di Health Monitor, oppure errori ECC non correggibili causati dal guasto di un singolo DIMM che impedisce l"avvio di ONTAP.' 
 ---
-= Sostituire un DIMM - FAS2600
+= Sostituisci un modulo DIMM nel tuo sistema FAS2600 per risolvere gli errori di memoria
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario sostituire un modulo DIMM nel controller quando il sistema di archiviazione rileva errori quali la presenza di un numero eccessivo di codici di correzione degli errori CECC (Correctable Error Correction Codes) basati su avvisi di Health Monitor o errori ECC non correggibili, in genere causati da un singolo errore del modulo DIMM che impedisce al sistema di archiviazione di avviare ONTAP.
+Sostituisci un DIMM nel tuo sistema FAS2600 quando il sistema storage rileva un numero eccessivo di errori CECC (Correctable Error Correction Codes) in base agli avvisi di Health Monitor, oppure errori ECC non correggibili, di solito causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP.
 
-Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
+Se un qualsiasi altro componente non funziona correttamente, contatta il supporto tecnico.
 
 È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
@@ -154,7 +154,7 @@ La tacca tra i pin del DIMM deve allinearsi con la linguetta dello zoccolo.
 
 . Assicurarsi che le linguette di espulsione del modulo DIMM sul connettore siano aperte, quindi inserire il modulo DIMM correttamente nello slot.
 +
-Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+Il modulo DIMM si inserisce saldamente nello slot, ma dovrebbe entrare facilmente. Se non entra, riallinea il modulo DIMM con lo slot e reinseriscilo.
 
 +
 

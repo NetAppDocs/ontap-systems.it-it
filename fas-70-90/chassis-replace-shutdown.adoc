@@ -2,16 +2,16 @@
 permalink: fas-70-90/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas70, fas90, shutdown the controller 
-summary: Spegnere il controller nel sistema di archiviazione FAS70 o FAS90 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis. 
+summary: Arresta il controller nel tuo sistema storage FAS70 o FAS90 per evitare la perdita di dati e mantenere la stabilità del sistema quando sostituisci lo chassis. 
 ---
-= Spegnere il controller per sostituire il telaio - FAS70 e FAS90
+= Spegni il controller FAS70 o FAS90 per sostituire lo chassis
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Spegnere il controller nel sistema di archiviazione FAS70 o FAS90 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.
+Arresta il controller nel tuo sistema storage FAS70 o FAS90 per evitare la perdita di dati e mantenere la stabilità del sistema quando sostituisci lo chassis.
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 

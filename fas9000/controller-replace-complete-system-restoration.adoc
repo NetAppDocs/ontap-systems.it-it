@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700, fas9000, storage encryption, licenses, storage encryption, volume encryption, serial number, metrocluster, switchback 
 summary: Per completare la procedura di sostituzione e ripristinare il pieno funzionamento del sistema, è necessario ricablare lo storage, ripristinare la configurazione di NetApp Storage Encryption, se necessario, e installare le licenze per il nuovo controller. 
 ---
-= Ripristino completo del sistema - FAS9000
+= Completa la sostituzione del controller per il tuo sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per completare la procedura di sostituzione e ripristinare il funzionamento completo del sistema, è necessario recuperare lo storage, ripristinare la configurazione di NetApp Storage Encryption (se necessario) e installare le licenze per il nuovo controller. È necessario completare una serie di attività prima di ripristinare il funzionamento completo del sistema.
+Per completare la sostituzione del controller per il tuo sistema FAS9000, ricabla lo storage, ripristina la configurazione di NetApp Storage Encryption se necessario e installa le licenze per il nuovo controller.
 
 
 
@@ -50,8 +50,8 @@ NOTE: Le nuove chiavi di licenza richieste vengono generate automaticamente e in
 
 
 
-[[step-2-verifying-lifs-and-registering-the-serial-number]]
-== Fase 2: Verifica dei LIF e registrazione del numero di serie
+[[step-2-verify-lifs-and-register-the-serial-number]]
+== Fase 2: Verificare i file LIF e registrare il numero di serie
 
 Prima di rimettere in servizio il nodo _sostitutivo_, è necessario verificare che i LIF siano sulle rispettive porte principali, registrare il numero di serie del nodo _sostitutivo_ se AutoSupport è abilitato, controllare lo stato di salute del cluster, chiudere eventuali finestre di manutenzione e reimpostare il ripristino automatico.
 
@@ -73,8 +73,8 @@ Se alcuni LIF sono elencati come falsi, ripristinarli alle porte home: `network 
 
 
 
-[[step-3-metrocluster-only-switching-back-aggregates-in-a-two-node-metrocluster-configuration]]
-== Fase 3: (Solo MetroCluster): Back aggregates in una configurazione MetroCluster a due nodi
+[[step-3-metrocluster-only-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
+== Passaggio 3 (MetroCluster solo): Passa di nuovo gli aggregati in una configurazione MetroCluster a due nodi
 
 Questa attività si applica solo alle configurazioni MetroCluster a due nodi.
 

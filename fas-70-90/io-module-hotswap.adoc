@@ -2,22 +2,22 @@
 permalink: fas-70-90/io-module-hotswap.html 
 sidebar: sidebar 
 keywords: fas70, fas90, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
-summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage FAS 70 o FAS 90 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP. 
+summary: Puoi effettuare lo swap a caldo di un modulo I/O Ethernet nel tuo sistema storage FAS70 o FAS90 se un modulo si guasta e il tuo sistema storage soddisfa tutti i requisiti di versione di ONTAP. 
 ---
-= Hot swap di un modulo I/O - FAS 70 e FAS 90
+= Sostituisci a caldo un modulo I/O nel tuo sistema FAS70 o FAS90 senza spegnerlo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage FAS 70 o FAS 90 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP.
+Puoi effettuare lo swap a caldo di un modulo I/O Ethernet nel tuo sistema storage FAS70 o FAS90 se un modulo si guasta e il tuo sistema storage soddisfa tutti i requisiti di versione di ONTAP.
 
 Per eseguire lo swap a caldo di un modulo I/O, assicurarsi che il sistema storage esegua ONTAP 9.18.1 GA o versione successiva, preparare il sistema storage e il modulo I/O, sostituire a caldo il modulo guasto, portare online il modulo sostitutivo, ripristinare il sistema storage al normale funzionamento e restituire il modulo guasto a NetApp.
 
 .A proposito di questa attività
 * Non è necessario eseguire un takeover manuale prima di sostituire il modulo I/O guasto.
-* Applicare i comandi al controller corretto e allo slot I/O durante lo swap a caldo:
+* Assicurati di applicare i comandi al controller corretto e allo slot I/O durante lo swap a caldo:
 +
 ** Il _controller danneggiato_ è il controller in cui si sta sostituendo il modulo I/O.
 ** Il _controllore sano_ è il partner HA del controllore compromesso.

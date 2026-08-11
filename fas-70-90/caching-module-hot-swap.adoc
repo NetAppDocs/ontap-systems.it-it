@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, hot swap, replace, Flash Cache module carrier, caching module, Flash Cache 
 summary: 'La portante del modulo SSD Flash cache NVMe nei sistemi FAS70 o FAS90 contiene uno o due moduli Flash cache (moduli di caching) con un singolo disco Flash cache SSD integrato in ciascun modulo di caching.' 
 ---
-= Sostituire il supporto del modulo Flash cache o un modulo di caching - FAS70 e FAS90
+= Sostituisci il supporto del modulo Flash Cache o il modulo di caching nel tuo sistema FAS70 o FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,8 +29,8 @@ A seconda del componente da sostituire, è possibile eseguire una delle seguenti
 La portante del modulo Flash cache è situata nello slot 6 e ospita fino a due moduli Flash cache. Non è possibile sostituire a caldo il supporto del modulo Flash cache
 
 .Prima di iniziare
-* Assicurati che il tuo sistema storage disponga del sistema operativo appropriato per il supporto del modulo Flash cache sostitutivo.
-* Verificare che tutti gli altri componenti funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
+* Verifica che il tuo sistema storage abbia il sistema operativo appropriato per il supporto del modulo Flash Cache di ricambio.
+* Verifica che tutti gli altri componenti funzionino correttamente. Se non lo fanno, contatta il supporto tecnico.
 
 
 
@@ -284,8 +284,8 @@ I moduli Flash cache (moduli di caching) sono collocati nello slot 6-1 o nello s
 È possibile sostituire a caldo i singoli moduli di caching con moduli di caching della stessa capacità dello stesso fornitore o di un altro fornitore supportato.
 
 .Prima di iniziare
-* Assicurarsi che il modulo di caching sostitutivo abbia la stessa capacità di quello guasto, dello stesso fornitore o di un altro fornitore supportato.
-* Verificare che tutti gli altri componenti funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
+* Verifica che il modulo di cache sostitutivo abbia la stessa capacità di quello guasto, che sia dello stesso fornitore o di un fornitore diverso supportato.
+* Verifica che tutti gli altri componenti funzionino correttamente. Se non lo fanno, contatta il supporto tecnico.
 * Le unità nei moduli di caching non sono FRU (Field Replaceable Unit). È necessario sostituire l'intero modulo di caching.
 
 
@@ -341,7 +341,7 @@ LED di guasto del modulo di caching
 .. Ruotare il vassoio di gestione dei cavi verso il basso tirando i pulsanti su entrambi i lati all'interno del vassoio di gestione dei cavi, quindi ruotare il vassoio verso il basso.
 .. Premere il pulsante di rilascio della terracotta sulla parte anteriore del modulo di caching.
 .. Ruotare la maniglia della camma fino in fondo.
-.. Rimuovere il modulo di caching dal contenitore agganciando il dito all'apertura della leva della camma ed estraendo il modulo dal supporto del modulo Flash cache.
+.. Rimuovi il modulo di cache dall'alloggiamento inserendo il dito nell'apertura della leva a camma ed estraendo il modulo dal supporto del modulo Flash Cache.
 +
 Assicurati di supportare il modulo caching quando lo rimuovi dal supporto del modulo Flash cache.
 
@@ -371,7 +371,7 @@ The module has been successfully powered on, initialized and placed into service
 ----
 . Verificare lo stato dello slot utilizzando `system controller slot module show` comando.
 +
-Assicurarsi che l'output del comando segnali lo stato di AS `powered-on` e pronto per il funzionamento.
+Assicurati che l'output del comando riporti lo stato come  `powered-on` e pronto per l'operazione.
 
 . Verificare che il modulo di caching sostitutivo sia online e riconosciuto, quindi verificare visivamente che il LED di attenzione ambra non sia acceso: `sysconfig -av slot_number`
 +

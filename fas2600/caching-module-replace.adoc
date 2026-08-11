@@ -2,16 +2,16 @@
 permalink: fas2600/caching-module-replace.html 
 sidebar: sidebar 
 keywords: fas2600, replace the caching module 
-summary: È necessario sostituire il modulo di caching nel modulo controller quando il sistema registra un singolo messaggio AutoSupport che indica che il modulo è andato offline. In caso contrario, si verifica un peggioramento delle performance. 
+summary: Sostituisci il modulo di caching nel tuo sistema FAS2600 quando il sistema registra un singolo messaggio AutoSupport che indica che il modulo è andato offline. Se non lo fai, si verifica un peggioramento delle performance. 
 ---
-= Sostituire il modulo di caching - FAS2600
+= Sostituisci il modulo di caching nel tuo sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È necessario sostituire il modulo di caching nel modulo controller quando il sistema registra un singolo messaggio ASUP (AutoSupport) che indica che il modulo è offline; in caso contrario, le prestazioni si sono degradate.
+Sostituisci il modulo di caching nel tuo sistema FAS2600 quando il sistema registra un singolo messaggio AutoSupport (ASUP) che indica che il modulo è offline. Se non lo fai, si verifica un peggioramento delle performance.
 
 * È necessario sostituire il componente guasto con un componente FRU sostitutivo ricevuto dal provider.
 
@@ -29,8 +29,6 @@ link:https://youtu.be/LaMzvnAwM_I["Video di sostituzione del modulo di caching A
 Se si dispone di un cluster con più di due nodi, questo deve trovarsi in quorum. Se il cluster non è in quorum o un controller integro mostra false per idoneità e salute, è necessario correggere il problema prima di spegnere il controller compromesso.
 
 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronizzare un nodo con il cluster"^]
-
-Si consiglia di cancellare il contenuto del modulo di caching prima di sostituirlo.
 
 . Anche se i dati sul modulo di caching sono crittografati, è possibile cancellare i dati dal modulo di caching compromesso e verificare che il modulo di caching non abbia dati:
 +
@@ -112,7 +110,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Apertura o chiusura del modulo co
 [[step-3-replace-a-caching-module]]
 == Fase 3: Sostituire un modulo di caching
 
-Per sostituire un modulo di caching denominato scheda M.2 PCIe sull'etichetta del controller, individuare lo slot all'interno del controller e seguire la sequenza di passaggi specifica.
+Il modulo di caching è indicato come scheda M.2 PCIe sull'etichetta del controller. Individua lo slot all'interno del controller e segui questa sequenza di passaggi.
 
 Il sistema storage deve soddisfare determinati criteri a seconda della situazione:
 

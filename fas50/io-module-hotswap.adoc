@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage FAS50 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP. 
 ---
-= Hot swap di un modulo I/O - FAS50
+= Effettua lo swap a caldo di un modulo I/O nel tuo sistema FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sis
 [role="lead"]
 È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage FAS50 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP.
 
-Per eseguire lo swap a caldo di un modulo I/O, assicurati che il sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, esegui lo swap a caldo del modulo guasto, porta online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
+Per eseguire lo swap a caldo di un modulo I/O, verifica che il tuo sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, sostituisci a caldo il modulo guasto, metti online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
 
 .A proposito di questa attività
 * La sostituzione a caldo del modulo I/O significa che non è necessario eseguire un takeover manuale prima di sostituire il modulo I/O guasto.
@@ -34,8 +34,8 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
-[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
-== Fase 1: assicurarsi che il sistema di archiviazione soddisfi i requisiti della procedura
+[[step-1-verify-the-storage-system-meets-the-procedure-requirements]]
+== Fase 1: Verifica che il sistema storage soddisfi i requisiti della procedura
 
 Per utilizzare questa procedura, il sistema storage deve eseguire ONTAP 9.17.1 o una versione successiva e il sistema storage deve soddisfare tutti i requisiti per la versione di ONTAP che il sistema storage sta eseguendo.
 
