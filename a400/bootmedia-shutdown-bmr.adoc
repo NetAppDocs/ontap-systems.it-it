@@ -2,7 +2,7 @@
 permalink: a400/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: a400, shut down the controller 
-summary: Arrestare il controller danneggiato nel sistema di archiviazione AFF A400 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio. 
+summary: Arresta il controller nel tuo sistema storage AFF A400 per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il supporto di boot. 
 ---
 = Spegni il controller nel tuo sistema AFF A400 durante il processo di ripristino automatico dell'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Arrestare il controller danneggiato nel sistema di archiviazione AFF A4
 
 
 [role="lead"]
-Arrestare il controller danneggiato nel sistema di archiviazione AFF A400 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.
+Arresta il controller nel tuo sistema storage AFF A400 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del supporto di boot.
 
 Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.17.1 e versioni successive. Se il sistema di storage esegue una versione precedente di ONTAP, utilizzare link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"] .
 
@@ -82,4 +82,4 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 .Cosa succederà
-Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].
+Dopo che hai spento il controller, link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].

@@ -15,7 +15,7 @@ Installa il tuo sistema storage AFF A150 seguendo queste istruzioni dettagliate 
 
 Se si dispone di una configurazione MetroCluster, utilizzare https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentazione MetroCluster"^].
 
-*Attenzione:* se il sistema viene installato con ONTAP 9.13.1P8 - 9.13.1P11, ONTAP 9.14.1P1 - 9.14.1P7 o ONTAP 9.15,1 - 9.15.1P2 e il sistema contiene 10 o più unità a stato solido interne, è necessario eseguire ulteriori operazioni per preparare il sistema all'installazione. Vedere il numero  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["CONTAP-285173 - ADP non lascia una partizione root di riserva su un AFF A150 con 10 o più dischi interni"^].
+*Avvertenza:* Se stai installando ONTAP 9.13.1P8 - 9.13.1P11, ONTAP 9.14.1P1 - 9.14.1P7 o ONTAP 9.15.1 - 9.15.1P2 e il tuo sistema contiene 10 o più unità a stato solido interne, devi adottare ulteriori misure per preparare il sistema all'installazione. Vedi il problema  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["CONTAP-285173 - ADP non lascia una partizione root di riserva su un AFF A150 con 10 o più dischi interni"^].
 
 
 
@@ -32,8 +32,8 @@ Per installare il sistema AFF A150, creare un account sul sito del supporto NetA
 +
 ** Spazio rack per il sistema storage
 ** Cacciavite Phillips n. 2
-** Cavi di rete aggiuntivi per collegare il sistema allo switch di rete e al laptop o alla console mediante un browser Web
-** Computer portatile o console con connessione RJ-45 e accesso a un browser Web
+** Cavi di rete aggiuntivi per collegare il tuo sistema allo switch di rete e al laptop o alla console con un browser web
+** Un computer portatile o una console con connessione RJ-45 e accesso a un browser web
 
 
 
@@ -163,7 +163,7 @@ Accensione del sistema
 [[step-2-install-the-hardware]]
 == Fase 2: Installare l'hardware
 
-Il sistema viene installato in un rack a 4 montanti o in un cabinet di sistema NetApp, a seconda dei casi.
+Installi il sistema in un rack a quattro montanti o in un armadio di sistema NetApp, a seconda dei casi.
 
 .Fasi
 . Installare i kit di guide, secondo necessità.
@@ -251,7 +251,7 @@ image:../media/drw_c190_u_fc_10gbe_cabling.png["Connessioni delle porte dati"]
 
 
 --
-Configurazioni di rete Ethernet:: Utilizzare il cavo RJ45 Cat 6 per collegare l'unità e0c attraverso le porte e0f alla rete host. nella seguente illustrazione.
+Configurazioni di rete Ethernet:: Usa il cavo Cat 6 RJ45 per collegare le porte da e0c a e0f alla tua rete host, come mostrato nell'illustrazione seguente.
 +
 --
 image:../media/drw_c190_e_rj45_cbling.png["Cablaggio di rete host"]
@@ -414,7 +414,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selezionare un
 
 +
 .. Aprire file Explorer.
-.. Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.
+.. Seleziona *Network* nel riquadro a sinistra, fai clic con il pulsante destro del mouse e seleziona *refresh*.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 

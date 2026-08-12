@@ -15,9 +15,8 @@ Sostituisci una scheda PCIe nel tuo AFF A800 quando la scheda si guasta o necess
 
 .Prima di iniziare
 * È necessario avere a disposizione un pezzo di ricambio o un pezzo di ricambio NetApp .
-* Verificare che tutti gli altri componenti del sistema di archiviazione funzionino correttamente; in caso contrario, contattare l'assistenza tecnica.
+* Assicurati che tutti gli altri componenti del sistema storage funzionino correttamente. In caso contrario, contatta il supporto tecnico.
 * È possibile utilizzare questa procedura con tutte le versioni di ONTAP supportate dal sistema.
-* Tutti gli altri componenti del sistema devono funzionare correttamente; in caso contrario, contattare il supporto tecnico.
 
 
 
@@ -187,7 +186,7 @@ Sostenere la parte inferiore del modulo controller mentre lo si fa scorrere fuor
 [[step-3-replace-the-pcie-card]]
 == Passaggio 3: sostituire la scheda PCIe
 
-Sostituire una scheda PCIe rimuovendo il cablaggio e tutti i QSFP e SFP dalle porte sulle schede PCIe nel riser di destinazione, rimuovendo il riser dal modulo controller, rimuovendo e sostituendo la scheda PCIe, reinstallando il riser e tutti i QSFP e SFP sulle porte e ricablando le porte.
+Per sostituire una scheda PCIe, scollega il cablaggio e rimuovi eventuali QSFP e SFP dalle porte delle schede PCIe nel riser di destinazione, rimuovi il riser dal modulo controller, rimuovi e sostituisci la scheda PCIe, reinstalla il riser e tutti i QSFP e SFP sulle porte e ricabla le porte.
 
 .Fasi
 . Determinare se la scheda che si sta sostituendo è di tipo Riser 1 o Riser 2 o 3.

@@ -14,7 +14,7 @@ summary: Sostituire un modulo DIMM nel sistema di archiviazione AFF C30 o AFF C6
 Sostituire un modulo DIMM nel sistema di archiviazione AFF C30 o AFF C60 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
 .Prima di iniziare
-* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.
+* Tutti gli altri componenti del sistema storage devono funzionare correttamente. In caso contrario, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.
 * È necessario sostituire il componente FRU guasto con un componente FRU sostitutivo ricevuto dal fornitore.
 
 
@@ -281,7 +281,7 @@ image::../media/icon_round_3.png[Numero di didascalia 3]
 Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio.
 
 |===
-. Aprire il coperchio del controller ruotando la vite a testa zigrinata in senso antiorario per allentarla, quindi aprire il coperchio.
+. Apri il coperchio del controller ruotando la vite a testa zigrinata in senso antiorario.
 
 
 
@@ -289,7 +289,7 @@ Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguett
 [[step-3-replace-a-dimm]]
 == Fase 3: Sostituire un DIMM
 
-Per sostituire un modulo DIMM, individuare il modulo DIMM difettoso all'interno del controller e seguire la sequenza specifica di passi.
+Per sostituire un modulo DIMM, individua il modulo DIMM difettoso all'interno del controller.
 
 
 CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.

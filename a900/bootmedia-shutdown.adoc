@@ -2,7 +2,7 @@
 permalink: a900/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a900, shut down the controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+summary: Arresta il controller nel tuo sistema storage AFF A900 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
 = Arresta il controller nel tuo sistema AFF A900 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 
 [role="lead"]
-Spegni il controller danneggiato nel tuo sistema storage AFF A900 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale all'avvio.
+Arresta il controller nel tuo sistema storage AFF A900 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -19,7 +19,7 @@ Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utiliz
 ====
 .La maggior parte delle configurazioni
 --
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato le attività NVE o NSE, devi completare lo spegnimento del controller.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzare la procedura di ripristino automatico all'avvio.  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 
@@ -92,7 +92,7 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 --
 .Il controller si trova in un MetroCluster
 --
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato le attività NVE o NSE, devi completare lo spegnimento del controller.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

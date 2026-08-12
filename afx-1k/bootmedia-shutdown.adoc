@@ -2,7 +2,7 @@
 permalink: afx-1k/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: afx 1k, shut down the controller 
-summary: Arrestare il controller danneggiato nel sistema di archiviazione AFX 1K per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio. 
+summary: Arresta il controller nel tuo sistema storage AFX 1K per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il boot media. 
 ---
 = Arresta il controller nel tuo sistema storage AFX 1K durante il processo di ripristino automatico all'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Arrestare il controller danneggiato nel sistema di archiviazione AFX 1K
 
 
 [role="lead"]
-Arrestare il controller danneggiato nel sistema di archiviazione AFX 1K per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.
+Arresta il controller nel tuo sistema storage AFX 1K per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il boot media.
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 

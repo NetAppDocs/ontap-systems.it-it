@@ -11,7 +11,7 @@ summary: Per garantire la sicurezza dei dati sul sistema di storage AFF C30 o AF
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati sul sistema di storage AFF C30 o AFF C60, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Per garantire la sicurezza dei dati sul sistema storage AFF C30 o AFF C60, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Controlla se la versione di ONTAP supporta NetApp Volume Encryption (NVE). Prima di spegnere il controller, controlla se il key manager è attivo.
 
 
 
@@ -45,7 +45,7 @@ NOTE: Scarica l'immagine ONTAP dal sito di supporto NetApp sul tuo server HTTP o
 [[step-2-verify-key-manager-status-and-back-up-configuration]]
 == Passaggio 2: verificare lo stato del gestore delle chiavi ed eseguire il backup della configurazione
 
-Prima di spegnere il controller danneggiato, verificare la configurazione del gestore delle chiavi ed eseguire il backup delle informazioni necessarie.
+Prima di spegnere il controller con il supporto di avvio danneggiato, verifica la configurazione del key manager ed esegui il backup delle informazioni necessarie.
 
 .Fasi
 . Determinare quale gestore delle chiavi è abilitato sul proprio sistema:

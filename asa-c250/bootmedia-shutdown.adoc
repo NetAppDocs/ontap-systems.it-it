@@ -2,7 +2,7 @@
 permalink: asa-c250/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: asa c250, shutdown 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+summary: Arresta il controller nel tuo sistema storage ASA C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
 = Arresta il controller nel tuo sistema ASA C250 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
@@ -10,12 +10,14 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 :imagesdir: ../media/
 
 
+[role="lead"]
+Arresta il controller nel tuo sistema storage ASA C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
+
 
 
 [[option-1-most-systems]]
 == Opzione 1: La maggior parte dei sistemi
 
-[role="lead"]
 Completare l'arresto del controller danneggiato arrestandolo al prompt LOADER e acquisendo le variabili di ambiente di avvio. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire il supporto di avvio.
 
 .Fasi
@@ -60,7 +62,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 [[option-2-systems-in-a-metrocluster]]
 == Opzione 2: Sistemi in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato le attività NVE o NSE, devi completare lo spegnimento del controller.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

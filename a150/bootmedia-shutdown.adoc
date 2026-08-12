@@ -2,7 +2,7 @@
 permalink: a150/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a150, a150, aff, shut, down, impaired, controller, take, over 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+summary: Arresta il controller nel tuo sistema storage AFF A150 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
 = Spegni il controller nel tuo sistema AFF A150 durante il processo di ripristino manuale dell'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: È possibile arrestare o sostituire il controller compromesso utilizzan
 
 
 [role="lead"]
-Arresta il controller danneggiato nel tuo sistema storage AFF A150 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale all'avvio.
+Arresta il controller nel tuo sistema storage AFF A150 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
 
 
 
@@ -62,7 +62,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 [[option-2-controller-is-in-a-metrocluster]]
 == Opzione 2: Controller in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato le attività NVE o NSE, spegni il controller.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

@@ -2,7 +2,7 @@
 permalink: c250/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: c250, shut down the controller 
-summary: Arresta il controller danneggiato nel tuo sistema storage AFF C250 per prevenire la perdita di dati e garantire la stabilità del sistema durante la sostituzione del boot media. 
+summary: Arresta il controller nel tuo sistema storage AFF C250 per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il supporto di boot. 
 ---
 = Spegni il controller nel tuo sistema storage AFF C250 durante il processo di ripristino automatico all'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Arresta il controller danneggiato nel tuo sistema storage AFF C250 per 
 
 
 [role="lead"]
-Arresta il controller danneggiato nel tuo sistema storage AFF C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del boot media.
+Arresta il controller nel tuo sistema storage AFF C250 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo automatico di ripristino del supporto di boot.
 
 Il processo di ripristino automatico del supporto di avvio è supportato solo in ONTAP 9.18.1 e versioni successive. Se il sistema storage esegue una versione precedente di ONTAP, utilizzare il link:bootmedia-replace-workflow.html["procedura di ripristino manuale dell'avvio"].
 
@@ -82,4 +82,4 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 .Cosa succederà
-Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].
+Dopo che hai spento il controller, link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].

@@ -2,16 +2,16 @@
 permalink: a200/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a200, shut down the controller, manual, manual boot recovery 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller danneggiato. Il sistema AFF A200 supporta solo procedure di ripristino manuale tramite supporti di avvio.' 
+summary: Arresta il controller nel tuo sistema storage AFF A200 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
-= Arresta il controller danneggiato nel tuo sistema AFF A200 durante il processo di ripristino manuale all'avvio
+= Arresta il controller nel tuo sistema AFF A200 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Spegnere il controller danneggiato utilizzando la procedura appropriata per la configurazione in uso. Il sistema AFF A200 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+Arresta il controller nel tuo sistema storage AFF A200 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
 
 Completare l'arresto del controller danneggiato arrestandolo al prompt LOADER e acquisendo le variabili di ambiente di avvio. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire il supporto di avvio.
 

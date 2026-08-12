@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage AFF A20, AFF A30 o AFF A50 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP. 
 ---
-= Sostituisci a caldo un modulo I/O nel tuo sistema AFF A20, AFF A30 o AFF A50 senza spegnerlo
+= Sostituisci a caldo un modulo I/O nel tuo sistema AFF A20, AFF A30 o AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sis
 [role="lead"]
 È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage AFF A20, AFF A30 o AFF A50 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP.
 
-Per eseguire lo swap a caldo di un modulo I/O, assicurati che il sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, esegui lo swap a caldo del modulo guasto, porta online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
+Per eseguire lo swap a caldo di un modulo I/O, verifica che il tuo sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, sostituisci a caldo il modulo guasto, metti online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
 
 .A proposito di questa attività
 * La sostituzione a caldo del modulo I/O significa che non è necessario eseguire un takeover manuale prima di sostituire il modulo I/O guasto.
@@ -28,7 +28,7 @@ Per eseguire lo swap a caldo di un modulo I/O, assicurati che il sistema storage
 Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
 
 +
-È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+Puoi spegnerli inserendo il comando  `system location-led _off_`. Se non sei sicuro che i LED siano accesi o spenti, puoi verificarne lo stato inserendo il comando  `system location-led show`.
 
 
 

@@ -14,7 +14,7 @@ summary: 'Sostituire un modulo DIMM nel sistema AFF A70 o AFF A90 se vengono ril
 Sostituire un modulo DIMM nel sistema AFF A70 o AFF A90 se vengono rilevati errori di memoria correggibili o non correggibili eccessivi. Tali errori possono impedire al sistema di archiviazione di avviare ONTAP. Il processo di sostituzione prevede l'arresto del controller danneggiato, la sua rimozione, la sostituzione del modulo DIMM, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
 .Prima di iniziare
-* Assicurarsi che tutti gli altri componenti del sistema funzionino correttamente; in caso contrario, contattare il supporto tecnico.
+* Assicurati che tutti gli altri componenti del sistema funzionino correttamente. In caso contrario, contatta il supporto tecnico.
 * Assicurarsi di sostituire il componente guasto con un componente sostitutivo ricevuto da NetApp.
 
 
@@ -291,7 +291,7 @@ Assicurarsi di sostenere la parte inferiore del modulo controller mentre lo si s
 [[step-3-replace-the-dimm]]
 == Fase 3: Sostituire l'DIMM
 
-Per sostituire il modulo DIMM, individuarli all'interno del controller e seguire la sequenza specifica di passi.
+Per sostituire il modulo DIMM, individualo all'interno del controller e segui la sequenza specifica di passaggi.
 
 
 CAUTION: Indossare sempre un braccialetto con messa a terra collegato a un punto di messa a terra verificato durante le procedure di installazione e manutenzione. La mancata osservanza delle opportune precauzioni ESD può causare danni permanenti ai nodi controller, ai ripiani di storage e agli switch di rete.

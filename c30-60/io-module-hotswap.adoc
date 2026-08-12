@@ -13,14 +13,14 @@ summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sis
 [role="lead"]
 È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage AFF C30 o AFF C60 se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP.
 
-Per eseguire lo swap a caldo di un modulo I/O, assicurati che il sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, esegui lo swap a caldo del modulo guasto, porta online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
+Per eseguire lo swap a caldo di un modulo I/O, verifica che il tuo sistema storage soddisfi i requisiti della versione di ONTAP, prepara il sistema storage e il modulo I/O, sostituisci a caldo il modulo guasto, metti online il modulo sostitutivo, ripristina il sistema storage al normale funzionamento e restituisci il modulo guasto a NetApp.
 
 .A proposito di questa attività
 * La sostituzione a caldo del modulo I/O significa che non è necessario eseguire un takeover manuale prima di sostituire il modulo I/O guasto.
 * Applicare i comandi al controller corretto e allo slot I/O quando si esegue lo swap a caldo del modulo I/O:
 +
-** Il _controller danneggiato_ è il controller su cui si esegue lo swap a caldo del modulo I/O.
-** Il _controllore sano_ è il partner HA del controllore compromesso.
+** Il controller con il modulo I/O danneggiato è il controller su cui stai effettuando la sostituzione a caldo del modulo I/O.
+** Il controller funzionante è la coppia HA del controller con il modulo I/O danneggiato.
 
 
 * È possibile accendere i LED (blu) di posizione del sistema storage per facilitare l'individuazione fisica del sistema storage. Accedere al BMC tramite SSH e immettere il comando  `system location-led _on_`.
@@ -34,8 +34,8 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 
 
 
-[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
-== Fase 1: assicurarsi che il sistema di archiviazione soddisfi i requisiti della procedura
+[[step-1-verify-the-storage-system-meets-the-procedure-requirements]]
+== Fase 1: Verifica che il sistema storage soddisfi i requisiti della procedura
 
 Per utilizzare questa procedura, il sistema storage deve eseguire ONTAP 9.17.1 o una versione successiva e il sistema storage deve soddisfare tutti i requisiti per la versione di ONTAP che il sistema storage sta eseguendo.
 

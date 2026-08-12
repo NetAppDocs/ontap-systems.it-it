@@ -197,7 +197,7 @@ image::../media/drw_a320_cable_management_arms.png[Rimozione o installazione dei
 È possibile collegare i controller alla rete utilizzando il metodo cluster senza switch a due nodi o la rete di interconnessione del cluster.
 
 
-NOTE: Se le etichette delle porte sulla scheda non sono visibili, controllare l'orientamento di installazione della scheda (lo zoccolo del connettore PCIe si trova sul lato sinistro dello slot della scheda in A400 e FAS8300/8700), quindi cercare la scheda, in base al numero di parte, in https://hwu.netapp.com["NetApp Hardware Universe"^] per un'immagine del pannello che mostra le etichette delle porte. Il numero di parte della scheda può essere trovato utilizzando `sysconfig -a` o nell'elenco di imballaggio del sistema.
+NOTE: Se le etichette delle porte sulla scheda non sono visibili, controlla l'orientamento di installazione della scheda. Il connettore PCIe si trova sul lato sinistro dello slot negli A400 e FAS8300/8700. Poi cerca la scheda tramite il codice articolo nell' https://hwu.netapp.com["NetApp Hardware Universe"^] per vedere un'immagine del pannello frontale che mostra le etichette delle porte. Puoi trovare il codice articolo della scheda usando il comando  `sysconfig -a` o nella lista di imballaggio del sistema.
 
 
 NOTE: Se si sta cablando una configurazione IP MetroCluster, le porte e0a/e0b sono disponibili per l'hosting dei file LIF dei dati (di solito in IPSpace predefinito).
@@ -265,7 +265,7 @@ image::../media/drw_a400_switched_network_cabling.png[Cablaggio di rete cluster 
 [[step-4-cable-controllers-to-drive-shelves]]
 == Fase 4: Collegare i controller dei cavi agli shelf di dischi
 
-È possibile collegare gli shelf NSS224 o SAS al sistema.
+Puoi collegare al tuo sistema tramite cavo sia shelf NS224 che shelf SAS.
 
 
 
@@ -378,7 +378,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selezionare un
 
 +
 .. Aprire file Explorer.
-.. Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.
+.. Seleziona *Network* nel riquadro di sinistra, fai clic con il pulsante destro del mouse e seleziona *refresh*.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 
@@ -451,7 +451,7 @@ NOTE: In figura: FAS8300 e FAS8700.
 video::50cdf200-ede1-45a9-b4b5-ab1b006698d7[panopto]
 +
 
-NOTE: L'avvio iniziale può richiedere fino a otto minuti.
+NOTE: L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 . Assegnare un indirizzo IP di gestione del nodo iniziale a uno dei nodi.
 +

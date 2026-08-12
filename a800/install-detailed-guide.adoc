@@ -196,7 +196,7 @@ image::../media/drw_affa800_install_cable_mgmt.png[Collegamento del dispositivo 
 [[step-3-cable-controllers]]
 == Fase 3: Controller dei cavi
 
-È necessario il cablaggio per il cluster della piattaforma utilizzando il metodo cluster senza switch a due nodi o il metodo di rete di interconnessione del cluster. È disponibile un cablaggio opzionale per le reti host Fibre Channel o iSCSI o per lo storage direct-attached. Questo cablaggio non è esclusivo; è possibile utilizzare il cavo per una rete host e uno storage.
+È necessario effettuare il cablaggio richiesto per il cluster della tua piattaforma utilizzando il metodo cluster senza switch a due nodi o il metodo rete di interconnessione del cluster. C'è un cablaggio opzionale verso le reti host Fibre Channel o iSCSI o verso lo storage collegato direttamente. Questo cablaggio non è esclusivo; puoi avere il cablaggio sia verso una rete host che verso lo storage.
 
 
 
@@ -549,7 +549,7 @@ Se sul laptop è attivata la funzione di rilevamento della rete, è possibile co
 .Fasi
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 +
-Il sistema inizia l'avvio. L'avvio iniziale può richiedere fino a otto minuti.
+Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 . Assicurarsi che il rilevamento della rete sia attivato sul laptop.
 +
@@ -565,7 +565,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selezionare un
 
 +
 .. Aprire file Explorer.
-.. Fare clic su *rete* nel riquadro sinistro, fare clic con il pulsante destro del mouse e selezionare *aggiorna*.
+.. Seleziona *Network* nel riquadro di sinistra, fai clic con il pulsante destro del mouse e seleziona *refresh*.
 .. Fare doppio clic sull'icona ONTAP e accettare i certificati visualizzati sullo schermo.
 +
 
@@ -609,7 +609,7 @@ image::../media/drw_client_mgmt_subnet_affa800.png[Collegamento del laptop o del
 
 . Collegare i cavi di alimentazione agli alimentatori del controller, quindi collegarli a fonti di alimentazione su diversi circuiti.
 +
-Il sistema inizia l'avvio. L'avvio iniziale può richiedere fino a otto minuti.
+Il sistema inizia l'avvio. L'avvio iniziale potrebbe richiedere fino a otto minuti.
 
 . Assegnare un indirizzo IP di gestione del nodo iniziale a uno dei nodi.
 +

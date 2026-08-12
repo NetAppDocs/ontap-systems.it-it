@@ -2,16 +2,16 @@
 permalink: fas8300/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
-summary: È possibile arrestare o sostituire il controller compromesso utilizzando procedure diverse, a seconda della configurazione hardware del sistema di storage. 
+summary: Arresta il controller nel tuo sistema storage FAS8300 o FAS8700 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di avvio. 
 ---
-= Arresta il controller danneggiato nel tuo sistema FAS8300 o FAS8700 durante il processo di ripristino manuale dal menu di boot
+= Arresta il controller nel tuo sistema FAS8300 o FAS8700 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Dopo aver completato le attività NVE o NSE, spegni o prendi il controllo del controller danneggiato utilizzando la procedura appropriata per la tua configurazione.
+Arresta il controller nel tuo sistema storage FAS8300 o FAS8700 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di avvio.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
@@ -64,7 +64,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 [[option-2-controller-is-in-a-metrocluster]]
 == Opzione 2: Controller in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, spegni il controller difettoso.
+Dopo aver completato le attività NVE o NSE, spegni il controller.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
@@ -126,7 +126,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 [[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opzione 3: Controller in un MetroCluster a due nodi
 
-Dopo aver completato le attività NVE o NSE, spegni il controller difettoso.
+Dopo aver completato le attività NVE o NSE, spegni il controller.
 
 Per spegnere il controller compromesso, è necessario determinare lo stato del controller e, se necessario, sostituirlo in modo che il controller integro continui a servire i dati provenienti dallo storage del controller compromesso.
 

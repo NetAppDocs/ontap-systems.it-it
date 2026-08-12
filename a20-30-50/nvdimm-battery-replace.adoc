@@ -14,7 +14,7 @@ summary: Sostituisci la batteria NV nel tuo sistema di archiviazione AFF A20, AF
 Sostituisci la batteria NV nel tuo sistema di archiviazione AFF A20, AFF A30 o AFF A50 quando la batteria inizia a scaricarsi o si guasta, poiché è responsabile della conservazione dei dati critici del sistema durante le interruzioni di corrente.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la rimozione del modulo controller, la sostituzione della batteria NV, la reinstallazione del modulo controller e la restituzione della parte guasta a NetApp.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Tutti gli altri componenti del sistema storage devono funzionare correttamente. Se non è così, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.

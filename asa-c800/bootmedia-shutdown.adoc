@@ -2,7 +2,7 @@
 permalink: asa-c800/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: asa c800, shut down the controller 
-summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare l"arresto del controller compromesso.' 
+summary: Arresta il controller nel tuo sistema storage ASA C800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
 = Arresta il controller nel tuo sistema ASA C800 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Dopo aver completato le attività NVE o NSE, è necessario completare 
 
 
 [role="lead"]
-Arrestare il controller danneggiato nel sistema di archiviazione ASA C800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino automatico del supporto di avvio.
+Arresta il controller nel tuo sistema storage ASA C800 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 

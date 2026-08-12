@@ -4,22 +4,22 @@ sidebar: sidebar
 keywords: aff c30, aff c60, add IO module 
 summary: Aggiungi un modulo I/O al tuo sistema storage AFF C30 o AFF C60 per migliorare la connettività di rete ed espandere la capacità del sistema di gestire il traffico dati. 
 ---
-= Aggiungi un modulo I/O al tuo sistema storage AFF C30 o AFF C60 per migliorare la connettività di rete
+= Aggiungi un modulo I/O al tuo sistema storage AFF C30 o AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Aggiungete un modulo I/O al vostro sistema storage AFF C30 o AFF C60 per migliorare la connettività di rete ed espandere la capacità del sistema di gestire il traffico dati. Potete utilizzare questa procedura per aggiungere un modulo I/O a un controller operativo come aggiornamento pianificato oppure a un controller danneggiato durante la manutenzione.
+Aggiungi un modulo I/O al tuo sistema storage AFF C30 o AFF C60 per migliorare la connettività di rete ed espandere la capacità del sistema di gestire il traffico dati. Puoi usare questa procedura per aggiungere un modulo I/O sia a un controller operativo come upgrade pianificato, sia a un controller con un modulo I/O guasto durante la manutenzione.
 
 È possibile aggiungere un modulo i/o ai sistemi di storage AFF C30 e AFF C60 quando sono disponibili slot o quando tutti gli slot sono completamente popolati.
 
 .A proposito di questa attività
-È possibile eseguire questa procedura su uno qualsiasi dei controller della coppia HA, indipendentemente dal fatto che il controller sia attualmente operativo o non funzionante. Poiché non è possibile aggiungere un modulo I/O a un controller in esecuzione, il controller di destinazione deve essere arrestato prima dell'installazione del modulo. Il partner HA assume il controllo delle operazioni di storage durante la procedura, in modo che i dati rimangano disponibili per i client.
+Puoi eseguire questa procedura su uno qualsiasi dei controller della coppia HA, indipendentemente dal fatto che il modulo I/O del controller sia attualmente operativo o guasto. Poiché non è possibile aggiungere un modulo I/O a un controller in esecuzione, il controller di destinazione deve essere spento prima che il modulo venga installato. Il partner HA si occupa delle operazioni di storage durante la procedura, così i dati restano disponibili per i client.
 
-* Se il controller di destinazione è *operativo* (aggiunta pianificata), seguire i passaggi di arresto come descritto, trattando il controller di destinazione come il controller "impaired" in quel contenuto.
-* Se il controller di destinazione è *danneggiato*, seguire i passaggi di spegnimento come descritto.
+* Se il controller di destinazione è *operativo* (aggiunta pianificata), segui i passaggi di arresto come descritto, trattando il controller di destinazione come se avesse un modulo I/O danneggiato in quella procedura.
+* Se il controller di destinazione presenta un modulo I/O danneggiato, segui i passaggi di spegnimento come descritto.
 
 
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.
@@ -33,7 +33,7 @@ Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del displa
 [[step-1-shut-down-the-target-controller-module]]
 == Passaggio 1: Spegnere il modulo controller di destinazione
 
-Assumi il controllo e spegni il modulo controller di destinazione in modo che il suo partner HA continui a fornire dati mentre aggiungi il modulo I/O. I passaggi collegati si riferiscono al controller che viene spento come controller "danneggiato"; gli stessi passaggi si applicano sia che tu stia assumendo il controllo di un controller operativo per un'aggiunta pianificata sia che tu stia spegnendo un controller già danneggiato.
+Assumi il controllo e spegni il controller di destinazione in modo che il suo partner HA continui a fornire dati mentre aggiungi il modulo I/O. I passaggi collegati si riferiscono allo spegnimento del controller che ospita il modulo I/O difettoso. Questi passaggi si applicano sia che tu stia assumendo il controllo di un controller per un'aggiunta pianificata, sia che tu stia spegnendo un controller che ha già un modulo I/O difettoso.
 
 [role="tabbed-block"]
 ====

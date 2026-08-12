@@ -14,7 +14,7 @@ summary: Sostituire un modulo DIMM nel sistema di archiviazione AFF A20, AFF A30
 Sostituire un modulo DIMM nel sistema di archiviazione AFF A20, AFF A30 o AFF A50 se vengono rilevati troppi errori di memoria correggibili o non correggibili.  Tali errori possono impedire al sistema di archiviazione di avviare ONTAP.  Il processo di sostituzione prevede lo spegnimento del controller danneggiato, la sua rimozione, la sostituzione del DIMM, la reinstallazione del controller e la restituzione della parte guasta a NetApp.
 
 .Prima di iniziare
-* Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.
+* Tutti gli altri componenti del sistema storage devono funzionare correttamente. Se un componente non funziona correttamente, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare.
 * È necessario sostituire il componente FRU guasto con un componente FRU sostitutivo ricevuto dal fornitore.
 
 

@@ -14,7 +14,7 @@ summary: 'Sostituisci la batteria dell"orologio in tempo reale, comunemente nota
 Sostituisci la batteria dell'orologio in tempo reale (RTC), comunemente nota come batteria a bottone, nel tuo sistema di archiviazione AFF A20, AFF A30 o AFF A50 per garantire che i servizi e le applicazioni che si basano su una sincronizzazione temporale accurata rimangano operativi.
 
 .Prima di iniziare
-Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+Tutti gli altri componenti del sistema storage devono funzionare correttamente. Se non è così, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 .A proposito di questa attività
 * Puoi utilizzare questa procedura con tutte le versioni di ONTAP supportate dal tuo sistema storage.
@@ -283,7 +283,7 @@ image::../media/icon_round_3.png[Numero di didascalia 3]
 Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio.
 
 |===
-. Aprire il coperchio del controller ruotando la vite a testa zigrinata in senso antiorario per allentarla, quindi aprire il coperchio.
+. Ruota la vite a testa zigrinata in senso antiorario per allentarla, quindi apri il coperchio del controller.
 
 
 
@@ -445,9 +445,9 @@ ALIMENTATORE CC
 == Passaggio 5: Reimpostare l'ora e la data sul controller
 
 
-NOTE: Dopo aver sostituito la batteria RTC, inserito il controller e acceso il primo ripristino del BIOS, vengono visualizzati i seguenti messaggi di errore: Questi messaggi sono attesi ed è possibile continuare con questa procedura.
+NOTE: Dopo aver sostituito la batteria RTC, inserito il controller e acceso il sistema per il primo ripristino del BIOS, vengono visualizzati i seguenti messaggi di errore:
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error`
+`RTC power failure error` Questi messaggi sono previsti e puoi continuare con questa procedura.
 
 . Sul controller funzionante, controllare la data e l'ora:
 +
@@ -455,7 +455,7 @@ NOTE: Dopo aver sostituito la batteria RTC, inserito il controller e acceso il p
 
 +
 
-NOTE: Se il sistema di archiviazione si arresta al menu di avvio, selezionare l'opzione  `Reboot node`e rispondere _y_ quando richiesto, quindi avviare Loader premendo _Ctrl-C_.
+NOTE: Se il sistema storage si blocca nel menu di boot, seleziona l'opzione  `Reboot node` e rispondi _y_ quando richiesto, poi avvia il LOADER premendo _Ctrl-C_.
 
 . Sul controller non abilitato, al prompt LOADER, controllare l'ora e la data:
 +
@@ -473,7 +473,7 @@ NOTE: Se il sistema di archiviazione si arresta al menu di avvio, selezionare l'
 .. Confermare la data e l'ora.
 
 
-. Al prompt di Loader, immettere `bye` per reinizializzare i moduli i/o e gli altri componenti e lasciare che il controller si riavvii.
+. Al prompt LOADER, inserisci `bye` per reinizializzare i moduli I/O e gli altri componenti e per riavviare il controller.
 
 
 

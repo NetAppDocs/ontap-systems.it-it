@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, shut down the controller 
-summary: Arrestare il controller danneggiato nel sistema di storage ASA A70 o ASA A90 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio. 
+summary: Arresta il controller nel tuo sistema storage ASA A70 o ASA A90 per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il supporto di boot. 
 ---
 = Arresta il controller nel tuo sistema ASA A70 o ASA A90 durante il processo di ripristino automatico all'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Arrestare il controller danneggiato nel sistema di storage ASA A70 o AS
 
 
 [role="lead"]
-Arrestare il controller danneggiato nel sistema di storage ASA A70 o ASA A90 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del supporto di avvio.
+Arresta il controller nel tuo sistema storage ASA A70 o ASA A90 per evitare la perdita di dati e garantire la stabilità del sistema quando sostituisci il supporto di boot.
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
@@ -80,4 +80,4 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 
 .Cosa succederà
-Dopo aver spento il controller danneggiato, si link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].
+Dopo che hai spento il controller, link:bootmedia-replace-bmr.html["sostituire il supporto di avvio"].

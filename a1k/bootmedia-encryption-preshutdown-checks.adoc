@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff a1k, pre-shutdown checks for onboard encryption keys 
-summary: Per garantire la sicurezza dei dati sul sistema di storage AFF A1K, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Controllare se la versione di ONTAP in uso supporta la crittografia dei volumi NetApp e prima di arrestare il controller verificare se il gestore delle chiavi è attivo. 
+summary: Per garantire la sicurezza dei dati sul sistema storage AFF A1K, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Controlla se la versione di ONTAP supporta NetApp Volume Encryption e, prima di spegnere il controller, verifica che il key manager sia attivo. 
 ---
 = Verifica il supporto di crittografia sul supporto di avvio nel tuo sistema AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Per garantire la sicurezza dei dati sul sistema di storage AFF A1K, è 
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati sul sistema di storage AFF A1K, è necessario verificare il supporto della chiave di crittografia e lo stato sul supporto di avvio. Verifica se la versione di ONTAP supporta la crittografia dei volumi di NetApp (NVE) e prima di arrestare il controller verifica se il gestore delle chiavi è attivo.
+Per garantire la sicurezza dei dati sul sistema storage AFF A1K, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare se la versione di ONTAP supporta NetApp Volume Encryption (NVE) e, prima di spegnere il controller, verificare che il key manager sia attivo.
 
 
 

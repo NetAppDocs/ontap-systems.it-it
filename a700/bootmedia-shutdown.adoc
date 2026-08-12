@@ -2,16 +2,16 @@
 permalink: a700/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a700, shut, down, impaired, controller, take, over, manual, manual boot recovery 
-summary: Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700 . Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato. 
+summary: Arresta il controller nel tuo sistema storage AFF A700 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
-= Arresta il controller danneggiato nel tuo sistema AFF A700 durante il processo di ripristino manuale all'avvio
+= Arresta il controller nel tuo sistema AFF A700 durante il processo di ripristino manuale all'avvio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Dopo aver completato i controlli di crittografia, spegnere il controller non funzionante su un sistema AFF A700 . Questa procedura prevede di portare il controller al prompt LOADER, di acquisire le variabili ambientali di avvio come riferimento e di preparare il controller per la sostituzione del supporto di avvio, con passaggi specifici che variano a seconda della configurazione del sistema.
+Arresta il controller nel tuo sistema storage AFF A700 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
 
 Il sistema AFF A700 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
 
@@ -64,7 +64,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 [[option-2-controller-is-in-a-metrocluster]]
 === Opzione 2: Controller in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso. NOTA: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.
+Dopo aver completato le attività NVE o NSE, devi completare l'arresto del nodo. NOTA: Non usare questa procedura se il tuo sistema è in una configurazione MetroCluster a due nodi.
 
 Prendere il controllo e arrestare il controller non funzionante in modo che il controller funzionante continui a fornire dati dalla memoria del controller non funzionante. Per fare questo, si sopprime la creazione automatica dei casi in AutoSupport, si disabilita il giveback automatico e si porta il controller non funzionante al prompt LOADER. Il prompt LOADER è lo stato di arresto sicuro da cui è possibile sostituire la FRU.
 
@@ -123,7 +123,7 @@ Quando il controller non utilizzato visualizza Waiting for giveback... (in attes
 [[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opzione 3: Controller in un MetroCluster a due nodi
 
-Dopo aver completato le attività NVE o NSE, è necessario completare la chiusura del nodo compromesso.
+Dopo aver completato le attività NVE o NSE, devi completare l'arresto del nodo.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

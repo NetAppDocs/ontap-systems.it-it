@@ -2,16 +2,16 @@
 permalink: a220/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas2700, aff a220, shut, down, impaired, controller, take, over, manual, manual boot recovery 
-summary: È possibile arrestare o riprendere il controllo del controller danneggiato utilizzando procedure diverse, a seconda della configurazione hardware del sistema di archiviazione. Il sistema AFF A220 supporta solo procedure di ripristino manuale tramite supporti di avvio. 
+summary: Arresta il controller nel tuo sistema storage AFF A220 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot. 
 ---
-= Spegni il controller guasto nel tuo sistema AFF A220
+= Spegni il controller nel tuo sistema AFF A220
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Arrestare o riprendere il controllo del controller danneggiato utilizzando la procedura appropriata per la propria configurazione. Il sistema AFF A220 supporta solo procedure di ripristino manuale tramite supporti di avvio. Il ripristino automatico del supporto di avvio non è supportato.
+Arresta il controller nel tuo sistema storage AFF A220 per evitare la perdita di dati e mantenere la stabilità del sistema durante il processo di ripristino manuale del supporto di boot.
 
 
 
@@ -62,7 +62,7 @@ NOTE: Questo comando potrebbe non funzionare se il dispositivo di boot è corrot
 [[option-2-controller-is-in-a-metrocluster]]
 == Opzione 2: Controller in un MetroCluster
 
-Dopo aver completato le attività NVE o NSE, è necessario completare l'arresto del controller compromesso.
+Dopo aver completato le attività NVE o NSE, devi completare lo spegnimento del controller.
 
 
 NOTE: Non utilizzare questa procedura se il sistema si trova in una configurazione MetroCluster a due nodi.

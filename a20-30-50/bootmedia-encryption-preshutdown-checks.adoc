@@ -11,7 +11,7 @@ summary: Per garantire la sicurezza dei dati sul sistema di storage A20, AFF A30
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati sul sistema di archiviazione AFF A20, AFF A30 o AFF A50, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio.  Verificare se la versione ONTAP supporta NetApp Volume Encryption (NVE) e, prima di arrestare il controller, verificare che il gestore delle chiavi sia attivo.
+Per garantire la sicurezza dei dati sul tuo sistema storage AFF A20, AFF A30 o AFF A50, devi verificare il supporto e lo stato della chiave di crittografia sul tuo supporto di boot. Controlla se la tua versione di ONTAP supporta NetApp Volume Encryption (NVE). Prima di spegnere il controller, controlla se il key manager è attivo.
 
 
 

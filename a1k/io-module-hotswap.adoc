@@ -13,7 +13,7 @@ summary: È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sis
 [role="lead"]
 È possibile eseguire lo swap a caldo di un modulo I/O Ethernet nel sistema storage AFF A1K se un modulo si guasta e il sistema storage soddisfa tutti i requisiti della versione di ONTAP.
 
-Per eseguire lo swap a caldo di un modulo I/O, assicurarsi che il sistema storage esegua ONTAP 9.18.1 GA o versione successiva, preparare il sistema storage e il modulo I/O, sostituire a caldo il modulo guasto, portare online il modulo sostitutivo, ripristinare il sistema storage al normale funzionamento e restituire il modulo guasto a NetApp.
+Per swap a caldo un modulo I/O, verifica che il sistema storage esegua ONTAP 9.18.1 GA o versioni successive. Poi prepara il sistema storage e il modulo I/O, sostituisci a caldo il modulo guasto, porta online il modulo sostitutivo, ripristina il normale funzionamento e restituisci il modulo guasto a NetApp.
 
 .A proposito di questa attività
 * Non è necessario eseguire un takeover manuale prima di sostituire il modulo I/O guasto.

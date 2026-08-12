@@ -11,7 +11,7 @@ summary: Prima di spegnere il controller compromesso e controllare lo stato dell
 
 
 [role="lead"]
-Per garantire la sicurezza dei dati sul sistema storage AFF A900, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Verificare se la versione di ONTAP supporta NetApp Volume Encryption (NVE) e, prima di spegnere il controller, verificare che il key manager sia attivo.
+Per garantire la sicurezza dei dati sul sistema storage AFF A900, è necessario verificare il supporto e lo stato della chiave di crittografia sul supporto di avvio. Controlla se la versione di ONTAP supporta NetApp Volume Encryption (NVE). Prima di spegnere il controller, controlla se il key manager è attivo.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare il processo di ripristino manuale dell'avvio.
 

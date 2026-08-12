@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, add IO module 
 summary: Aggiungi un modulo i/o al sistema AFF A20, AFF A30 o AFF A50 per migliorare la connettività di rete e ampliare la capacità del sistema di gestire il traffico dati. 
 ---
-= Aggiungi un modulo I/O al tuo sistema AFF A20, AFF A30 o AFF A50 per migliorare la connettività di rete
+= Aggiungi un modulo I/O al tuo sistema AFF A20, AFF A30 o AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Aggiungi un modulo i/o al sistema AFF A20, AFF A30 o AFF A50 per miglio
 [role="lead"]
 Aggiungi un modulo I/O al tuo sistema di archiviazione AFF A20, AFF A30 o AFF A50 per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati.
 
-Il processo di aggiunta prevede lo spegnimento di un controller, l'aggiunta del nuovo modulo I/O, il riavvio del controller, lo spegnimento dell'altro controller, l'aggiunta del nuovo modulo I/O e il riavvio del controller.
+L'aggiunta del modulo I/O prevede lo spegnimento di un controller, l'aggiunta del modulo, il riavvio e poi la ripetizione di questi passaggi per l'altro controller.
 
 .A proposito di questa attività
 * È possibile aggiungere un modulo I/O ai sistemi storage quando ci sono slot disponibili o quando tutti gli slot sono completamente occupati.
@@ -22,7 +22,7 @@ Il processo di aggiunta prevede lo spegnimento di un controller, l'aggiunta del 
 Un sistema di archiviazione ha tre LED di posizione: Uno sul pannello del display dell'operatore e uno su ciascun controller. I LED di posizione rimangono accesi per 30 minuti.
 
 +
-È possibile disattivarle immettendo il `system location-led _off_` comando. Se non si è certi che i LED siano accesi o spenti, è possibile controllarne lo stato digitando il `system location-led show` comando.
+Puoi spegnerli inserendo il comando  `system location-led _off_`. Se non sei sicuro che i LED siano accesi o spenti, puoi verificarne lo stato inserendo il comando  `system location-led show`.
 
 
 

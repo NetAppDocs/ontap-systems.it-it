@@ -2,7 +2,7 @@
 permalink: a900/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff a900, replace the boot media 
-summary: 'Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A900 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l"immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.' 
+summary: 'Inizia a sostituire il boot media nel tuo sistema storage AFF A900. Il flusso di lavoro include la revisione dei requisiti di sostituzione, il controllo dello stato della crittografia, lo spegnimento del controller, la sostituzione del boot media, l"avvio dell"immagine di ripristino, il ripristino della crittografia e la verifica della funzionalità del sistema.' 
 ---
 = Flusso di lavoro per la sostituzione del boot media dell'AFF A900 usando la procedura manuale di ripristino dell'avvio
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Per iniziare a sostituire il supporto di avvio nel sistema di archivia
 
 
 [role="lead"]
-Per iniziare a sostituire il supporto di avvio nel sistema di archiviazione AFF A900 , è necessario esaminare i requisiti di sostituzione, controllare lo stato della crittografia, arrestare il controller, sostituire il supporto di avvio, avviare l'immagine di ripristino, ripristinare la crittografia e verificare la funzionalità del sistema.
+Inizia a sostituire il boot media nel tuo sistema storage AFF A900. Il flusso di lavoro include la revisione dei requisiti di sostituzione, il controllo dello stato della crittografia, lo spegnimento del controller, la sostituzione del boot media, l'avvio dell'immagine di ripristino, il ripristino della crittografia e la verifica della funzionalità del sistema.
 
 Se il sistema di archiviazione esegue ONTAP 9.17.1 o versione successiva, utilizzarelink:bootmedia-replace-workflow-bmr.html["procedura di ripristino automatico dell'avvio"] .  Se il sistema esegue una versione precedente di ONTAP, è necessario utilizzare la procedura di ripristino manuale all'avvio.
 
