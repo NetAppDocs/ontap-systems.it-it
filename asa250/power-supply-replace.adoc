@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a250, replace a power supply 
 summary: 'La sostituzione di un alimentatore comporta lo scollegamento dell"alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione del vecchio alimentatore e l"installazione dell"alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.' 
 ---
-= Sostituisci a caldo l'alimentatore nel tuo sistema ASA A250
+= Sostituisci a caldo un alimentatore in un ASA A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La sostituzione di un alimentatore comporta lo scollegamento dell'alimentatore di destinazione dalla fonte di alimentazione, lo scollegamento del cavo di alimentazione, la rimozione dell'alimentatore precedente e l'installazione dell'alimentatore sostitutivo, quindi il ricollegamento alla fonte di alimentazione.
+Puoi sostituire a caldo un alimentatore (PSU) guasto in un sistema ASA A250 senza spegnere il controller. I PSU sono ridondanti e a selezione automatica della tensione, quindi sostituire un PSU guasto con uno dello stesso tipo mantiene il sistema in funzione senza interruzioni.
 
 * Gli alimentatori sono ridondanti e sostituibili a caldo. Non è necessario spegnere il controller per sostituire un alimentatore.
 * Questa procedura è stata scritta per la sostituzione di una PSU alla volta.
