@@ -2,20 +2,22 @@
 permalink: fas9000/x91148a-module-install-overview.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, add, x91148a, storage, module, NIC, no open, slots, open slots, system 
-summary: È possibile aggiungere un modulo i/o al sistema sostituendo una scheda NIC o un adattatore di storage con una nuova scheda in un sistema completamente popolato oppure aggiungendo una nuova scheda NIC o un adattatore di storage in uno slot vuoto dello chassis del sistema. 
+summary: Puoi aggiungere un modulo X91148A a un sistema FAS9000 sostituendo una NIC o un adattatore storage con uno nuovo in un sistema completamente popolato, oppure aggiungendo una nuova NIC o un nuovo adattatore storage in uno slot chassis vuoto. 
 ---
-= Scopri come aggiungere un modulo X91148A nel tuo sistema FAS9000
+= Scopri come aggiungere un modulo X91148A a un sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Puoi aggiungere un modulo X91148A a un sistema FAS9000 sostituendo una NIC o un adattatore storage con uno nuovo in un sistema completamente popolato, oppure aggiungendo una nuova NIC o un nuovo adattatore storage in uno slot chassis vuoto.
+
 È possibile aggiungere un modulo i/o al sistema sostituendo una scheda NIC o un adattatore di storage con una nuova scheda in un sistema completamente popolato oppure aggiungendo una nuova scheda NIC o un adattatore di storage in uno slot vuoto dello chassis del sistema.
 
 .Prima di iniziare
-* Controllare https://hwu.netapp.com/["NetApp Hardware Universe"] Per assicurarsi che il nuovo modulo i/o sia compatibile con il sistema e la versione di ONTAP in uso.
-* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"] E utilizza il miglior modulo di i/O.
+* Controlla  https://hwu.netapp.com["NetApp Hardware Universe"] per assicurarti che il nuovo modulo I/O sia compatibile con il tuo sistema e con la versione di ONTAP che stai utilizzando.
+* Se sono disponibili più slot, controlla le priorità degli slot in  https://hwu.netapp.com["NetApp Hardware Universe"] e usa quella migliore disponibile per il tuo modulo I/O.
 * Per aggiungere senza interruzioni un modulo i/o, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione o rimuovere un modulo i/o esistente, aggiungere il modulo i/o nuovo o sostitutivo e restituire il controller di destinazione.
 * Assicurarsi che tutti gli altri componenti funzionino correttamente.
 

@@ -2,15 +2,17 @@
 permalink: fas9000/nvram-module-or-nvram-dimm-replacement.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace, nvram, module, dimm, manually, reassign, system, id, ha, system, disk, two, node, restore, storage, volume, encryption, functionality 
-summary: Il modulo NVRAM è costituito da NVRAM10 e DIMM e da un massimo di due moduli NVMe SSD Flash Cache, Flash Cache o moduli di caching, per ciascun modulo NVRAM. 
+summary: 'Sostituisci un modulo NVRAM guasto o i DIMM all"interno del modulo NVRAM in un sistema FAS9000. Poiché l"ID di sistema deriva dal modulo NVRAM, la sostituzione del modulo riassegna i dischi appartenenti al sistema al nuovo ID di sistema.' 
 ---
-= Sostituisci il modulo NVRAM o i DIMM NVRAM nel tuo sistema FAS9000
+= Sostituisci il modulo NVRAM o i DIMM NVRAM in un sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Sostituisci un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM in un sistema FAS9000. Poiché l'ID di sistema deriva dal modulo NVRAM, la sostituzione del modulo riassegna i dischi appartenenti al sistema al nuovo ID di sistema.
+
 Il modulo NVRAM è costituito da NVRAM10 GB e DIMM e fino a due moduli Flash cache SSD NVMe (moduli Flash cache o di caching) per modulo NVRAM. È possibile sostituire un modulo NVRAM guasto o i DIMM all'interno del modulo NVRAM.
 
 Per sostituire un modulo NVRAM guasto, occorre rimuoverlo dallo chassis, rimuovere il modulo o i moduli Flash cache dal modulo NVRAM, spostare i DIMM nel modulo sostitutivo, reinstallare il modulo o i moduli Flash cache e installare il modulo NVRAM sostitutivo nello chassis.

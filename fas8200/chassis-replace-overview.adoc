@@ -2,16 +2,16 @@
 permalink: fas8200/chassis-replace-overview.html 
 sidebar: sidebar 
 keywords: fas8200, replace the chassis 
-summary: Il nuovo telaio dello stesso modello del telaio compromesso viene sostituito da un telaio non valido. 
+summary: 'Prima di sostituire lo chassis in un sistema FAS8200, verifica che tutti gli altri componenti funzionino correttamente e che lo chassis di ricambio sia un componente nuovo di NetApp dello stesso modello. La procedura richiede di spostare gli alimentatori, le ventole e i moduli controller nel nuovo chassis ed è di tipo disruptive, causando un"interruzione completa del servizio in un cluster a due controller o un"interruzione parziale in un cluster multinodo.' 
 ---
-= Controlla i requisiti prima di sostituire lo chassis FAS8200
+= Verifica i requisiti prima di sostituire lo chassis in un sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per sostituire lo chassis, è necessario spostare gli alimentatori, le ventole e i moduli controller dallo chassis guasto al nuovo chassis e sostituire lo chassis guasto dal rack dell'apparecchiatura o dall'armadietto del sistema con il nuovo chassis dello stesso modello dello chassis guasto.
+Prima di sostituire lo chassis in un sistema FAS8200, verifica che tutti gli altri componenti funzionino correttamente e che lo chassis di ricambio sia un componente nuovo di NetApp dello stesso modello. La procedura richiede di spostare gli alimentatori, le ventole e i moduli controller nel nuovo chassis ed è di tipo disruptive, causando un'interruzione completa del servizio in un cluster a due controller o un'interruzione parziale in un cluster multinodo.
 
 Tutti gli altri componenti del sistema devono funzionare correttamente. Se non è così, contatta il supporto tecnico.
 

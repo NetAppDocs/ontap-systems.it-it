@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: afx 1k, add IO module 
 summary: Aggiungi un modulo I/O al tuo sistema di archiviazione AFX 1K per migliorare la connettività di rete ed espandere la capacità del tuo sistema di gestire il traffico dati. 
 ---
-= Aggiungi un modulo I/O al tuo sistema storage AFX 1K per migliorare la connettività di rete
+= Aggiungi un modulo I/O a un sistema AFX 1K per migliorare la connettività di rete
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -84,8 +84,8 @@ IL `-halt true` Il parametro ti porta al prompt LOADER.
 Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
 
 .Prima di iniziare
-* Controlla il https://hwu.netapp.com/["NetApp Hardware Universe"^] per garantire che il nuovo modulo I/O sia compatibile con il sistema di archiviazione e la versione ONTAP .
-* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
+* Controlla il https://hwu.netapp.com["NetApp Hardware Universe"^] per assicurarti che il nuovo modulo I/O sia compatibile con il tuo sistema storage e la versione di ONTAP.
+* Se sono disponibili più slot, controlla le priorità degli slot in  https://hwu.netapp.com["NetApp Hardware Universe"^] e usa quella migliore disponibile per il tuo modulo I/O.
 * Assicurarsi che tutti gli altri componenti funzionino correttamente.
 * Assicurati di avere il componente sostitutivo ricevuto da NetApp.
 

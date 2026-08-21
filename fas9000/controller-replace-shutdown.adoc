@@ -2,16 +2,16 @@
 permalink: fas9000/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, shut, down, impaired, node, controller, two, node, metrocluster 
-summary: Per arrestare il nodo compromesso, è necessario determinare lo stato del nodo e, se necessario, assumere il controllo del nodo in modo che il nodo integro continui a servire i dati provenienti dallo storage del nodo compromesso. 
+summary: Arresta o prendi il controllo del controller danneggiato in un sistema FAS9000, utilizzando la procedura appropriata per la tua configurazione, così che il nodo funzionante continui a fornire dati dallo storage del nodo danneggiato. 
 ---
-= Spegni il controller guasto nel tuo sistema FAS9000 prima della sostituzione
+= Spegni il controller guasto in un sistema FAS9000 prima della sostituzione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Arrestare o sostituire il controller con problemi utilizzando la procedura appropriata per la configurazione.
+Spegni o assumi il controllo del controller danneggiato in un sistema FAS9000 utilizzando la procedura appropriata per la tua configurazione.
 
 [role="tabbed-block"]
 ====

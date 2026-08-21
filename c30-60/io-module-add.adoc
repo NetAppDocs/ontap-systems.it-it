@@ -183,8 +183,8 @@ Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 Se il sistema di archiviazione dispone di slot disponibili, installare il nuovo modulo i/o in uno degli slot disponibili. Se tutti gli slot sono occupati, rimuovere un modulo i/o esistente per liberare spazio, quindi installare quello nuovo.
 
 .Prima di iniziare
-* Controllare che https://hwu.netapp.com/["NetApp Hardware Universe"^] il nuovo modulo di i/o sia compatibile con il sistema di storage e con la versione di ONTAP in uso.
-* Se sono disponibili più slot, controllare le priorità degli slot in https://hwu.netapp.com/["NetApp Hardware Universe"^] E utilizza il miglior modulo di i/O.
+* Controlla  https://hwu.netapp.com["NetApp Hardware Universe"^] per assicurarti che il nuovo modulo I/O sia compatibile con il tuo sistema storage e con la versione di ONTAP che stai utilizzando.
+* Se sono disponibili più slot, controlla le priorità degli slot in  https://hwu.netapp.com["NetApp Hardware Universe"^] e usa quella migliore disponibile per il tuo modulo I/O.
 * Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
 
 

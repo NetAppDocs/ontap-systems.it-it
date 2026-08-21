@@ -2,15 +2,17 @@
 permalink: fas9000/dcpm-nvram10-battery-replace.html 
 sidebar: sidebar 
 keywords: fas9000, replace, destage, controller, power, module, nvram10, battery, dcpm, dispose, return, failed, part 
-summary: Per eseguire lo swap a caldo di un modulo di alimentazione del controller di destaggio DCPM, che contiene la batteria NVRAM10, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo. 
+summary: 'Sostituisci a caldo il modulo di alimentazione del controller di destage (DCPM), che contiene la batteria NVRAM10, in un sistema FAS9000 senza interrompere il servizio.' 
 ---
-= Sostituisci a caldo un modulo DCPM nel tuo sistema FAS9000
+= Sostituisci a caldo un modulo DCPM in un sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Sostituisci a caldo il modulo di alimentazione del controller di destage (DCPM), che contiene la batteria NVRAM10, in un sistema FAS9000 senza interrompere il servizio.
+
 Per sostituire a caldo un modulo di alimentazione del controller di de-stage (DCPM), che contiene la batteria NVRAM10, è necessario individuare il modulo DCPM guasto, rimuoverlo dallo chassis e installare il modulo DCPM sostitutivo.
 
 È necessario disporre di un modulo DCPM sostitutivo prima di rimuovere il modulo guasto dal telaio e sostituirlo entro cinque minuti dalla rimozione. Una volta rimosso il modulo DCPM dallo chassis, non esiste alcuna protezione per lo shutdown per il modulo controller proprietario del modulo DCPM, ad eccezione del failover verso l'altro modulo controller.

@@ -2,16 +2,16 @@
 permalink: fas50/fan-replace.html 
 sidebar: sidebar 
 keywords: fas50, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: 'Sostituire un modulo della ventola nel sistema FAS50 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l"arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.' 
+summary: Sostituisci il modulo ventola nel tuo sistema FAS50 quando una ventola si guasta o non funziona in modo efficiente, perché questo può influire sul raffreddamento del sistema e sulle prestazioni complessive. La procedura di sostituzione prevede lo spegnimento del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp. 
 ---
-= Sostituisci una ventola nel tuo sistema FAS50
+= Sostituisci il modulo ventola in un sistema FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sostituire un modulo della ventola nel sistema FAS50 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
+Sostituisci il modulo ventola nel tuo sistema FAS50 quando una ventola si guasta o non funziona in modo efficiente, perché questo può influire sul raffreddamento del sistema e sulle prestazioni complessive. La procedura di sostituzione prevede lo spegnimento del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.
 
 .A proposito di questa attività
 Se necessario, è possibile attivare i LED di posizione del sistema di archiviazione (blu) per agevolare l'individuazione fisica del sistema di archiviazione interessato. Accedere a BMC utilizzando SSH e immettere il `system location-led _on_` comando.

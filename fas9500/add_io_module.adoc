@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, add io module 
 summary: È possibile aggiungere un modulo i/o al sistema sostituendo un modulo i/o esistente con un nuovo modulo i/o in un sistema completamente popolato oppure aggiungendo un nuovo modulo i/o in uno slot vuoto nello chassis. 
 ---
-= Aggiungi un modulo I/O al tuo sistema FAS9500
+= Aggiungi un modulo I/O a un sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,8 +14,8 @@ summary: È possibile aggiungere un modulo i/o al sistema sostituendo un modulo 
 Puoi aggiungere un modulo I/O al tuo sistema FAS9500 sostituendo una NIC o un adattatore di storage con uno nuovo in un sistema completamente popolato, oppure aggiungendo una nuova NIC o un nuovo adattatore di storage in uno slot chassis vuoto.
 
 .Prima di iniziare
-* Controllare https://hwu.netapp.com/["NetApp Hardware Universe"] Per assicurarsi che il nuovo modulo i/o sia compatibile con il sistema e la versione di ONTAP in uso.
-* Se sono disponibili più slot, controlla le priorità degli slot in  https://hwu.netapp.com/["NetApp Hardware Universe"] e usa quella migliore disponibile per il tuo modulo I/O.
+* Controlla  https://hwu.netapp.com["NetApp Hardware Universe"] per assicurarti che il nuovo modulo I/O sia compatibile con il tuo sistema e con la versione di ONTAP che stai utilizzando.
+* Se sono disponibili più slot, controlla le priorità degli slot in  https://hwu.netapp.com["NetApp Hardware Universe"] e usa quella migliore disponibile per il tuo modulo I/O.
 * Per aggiungere senza interruzioni un modulo i/o, è necessario sostituire il controller di destinazione, rimuovere il coperchio di chiusura dello slot nello slot di destinazione o rimuovere un modulo i/o esistente, aggiungere il modulo i/o nuovo o sostitutivo e restituire il controller di destinazione.
 * Assicurarsi che tutti gli altri componenti funzionino correttamente.
 

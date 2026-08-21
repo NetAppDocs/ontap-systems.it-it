@@ -2,16 +2,16 @@
 permalink: fas8300/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, replace, dimm, shut, down, impaired, controller, module, reinstall,  system, controller, aggregates, metrocluster, replacement 
-summary: 'È necessario sostituire un DIMM nel controller quando il sistema storage riscontra errori come un numero eccessivo di codici di correzione degli errori correggibili o errori non correggibili, in genere causati dal guasto di un singolo DIMM che impedisce al sistema storage l"avvio di ONTAP.' 
+summary: Devi sostituire il DIMM nel controller quando il tuo sistema storage riscontra errori come errori di memoria ECC correggibili eccessivi o errori ECC non correggibili, tipicamente causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP. 
 ---
-= Sostituisci un modulo DIMM nel tuo sistema FAS8300 o FAS8700 per risolvere gli errori di memoria
+= Sostituisci un modulo DIMM in un sistema FAS8300 o FAS8700 per risolvere errori di memoria
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Devi sostituire un DIMM nel controller quando il tuo sistema storage riscontra errori come un numero eccessivo di errori CECC (Correctable Error Correction Code) basati sugli avvisi di Health Monitor o errori ECC non correggibili. Questi errori sono generalmente causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP.
+Devi sostituire il DIMM nel controller quando il tuo sistema storage riscontra errori come errori di memoria ECC correggibili eccessivi, segnalati dagli avvisi di Health Monitor, o errori ECC non correggibili. Questi errori sono di solito causati dal guasto di un singolo DIMM che impedisce al sistema storage di avviare ONTAP.
 
 Tutti gli altri componenti del sistema devono funzionare correttamente. Se un componente non funziona correttamente, devi contattare il supporto tecnico.
 
