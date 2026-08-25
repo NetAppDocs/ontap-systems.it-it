@@ -36,8 +36,10 @@ entries:
   - title: Supporto di avvio - ripristino manuale
     pdf-filename: Manuale del supporto di avvio AFF ASA 900
     entries:
-    - title: Panoramica
-      url: "/asa900/bootmedia_replace_overview.html"
+    - title: Flusso di lavoro per la sostituzione dei supporti di avvio
+      url: "/asa900/bootmedia-replace-workflow.html"
+    - title: Verifica dei requisiti
+      url: "/asa900/bootmedia-replace-requirements.html"
     - title: Controllare le chiavi di crittografia
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: Spegnere il controller compromesso
@@ -53,7 +55,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis ASA A900
     entries:
-    - title: Panoramica
+    - title: Verifica dei requisiti
       url: "/asa900/chassis_replace_overview.html"
     - title: Spegnere il controller compromesso
       url: "/asa900/chassis_replace_shutdown.html"
@@ -64,7 +66,7 @@ entries:
   - title: Controller
     pdf-filename: Modulo controller A900 ASA
     entries:
-    - title: Panoramica
+    - title: Verifica dei requisiti
       url: "/asa900/controller_replace_overview.html"
     - title: Spegnere il controller compromesso
       url: "/asa900/controller_replace_shutdown.html"
