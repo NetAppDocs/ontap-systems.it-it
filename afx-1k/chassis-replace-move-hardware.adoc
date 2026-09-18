@@ -64,6 +64,36 @@ NOTE: I cavi devono essere stati etichettati all'inizio di questa procedura.
 [[step-2-remove-the-io-cards-nvram12-and-system-management-module]]
 == Passaggio 2: rimuovere le schede I/O, NVRAM12 e il modulo di gestione del sistema
 
+. Controllare il LED di stato NVRAM situato nello slot 4/5 del sistema. Sul pannello anteriore del modulo controller è presente anche un LED NVRAM. Cercare l'icona NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Grafico della posizione dei LED di stato e di attenzione NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM* 
+
+
+ a| 
+image:../media/icon_round_1.png["Numero di didascalia 1"]
+ a| 
+LED di stato NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Numero di didascalia 2"]
+ a| 
+LED di attenzione NVRAM
+
+|===
++
+** Se il LED NV è spento, passare alla fase successiva.
+** Se il LED NV lampeggia, attendere l'arresto del lampeggio. Se il lampeggiamento continua per più di 5 minuti, contattare il supporto tecnico per assistenza.
+
+
 . Rimuovere il modulo i/o di destinazione dallo chassis:
 +
 image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["Rimuovere il modulo di i/O."]
@@ -84,7 +114,8 @@ Blocco camma i/O.
 .. Ruotare il dispositivo di chiusura della camma lontano dal modulo fino in fondo.
 .. Rimuovere il modulo dal telaio inserendo il dito nell'apertura della leva a camma ed estraendo il modulo dal telaio.
 +
-Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
+
+NOTE: Assicurarsi di tenere traccia dello slot in cui si trovava il modulo i/O.
 
 .. Mettere da parte il modulo I/O e ripetere questi passaggi per tutti gli altri moduli I/O.
 
@@ -202,6 +233,10 @@ Dopo aver installato il telaio sostitutivo, è necessario installare il modulo c
 . Installare le schede I/O nella parte posteriore dello chassis:
 +
 .. Allineare l'estremità del modulo I/O con lo stesso slot nello chassis sostitutivo e nello chassis danneggiato, quindi spingere delicatamente il modulo fino in fondo nello chassis.
++
+
+NOTE: Assicurati di installare i moduli I/O negli stessi slot in cui si trovavano nello chassis danneggiato.
+
 .. Ruotare il fermo a camma verso l'alto fino alla posizione di blocco.
 .. Ripetere questi passaggi per tutti gli altri moduli I/O.
 
