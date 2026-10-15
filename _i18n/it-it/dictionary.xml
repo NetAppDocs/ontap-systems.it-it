@@ -8468,7 +8468,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="dcac0d4d44ce3609f70b9f6817380eb7" category="summary">Verifica che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage FAS70 o FAS90 e conferma che gli adattatori del sistema elencano tutti i percorsi dei dischi.</block>
   <block id="8f15a6b55f9d40c8f4779330981502f5" category="paragraph">Dopo aver ripristinato e verificato la configurazione di sistema per il sistema FAS70 o FAS90, è necessario <block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>.</block>
   <block id="17e4dd018a5a20b5b198058502e171bc" category="summary">Inizia a sostituire il controller nel sistema di storage FAS70 o FAS90 spegnendo il controller danneggiato, rimuovendo e sostituendo il controller, riconfigurando le impostazioni di sistema e verificando il funzionamento del sistema.</block>
-  <block id="0d9cd1cb3839e926bde7f75246162365" category="summary">Sostituire un modulo della ventola nel sistema FAS70 o FAS90 quando una ventola si guasta o non funziona in modo efficiente, poiché ciò può influire sul raffreddamento del sistema e sulle prestazioni generali. Il processo di sostituzione prevede l'arresto del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp.</block>
   <block id="86cfd8171cc9d13fd6ba34c5f4b8560b" category="summary">Il sistema FAS70 o FAS90 offre la flessibilità di espandere o sostituire i moduli i/o per migliorare la connettività e le prestazioni della rete. L'aggiunta o la sostituzione di un modulo i/o è essenziale quando si aggiornano le funzionalità di rete o si risolve un problema di un modulo.</block>
   <block id="7b96b7e6eb8df75ce5aff9a62ce657e2" category="paragraph">È possibile sostituire un modulo i/o guasto nel sistema di storage FAS70 o FAS90 con uno stesso tipo di modulo i/o o o con un altro tipo di modulo i/O. È inoltre possibile aggiungere un modulo i/o in un sistema con slot vuoti.</block>
   <block id="55658611693e2dfb5ae95b1b317d553f" category="summary">Sostituire un modulo i/o nel sistema FAS70 o FAS90 in caso di guasto del modulo o se è necessario un aggiornamento per supportare prestazioni più elevate o funzioni aggiuntive. Il processo di sostituzione prevede lo spegnimento del controller, la sostituzione del modulo i/o guasto, il riavvio del controller e la restituzione del componente guasto a NetApp.</block>
@@ -9554,7 +9553,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="b283de4e13a7d5b68dec3f041941e3bc" category="sidebar">Batteria dell'orologio in tempo reale FAS8300 e FAS8700</block>
   <block id="49083f96e824487850956b55d36a363f" category="sidebar">Supporto di avvio FAS9500 automatizzato</block>
   <block id="92e1f12178f27a238b4b86215c5615af" category="sidebar">Manuale del supporto di avvio FAS9500</block>
-  <block id="3bce4848ee8babd978a1eed14ffb0657" category="paragraph"><block ref="e5d0e758897049635b8f9c5e676046ce" prefix="" category="inline-code"></block></block>
   <block id="08ff655980adcc7a622e1807b2ce15c0" category="list-text">Se la restituzione automatica è stata disabilitata, riabilitarla:<block ref="07d94d90bbf940cf95f9dbba0029631f" prefix=" " category="inline-code"></block></block>
   <block id="23d2a44e582b0f47f51ad61543f2784a" category="paragraph">Prima di rimuovere il controller è necessario rimuovere i due alimentatori (PSU).</block>
   <block id="754bdcb9d2a9982ca84863ebead5a9e8" category="list-text">Rimuovere gli alimentatori:</block>
@@ -12915,7 +12913,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="ae1e8d45dcecc0989481acfc809cb589" category="paragraph">Per completare la sostituzione del controller per il tuo sistema AFF A250, ripristina la configurazione di NetApp Storage Encryption (se necessario), conferma che le interfacce logiche (LIF) siano attestate sulle proprie porte home, esegui un controllo dello stato del cluster e restituisci il componente guasto a NetApp.</block>
   <block id="e6b508d3ad0bda4467669b6873e4af10" category="doc">Flusso di lavoro per la sostituzione del controller AFF A250</block>
   <block id="156d802f0d77e677afd46ac3c4607a0d" category="paragraph">Sostituisci un DIMM nel tuo sistema AFF A250 quando il sistema storage rileva un numero eccessivo di errori di memoria correggibili (CECC) o non correggibili. Tali errori possono impedire al sistema storage di avviare ONTAP.</block>
-  <block id="49aeb0bb5d496401d4bde171b38b4ab5" category="paragraph">Sostituisci un modulo ventola guasto nel tuo AFF A250 per mantenere un raffreddamento adeguato e prevenire problemi di prestazioni. I moduli ventola sono hot-swappable e possono essere sostituiti senza spegnere il sistema.</block>
   <block id="0d4e62f22088395485a3f549e175fd99" category="paragraph">Installa il tuo sistema storage AFF A250 seguendo queste istruzioni dettagliate passo passo, dalla preparazione del sito all'avvio del cluster ONTAP.</block>
   <block id="79fae8e27cc6142558d9fcc883b06a74" category="paragraph">Installa e collega il tuo sistema storage AFF A250 usando le rapide istruzioni grafiche.</block>
   <block id="ab71e54a3fb4e946810032444c082b73" category="paragraph">Scegli il formato che preferisci per installare il tuo sistema storage AFF A250: istruzioni dettagliate passo passo, guida grafica rapida o istruzioni video.</block>
@@ -14014,7 +14011,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="e6b6e212a0094ee9b8cb07a680e14557" category="doc">Sostituisci il controller in un sistema AFF A20, AFF A30 o AFF A50</block>
   <block id="0f82cd5236663c6e94ef8c7f9728153e" category="doc">Completa la sostituzione del controller per un sistema AFF A20, AFF A30 o AFF A50</block>
   <block id="74e6f08c422d59cbb3a512c69842af19" category="doc">Ripristina e verifica la configurazione del controller in un sistema AFF A20, AFF A30 o AFF A50</block>
-  <block id="4495cc2cb1d64fab3f6960c395b15b0f" category="doc">Sostituisci a caldo un modulo ventola in un sistema AFF A20, AFF A30 o AFF A50</block>
   <block id="93d133d3204b7024fba921363fd8d874" category="doc">Collega l'hardware AFF A20, AFF A30 o AFF A50 per la connettività di rete e storage.</block>
   <block id="a2c478f19f67784c8f43c028d4448e35" category="doc">Installa l'hardware AFF A20, AFF A30 o AFF A50 in un cabinet o rack</block>
   <block id="dde55a04d1203238613898d6b23d625c" category="doc">Accendi un sistema storage AFF A20, AFF A30 o AFF A50</block>
@@ -14086,7 +14082,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="8af5278a7646ad11549695aac6717f1e" category="doc">Ricollega i cavi del sistema e riassegna i dischi in un sistema AFF A250</block>
   <block id="045ae4735d5c98bd9cda880ef7a88c0b" category="doc">Completa la sostituzione del controller per un sistema AFF A250</block>
   <block id="ee970a6cb2e4caa63bb5a3bfd363a983" category="doc">Ripristina e verifica la configurazione del controller in un sistema AFF A250</block>
-  <block id="070ffbd86ec310d2991ee8589f585061" category="doc">Sostituisci a caldo una ventola in un sistema AFF A250</block>
   <block id="b7accb8b14ac5f3ea9b18848c60524f1" category="doc">Installa un sistema AFF A250 seguendo le istruzioni dettagliate passo passo</block>
   <block id="559d4c9ae378606b453ec096608835fd" category="doc">Installa un sistema AFF A250 usando rapide istruzioni grafiche</block>
   <block id="bcf286d5537d6f9439072d7b535a8c1f" category="doc">Scegli come installare un sistema storage AFF A250</block>
@@ -15685,4 +15680,9 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="36ff1b0cf056d6ead654398301edbbc1" category="inline-link-macro">_Prodotti di archiviazione per data center certificati ENERGY STAR_</block>
   <block id="be4049092eb4f116ae37997b11912f3e" category="list-text">Questo prodotto è certificato ENERGY STAR. Per ulteriori informazioni, visita <block ref="435b6d0174c4d003719c270181300a75" category="inline-link-macro-rx"></block>.</block>
   <block id="33ba153f9c27104ac9c370d6c06d5f5e" category="image-alt">Logo di certificazione ENERGY STAR</block>
+  <block id="191a1145acb5161a93983cb67bc7ac6d" category="doc">Sostituisci un modulo ventola in un sistema AFF A20, AFF A30 o AFF A50</block>
+  <block id="f5d2aeabd722753506bdc837f15883a8" category="summary">Sostituisci un modulo ventola nel sistema AFF A250 quando una ventola si guasta o non funziona in modo efficiente. La procedura di sostituzione prevede lo spegnimento del controller difettoso, la rimozione del modulo controller, la sostituzione della ventola, la reinstallazione del modulo controller e la restituzione del componente guasto a NetApp.</block>
+  <block id="ed3a1c751fa8ade111c8b6d1be8b8c5f" category="doc">Sostituisci una ventola in un sistema AFF A250</block>
+  <block id="2784a8192eaeb23d47dae9485279e807" category="summary">Sostituisci un modulo ventola nel tuo sistema FAS70 o FAS90 quando una ventola si guasta o non funziona in modo efficiente, perché questo può influire sul raffreddamento del sistema e sulle prestazioni complessive. I moduli ventola nei sistemi FAS70 e FAS90 sono hot-swappable. La procedura di sostituzione prevede l'identificazione del modulo ventola guasto, la sua rimozione, l'installazione del modulo ventola di ricambio e la restituzione del componente guasto a NetApp.</block>
+  <block id="cedf051c7874b86bf8685dbb501a4e9a" category="sidebar">Specifiche principali di AFF A20, AFF A30 e AFF A50</block>
 </blocks>

@@ -48,7 +48,7 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 +
 .. Immettere il seguente comando dalla console del controller funzionante:
 +
-`storage failover modify -node _impaired_node_name_ -auto-giveback false`
+`storage failover modify -node local -auto-giveback false`
 
 .. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
 
@@ -84,6 +84,8 @@ Assumere il controllo o arrestare il controller compromesso dal controller integ
 Il parametro _-halt true_ consente di visualizzare il prompt di Loader.
 
 |===
+
+
 . Se il sistema dispone di un solo modulo controller nello chassis, spegnere gli alimentatori, quindi scollegare i cavi di alimentazione del controller guasto dalla fonte di alimentazione.
 
 

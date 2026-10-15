@@ -2,16 +2,16 @@
 permalink: a250/fan-replace.html 
 sidebar: sidebar 
 keywords: aff a250, replace a fan 
-summary: Per sostituire una ventola, rimuovere il modulo della ventola guasto e sostituirlo con un nuovo modulo della ventola. 
+summary: Sostituisci un modulo ventola nel sistema AFF A250 quando una ventola si guasta o non funziona in modo efficiente. La procedura di sostituzione prevede lo spegnimento del controller difettoso, la rimozione del modulo controller, la sostituzione della ventola, la reinstallazione del modulo controller e la restituzione del componente guasto a NetApp. 
 ---
-= Sostituisci a caldo una ventola in un sistema AFF A250
+= Sostituisci una ventola in un sistema AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sostituisci un modulo ventola guasto nel tuo AFF A250 per mantenere un raffreddamento adeguato e prevenire problemi di prestazioni. I moduli ventola sono hot-swappable e possono essere sostituiti senza spegnere il sistema.
+Sostituisci un modulo ventola nel sistema AFF A250 quando una ventola si guasta o non funziona in modo efficiente. La procedura di sostituzione prevede lo spegnimento del controller difettoso, la rimozione del modulo controller, la sostituzione della ventola, la reinstallazione del modulo controller e la restituzione del componente guasto a NetApp.
 
 
 
@@ -46,7 +46,7 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 +
 .. Immettere il seguente comando dalla console del controller funzionante:
 +
-`storage failover modify -node _impaired_node_name_ -auto-giveback false`
+`storage failover modify -node local -auto-giveback false`
 
 .. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
 

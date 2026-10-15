@@ -1,7 +1,7 @@
 ---
 permalink: fas50/fan-replace.html 
 sidebar: sidebar 
-keywords: fas50, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
+keywords: fas50, aff, swap, out, fan, module, interrupt, service, sequence, task 
 summary: Sostituisci il modulo ventola nel tuo sistema FAS50 quando una ventola si guasta o non funziona in modo efficiente, perché questo può influire sul raffreddamento del sistema e sulle prestazioni complessive. La procedura di sostituzione prevede lo spegnimento del controller, la rimozione del controller, la sostituzione della ventola, la reinstallazione del controller e la restituzione del componente guasto a NetApp. 
 ---
 = Sostituisci il modulo ventola in un sistema FAS50
@@ -59,7 +59,7 @@ Il seguente messaggio AutoSupport elimina la creazione automatica del caso per d
 +
 .. Immettere il seguente comando dalla console del controller funzionante:
 +
-`storage failover modify -node _impaired_node_name_ -auto-giveback false`
+`storage failover modify -node local -auto-giveback false`
 
 .. Entra `y` quando vedi il messaggio _Vuoi disattivare la restituzione automatica?_
 
