@@ -21,26 +21,26 @@ Per iniziare, rivedere i requisiti di ripristino, spegnere il controller, sostit
 [role="quick-margin-para"]
 Esaminare i requisiti per la sostituzione dei supporti di avvio.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Uno"]link:bootmedia-encryption-preshutdown-checks.html["Controllare le chiavi di crittografia integrate"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:bootmedia-encryption-preshutdown-checks.html["Controllare le chiavi di crittografia integrate"]
 [role="quick-margin-para"]
 Determinare se il sistema dispone di un gestore delle chiavi di sicurezza abilitato o di dischi crittografati.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Due"]link:bootmedia-shutdown.html["Spegnere il controller"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:bootmedia-shutdown.html["Spegnere il controller"]
 [role="quick-margin-para"]
 Spegnere il controller quando è necessario sostituire il supporto di avvio.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Tre"]link:bootmedia-replace.html["Sostituire il supporto di avvio"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:bootmedia-replace.html["Sostituire il supporto di avvio"]
 [role="quick-margin-para"]
 Rimuovere il supporto di avvio non riuscito dal controller danneggiato e installare il supporto di avvio sostitutivo, quindi trasferire un'immagine ONTAP tramite un'unità flash USB.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Quattro"]link:bootmedia-recovery-image-boot.html["Avviare l'immagine di ripristino"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:bootmedia-recovery-image-boot.html["Avviare l'immagine di ripristino"]
 [role="quick-margin-para"]
 Avviare l'immagine ONTAP dall'unità USB, ripristinare il file system e verificare le variabili ambientali.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Cinque"]link:bootmedia-encryption-restore.html["Ripristino della crittografia"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:bootmedia-encryption-restore.html["Ripristino della crittografia"]
 [role="quick-margin-para"]
 Ripristinare la configurazione del gestore chiavi integrato o del gestore chiavi esterno dal menu di avvio ONTAP .
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sei"]link:bootmedia-complete-rma.html["Restituire la parte guasta a NetApp"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sette"]link:bootmedia-complete-rma.html["Restituire la parte guasta a NetApp"]
 [role="quick-margin-para"]
 Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.

@@ -7070,10 +7070,8 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="40d27fa6094c4326547f3923c7cee14d" category="paragraph"><block ref="40d27fa6094c4326547f3923c7cee14d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="50852571c17718fd36dbe6f392f78fc5" category="paragraph"><block ref="50852571c17718fd36dbe6f392f78fc5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fd55ca97a838d20a44630f5fc8563412" category="paragraph"><block ref="fd55ca97a838d20a44630f5fc8563412" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2fbf4b96b341ff3cf1fd1fb73e8899c8" category="paragraph"><block ref="2fbf4b96b341ff3cf1fd1fb73e8899c8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="feb4f24fd90c865c8c1692c9529598c6" category="paragraph">Immagine:[callout number 1] drw_A900_power-on_IEOPS-941.svg[width=500px]</block>
   <block id="cbb5640a4c423d549c9eb57b27dbd4ea" category="image-alt">icona quadrata 1 verde</block>
-  <block id="96a5f900d6bd8337209c17fce1a47ae5" category="image-alt">Didascalia numero 3]</block>
   <block id="cd5ec5f3586869573f3f0b3112426052" category="sidebar">TR-4290 - sistemi SAP HANA su NetApp FAS con NFS</block>
   <block id="1e4893fc6c634f02ace3ba7beb78d669" category="inline-link-macro">stato quorum</block>
   <block id="8df1727c16aa446d0622abe8cab177ae" category="list-text">Se si dispone di un sistema SAN, è necessario aver controllato i messaggi di evento <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>) per il blade SCSI del controller danneggiato. Il<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block> comando (dalla modalità avanzata precedente) visualizza il nome del nodo, <block ref="8650efa63daff32c831511388978454c" category="inline-link-macro-rx"></block> di quel nodo, lo stato di disponibilità di quel nodo e lo stato operativo di quel nodo.</block>
@@ -7686,12 +7684,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="cf3f28797bb88ae9f14057ba85eb97b9" category="list-text">Far scorrere l'NSM fuori dal ripiano e posizionarlo su una superficie piana e stabile.</block>
   <block id="bb20d77f45b4cc0d8fb7e2ceeb73a6e8" category="paragraph">Assicurarsi di sostenere la parte inferiore dell'NSM mentre la si fa scorrere fuori dallo scaffale.</block>
   <block id="badfffbcf4c415d2d54e8598e4f36a66" category="paragraph">Ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle in modo che non siano di intralcio.</block>
-  <block id="56b8cde3b1f3e08c4473d9b2684dcde7" category="paragraph-title"><block ref="444c1bf2e877f5617e8ce0a2ded57f4f" category="inline-image-macro-rx" type="image"></block><block ref="0caeda8d60cf80f7a042375ba653d60a" category="inline-link-macro-rx"></block></block>
-  <block id="3d380bb3e10695f0ff14d7bd2503d30a" category="paragraph-title"><block ref="4f954e3aac01b1dc982b61d245b37a02" category="inline-image-macro-rx" type="image"></block><block ref="7444ce336f5cb99437679b1ac8b6aefb" category="inline-link-macro-rx"></block></block>
-  <block id="4cb467fae72dd386afc8ef7522d342e3" category="paragraph-title"><block ref="d5b760e3b486da6aca46a9bd83d66c13" category="inline-image-macro-rx" type="image"></block><block ref="d5411bd0189d789655f8f33f07ceef1c" category="inline-link-macro-rx"></block></block>
-  <block id="68e401335e776f9115f19dc83fbb1ab4" category="paragraph-title"><block ref="91d7076df3f3bfcf6ace71bd0aa6cf68" category="inline-image-macro-rx" type="image"></block><block ref="68895f240ebc6c043e757f74f16ee4e8" category="inline-link-macro-rx"></block></block>
-  <block id="a782e599865f4a63ae7329f3a1de025e" category="paragraph-title"><block ref="6e12d70052c23b4d8ac555d298c6cb54" category="inline-image-macro-rx" type="image"></block><block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block></block>
-  <block id="8e603f1c8e32c3de27ddc5fdfede052e" category="paragraph-title"><block ref="494807d2e8b0949d4144c33cc51d4984" category="inline-image-macro-rx" type="image"></block><block ref="ad27444622868149ebc13d5b01cf807a" category="inline-link-macro-rx"></block></block>
   <block id="78d32111d8a03b9d50893ee837ca8569" category="paragraph">Per sostituire il controller, è necessario soddisfare determinati requisiti.</block>
   <block id="56316a8ca0d4ea8218ff785f2fe8fc7d" category="paragraph">La sostituzione del controller include la rimozione del controller danneggiato, lo spostamento dei componenti FRU al controller sostitutivo, l'installazione del controller sostitutivo nel telaio, l'impostazione dell'ora e della data e la successiva riabilitazione.</block>
   <block id="3fe8767a939feff2cd12159441aec4ee" category="paragraph">Verifica le LIF, verifica lo stato di salute del cluster e restituisce il componente guasto a NetApp.</block>
@@ -8231,7 +8223,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="43d776718c1fd733b854e3b84bdffa63" category="summary">Verificare che la configurazione ha del controller sia attiva e funzioni correttamente nel sistema di storage AFF C80 e confermare che gli adattatori del sistema elencano tutti i percorsi dei dischi.</block>
   <block id="cd8d2c9f06c5661e2266f9927427382e" category="summary">È possibile sostituire un modulo i/o guasto nel sistema storage AFF C80 con uno stesso tipo di modulo i/o o o con un altro tipo di modulo i/O. È inoltre possibile aggiungere un modulo i/o in un sistema con slot vuoti.</block>
   <block id="c52f1e3ee9e9664930223aa9ebbd84dc" category="summary">Conserva l'hardware del tuo sistema storage AFF C80 per garantire affidabilità a lungo termine e performance ottimali. Eseguire regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, in quanto ciò consente di evitare tempi di inattività e perdite di dati.</block>
-  <block id="a70eaca09b18d4d2941af3eb0f7325cd" category="paragraph-title"><block ref="a65152a941ce25485720d5bcfae86492" category="inline-image-macro-rx" type="image"></block> Configurazione del cluster ONTAP</block>
   <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">Febbraio 2025</block>
   <block id="9836617ae3e38bf714267c53aac7a422" category="section-title">ASA A20, ASA A30 e ASA A50</block>
   <block id="4033d90a7ea8ab4b3276a0c26f0cc860" category="paragraph">I sistemi entry-level ASA A20 e midrange ASA A30 e A50 rendono disponibile lo storage a blocchi per aziende di ogni dimensione per applicazioni mission-critical come database e macchine virtuali.</block>
@@ -8483,7 +8474,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="6fcbff1d86e0024267f15e8f99c3a674" category="image-alt">Numerazione degli slot su un controller AFF A1K</block>
   <block id="1c0352693ded19ccdeb0fec11d3c385c" category="paragraph-title">Numerazione degli slot i/O.</block>
   <block id="49b9f31bb4801b746ad0f04e6c8fe614" category="summary">Per garantire la sicurezza dei dati sul sistema di storage A20, AFF A30 o AFF A50, è necessario verificare il supporto della chiave di crittografia e lo stato del supporto di avvio. Controllare se la versione di ONTAP in uso supporta la crittografia dei volumi NetApp e prima di arrestare il controller verificare se il gestore delle chiavi è attivo.</block>
-  <block id="ad5b6cd72397448815f30afe8edf14bb" category="paragraph-title"><block ref="4f954e3aac01b1dc982b61d245b37a02" category="inline-image-macro-rx" type="image"></block><block ref="f09c415cff110572b095b0b47b53909d" category="inline-link-macro-rx"></block></block>
   <block id="9fae3d417e2d3ebd88166f9029869c43" category="paragraph">Verificare lo stato ha del telaio, quindi restituire il componente guasto a NetApp per completare la fase finale della procedura di sostituzione dello chassis AFF A20, AFF A30 e AFF A50.</block>
   <block id="a67af8037fff1bcc2d313723431a1370" category="paragraph">Dopo aver esaminato i requisiti per la sostituzione del telaio, è necessario <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block></block>
   <block id="c4bc88aac3ca3e3334c364fc02c4ddd6" category="summary">Spegnere i controller del sistema storage AFF A20, AFF A30 o AFF A50 per evitare perdite di dati e garantire la stabilità del sistema durante la sostituzione dello chassis.</block>
@@ -8742,7 +8732,6 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="83bff0d5c34d578fa839ac49404c9392" category="list-text">Scollegare i cavi i/o dal modulo controller.</block>
   <block id="d86f5a7ed8b3122487d6d2983a3d95f1" category="list-text">Ricollegare i cavi i/o del modulo controller.</block>
   <block id="db424e93139f05b40145c02ca1496dab" category="image-alt">Sostituire la batteria NVDIMM</block>
-  <block id="f01c12d2b181f3fa692e46f31483240d" category="list-text">Assicurarsi che i perni di guida del cabinet o del rack per telecomunicazioni siano fissati negli slot della guida del telaio.</block>
   <block id="0ce45b8799d32fa93b50aed5301e827b" category="list-text">Porta del controller 2 0b alla porta IOM B 3 sull'ultimo shelf di dischi nello stack. + <block ref="065babb6c425d208f17452adf684f6f8" category="inline-image-macro-rx" type="image"></block>cavi da mini-SAS HD a mini-SAS HD</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">Se la configurazione non viene visualizzata qui, visitare il sito Web <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> per informazioni complete sulla configurazione e sulla priorità degli slot per collegare il sistema di storage.</block>
   <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">Cavo fc da 64 GB</block>
@@ -15685,4 +15674,7 @@ SFP+ (destinazione/iniziatore)</block>
   <block id="ed3a1c751fa8ade111c8b6d1be8b8c5f" category="doc">Sostituisci una ventola in un sistema AFF A250</block>
   <block id="2784a8192eaeb23d47dae9485279e807" category="summary">Sostituisci un modulo ventola nel tuo sistema FAS70 o FAS90 quando una ventola si guasta o non funziona in modo efficiente, perché questo può influire sul raffreddamento del sistema e sulle prestazioni complessive. I moduli ventola nei sistemi FAS70 e FAS90 sono hot-swappable. La procedura di sostituzione prevede l'identificazione del modulo ventola guasto, la sua rimozione, l'installazione del modulo ventola di ricambio e la restituzione del componente guasto a NetApp.</block>
   <block id="cedf051c7874b86bf8685dbb501a4e9a" category="sidebar">Specifiche principali di AFF A20, AFF A30 e AFF A50</block>
+  <block id="c028c85efb1d1fc04746118670c19cf2" category="list-text">Assicurati che i perni guida dell'armadio o del rack telco siano saldamente inseriti nelle fessure guida del chassis.</block>
+  <block id="c0fcb1e09e77924fe85a8b205bead3af" category="image-alt">Icona di richiamo 5</block>
+  <block id="7085927fbb8bc7e7f08b2e783854d864" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Configura il tuo cluster ONTAP</block>
 </blocks>
