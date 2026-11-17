@@ -30,4 +30,14 @@ In determinate situazioni, ONTAP può eseguire automaticamente un takeover di un
 
 
 * Tutti gli altri componenti del sistema di stoccaggio devono funzionare correttamente; in caso contrario, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+* Il cluster deve avere l'offload IPsec disabilitato oppure la scheda I/O Ethernet da sostituire non deve supportare l'offload IPsec.
++
+Se l'offload IPsec è abilitato e la scheda I/O supporta l'offload IPsec, la sostituzione a caldo del modulo I/O non è supportata.
+
++
+Puoi verificarlo inserendo il `security ipsec config show` comando e verificando che il risultato includa `Offload Enabled: false`.
+
++
+Se l'offload IPsec è abilitato, verifica se il modulo I/O Ethernet supporta l'offload IPsec in link:https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html#requirements-and-recommendations["Scopri la sicurezza IP sulla rete ONTAP"^].
+
 
